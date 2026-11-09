@@ -3,7 +3,7 @@
 
 	// Signups are stored by the Opello signup service (Postgres-backed).
 	const ENDPOINT = 'https://webbie-at-blubridge-cvqap.skydive.app/opello/api/subscribe';
-	const DEFAULT_NOTE = 'Be the first to know when Opello opens.';
+	const DEFAULT_NOTE = '';
 	const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
 
 	type State = 'idle' | 'sending' | 'error' | 'done';
@@ -52,7 +52,7 @@
 
 {#if status !== 'done'}
 	<form class="signup" onsubmit={submit} novalidate>
-		<label class="label" for="email">Register your interest</label>
+		<label class="label" for="email">Be the first to know when Opello launches</label>
 		<div class="field">
 			<input
 				id="email"
@@ -172,6 +172,9 @@
 		line-height: 1.5;
 		color: rgba(233, 228, 224, 0.5);
 		min-height: 1.5em;
+	}
+	.note:empty {
+		visibility: hidden;
 	}
 	.note[data-state='error'] {
 		color: #f3a183;
