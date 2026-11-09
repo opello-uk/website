@@ -1,25 +1,44 @@
-# opello.co.uk — coming soon
+# opello.co.uk
 
-The pre-launch page for Opello, served as a static site on Render and pointed at `opello.co.uk`.
+The Opello website, built with SvelteKit.
 
-## What's here
+Right now it's a single prerendered coming-soon page with an interest
+sign-up. It's set up so the marketing pages stay static HTML (fast, indexable)
+while the web app can grow alongside them later.
 
-| Path | What it is |
+## Develop
+
+```sh
+npm ci
+npm run dev
+```
+
+## Build
+
+```sh
+npm run build   # static output in build/
+```
+
+Render (static site) runs `npm ci && npm run build` and publishes `build/`.
+
+## Structure
+
+| Path | What |
 |---|---|
-| `index.html` | the built page (what Render serves) |
-| `index.template.html` | source template with `{{MARK_SVG}}` / `{{WORDMARK_SVG}}` placeholders |
-| `build.py` | inlines the brand SVGs into the template and writes `index.html` |
-| `assets/` | wordmark, mark, favicon, touch icon, share image, self-hosted Nimbus Sans |
-| `llms.txt`, `robots.txt`, `sitemap.xml` | the machine-readable layer |
+| `src/routes/+page.svelte` | the coming-soon page |
+| `src/lib/components/Ring.svelte` | the Opello core graphic (disc + locked/unlocked lenses) |
+| `src/lib/components/SignupForm.svelte` | interest capture, error and thank-you states |
+| `src/lib/components/Wordmark.svelte` | inline wordmark |
+| `src/lib/styles/global.css` | brand tokens and base styles |
+| `static/` | favicon, share image, `robots.txt`, `llms.txt` |
 
-No build step is needed on the host: `index.html` is committed. Run `python3 build.py` after editing the template or the SVG assets.
+## Pre-launch
 
-## Brand
+The page sends `noindex, nofollow` and `robots.txt` blocks all crawlers.
+Flip both at launch.
 
-Built to the Opello brand system (stage 3 concept, 05 Nov 2026): deep blue `#001431`, peach `#F58851`, clay `#E9E4E0`, Nimbus Sans, and the `o` lens mark as the single graphic device.
+## Going app-side later
 
-Copy on the page is brand-approved deck copy. Nothing else (fees, licences, dates, contact addresses) is claimed anywhere on the page.
-
-## Deploying
-
-Render static site, branch `main`, publish directory `.`, no build command. Custom domains: apex `A` record to Render's load balancer, `www` `CNAME` to the service host.
+Swap `@sveltejs/adapter-static` for `@sveltejs/adapter-node` in
+`vite.config.ts`, keep `prerender = true` on marketing routes, and move the
+Render service to a Node web service.
