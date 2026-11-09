@@ -61,7 +61,10 @@
 
 	<footer>
 		<span>opello.co.uk</span>
-		<span>A cross-border money app</span>
+		<span class="foot-right">
+			<span>A cross-border money app</span>
+			<a href={resolve('/privacy')}>Privacy</a>
+		</span>
 	</footer>
 </main>
 
@@ -194,6 +197,18 @@
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 		color: var(--muted);
+	}
+
+	.foot-right {
+		display: inline-flex;
+		gap: 24px;
+	}
+	footer a {
+		color: var(--clay);
+		text-decoration: none;
+	}
+	footer a:hover {
+		color: var(--peach);
 	}
 
 	@media (max-width: 760px) {

@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { tick } from 'svelte';
+	import { resolve } from '$app/paths';
+	import { CONSENT_TEXT, CONSENT_VERSION } from '#lib/consent';
 
 	// Signups are stored by the Opello signup service (Postgres-backed).
 	const ENDPOINT = 'https://webbie-at-blubridge-cvqap.skydive.app/opello/api/subscribe';
@@ -30,7 +32,7 @@
 			const res = await fetch(ENDPOINT, {
 				method: 'POST',
 				headers: { 'content-type': 'application/json' },
-				body: JSON.stringify({ email: value, source: 'coming-soon' })
+				body: JSON.stringify({ email: value, source: 'coming-soon', consent: CONSENT_VERSION })
 			});
 			if (!res.ok) throw new Error(String(res.status));
 			status = 'done';
@@ -83,6 +85,9 @@
 			</button>
 		</div>
 		<p class="note" id="signup-note" role="status" aria-live="polite" data-state={status}>{note}</p>
+		<p class="consent">
+			{CONSENT_TEXT} <a href={resolve('/privacy')}>Privacy notice</a>
+		</p>
 	</form>
 {:else}
 	<div class="thanks" tabindex="-1" bind:this={thanks}>
@@ -173,7 +178,28 @@
 		color: rgba(233, 228, 224, 0.5);
 		min-height: 1.5em;
 	}
+	.consent {
+		margin: 2px 0 0;
+		font-size: 12px;
+		line-height: 1.5;
+		color: rgba(233, 228, 224, 0.5);
+	}
+	.consent a {
+		white-space: nowrap;
+		color: rgba(233, 228, 224, 0.78);
+		text-underline-offset: 3px;
+		text-decoration-color: rgba(245, 136, 81, 0.6);
+	}
+	.consent a:hover {
+		color: var(--peach);
+	}
 	.note:empty {
+		display: none;
+	}
+	.note:empty + .consent {
+		margin-top: 12px;
+	}
+	.note-unused {
 		visibility: hidden;
 	}
 	.note[data-state='error'] {
