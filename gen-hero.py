@@ -1,116 +1,79 @@
 #!/usr/bin/env python3
-"""Generate the hero artwork: the brand 'o' on a gradient ground with
-concentric iris arcs, matching the brand's key visual.
+"""Hero background, built to the brand collateral (card, email signature):
 
-Writes assets/hero.svg (viewBox 0 0 1000 1000, square), which the page inlines.
+- ground: deep blue that lifts to mid blue towards the upper right,
+  with a faint peach warmth in the top-right corner
+- two large circles, same size, same height, side by side and overlapping,
+  translucent peach (the deck's 20% / 40% rule). Where they overlap the tint
+  doubles, which makes the lens. Both fade out towards the bottom.
+
+Writes assets/hero.svg. It is used as a full-bleed layer
+(preserveAspectRatio slice), so keep the subject in the right half.
 """
-import re
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-sys.path.insert(0, str(ROOT / "tools"))
-from flatpath import xform  # noqa: E402
+W, H = 1600, 1000
 
-WORDMARK = (ROOT / "assets/opello-wordmark.svg").read_text()
-GLYPH = re.findall(r'<path d="([^"]+)"/>', WORDMARK)[4]
+# circle geometry (canvas units)
+R = 640
+CY = 440
+C1 = 1150           # left circle centre x
+C2 = 1560           # right circle centre x (overlap = 2R - (C2 - C1))
 
-# potrace transform inside the wordmark: translate(0,436) scale(0.1,-0.1)
-O_PATH = xform(GLYPH, (0.1, 0, 0, -0.1, 0, 436))
-OUTER, COUNTER = O_PATH.split(" M ", 1)
-COUNTER = "M " + COUNTER
-
-nums = [float(n) for n in re.findall(r"-?\d*\.?\d+", O_PATH)]
-xs, ys = nums[0::2], nums[1::2]
-X0, X1, Y0, Y1 = min(xs), max(xs), min(ys), max(ys)
-CX, CY = (X0 + X1) / 2, (Y0 + Y1) / 2
-H = Y1 - Y0
-
-# fit the glyph into the canvas, slightly right of centre and oversized so it
-# reads as a form rather than an icon
-BOX = 1000.0
-GH = 640.0            # glyph height in canvas units
-S = GH / H
-GX = 585.0            # glyph centre x in canvas units
-GY = 470.0            # glyph centre y
-SLANT = -13.0         # degrees, matches the wordmark's lean
-
-def arcs() -> str:
-    """Concentric bands behind the o, echoing the lens counters."""
-    out = []
-    specs = [
-        # (radius, width, opacity, dx, dy)
-        (476, 130, 0.05, -80, 66),
-        (372, 58, 0.07, -46, 36),
-        (306, 140, 0.045, 14, -12),
-    ]
-    for r, w, op, dx, dy in specs:
-        out.append(
-            f'<circle cx="{GX + dx}" cy="{GY + dy}" r="{r}" fill="none" '
-            f'stroke="url(#arcStroke)" stroke-width="{w}" opacity="{op}"/>'
-        )
-    return "".join(out)
-
-
-PAD = 200.0
-
-HERO = f'''<svg viewBox="{-PAD:.0f} {-PAD:.0f} {BOX + 2 * PAD:.0f} {BOX + 2 * PAD:.0f}" aria-hidden="true" focusable="false">
+HERO = f'''<svg viewBox="0 0 {W} {H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
   <defs>
-    <linearGradient id="oFill" x1="0.1" y1="0" x2="0.95" y2="1">
-      <stop offset="0" stop-color="#FFA678"/>
-      <stop offset="0.26" stop-color="#F58851"/>
-      <stop offset="0.46" stop-color="#B96A55"/>
-      <stop offset="0.60" stop-color="#6F5153"/>
-      <stop offset="0.74" stop-color="#1C4463"/>
-      <stop offset="0.88" stop-color="#0B4A70"/>
-      <stop offset="1" stop-color="#0A2C46"/>
+    <linearGradient id="ground" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#03142A"/>
+      <stop offset="0.45" stop-color="#051E36"/>
+      <stop offset="0.78" stop-color="#14405F"/>
+      <stop offset="1" stop-color="#245675"/>
     </linearGradient>
-    <linearGradient id="arcStroke" x1="0.85" y1="0.05" x2="0.15" y2="0.95">
-      <stop offset="0" stop-color="#F58851"/>
-      <stop offset="0.32" stop-color="#D8895F"/>
-      <stop offset="0.68" stop-color="#8C5A55"/>
-      <stop offset="1" stop-color="#2A4A66"/>
-    </linearGradient>
-    <radialGradient id="oGlow" cx="0.3" cy="0.24" r="0.85">
-      <stop offset="0" stop-color="#FFC49B" stop-opacity="0.55"/>
-      <stop offset="0.55" stop-color="#F58851" stop-opacity="0.06"/>
+    <radialGradient id="warm" cx="0.98" cy="0.02" r="0.5">
+      <stop offset="0" stop-color="#F58851" stop-opacity="0.38"/>
+      <stop offset="0.5" stop-color="#F58851" stop-opacity="0.08"/>
       <stop offset="1" stop-color="#F58851" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="9"/>
-    </filter>
-    <filter id="softer" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="26"/>
-    </filter>
-    <radialGradient id="counterFill" cx="0.38" cy="0.3" r="0.95">
-      <stop offset="0" stop-color="#062A44"/>
-      <stop offset="0.55" stop-color="#01203A"/>
-      <stop offset="1" stop-color="#00121F"/>
+    <radialGradient id="deepen" cx="0.08" cy="0.95" r="0.75">
+      <stop offset="0" stop-color="#010E1F" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#010E1F" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="oClip">
-      <path d="{O_PATH}" transform="rotate({SLANT}) translate({GX:.1f},{GY:.1f}) scale({S:.6f}) translate({-CX:.3f},{-CY:.3f})"/>
-    </clipPath>
+    <!-- peach that fades out downward, like the card -->
+    <linearGradient id="tint" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse"
+                    x1="0" y1="{CY - R}" x2="0" y2="{CY + R}">
+      <stop offset="0" stop-color="#F58851" stop-opacity="0.19"/>
+      <stop offset="0.35" stop-color="#E9845A" stop-opacity="0.09"/>
+      <stop offset="0.7" stop-color="#C47258" stop-opacity="0.03"/>
+      <stop offset="1" stop-color="#C47258" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="edge" gradientUnits="userSpaceOnUse" x1="0" y1="{CY - R}" x2="0" y2="{CY + R}">
+      <stop offset="0" stop-color="#FFB08A" stop-opacity="0.22"/>
+      <stop offset="0.55" stop-color="#F58851" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F58851" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.035 0"/>
+    </filter>
   </defs>
 
-  <g filter="url(#softer)" opacity="0.85">{arcs()}</g>
-  <g filter="url(#soft)">{arcs()}</g>
+  <rect width="{W}" height="{H}" fill="url(#ground)"/>
+  <rect width="{W}" height="{H}" fill="url(#warm)"/>
+  <rect width="{W}" height="{H}" fill="url(#deepen)"/>
 
-  <g>
-    <path d="{O_PATH}"
-          transform="rotate({SLANT} {GX:.1f} {GY:.1f}) translate({GX:.1f},{GY:.1f}) scale({S:.6f}) translate({-CX:.3f},{-CY:.3f})"
-          fill="url(#oFill)" fill-rule="evenodd"/>
-    <g clip-path="url(#oClip)">
-      <rect x="{-PAD:.0f}" y="{-PAD:.0f}" width="{BOX + 2 * PAD:.0f}" height="{BOX + 2 * PAD:.0f}" fill="url(#oGlow)"/>
-      <ellipse cx="{GX - 120:.0f}" cy="{GY - 280:.0f}" rx="420" ry="300"
-               fill="#FFD9BE" opacity="0.16" filter="url(#softer)"/>
-    </g>
+  <g class="rings">
+    <circle cx="{C1}" cy="{CY}" r="{R}" fill="url(#tint)"/>
+    <circle cx="{C2}" cy="{CY}" r="{R}" fill="url(#tint)"/>
+    <circle cx="{C1}" cy="{CY}" r="{R}" fill="none" stroke="url(#edge)" stroke-width="1.5"/>
+    <circle cx="{C2}" cy="{CY}" r="{R}" fill="none" stroke="url(#edge)" stroke-width="1.5"/>
   </g>
 
-  <!-- counter: a clean dark field, so the arcs read as outside the form -->
-  <path d="{COUNTER}"
-        transform="rotate({SLANT} {GX:.1f} {GY:.1f}) translate({GX:.1f},{GY:.1f}) scale({S:.6f}) translate({-CX:.3f},{-CY:.3f})"
-        fill="url(#counterFill)"/>
+  <rect width="{W}" height="{H}" filter="url(#grain)"/>
 </svg>'''
+
+# the duplicate x1/y1 on #tint is invalid XML; keep only the userSpace ones
+HERO = HERO.replace('x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse"\n                    ',
+                    'gradientUnits="userSpaceOnUse" ')
 
 (ROOT / "assets/hero.svg").write_text(HERO)
 print(f"hero.svg written ({len(HERO)} bytes)")
