@@ -64,18 +64,18 @@
 		<section>
 			<h2>Who can see it</h2>
 			<p>
-				Only Opello and the service providers that run this website and our sign-up list for us:
-				Render (website hosting), Skydive (runs our sign-up service) and Neon (database). They
-				process it on our instructions and for no other purpose. If we start sending updates through
-				an email service, we'll add it here.
+				Only Opello and the trusted service providers who host our website and manage our sign-up
+				list on our behalf. They act only on our instructions, are bound to keep your data secure and
+				confidential, and can't use it for their own purposes. We don't sell your data or share it for
+				anyone else's marketing.
 			</p>
 		</section>
 
 		<section>
 			<h2>Where it's stored</h2>
 			<p>
-				Our sign-up database is hosted in the United States. Where your data is transferred outside
-				the UK, we make sure it is protected by the safeguards UK data protection law requires.
+				Your data may be stored or processed outside the UK by our service providers. When it is, we
+				make sure it is protected by the safeguards UK data protection law requires.
 			</p>
 		</section>
 
