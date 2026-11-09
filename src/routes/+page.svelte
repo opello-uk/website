@@ -129,7 +129,7 @@
 	}
 	.brand {
 		display: block;
-		width: clamp(96px, 9vw, 128px);
+		width: clamp(140px, 14vw, 210px);
 	}
 	.status {
 		margin: 0;
