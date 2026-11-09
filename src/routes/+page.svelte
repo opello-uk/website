@@ -198,8 +198,8 @@
 
 	@media (max-width: 760px) {
 		.ring {
-			top: -4vh;
-			right: -46vw;
+			top: 7vh;
+			right: -66vw;
 			width: 128vw;
 			transform: none;
 			animation-name: ring-in-m;
