@@ -52,7 +52,7 @@
 
 {#if status !== 'done'}
 	<form class="signup" onsubmit={submit} novalidate>
-		<label class="label" for="email">Be the first to know when Opello launches</label>
+		<label class="label" for="email">Sign up for updates</label>
 		<div class="field">
 			<input
 				id="email"
