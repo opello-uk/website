@@ -1,0 +1,19 @@
+# Opello
+
+> Opello is a cross-border money app for people whose lives span countries: families split across borders, students studying abroad, and professionals with income in more than one place. Its promise is "Your own money, unlocked." The website is a placeholder while the product is in development.
+
+## Facts
+
+- Name: Opello (a compound of "open" and "hello")
+- Domain: opello.co.uk
+- Status: coming soon, pre-launch
+- Positioning: financial freedom without borders; fewer barriers, more possibilities
+- Slogan: Your own money, unlocked.
+
+## Pages
+
+- [Home](https://opello.co.uk/): the coming-soon page
+
+## Contact
+
+Details for press and partnership enquiries are not published yet.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://opello.co.uk/sitemap.xml
