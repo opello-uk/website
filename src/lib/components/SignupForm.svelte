@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { tick } from 'svelte';
-	import { resolve } from '$app/paths';
 	import { CONSENT_TEXT, CONSENT_VERSION } from '#lib/consent';
 
 	// Signups are stored by the Opello signup service (Postgres-backed).
@@ -86,7 +85,7 @@
 		</div>
 		<p class="note" id="signup-note" role="status" aria-live="polite" data-state={status}>{note}</p>
 		<p class="consent">
-			{CONSENT_TEXT} <a href={resolve('/privacy')}>Privacy notice</a>
+			{CONSENT_TEXT}
 		</p>
 	</form>
 {:else}
