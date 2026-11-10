@@ -25,12 +25,7 @@
 </script>
 
 <section class="control" aria-labelledby="control-title">
-	<!-- Placeholder copy: confirm before launch -->
-	<header>
-		<h2 id="control-title">More control. More confidence.</h2>
-		<p>Placeholder line for the section intro. Confirm before launch.</p>
-	</header>
-
+	<div class="wrap">
 	<ul class="grid">
 		{#each tiles as t (t.title)}
 			<li class="tile">
@@ -61,6 +56,12 @@
 			</li>
 		{/each}
 	</ul>
+	<!-- Placeholder copy: confirm before launch -->
+	<header>
+		<h2 id="control-title">More control.<br />More confidence.</h2>
+		<p>Placeholder line for the section intro. Confirm before launch.</p>
+	</header>
+	</div>
 </section>
 
 <style>
@@ -69,33 +70,41 @@
 		color: var(--deep);
 		padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
 	}
-	header {
+	.wrap {
 		max-width: 1280px;
-		margin: 0 auto clamp(32px, 4vw, 56px);
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
+		align-items: center;
+		gap: clamp(32px, 5vw, 80px);
+	}
+	header {
+		min-width: 0;
 	}
 	h2 {
 		margin: 0 0 12px;
 		font-weight: 400;
 		font-size: clamp(28px, 3.2vw, 44px);
 		letter-spacing: -0.01em;
+		line-height: 1.1;
 	}
 	header p {
 		margin: 0;
 		font-size: 15px;
+		line-height: 1.5;
 		color: var(--mushroom);
 	}
 	.grid {
 		list-style: none;
-		margin: 0 auto;
+		margin: 0;
 		padding: 0;
-		max-width: 1280px;
 		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: clamp(16px, 2vw, 24px);
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: clamp(14px, 1.6vw, 20px);
 	}
 	.tile {
 		min-width: 0;
-		padding: clamp(22px, 2.2vw, 30px);
+		padding: clamp(20px, 2vw, 26px);
 		border-radius: 20px;
 		background: rgba(0, 20, 49, 0.06);
 		border: 1px solid rgba(0, 20, 49, 0.12);
@@ -132,8 +141,11 @@
 	}
 
 	@media (max-width: 1000px) {
-		.grid {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
+		.wrap {
+			grid-template-columns: 1fr;
+		}
+		header {
+			order: -1;
 		}
 	}
 	@media (max-width: 560px) {

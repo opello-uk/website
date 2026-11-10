@@ -3,7 +3,17 @@
 </script>
 
 <section class="hero" aria-labelledby="hero-title">
-	<div class="ring" aria-hidden="true"></div>
+	<!-- Decorative swoosh arc, as in the reference hero -->
+	<svg class="swoosh" viewBox="0 0 1000 800" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+		<defs>
+			<linearGradient id="swoosh-fill" x1="0" y1="1" x2="1" y2="0">
+				<stop offset="0" stop-color="#f58851" stop-opacity="0" />
+				<stop offset="0.45" stop-color="#f58851" stop-opacity="0.85" />
+				<stop offset="1" stop-color="#f58851" stop-opacity="0.35" />
+			</linearGradient>
+		</defs>
+		<path d="M-40 760 C 120 220, 560 -60, 1040 300 L 1040 370 C 600 110, 170 330, 40 790 Z" fill="url(#swoosh-fill)" />
+	</svg>
 
 	<div class="copy">
 		<h1 id="hero-title">
@@ -62,19 +72,14 @@
 		background: var(--deep);
 	}
 
-	/* Large peach ring sitting behind the copy and phones */
-	.ring {
+	/* Swoosh arc behind the copy and phones */
+	.swoosh {
 		position: absolute;
 		z-index: -1;
-		width: min(92vw, 880px);
-		aspect-ratio: 1;
-		right: -18%;
-		top: 50%;
-		translate: 0 -50%;
-		border-radius: 50%;
-		border: clamp(14px, 1.8vw, 24px) solid var(--peach);
-		opacity: 0.9;
-		box-shadow: 0 0 0 1px rgba(245, 136, 81, 0.35);
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
 	}
 
 	h1 {
@@ -214,9 +219,8 @@
 			right: 4%;
 			top: 16%;
 		}
-		.ring {
-			right: -40%;
-			top: 60%;
+		.swoosh {
+			opacity: 0.8;
 		}
 	}
 
