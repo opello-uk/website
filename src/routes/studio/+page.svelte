@@ -3,6 +3,7 @@
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import StudioHero from '#lib/studio/StudioHero.svelte';
 	import StudioProducts from '#lib/studio/StudioProducts.svelte';
+	import StudioSplit from '#lib/studio/StudioSplit.svelte';
 
 	const title = 'Opello studio (unlisted preview)';
 </script>
@@ -20,7 +21,8 @@
 		<p class="marker">Studio build. Placeholder copy, not for launch.</p>
 		<StudioHero />
 		<StudioProducts />
-		<!-- The split section and the rest land in the next steps. -->
+		<StudioSplit />
+		<!-- The navy banner and the rest land in the next steps. -->
 	</main>
 
 	<StudioFooter />
