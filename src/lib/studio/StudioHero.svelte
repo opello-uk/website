@@ -204,13 +204,15 @@
 			order: 2;
 		}
 		.phone {
-			width: 170px;
+			width: 164px;
 		}
 		.phone-back {
-			right: 40%;
+			right: 50%;
+			top: 4%;
 		}
 		.phone-front {
-			right: 6%;
+			right: 4%;
+			top: 16%;
 		}
 		.ring {
 			right: -40%;

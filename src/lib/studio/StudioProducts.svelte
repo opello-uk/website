@@ -146,6 +146,9 @@
 		.grid {
 			grid-template-columns: 1fr;
 		}
+		.photo {
+			aspect-ratio: 16 / 10;
+		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
