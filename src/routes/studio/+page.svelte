@@ -4,6 +4,7 @@
 	import StudioHero from '#lib/studio/StudioHero.svelte';
 	import StudioProducts from '#lib/studio/StudioProducts.svelte';
 	import StudioSplit from '#lib/studio/StudioSplit.svelte';
+	import StudioBanner from '#lib/studio/StudioBanner.svelte';
 
 	const title = 'Opello studio (unlisted preview)';
 </script>
@@ -22,7 +23,8 @@
 		<StudioHero />
 		<StudioProducts />
 		<StudioSplit />
-		<!-- The navy banner and the rest land in the next steps. -->
+		<StudioBanner />
+		<!-- The more-control tiles and the rest land in the next steps. -->
 	</main>
 
 	<StudioFooter />

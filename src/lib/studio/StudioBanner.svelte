@@ -1,0 +1,151 @@
+<script lang="ts">
+	// "Your world. Your freedom." navy banner. Copy is placeholder from the deck; confirm before launch.
+</script>
+
+<section class="banner" aria-labelledby="banner-title">
+	<div class="card">
+		<div class="art" role="img" aria-label="Placeholder photo">
+			<span class="ph-label">Photo placeholder</span>
+		</div>
+
+		<div class="copy">
+			<!-- Placeholder copy: confirm before launch -->
+			<h2 id="banner-title">Your world. Your freedom.</h2>
+			<p>
+				Everything you need to move through your day, with the control to make it yours.
+			</p>
+		</div>
+
+		<a class="cta" href="#banner-title">
+			<span>Get started</span>
+			<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
+				<path
+					d="M5 12h13M13 6l6 6-6 6"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.4"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+		</a>
+	</div>
+</section>
+
+<style>
+	.banner {
+		background: var(--clay);
+		color: var(--deep);
+		padding: clamp(40px, 5vw, 72px) clamp(20px, 4vw, 56px);
+	}
+
+	.card {
+		position: relative;
+		display: grid;
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) auto;
+		align-items: center;
+		gap: clamp(24px, 4vw, 64px);
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: clamp(32px, 4.5vw, 64px);
+		border-radius: 24px;
+		overflow: hidden;
+		background: linear-gradient(100deg, var(--deep) 0%, var(--deep) 45%, var(--mid) 100%);
+		color: var(--clay);
+	}
+
+	/* Placeholder ground for the photo, sits behind the copy on the right. */
+	.art {
+		position: absolute;
+		inset: 0 0 0 auto;
+		width: 46%;
+		background: linear-gradient(135deg, var(--teal) 0%, var(--mid) 55%, var(--peach) 150%);
+		opacity: 0.55;
+		mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+		-webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+	}
+	.ph-label {
+		position: absolute;
+		right: 16px;
+		bottom: 14px;
+		font-size: 10px;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--clay);
+		opacity: 0.85;
+	}
+
+	.copy {
+		position: relative;
+		z-index: 1;
+	}
+	h2 {
+		margin: 0 0 14px;
+		font-weight: 400;
+		font-size: clamp(30px, 3.6vw, 52px);
+		line-height: 1.06;
+		letter-spacing: -0.01em;
+	}
+	.copy p {
+		margin: 0;
+		max-width: 40ch;
+		font-size: clamp(15px, 1.2vw, 17px);
+		line-height: 1.55;
+		color: var(--muted);
+	}
+
+	.cta {
+		position: relative;
+		z-index: 1;
+		justify-self: end;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		padding: 10px 16px;
+		border-radius: 999px;
+		border: 1px solid var(--clay);
+		color: var(--clay);
+		font-size: 13px;
+		text-decoration: none;
+		white-space: nowrap;
+		transition:
+			background-color 220ms var(--ease),
+			color 220ms var(--ease);
+	}
+	.cta:hover {
+		background: var(--clay);
+		color: var(--deep);
+	}
+	.cta:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 3px;
+	}
+	.cta svg {
+		transition: transform 220ms var(--ease);
+	}
+	.cta:hover svg {
+		transform: translateX(2px);
+	}
+
+	@media (max-width: 800px) {
+		.card {
+			grid-template-columns: 1fr;
+		}
+		.cta {
+			justify-self: start;
+		}
+		.art {
+			width: 100%;
+			opacity: 0.35;
+			mask-image: none;
+			-webkit-mask-image: none;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.cta,
+		.cta svg {
+			transition: none;
+		}
+	}
+</style>
