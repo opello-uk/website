@@ -1,6 +1,7 @@
 <script lang="ts">
 	import StudioNav from '#lib/studio/StudioNav.svelte';
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
+	import StudioHero from '#lib/studio/StudioHero.svelte';
 
 	const title = 'Opello studio (unlisted preview)';
 </script>
@@ -15,8 +16,9 @@
 	<StudioNav />
 
 	<main id="personal">
-		<!-- Hero, light section and the rest land in the next steps. -->
 		<p class="marker">Studio build. Placeholder copy, not for launch.</p>
+		<StudioHero />
+		<!-- Light section and the rest land in the next steps. -->
 	</main>
 
 	<StudioFooter />
@@ -31,15 +33,14 @@
 	}
 	main {
 		min-height: 40svh;
-		padding: 96px clamp(20px, 4vw, 56px);
-		text-align: center;
 	}
 	.marker {
-		max-width: 36ch;
-		margin: 0 auto;
+		margin: 0;
+		padding: 8px clamp(20px, 4vw, 56px);
 		font-size: 11px;
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		color: var(--muted);
+		background: rgba(233, 228, 224, 0.04);
 	}
 </style>
