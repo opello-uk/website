@@ -30,7 +30,13 @@
 	<div class="tools">
 		<!-- Placeholder: region picker. The deck shows a flag here. -->
 		<button type="button" class="region" aria-label="Region: United Kingdom (placeholder)">
-			<span aria-hidden="true">UK</span>
+			<svg class="flag" viewBox="0 0 60 30" width="22" height="11" aria-hidden="true" focusable="false">
+				<rect width="60" height="30" fill="#012169" />
+				<path d="M0 0 L60 30 M60 0 L0 30" stroke="#fff" stroke-width="6" />
+				<path d="M0 0 L60 30 M60 0 L0 30" stroke="#c8102e" stroke-width="2" />
+				<path d="M30 0 V30 M0 15 H60" stroke="#fff" stroke-width="10" />
+				<path d="M30 0 V30 M0 15 H60" stroke="#c8102e" stroke-width="6" />
+			</svg>
 		</button>
 
 		<!-- Placeholder: search, not wired yet -->

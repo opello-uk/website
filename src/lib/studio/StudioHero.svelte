@@ -6,13 +6,13 @@
 	<!-- Decorative swoosh arc, as in the reference hero -->
 	<svg class="swoosh" viewBox="0 0 1000 800" preserveAspectRatio="none" aria-hidden="true" focusable="false">
 		<defs>
-			<linearGradient id="swoosh-fill" x1="0" y1="1" x2="1" y2="0">
-				<stop offset="0" stop-color="#f58851" stop-opacity="0" />
-				<stop offset="0.45" stop-color="#f58851" stop-opacity="0.85" />
-				<stop offset="1" stop-color="#f58851" stop-opacity="0.35" />
+			<linearGradient id="swoosh-fill" gradientUnits="userSpaceOnUse" x1="0" y1="800" x2="1000" y2="0">
+				<stop offset="0" stop-color="#f58851" stop-opacity="0.15" />
+				<stop offset="0.5" stop-color="#f58851" stop-opacity="0.32" />
+				<stop offset="1" stop-color="#f58851" stop-opacity="0.22" />
 			</linearGradient>
 		</defs>
-		<path d="M-40 760 C 120 220, 560 -60, 1040 300 L 1040 370 C 600 110, 170 330, 40 790 Z" fill="url(#swoosh-fill)" />
+		<path d="M40 820 C 180 330, 520 -10, 1000 210" fill="none" stroke="url(#swoosh-fill)" stroke-width="150" stroke-linecap="round" />
 	</svg>
 
 	<div class="copy">
