@@ -6,6 +6,7 @@
 	import StudioSplit from '#lib/studio/StudioSplit.svelte';
 	import StudioBanner from '#lib/studio/StudioBanner.svelte';
 	import StudioControl from '#lib/studio/StudioControl.svelte';
+	import StudioPhoto from '#lib/studio/StudioPhoto.svelte';
 
 	const title = 'Opello studio (unlisted preview)';
 </script>
@@ -26,7 +27,8 @@
 		<StudioSplit />
 		<StudioBanner />
 		<StudioControl />
-		<!-- The photo section and the rest land in the next steps. -->
+		<StudioPhoto />
+		<!-- The footer columns and mobile pass land in the next steps. -->
 	</main>
 
 	<StudioFooter />
