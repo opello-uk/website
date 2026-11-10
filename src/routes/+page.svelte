@@ -31,7 +31,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Opello" />
 	<meta property="og:title" content={title} />
-	<meta property="og:description" content="Financial freedom should have no borders. Opello is coming soon." />
+	<meta property="og:description" content="Opello is coming soon." />
 	<meta property="og:url" content={url} />
 	<meta property="og:image" content="https://opello.co.uk/assets/og.png" />
 	<meta property="og:image:width" content="1200" />
