@@ -160,13 +160,20 @@
 	}
 
 	@media (max-width: 560px) {
-		.pill-white,
-		.region {
+		/* Mobile: keep both pills (Login stays visible), hide the region and search to make room. */
+		.region,
+		.tools > .icon {
 			display: none;
 		}
-		.pill-peach {
+		.tools {
+			gap: 8px;
+		}
+		.pills {
+			gap: 6px;
+		}
+		.pill {
 			min-height: 36px;
-			padding: 0 14px;
+			padding: 0 12px;
 			font-size: 12px;
 		}
 	}
