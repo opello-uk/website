@@ -72,8 +72,9 @@
 		top: 50%;
 		translate: 0 -50%;
 		border-radius: 50%;
-		border: clamp(28px, 4vw, 56px) solid rgba(245, 136, 81, 0.2);
-		box-shadow: inset 0 0 0 1px rgba(245, 136, 81, 0.12);
+		border: clamp(14px, 1.8vw, 24px) solid var(--peach);
+		opacity: 0.9;
+		box-shadow: 0 0 0 1px rgba(245, 136, 81, 0.35);
 	}
 
 	h1 {

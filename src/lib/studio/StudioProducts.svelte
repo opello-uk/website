@@ -1,0 +1,157 @@
+<script lang="ts">
+	// "How can we help today?" product cards. Titles and copy are placeholders from the deck.
+	// Image tiles are placeholders until licensed photography is supplied.
+	const products = [
+		{
+			title: 'Current accounts',
+			body: 'Everyday banking that works for you, away from home or at home.',
+			tone: 'a'
+		},
+		{
+			title: 'Savings',
+			body: 'Simple ways to save with confidence and plan for what’s next.',
+			tone: 'b'
+		},
+		{
+			title: 'Pensions',
+			body: 'Straightforward support to build your future and stay ahead.',
+			tone: 'c'
+		}
+	];
+</script>
+
+<section class="products" aria-labelledby="products-title">
+	<!-- Placeholder copy: confirm before launch -->
+	<h2 id="products-title">How can we help today?</h2>
+
+	<ul class="grid">
+		{#each products as p (p.title)}
+			<li class="card">
+				<div class="photo tone-{p.tone}" role="img" aria-label="Placeholder photo">
+					<span class="ph-label">Photo placeholder</span>
+				</div>
+				<h3>{p.title}</h3>
+				<p>{p.body}</p>
+				<a class="learn" href="#products-title">
+					<span>Learn more</span>
+					<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
+						<path
+							d="M5 12h13M13 6l6 6-6 6"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2.4"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</a>
+			</li>
+		{/each}
+	</ul>
+</section>
+
+<style>
+	.products {
+		background: var(--clay);
+		color: var(--deep);
+		padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
+	}
+	h2 {
+		margin: 0 0 clamp(28px, 4vw, 48px);
+		font-weight: 400;
+		font-size: clamp(28px, 3.2vw, 44px);
+		letter-spacing: -0.01em;
+	}
+	.grid {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: clamp(16px, 2.4vw, 32px);
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+	}
+	.photo {
+		position: relative;
+		aspect-ratio: 4 / 3;
+		border-radius: 18px;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	.tone-a {
+		background: linear-gradient(160deg, #6f5153 0%, #005385 100%);
+	}
+	.tone-b {
+		background: linear-gradient(160deg, #0c6470 0%, #001431 100%);
+	}
+	.tone-c {
+		background: linear-gradient(160deg, #f58851 0%, #6f5153 100%);
+	}
+	.ph-label {
+		position: absolute;
+		left: 14px;
+		bottom: 12px;
+		font-size: 10px;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--clay);
+		opacity: 0.85;
+	}
+	h3 {
+		margin: 0 0 8px;
+		font-size: 20px;
+		font-weight: 500;
+		letter-spacing: -0.005em;
+	}
+	p {
+		margin: 0 0 18px;
+		font-size: 15px;
+		line-height: 1.5;
+		color: var(--mushroom);
+		max-width: 36ch;
+	}
+	.learn {
+		align-self: flex-start;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		padding: 8px 14px;
+		border-radius: 999px;
+		border: 1px solid var(--deep);
+		color: var(--deep);
+		font-size: 13px;
+		text-decoration: none;
+		transition: background-color 220ms var(--ease);
+	}
+	.learn:hover {
+		background: var(--deep);
+		color: var(--clay);
+	}
+	.learn:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 3px;
+	}
+	.learn svg {
+		transition: transform 220ms var(--ease);
+	}
+	.learn:hover svg {
+		transform: translateX(2px);
+	}
+
+	@media (max-width: 800px) {
+		.grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.learn,
+		.learn svg {
+			transition: none;
+		}
+	}
+</style>
