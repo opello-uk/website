@@ -12,7 +12,7 @@
 				<stop offset="1" stop-color="#f58851" stop-opacity="0.22" />
 			</linearGradient>
 		</defs>
-		<path d="M40 820 C 180 330, 520 -10, 1000 210" fill="none" stroke="url(#swoosh-fill)" stroke-width="150" stroke-linecap="round" />
+		<path d="M40 820 C 180 330, 520 -10, 1000 210" fill="none" stroke="url(#swoosh-fill)" stroke-width="120" stroke-linecap="round" />
 	</svg>
 
 	<div class="copy">
@@ -220,7 +220,7 @@
 			top: 16%;
 		}
 		.swoosh {
-			opacity: 0.8;
+			opacity: 0.7;
 		}
 	}
 
