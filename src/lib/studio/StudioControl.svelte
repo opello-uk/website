@@ -15,11 +15,6 @@
 			title: 'Know it is you',
 			body: 'Secure sign-in that checks it is really you.',
 			icon: 'shield'
-		},
-		{
-			title: 'Help when you need it',
-			body: 'Talk to a real person, any time you want to.',
-			icon: 'chat'
 		}
 	];
 </script>
@@ -40,16 +35,12 @@
 							<rect x="5" y="10.5" width="14" height="10" rx="2.5" />
 							<path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" />
 						</svg>
-					{:else if t.icon === 'shield'}
+					{:else}
 						<svg viewBox="0 0 24 24" width="26" height="26" focusable="false">
 							<path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z" />
 							<path d="m9 12 2.2 2.2L15.5 10" />
 						</svg>
-					{:else}
-						<svg viewBox="0 0 24 24" width="26" height="26" focusable="false">
-							<path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 3.5V16A2.5 2.5 0 0 1 4 13.5v-7Z" />
-						</svg>
-					{/if}
+								{/if}
 				</span>
 				<h3>{t.title}</h3>
 				<p>{t.body}</p>
