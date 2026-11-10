@@ -93,7 +93,7 @@
 		max-width: 40ch;
 		font-size: clamp(15px, 1.2vw, 17px);
 		line-height: 1.55;
-		color: var(--mushroom);
+		color: var(--clay);
 	}
 
 	.cta {

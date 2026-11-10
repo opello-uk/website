@@ -9,6 +9,10 @@
 		{ title: 'Premium', links: ['Premium plans', 'Premium support'] },
 		{ title: 'About', links: ['About Opello', 'Careers', 'Contact'] }
 	];
+
+	// Placeholder social and legal labels. Not linked yet: confirm names and URLs before launch.
+	const socials = ['Instagram', 'LinkedIn', 'X', 'YouTube'];
+	const legal = ['Terms', 'Cookies', 'Complaints'];
 </script>
 
 <footer class="foot">
@@ -32,9 +36,25 @@
 		</div>
 	</div>
 
+	<!-- Placeholder socials row: labels only, no links until the accounts are confirmed. -->
+	<div class="social" aria-label="Social channels (placeholder)">
+		<span class="social-label">Follow us</span>
+		<ul>
+			{#each socials as name (name)}
+				<li><span>{name}</span></li>
+			{/each}
+		</ul>
+	</div>
+
 	<div class="base">
 		<span>© 2026 Opello. All rights reserved.</span>
-		<a href={resolve('/privacy/')}>Privacy</a>
+		<ul class="legal">
+			<li><a href={resolve('/privacy/')}>Privacy</a></li>
+			<!-- Placeholder legal links: pages not written yet. -->
+			{#each legal as name (name)}
+				<li><span>{name}</span></li>
+			{/each}
+		</ul>
 	</div>
 </footer>
 
@@ -96,6 +116,41 @@
 	}
 	.base a {
 		color: var(--clay);
+	}
+	.social {
+		margin-top: clamp(36px, 5vw, 56px);
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	.social-label {
+		font-size: 11px;
+		font-weight: 500;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: var(--peach);
+	}
+	.social ul {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+	.social li span {
+		display: inline-block;
+		padding: 7px 14px;
+		border-radius: 999px;
+		border: 1px solid var(--rule);
+		font-size: 13px;
+		color: var(--clay);
+	}
+	.legal {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 
 	@media (max-width: 860px) {
