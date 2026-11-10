@@ -4,9 +4,9 @@
 	import SignupForm from '#lib/components/SignupForm.svelte';
 	import { resolve } from '$app/paths';
 
-	const title = 'Opello — More freedom. Fewer barriers.';
+	const title = 'Opello — Coming soon';
 	const description =
-		'Opello is a cross-border money app for lives that span countries. From everyday payments to international transfers, more flexibility and control wherever life takes you. Coming soon.';
+		'Opello is coming soon. Sign up to hear when we launch.';
 	const url = 'https://opello.co.uk/';
 
 	const jsonLd = JSON.stringify({
@@ -15,9 +15,7 @@
 		name: 'Opello',
 		url,
 		logo: 'https://opello.co.uk/assets/opello-wordmark.svg',
-		slogan: 'Your own money, unlocked.',
-		description:
-			'A cross-border money app for people whose lives span countries. Financial freedom should have no borders.'
+		description: 'Opello is coming soon.'
 	});
 </script>
 
@@ -31,7 +29,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Opello" />
 	<meta property="og:title" content={title} />
-	<meta property="og:description" content="Financial freedom should have no borders. Opello is coming soon." />
+	<meta property="og:description" content="Opello is coming soon." />
 	<meta property="og:url" content={url} />
 	<meta property="og:image" content="https://opello.co.uk/assets/og.png" />
 	<meta property="og:image:width" content="1200" />
@@ -51,10 +49,9 @@
 	</header>
 
 	<div class="hero">
-		<h1>More freedom.<br />Fewer barriers.</h1>
+		<h1>Coming soon.</h1>
 		<p class="lede">
-			From everyday payments to international transfers, Opello gives you more flexibility and
-			control, wherever life takes you.
+			Opello is coming soon. Sign up and we'll let you know when we launch.
 		</p>
 		<SignupForm />
 	</div>
@@ -62,7 +59,7 @@
 	<footer>
 		<span>opello.co.uk</span>
 		<span class="foot-right">
-			<span>A cross-border money app</span>
+			<span>Opello Ltd</span>
 			<a href={resolve('/privacy')}>Privacy</a>
 		</span>
 	</footer>
