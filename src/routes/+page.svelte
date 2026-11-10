@@ -6,7 +6,7 @@
 
 	const title = 'Opello — More freedom. Fewer barriers.';
 	const description =
-		'From everyday payments to international transfers, Opello gives you more flexibility and control, wherever life takes you.';
+		'Opello is coming soon. Sign up to hear when we launch.';
 	const url = 'https://opello.co.uk/';
 
 	const jsonLd = JSON.stringify({
@@ -17,7 +17,7 @@
 		logo: 'https://opello.co.uk/assets/opello-wordmark.svg',
 		slogan: 'Your own money, unlocked.',
 		description:
-			'From everyday payments to international transfers, Opello gives you more flexibility and control.'
+			'Opello is coming soon.'
 	});
 </script>
 
@@ -53,7 +53,7 @@
 	<div class="hero">
 		<h1>More freedom.<br />Fewer barriers.</h1>
 		<p class="lede">
-			From everyday payments to international transfers, Opello gives you more flexibility and control, wherever life takes you.
+			Opello is coming soon. Sign up to hear when we launch.
 		</p>
 		<SignupForm />
 	</div>
