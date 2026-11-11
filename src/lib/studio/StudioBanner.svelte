@@ -50,7 +50,9 @@
 		padding: clamp(28px, 4vw, 64px) clamp(32px, 6vw, 88px);
 		border-radius: 24px;
 		overflow: hidden;
-		background: linear-gradient(100deg, var(--deep) 0%, var(--deep) 45%, var(--mid) 100%);
+		background:
+			radial-gradient(circle at 0% 0%, rgba(214, 128, 88, 0.55) 0%, rgba(214, 128, 88, 0) 38%),
+			linear-gradient(100deg, var(--deep) 0%, var(--deep) 45%, var(--mid) 100%);
 		color: var(--clay);
 	}
 
@@ -101,12 +103,12 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 8px;
-		padding: 13px 28px;
+		padding: 10px 22px;
 		border-radius: 999px;
 		border: 1px solid var(--clay);
 		background: var(--clay);
 		color: var(--deep);
-		font-size: 14px;
+		font-size: 13px;
 		text-decoration: none;
 		white-space: nowrap;
 		transition:
