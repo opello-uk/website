@@ -24,7 +24,7 @@
 			<span class="line-2">your life.</span>
 		</h1>
 		<!-- Placeholder copy: confirm before launch -->
-		<p class="sub">For different lives, different circumstances and different money goals.</p>
+		<p class="sub">For different lives, different circumstances and different starting points.</p>
 		<a class="cta" href="#personal">
 			<span>Open account with us</span>
 			<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
@@ -462,6 +462,64 @@
 		.phone-front {
 			right: 4%;
 			top: 16%;
+		}
+	}
+
+	/* Figma mobile: copy on the left, the two phones on the right at the top */
+	@media (max-width: 560px) {
+		.hero {
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+			align-items: start;
+			gap: 0;
+			padding: 40px 0 0 20px;
+		}
+		.copy {
+			padding-top: 24px;
+			padding-bottom: 40px;
+		}
+		h1 {
+			font-size: 40px;
+		}
+		.sub {
+			margin-top: 16px;
+			font-size: 13px;
+			line-height: 1.45;
+			max-width: 20ch;
+		}
+		.cta {
+			margin-top: 20px;
+			padding: 9px 14px;
+			font-size: 12px;
+			gap: 6px;
+		}
+		.cta svg {
+			width: 12px;
+			height: 12px;
+		}
+		.screens {
+			order: 0;
+			grid-column: 2;
+			grid-row: 1;
+			height: 300px;
+			margin-right: -8px;
+		}
+		.phone {
+			width: 128px;
+			padding: 6px;
+			border-radius: 28px;
+		}
+		.screen {
+			border-radius: 22px;
+			padding: 8px 8px;
+			font-size: 8px;
+		}
+		.phone-back {
+			right: 52%;
+			top: 0;
+		}
+		.phone-front {
+			right: -2%;
+			top: 30%;
 		}
 	}
 

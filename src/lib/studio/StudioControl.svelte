@@ -119,9 +119,27 @@
 			order: -1;
 		}
 	}
+	/* Figma mobile keeps the three tiles in one row, smaller */
 	@media (max-width: 560px) {
 		.grid {
-			grid-template-columns: 1fr;
+			gap: 10px;
+		}
+		.tile {
+			padding: 18px 8px;
+			border-radius: 12px;
+		}
+		.icon {
+			width: 30px;
+			height: 30px;
+			margin-bottom: 10px;
+		}
+		.icon svg {
+			width: 22px;
+			height: 22px;
+		}
+		h3 {
+			font-size: 13px;
+			line-height: 1.25;
 		}
 	}
 </style>
