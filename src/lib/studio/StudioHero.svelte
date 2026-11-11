@@ -523,6 +523,25 @@
 			right: 0;
 			top: 40px;
 		}
+			/* Quick actions: four equal columns that fit the narrow phone; labels may wrap */
+		.quick {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 3px;
+			font-size: 6px;
+			line-height: 1.15;
+		}
+		.quick span {
+			min-width: 0;
+			padding: 4px 1px 3px;
+			border-radius: 8px;
+			overflow-wrap: anywhere;
+		}
+		.quick i {
+			width: 8px;
+			height: 8px;
+			margin-bottom: 2px;
+			border-width: 1px;
+		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
