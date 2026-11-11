@@ -150,6 +150,8 @@
 		align-items: center;
 		gap: 10px;
 		padding: 14px 24px;
+		min-height: 44px;
+		box-sizing: border-box;
 		border-radius: 999px;
 		background: var(--peach);
 		color: var(--deep);
@@ -498,6 +500,7 @@
 		.cta {
 			margin-top: 20px;
 			padding: 9px 14px;
+			min-height: 44px;
 			font-size: 12px;
 			gap: 6px;
 		}
