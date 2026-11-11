@@ -66,7 +66,7 @@
 	h2 {
 		margin: 0 0 clamp(28px, 4vw, 48px);
 		font-weight: 500;
-		font-size: clamp(28px, 3.2vw, 44px);
+		font-size: clamp(28px, 4.6vw, 66px);
 		letter-spacing: -0.01em;
 	}
 	.grid {
@@ -157,6 +157,20 @@
 	}
 	.learn:hover svg {
 		transform: translateX(2px);
+	}
+
+	/* Desktop: the row runs off the right edge, as in the reference, so the third card is cropped. */
+	@media (min-width: 801px) {
+		.products {
+			overflow: hidden;
+		}
+		.grid {
+			display: flex;
+			gap: clamp(24px, 4.6vw, 67px);
+		}
+		.card {
+			flex: 0 0 clamp(280px, 30.8vw, 460px);
+		}
 	}
 
 	@media (max-width: 800px) {

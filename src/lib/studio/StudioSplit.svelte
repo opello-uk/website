@@ -59,9 +59,9 @@
 <style>
 	.split {
 		display: grid;
-		grid-template-columns: minmax(0, 1.44fr) minmax(0, 1fr);
+		grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr);
 		align-items: center;
-		gap: clamp(32px, 6vw, 96px);
+		gap: clamp(32px, 4.9vw, 71px);
 		background: var(--clay);
 		color: var(--deep);
 		padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
@@ -95,7 +95,7 @@
 	h2 {
 		margin: 0 0 16px;
 		font-weight: 500;
-		font-size: clamp(28px, 3.2vw, 44px);
+		font-size: clamp(28px, 4.6vw, 66px);
 		line-height: 1.08;
 		letter-spacing: -0.01em;
 	}
