@@ -68,7 +68,7 @@
 		padding: 0;
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: clamp(16px, 2.4vw, 32px);
+		gap: clamp(16px, 4vw, 56px);
 	}
 	.card {
 		display: flex;
@@ -77,7 +77,7 @@
 	}
 	.photo {
 		position: relative;
-		aspect-ratio: 4 / 3;
+		aspect-ratio: 1 / 1;
 		border-radius: 18px;
 		overflow: hidden;
 		margin-bottom: 20px;

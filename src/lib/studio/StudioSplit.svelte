@@ -57,7 +57,7 @@
 <style>
 	.split {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		grid-template-columns: minmax(0, 1.44fr) minmax(0, 1fr);
 		align-items: center;
 		gap: clamp(32px, 6vw, 96px);
 		background: var(--clay);
@@ -67,7 +67,7 @@
 
 	.media {
 		position: relative;
-		aspect-ratio: 4 / 3;
+		aspect-ratio: 3 / 2;
 		border-radius: 18px;
 		overflow: hidden;
 		background: linear-gradient(135deg, #0c6470 0%, #001431 60%, #f58851 140%);
