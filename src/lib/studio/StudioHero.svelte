@@ -478,7 +478,7 @@
 			padding-bottom: 40px;
 		}
 		h1 {
-			font-size: 40px;
+			font-size: 36px;
 		}
 		.sub {
 			margin-top: 16px;
@@ -501,10 +501,10 @@
 			grid-column: 2;
 			grid-row: 1;
 			height: 300px;
-			margin-right: -8px;
+			margin-right: 0;
 		}
 		.phone {
-			width: 128px;
+			width: 118px;
 			padding: 6px;
 			border-radius: 28px;
 		}
@@ -518,8 +518,8 @@
 			top: 0;
 		}
 		.phone-front {
-			right: -2%;
-			top: 30%;
+			right: 0;
+			top: 34%;
 		}
 	}
 
