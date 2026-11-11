@@ -38,11 +38,13 @@
 	.studio {
 		min-height: 100svh;
 		display: grid;
+		grid-template-columns: minmax(0, 1fr);
 		grid-template-rows: auto 1fr auto;
 		background: var(--deep);
 	}
 	main {
 		min-height: 40svh;
+		min-width: 0;
 	}
 	.marker {
 		margin: 0;
