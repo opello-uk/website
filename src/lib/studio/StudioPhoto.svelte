@@ -54,6 +54,26 @@
 		z-index: -1;
 		background: linear-gradient(90deg, rgba(0, 20, 49, 0.85) 0%, rgba(0, 20, 49, 0.35) 60%, rgba(0, 20, 49, 0) 100%);
 	}
+	/* Phones: the reference band is a short strip (about 200px at 390), copy bottom-left. */
+	@media (max-width: 800px) {
+		.photo {
+			min-height: 210px;
+		}
+		.inner {
+			padding: 28px 20px 22px;
+			gap: 12px;
+		}
+		h2 {
+			font-size: 24px;
+			margin: 0 0 8px;
+		}
+		.copy p {
+			font-size: 12px;
+			line-height: 1.5;
+			max-width: 34ch;
+		}
+	}
+
 	.ph-label {
 		position: absolute;
 		right: 20px;
