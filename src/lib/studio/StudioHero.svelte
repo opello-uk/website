@@ -471,7 +471,7 @@
 			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 			align-items: start;
 			gap: 0;
-			padding: 40px 0 0 20px;
+			padding: 40px 12px 0 20px;
 		}
 		.copy {
 			padding-top: 24px;
@@ -504,7 +504,7 @@
 			margin-right: 0;
 		}
 		.phone {
-			width: 118px;
+			width: 112px;
 			padding: 6px;
 			border-radius: 28px;
 		}
@@ -513,13 +513,15 @@
 			padding: 8px 8px;
 			font-size: 8px;
 		}
+		/* Back phone sits in the right column, clear of the CTA; front phone overlaps it and stays inside the screen */
 		.phone-back {
-			right: 52%;
+			left: 0;
+			right: auto;
 			top: 0;
 		}
 		.phone-front {
 			right: 0;
-			top: 34%;
+			top: 40px;
 		}
 	}
 
