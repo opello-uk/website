@@ -480,6 +480,10 @@
 
 	/* Figma mobile: copy on the left, the two phones on the right at the top */
 	@media (max-width: 560px) {
+		/* The phone tab row sits below the phone's clipped bottom at 390, so it never shows; the quick row carries the nav */
+		.tabs {
+			display: none;
+		}
 		.hero {
 			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 			align-items: start;
