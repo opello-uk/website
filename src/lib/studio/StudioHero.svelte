@@ -12,7 +12,10 @@
 				<stop offset="1" stop-color="#f9b48c" />
 			</linearGradient>
 		</defs>
-		<path d="M40 820 C 180 330, 520 -10, 1000 210" fill="none" stroke="url(#swoosh-fill)" stroke-width="120" stroke-linecap="round" />
+		<!-- Desktop: sweeps up behind the phones, clear of the copy column -->
+		<path class="arc-desk" d="M430 820 C 520 560, 700 280, 1000 200" fill="none" stroke="url(#swoosh-fill)" stroke-width="120" stroke-linecap="round" />
+		<!-- Mobile: low band under the CTA, behind the stacked phones -->
+		<path class="arc-mob" d="M-40 900 C 200 740, 620 660, 1040 560" fill="none" stroke="url(#swoosh-fill)" stroke-width="90" stroke-linecap="round" />
 	</svg>
 
 	<div class="copy">
@@ -70,6 +73,10 @@
 		min-height: clamp(520px, 62svh, 680px);
 		padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 56px);
 		background: var(--deep);
+	}
+
+	.arc-mob {
+		display: none;
 	}
 
 	/* Swoosh arc behind the copy and phones */
@@ -200,6 +207,12 @@
 	}
 
 	@media (max-width: 800px) {
+		.arc-desk {
+			display: none;
+		}
+		.arc-mob {
+			display: inline;
+		}
 		.hero {
 			grid-template-columns: 1fr;
 			min-height: 0;
