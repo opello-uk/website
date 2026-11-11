@@ -6,13 +6,18 @@
 	const columns = [
 		{ title: 'Personal', links: ['Current accounts', 'Savings', 'Pensions'] },
 		{ title: 'Business', links: ['Business accounts', 'Business transfers', 'Business cards'] },
-		{ title: 'Premium', links: ['Premium plans', 'Premium support'] },
-		{ title: 'About', links: ['About Opello', 'Careers', 'Contact'] }
+		{ title: 'About', links: ['About us', 'Our approach', 'Careers', 'Contact'] },
+		{ title: 'Help', links: ['Help centre', 'FAQs', 'Account support', 'Get in touch'] }
 	];
 
-	// Placeholder social and legal labels. Not linked yet: confirm names and URLs before launch.
-	const socials = ['Instagram', 'LinkedIn', 'X', 'YouTube'];
-	const legal = ['Terms', 'Cookies', 'Complaints'];
+	// Placeholder social labels and icons. Not linked yet: confirm names and URLs before launch.
+	const socials = [
+		{ name: 'Instagram', path: 'M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 1.8A2.2 2.2 0 0 0 4.8 7v10A2.2 2.2 0 0 0 7 19.2h10a2.2 2.2 0 0 0 2.2-2.2V7A2.2 2.2 0 0 0 17 4.8H7zM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4z' },
+		{ name: 'LinkedIn', path: 'M4.5 9.5h3V19h-3V9.5zM6 4.8a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4zM10 9.5h2.9v1.3c.4-.8 1.4-1.6 3-1.6 3.1 0 3.6 2 3.6 4.6V19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3V9.5z' },
+		{ name: 'X', path: 'M4 4h4.6l3.6 4.9L16.2 4H19l-6 6.9L19.6 20h-4.6l-3.9-5.3L6.6 20H4l6.4-7.3L4 4zm3.1 1.5 9.8 13h1.4l-9.8-13H7.1z' },
+		{ name: 'YouTube', path: 'M21.5 7.2a2.7 2.7 0 0 0-1.9-1.9C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.5a2.7 2.7 0 0 0-1.9 1.9C2 8.9 2 12 2 12s0 3.1.5 4.8a2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.6.5 7.6.5s5.9 0 7.6-.5a2.7 2.7 0 0 0 1.9-1.9c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM10 15.2V8.8l5.2 3.2-5.2 3.2z' }
+	];
+	const legal = ['Terms & Conditions', 'Cookie policy', 'Accessibility', 'Sitemap'];
 </script>
 
 <footer class="foot">
@@ -36,12 +41,17 @@
 		</div>
 	</div>
 
-	<!-- Placeholder socials row: labels only, no links until the accounts are confirmed. -->
+	<!-- Placeholder socials row: icons only, no links until the accounts are confirmed. -->
 	<div class="social" aria-label="Social channels (placeholder)">
-		<span class="social-label">Follow us</span>
 		<ul>
-			{#each socials as name (name)}
-				<li><span>{name}</span></li>
+			{#each socials as social (social.name)}
+				<li>
+					<span class="social-icon" aria-label={social.name} role="img">
+						<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+							<path d={social.path} fill="currentColor" />
+						</svg>
+					</span>
+				</li>
 			{/each}
 		</ul>
 	</div>
@@ -49,7 +59,7 @@
 	<div class="base">
 		<span>© 2026 Opello. All rights reserved.</span>
 		<ul class="legal">
-			<li><a href={resolve('/privacy/')}>Privacy</a></li>
+			<li><a href={resolve('/privacy/')}>Privacy policy</a></li>
 			<!-- Placeholder legal links: pages not written yet. -->
 			{#each legal as name (name)}
 				<li><span>{name}</span></li>
@@ -124,25 +134,14 @@
 		gap: 20px;
 		flex-wrap: wrap;
 	}
-	.social-label {
-		font-size: 11px;
-		font-weight: 500;
-		letter-spacing: 0.18em;
-		text-transform: uppercase;
-		color: var(--peach);
-	}
 	.social ul {
 		display: flex;
-		gap: 10px;
+		gap: 22px;
 		flex-wrap: wrap;
 	}
-	.social li span {
-		display: inline-block;
-		padding: 7px 14px;
-		border-radius: 999px;
-		border: 1px solid var(--rule);
-		font-size: 13px;
-		color: var(--clay);
+	.social-icon {
+		display: inline-flex;
+		color: var(--peach);
 	}
 	.legal {
 		display: flex;
