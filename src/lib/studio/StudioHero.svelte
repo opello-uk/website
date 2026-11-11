@@ -433,6 +433,9 @@
 	}
 
 	@media (max-width: 800px) {
+		.example-note {
+			display: none;
+		}
 		.arc-desk {
 			display: none;
 		}
