@@ -182,6 +182,7 @@
 			display: flex;
 			overflow-x: auto;
 			scroll-snap-type: x mandatory;
+			scroll-padding: 0 var(--gutter);
 			scrollbar-width: none;
 			gap: 14px;
 			margin: 0 calc(-1 * var(--gutter));
