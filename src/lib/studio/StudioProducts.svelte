@@ -136,6 +136,8 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 8px;
+		min-height: 44px;
+		box-sizing: border-box;
 		padding: 12px 24px;
 		border-radius: 999px;
 		border: 1px solid var(--deep);

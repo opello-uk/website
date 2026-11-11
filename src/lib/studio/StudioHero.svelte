@@ -79,7 +79,7 @@
 				<div class="bal-label">Total balance · Personal GBP</div>
 				<div class="bal">£8,420.50</div>
 				<div class="card-vis"><span class="logo">opello</span><span class="num">•••• 1111</span></div>
-				<div class="quick"><span><i></i>Transfer</span><span><i></i>Pay</span><span><i></i>Add money</span><span><i></i>More</span></div>
+				<div class="quick"><span><i></i>Send</span><span><i></i>Pay</span><span><i></i>Add</span><span><i></i>More</span></div>
 				<div class="recent">Recent transactions</div>
 				<div class="tx"><span class="dot"></span><div><b>Coffee</b><small>Café · today</small></div><em>-3.00</em></div>
 				<div class="tx"><span class="dot dot-b"></span><div><b>Transport</b><small>Travel · today</small></div><em>-2.50</em></div>
@@ -532,7 +532,7 @@
 			right: 0;
 			top: 40px;
 		}
-			/* Quick actions: four equal columns that fit the narrow phone; labels may wrap */
+			/* Quick actions: four equal columns that fit the narrow phone; short labels, no mid-word breaks */
 		.quick {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
 			gap: 3px;
@@ -543,7 +543,7 @@
 			min-width: 0;
 			padding: 4px 1px 3px;
 			border-radius: 8px;
-			overflow-wrap: anywhere;
+			white-space: nowrap;
 		}
 		.quick i {
 			width: 8px;
