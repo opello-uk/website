@@ -13,7 +13,7 @@
 			</linearGradient>
 		</defs>
 		<!-- Desktop: sweeps up behind the phones, clear of the copy column -->
-		<path class="arc-desk" d="M430 820 C 520 560, 700 280, 1000 200" fill="none" stroke="url(#swoosh-fill)" stroke-width="120" stroke-linecap="round" />
+		<path class="arc-desk" d="M430 820 C 520 560, 700 280, 1000 200" fill="none" stroke="url(#swoosh-fill)" stroke-width="96" stroke-linecap="round" />
 		<!-- Mobile: low band under the CTA, behind the stacked phones -->
 		<path class="arc-mob" d="M-40 900 C 200 740, 620 660, 1040 560" fill="none" stroke="url(#swoosh-fill)" stroke-width="90" stroke-linecap="round" />
 	</svg>
