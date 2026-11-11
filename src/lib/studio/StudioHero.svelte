@@ -181,7 +181,7 @@
 	}
 	.phone {
 		position: absolute;
-		width: clamp(180px, 22vw, 290px);
+		width: clamp(200px, 24vw, 340px);
 		aspect-ratio: 9 / 19.5;
 		border-radius: 36px;
 		padding: 9px;
@@ -189,13 +189,13 @@
 		box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
 	}
 	.phone-back {
-		right: 34%;
+		right: 36%;
 		top: 2%;
 		rotate: -6deg;
 	}
 	.phone-front {
-		right: 4%;
-		top: 14%;
+		right: 2%;
+		top: 16%;
 		rotate: 4deg;
 	}
 	.screen {
