@@ -178,7 +178,14 @@
 	}
 
 	@media (max-width: 560px) {
-		/* Mobile: keep the region flag, search and both pills, as in the 390 Figma header. */
+		/* Mobile: keep the region flag, search and both pills, as in the 390 Figma header.
+		   Tighter column gap and logo so the Login pill sits inside 390px. */
+		.nav {
+			gap: 10px;
+		}
+		.brand {
+			width: 84px;
+		}
 		.tools {
 			gap: 4px;
 		}
@@ -197,7 +204,7 @@
 			font-size: 10px;
 			line-height: 1.15;
 			white-space: normal;
-			max-width: 92px;
+			max-width: 88px;
 		}
 		.pill-white {
 			padding: 0 14px;
