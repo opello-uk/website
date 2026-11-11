@@ -15,20 +15,6 @@
 			<h2 id="photo-title">A place where you belong.</h2>
 			<p>Placeholder line for the photo band. Confirm before launch.</p>
 		</div>
-
-		<a class="cta" href="#photo-title">
-			<span>Get started</span>
-			<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
-				<path
-					d="M5 12h13M13 6l6 6-6 6"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2.4"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				/>
-			</svg>
-		</a>
 	</div>
 </section>
 
@@ -106,39 +92,4 @@
 		color: var(--clay);
 	}
 
-	.cta {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		min-height: 44px;
-		box-sizing: border-box;
-		padding: 10px 16px;
-		border-radius: 999px;
-		border: 1px solid var(--clay);
-		color: var(--clay);
-		font-size: 13px;
-		text-decoration: none;
-		transition: background-color 220ms var(--ease), color 220ms var(--ease);
-	}
-	.cta:hover {
-		background: var(--clay);
-		color: var(--deep);
-	}
-	.cta:focus-visible {
-		outline: 2px solid var(--peach);
-		outline-offset: 3px;
-	}
-	.cta svg {
-		transition: transform 220ms var(--ease);
-	}
-	.cta:hover svg {
-		transform: translateX(2px);
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.cta,
-		.cta svg {
-			transition: none;
-		}
-	}
 </style>

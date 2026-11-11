@@ -171,6 +171,24 @@
 		}
 	}
 	@media (max-width: 560px) {
+		/* Phones: four columns in one row, as in the 390 frame. */
+		.cols {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 12px;
+		}
+		h2 {
+			font-size: 9px;
+			letter-spacing: 0.12em;
+			margin-bottom: 10px;
+		}
+		ul {
+			gap: 8px;
+		}
+		li span {
+			font-size: 12px;
+			line-height: 1.3;
+			overflow-wrap: anywhere;
+		}
 		.base {
 			flex-direction: column;
 			align-items: flex-start;
