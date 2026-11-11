@@ -1,21 +1,9 @@
 <script lang="ts">
-	// "More control. More confidence." icon tiles. Copy is placeholder from the deck; confirm before launch.
+	// "More control. More confidence." tiles. Tile labels follow the Figma board; the intro line is placeholder, confirm before launch.
 	const tiles = [
-		{
-			title: 'See everything',
-			body: 'Balances, payments and plans in one clear view.',
-			icon: 'eye'
-		},
-		{
-			title: 'Lock it down',
-			body: 'Freeze a card or limit spending in a tap.',
-			icon: 'lock'
-		},
-		{
-			title: 'Know it is you',
-			body: 'Secure sign-in that checks it is really you.',
-			icon: 'shield'
-		}
+		{ title: 'Global transfers', icon: 'globe' },
+		{ title: 'Virtual cards', icon: 'card' },
+		{ title: 'Currency exchange', icon: 'exchange' }
 	];
 </script>
 
@@ -25,25 +13,23 @@
 		{#each tiles as t (t.title)}
 			<li class="tile">
 				<span class="icon" aria-hidden="true">
-					{#if t.icon === 'eye'}
+					{#if t.icon === 'globe'}
 						<svg viewBox="0 0 24 24" width="30" height="30" focusable="false">
-							<path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z" />
-							<circle cx="12" cy="12" r="3" />
+							<circle cx="12" cy="12" r="8.5" />
+							<path d="M3.5 12h17M12 3.5c2.6 2.6 2.6 14.4 0 17M12 3.5c-2.6 2.6-2.6 14.4 0 17" />
 						</svg>
-					{:else if t.icon === 'lock'}
+					{:else if t.icon === 'card'}
 						<svg viewBox="0 0 24 24" width="30" height="30" focusable="false">
-							<rect x="5" y="10.5" width="14" height="10" rx="2.5" />
-							<path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" />
+							<rect x="2.5" y="5.5" width="19" height="13" rx="2.5" />
+							<path d="M2.5 10h19M6.5 15h4" />
 						</svg>
 					{:else}
 						<svg viewBox="0 0 24 24" width="30" height="30" focusable="false">
-							<path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z" />
-							<path d="m9 12 2.2 2.2L15.5 10" />
+							<path d="M4 8.5h14.5M15.5 5.5l3 3-3 3M20 15.5H5.5M8.5 12.5l-3 3 3 3" />
 						</svg>
-								{/if}
+					{/if}
 				</span>
 				<h3>{t.title}</h3>
-				<p>{t.body}</p>
 			</li>
 		{/each}
 	</ul>
@@ -95,8 +81,11 @@
 	}
 	.tile {
 		min-width: 0;
-		padding: clamp(20px, 2vw, 26px);
+		padding: clamp(22px, 2.2vw, 30px) clamp(14px, 1.6vw, 22px);
 		border-radius: 16px;
+		text-align: center;
+		display: grid;
+		justify-items: center;
 		background: #ffffff;
 		box-shadow: 0 1px 2px rgba(0, 20, 49, 0.06);
 	}
@@ -106,7 +95,7 @@
 		width: 40px;
 		height: 40px;
 		color: #c4561f;
-		margin-bottom: 18px;
+		margin-bottom: 16px;
 	}
 	.icon svg {
 		fill: none;
@@ -116,17 +105,10 @@
 		stroke-linejoin: round;
 	}
 	h3 {
-		margin: 0 0 8px;
-		font-size: 19px;
+		margin: 0;
+		font-size: 17px;
 		font-weight: 500;
 		letter-spacing: -0.005em;
-	}
-	.tile p {
-		margin: 0;
-		font-size: 15px;
-		line-height: 1.5;
-		color: var(--mushroom);
-		max-width: 30ch;
 	}
 
 	@media (max-width: 1000px) {

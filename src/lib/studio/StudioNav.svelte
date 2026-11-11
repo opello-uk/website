@@ -81,8 +81,10 @@
 		cursor: pointer;
 		padding: 8px 16px;
 		border-radius: 999px;
-		font-size: 13px;
-		letter-spacing: 0.02em;
+		font-size: 11px;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
 		color: var(--muted);
 		text-decoration: none;
 		transition: color 200ms var(--ease), background-color 200ms var(--ease);
@@ -134,8 +136,13 @@
 		min-height: 40px;
 		padding: 0 18px;
 		border-radius: 999px;
-		font-size: 13px;
+		font-size: 11px;
 		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		line-height: 1.25;
+		text-align: center;
+		white-space: normal;
 		text-decoration: none;
 		white-space: nowrap;
 		transition: transform 200ms var(--ease), background-color 200ms var(--ease);
@@ -180,7 +187,7 @@
 		.pill {
 			min-height: 36px;
 			padding: 0 12px;
-			font-size: 12px;
+			font-size: 10px;
 		}
 	}
 
