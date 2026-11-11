@@ -12,7 +12,7 @@
 
 		<div class="copy">
 			<!-- Placeholder copy: confirm before launch -->
-			<h2 id="banner-title">Your world. Your freedom.</h2>
+			<h2 id="banner-title">Your world.<br />Your freedom.</h2>
 			<p>
 				Everything you need to move through your day, with the control to make it yours.
 			</p>
