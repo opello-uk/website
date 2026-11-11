@@ -70,7 +70,7 @@
 					<div class="input">Groceries</div>
 				</div>
 				<div class="send-btn">Send money</div>
-				<div class="tabs"><span class="on">Home</span><span>Transfer</span><span>Cards</span><span>More</span></div>
+				<div class="tabs"><span class="on">Home</span><span>Send</span><span>Cards</span><span>More</span></div>
 			</div>
 		</div>
 		<div class="phone phone-front">
@@ -84,7 +84,7 @@
 				<div class="recent">Recent transactions</div>
 				<div class="tx"><span class="dot"></span><div><b>Coffee</b><small>Café · today</small></div><em>-3.00</em></div>
 				<div class="tx"><span class="dot dot-b"></span><div><b>Transport</b><small>Travel · today</small></div><em>-2.50</em></div>
-				<div class="tabs"><span class="on">Home</span><span>Transfer</span><span>Cards</span><span>More</span></div>
+				<div class="tabs"><span class="on">Home</span><span>Send</span><span>Cards</span><span>More</span></div>
 			</div>
 		</div>
 	</div>
@@ -421,11 +421,12 @@
 	}
 	.tabs {
 		margin-top: auto;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		text-align: center;
+		display: flex;
+		justify-content: space-between;
+		gap: 4px;
+		padding: 8px 6px 0;
+		white-space: nowrap;
 		font-size: 7px;
-		padding-top: 8px;
 		border-top: 1px solid rgba(0, 20, 49, 0.12);
 		opacity: 0.8;
 	}
