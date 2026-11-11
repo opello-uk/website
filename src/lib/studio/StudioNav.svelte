@@ -178,21 +178,29 @@
 	}
 
 	@media (max-width: 560px) {
-		/* Mobile: keep both pills (Login stays visible), hide the region and search to make room. */
-		.region,
-		.tools > .icon {
-			display: none;
-		}
+		/* Mobile: keep the region flag, search and both pills, as in the 390 Figma header. */
 		.tools {
-			gap: 8px;
+			gap: 4px;
+		}
+		.region,
+		.icon {
+			min-height: 44px;
+			min-width: 36px;
+			padding: 0 4px;
 		}
 		.pills {
 			gap: 6px;
 		}
 		.pill {
 			min-height: 44px;
-			padding: 0 12px;
+			padding: 6px 10px;
 			font-size: 10px;
+			line-height: 1.15;
+			white-space: normal;
+			max-width: 92px;
+		}
+		.pill-white {
+			padding: 0 14px;
 		}
 	}
 
