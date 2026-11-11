@@ -12,11 +12,17 @@
 				<stop offset="0.55" stop-color="#a9583a" />
 				<stop offset="1" stop-color="#8c4a33" />
 			</linearGradient>
+			<filter id="swoosh-soft" x="-20%" y="-20%" width="140%" height="140%">
+				<feGaussianBlur stdDeviation="10" />
+			</filter>
 		</defs>
-		<!-- Desktop: sweeps up behind the phones, clear of the copy column -->
-		<path class="arc-desk" d="M430 820 C 520 560, 700 280, 1000 200" fill="none" stroke="url(#swoosh-fill)" stroke-width="96" stroke-linecap="round" />
+		<!-- Desktop: a wide, soft arch rising from the lower left behind the phones and out at the top right, as in the Figma frame -->
+		<g filter="url(#swoosh-soft)">
+			<path class="arc-desk" d="M250 860 C 360 560, 620 250, 1040 120" fill="none" stroke="url(#swoosh-fill)" stroke-width="210" stroke-linecap="round" opacity="0.55" />
+			<path class="arc-desk" d="M430 860 C 520 600, 720 330, 1040 240" fill="none" stroke="url(#swoosh-fill)" stroke-width="120" stroke-linecap="round" opacity="0.7" />
+		</g>
 		<!-- Thin peach highlight along the inner edge of the band -->
-		<path class="arc-desk" d="M470 820 C 556 580, 726 316, 1000 236" fill="none" stroke="#f58851" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round" />
+		<path class="arc-desk" d="M470 860 C 556 620, 726 356, 1040 270" fill="none" stroke="#f58851" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round" />
 		<!-- Mobile: low band under the CTA, behind the stacked phones -->
 		<path class="arc-mob" d="M-40 900 C 200 740, 620 660, 1040 560" fill="none" stroke="url(#swoosh-fill)" stroke-width="90" stroke-linecap="round" />
 	</svg>
