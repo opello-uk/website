@@ -161,9 +161,33 @@
 		transform: translateX(2px);
 	}
 
+	/* Phone: photo and copy sit side by side, as in the Figma 390 frame. */
 	@media (max-width: 800px) {
 		.split {
-			grid-template-columns: 1fr;
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+			gap: 16px;
+			align-items: center;
+			padding: 48px 20px;
+		}
+		h2 {
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+		.copy > p {
+			font-size: 13px;
+			margin-bottom: 14px;
+		}
+		.ticks {
+			gap: 8px;
+			margin-bottom: 16px;
+		}
+		.ticks li {
+			font-size: 13px;
+			align-items: flex-start;
+		}
+		.learn {
+			font-size: 12px;
+			padding: 10px 14px;
 		}
 	}
 

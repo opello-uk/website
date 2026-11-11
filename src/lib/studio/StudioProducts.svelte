@@ -59,9 +59,10 @@
 
 <style>
 	.products {
+		--gutter: clamp(20px, 4vw, 56px);
 		background: var(--clay);
 		color: var(--deep);
-		padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
+		padding: clamp(56px, 7vw, 96px) var(--gutter);
 	}
 	h2 {
 		margin: 0 0 clamp(28px, 4.5vw, 65px);
@@ -175,12 +176,34 @@
 		}
 	}
 
+	/* Phone: a swipeable row that runs off the right edge, as in the Figma 390 frame, so the third card is cropped. */
 	@media (max-width: 800px) {
 		.grid {
-			grid-template-columns: 1fr;
+			display: flex;
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+			scrollbar-width: none;
+			gap: 14px;
+			margin: 0 calc(-1 * var(--gutter));
+			padding: 0 var(--gutter);
+			-webkit-overflow-scrolling: touch;
+		}
+		.grid::-webkit-scrollbar {
+			display: none;
+		}
+		.card {
+			flex: 0 0 44vw;
+			scroll-snap-align: start;
 		}
 		.photo {
-			aspect-ratio: 16 / 10;
+			aspect-ratio: 1 / 1;
+			margin-bottom: 20px;
+		}
+		h3 {
+			font-size: 17px;
+		}
+		p {
+			font-size: 14px;
 		}
 	}
 
