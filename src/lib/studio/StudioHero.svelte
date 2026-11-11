@@ -7,9 +7,9 @@
 	<svg class="swoosh" viewBox="0 0 1000 800" preserveAspectRatio="none" aria-hidden="true" focusable="false">
 		<defs>
 			<linearGradient id="swoosh-fill" gradientUnits="userSpaceOnUse" x1="0" y1="800" x2="1000" y2="0">
-				<stop offset="0" stop-color="#f58851" stop-opacity="0.15" />
-				<stop offset="0.5" stop-color="#f58851" stop-opacity="0.32" />
-				<stop offset="1" stop-color="#f58851" stop-opacity="0.22" />
+				<stop offset="0" stop-color="#f9b48c" />
+				<stop offset="0.5" stop-color="#f7a37a" />
+				<stop offset="1" stop-color="#f9b48c" />
 			</linearGradient>
 		</defs>
 		<path d="M40 820 C 180 330, 520 -10, 1000 210" fill="none" stroke="url(#swoosh-fill)" stroke-width="120" stroke-linecap="round" />
@@ -218,9 +218,6 @@
 		.phone-front {
 			right: 4%;
 			top: 16%;
-		}
-		.swoosh {
-			opacity: 0.7;
 		}
 	}
 
