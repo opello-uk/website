@@ -34,7 +34,7 @@
 		{#each products as p (p.title)}
 			<li class="card">
 				<div class="photo tone-{p.tone}">
-					<img src={p.src} alt="" loading="lazy" decoding="async" />
+					<img src={p.src} alt="" decoding="async" />
 					<span class="ph-label">Placeholder photo</span>
 				</div>
 				<h3>{p.title}</h3>

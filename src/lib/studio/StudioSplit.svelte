@@ -11,7 +11,7 @@
 
 <section class="split" aria-labelledby="split-title">
 	<div class="media">
-		<img src={split} alt="" loading="lazy" decoding="async" />
+		<img src={split} alt="" decoding="async" />
 		<span class="ph-label">Placeholder photo</span>
 	</div>
 
@@ -73,7 +73,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: 50% 8%;
+		object-position: 50% 40%;
 	}
 	.media {
 		position: relative;

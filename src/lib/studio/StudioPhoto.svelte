@@ -5,7 +5,7 @@
 
 <section class="photo" aria-labelledby="photo-title">
 	<div class="ground">
-		<img src={band} alt="" loading="lazy" decoding="async" />
+		<img src={band} alt="" decoding="async" />
 		<span class="ph-label">Placeholder photo</span>
 	</div>
 

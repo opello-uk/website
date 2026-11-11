@@ -6,7 +6,7 @@
 <section class="banner" aria-labelledby="banner-title">
 	<div class="card">
 		<div class="art">
-			<img src={banner} alt="" loading="lazy" decoding="async" />
+			<img src={banner} alt="" decoding="async" />
 			<span class="ph-label">Placeholder photo</span>
 		</div>
 
