@@ -164,8 +164,8 @@
 	/* Phone: photo and copy sit side by side, as in the Figma 390 frame. */
 	@media (max-width: 800px) {
 		.split {
-			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-			gap: 16px;
+			grid-template-columns: minmax(0, 1.14fr) minmax(0, 1fr);
+			gap: 14px;
 			align-items: center;
 			padding: 48px 20px;
 		}
