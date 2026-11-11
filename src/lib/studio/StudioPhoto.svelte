@@ -92,7 +92,7 @@
 
 	h2 {
 		margin: 0 0 14px;
-		font-weight: 400;
+		font-weight: 500;
 		font-size: clamp(30px, 2.9vw, 46px);
 		line-height: 1.08;
 		letter-spacing: -0.015em;

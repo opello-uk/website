@@ -65,7 +65,7 @@
 	}
 	h2 {
 		margin: 0 0 clamp(28px, 4vw, 48px);
-		font-weight: 400;
+		font-weight: 500;
 		font-size: clamp(28px, 3.2vw, 44px);
 		letter-spacing: -0.01em;
 	}
