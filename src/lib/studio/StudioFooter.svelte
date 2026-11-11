@@ -124,7 +124,11 @@
 		font-size: 12px;
 		color: var(--muted);
 	}
-	.base a {
+	.base a,
+	.legal a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
 		color: var(--clay);
 	}
 	.social {

@@ -18,11 +18,12 @@
 		</defs>
 		<!-- Desktop: a wide, soft arch rising from the lower left behind the phones and out at the top right, as in the Figma frame -->
 		<g filter="url(#swoosh-soft)">
-			<path class="arc-desk" d="M250 860 C 360 560, 620 250, 1040 120" fill="none" stroke="url(#swoosh-fill)" stroke-width="210" stroke-linecap="round" opacity="0.55" />
-			<path class="arc-desk" d="M430 860 C 520 600, 720 330, 1040 240" fill="none" stroke="url(#swoosh-fill)" stroke-width="120" stroke-linecap="round" opacity="0.7" />
+			<!-- Broad dome: rises from the lower left, peaks top right, as in the Figma arch -->
+			<path class="arc-desk" d="M170 880 C 150 430, 470 90, 1000 90" fill="none" stroke="url(#swoosh-fill)" stroke-width="230" stroke-linecap="round" opacity="0.6" />
+			<path class="arc-desk" d="M330 880 C 330 520, 600 250, 1000 230" fill="none" stroke="url(#swoosh-fill)" stroke-width="110" stroke-linecap="round" opacity="0.7" />
 		</g>
-		<!-- Thin peach highlight along the inner edge of the band -->
-		<path class="arc-desk" d="M470 860 C 556 620, 726 356, 1040 270" fill="none" stroke="#f58851" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round" />
+		<!-- Thin peach highlight along the inner edge of the dome -->
+		<path class="arc-desk" d="M380 880 C 370 540, 630 292, 1000 272" fill="none" stroke="#f58851" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round" />
 		<!-- Mobile: low band under the CTA, behind the stacked phones -->
 		<path class="arc-mob" d="M-40 900 C 200 740, 620 660, 1040 560" fill="none" stroke="url(#swoosh-fill)" stroke-width="90" stroke-linecap="round" />
 	</svg>
