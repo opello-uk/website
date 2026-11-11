@@ -177,11 +177,11 @@
 	/* Example phones */
 	.screens {
 		position: relative;
-		height: clamp(420px, 52svh, 560px);
+		height: clamp(420px, 60svh, 640px);
 	}
 	.phone {
 		position: absolute;
-		width: clamp(180px, 20vw, 248px);
+		width: clamp(180px, 22vw, 290px);
 		aspect-ratio: 9 / 19.5;
 		border-radius: 36px;
 		padding: 9px;

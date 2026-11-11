@@ -51,7 +51,7 @@
 		max-width: 1280px;
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
+		grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
 		align-items: center;
 		gap: clamp(32px, 5vw, 80px);
 	}
@@ -61,7 +61,7 @@
 	h2 {
 		margin: 0 0 12px;
 		font-weight: 500;
-		font-size: clamp(28px, 4.6vw, 66px);
+		font-size: clamp(28px, 4vw, 58px);
 		letter-spacing: -0.01em;
 		line-height: 1.1;
 	}
