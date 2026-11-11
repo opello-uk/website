@@ -6,14 +6,17 @@
 	<!-- Decorative swoosh arc, as in the reference hero -->
 	<svg class="swoosh" viewBox="0 0 1000 800" preserveAspectRatio="none" aria-hidden="true" focusable="false">
 		<defs>
+			<!-- Muted rust band, as in the reference: warm and dark enough to sit under clay copy -->
 			<linearGradient id="swoosh-fill" gradientUnits="userSpaceOnUse" x1="0" y1="800" x2="1000" y2="0">
-				<stop offset="0" stop-color="#f9b48c" />
-				<stop offset="0.5" stop-color="#f7a37a" />
-				<stop offset="1" stop-color="#f9b48c" />
+				<stop offset="0" stop-color="#7a3f2e" />
+				<stop offset="0.55" stop-color="#a9583a" />
+				<stop offset="1" stop-color="#8c4a33" />
 			</linearGradient>
 		</defs>
 		<!-- Desktop: sweeps up behind the phones, clear of the copy column -->
 		<path class="arc-desk" d="M430 820 C 520 560, 700 280, 1000 200" fill="none" stroke="url(#swoosh-fill)" stroke-width="96" stroke-linecap="round" />
+		<!-- Thin peach highlight along the inner edge of the band -->
+		<path class="arc-desk" d="M470 820 C 556 580, 726 316, 1000 236" fill="none" stroke="#f58851" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round" />
 		<!-- Mobile: low band under the CTA, behind the stacked phones -->
 		<path class="arc-mob" d="M-40 900 C 200 740, 620 660, 1040 560" fill="none" stroke="url(#swoosh-fill)" stroke-width="90" stroke-linecap="round" />
 	</svg>
