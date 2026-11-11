@@ -64,7 +64,7 @@
 		padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
 	}
 	h2 {
-		margin: 0 0 clamp(28px, 4vw, 48px);
+		margin: 0 0 clamp(28px, 4.5vw, 65px);
 		font-weight: 500;
 		font-size: clamp(28px, 4.6vw, 66px);
 		letter-spacing: -0.01em;
@@ -94,7 +94,7 @@
 		aspect-ratio: 1 / 1;
 		border-radius: 18px;
 		overflow: hidden;
-		margin-bottom: 20px;
+		margin-bottom: 36px;
 	}
 	.tone-a {
 		background: linear-gradient(160deg, #6f5153 0%, #005385 100%);
@@ -136,7 +136,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 8px;
-		padding: 8px 14px;
+		padding: 12px 24px;
 		border-radius: 999px;
 		border: 1px solid var(--deep);
 		color: var(--deep);
