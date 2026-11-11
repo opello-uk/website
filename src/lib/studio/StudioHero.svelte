@@ -545,14 +545,20 @@
 		}
 		.quick span {
 			min-width: 0;
-			padding: 4px 1px 3px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 3px;
+			padding: 4px 1px 4px;
 			border-radius: 8px;
 			white-space: nowrap;
 		}
 		.quick i {
+			box-sizing: border-box;
+			flex: none;
 			width: 8px;
 			height: 8px;
-			margin-bottom: 2px;
+			margin: 0;
 			border-width: 1px;
 		}
 	}
