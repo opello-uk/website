@@ -45,9 +45,9 @@
 		grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) auto;
 		align-items: center;
 		gap: clamp(24px, 4vw, 64px);
-		max-width: 1280px;
+		max-width: 1320px;
 		margin: 0 auto;
-		padding: clamp(32px, 4.5vw, 64px);
+		padding: clamp(28px, 4vw, 64px) clamp(32px, 6vw, 88px);
 		border-radius: 24px;
 		overflow: hidden;
 		background: linear-gradient(100deg, var(--deep) 0%, var(--deep) 45%, var(--mid) 100%);
@@ -101,11 +101,12 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 8px;
-		padding: 10px 16px;
+		padding: 13px 28px;
 		border-radius: 999px;
 		border: 1px solid var(--clay);
-		color: var(--clay);
-		font-size: 13px;
+		background: var(--clay);
+		color: var(--deep);
+		font-size: 14px;
 		text-decoration: none;
 		white-space: nowrap;
 		transition:
@@ -113,8 +114,8 @@
 			color 220ms var(--ease);
 	}
 	.cta:hover {
-		background: var(--clay);
-		color: var(--deep);
+		background: var(--peach);
+		border-color: var(--peach);
 	}
 	.cta:focus-visible {
 		outline: 2px solid var(--peach);
