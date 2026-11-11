@@ -167,6 +167,12 @@
 		.products {
 			overflow: hidden;
 		}
+		/* Reference pill is about 210 by 52 at 1440, with larger label text. */
+		.learn {
+			font-size: 16px;
+			min-height: 52px;
+			padding: 14px 40px;
+		}
 		.grid {
 			display: flex;
 			gap: clamp(24px, 4.6vw, 67px);
