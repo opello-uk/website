@@ -4,8 +4,8 @@
 
 	// Placeholder link columns from the deck. Every label needs confirming before launch.
 	const columns = [
-		{ title: 'Personal', links: ['Current accounts', 'Savings', 'Pensions'] },
-		{ title: 'Business', links: ['Business accounts', 'Business transfers', 'Business cards'] },
+		{ title: 'Personal', links: ['Everyday account', 'Payments', 'Cards'] },
+		{ title: 'Business', links: ['Business account', 'Business payments', 'Global transfers'] },
 		{ title: 'About', links: ['About us', 'Our approach', 'Careers', 'Contact'] },
 		{ title: 'Help', links: ['Help centre', 'FAQs', 'Account support', 'Get in touch'] }
 	];
@@ -149,11 +149,17 @@
 	}
 	.legal {
 		display: flex;
-		gap: 20px;
+		gap: 4px 22px;
 		flex-wrap: wrap;
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+	.legal li span {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		color: var(--muted);
 	}
 
 	@media (max-width: 860px) {
@@ -162,6 +168,17 @@
 		}
 		.cols {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+	@media (max-width: 560px) {
+		.base {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 4px;
+		}
+		.legal {
+			gap: 0 18px;
+			width: 100%;
 		}
 	}
 </style>

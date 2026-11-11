@@ -104,8 +104,11 @@
 		color: var(--muted);
 	}
 
+	/* Desktop: the pill sits low on the right over the photo, as in the Figma banner. */
 	.cta {
-		position: relative;
+		position: absolute;
+		right: clamp(24px, 2.6vw, 38px);
+		bottom: clamp(24px, 2.8vw, 40px);
 		z-index: 1;
 		justify-self: end;
 		display: inline-flex;
@@ -145,6 +148,9 @@
 			grid-template-columns: 1fr;
 		}
 		.cta {
+			position: relative;
+			right: auto;
+			bottom: auto;
 			justify-self: start;
 		}
 		.art {

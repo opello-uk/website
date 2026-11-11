@@ -106,8 +106,8 @@
 	.icon {
 		display: inline-grid;
 		place-items: center;
-		min-height: 36px;
-		min-width: 36px;
+		min-height: 44px;
+		min-width: 44px;
 		padding: 0 8px;
 		border: 0;
 		border-radius: 999px;
@@ -185,7 +185,7 @@
 		.region,
 		.icon {
 			min-height: 44px;
-			min-width: 36px;
+			min-width: 44px;
 			padding: 0 4px;
 		}
 		.pills {
