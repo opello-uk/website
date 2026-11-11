@@ -34,9 +34,9 @@
 	.photo {
 		position: relative;
 		isolation: isolate;
-		min-height: clamp(420px, 52vw, 640px);
+		min-height: clamp(420px, 51vw, 740px);
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		overflow: hidden;
 		background: var(--deep);
 		color: var(--clay);
@@ -72,9 +72,9 @@
 	.inner {
 		position: relative;
 		width: 100%;
-		max-width: 1280px;
-		margin: 0 auto;
-		padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
+		max-width: none;
+		margin: 0;
+		padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 72px) clamp(48px, 8vw, 120px);
 		display: grid;
 		gap: clamp(28px, 3vw, 40px);
 		justify-items: start;
@@ -83,8 +83,8 @@
 	h2 {
 		margin: 0 0 14px;
 		font-weight: 400;
-		font-size: clamp(32px, 4.6vw, 64px);
-		line-height: 1.04;
+		font-size: clamp(30px, 2.9vw, 46px);
+		line-height: 1.08;
 		letter-spacing: -0.015em;
 		max-width: 14ch;
 	}
