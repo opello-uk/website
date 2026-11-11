@@ -18,27 +18,30 @@
 	<div class="copy">
 		<!-- Placeholder copy: confirm before launch -->
 		<h2 id="split-title">Your money on your terms.</h2>
-		<p>
-			Manage your finances with more flexibility, more confidence and fewer unnecessary hassles.
-		</p>
 
-		<ul class="ticks">
-			{#each points as point (point)}
-				<li>
-					<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
-						<path
-							d="M5 12.5l4.2 4.2L19 7"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2.4"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-					</svg>
-					<span>{point}</span>
-				</li>
-			{/each}
-		</ul>
+		<div class="mid">
+			<p>
+				Manage your finances with more flexibility, more confidence and fewer unnecessary hassles.
+			</p>
+
+			<ul class="ticks">
+				{#each points as point (point)}
+					<li>
+						<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+							<path
+								d="M5 12.5l4.2 4.2L19 7"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<span>{point}</span>
+					</li>
+				{/each}
+			</ul>
+		</div>
 
 		<a class="learn" href="#split-title">
 			<span>Get started</span>
@@ -60,7 +63,7 @@
 	.split {
 		display: grid;
 		grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr);
-		align-items: center;
+		align-items: stretch;
 		gap: clamp(32px, 4.9vw, 71px);
 		background: var(--clay);
 		color: var(--deep);
@@ -73,11 +76,11 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: 50% 40%;
+		object-position: 35% 50%;
 	}
 	.media {
 		position: relative;
-		aspect-ratio: 3 / 2;
+		aspect-ratio: 19 / 12;
 		border-radius: 18px;
 		overflow: hidden;
 		background: linear-gradient(135deg, #0c6470 0%, #001431 60%, #f58851 140%);
@@ -96,9 +99,19 @@
 	h2 {
 		margin: 0 0 16px;
 		font-weight: 500;
-		font-size: clamp(28px, 4.6vw, 66px);
+		font-size: clamp(28px, 4.4vw, 63px);
 		line-height: 1.08;
 		letter-spacing: -0.01em;
+	}
+	.copy {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-self: stretch;
+		gap: 32px;
+	}
+	.mid {
+		margin: auto 0;
 	}
 	.copy > p {
 		margin: 0 0 24px;
@@ -124,25 +137,22 @@
 	.ticks svg {
 		flex: none;
 		color: var(--peach);
-		background: var(--deep);
-		border-radius: 50%;
-		padding: 3px;
-		box-sizing: content-box;
-		width: 12px;
-		height: 12px;
+		width: 16px;
+		height: 16px;
 	}
 
 	.learn {
 		display: inline-flex;
 		align-items: center;
 		gap: 8px;
-		min-height: 44px;
+		min-height: 52px;
 		box-sizing: border-box;
-		padding: 10px 16px;
+		padding: 14px 44px;
 		border-radius: 999px;
 		border: 1px solid var(--deep);
 		color: var(--deep);
-		font-size: 13px;
+		font-size: 16px;
+		align-self: flex-start;
 		text-decoration: none;
 		transition: background-color 220ms var(--ease);
 	}
