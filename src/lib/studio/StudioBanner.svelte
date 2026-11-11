@@ -92,6 +92,7 @@
 	h2 {
 		margin: 0 0 14px;
 		font-weight: 500;
+		color: var(--peach);
 		font-size: clamp(26px, 3.4vw, 48px);
 		line-height: 1.06;
 		letter-spacing: -0.01em;
