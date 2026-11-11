@@ -170,6 +170,11 @@
 			overflow-x: auto;
 			scrollbar-width: none;
 		}
+		.tab {
+			min-height: 44px;
+			display: inline-flex;
+			align-items: center;
+		}
 	}
 
 	@media (max-width: 560px) {
@@ -185,7 +190,7 @@
 			gap: 6px;
 		}
 		.pill {
-			min-height: 36px;
+			min-height: 44px;
 			padding: 0 12px;
 			font-size: 10px;
 		}
