@@ -1,21 +1,27 @@
 <script lang="ts">
 	// "How can we help today?" product cards. Titles and copy are placeholders from the deck.
-	// Image tiles are placeholders until licensed photography is supplied.
+	import current from '#lib/assets/studio/current.jpg';
+	import savings from '#lib/assets/studio/savings.jpg';
+	import pensions from '#lib/assets/studio/pensions.jpg';
+	// Photos are generated placeholders, marked on the tile, until licensed photography is supplied.
 	const products = [
 		{
 			title: 'Current accounts',
 			body: 'Everyday banking that works for you, away from home or at home.',
-			tone: 'a'
+			tone: 'a',
+			src: current
 		},
 		{
 			title: 'Savings',
 			body: 'Simple ways to save with confidence and plan for what’s next.',
-			tone: 'b'
+			tone: 'b',
+			src: savings
 		},
 		{
 			title: 'Pensions',
 			body: 'Straightforward support to build your future and stay ahead.',
-			tone: 'c'
+			tone: 'c',
+			src: pensions
 		}
 	];
 </script>
@@ -27,8 +33,9 @@
 	<ul class="grid">
 		{#each products as p (p.title)}
 			<li class="card">
-				<div class="photo tone-{p.tone}" role="img" aria-label="Placeholder photo">
-					<span class="ph-label">Photo placeholder</span>
+				<div class="photo tone-{p.tone}">
+					<img src={p.src} alt="" loading="lazy" decoding="async" />
+					<span class="ph-label">Placeholder photo</span>
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>
@@ -75,6 +82,13 @@
 		flex-direction: column;
 		min-width: 0;
 	}
+	.photo img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 	.photo {
 		position: relative;
 		aspect-ratio: 1 / 1;
@@ -93,13 +107,16 @@
 	}
 	.ph-label {
 		position: absolute;
+		z-index: 1;
 		left: 14px;
 		bottom: 12px;
 		font-size: 10px;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--clay);
-		opacity: 0.85;
+		background: rgba(0, 20, 49, 0.55);
+		padding: 3px 8px;
+		border-radius: 999px;
 	}
 	h3 {
 		margin: 0 0 8px;

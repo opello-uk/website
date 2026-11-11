@@ -1,6 +1,7 @@
 <script lang="ts">
 	// "Your money on your terms." split section. Copy and tick list are placeholders from the deck.
-	// The image is a placeholder tile until licensed photography is supplied.
+	import split from '#lib/assets/studio/split.jpg';
+	// Generated placeholder photo, marked on the tile, until licensed photography is supplied.
 	const points = [
 		'A simple, straightforward account',
 		'Open banking that you control',
@@ -9,8 +10,9 @@
 </script>
 
 <section class="split" aria-labelledby="split-title">
-	<div class="media" role="img" aria-label="Placeholder photo">
-		<span class="ph-label">Photo placeholder</span>
+	<div class="media">
+		<img src={split} alt="" loading="lazy" decoding="async" />
+		<span class="ph-label">Placeholder photo</span>
 	</div>
 
 	<div class="copy">
@@ -65,6 +67,13 @@
 		padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
 	}
 
+	.media img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 	.media {
 		position: relative;
 		aspect-ratio: 3 / 2;

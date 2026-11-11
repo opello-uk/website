@@ -1,10 +1,12 @@
 <script lang="ts">
+	import band from '#lib/assets/studio/band.jpg';
 	// "A place where you belong." full-bleed photo band. Copy is placeholder; the photo is a placeholder ground until licensed imagery is supplied.
 </script>
 
 <section class="photo" aria-labelledby="photo-title">
-	<div class="ground" role="img" aria-label="Placeholder photo">
-		<span class="ph-label">Photo placeholder</span>
+	<div class="ground">
+		<img src={band} alt="" loading="lazy" decoding="async" />
+		<span class="ph-label">Placeholder photo</span>
 	</div>
 
 	<div class="inner">
@@ -42,6 +44,14 @@
 		color: var(--clay);
 	}
 
+	.ground img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 60% 30%;
+	}
 	.ground {
 		position: absolute;
 		inset: 0;

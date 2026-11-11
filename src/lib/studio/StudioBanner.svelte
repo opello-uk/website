@@ -1,11 +1,13 @@
 <script lang="ts">
+	import banner from '#lib/assets/studio/banner.jpg';
 	// "Your world. Your freedom." navy banner. Copy is placeholder from the deck; confirm before launch.
 </script>
 
 <section class="banner" aria-labelledby="banner-title">
 	<div class="card">
-		<div class="art" role="img" aria-label="Placeholder photo">
-			<span class="ph-label">Photo placeholder</span>
+		<div class="art">
+			<img src={banner} alt="" loading="lazy" decoding="async" />
+			<span class="ph-label">Placeholder photo</span>
 		</div>
 
 		<div class="copy">
@@ -56,15 +58,21 @@
 		color: var(--clay);
 	}
 
-	/* Placeholder ground for the photo, sits behind the copy on the right. */
+	/* Photo on the right, fading into the navy copy panel. */
 	.art {
 		position: absolute;
 		inset: 0 0 0 auto;
 		width: 46%;
-		background: linear-gradient(135deg, var(--teal) 0%, var(--mid) 55%, var(--peach) 150%);
-		opacity: 0.55;
+		overflow: hidden;
 		mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
 		-webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+	}
+	.art img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 	.ph-label {
 		position: absolute;
