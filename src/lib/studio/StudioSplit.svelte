@@ -27,16 +27,18 @@
 			<ul class="ticks">
 				{#each points as point (point)}
 					<li>
-						<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
-							<path
-								d="M5 12.5l4.2 4.2L19 7"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-						</svg>
+						<span class="dot" aria-hidden="true">
+							<svg viewBox="0 0 24 24" width="12" height="12" focusable="false">
+								<path
+									d="M5 12.5l4.2 4.2L19 7"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.6"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</span>
 						<span>{point}</span>
 					</li>
 				{/each}
@@ -134,11 +136,18 @@
 		gap: 12px;
 		font-size: 15px;
 	}
-	.ticks svg {
+	.ticks .dot {
 		flex: none;
+		display: grid;
+		place-items: center;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background: var(--deep);
 		color: var(--peach);
-		width: 16px;
-		height: 16px;
+	}
+	.ticks svg {
+		display: block;
 	}
 
 	.learn {
@@ -194,6 +203,10 @@
 		.ticks li {
 			font-size: 13px;
 			align-items: flex-start;
+		}
+		.ticks .dot {
+			width: 18px;
+			height: 18px;
 		}
 		.learn {
 			font-size: 12px;
