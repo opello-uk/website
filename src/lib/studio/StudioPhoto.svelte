@@ -57,7 +57,11 @@
 	/* Phones: the reference band is a short strip (about 200px at 390), copy bottom-left. */
 	@media (max-width: 800px) {
 		.photo {
-			min-height: 210px;
+			min-height: 280px;
+		}
+		/* Phones: let the photo read as the band, with a bottom scrim behind the copy only. */
+		.photo::before {
+			background: linear-gradient(0deg, rgba(0, 20, 49, 0.9) 0%, rgba(0, 20, 49, 0.45) 45%, rgba(0, 20, 49, 0.05) 100%);
 		}
 		.inner {
 			padding: 28px 20px 22px;
