@@ -184,6 +184,10 @@
 
 	/* Phone: a swipeable row that runs off the right edge, as in the Figma 390 frame, so the third card is cropped. */
 	@media (max-width: 800px) {
+		/* Reference proportions: the phone heading sits smaller against the 390 width. */
+		h2 {
+			font-size: 24px;
+		}
 		.grid {
 			display: flex;
 			overflow-x: auto;

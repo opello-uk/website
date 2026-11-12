@@ -152,6 +152,11 @@
 		.card {
 			grid-template-columns: 1fr;
 		}
+		/* Reference band: the headline is a small line on the phone, not a display size. */
+		h2 {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
 		.cta {
 			position: relative;
 			right: auto;
