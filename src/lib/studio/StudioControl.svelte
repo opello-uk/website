@@ -120,26 +120,47 @@
 		}
 	}
 	/* Figma mobile keeps the three tiles in one row, smaller */
+	/* Reference phone layout: three small tiles on the left, the heading and intro on the right, one row. */
 	@media (max-width: 560px) {
+		.control {
+			padding: 48px 20px;
+		}
+		.wrap {
+			grid-template-columns: auto minmax(0, 1fr);
+			gap: 16px;
+			align-items: center;
+		}
+		header {
+			order: 0;
+		}
 		.grid {
-			gap: 10px;
+			grid-template-columns: repeat(3, 60px);
+			gap: 6px;
 		}
 		.tile {
-			padding: 18px 8px;
-			border-radius: 12px;
+			padding: 12px 4px;
+			border-radius: 10px;
 		}
 		.icon {
-			width: 30px;
-			height: 30px;
-			margin-bottom: 10px;
-		}
-		.icon svg {
 			width: 22px;
 			height: 22px;
+			margin-bottom: 8px;
+		}
+		.icon svg {
+			width: 18px;
+			height: 18px;
 		}
 		h3 {
-			font-size: 13px;
-			line-height: 1.25;
+			font-size: 10px;
+			line-height: 1.2;
+		}
+		h2 {
+			font-size: 20px;
+			margin-bottom: 8px;
+		}
+		header p {
+			font-size: 12px;
+			line-height: 1.45;
 		}
 	}
 </style>

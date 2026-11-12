@@ -152,16 +152,35 @@
 		.card {
 			grid-template-columns: 1fr;
 		}
-		/* Reference band: the headline is a small line on the phone, not a display size. */
+		/* Reference band on phones is a short strip: small headline, short copy, pill bottom right. */
+		.card {
+			padding: 18px 18px 64px;
+			min-height: 0;
+		}
 		h2 {
-			font-size: 18px;
-			margin-bottom: 10px;
+			font-size: 17px;
+			margin-bottom: 8px;
+		}
+		.copy p {
+			font-size: 12px;
+			line-height: 1.45;
+			max-width: 24ch;
+		}
+		.ph-label {
+			top: 12px;
+			bottom: auto;
+			right: 12px;
+			font-size: 9px;
+			padding: 3px 8px;
 		}
 		.cta {
-			position: relative;
-			right: auto;
-			bottom: auto;
-			justify-self: start;
+			position: absolute;
+			right: 14px;
+			bottom: 14px;
+			justify-self: auto;
+			min-height: 44px;
+			padding: 10px 18px;
+			font-size: 12px;
 		}
 		.art {
 			width: 100%;
