@@ -95,7 +95,7 @@
 	.hero {
 		position: relative;
 		isolation: isolate;
-		overflow: hidden;
+		overflow-x: clip;
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 		align-items: center;
@@ -177,7 +177,7 @@
 	/* Example phones */
 	.screens {
 		position: relative;
-		height: clamp(420px, 60svh, 640px);
+		height: clamp(480px, 78svh, 740px);
 	}
 	.phone {
 		position: absolute;
@@ -195,7 +195,7 @@
 	}
 	.phone-front {
 		right: 2%;
-		top: 16%;
+		top: 12%;
 		rotate: 4deg;
 	}
 	.screen {
@@ -460,6 +460,7 @@
 		.hero {
 			grid-template-columns: 1fr;
 			min-height: 0;
+			overflow: hidden;
 		}
 		.screens {
 			height: 340px;
