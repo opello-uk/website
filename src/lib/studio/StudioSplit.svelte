@@ -196,6 +196,14 @@
 			margin-bottom: 10px;
 		}
 		/* The paragraph sits inside .mid, so target it there (this rule was matching nothing). */
+		/* Pin the copy block to the top on phones so heading, copy and ticks read as one column. */
+		.copy {
+			justify-content: flex-start;
+			gap: 0;
+		}
+		.mid {
+			margin: 0;
+		}
 		.mid p {
 			font-size: 13px;
 			line-height: 1.5;
