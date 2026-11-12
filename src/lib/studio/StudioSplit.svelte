@@ -119,7 +119,7 @@
 	.mid {
 		margin: 28px 0 auto;
 	}
-	.copy > p {
+	.mid p {
 		margin: 0 0 28px;
 		max-width: 40ch;
 		font-size: clamp(15px, 1.25vw, 18px);
@@ -204,7 +204,6 @@
 			font-size: 22px;
 			margin-bottom: 10px;
 		}
-		/* The paragraph sits inside .mid, so target it there (this rule was matching nothing). */
 		/* Pin the copy block to the top on phones so heading, copy and ticks read as one column. */
 		.copy {
 			justify-content: flex-start;
