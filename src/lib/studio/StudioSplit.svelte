@@ -64,9 +64,9 @@
 <style>
 	.split {
 		display: grid;
-		grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr);
+		grid-template-columns: minmax(0, 1.31fr) minmax(0, 1fr);
 		align-items: stretch;
-		gap: clamp(32px, 4.9vw, 71px);
+		gap: clamp(32px, 5vw, 72px);
 		background: var(--clay);
 		color: var(--deep);
 		padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
@@ -108,36 +108,37 @@
 		line-height: 1.08;
 		letter-spacing: -0.01em;
 	}
+	/* Desktop: heading at the top, copy and ticks just under it, pill on the bottom edge (as the Figma). */
 	.copy {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-self: stretch;
-		gap: 32px;
+		gap: 0;
 	}
 	.mid {
-		margin: auto 0;
+		margin: 28px 0 auto;
 	}
 	.copy > p {
-		margin: 0 0 24px;
+		margin: 0 0 28px;
 		max-width: 40ch;
-		font-size: clamp(15px, 1.2vw, 17px);
-		line-height: 1.55;
+		font-size: clamp(15px, 1.25vw, 18px);
+		line-height: 1.5;
 		color: var(--mushroom);
 	}
 
 	.ticks {
 		list-style: none;
-		margin: 0 0 32px;
+		margin: 0;
 		padding: 0;
 		display: grid;
-		gap: 12px;
+		gap: 14px;
 	}
 	.ticks li {
 		display: flex;
 		align-items: center;
 		gap: 12px;
-		font-size: 15px;
+		font-size: clamp(15px, 1.25vw, 18px);
 	}
 	.ticks .dot {
 		flex: none;
@@ -159,7 +160,7 @@
 		gap: 8px;
 		min-height: 52px;
 		box-sizing: border-box;
-		padding: 14px 44px;
+		padding: 14px 52px;
 		border-radius: 999px;
 		border: 1px solid var(--deep);
 		color: var(--deep);
