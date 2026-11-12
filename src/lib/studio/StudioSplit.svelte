@@ -189,8 +189,16 @@
 		.split {
 			grid-template-columns: minmax(0, 1.14fr) minmax(0, 1fr);
 			gap: 14px;
-			align-items: start;
+			align-items: stretch;
 			padding: 48px 20px;
+		}
+		/* Phone photo fills the height of the copy column, so the two columns read as one planned block. */
+		.media {
+			aspect-ratio: auto;
+			min-height: 260px;
+		}
+		.media img {
+			object-position: 42% 40%;
 		}
 		h2 {
 			font-size: 22px;
