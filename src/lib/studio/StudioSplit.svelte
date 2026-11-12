@@ -95,7 +95,10 @@
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--clay);
-		opacity: 0.85;
+		background: rgba(0, 20, 49, 0.62);
+		padding: 4px 9px;
+		border-radius: 999px;
+		line-height: 1.2;
 	}
 
 	h2 {
@@ -185,7 +188,7 @@
 		.split {
 			grid-template-columns: minmax(0, 1.14fr) minmax(0, 1fr);
 			gap: 14px;
-			align-items: center;
+			align-items: start;
 			padding: 48px 20px;
 		}
 		h2 {

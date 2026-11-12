@@ -82,7 +82,10 @@
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--clay);
-		opacity: 0.85;
+		background: rgba(0, 20, 49, 0.62);
+		padding: 4px 9px;
+		border-radius: 999px;
+		line-height: 1.2;
 	}
 
 	.copy {
