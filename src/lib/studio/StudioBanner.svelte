@@ -59,14 +59,14 @@
 		color: var(--clay);
 	}
 
-	/* Photo on the right, fading into the navy copy panel. */
+	/* Photo on the right, starting about 46% in as in the reference crop, fading into the navy copy panel. */
 	.art {
 		position: absolute;
 		inset: 0 0 0 auto;
-		width: 46%;
+		width: 54%;
 		overflow: hidden;
-		mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
-		-webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+		mask-image: linear-gradient(90deg, transparent 0%, #000 40%);
+		-webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 40%);
 	}
 	.art img {
 		position: absolute;
