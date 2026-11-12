@@ -195,9 +195,11 @@
 			font-size: 22px;
 			margin-bottom: 10px;
 		}
-		.copy > p {
+		/* The paragraph sits inside .mid, so target it there (this rule was matching nothing). */
+		.mid p {
 			font-size: 13px;
-			margin-bottom: 14px;
+			line-height: 1.5;
+			margin: 0 0 14px;
 		}
 		.ticks {
 			gap: 8px;
