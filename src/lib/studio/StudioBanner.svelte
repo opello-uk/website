@@ -7,8 +7,9 @@
 	<div class="card">
 		<div class="art">
 			<img src={banner} alt="" decoding="async" />
-			<span class="ph-label">Placeholder photo</span>
 		</div>
+		<!-- Outside .art so the tag is not washed out by the faded photo on phones -->
+		<span class="ph-label">Placeholder photo</span>
 
 		<div class="copy">
 			<!-- Placeholder copy: confirm before launch -->
