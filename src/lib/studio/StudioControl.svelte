@@ -1,5 +1,5 @@
 <script lang="ts">
-	// "More control. More confidence." tiles. Tile labels follow the Figma board; the intro line is placeholder, confirm before launch.
+	// "More control. More confidence." tiles. Tile labels follow the Figma board. The intro line is Algbra homepage wording (algbra.com, "One app. Multiple currencies." block), with the fee claim flagged for Algbra or compliance sign-off. The heading is still placeholder.
 	const tiles = [
 		{ title: 'Global transfers', icon: 'globe' },
 		{ title: 'Virtual cards', icon: 'card' },
@@ -33,10 +33,10 @@
 			</li>
 		{/each}
 	</ul>
-	<!-- Placeholder copy: confirm before launch -->
+	<!-- Heading is placeholder copy: confirm before launch. Intro is Algbra homepage wording (fee claim needs sign-off). -->
 	<header>
 		<h2 id="control-title">More control.<br />More confidence.</h2>
-		<p>Placeholder line for the section intro. Confirm before launch.</p>
+		<p>We offer transparent, accessible, interest-free products, and you'll never be confused or surprised by a fee. <span class="flag">Algbra wording, needs sign-off</span></p>
 	</header>
 	</div>
 </section>
@@ -70,6 +70,13 @@
 		font-size: 15px;
 		line-height: 1.5;
 		color: var(--mushroom);
+	}
+	.flag {
+		display: block;
+		margin-top: 10px;
+		font-size: 12px;
+		color: var(--deep);
+		opacity: 0.72;
 	}
 	.grid {
 		list-style: none;
