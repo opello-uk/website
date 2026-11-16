@@ -21,7 +21,7 @@
 	<StudioNav />
 
 	<main id="personal">
-		<p class="marker">Studio build. Placeholder copy, not for launch.</p>
+		<p class="marker">Wording taken from algbra.com where noted. Not for publication until approved.</p>
 		<StudioHero />
 		<StudioProducts />
 		<StudioSplit />

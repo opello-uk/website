@@ -1,29 +1,29 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	// "How can we help today?" product cards. Titles and copy are placeholders from the deck.
+	// "How can we help today?" product cards. Titles and copy are Algbra homepage and feature-page wording.
 	import current from '#lib/assets/studio/current.jpg';
 	import savings from '#lib/assets/studio/savings.jpg';
 	import pensions from '#lib/assets/studio/pensions.jpg';
 	// Photos are generated placeholders, marked on the tile, until licensed photography is supplied.
 	const products = [
 		{
-			slug: 'current-accounts',
-			title: 'Current accounts',
-			body: 'Everyday banking that works for you, away from home or at home.',
+			slug: 'multi-currency',
+			title: 'Hold money in multiple currencies',
+			body: 'One app. Multiple currencies.',
 			tone: 'a',
 			src: current
 		},
 		{
-			slug: 'savings',
-			title: 'Savings',
-			body: 'Simple ways to save with confidence and plan for what’s next.',
+			slug: 'cubes',
+			title: 'Transform how you save with Cubes',
+			body: 'Create a Cube for each goal, set money aside and track your progress in a few taps.',
 			tone: 'b',
 			src: savings
 		},
 		{
-			slug: 'pensions',
-			title: 'Pensions',
-			body: 'Straightforward support to build your future and stay ahead.',
+			slug: 'cards',
+			title: 'Spend worldwide with one card',
+			body: 'Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app.',
 			tone: 'c',
 			src: pensions
 		}
@@ -31,7 +31,6 @@
 </script>
 
 <section class="products" aria-labelledby="products-title">
-	<!-- Placeholder copy: confirm before launch -->
 	<h2 id="products-title">How can we help today?</h2>
 
 	<ul class="grid">
@@ -137,6 +136,7 @@
 		max-width: 36ch;
 	}
 	.learn {
+		margin-top: auto;
 		align-self: flex-start;
 		display: inline-flex;
 		align-items: center;
@@ -178,11 +178,8 @@
 			padding: 14px 40px;
 		}
 		.grid {
-			display: flex;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 			gap: clamp(24px, 4.6vw, 67px);
-		}
-		.card {
-			flex: 0 0 clamp(280px, 30.8vw, 460px);
 		}
 	}
 

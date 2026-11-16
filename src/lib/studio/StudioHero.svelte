@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	// Hero for the unlisted studio build. All copy is placeholder until confirmed.
+	// Hero for the unlisted studio build. Headline and line are Algbra homepage wording.
 </script>
 
 <section class="hero" aria-labelledby="hero-title">
@@ -31,11 +31,11 @@
 
 	<div class="copy">
 		<h1 id="hero-title">
-			<span class="line-1">Unlock</span>
-			<span class="line-2">your life.</span>
+			<span class="line-1">Finance,</span>
+			<span class="line-2">made for humans.</span>
 		</h1>
-		<!-- Placeholder copy: confirm before launch -->
-		<p class="sub">For different lives, different circumstances and different starting points.</p>
+		<!-- Algbra homepage wording -->
+		<p class="sub">Spend and manage your money with the app that helps you put people and the planet first.</p>
 		<a class="cta" href={resolve('/studio/open-account/')}>
 			<span>Open account with us</span>
 			<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">

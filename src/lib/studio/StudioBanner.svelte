@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import banner from '#lib/assets/studio/banner.jpg';
-	// "Your world. Your freedom." navy banner. Copy is placeholder from the deck; confirm before launch.
+	// Navy banner. Copy is Algbra homepage wording: residency and no-borders claims need sign-off before launch.
 </script>
 
 <section class="banner" aria-labelledby="banner-title">
@@ -13,10 +13,9 @@
 		<span class="ph-label">Placeholder photo</span>
 
 		<div class="copy">
-			<!-- Placeholder copy: confirm before launch -->
-			<h2 id="banner-title">Your world.<br />Your freedom.</h2>
+			<h2 id="banner-title">A UK account for non-UK residents.</h2>
 			<p>
-				Everything you need to move through your day, with the control to make it yours.
+				Multiple currencies. No borders.
 			</p>
 		</div>
 
@@ -79,7 +78,7 @@
 	.ph-label {
 		position: absolute;
 		right: 16px;
-		bottom: 14px;
+		top: 16px;
 		font-size: 10px;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
@@ -155,7 +154,7 @@
 		}
 		/* Reference band on phones is a short strip: small headline, short copy, pill bottom right. */
 		.card {
-			padding: 18px 18px 64px;
+			padding: 44px 18px 64px;
 			min-height: 0;
 		}
 		h2 {

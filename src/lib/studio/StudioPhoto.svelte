@@ -10,10 +10,9 @@
 	</div>
 
 	<div class="inner">
-		<!-- Placeholder copy: confirm before launch -->
 		<div class="copy">
-			<h2 id="photo-title">A place where you belong.</h2>
-			<p>Placeholder line for the photo band. Confirm before launch.</p>
+			<h2 id="photo-title">Humans on the other end, too.</h2>
+			<p>Need a hand? Reach out anytime, and we’ll be happy to help.</p>
 		</div>
 	</div>
 </section>

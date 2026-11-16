@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	// "Your money on your terms." split section. Copy and tick list are placeholders from the deck.
+	// "Your money on your terms." split section. Paragraph and ticks are Algbra homepage wording; heading is still placeholder.
 	import split from '#lib/assets/studio/split.jpg';
 	// Generated placeholder photo, marked on the tile, until licensed photography is supplied.
 	const points = [
-		'A simple, straightforward account',
-		'Open banking that you control',
-		'Tools to help you stay in control'
+		'One app. Multiple currencies.',
+		'Your funds are securely held in safeguarded accounts.',
+		'Humans on the other end, too.'
 	];
 </script>
 
@@ -17,12 +17,11 @@
 	</div>
 
 	<div class="copy">
-		<!-- Placeholder copy: confirm before launch -->
 		<h2 id="split-title">Your money on your terms.</h2>
 
 		<div class="mid">
 			<p>
-				Manage your finances with more flexibility, more confidence and fewer unnecessary hassles.
+				We offer transparent, accessible, interest-free products, and you’ll never be confused or surprised by a fee.
 			</p>
 
 			<ul class="ticks">
