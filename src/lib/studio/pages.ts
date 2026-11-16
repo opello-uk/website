@@ -184,8 +184,25 @@ export const pages: StudioPage[] = [
 		lede: 'Earn on the money you are saving. Available to UK residents.',
 		source: 'algbra',
 		sections: [
-			{ heading: 'Earn % EPR* with Ethical Saver Cubes', body: 'Put money aside in Cubes and earn on your savings.', note: 'Available to UK residents only. Funds held in your Ethical Saver Cubes are protected by the FSCS up to £120,000. T&Cs apply.', source: 'algbra' },
+			{ heading: 'Earn % EPR* with Ethical Saver Cubes', body: 'Put money aside in Cubes and earn on your savings.', note: 'Available to UK residents only. Funds held in your Ethical Saver Cubes are protected by the FSCS up to £120,000. T&Cs apply.', source: 'algbra', href: '/studio/ethical-savings/', linkLabel: 'See Ethical Saver Cubes' },
 			{ heading: 'Goal-based Cubes', body: 'Create a Cube for each goal, from a holiday to a house deposit, and track your progress.', note: 'Source: algbra.com/features/cubes.', source: 'algbra', href: '/studio/cubes/', linkLabel: 'See Cubes' }
+		],
+		cta: { label: 'Open account with us', href: OPEN }
+	},
+	{
+		slug: 'ethical-savings',
+		title: 'Ethical Saver Cubes',
+		kicker: 'Savings',
+		lede: 'Ethical. Profitable. Human. Set money aside for a fixed term and see your agreed return before you confirm.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Profit, not interest', body: 'Ethical Saver Cubes are fixed-term savings built on Murabaha, a well-established Islamic finance structure. Your return comes from a genuine asset trade, not interest on your money.', note: 'Source: algbra.com/features/ethical-savings (FAQ and "What makes this product ethical?"). Sharia-compliance and structure wording needs sign-off from compliance and a Sharia adviser before publishing.', source: 'algbra' },
+			{ heading: 'How a Cube works', body: 'Pick the term that suits you, choose how much to deposit and see your expected profit before you confirm. At the end of the term you get your deposit back plus the agreed profit.', note: 'Source: algbra.com/features/ethical-savings. The app steps are Algbra\'s, not Opello\'s, and need replacing with Opello screens before publishing.', source: 'algbra' },
+			{ heading: 'Save for 3, 6 or 12 months', body: 'Choose your term. Returns are agreed in advance and fixed when the Cube is created, so you know what you will get back at maturity.', note: 'Source: algbra.com/features/ethical-savings. Opello terms and profit rates are placeholders. No rates are shown here.', source: 'algbra' },
+			{ heading: 'Where your money is held', body: 'Your deposit is placed with a UK partner bank that is covered by the Financial Services Compensation Scheme (FSCS), up to £120,000 across all your Ethical Saver Cubes. You can split that over several Cubes.', note: 'Source: algbra.com/features/ethical-savings. Available to UK residents only. T&Cs apply. Once money moves back to the main account, it is safeguarded rather than FSCS-protected. The partner is named by category only on this page. Needs compliance sign-off.', source: 'algbra' },
+			{ heading: 'Ethical boundaries', body: 'We do not finance industries we consider harmful, such as alcohol, gambling, tobacco and arms. Your money can also help support environmental and social projects.', note: 'Source: algbra.com/features/ethical-savings. Ethical screening and impact claims need compliance sign-off and evidence before publishing.', source: 'algbra' },
+			{ heading: 'At the end of the term', body: 'Choose to re-deposit into a new Cube, or move your deposit and profit back to your main account to withdraw, spend or save somewhere else.', note: 'Source: algbra.com/features/ethical-savings. The Algbra page leaves the early-withdrawal answer blank, so nothing is written about it here. Opello needs to confirm it.', source: 'algbra' },
+			{ heading: 'Tax on your profit', body: 'Profit may be taxable, depending on your circumstances. It counts towards your Personal Savings Allowance. Tax is not taken off automatically, so you may need to declare it to HMRC.', note: 'Source: algbra.com/features/ethical-savings. Tax wording needs compliance sign-off and a check of current HMRC rules before publishing.', source: 'algbra' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
