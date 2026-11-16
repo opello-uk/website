@@ -141,6 +141,12 @@
 		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 		margin-top: 28px;
 	}
+	@media (min-width: 900px) {
+		/* a lone last card in a three-column row runs the full width instead of hanging alone */
+		.card:last-child:nth-child(3n + 1):not(:first-child) {
+			grid-column: 1 / -1;
+		}
+	}
 	.card {
 		background: rgba(233, 228, 224, 0.04);
 		border: 1px solid var(--rule);
