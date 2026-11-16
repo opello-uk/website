@@ -63,6 +63,10 @@
 </div>
 
 <style>
+	/* the ring may bleed past the content column on desktop; keep that bleed from adding a sideways scroll */
+	.studio {
+		overflow-x: clip;
+	}
 	.subpage {
 		max-width: 1100px;
 		margin: 0 auto;
@@ -75,13 +79,14 @@
 		display: grid;
 		align-items: end;
 		padding: clamp(40px, 8vh, 96px) 0 clamp(24px, 4vh, 40px);
-		overflow: hidden;
+		/* desktop: let the ring bleed past the content column instead of being cut off at its edge */
+		overflow: visible;
 	}
 	.ring {
 		position: absolute;
 		top: 50%;
 		right: -12vw;
-		width: min(70vw, 620px);
+		width: min(56vw, 540px);
 		aspect-ratio: 1;
 		transform: translateY(-50%);
 		opacity: 0.8;
@@ -98,6 +103,7 @@
 	}
 	@media (max-width: 720px) {
 		.hero {
+			overflow: hidden;
 			display: flex;
 			flex-direction: column;
 			min-height: 0;
