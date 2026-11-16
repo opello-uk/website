@@ -65,6 +65,7 @@
 			<li><a href={resolve('/privacy/')}>Privacy policy</a></li>
 			<li><a href={resolve('/studio/terms-and-conditions/')}>Terms &amp; Conditions</a></li>
 			<li><a href={resolve('/studio/cookies-policy/')}>Cookie policy</a></li>
+			<li><a href={resolve('/studio/responsible-disclosure/')}>Responsible disclosure</a></li>
 			<!-- Placeholder legal links: pages not written yet. -->
 			{#each legal.filter((n) => n !== 'Terms & Conditions' && n !== 'Cookie policy') as name (name)}
 				<li><span>{name}</span></li>

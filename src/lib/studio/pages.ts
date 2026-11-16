@@ -404,6 +404,22 @@ export const pages: StudioPage[] = [
 			{ heading: 'Changes to this policy', body: '[Placeholder: how we will tell you about changes to this cookie policy.]', note: 'Placeholder. Counsel to draft.', source: 'placeholder' }
 		],
 		cta: { label: 'Read our privacy notice', href: '/privacy/' }
+	},
+	{
+		slug: 'responsible-disclosure',
+		title: 'Responsible disclosure',
+		kicker: 'Legal',
+		lede: 'We take the privacy and security of our customers seriously, and we value the work of security researchers who help us keep it that way.',
+		source: 'placeholder',
+		sections: [
+			{ heading: 'Our commitment', body: 'We operate a responsible disclosure policy. We work closely with security researchers so that any potential vulnerability reported to us is reviewed and fixed as soon as possible.', note: 'Source: algbra.com/responsible-disclosure, adapted to Opello. Algbra\'s contact address is not reused.', source: 'algbra' },
+			{ heading: 'When to report', body: 'If you think you have found a security vulnerability that affects Opello systems, products, apps or customers, please send us a report as soon as you can.', note: 'Source: algbra.com/responsible-disclosure.', source: 'algbra' },
+			{ heading: 'Our guidelines', body: 'Do not make the vulnerability public without our approval. Do not access customer or employee personal information, or any confidential Opello information. If you do by accident, stop testing and report it straight away. If you gain access to a non-public system or to non-public credentials, stop and report it immediately. Do not degrade our services, disrupt production systems or destroy data. Do not run automated vulnerability scans.', note: 'Source: algbra.com/responsible-disclosure, reworded for Opello.', source: 'algbra' },
+			{ heading: 'What to include in your report', body: 'Your name, the date and time you found the issue, and your phone number if you are comfortable sharing it. The technical details, raw requests and responses where they help, and clear step-by-step instructions so we can reproduce it. Do not upload attachments to public storage sites.', note: 'Source: algbra.com/responsible-disclosure.', source: 'algbra' },
+			{ heading: 'Out of scope', body: 'Reports that are not real security issues, such as a forgotten password. Spam, social engineering or phishing. Publicly readable files such as robots.txt. Fingerprinting or version disclosure of common software. Guessing usernames or email addresses from error messages, unless there is an exceptional risk.', note: 'Source: algbra.com/responsible-disclosure.', source: 'algbra' },
+			{ heading: 'How to send a report', body: '[Placeholder: Opello security mailbox, to be set up before this page is published.]', note: 'Placeholder. Opello has no security mailbox yet. Do not use Algbra\'s address.', source: 'placeholder' }
+		],
+		cta: { label: 'Contact us', href: '/studio/contact/' }
 	}
 ];
 
