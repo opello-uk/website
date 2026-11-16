@@ -497,10 +497,10 @@ export const pages: StudioPage[] = [
 		slug: 'help-articles',
 		title: 'Help articles',
 		kicker: 'Help',
-		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre; the answers are not written for Opello yet.',
+		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started answers are written; the other categories are still to write.',
 		source: 'placeholder',
 		sections: [
-			{ heading: 'Getting started', body: 'Opening your account and setting up.', note: 'Source: help.algbra.com, Getting started with Algbra. Algbra article titles, partial list (the help centre loads the rest in the browser). Answers are placeholder until written for Opello.', source: 'algbra', items: [
+			{ heading: 'Getting started', body: 'Opening your account and setting up.', note: 'Source: help.algbra.com, Getting started with Algbra. Algbra article titles. Answers for these nine are written; see the link.', source: 'algbra', href: '/studio/help-getting-started/', linkLabel: 'Read the answers', items: [
 				'Am I eligible for an account?', 'Do you carry out credit checks?', 'Where can I download the app?', 'What do I need to open an account?', 'Why do I need to verify my identity?', 'Finding your tax identification number (TIN)', 'How can I add funds?', 'Does Opello accept Bacs payments?', 'Can I deposit cash or cheques into my account?'
 			] },
 			{ heading: 'My card', body: 'Using, protecting and managing your card.', note: 'Source: help.algbra.com, My Card. Algbra article titles. Card wallet and card scheme wording is left out until Opello confirms its partners.', source: 'algbra', items: [
@@ -514,6 +514,25 @@ export const pages: StudioPage[] = [
 			] }
 		],
 		cta: { label: 'Back to help', href: '/studio/help/' }
+	},
+	{
+		slug: 'help-getting-started',
+		title: 'Getting started',
+		kicker: 'Help articles',
+		lede: 'Answers to the Getting started questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Am I eligible for an account?', body: 'To open an Opello account you need to be a UK resident aged 18 or over. You will also need a valid photo ID, like a passport or driving licence.', note: 'Source: help.algbra.com, Am I eligible (18 Mar 2026). Conflicts with the homepage banner, which says "A UK account for non-UK residents". Opello must confirm residency rules before publishing.', source: 'algbra', href: '/studio/help-articles/', linkLabel: 'Back to article titles' },
+			{ heading: 'Do you carry out credit checks?', body: 'No. We do not carry out credit checks, so opening an Opello account has no impact on your credit rating or borrowing ability. Our identity checks may leave a soft footprint on your credit history, which has no effect on your rating.', note: 'Source: help.algbra.com, Do you carry out credit checks? (18 Mar 2026). Credit wording needs compliance sign-off. Identity-check provider named by category only.', source: 'algbra' },
+			{ heading: 'Where can I download the app?', body: 'The Opello app is available on iOS from the App Store, and on Android from the Play Store.', note: 'Source: help.algbra.com, Where can I download (18 Mar 2026). App is not published yet, so store links are placeholders.', source: 'algbra', href: '/studio/download/', linkLabel: 'Get the app' },
+			{ heading: 'What do I need to open an account?', body: 'You need an internet-connected device with a camera, a mobile number, a valid ID document such as a passport or driving licence, and proof of address, such as a utility bill. In the app you record a short video of yourself and take a photo of your ID. Once approved, you can use your account straight away.', note: 'Source: help.algbra.com, What do I need (18 Mar 2026). Video step and approval timing to confirm for Opello.', source: 'algbra', href: '/studio/faq/', linkLabel: 'More in the FAQ' },
+			{ heading: 'Why do I need to verify my identity?', body: 'Financial rules require us to verify who you are. These are known as Know Your Customer (KYC) and Customer Due Diligence (CDD). The checks protect our community and keep your account secure. You will need a valid, in-date government photo ID. We can only use the original document. If we cannot verify your address from the one you give, we may ask for proof of address and will tell you what we need.', note: 'Source: help.algbra.com, Why do I need to verify my identity (1 Nov 2022). Compliance sign-off needed before publishing.', source: 'algbra' },
+			{ heading: 'Finding your tax identification number (TIN)', body: 'Your tax number depends on the country that issued it. Some countries use a national ID number instead, and some issue no tax number at all. [Placeholder: the country-by-country table is not copied here yet.]', note: 'Source: help.algbra.com, Finding your TIN (26 Jun 2026). The Algbra table is long; Opello needs its own list or a link before this goes live.', source: 'placeholder' },
+			{ heading: 'How can I add funds?', body: 'Tap Add Money on the Home tab. You can make an instant bank transfer from a supported bank account, with no bank details to enter. You can also send money by transfer from your account details. Most transfers are instant. To move money from your Cubes to your main balance, use the Cubes option, which is instant.', note: 'Source: help.algbra.com, How can I add funds (18 Mar 2026). App screen names and "instant" wording to confirm for Opello.', source: 'algbra', href: '/studio/transfers/', linkLabel: 'See transfers' },
+			{ heading: 'Does Opello accept Bacs payments?', body: 'Yes. You can have your salary or benefits paid into your Opello account.', note: 'Source: help.algbra.com, Bacs payments (18 Mar 2026). Conflicts with the FAQ, which lists Faster Payments only and says direct debits and standing orders are not yet available. Opello must confirm before publishing.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Check payments in the FAQ' },
+			{ heading: 'Can I deposit cash or cheques into my account?', body: 'Not at the moment. We do not accept cash or cheque deposits.', note: 'Source: help.algbra.com, Cash or cheques (18 Mar 2026). Confirm for Opello before publishing.', source: 'algbra' }
+		],
+		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
 	},
 	{
 		slug: 'sitemap',
@@ -535,7 +554,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
