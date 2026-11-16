@@ -497,7 +497,7 @@ export const pages: StudioPage[] = [
 		slug: 'help-articles',
 		title: 'Help articles',
 		kicker: 'Help',
-		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started answers are written; the other categories are still to write.',
+		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started and Security and data answers are written; the other categories are still to write.',
 		source: 'placeholder',
 		sections: [
 			{ heading: 'Getting started', body: 'Opening your account and setting up.', note: 'Source: help.algbra.com, Getting started with Algbra. Algbra article titles. Answers for these nine are written; see the link.', source: 'algbra', href: '/studio/help-getting-started/', linkLabel: 'Read the answers', items: [
@@ -506,7 +506,7 @@ export const pages: StudioPage[] = [
 			{ heading: 'My card', body: 'Using, protecting and managing your card.', note: 'Source: help.algbra.com, My Card. Algbra article titles. Card wallet and card scheme wording is left out until Opello confirms its partners.', source: 'algbra', items: [
 				'How do I get my card?', 'How long until my card arrives?', 'Where can I use my card?', 'Can I add my card to a digital wallet?', 'Can I use my card to withdraw cash?', 'How is the exchange rate calculated?', 'Are my card transactions protected?', 'Can I use my card abroad?', 'What if my card is lost or stolen?', 'What is 3D Secure?', 'How can I change my card PIN?', 'How do I check my card PIN?', 'How do I freeze my card?'
 			] },
-			{ heading: 'Security and data', body: 'How we protect your money and your information.', note: 'Source: help.algbra.com, Security & Data. Algbra article titles, partial list. Fraud and data answers need compliance sign-off.', source: 'algbra', items: [
+			{ heading: 'Security and data', body: 'How we protect your money and your information.', note: 'Source: help.algbra.com, Security & Data. Algbra article titles, partial list. Answers for these six are written; see the link. Fraud and data answers need compliance sign-off.', source: 'algbra', href: '/studio/help-security-data/', linkLabel: 'Read the answers', items: [
 				'Is my money safe?', 'How secure is my account?', 'What personal data do I need to share?', 'How does Opello process my data?', 'How do I opt out of marketing notifications?', 'Keeping your money safe: authorised push payment (APP) scams'
 			] },
 			{ heading: 'About Opello', body: 'Who we are and what we do.', note: 'Source: help.algbra.com, About Algbra, renamed for Opello. Partial list. Algbra is swapped for Opello in the titles; Opello to confirm.', source: 'algbra', items: [
@@ -535,6 +535,22 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
 	},
 	{
+		slug: 'help-security-data',
+		title: 'Security and data',
+		kicker: 'Help articles',
+		lede: 'Answers to the Security and data questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Is my money safe?', body: 'Yes. Your money is kept safe by a process called safeguarding. Opello is not a bank, so your money is not covered by the Financial Services Compensation Scheme (FSCS) in the same way a bank deposit is. Safeguarding means we keep customer money separate from our own funds, we cannot use it for lending or investing like a bank does, and it is held in designated safeguarding accounts with authorised banks. We have regular external audits to check this. If a payment firm were to fail, safeguarded money is used to return funds to customers, with no upper limit.', note: 'Source: help.algbra.com, Is my money safe with Algbra (Algbra wording, reworded for Opello). Opello regulatory status and safeguarding partner to confirm. FSCS wording and any partner-bank protection need compliance sign-off before publishing.', source: 'algbra' },
+			{ heading: 'How secure is my account?', body: 'The Opello app uses bank-grade encryption to protect your data, both when it moves and when it is stored. To keep your account safe, keep your account details private and your card secure. If you think someone else has access to your account, freeze your card and contact us straight away.', note: 'Source: help.algbra.com, How secure is my account (Algbra wording, adapted). Security claims and the support route need compliance sign-off. Support email is a placeholder.', source: 'algbra', href: '/studio/contact/', linkLabel: 'See contact options' },
+			{ heading: 'What personal data do I need to share?', body: 'To open an account we need your legal name, date of birth, phone number, email address, identity documents and card delivery details. In some cases we may ask for more information so we can support you with our services. We use this to verify your identity, protect accounts from fraud, prevent financial crime and provide our services. Our privacy notice explains more.', note: 'Source: help.algbra.com, What personal data do I need to share (Algbra wording, reworded for Opello). Data list to match the Opello privacy notice before publishing.', source: 'algbra', href: '/privacy/', linkLabel: 'Read the privacy notice' },
+			{ heading: 'How does Opello process my data?', body: 'Our privacy notice explains how we process and protect your personal data. You can read it on this website or in the app.', note: 'Source: help.algbra.com, How does Algbra process my data (Algbra wording, adapted). Links to the Opello privacy notice, which is still a draft.', source: 'algbra' },
+			{ heading: 'How do I opt out of marketing notifications?', body: 'Go to the Privacy section in the Opello app. There you can opt out of, or back into, marketing emails and push notifications at any time.', note: 'Source: help.algbra.com, How do I opt out of marketing notifications (Algbra wording, adapted). App screen name to confirm for Opello.', source: 'algbra' },
+			{ heading: 'Keeping your money safe: authorised push payment (APP) scams', body: 'An APP scam is when you are tricked into sending money by bank transfer to a fraudster. Scammers may pretend to be your bank, HMRC or a delivery firm, pose as a friend or relative in trouble, offer purchases that never arrive, build a romance to ask for money, or promise fast returns on an investment. Protect yourself by staying alert to urgent requests, checking payment details through a number you already know, and never moving money to a "safe" account because someone on the phone asked you to. If you have already sent money in a scam, contact us in the app or by email straight away, and report it to Action Fraud on 0300 123 2040 (in Scotland, contact the police on 101). The sooner you report it, the better our chances of getting the money back.', note: 'Source: help.algbra.com, Keeping your money safe: APP scams (Algbra wording, shortened and reworded for Opello). The full article has more scam types and links; the full version needs Opello sign-off. Action Fraud and 159 details are from Algbra\'s article and should be checked before publishing.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' }
+		],
+		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
+	},
+	{
 		slug: 'sitemap',
 		title: 'Sitemap',
 		kicker: 'Help',
@@ -554,7 +570,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
