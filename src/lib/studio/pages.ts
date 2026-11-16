@@ -388,6 +388,22 @@ export const pages: StudioPage[] = [
 			{ heading: 'Governing law and jurisdiction', body: '[Placeholder: governing law and courts. Expected to be England and Wales, to confirm.]', note: 'Placeholder. Counsel to confirm.', source: 'placeholder' }
 		],
 		cta: { label: 'Contact us', href: '/studio/contact/' }
+	},
+	{
+		slug: 'cookies-policy',
+		title: 'Cookie policy',
+		kicker: 'Legal',
+		lede: 'What cookies are, the kinds we may use, and how you can manage them. Placeholder until the Opello cookie list is confirmed.',
+		source: 'placeholder',
+		sections: [
+			{ heading: 'What a cookie is', body: 'A cookie is a small file of letters and numbers that a website stores on your browser or device. It lets the site recognise you when you come back, and remember some of your choices.', note: 'Source: algbra.com/cookies-policy, general definition only. Algbra\'s cookie table names third-party analytics and advertising tools, so none of it is reused.', source: 'algbra' },
+			{ heading: 'Strictly necessary cookies', body: 'These keep the website working and cannot be switched off. They include cookies that keep you signed in to secure areas, and cookies that remember your consent choices.', note: 'Source: algbra.com/cookies-policy category wording. Opello currently sets no cookies beyond these. Confirm before publishing.', source: 'algbra' },
+			{ heading: 'Optional cookies', body: '[Placeholder: analytics, functionality and marketing cookies, only if Opello uses them. We will ask for your consent before setting any optional cookie.]', note: 'Placeholder. The privacy notice draft says no optional cookies are set yet. Opello must confirm before this section is written.', source: 'placeholder' },
+			{ heading: 'Cookies we use', body: '[Placeholder: table of cookie name, provider category, purpose and how long it lasts.]', note: 'Placeholder. Left empty on purpose: Algbra\'s table names its own tools, and Opello\'s list does not exist yet.', source: 'placeholder' },
+			{ heading: 'Managing cookies', body: '[Placeholder: how to block or delete cookies in your browser, and what happens to the site if you do.]', note: 'Placeholder. Counsel or compliance to draft.', source: 'placeholder' },
+			{ heading: 'Changes to this policy', body: '[Placeholder: how we will tell you about changes to this cookie policy.]', note: 'Placeholder. Counsel to draft.', source: 'placeholder' }
+		],
+		cta: { label: 'Read our privacy notice', href: '/privacy/' }
 	}
 ];
 
