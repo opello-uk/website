@@ -1,7 +1,7 @@
 <script lang="ts">
 	const colPage: Record<string, string> = { Personal: 'personal', Business: 'business', About: 'about', Help: 'help' };
 	// Links that have their own page go there; the rest fall back to their column page.
-	const linkPage: Record<string, string> = { Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', Contact: 'contact', 'Get in touch': 'contact', Careers: 'careers' };
+	const linkPage: Record<string, string> = { Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', Contact: 'contact', 'Get in touch': 'contact', Careers: 'careers', News: 'news' };
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 
@@ -9,7 +9,7 @@
 	const columns = [
 		{ title: 'Personal', links: ['Everyday account', 'Payments', 'Cards'] },
 		{ title: 'Business', links: ['Business account', 'Business payments', 'Global transfers'] },
-		{ title: 'About', links: ['About us', 'Our approach', 'Careers', 'Contact'] },
+		{ title: 'About', links: ['About us', 'Our approach', 'Careers', 'News', 'Contact'] },
 		{ title: 'Help', links: ['Help centre', 'FAQs', 'Account support', 'Get in touch'] }
 	];
 

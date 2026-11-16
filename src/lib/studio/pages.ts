@@ -345,6 +345,20 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Open account with us', href: OPEN }
 	},
 	{
+		slug: 'news',
+		title: 'News',
+		kicker: 'About',
+		lede: '[Placeholder: intro to the Opello newsroom, covering news, product updates, explainers and stories.]',
+		source: 'placeholder',
+		sections: [
+			{ heading: 'News', body: '[Placeholder: announcements about Opello, such as new products, partnerships and approvals.]', note: 'Placeholder. Algbra\'s News posts are Algbra corporate announcements (partnerships, licences, investment), so none are reused for Opello.', source: 'placeholder' },
+			{ heading: 'Updates', body: '[Placeholder: changes to the app and new features for customers.]', note: 'Placeholder. Algbra\'s Updates category is not surveyed yet. Opello release notes to write.', source: 'placeholder' },
+			{ heading: 'Insights', body: 'Plain-English explainers on money, ethics and sustainability. [Placeholder: article list.]', note: 'Topics only. Algbra Insights articles (for example, chargebacks, carbon offsetting and virtual cards) are a starting point to adapt and sign off, not copy. Source: algbra.com/news/category/insights.', source: 'placeholder' },
+			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: posts.]', note: 'Placeholder until Opello writes its own posts. Source: algbra.com/news/category/blog (category name only).', source: 'placeholder' }
+		],
+		cta: { label: 'Get in touch', href: '/studio/contact/' }
+	},
+	{
 		slug: 'login',
 		title: 'Log in',
 		kicker: 'Account',
