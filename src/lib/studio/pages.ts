@@ -160,13 +160,17 @@ export const pages: StudioPage[] = [
 		slug: 'business',
 		title: 'Business',
 		kicker: 'Business',
-		lede: 'Business banking for teams that pay people and suppliers across borders.',
-		source: 'placeholder',
+		lede: 'An international business account with IBANs for GBP, USD, EUR and other supported currencies.',
+		source: 'algbra',
 		sections: [
-			{ heading: 'Business accounts', body: 'Placeholder. Copy to be taken from algbra.com/business once that page is surveyed.', source: 'placeholder' },
-			{ heading: 'Business payments', body: 'Placeholder. Confirm the business product range with Algbra before publishing.', source: 'placeholder' }
+			{ heading: 'Business account', body: 'International account with IBANs for GBP, USD, EUR and other supported currencies.', note: 'Source: algbra.com/business. IBAN currency list and "built for" line need confirming for Opello before publishing.', source: 'algbra' },
+			{ heading: 'Send, hold and receive', body: 'Send, hold, and receive payments in multiple supported currencies, wherever your customers are.', note: 'Source: algbra.com/business. Opello currency list to be confirmed.', source: 'algbra' },
+			{ heading: 'Currency exchange', body: 'Convert currencies with clear rates. No surprises.', note: 'Source: algbra.com/business, which says features vary by region and rates may vary. No rates shown here. Rate wording needs compliance sign-off.', source: 'algbra', href: '/studio/multi-currency/', linkLabel: 'See multi-currency accounts' },
+			{ heading: 'Cards and Savings Cubes', body: 'Spend with physical and virtual debit cards, and put business funds into Savings Cubes.', note: 'Source: algbra.com/business. "Profit generating" Savings Cubes is a product claim: confirm with Algbra or compliance before publishing. Savings Cubes are not yet confirmed for business accounts.', source: 'algbra', href: '/studio/cards/', linkLabel: 'See cards' },
+			{ heading: 'Who can apply', body: 'You need a fully incorporated, active business, or be a sole trader. Your company must be registered in an eligible country and work in a supported industry. You will need up to date company documents, and the same for anyone with significant control.', note: 'Source: algbra.com/business, eligibility FAQ. Opello eligibility rules to be confirmed.', source: 'algbra' },
+			{ heading: 'Your money is safeguarded', body: 'Deposits are not covered by the FSCS. They are protected by safeguarding instead: we keep all of your money separate from our own, and there is no upper limit.', note: 'Source: algbra.com/business, FAQ on FSCS and safeguarding. Opello\'s own status and this wording need compliance sign-off before publishing.', source: 'algbra' }
 		],
-		cta: { label: 'Open account with us', href: OPEN }
+		cta: { label: 'Join the business waitlist', href: OPEN }
 	},
 	{
 		slug: 'premium',
