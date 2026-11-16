@@ -63,8 +63,9 @@
 		<span>© 2026 Opello. All rights reserved.</span>
 		<ul class="legal">
 			<li><a href={resolve('/privacy/')}>Privacy policy</a></li>
+			<li><a href={resolve('/studio/terms-and-conditions/')}>Terms &amp; Conditions</a></li>
 			<!-- Placeholder legal links: pages not written yet. -->
-			{#each legal as name (name)}
+			{#each legal.filter((n) => n !== 'Terms & Conditions') as name (name)}
 				<li><span>{name}</span></li>
 			{/each}
 		</ul>

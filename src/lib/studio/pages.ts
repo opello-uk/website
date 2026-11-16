@@ -368,6 +368,26 @@ export const pages: StudioPage[] = [
 			{ heading: 'Coming soon', body: 'There is nothing to sign in to yet. Register your interest and we will let you know when accounts open.', source: 'placeholder' }
 		],
 		cta: { label: 'Register your interest', href: '/studio/' }
+	},
+	{
+		slug: 'terms-and-conditions',
+		title: 'Terms and conditions',
+		kicker: 'Legal',
+		lede: 'How you may use the Opello website. Placeholder terms until counsel signs off the final wording.',
+		source: 'placeholder',
+		sections: [
+			{ heading: 'About this website', body: 'This website is operated by Opello Ltd, registered in England and Wales, company number 17324431. Registered office: Suite 401–402, Cumberland House, 80 Scrubs Lane, London NW10 6RF.', note: 'Entity and address from the Opello privacy notice draft. Confirm the registered office before publishing.', source: 'placeholder' },
+			{ heading: 'Information and disclaimers', body: '[Placeholder: the information on this website is for general information only. It is not an offer or a recommendation, and it is not financial advice.]', note: 'Structure follows algbra.com/terms-and-conditions. Algbra\'s wording names its own legal entity, so none of it is reused. Opello wording to be drafted by counsel.', source: 'placeholder' },
+			{ heading: 'Accuracy of information', body: '[Placeholder: we take reasonable care to keep this website accurate, but we do not guarantee that it is complete or up to date.]', note: 'Placeholder. Counsel to draft.', source: 'placeholder' },
+			{ heading: 'Changes to the website and these terms', body: '[Placeholder: how we change the website and these terms, and how we tell you about changes.]', note: 'Placeholder. Counsel to draft.', source: 'placeholder' },
+			{ heading: 'Where you live', body: '[Placeholder: who can open an account and use Opello products. Eligibility wording must match the account terms.]', note: 'Placeholder. Residency rules are not confirmed for Opello. See the All plans page note.', source: 'placeholder' },
+			{ heading: 'Our products and our regulated partner', body: '[Placeholder: Opello distributes accounts and cards provided by a regulated e-money partner. Product terms, eligibility and safeguarding apply and are set out separately.]', note: 'Partner is described by category only, as agreed for public pages. Confirm wording with compliance.', source: 'placeholder' },
+			{ heading: 'Limits of our liability', body: '[Placeholder: limits on liability for losses from using the website. Must not limit liability that the law does not allow us to limit.]', note: 'Placeholder. Counsel to draft.', source: 'placeholder' },
+			{ heading: 'Links to and from our site', body: '[Placeholder: links to other websites are for convenience only, and we are not responsible for their content.]', note: 'Placeholder. Counsel to draft.', source: 'placeholder' },
+			{ heading: 'Intellectual property', body: '[Placeholder: the content, brand and designs on this website belong to Opello or its licensors.]', note: 'Placeholder. Counsel to draft.', source: 'placeholder' },
+			{ heading: 'Governing law and jurisdiction', body: '[Placeholder: governing law and courts. Expected to be England and Wales, to confirm.]', note: 'Placeholder. Counsel to confirm.', source: 'placeholder' }
+		],
+		cta: { label: 'Contact us', href: '/studio/contact/' }
 	}
 ];
 

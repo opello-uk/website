@@ -32,7 +32,7 @@
 			{#if isAlgbra}
 				Wording taken from algbra.com. Not for publication until approved.
 			{:else}
-				Placeholder copy. Not for publication until the wording is confirmed.
+				Placeholder copy. Not for publication until approved.
 			{/if}
 		</p>
 
