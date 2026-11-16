@@ -497,13 +497,13 @@ export const pages: StudioPage[] = [
 		slug: 'help-articles',
 		title: 'Help articles',
 		kicker: 'Help',
-		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started and Security and data answers are written; the other categories are still to write.',
+		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started, My card and Security and data answers are written; About Opello is still to write.',
 		source: 'placeholder',
 		sections: [
 			{ heading: 'Getting started', body: 'Opening your account and setting up.', note: 'Source: help.algbra.com, Getting started with Algbra. Algbra article titles. Answers for these nine are written; see the link.', source: 'algbra', href: '/studio/help-getting-started/', linkLabel: 'Read the answers', items: [
 				'Am I eligible for an account?', 'Do you carry out credit checks?', 'Where can I download the app?', 'What do I need to open an account?', 'Why do I need to verify my identity?', 'Finding your tax identification number (TIN)', 'How can I add funds?', 'Does Opello accept Bacs payments?', 'Can I deposit cash or cheques into my account?'
 			] },
-			{ heading: 'My card', body: 'Using, protecting and managing your card.', note: 'Source: help.algbra.com, My Card. Algbra article titles. Card wallet and card scheme wording is left out until Opello confirms its partners.', source: 'algbra', items: [
+			{ heading: 'My card', body: 'Using, protecting and managing your card.', note: 'Source: help.algbra.com, My Card. Algbra article titles. Answers for these thirteen are written; see the link. Card wallet and card scheme wording is left out until Opello confirms its partners.', source: 'algbra', href: '/studio/help-my-card/', linkLabel: 'Read the answers', items: [
 				'How do I get my card?', 'How long until my card arrives?', 'Where can I use my card?', 'Can I add my card to a digital wallet?', 'Can I use my card to withdraw cash?', 'How is the exchange rate calculated?', 'Are my card transactions protected?', 'Can I use my card abroad?', 'What if my card is lost or stolen?', 'What is 3D Secure?', 'How can I change my card PIN?', 'How do I check my card PIN?', 'How do I freeze my card?'
 			] },
 			{ heading: 'Security and data', body: 'How we protect your money and your information.', note: 'Source: help.algbra.com, Security & Data. Algbra article titles, partial list. Answers for these six are written; see the link. Fraud and data answers need compliance sign-off.', source: 'algbra', href: '/studio/help-security-data/', linkLabel: 'Read the answers', items: [
@@ -551,6 +551,29 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
 	},
 	{
+		slug: 'help-my-card',
+		title: 'My card',
+		kicker: 'Help articles',
+		lede: 'Answers to the My card questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'How do I get my card?', body: 'Tap Cards on the Home tab, then tap + to order. You can choose a physical card or a virtual card. A physical card works in shops, online and at cash machines, and can be added to a digital wallet on your phone. A virtual card lives in the app and works for online payments. You can have a virtual card on its own or alongside a physical one.', note: 'Source: help.algbra.com, How do I get my Algbra card (Algbra wording, reworded for Opello). Ordering screens and card types to confirm for Opello.' },
+			{ heading: 'How long until my card arrives?', body: 'When you order a physical card, the app shows an estimated delivery time. It usually takes 3 to 5 working days in the UK. If it has not arrived by then, allow a couple of extra days for postal delays. If it still has not arrived, contact us in the app and we will send a replacement.', note: 'Source: help.algbra.com, How long until my card arrives (Algbra wording, adapted). Delivery times need Opello confirmation.' },
+			{ heading: 'Where can I use my card?', body: 'You can use your card to pay online and in shops anywhere that shows the card network logo. If you have any trouble, get in touch with us through the in-app chat.', note: 'Source: help.algbra.com, Where can I use my card (Algbra wording, adapted). Card network named by category until Opello confirms its scheme.' },
+			{ heading: 'Can I use my card abroad?', body: 'Yes. You can use your card in shops, online and at cash machines anywhere the card network is accepted, which covers over 210 countries and territories.', note: 'Source: help.algbra.com, Can I use my card abroad (Algbra wording, adapted). Country figure needs Opello confirmation. Foreign-use fees are on the fees page.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
+			{ heading: 'Can I use my card to withdraw cash?', body: 'Yes. Your physical card works in cash machines in the UK and abroad. If you forget your PIN, tap Cards on the Home tab, swipe to your physical card and tap Security.', note: 'Source: help.algbra.com, Can I use my card to withdraw cash (Algbra wording, adapted). Cash withdrawal fees are not covered here.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
+			{ heading: 'Can I add my card to a digital wallet?', body: 'Yes. Tap Cards on the Home tab, swipe to the card you want to add, and tap Add to wallet.', note: 'Source: help.algbra.com, Can I add my card to a digital wallet (Algbra wording, adapted). Wallet names left out until Opello confirms its partners.' },
+			{ heading: 'How is the exchange rate calculated?', body: 'When you pay in another currency, we use the card network\'s exchange rate. You can check the current rates on the card network\'s website at any time.', note: 'Source: help.algbra.com, How is the exchange rate calculated (Algbra wording). Any Opello currency charge must be on the fees page before publishing.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
+			{ heading: 'Are my card transactions protected?', body: 'Yes. Card purchases are covered by the card network\'s chargeback scheme. You can dispute a payment if goods or services did not arrive, were not as described or were faulty, a refund was not processed, a charge was duplicated or wrong, or the payment was not authorised. Try to sort it out with the merchant first. Once a chargeback is raised, the merchant usually has up to 45 days to respond, and the process can take several weeks. We will keep you updated.', note: 'Source: help.algbra.com, Are my card transactions protected (Algbra wording, adapted). Chargeback rules and timings need compliance sign-off.', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
+			{ heading: 'What if my card is lost or stolen?', body: 'Freeze the card straight away. Tap Cards on the Home tab, swipe to your physical card, tap Freeze card, then select Report lost or stolen. Please also contact us, especially if you see transactions you did not make.', note: 'Source: help.algbra.com, What if my card is lost or stolen (Algbra steps, adapted). App screen names to confirm. Support phone is a placeholder.', href: '/studio/help/', linkLabel: 'Get in touch' },
+			{ heading: 'What is 3D Secure?', body: '3D Secure is an extra check for some online payments. When a payment needs it, we send a one-time passcode by text message to the mobile number on your account. Enter the code at checkout. You will only need it when a payment is flagged, not every time. We will never ask you to share a passcode, so never give one to anyone, even someone who sounds trustworthy. If you do not recognise a payment, do not enter the code. Freeze your card in the app and contact us straight away.', note: 'Source: help.algbra.com, What is 3D Secure (Algbra wording, adapted). Text-message sender and support route need compliance sign-off.' },
+			{ heading: 'How can I change my card PIN?', body: 'Tap Cards on the Home tab, swipe to your physical card, tap Security, then tap Change PIN and follow the steps on screen. Then visit any cash machine, insert your card, and do a balance check or cash withdrawal to confirm the new PIN.', note: 'Source: help.algbra.com, How can I change my card PIN (Algbra steps, adapted). App screen names to confirm for Opello.' },
+			{ heading: 'How do I check my card PIN?', body: 'Tap Cards on the Home tab, swipe to your physical card, tap Security, then tap See your PIN.', note: 'Source: help.algbra.com, How do I check my card PIN (Algbra steps, adapted). App screen names to confirm for Opello.' },
+			{ heading: 'How do I freeze my card?', body: 'Tap Cards on the Home tab, swipe to the card you want to freeze, and turn on Freeze card. You can also freeze it by contacting us in the app as soon as you notice suspicious activity or lose your card.', note: 'Source: help.algbra.com, How do I freeze my card (Algbra steps, adapted). App screen names to confirm for Opello.' }
+		],
+		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
+	},
+	{
 		slug: 'sitemap',
 		title: 'Sitemap',
 		kicker: 'Help',
@@ -570,7 +593,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
