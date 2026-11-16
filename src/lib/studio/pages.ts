@@ -370,6 +370,25 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Register your interest', href: '/studio/' }
 	},
 	{
+		slug: 'privacy-policy',
+		title: 'Privacy policy',
+		kicker: 'Legal',
+		lede: 'How Opello uses your personal data, in plain English. This is a summary of our privacy notice. The full notice is the one linked below.',
+		source: 'placeholder',
+		sections: [
+			{ heading: 'Who we are', body: 'Opello Ltd is registered in England and Wales, company number 17324431. Registered office: Suite 401–402, Cumberland House, 80 Scrubs Lane, London NW10 6RF. Questions about your data go to privacy@opello.co.uk.', note: 'Source: Opello privacy notice draft v0.3, sections 2 and 18. Confirm before publishing.', source: 'placeholder' },
+			{ heading: 'What we collect', body: 'Your name, date of birth, contact details and address. Identity documents and selfie checks. Proof of address. Tax residency details. How you use the app and this website. Records of the payments you make and receive. Support conversations.', note: 'Source: Opello privacy notice draft v0.3, section 3. Categories only; the full list is in the notice.', source: 'placeholder' },
+			{ heading: 'Why we use it', body: 'To open and run your account, to check who you are, to meet our legal and regulatory duties, and to keep our services secure. We only send marketing if you have opted in, and you can withdraw that at any time.', note: 'Source: Opello privacy notice draft v0.3, sections 4 and 8. Legal bases to confirm.', source: 'placeholder' },
+			{ heading: 'Who we share it with', body: 'Our regulated e-money partner, which provides your account and card, and the service providers we use to run Opello, such as identity checks, fraud screening and hosting. We never sell your personal data.', note: 'Source: Opello privacy notice draft v0.3, section 9. Partner and providers are described by category only.', source: 'placeholder' },
+			{ heading: 'Data outside the UK', body: 'Some of our services work across more than one country, so some data may be sent outside the UK. Where that happens, we use approved safeguards to protect it.', note: 'Source: privacy notice draft v0.3, section 10. Opello to confirm which countries are involved.', source: 'placeholder' },
+			{ heading: 'How long we keep it', body: 'While your account is open, and then for up to six years after it closes, to meet legal, tax and record-keeping rules. Marketing preferences are kept until you withdraw consent.', note: 'Source: Opello privacy notice draft v0.3, section 13.', source: 'placeholder' },
+			{ heading: 'Your rights', body: 'You can ask for a copy of your data, ask us to correct or delete it, restrict or object to how we use it, and ask for it in a portable format. You can also withdraw consent at any time.', note: 'Source: Opello privacy notice draft v0.3, section 14. Requests are free in most cases and get a reply within one month.', source: 'placeholder' },
+			{ heading: 'Cookies', body: 'Right now this website sets only the cookies it needs to work. We will not set any other cookies without asking you first, and you can block or delete cookies in your browser.', note: 'Source: Opello privacy notice draft v0.3, section 7. Confirm before publishing; see the cookie policy page.', source: 'placeholder' },
+			{ heading: 'Complaints', body: 'Contact us first and we will look into it. You can also complain to the Information Commissioner\'s Office (ICO) at ico.org.uk or on 0303 123 1113.', note: 'Source: Opello privacy notice draft v0.3, section 16. ICO registration number is still a placeholder.', source: 'placeholder' }
+		],
+		cta: { label: 'Read the full privacy notice', href: '/privacy/' }
+	},
+	{
 		slug: 'terms-and-conditions',
 		title: 'Terms and conditions',
 		kicker: 'Legal',

@@ -62,7 +62,7 @@
 	<div class="base">
 		<span>© 2026 Opello. All rights reserved.</span>
 		<ul class="legal">
-			<li><a href={resolve('/privacy/')}>Privacy policy</a></li>
+			<li><a href={resolve('/studio/privacy-policy/')}>Privacy policy</a></li>
 			<li><a href={resolve('/studio/terms-and-conditions/')}>Terms &amp; Conditions</a></li>
 			<li><a href={resolve('/studio/cookies-policy/')}>Cookie policy</a></li>
 			<li><a href={resolve('/studio/fees-and-charges/')}>Fees and charges</a></li>
