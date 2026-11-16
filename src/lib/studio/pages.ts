@@ -269,7 +269,7 @@ export const pages: StudioPage[] = [
 		sections: [
 			{ heading: 'Finance, made for humans', body: 'Taken from the Algbra homepage. Our own about copy to be written and approved.', source: 'algbra' }
 		],
-		cta: { label: 'Contact', href: '/studio/help/' }
+		cta: { label: 'Contact', href: '/studio/contact/' }
 	},
 	{
 		slug: 'help',
@@ -279,7 +279,8 @@ export const pages: StudioPage[] = [
 		source: 'placeholder',
 		sections: [
 			{ heading: 'Help centre', body: 'Placeholder for help articles and contact details.', source: 'placeholder' },
-			{ heading: 'Frequently asked questions', body: 'Answers to the questions we hear most often.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' }
+			{ heading: 'Frequently asked questions', body: 'Answers to the questions we hear most often.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
+			{ heading: 'Get in touch', body: 'Thoughts, ideas, suggestions, or a question about your account.', source: 'algbra', href: '/studio/contact/', linkLabel: 'Contact us' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
@@ -301,6 +302,20 @@ export const pages: StudioPage[] = [
 			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account. Once closed, you cannot open a new one.', note: 'Source: algbra.com/faq. Support email still placeholder.', source: 'algbra' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
+	},
+	{
+		slug: 'contact',
+		title: 'Contact',
+		kicker: 'Help',
+		lede: "We're here to connect. Thoughts, ideas and suggestions are always welcome.",
+		source: 'algbra',
+		sections: [
+			{ heading: 'General enquiries', body: 'Thoughts, ideas, suggestions. Contact us here. Email: [general enquiries email, placeholder]', note: 'Source: algbra.com/contact, General Enquiries. Opello email address still to be set up.', source: 'algbra' },
+			{ heading: 'Press enquiries', body: 'For all press enquiries. Email: [press email, placeholder]', note: 'Source: algbra.com/contact, Press Enquiries. Opello press contact to confirm.', source: 'algbra' },
+			{ heading: 'Problems with your account', body: 'Lost or stolen card, or a payment you do not recognise: freeze your card in the app first, then use the in-app chat. If you cannot get into the app, call or email us instead. Phone number and support email are placeholders.', note: 'Source: algbra.com/faq, Cards and Transactions. Opello support number and email to confirm.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ first' },
+			{ heading: 'Company and privacy', body: 'Opello Ltd, registered in England and Wales, company number 17324431. Suite 401–402, Cumberland House, 80 Scrubs Lane, London NW10 6RF. Questions about your personal data: privacy@opello.co.uk', note: 'From the Opello privacy notice draft. Confirm the registered address and privacy mailbox before publishing.', source: 'placeholder' }
+		],
+		cta: { label: 'Back to help', href: '/studio/help/' }
 	},
 	{
 		slug: 'login',
