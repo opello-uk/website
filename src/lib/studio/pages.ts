@@ -27,7 +27,20 @@ export const pages: StudioPage[] = [
 			{ heading: 'Earn % EPR* with Ethical Saver Cubes', body: 'Put money aside in Cubes and earn on your savings.', note: 'Available to UK residents only. Funds held in your Ethical Saver Cubes are protected by the FSCS up to £120,000. T&Cs apply.', source: 'algbra' },
 			{ heading: 'Send and receive money', body: 'Instant bank transfers, international transfers, and payments to friends and family.', source: 'algbra', href: '/studio/transfers/', linkLabel: 'See transfers' },
 			{ heading: 'Spend with your card', body: 'Physical and virtual cards, card controls and spending abroad.', note: 'Source: algbra.com/features/cards. Wording taken from the Cards page.', source: 'algbra', href: '/studio/cards/', linkLabel: 'See cards' },
+			{ heading: 'Find your fit', body: 'Different plans for different needs. Explore features, pricing, and benefits to find the one that works best for you.', note: 'Source: algbra.com/all-plans.', source: 'algbra', href: '/studio/all-plans/', linkLabel: 'See all plans' },
 			{ heading: 'Good deeds done with ease.', body: 'Support causes you care about directly from your account.', note: 'Source: algbra.com/features/donations.', source: 'algbra', href: '/studio/donations/', linkLabel: 'See donations' }
+		],
+		cta: { label: 'Open account with us', href: OPEN }
+	},
+	{
+		slug: 'all-plans',
+		title: 'All plans',
+		kicker: 'Personal',
+		lede: 'Different plans for different needs. Explore features, pricing and benefits to find the one that works best for you.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Standard', body: 'Free. Everyday financial essentials, to spend, save and manage money. Available to UK residents. T&Cs apply.', note: 'Source: algbra.com/all-plans, where the plan is labelled "Free" with "Get started for free". The free price and UK-only eligibility need confirming for Opello before publishing.', source: 'algbra', href: OPEN, linkLabel: 'Get started for free' },
+			{ heading: 'Borderless', body: '£10 a month. A UK account for non-UK residents. Multiple currencies. No borders. T&Cs apply.', note: 'Source: algbra.com/all-plans. The £10 a month fee needs compliance sign-off and must match the Opello fee schedule before publishing.', source: 'algbra', href: '/studio/borderless-account/', linkLabel: 'See the Borderless account' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
