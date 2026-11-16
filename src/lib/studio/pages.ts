@@ -409,6 +409,22 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Contact us', href: '/studio/contact/' }
 	},
 	{
+		slug: 'customer-terms-and-conditions',
+		title: 'Customer terms',
+		kicker: 'Legal',
+		lede: 'The agreement between you and Opello for your account and card. Placeholder summary until counsel signs off the full terms.',
+		source: 'placeholder',
+		sections: [
+			{ heading: 'About these terms', body: '[Placeholder: what these terms cover, how they form an agreement with you when you open an account, and how to contact us with questions.]', note: 'Structure follows section 1 and 2 of algbra.com/terms-and-conditions.pdf (UK residents, retail standard account, version 2.0.3, effective 7 April 2026). Algbra\'s wording names its own entity, so none of it is reused. Counsel to draft.', source: 'placeholder' },
+			{ heading: 'Your account and card', body: '[Placeholder: what the account is, how e-money is issued and redeemed, how you use your card, transaction timings, disputes and account limits.]', note: 'Structure follows section 3 of the Algbra terms (account, cards, Confirmation of Payee, Cubes, carbon offsetting, cashback). Only the sections Opello offers will be kept. Counsel to draft.', source: 'placeholder' },
+			{ heading: 'Fees and charges', body: '[Placeholder: what you pay for your account and card. The fee schedule is on its own page.]', note: 'Structure follows section 4 of the Algbra terms. Opello fee schedule to be confirmed; see the fees and charges page.', source: 'placeholder', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
+			{ heading: 'Your responsibilities and your money', body: '[Placeholder: keeping your details up to date and your card safe, telling us when something goes wrong, and how your money is safeguarded. FSCS wording to be confirmed by compliance.]', note: 'Structure follows sections 5 and 6 of the Algbra terms. Protection wording must be confirmed for Opello before publishing. Counsel and compliance to draft.', source: 'placeholder' },
+			{ heading: 'Privacy, complaints and liability', body: '[Placeholder: how we use your personal data, how to complain and how we handle disputes, and the limits of our liability.]', note: 'Structure follows sections 7, 8 and 9 of the Algbra terms. Privacy wording links to the full notice. Counsel to draft.', source: 'placeholder' },
+			{ heading: 'Changes, closing and governing law', body: '[Placeholder: how we change these terms and tell you, how you or we can close your account, and which courts and law apply.]', note: 'Structure follows sections 10, 11 and 12 of the Algbra terms. Governing law by part of the UK to be confirmed by counsel.', source: 'placeholder' }
+		],
+		cta: { label: 'Read the privacy notice', href: '/studio/privacy-policy/' }
+	},
+	{
 		slug: 'cookies-policy',
 		title: 'Cookie policy',
 		kicker: 'Legal',
