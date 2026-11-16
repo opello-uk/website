@@ -36,7 +36,7 @@
 			{/if}
 		</p>
 
-		<section class="sections">
+		<section class="sections rem-{p.sections.length % 3}">
 			{#each p.sections as s (s.heading)}
 				<article class="card">
 					<h2>{s.heading}</h2>
@@ -138,7 +138,7 @@
 		margin: 24px 0 0;
 		font-size: 12px;
 		letter-spacing: 0.04em;
-		color: rgba(233, 228, 224, 0.55);
+		color: rgba(233, 228, 224, 0.72);
 		border-top: 1px solid var(--rule);
 		padding-top: 12px;
 	}
@@ -149,9 +149,20 @@
 		margin-top: 28px;
 	}
 	@media (min-width: 900px) {
-		/* a lone last card in a three-column row runs the full width instead of hanging alone */
-		.card:last-child:nth-child(3n + 1):not(:first-child) {
+		/* six columns: cards span two, so a short last row fills the width instead of leaving a gap */
+		.sections {
+			grid-template-columns: repeat(6, 1fr);
+		}
+		.card {
+			grid-column: span 2;
+		}
+		/* one card left over: it runs the full width */
+		.sections.rem-1 .card:last-child {
 			grid-column: 1 / -1;
+		}
+		/* two left over: they split the row */
+		.sections.rem-2 .card:nth-last-child(-n + 2) {
+			grid-column: span 3;
 		}
 	}
 	.card {
