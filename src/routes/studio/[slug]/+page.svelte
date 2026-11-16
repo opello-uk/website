@@ -43,6 +43,13 @@
 					<p>{s.body}</p>
 					{#if s.note}<p class="note">{s.note}</p>{/if}
 					{#if s.href}<a class="link" href={resolve(s.href as '/')}>{s.linkLabel ?? 'Learn more'}</a>{/if}
+					{#if s.links}
+						<ul class="links">
+							{#each s.links as l (l.href)}
+								<li><a href={resolve(l.href as '/')}>{l.label}</a></li>
+							{/each}
+						</ul>
+					{/if}
 				</article>
 			{/each}
 		</section>
@@ -181,7 +188,30 @@
 	.card .link:hover {
 		text-decoration: underline;
 	}
-	.card .link:focus-visible {
+	.card .links {
+		list-style: none;
+		margin: 14px 0 0;
+		padding: 0;
+		display: grid;
+		gap: 2px;
+	}
+	.card .links a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 36px;
+		color: var(--clay);
+		text-decoration: none;
+		font-size: 0.95rem;
+	}
+	.card .links a:hover {
+		color: var(--peach);
+		text-decoration: underline;
+	}
+	.card .links a:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 3px;
+	}
+.card .link:focus-visible {
 		outline: 2px solid var(--peach);
 		outline-offset: 3px;
 	}

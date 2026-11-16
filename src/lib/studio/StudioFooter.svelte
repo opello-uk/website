@@ -20,7 +20,6 @@
 		{ name: 'X', path: 'M4 4h4.6l3.6 4.9L16.2 4H19l-6 6.9L19.6 20h-4.6l-3.9-5.3L6.6 20H4l6.4-7.3L4 4zm3.1 1.5 9.8 13h1.4l-9.8-13H7.1z' },
 		{ name: 'YouTube', path: 'M21.5 7.2a2.7 2.7 0 0 0-1.9-1.9C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.5a2.7 2.7 0 0 0-1.9 1.9C2 8.9 2 12 2 12s0 3.1.5 4.8a2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.6.5 7.6.5s5.9 0 7.6-.5a2.7 2.7 0 0 0 1.9-1.9c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM10 15.2V8.8l5.2 3.2-5.2 3.2z' }
 	];
-	const legal = ['Sitemap'];
 </script>
 
 <footer class="foot">
@@ -69,10 +68,7 @@
 			<li><a href={resolve('/studio/customer-terms-and-conditions/')}>Customer terms</a></li>
 			<li><a href={resolve('/studio/responsible-disclosure/')}>Responsible disclosure</a></li>
 			<li><a href={resolve('/studio/accessibility/')}>Accessibility</a></li>
-			<!-- Placeholder legal links: pages not written yet. -->
-			{#each legal as name (name)}
-				<li><span>{name}</span></li>
-			{/each}
+			<li><a href={resolve('/studio/sitemap/')}>Sitemap</a></li>
 		</ul>
 	</div>
 </footer>

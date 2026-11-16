@@ -2,7 +2,7 @@
 // source: 'algbra' = wording taken from algbra.com (homepage, surveyed 2026-11-12)
 //         'placeholder' = not yet surveyed or no direct Algbra equivalent; confirm before use
 export type Source = 'algbra' | 'placeholder';
-export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string };
+export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[] };
 export type StudioPage = {
 	slug: string;
 	title: string;
@@ -490,6 +490,34 @@ export const pages: StudioPage[] = [
 			{ heading: 'Review date', body: '[Placeholder: date this statement was last reviewed, and how often we will review it.]', note: 'Placeholder. Set when the statement is approved.', source: 'placeholder' }
 		],
 		cta: { label: 'Read our terms', href: '/studio/terms-and-conditions/' }
+	},
+	{
+		slug: 'sitemap',
+		title: 'Sitemap',
+		kicker: 'Help',
+		lede: 'Every page in the Opello studio build, grouped the way the footer groups them. Placeholder layout until the site map is confirmed for launch.',
+		source: 'placeholder',
+		sections: [
+			{ heading: 'Personal', body: 'Accounts, payments and cards for everyday use.', source: 'placeholder', links: [
+				{ label: 'Personal', href: '/studio/personal/' }, { label: 'All plans', href: '/studio/all-plans/' }, { label: 'Transfers', href: '/studio/transfers/' }, { label: 'Cards', href: '/studio/cards/' }, { label: 'Donations', href: '/studio/donations/' }, { label: 'Planet Impact', href: '/studio/carbon-tracking/' }, { label: 'Download the app', href: '/studio/download/' }
+			] },
+			{ heading: 'Accounts and savings', body: 'Savings, Cubes, currency accounts and other account types.', source: 'placeholder', links: [
+				{ label: 'Current accounts', href: '/studio/current-accounts/' }, { label: 'Multi-currency accounts', href: '/studio/multi-currency/' }, { label: 'Borderless account', href: '/studio/borderless-account/' }, { label: 'Premium', href: '/studio/premium/' }, { label: 'Savings', href: '/studio/savings/' }, { label: 'Cubes', href: '/studio/cubes/' }, { label: 'Ethical Saver Cubes', href: '/studio/ethical-savings/' }, { label: 'Ethical finance', href: '/studio/ethical-finance/' }, { label: 'Pensions', href: '/studio/pensions/' }, { label: 'Open an account', href: '/studio/open-account/' }
+			] },
+			{ heading: 'Business', body: 'Accounts and payments for businesses.', source: 'placeholder', links: [
+				{ label: 'Business', href: '/studio/business/' }
+			] },
+			{ heading: 'About', body: 'Who we are, what we are building and how to reach us.', source: 'placeholder', links: [
+				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
+			] },
+			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+			] },
+			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
+				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
+			] }
+		],
+		cta: { label: 'Open account with us', href: OPEN }
 	}
 ];
 
