@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	// "How can we help today?" product cards. Titles and copy are placeholders from the deck.
 	import current from '#lib/assets/studio/current.jpg';
 	import savings from '#lib/assets/studio/savings.jpg';
@@ -6,18 +7,21 @@
 	// Photos are generated placeholders, marked on the tile, until licensed photography is supplied.
 	const products = [
 		{
+			slug: 'current-accounts',
 			title: 'Current accounts',
 			body: 'Everyday banking that works for you, away from home or at home.',
 			tone: 'a',
 			src: current
 		},
 		{
+			slug: 'savings',
 			title: 'Savings',
 			body: 'Simple ways to save with confidence and plan for what’s next.',
 			tone: 'b',
 			src: savings
 		},
 		{
+			slug: 'pensions',
 			title: 'Pensions',
 			body: 'Straightforward support to build your future and stay ahead.',
 			tone: 'c',
@@ -39,7 +43,7 @@
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>
-				<a class="learn" href="#products-title">
+				<a class="learn" href={resolve(`/studio/${p.slug}/` as '/')}>
 					<span>Learn more</span>
 					<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
 						<path

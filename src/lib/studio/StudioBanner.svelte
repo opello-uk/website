@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import banner from '#lib/assets/studio/banner.jpg';
 	// "Your world. Your freedom." navy banner. Copy is placeholder from the deck; confirm before launch.
 </script>
@@ -19,7 +20,7 @@
 			</p>
 		</div>
 
-		<a class="cta" href="#banner-title">
+		<a class="cta" href={resolve('/studio/open-account/')}>
 			<span>Get started</span>
 			<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
 				<path

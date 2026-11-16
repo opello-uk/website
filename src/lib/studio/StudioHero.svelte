@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	// Hero for the unlisted studio build. All copy is placeholder until confirmed.
 </script>
 
@@ -35,7 +36,7 @@
 		</h1>
 		<!-- Placeholder copy: confirm before launch -->
 		<p class="sub">For different lives, different circumstances and different starting points.</p>
-		<a class="cta" href="#personal">
+		<a class="cta" href={resolve('/studio/open-account/')}>
 			<span>Open account with us</span>
 			<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
 				<path

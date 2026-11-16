@@ -1,4 +1,5 @@
 <script lang="ts">
+	const colPage: Record<string, string> = { Personal: 'personal', Business: 'business', About: 'about', Help: 'help' };
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 
@@ -33,7 +34,7 @@
 					<h2>{col.title}</h2>
 					<ul>
 						{#each col.links as link (link)}
-							<li><span>{link}</span></li>
+							<li><a href={resolve(`/studio/${colPage[col.title] ?? 'help'}/` as '/')}>{link}</a></li>
 						{/each}
 					</ul>
 				</section>

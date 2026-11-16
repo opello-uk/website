@@ -4,9 +4,9 @@
 
 	// Placeholder tabs: they will switch the hero and sections once built.
 	const tabs = [
-		{ id: 'personal', label: 'Personal' },
-		{ id: 'business', label: 'Business' },
-		{ id: 'premium', label: 'Premium' }
+		{ id: 'personal', label: 'Personal', href: '/studio/personal/' },
+		{ id: 'business', label: 'Business', href: '/studio/business/' },
+		{ id: 'premium', label: 'Premium', href: '/studio/premium/' }
 	];
 	// Studio build: the active tab is fixed until the tabs drive real sections.
 	const active = 'personal';
@@ -19,11 +19,7 @@
 
 	<nav class="tabs" aria-label="Customer type">
 		{#each tabs as tab (tab.id)}
-			<button
-				type="button"
-				class="tab"
-				aria-current={tab.id === active ? 'page' : undefined}>{tab.label}</button
-			>
+			<a class="tab" href={resolve(tab.href as '/')} aria-current={tab.id === active ? 'page' : undefined}>{tab.label}</a>
 		{/each}
 	</nav>
 
@@ -49,8 +45,8 @@
 
 		<div class="pills">
 			<!-- Placeholder copy: CTA labels to confirm -->
-			<button type="button" class="pill pill-peach">Become a customer</button>
-			<button type="button" class="pill pill-white">Login</button>
+			<a class="pill pill-peach" href={resolve('/studio/open-account/')}>Become a customer</a>
+			<a class="pill pill-white" href={resolve('/studio/login/')}>Login</a>
 		</div>
 	</div>
 </header>

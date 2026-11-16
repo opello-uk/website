@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	// "Your money on your terms." split section. Copy and tick list are placeholders from the deck.
 	import split from '#lib/assets/studio/split.jpg';
 	// Generated placeholder photo, marked on the tile, until licensed photography is supplied.
@@ -45,7 +46,7 @@
 			</ul>
 		</div>
 
-		<a class="learn" href="#split-title">
+		<a class="learn" href={resolve('/studio/open-account/')}>
 			<span>Get started</span>
 			<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
 				<path

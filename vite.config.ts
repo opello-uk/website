@@ -22,7 +22,7 @@ export default defineConfig({
 			// BASE_PATH is only set for internal previews served under a sub-path.
 			paths: {
 				base: (process.env.BASE_PATH ?? '') as '' | `/${string}`,
-				relative: !process.env.BASE_PATH
+				relative: false
 			}
 		})
 	]
