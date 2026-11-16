@@ -275,12 +275,15 @@ export const pages: StudioPage[] = [
 		slug: 'help',
 		title: 'Help',
 		kicker: 'Help',
-		lede: 'Placeholder. Help centre content to be taken from algbra.com/help once surveyed.',
-		source: 'placeholder',
+		lede: 'Find answers to frequently asked questions here or get in touch via our in-app support chat.',
+		source: 'algbra',
 		sections: [
-			{ heading: 'Help centre', body: 'Placeholder for help articles and contact details.', source: 'placeholder' },
-			{ heading: 'Frequently asked questions', body: 'Answers to the questions we hear most often.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
-			{ heading: 'Get in touch', body: 'Thoughts, ideas, suggestions, or a question about your account.', source: 'algbra', href: '/studio/contact/', linkLabel: 'Contact us' }
+			{ heading: 'Find an answer', body: 'Check out the questions we hear most often, then use the emojis at the end of each answer to tell us whether it helped.', note: 'Source: algbra.com/help. Opello answer feedback is not built yet.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
+			{ heading: 'Chat to our support team', body: 'You can chat to our dedicated support team in real time from the app. If you prefer, you can send us an email instead.', note: 'Source: algbra.com/help. Opello support hours and in-app chat to confirm before publishing.', source: 'algbra', href: '/studio/contact/', linkLabel: 'See contact options' },
+			{ heading: 'Lost or stolen card', body: 'Freeze it instantly in the app. If you cannot get into the app, call us on [support phone, placeholder].', note: 'Source: algbra.com/help and algbra.com/faq. Opello support number still placeholder.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read about lost cards' },
+			{ heading: 'Help articles by category', body: 'Placeholder for the article categories, not yet written.', note: 'Source: algbra.com/help lists categories only. Survey each before writing Opello articles.', source: 'placeholder' },
+			{ heading: 'Get in touch', body: 'Thoughts, ideas, suggestions, or a question about your account. Email: [support email, placeholder]', note: 'Source: algbra.com/help. Opello support email still to be set up.', source: 'algbra', href: '/studio/contact/', linkLabel: 'Contact us' },
+			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account.', note: 'Source: algbra.com/faq, Closing your account. Support email still placeholder.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the closing steps' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
