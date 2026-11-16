@@ -332,6 +332,19 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Get in touch', href: '/studio/contact/' }
 	},
 	{
+		slug: 'download',
+		title: 'Download the app',
+		kicker: 'Personal',
+		lede: 'Seamless digital onboarding onto the app.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Scan the code', body: 'On your mobile, open the camera and point your device at the QR code to download the app.', note: 'Source: algbra.com/download. QR code image is a placeholder until the Opello app is published.', source: 'algbra' },
+			{ heading: 'iOS and Android', body: 'The app is available on iOS and Android. [Placeholder: app store badges and links]', note: 'Placeholder. Store listings and links are not set up for Opello yet.', source: 'placeholder' },
+			{ heading: 'Open your account digitally', body: 'Seamless digital onboarding in the app. All you need is an email address, a phone number and an ID document, like your passport.', note: 'Source: algbra.com/download. Accepted ID documents and any video step to confirm for Opello (see the FAQ).', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' }
+		],
+		cta: { label: 'Open account with us', href: OPEN }
+	},
+	{
 		slug: 'login',
 		title: 'Log in',
 		kicker: 'Account',
