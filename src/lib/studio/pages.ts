@@ -471,6 +471,22 @@ export const pages: StudioPage[] = [
 			{ heading: 'Other fees', body: 'An administration fee of up to £10 may apply, for example if you ask us to return funds after closing your account, or ask us to mediate a disputed payment. Paper statements cost £5. A dormant account may be charged up to £1 a month after six months of inactivity. Overdrafts are not supported, but repeated negative balances may lead to an administration fee.', note: 'Source: algbra.com fees and charges PDF. Confirm the list and amounts for Opello before publishing.', source: 'algbra' }
 		],
 		cta: { label: 'Read our terms', href: '/studio/terms-and-conditions/' }
+	},
+	{
+		slug: 'accessibility',
+		title: 'Accessibility',
+		kicker: 'Legal',
+		lede: 'How we are working to make Opello usable by everyone, what we have checked so far, and how to tell us when something gets in your way. Placeholder until the statement is confirmed.',
+		source: 'placeholder',
+		sections: [
+			{ heading: 'Our commitment', body: '[Placeholder: we aim to make our website and app meet the WCAG 2.2 AA standard, and we treat accessibility problems as bugs to fix.]', note: 'Placeholder. Algbra publishes no accessibility statement that we can reuse, so this wording is ours to confirm. Target standard to be agreed with Opello.', source: 'placeholder' },
+			{ heading: 'What we have checked', body: 'Keyboard access and visible focus on the pages we have built, text contrast on the main colours, and layouts that work at phone and desktop widths. Motion turns down for people who ask their device to reduce it on the main pages; we are checking the rest.', note: 'Checked on the studio build only. Not yet audited by a third party. Confirm before publishing.', source: 'placeholder' },
+			{ heading: 'Known gaps', body: '[Placeholder: list any known issues, for example images without full descriptions, and when we expect to fix them.]', note: 'Placeholder. Filled in from the accessibility audit, which has not run yet.', source: 'placeholder' },
+			{ heading: 'Tell us about a problem', body: '[Placeholder: if something is hard to use, email the accessibility team at a placeholder address and say what you were trying to do. We will reply and suggest another way to get it done.]', note: 'Placeholder. The Opello contact mailbox is not set up yet; see the contact page.', source: 'placeholder', href: '/studio/contact/', linkLabel: 'See contact details' },
+			{ heading: 'Assistive technology and alternatives', body: '[Placeholder: options such as contacting us by phone or in branch, if they are offered.]', note: 'Placeholder. Opello to confirm which channels exist at launch.', source: 'placeholder' },
+			{ heading: 'Review date', body: '[Placeholder: date this statement was last reviewed, and how often we will review it.]', note: 'Placeholder. Set when the statement is approved.', source: 'placeholder' }
+		],
+		cta: { label: 'Read our terms', href: '/studio/terms-and-conditions/' }
 	}
 ];
 
