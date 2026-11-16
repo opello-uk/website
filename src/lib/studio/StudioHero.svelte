@@ -272,7 +272,7 @@
 	.payee small,
 	.tx small {
 		font-size: 7.5px;
-		color: rgba(0, 20, 49, 0.55);
+		color: rgba(0, 20, 49, 0.72);
 	}
 	.av {
 		width: 24px;
@@ -437,6 +437,10 @@
 	.tabs .on {
 		color: var(--peach);
 		font-weight: 700;
+	}
+	/* on the light Send screen the peach active tab fails contrast, so use deep blue there */
+	.send .tabs .on {
+		color: var(--deep);
 	}
 	.example-note {
 		position: absolute;
