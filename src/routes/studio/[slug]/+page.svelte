@@ -30,7 +30,7 @@
 
 		<p class="marker">
 			{#if isAlgbra}
-				Wording taken from algbra.com. Not for publication until Algbra has approved it.
+				Wording taken from algbra.com. Not for publication until approved.
 			{:else}
 				Placeholder copy. Not for publication until the wording is confirmed.
 			{/if}
@@ -42,6 +42,7 @@
 					<h2>{s.heading}</h2>
 					<p>{s.body}</p>
 					{#if s.note}<p class="note">{s.note}</p>{/if}
+					{#if s.href}<a class="link" href={resolve(s.href as '/')}>{s.linkLabel ?? 'Learn more'}</a>{/if}
 				</article>
 			{/each}
 		</section>
@@ -87,6 +88,23 @@
 	.copy {
 		position: relative;
 		max-width: 40rem;
+	}
+	@media (max-width: 720px) {
+		.hero {
+			display: flex;
+			flex-direction: column;
+			min-height: 0;
+			padding-top: 8px;
+		}
+		.ring {
+			position: relative;
+			top: auto;
+			right: auto;
+			transform: none;
+			width: 62vw;
+			align-self: flex-end;
+			margin-bottom: 4px;
+		}
 	}
 	.kicker {
 		margin: 0 0 14px;
@@ -146,6 +164,20 @@
 		margin-top: 12px;
 		font-size: 0.8rem;
 		color: rgba(233, 228, 224, 0.5);
+	}
+	.card .link {
+		display: inline-block;
+		margin-top: 14px;
+		color: var(--peach);
+		text-decoration: none;
+		font-size: 0.9rem;
+	}
+	.card .link:hover {
+		text-decoration: underline;
+	}
+	.card .link:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 3px;
 	}
 	.cta {
 		margin-top: 36px;
