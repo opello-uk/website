@@ -128,6 +128,22 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Open account with us', href: OPEN }
 	},
 	{
+		slug: 'multi-currency',
+		title: 'Multi-currency accounts',
+		kicker: 'Personal',
+		lede: 'Manage, send and spend your money in one app, across the currencies you use.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Hold multiple currencies', body: 'Keep different currencies together in one place, no need for multiple apps.', note: 'Source: algbra.com/features/multi-currency.', source: 'algbra' },
+			{ heading: 'Easily exchange currencies', body: 'Clear and competitive rates with no surprises.', note: 'Source: algbra.com/features/multi-currency. "No hidden fees" carries an asterisk on Algbra\'s page, and the rates and fee schedule are left out until Opello confirms them.', source: 'algbra', href: '/studio/transfers/', linkLabel: 'See transfers' },
+			{ heading: 'Send money abroad', body: 'Send money to over 80 countries.', note: 'Source: algbra.com/features/multi-currency. Transfers page says 20+ countries. Confirm the country count for Opello before publishing.', source: 'algbra' },
+			{ heading: 'Add money in a few taps', body: 'Deposit money in just a few taps by bank transfer.', note: 'Source: algbra.com/features/multi-currency. Confirm the deposit methods Opello offers before publishing.', source: 'algbra' },
+			{ heading: 'Safeguarded funds', body: 'Your funds are securely held in safeguarded accounts, and we do not put them into unethical or high-risk investments.', note: 'Source: algbra.com/features/multi-currency. Safeguarding wording needs compliance sign-off before publishing.', source: 'algbra' },
+			{ heading: 'Open an account within minutes', body: 'Get started in just a few minutes with a seamless and secure account setup.', note: 'Source: algbra.com/features/multi-currency.', source: 'algbra', href: OPEN, linkLabel: 'Open account' }
+		],
+		cta: { label: 'Open account with us', href: OPEN }
+	},
+	{
 		slug: 'business',
 		title: 'Business',
 		kicker: 'Business',
@@ -154,10 +170,10 @@ export const pages: StudioPage[] = [
 		slug: 'current-accounts',
 		title: 'Current accounts',
 		kicker: 'Personal',
-		lede: 'Placeholder. The equivalent Algbra product is the multi-currency account.',
-		source: 'placeholder',
+		lede: 'Hold, send and spend in multiple currencies from one account.',
+		source: 'algbra',
 		sections: [
-			{ heading: 'Multi-currency', body: 'Hold money in multiple currencies in one app. Wording to be confirmed against algbra.com/features/multi-currency.', source: 'placeholder' }
+			{ heading: 'Multi-currency', body: 'Keep different currencies together in one place, no need for multiple apps.', note: 'Source: algbra.com/features/multi-currency.', source: 'algbra', href: '/studio/multi-currency/', linkLabel: 'See multi-currency accounts' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
