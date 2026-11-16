@@ -318,6 +318,20 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Back to help', href: '/studio/help/' }
 	},
 	{
+		slug: 'careers',
+		title: 'Careers',
+		kicker: 'About',
+		lede: 'Be a part of something great. Finance that is fairer, more ethical and more transparent.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Our mission', body: 'Our mission is to eradicate social and financial exclusion by using technology and a community-first approach to provide equitable access to ethical and sustainable financial services.', note: 'Source: algbra.com/careers, Our Mission. Opello mission wording to confirm before publishing.', source: 'algbra' },
+			{ heading: 'Use your money differently', body: 'Opello is for people who want to use their money differently. Join us on the journey to fairer, more ethical and transparent finance.', note: 'Adapted from algbra.com/careers. Opello wording to confirm.', source: 'algbra' },
+			{ heading: 'Benefits', body: 'Benefits for the Opello team are being confirmed. [Placeholder: benefits list]', note: 'Placeholder. Algbra lists its own benefits on algbra.com/careers. Do not reuse them for Opello until Opello confirms its own.', source: 'placeholder' },
+			{ heading: 'Open roles', body: 'There are no open roles to show yet. [Placeholder: current vacancies]', note: 'Placeholder. Vacancies and how to apply to be confirmed by Opello.', source: 'placeholder' }
+		],
+		cta: { label: 'Get in touch', href: '/studio/contact/' }
+	},
+	{
 		slug: 'login',
 		title: 'Log in',
 		kicker: 'Account',
