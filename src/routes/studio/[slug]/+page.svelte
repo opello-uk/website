@@ -43,6 +43,13 @@
 					<p>{s.body}</p>
 					{#if s.note}<p class="note">{s.note}</p>{/if}
 					{#if s.href}<a class="link" href={resolve(s.href as '/')}>{s.linkLabel ?? 'Learn more'}</a>{/if}
+					{#if s.items}
+						<ul class="links items">
+							{#each s.items as item (item)}
+								<li>{item}</li>
+							{/each}
+						</ul>
+					{/if}
 					{#if s.links}
 						<ul class="links">
 							{#each s.links as l (l.href)}
@@ -211,6 +218,13 @@
 		padding: 0;
 		display: grid;
 		gap: 2px;
+	}
+	.card .items li {
+		min-height: 0;
+		padding: 4px 0;
+		color: var(--clay);
+		font-size: 0.95rem;
+		border-bottom: 1px solid rgb(233 228 224 / 0.12);
 	}
 	.card .links a {
 		display: inline-flex;

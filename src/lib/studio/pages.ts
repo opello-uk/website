@@ -2,7 +2,7 @@
 // source: 'algbra' = wording taken from algbra.com (homepage, surveyed 2026-11-12)
 //         'placeholder' = not yet surveyed or no direct Algbra equivalent; confirm before use
 export type Source = 'algbra' | 'placeholder';
-export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[] };
+export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[]; items?: string[] };
 export type StudioPage = {
 	slug: string;
 	title: string;
@@ -283,7 +283,7 @@ export const pages: StudioPage[] = [
 			{ heading: 'Find an answer', body: 'Check out the questions we hear most often, then use the emojis at the end of each answer to tell us whether it helped.', note: 'Source: algbra.com/help. Opello answer feedback is not built yet.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
 			{ heading: 'Chat to our support team', body: 'You can chat to our dedicated support team in real time from the app. If you prefer, you can send us an email instead.', note: 'Source: algbra.com/help. Opello support hours and in-app chat to confirm before publishing.', source: 'algbra', href: '/studio/contact/', linkLabel: 'See contact options' },
 			{ heading: 'Lost or stolen card', body: 'Freeze it instantly in the app. If you cannot get into the app, call us on [support phone, placeholder].', note: 'Source: algbra.com/help and algbra.com/faq. Opello support number still placeholder.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read about lost cards' },
-			{ heading: 'Help articles by category', body: 'Getting started. My card. Security and data. About Opello. [Placeholder: articles for each category, not yet written.]', note: 'Source: algbra.com/help, which lists Getting started, My Card, Security & Data and About Algbra. Opello renames the last one. Articles are not written yet; survey each Algbra category before writing.', source: 'algbra' },
+			{ heading: 'Help articles by category', body: 'Getting started, My card, Security and data, and About Opello. Browse the article titles in each category.', note: 'Source: help.algbra.com collection pages (Getting started, My Card, Security & Data, About Algbra). Opello renames the last one. Article answers are not written yet.', source: 'algbra', href: '/studio/help-articles/', linkLabel: 'See article titles' },
 			{ heading: 'Get in touch', body: 'Thoughts, ideas, suggestions, or a question about your account. Email: [support email, placeholder]', note: 'Source: algbra.com/help. Opello support email still to be set up.', source: 'algbra', href: '/studio/contact/', linkLabel: 'Contact us' },
 			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account.', note: 'Source: algbra.com/faq, Closing your account. Support email still placeholder.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the closing steps' }
 		],
@@ -494,6 +494,28 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Read our terms', href: '/studio/terms-and-conditions/' }
 	},
 	{
+		slug: 'help-articles',
+		title: 'Help articles',
+		kicker: 'Help',
+		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre; the answers are not written for Opello yet.',
+		source: 'placeholder',
+		sections: [
+			{ heading: 'Getting started', body: 'Opening your account and setting up.', note: 'Source: help.algbra.com, Getting started with Algbra. Algbra article titles, partial list (the help centre loads the rest in the browser). Answers are placeholder until written for Opello.', source: 'algbra', items: [
+				'Am I eligible for an account?', 'Do you carry out credit checks?', 'Where can I download the app?', 'What do I need to open an account?', 'Why do I need to verify my identity?', 'Finding your tax identification number (TIN)', 'How can I add funds?', 'Does Opello accept Bacs payments?', 'Can I deposit cash or cheques into my account?'
+			] },
+			{ heading: 'My card', body: 'Using, protecting and managing your card.', note: 'Source: help.algbra.com, My Card. Algbra article titles. Card wallet and card scheme wording is left out until Opello confirms its partners.', source: 'algbra', items: [
+				'How do I get my card?', 'How long until my card arrives?', 'Where can I use my card?', 'Can I add my card to a digital wallet?', 'Can I use my card to withdraw cash?', 'How is the exchange rate calculated?', 'Are my card transactions protected?', 'Can I use my card abroad?', 'What if my card is lost or stolen?', 'What is 3D Secure?', 'How can I change my card PIN?', 'How do I check my card PIN?', 'How do I freeze my card?'
+			] },
+			{ heading: 'Security and data', body: 'How we protect your money and your information.', note: 'Source: help.algbra.com, Security & Data. Algbra article titles, partial list. Fraud and data answers need compliance sign-off.', source: 'algbra', items: [
+				'Is my money safe?', 'How secure is my account?', 'What personal data do I need to share?', 'How does Opello process my data?', 'How do I opt out of marketing notifications?', 'Keeping your money safe: authorised push payment (APP) scams'
+			] },
+			{ heading: 'About Opello', body: 'Who we are and what we do.', note: 'Source: help.algbra.com, About Algbra, renamed for Opello. Partial list. Algbra is swapped for Opello in the titles; Opello to confirm.', source: 'algbra', items: [
+				'What is Opello?', 'What makes Opello different?', 'Does Opello have any fees?', 'Why is community important to us?', 'Where is Opello based?', 'From which countries can I open an account?'
+			] }
+		],
+		cta: { label: 'Back to help', href: '/studio/help/' }
+	},
+	{
 		slug: 'sitemap',
 		title: 'Sitemap',
 		kicker: 'Help',
@@ -513,7 +535,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
