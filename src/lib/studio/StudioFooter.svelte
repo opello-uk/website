@@ -114,6 +114,19 @@
 		font-size: 14px;
 		color: var(--muted);
 	}
+	.cols a {
+		font-size: 14px;
+		color: var(--clay);
+		text-decoration: none;
+	}
+	.cols a:hover {
+		color: var(--peach);
+		text-decoration: underline;
+	}
+	.cols a:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 3px;
+	}
 	.base {
 		margin-top: clamp(40px, 6vw, 72px);
 		padding-top: 22px;
