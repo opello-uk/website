@@ -169,7 +169,7 @@
 	.card .note {
 		margin-top: 12px;
 		font-size: 0.8rem;
-		color: rgba(233, 228, 224, 0.5);
+		color: rgba(233, 228, 224, 0.72);
 	}
 	.card .link {
 		display: inline-block;

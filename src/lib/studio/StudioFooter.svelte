@@ -1,5 +1,7 @@
 <script lang="ts">
 	const colPage: Record<string, string> = { Personal: 'personal', Business: 'business', About: 'about', Help: 'help' };
+	// Links that have their own page go there; the rest fall back to their column page.
+	const linkPage: Record<string, string> = { Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers' };
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 
@@ -34,7 +36,7 @@
 					<h2>{col.title}</h2>
 					<ul>
 						{#each col.links as link (link)}
-							<li><a href={resolve(`/studio/${colPage[col.title] ?? 'help'}/` as '/')}>{link}</a></li>
+							<li><a href={resolve(`/studio/${linkPage[link] ?? colPage[col.title] ?? 'help'}/` as '/')}>{link}</a></li>
 						{/each}
 					</ul>
 				</section>
