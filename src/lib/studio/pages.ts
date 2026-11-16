@@ -420,6 +420,22 @@ export const pages: StudioPage[] = [
 			{ heading: 'How to send a report', body: '[Placeholder: Opello security mailbox, to be set up before this page is published.]', note: 'Placeholder. Opello has no security mailbox yet. Do not use Algbra\'s address.', source: 'placeholder' }
 		],
 		cta: { label: 'Contact us', href: '/studio/contact/' }
+	},
+	{
+		slug: 'fees-and-charges',
+		title: 'Fees and charges',
+		kicker: 'Legal',
+		lede: 'Every fee we charge, set out in one place. Standard and Borderless accounts are listed separately, so you can see what applies to you before you open an account.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Standard account', body: 'No monthly account fee. UK payments are free: sending and receiving by FPS, BACS or CHAPS, and paying by card in pounds in store, online or over the phone.', note: 'Source: algbra.com fees and charges PDF (last updated 7 April 2026), Standard retail customers. Opello fees to confirm before publishing.', source: 'algbra' },
+			{ heading: 'Borderless account', body: 'A monthly account fee of £10, charged in advance on the first day of each month. Cancel or close your account and no fees are charged in arrears.', note: 'Source: algbra.com fees and charges PDF, Borderless customers. The £10 figure must match the Opello fee schedule and needs compliance sign-off.', source: 'algbra' },
+			{ heading: 'Sending and receiving money abroad', body: 'Sending money outside the UK: a fixed £15 fee per transaction, plus an FX fee of 1.00%. Receiving money from outside the UK in pounds: a fixed £10 fee, plus an FX fee of 1.00% for other currencies. Intermediary bank fees may also apply.', note: 'Source: algbra.com fees and charges PDF. Feature availability on each account and the Opello fee schedule are placeholders until confirmed.', source: 'algbra' },
+			{ heading: 'Cards and cash', body: 'Your first physical card is £5, and so is each replacement. Your first three virtual cards are free, then £1 each. Cancelling a card after 14 days from opening the account costs £2.50. Cash withdrawals in the UK cost 1.00%. Cash withdrawals abroad and card payments in a foreign currency cost a 1.50% FX fee. ATM operators may charge their own fee.', note: 'Source: algbra.com fees and charges PDF. Card fees need confirming for Opello and the card scheme.', source: 'algbra' },
+			{ heading: 'Converting currencies', body: 'Converting money from one currency to another in your account costs a 0.50% FX fee on the amount converted.', note: 'Source: algbra.com fees and charges PDF. Confirm for Opello before publishing.', source: 'algbra', href: '/studio/multi-currency/', linkLabel: 'See multi-currency accounts' },
+			{ heading: 'Other fees', body: 'An administration fee of up to £10 may apply, for example if you ask us to return funds after closing your account, or ask us to mediate a disputed payment. Paper statements cost £5. A dormant account may be charged up to £1 a month after six months of inactivity. Overdrafts are not supported, but repeated negative balances may lead to an administration fee.', note: 'Source: algbra.com fees and charges PDF. Confirm the list and amounts for Opello before publishing.', source: 'algbra' }
+		],
+		cta: { label: 'Read our terms', href: '/studio/terms-and-conditions/' }
 	}
 ];
 
