@@ -423,12 +423,24 @@ export const pages: StudioPage[] = [
 		slug: 'login',
 		title: 'Log in',
 		kicker: 'Account',
-		lede: 'Log in is not available until Opello launches.',
+		lede: 'Log in to the Opello app with your email address. Accounts are not open yet, so there is nothing to sign in to today.',
 		source: 'placeholder',
-		sections: [
-			{ heading: 'Coming soon', body: 'There is nothing to sign in to yet. Register your interest and we will let you know when accounts open.', source: 'placeholder' }
+		sourceNotes: [
+			'Log in steps and the confirmation email wording come from the Algbra help centre (help.algbra.com, Logging in articles), adapted for Opello. Algbra publishes no log in page of its own.',
+			'Opello to confirm: whether there is a web log in at all, the app screen names, and the support route for people who are locked out.'
 		],
-		cta: { label: 'Register your interest', href: '/studio/' }
+		sections: [
+			{ heading: 'How you log in', body: 'Open the app and enter your email address. We send a confirmation email to check it is you on this device. It should arrive within a couple of minutes.', note: 'Source: help.algbra.com, Logging in (Algbra wording, adapted for Opello). App screen names are placeholders until the Opello app is published.', source: 'algbra', href: '/studio/help-logging-in/', linkLabel: 'Read the logging in help' },
+			{ heading: 'New here, or already started?', body: 'If this is your first time in the app, choose Get started. If you have opened the app before, choose I have an account to log in and carry on with your registration.', note: 'Source: help.algbra.com, Logging in (Algbra screen names, adapted). Opello screen names to confirm.', source: 'algbra' },
+			{ heading: 'No confirmation email?', body: 'The email can take a few minutes and sometimes lands in the wrong place. Try these in order.', source: 'algbra', items: [
+				'Check the email address for typos and capital letters in the wrong place.',
+				'Check your spam or junk folder, and mark the email as not spam.',
+				'Check that your phone or device is online, then try again.'
+			] },
+			{ heading: 'Locked out or still stuck?', body: 'Tell us what is happening and we will help you get back in. [Placeholder: support email and in-app chat route.]', note: 'Placeholder. Opello support email and chat route are not set up yet.', source: 'placeholder', href: '/studio/contact/', linkLabel: 'See contact options' },
+			{ heading: 'Not live yet', body: 'Accounts open to customers at launch. Until then, there is no account to log in to. [Placeholder: launch date and the sign-up route, once Opello confirms them.]', note: 'Placeholder. Launch timing is not confirmed for this page.', source: 'placeholder' }
+		],
+		cta: { label: 'See how to open an account', href: '/studio/open-account/' }
 	},
 	{
 		slug: 'privacy-policy',
