@@ -415,10 +415,16 @@ export const pages: StudioPage[] = [
 			{ heading: 'Updates', body: '[Placeholder: changes to the app and new features for customers, with dates.]', source: 'placeholder' },
 			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: first posts.]', source: 'placeholder', href: '/studio/blog/', linkLabel: 'Read the blog topics' },
 			{ heading: 'Read the insights', body: 'Plain-English explainers on money, fees and sustainability.', source: 'algbra', links: [
+				{ label: 'The bright side of dark mode', href: '/studio/dark-mode/' },
+				{ label: 'Seven principles for implementing the Consumer Duty', href: '/studio/consumer-duty/' },
+				{ label: 'The pros and cons of a cashless society', href: '/studio/cashless-society/' },
 				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
-				{ label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' },
-				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' }
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
+				{ label: 'A Green Break: how to holiday sustainably', href: '/studio/green-break/' },
+				{ label: 'Money and mental health: 5 free mood boosters', href: '/studio/money-and-mental-health/' },
+				{ label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' },
+				{ label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' }
 			] }
 		],
 		cta: { label: 'Get in touch', href: '/studio/contact/' }
