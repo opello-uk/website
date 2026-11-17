@@ -939,7 +939,10 @@ export const pages: StudioPage[] = [
 				'Proof of purchase, such as a receipt or invoice',
 				'Evidence that the goods were damaged or not as described, such as a photo'
 			] },
-			{ heading: 'How long it takes', body: '[Placeholder: how long a chargeback takes and what you will hear from us, to be confirmed by Opello.]', note: 'Placeholder. Algbra does not give a timescale in this article.', source: 'placeholder' }
+			{ heading: 'How long it takes', body: '[Placeholder: how long a chargeback takes and what you will hear from us, to be confirmed by Opello.]', note: 'Placeholder. Algbra does not give a timescale in this article.', source: 'placeholder', links: [
+				{ label: 'Read the FAQ', href: '/studio/faq/' },
+				{ label: 'Back to News', href: '/studio/news/' }
+			] }
 		],
 		cta: { label: 'Get in touch', href: '/studio/contact/' }
 	},
@@ -964,7 +967,9 @@ export const pages: StudioPage[] = [
 				'Freeze the card in the app, without waiting for a call'
 			] },
 			{ heading: 'Single-use cards', body: 'Disposable cards are useful for a website you have not used before, or for a sign-up you do not want to commit to. [Placeholder: whether Opello offers single-use cards, and how to create one.]', note: 'Source: algbra.com virtual cards article, "Can I only use my virtual card one time?". Opello availability is a placeholder.', source: 'placeholder' },
-			{ heading: 'Getting a virtual card', body: '[Placeholder: how to get a virtual card in the Opello app, and whether it is offered on every account.]', note: 'Placeholder. Algbra\'s steps are for its own app, so the Opello steps need checking in the app before publishing.', source: 'placeholder' }
+			{ heading: 'Getting a virtual card', body: '[Placeholder: how to get a virtual card in the Opello app, and whether it is offered on every account.]', note: 'Placeholder. Algbra\'s steps are for its own app, so the Opello steps need checking in the app before publishing.', source: 'placeholder', links: [
+				{ label: 'Back to News', href: '/studio/news/' }
+			] }
 		],
 		cta: { label: 'See cards', href: '/studio/cards/' }
 	},
@@ -1018,7 +1023,9 @@ export const pages: StudioPage[] = [
 			] },
 			{ heading: 'Why quality matters', body: 'Not every project is high quality. Cheaper projects are sometimes unverified, and they may not give measurable evidence that carbon has really been removed or avoided. Buying those credits can be greenwashing. Offsetting works best when it sits alongside cutting emissions at source.', note: 'Source: algbra.com carbon offsetting article, "Isn\'t that greenwashing?" and "How are carbon offsetting projects rated?". Adapted for Opello.', source: 'algbra' },
 			{ heading: 'How Opello uses it', body: 'Planet Impact in the Opello app works out the emissions from your card spending, so you can see your footprint and choose what to offset. Opello only lists verified projects.', note: 'Claim to confirm: Opello uses Planet Impact to show footprint and offset it, and that only verified projects are listed. Project partners and verification route are placeholders. Not for publication until approved.', source: 'placeholder', href: '/studio/carbon-tracking/', linkLabel: 'See Planet Impact' },
-			{ heading: 'How emissions are worked out', body: '[Placeholder: the method and data source Opello uses to estimate the emissions for each transaction, described in plain English. Algbra\'s calculation partner is not named here.]', note: 'Placeholder. Opello to confirm the method and what it says about accuracy. Do not publish a figure without a source.', source: 'placeholder' }
+			{ heading: 'How emissions are worked out', body: '[Placeholder: the method and data source Opello uses to estimate the emissions for each transaction, described in plain English. Algbra\'s calculation partner is not named here.]', note: 'Placeholder. Opello to confirm the method and what it says about accuracy. Do not publish a figure without a source.', source: 'placeholder', links: [
+				{ label: 'Back to News', href: '/studio/news/' }
+			] }
 		],
 		cta: { label: 'See Planet Impact', href: '/studio/carbon-tracking/' }
 	},
