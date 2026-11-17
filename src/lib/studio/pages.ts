@@ -373,13 +373,24 @@ export const pages: StudioPage[] = [
 		slug: 'news',
 		title: 'News',
 		kicker: 'About',
-		lede: '[Placeholder: intro to the Opello newsroom, covering news, product updates, explainers and stories.]',
+		lede: 'News, product updates, explainers and stories from Opello. [Placeholder: Opello newsroom intro, in Opello wording.]',
 		source: 'placeholder',
+		sourceNotes: [
+			'Algbra\'s news page (algbra.com/news) is its corporate newsroom: partnerships, licences and investment. None of it is reused for Opello.',
+			'Insights topics below are Algbra article subjects (algbra.com/news/category/insights). They are topics to write for Opello, not copy, and each needs sign-off before it publishes.',
+			'Algbra\'s Updates category page returns not found, so Updates is Opello wording only.',
+			'Blog category names come from algbra.com/news/category/blog. Opello posts are not written yet.'
+		],
 		sections: [
-			{ heading: 'News', body: '[Placeholder: announcements about Opello, such as new products, partnerships and approvals.]', note: 'Placeholder. Algbra\'s News posts are Algbra corporate announcements (partnerships, licences, investment), so none are reused for Opello.', source: 'placeholder' },
-			{ heading: 'Updates', body: '[Placeholder: changes to the app and new features for customers.]', note: 'Placeholder. Algbra\'s Updates category is not surveyed yet. Opello release notes to write.', source: 'placeholder' },
-			{ heading: 'Insights', body: 'Plain-English explainers on money, ethics and sustainability. [Placeholder: article list.]', note: 'Topics only. Algbra Insights articles (for example, chargebacks, carbon offsetting and virtual cards) are a starting point to adapt and sign off, not copy. Source: algbra.com/news/category/insights.', source: 'placeholder' },
-			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: posts.]', note: 'Placeholder until Opello writes its own posts. Source: algbra.com/news/category/blog (category name only).', source: 'placeholder' }
+			{ heading: 'News', body: '[Placeholder: announcements about Opello, such as new products, partnerships and approvals.]', source: 'placeholder' },
+			{ heading: 'Updates', body: '[Placeholder: changes to the app and new features for customers, with dates.]', source: 'placeholder' },
+			{ heading: 'Insights', body: 'Plain-English explainers on money, fees and sustainability. Topics to write next:', source: 'placeholder', items: [
+				'What are chargebacks, and when can you claim?',
+				'What are virtual cards, and how do they work?',
+				'An intro to carbon offsetting',
+				'What is green banking, and why does it matter?'
+			] },
+			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: first posts.]', source: 'placeholder' }
 		],
 		cta: { label: 'Get in touch', href: '/studio/contact/' }
 	},
