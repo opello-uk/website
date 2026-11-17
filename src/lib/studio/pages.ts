@@ -699,6 +699,37 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
 	},
 	{
+		slug: 'chargebacks',
+		title: 'What are chargebacks, and when can you claim?',
+		kicker: 'Insights',
+		lede: 'If a card payment goes wrong, you can often get your money back. Here is how a chargeback works and when it can help.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/what-are-chargebacks-and-when-you-claim (Algbra Insights article, 6 January 2023). Wording adapted for Opello. Algbra\'s article describes its own dispute team, so the Opello process is marked for confirmation.',
+			'The card scheme rules are named by category only ("card scheme rules"). Opello to confirm its scheme and rule set before publishing.',
+			'Timescales, the evidence list and how Opello hands a claim to the card issuer need Opello and compliance sign-off. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What a chargeback is', body: 'A chargeback is the process your card provider runs after you dispute a card payment. Your provider contacts the shop or merchant with the evidence you have sent, and if the claim succeeds, the payment amount goes back to your card.', note: 'Source: algbra.com chargeback article, "Chargebacks, the beginner\'s guide". Wording adapted for Opello.', source: 'algbra' },
+			{ heading: 'When you can raise one', body: 'You can raise a chargeback in situations such as these, and in many others:', note: 'Source: algbra.com chargeback article. The list is Algbra\'s example list. Check it against the rules that apply to Opello cards.', source: 'algbra', items: [
+				'The goods or services you paid for were not provided',
+				'The goods or services are damaged or not as described',
+				'An ATM did not dispense the funds',
+				'The merchant charged you twice',
+				'The merchant kept charging you for a subscription you cancelled'
+			] },
+			{ heading: 'Try the shop first', body: 'Start by asking the shop or merchant for a refund. If they will not help, contact us and we will look at raising a chargeback for you.', note: 'Source: algbra.com chargeback article ("contact the shop or merchant first"). The Opello route after that is a placeholder until the chargeback process is confirmed.', source: 'algbra' },
+			{ heading: 'What to send us', body: 'The more evidence you have, the better. If you do not have everything, still get in touch: we will tell you what is needed.', note: 'Source: algbra.com chargeback article. Evidence list (proof of purchase, description of the goods or service, photos, records of contact with the merchant) is Algbra wording and needs Opello confirmation.', source: 'algbra', items: [
+				'Evidence that you have tried to sort it out with the merchant',
+				'A description of the goods or service you ordered',
+				'Proof of purchase, such as a receipt or invoice',
+				'Evidence that the goods were damaged or not as described, such as a photo'
+			] },
+			{ heading: 'How long it takes', body: '[Placeholder: how long a chargeback takes and what you will hear from us, to be confirmed by Opello.]', note: 'Placeholder. Algbra does not give a timescale in this article.', source: 'placeholder' }
+		],
+		cta: { label: 'Get in touch', href: '/studio/contact/' }
+	},
+	{
 		slug: 'sitemap',
 		title: 'Sitemap',
 		kicker: 'Help',
@@ -718,7 +749,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
