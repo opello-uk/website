@@ -180,10 +180,12 @@ export const pages: StudioPage[] = [
 		slug: 'premium',
 		title: 'Premium',
 		kicker: 'Premium',
-		lede: 'A UK account for non-UK residents. Multiple currencies. No borders.',
-		source: 'algbra',
+		lede: 'Algbra does not publish a Premium plan. Its plans are Standard and Borderless, so this page stays a placeholder until Opello decides what Premium is.',
+		source: 'placeholder',
 		sections: [
-			{ heading: 'Borderless Plan', body: 'A UK account for non-UK residents. Multiple currencies. No borders.', note: 'Mapping to Premium is a placeholder decision. Confirm with Algbra.', source: 'algbra', href: '/studio/borderless-account/', linkLabel: 'See the Borderless account' }
+			{ heading: 'The plans we have', body: 'Standard is free for UK residents. Borderless is a UK account for non-UK residents at £10 a month.', note: 'Source: algbra.com/all-plans. Plan wording is Algbra\'s and is not yet approved for Opello.', source: 'algbra', href: '/studio/all-plans/', linkLabel: 'See all plans' },
+			{ heading: 'What Premium includes', body: 'Placeholder. Features, limits and price for an Opello Premium tier are still to be decided.', note: 'Placeholder. No Algbra plan has this name, so no wording is copied. Opello to decide whether Premium exists.', source: 'placeholder' },
+			{ heading: 'Borderless account', body: 'A UK account for non-UK residents, with multiple currencies and a debit card.', note: 'Source: algbra.com/features/borderless-account. The UK-only eligibility wording conflicts with the non-UK banner; flagged.', source: 'algbra', href: '/studio/borderless-account/', linkLabel: 'See the Borderless account' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
