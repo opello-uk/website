@@ -882,7 +882,6 @@ export const pages: StudioPage[] = [
 		],
 		sections: [
 			{ heading: 'Topics to write', body: 'Subjects Algbra has already written about on its blog. Each one becomes an Opello post only once it is written in Opello wording and approved.', source: 'algbra', items: [
-				'What is World Wildlife Day, and why does it matter?',
 				'Money and mental health: 5 free mood boosters',
 				'A green break: how to holiday sustainably',
 				'The pros and cons of a cashless society',
@@ -890,6 +889,7 @@ export const pages: StudioPage[] = [
 				'The bright side of dark mode'
 			] },
 			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', source: 'algbra', links: [
+				{ label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' },
 				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
 				{ label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' },
@@ -1010,6 +1010,30 @@ export const pages: StudioPage[] = [
 		cta: { label: 'See Planet Impact', href: '/studio/carbon-tracking/' }
 	},
 	{
+		slug: 'world-wildlife-day',
+		title: 'What is World Wildlife Day, and why does it matter?',
+		kicker: 'Insights',
+		lede: 'World Wildlife Day celebrates our planet\'s wildlife and reminds us that our survival is tied to theirs. Here is what it is and why it matters.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/what-is-world-wildlife-day-and-why-does-it-matter (Algbra blog article, 27 February 2023). Wording adapted for Opello. Algbra\'s product references (Algbra account, carbon offsetting product) are left out.',
+			'The extinction statistics (over 42,100 species threatened, 28% of assessed species, extinction rate 1,000 to 10,000 times the natural rate) are Algbra\'s figures and need checking against their original source before publishing.',
+			'The 2023 theme ("Forests and Livelihoods: Sustaining People and Planet") is from the dated article. Opello to update with the current year\'s theme before publishing. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What World Wildlife Day is', body: 'World Wildlife Day is held on 3 March each year. It marks the day the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) was signed in 1973. It celebrates our planet\'s wildlife and raises awareness of the importance of conserving wildlife and their habitats, and of protecting endangered species.', note: 'Source: algbra.com World Wildlife Day article, "What is World Wildlife Day?". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Why it matters', body: 'World Wildlife Day is about highlighting the importance of biodiversity to our continued survival. Right now, over 42,100 species are threatened with extinction, around 28% of all the species assessed, and the current rate of extinction is between 1,000 and 10,000 times higher than it should be naturally. Losing one species can trigger an extinction domino effect with impacts far larger than losing a single animal. It could lead to an uninhabitable planet.', note: 'Source: algbra.com World Wildlife Day article, "Why does World Wildlife Day matter?". The statistics are Algbra\'s figures and need checking against their original source before publishing.', source: 'algbra' },
+			{ heading: 'The theme', body: 'The 2023 theme was "Forests and Livelihoods: Sustaining People and Planet", focusing on the role of forests in sustaining the livelihoods of millions of people and in maintaining the planet\'s ecological balance.', note: 'Source: algbra.com World Wildlife Day article, "World Wildlife Day 2023 theme". This is the 2023 theme from a dated article. Opello to update with the current year\'s theme before publishing.', source: 'algbra' },
+			{ heading: 'How to make an impact', body: '[Placeholder: what Opello does with customer money so it never funds harm to people or the planet, and how Opello helps customers offset their carbon footprint into projects that help reverse the loss of biodiversity. Opello wording to confirm before publishing.]', note: 'Placeholder. Adapted from algbra.com World Wildlife Day article, "How can I make an impact?". Algbra\'s product claims are not reused. Opello sustainability claims need Opello confirmation and compliance sign-off.', source: 'placeholder', href: '/studio/carbon-tracking/', linkLabel: 'See Planet Impact' },
+			{ heading: 'Read next', body: 'More on sustainability and ethical finance from Opello.', source: 'placeholder', links: [
+				{ label: 'Planet Impact', href: '/studio/carbon-tracking/' },
+				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' }
+			] }
+		],
+		cta: { label: 'Read the insights', href: '/studio/news/' }
+	},
+	{
 		slug: 'uk-account-from-abroad',
 		title: 'Getting a UK account from abroad',
 		kicker: 'Insights',
@@ -1062,7 +1086,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Blog', href: '/studio/blog/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'World Wildlife Day insight', href: '/studio/world-wildlife-day/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
