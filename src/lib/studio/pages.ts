@@ -267,12 +267,27 @@ export const pages: StudioPage[] = [
 		slug: 'about',
 		title: 'About',
 		kicker: 'About',
-		lede: 'Placeholder. Algbra describes its vision as finance made for humans.',
-		source: 'placeholder',
+		lede: 'Finance, made for humans. We are people and planet first.',
+		source: 'algbra',
 		sections: [
-			{ heading: 'Finance, made for humans', body: 'Taken from the Algbra homepage. Our own about copy to be written and approved.', source: 'algbra' }
+			{ heading: 'Our objective', body: 'To eradicate social and financial exclusion and create a more sustainable society, using our values-driven financial technology and a community-first approach. We are people and planet first. Opello is for people who want more than excellent financial services: people who want a new experience with finance, one that reflects their identity, values and lifestyle, and that helps them in everyday actions.', source: 'algbra' },
+			{ heading: 'Why we are different', body: 'Five things we hold ourselves to.', source: 'algbra', items: [
+				'We never hold your money in an unethical or high-risk manner.',
+				'We offer clear, accessible and interest-free products and services.',
+				'We put our values into action by giving back to our community, and working with them on social impact initiatives.',
+				'We bring you into the equation through social and environmental impact tools inside the app.',
+				'We adopt a systematic approach to ethical finance, with a focus on equitable access to sustainable financial services.'
+			] },
+			{ heading: 'We are not a bank', body: 'We are a movement. Join us on the journey to fairer, more ethical and transparent finance.', source: 'algbra', href: '/studio/ethical-finance/', linkLabel: 'See ethical finance' }
 		],
-		cta: { label: 'Contact', href: '/studio/contact/' }
+		sourceNotes: [
+			'Lede and sections: Source: algbra.com/about, "Values that Drive Ambition", and the algbra.com homepage headline "Finance, made for humans". Wording is Algbra\'s and needs Opello approval.',
+						'Why we are different: each claim needs Opello evidence or compliance sign-off. Interest-free wording needs checking against the Ethical Saver Cubes.',
+			'We are not a bank: needs checking against Opello\'s regulatory status. Opello accounts are provided through a regulated partner, so the page must not imply bank status.',
+			'Our objective: "end social and financial exclusion" is an aim, not a measured result. Algbra\'s name is replaced with Opello in the "Who it is for" sentences. Opello to approve its own mission and about wording.',
+			'Community and charity details are on the Donations and Ethical finance pages and are placeholders there.'
+		],
+		cta: { label: 'Open account with us', href: OPEN }
 	},
 	{
 		slug: 'help',
