@@ -408,7 +408,7 @@ export const pages: StudioPage[] = [
 		sections: [
 			{ heading: 'News', body: '[Placeholder: announcements about Opello, such as new products, partnerships and approvals.]', source: 'placeholder' },
 			{ heading: 'Updates', body: '[Placeholder: changes to the app and new features for customers, with dates.]', source: 'placeholder' },
-			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: first posts.]', source: 'placeholder' },
+			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: first posts.]', source: 'placeholder', href: '/studio/blog/', linkLabel: 'Read the blog topics' },
 			{ heading: 'Read the insights', body: 'Plain-English explainers on money, fees and sustainability.', source: 'algbra', links: [
 				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
@@ -824,6 +824,36 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
 	},
 	{
+		slug: 'blog',
+		title: 'Blog',
+		kicker: 'About',
+		lede: 'Stories from the Opello team and the community, on money, sustainability and everyday spending. [Placeholder: first posts, in Opello wording.]',
+		source: 'placeholder',
+		sourceNotes: [
+			'Topics are article titles from algbra.com/news/category/blog. They are subjects to consider for Opello, not copy. No Algbra post is reused.',
+			'Algbra posts about accounts for non-UK residents are left out until the eligibility question is settled (UK-only in Algbra help, non-UK residents in our homepage banner).',
+			'Every Opello post needs Opello sign-off before it publishes. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'Topics to write', body: 'Subjects Algbra has already written about on its blog. Each one becomes an Opello post only once it is written in Opello wording and approved.', source: 'algbra', items: [
+				'What is World Wildlife Day, and why does it matter?',
+				'Money and mental health: 5 free mood boosters',
+				'A green break: how to holiday sustainably',
+				'The pros and cons of a cashless society',
+				'Seven principles for implementing the Consumer Duty',
+				'The bright side of dark mode'
+			] },
+			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', source: 'algbra', links: [
+				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
+				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
+				{ label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' },
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' }
+			] },
+			{ heading: 'First Opello posts', body: '[Placeholder: the first two or three posts from the Opello team, once written and approved.]', source: 'placeholder' }
+		],
+		cta: { label: 'Back to News', href: '/studio/news/' }
+	},
+	{
 		slug: 'chargebacks',
 		title: 'What are chargebacks, and when can you claim?',
 		kicker: 'Insights',
@@ -950,7 +980,7 @@ export const pages: StudioPage[] = [
 				{ label: 'Business', href: '/studio/business/' }
 			] },
 			{ heading: 'About', body: 'Who we are, what we are building and how to reach us.', source: 'placeholder', links: [
-				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
+				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Blog', href: '/studio/blog/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
 				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
