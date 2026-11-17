@@ -812,7 +812,7 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'help-ethical-saver',
-		title: 'Ethical Saver Cubes',
+		title: 'Ethical Saver help',
 		kicker: 'Help articles',
 		lede: 'Sixteen answers on Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not for publication until compliance has signed off the savings, protection and Sharia wording.',
 		source: 'algbra',

@@ -166,6 +166,12 @@
 			overflow-x: auto;
 			scrollbar-width: none;
 		}
+		/* The scrolling tab row is keyboard-focusable on phones; give it a ring so the stop is visible. */
+		.tabs:focus-visible {
+			outline: 2px solid var(--peach);
+			outline-offset: 2px;
+			border-radius: 4px;
+		}
 		.tab {
 			min-height: 44px;
 			display: inline-flex;
