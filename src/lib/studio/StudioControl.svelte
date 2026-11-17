@@ -9,6 +9,12 @@
 
 <section class="control" aria-labelledby="control-title">
 	<div class="wrap">
+	<!-- Heading first in DOM for screen readers; CSS order puts tiles on the left for sighted users. -->
+	<!-- Heading is placeholder copy: confirm before launch. Intro is Algbra homepage wording (fee claim needs sign-off). -->
+	<header>
+		<h2 id="control-title">More control.<br />More confidence.</h2>
+		<p>We offer transparent, accessible, interest-free products, and you'll never be confused or surprised by a fee. <span class="flag">Algbra wording, needs sign-off</span></p>
+	</header>
 	<ul class="grid">
 		{#each tiles as t (t.title)}
 			<li class="tile">
@@ -35,11 +41,6 @@
 			</li>
 		{/each}
 	</ul>
-	<!-- Heading is placeholder copy: confirm before launch. Intro is Algbra homepage wording (fee claim needs sign-off). -->
-	<header>
-		<h2 id="control-title">More control.<br />More confidence.</h2>
-		<p>We offer transparent, accessible, interest-free products, and you'll never be confused or surprised by a fee. <span class="flag">Algbra wording, needs sign-off</span></p>
-	</header>
 	</div>
 </section>
 
@@ -57,8 +58,13 @@
 		align-items: center;
 		gap: clamp(32px, 5vw, 80px);
 	}
+	/* DOM has header first for screen readers; visually place tiles left, header right. */
 	header {
 		min-width: 0;
+		order: 2;
+	}
+	.grid {
+		order: 1;
 	}
 	h2 {
 		margin: 0 0 12px;
@@ -141,8 +147,12 @@
 		.wrap {
 			grid-template-columns: 1fr;
 		}
+		/* Header is first in DOM; reset desktop order so it stays first on mobile. */
 		header {
-			order: -1;
+			order: 0;
+		}
+		.grid {
+			order: 0;
 		}
 	}
 	/* Figma mobile keeps the three tiles in one row, smaller */

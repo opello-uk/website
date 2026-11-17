@@ -42,7 +42,7 @@
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>
-				<a class="learn" href={resolve(`/studio/${p.slug}/` as '/')}>
+				<a class="learn" href={resolve(`/studio/${p.slug}/` as '/')} aria-label="Learn more about {p.title}">
 					<span>Learn more</span>
 					<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
 						<path
