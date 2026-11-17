@@ -882,10 +882,10 @@ export const pages: StudioPage[] = [
 		],
 		sections: [
 			{ heading: 'Topics to write', body: 'Subjects Algbra has already written about on its blog. Each one becomes an Opello post only once it is written in Opello wording and approved.', source: 'algbra', items: [
-				'Seven principles for implementing the Consumer Duty',
 				'The bright side of dark mode'
 			] },
 			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', source: 'algbra', links: [
+				{ label: 'Seven principles for implementing the Consumer Duty', href: '/studio/consumer-duty/' },
 				{ label: 'The pros and cons of a cashless society', href: '/studio/cashless-society/' },
 				{ label: 'A Green Break: how to holiday sustainably', href: '/studio/green-break/' },
 				{ label: 'Money and mental health: 5 free mood boosters', href: '/studio/money-and-mental-health/' },
@@ -1155,6 +1155,33 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Read the insights', href: '/studio/news/' }
 	},
 	{
+		slug: 'consumer-duty',
+		title: 'Seven principles for implementing the Consumer Duty',
+		kicker: 'Insights',
+		lede: 'The Financial Conduct Authority\'s Consumer Duty is about delivering good outcomes for customers. Here is how we are approaching it.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/seven-principles-for-implementing-the-consumer-duty (Algbra blog article, 16 March 2023). Wording adapted for Opello. Algbra\'s author (Omar Salem, Head of Legal & Regulatory Affairs) is not reused.',
+			'The Consumer Duty effective date (31 July 2023) is a matter of public record published by the FCA. The seven principles are Algbra\'s own approach, adapted for Opello. Opello\'s actual Consumer Duty implementation needs Opello and compliance sign-off before publishing.',
+			'The FCA is a public body, not a vendor. The link to the FCA Consumer Duty page is a public resource. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What the Consumer Duty is', body: 'The Consumer Duty is an FCA requirement that came in on 31 July 2023. It means FCA-regulated firms need to deliver good outcomes for their customers. The FCA has set out rules on what companies should do to comply, so it is a chance to look at how we do things and how we can improve even more.', note: 'Source: algbra.com Consumer Duty article, "What is the Consumer Duty?". The 31 July 2023 effective date is FCA public record. Adapted for Opello.', source: 'algbra' },
+			{ heading: '1. Better than good', body: 'The Consumer Duty requires firms to deliver good outcomes for customers. We want to go beyond the minimum requirements and provide outstanding outcomes wherever possible.', note: 'Source: algbra.com Consumer Duty article, principle 1. Adapted for Opello.', source: 'algbra' },
+			{ heading: '2. Prioritising what will make the most difference', body: 'We focus on where the greatest risks and greatest potential benefits are for customers, so we make sure we are working on what matters most.', note: 'Source: algbra.com Consumer Duty article, principle 2. Adapted for Opello.', source: 'algbra' },
+			{ heading: '3. Practical steps with real outcomes', body: 'We focus on practical steps that will make a real difference to customers, so our implementation of the Consumer Duty has real outcomes rather than just paperwork.', note: 'Source: algbra.com Consumer Duty article, principle 3. Adapted for Opello.', source: 'algbra' },
+			{ heading: '4. Making improvements as soon as possible', body: 'If it is clear an enhancement makes sense, we do not wait around. We implement improvements as soon as possible.', note: 'Source: algbra.com Consumer Duty article, principle 4. Adapted for Opello.', source: 'algbra' },
+			{ heading: '5. Engaging all consumer-impacting functions', body: 'From customer operations to marketing and finance, many parts of our business affect our customers\' experience. The whole company works together to implement the Consumer Duty.', note: 'Source: algbra.com Consumer Duty article, principle 5. Adapted for Opello.', source: 'algbra' },
+			{ heading: '6. Ensuring all requirements are met', body: 'After reviewing implementation plans, the FCA thinks firms may have considered the requirements superficially. We are doing a line-by-line review of the FCA\'s rules and tracking how we comply with them.', note: 'Source: algbra.com Consumer Duty article, principle 6. The FCA quote is Algbra\'s summary of FCA guidance. Adapted for Opello.', source: 'algbra' },
+			{ heading: '7. Working closely with our partners', body: 'To provide our customers with services, we work with partners. We are working with each of them to make sure we have the most comprehensive approach to the Consumer Duty possible.', note: 'Source: algbra.com Consumer Duty article, principle 7. Partners are described by category only. Adapted for Opello.', source: 'algbra' },
+			{ heading: 'A big change in regulation', body: 'The Consumer Duty is a big change in the FCA\'s approach to regulation. It is an opportunity for us to do what we do best, but even better. You can read more on the FCA\'s Consumer Duty page.', note: 'Source: algbra.com Consumer Duty article, closing paragraph. The FCA Consumer Duty page is at fca.org.uk/firms/consumer-duty (public resource, not a vendor link). Adapted for Opello.', source: 'algbra', links: [
+				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
+				{ label: 'Frequently asked questions', href: '/studio/faq/' }
+			] }
+		],
+		cta: { label: 'Read the insights', href: '/studio/news/' }
+	},
+	{
 		slug: 'sitemap',
 		title: 'Sitemap',
 		kicker: 'Help',
@@ -1174,7 +1201,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Blog', href: '/studio/blog/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'World Wildlife Day insight', href: '/studio/world-wildlife-day/' }, { label: 'A Green Break insight', href: '/studio/green-break/' }, { label: 'Money and mental health insight', href: '/studio/money-and-mental-health/' }, { label: 'Cashless society insight', href: '/studio/cashless-society/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'World Wildlife Day insight', href: '/studio/world-wildlife-day/' }, { label: 'A Green Break insight', href: '/studio/green-break/' }, { label: 'Money and mental health insight', href: '/studio/money-and-mental-health/' }, { label: 'Cashless society insight', href: '/studio/cashless-society/' }, { label: 'Consumer Duty insight', href: '/studio/consumer-duty/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
