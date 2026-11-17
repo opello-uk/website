@@ -412,10 +412,8 @@ export const pages: StudioPage[] = [
 			{ heading: 'Read the insights', body: 'Plain-English explainers on money, fees and sustainability.', source: 'algbra', links: [
 				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
-				{ label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' }
-			] },
-			{ heading: 'Insights to write next', body: 'Topics still to write for Opello. Each needs its own sign-off.', source: 'placeholder', items: [
-				'What is green banking, and why does it matter?'
+				{ label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' },
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' }
 			] }
 		],
 		cta: { label: 'Get in touch', href: '/studio/contact/' }
@@ -757,6 +755,35 @@ export const pages: StudioPage[] = [
 		cta: { label: 'See cards', href: '/studio/cards/' }
 	},
 	{
+		slug: 'green-banking',
+		title: 'What is green banking, and why does it matter?',
+		kicker: 'Insights',
+		lede: 'Green banking looks at where your money goes, not just where it sits. Here is what it means and why it matters.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/what-is-green-banking-and-why-does-it-matter (Algbra Insights article, 26 June 2023). Wording adapted for Opello.',
+			'Left out until each figure is checked against its original source: Algbra\'s statistics (household emissions, pension comparison, bank investment totals, climate costs, the 42% greenwashing estimate) and its third-party directory link.',
+			'Opello\'s own green claims (how we invest, lend or offset) are placeholders until Opello confirms them. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What green banking is', body: 'Green banking is a way of banking that focuses on lowering environmental risk and having a positive effect on the planet, while still handling your day-to-day money. It can mean investing in renewable energy rather than harmful industries, offering green loans and helping people cut their carbon footprint.', note: 'Source: algbra.com green banking article, "What is green banking?". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Why it matters', body: 'Most of us already think about sustainability in what we buy and eat. Money is part of that too. Banks decide what to lend to and what to invest in, and most people never get a say in it. Where you bank can make a difference.', note: 'Source: algbra.com green banking article, "Why is green banking important?" and "What high street banks do with your money". Adapted; the statistics are left out.', source: 'algbra' },
+			{ heading: 'Climate and social goals together', body: 'Some green banks look at climate and social issues as one problem. The people who contribute least to climate change often feel its effects first, so helping low-income communities is part of the same job.', note: 'Source: algbra.com green banking article, "What is green banking?". Adapted for Opello.', source: 'algbra', items: [
+				'Lower environmental risk in what the bank funds',
+				'Invest in renewable energy instead of harmful industries',
+				'Help people reduce their carbon footprint',
+				'Look at climate and social impact together'
+			] },
+			{ heading: 'How Opello fits in', body: '[Placeholder: what Opello does with customer money and how it supports sustainability, in Opello wording. Needs Opello confirmation before publishing.]', note: 'Placeholder. Opello sustainability claims need Opello confirmation and compliance sign-off.', source: 'placeholder' },
+			{ heading: 'Read next', body: 'See how Opello tracks the impact of your spending, and how Ethical Saver works.', source: 'placeholder', links: [
+				{ label: 'Planet Impact', href: '/studio/carbon-tracking/' },
+				{ label: 'Ethical Saver', href: '/studio/ethical-savings/' },
+				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' }
+			] }
+		],
+		cta: { label: 'Read the insights', href: '/studio/news/' }
+	},
+	{
 		slug: 'carbon-offsetting',
 		title: 'An intro to carbon offsetting',
 		kicker: 'Insights',
@@ -801,7 +828,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
