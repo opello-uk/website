@@ -1006,6 +1006,39 @@ export const pages: StudioPage[] = [
 		cta: { label: 'See Planet Impact', href: '/studio/carbon-tracking/' }
 	},
 	{
+		slug: 'uk-account-from-abroad',
+		title: 'Getting a UK account from abroad',
+		kicker: 'Insights',
+		lede: 'Many people living outside the UK still get paid in pounds, own UK property or need to move money to the UK. Here is how a UK account can work when you do not live here.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/how-to-get-a-uk-account-from-malaysia and algbra.com/news/how-to-get-a-uk-account-from-qatar (Algbra Insights articles). Wording adapted for Opello and combined into one page. The two Algbra articles are almost identical, so only the country examples differ.',
+			'Eligibility is a conflict to settle first. Algbra says its Borderless account is for people living outside the UK, but the Opello help pages and the open-account page say UK residents only. Opello must decide which is right before this page publishes.',
+			'Sharia, FCA, FSCS, safeguarding, fee, country-count and app-only application claims are Algbra wording and are flagged for Opello and compliance sign-off. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'Why you might need a UK account', body: 'Freelancers and remote workers paid by UK clients, business owners with UK customers or suppliers, people with UK rental income, and investors with UK assets often need to receive or hold pounds.', note: 'Source: algbra.com Malaysia and Qatar articles, "Why ... residents may need a UK account". Country examples are left out. Eligibility is flagged above.', source: 'algbra', items: [
+				'Freelancers and remote professionals paid by UK companies',
+				'Business owners working with British clients or suppliers',
+				'Property owners receiving UK rental income',
+				'Investors managing expenses or assets in the UK'
+			] },
+			{ heading: 'Why not just send money the usual way', body: 'Without UK account details, payments often go through international transfers or middlemen. That can mean extra fees, currency conversion costs and slower payments.', note: 'Source: algbra.com Malaysia and Qatar articles. Opello fee comparison is a placeholder until Opello confirms its numbers.', source: 'algbra' },
+			{ heading: 'Can you open a traditional UK bank account from abroad?', body: 'It may be possible, but it is often hard. High-street banks commonly ask for a UK credit history, a UK address or a branch visit. Some offer non-resident accounts, but these can need large minimum balances or sit within private banking.', note: 'Source: algbra.com Malaysia and Qatar articles. Bank requirements are Algbra\'s general description, not checked against named banks. Remove or confirm before publishing.', source: 'algbra' },
+			{ heading: 'Bank account or e-money account', body: 'An e-money account is run by an authorised Electronic Money Institution rather than a bank. It can give you a UK sort code and account number and hold several currencies. Bank deposits may be covered by the Financial Services Compensation Scheme. E-money is not. It is protected by safeguarding instead, which keeps customer money separate from the company\'s own money.', note: 'Source: algbra.com Malaysia and Qatar articles. FSCS and safeguarding wording needs compliance sign-off for Opello.', source: 'algbra' },
+			{ heading: 'How a UK e-money account can work for you', body: 'You get a UK sort code and account number to receive pound payments, a multi-currency account for pounds, dollars, euros and other major currencies, and an international payments service. You can apply in an app with identity checks, with no branch visit and no UK address needed.', note: 'Source: algbra.com Malaysia and Qatar articles, Borderless account section. The product name is a placeholder; the currency list, country count, exchange fee and card details are left out until Opello confirms them.', source: 'algbra', items: [
+				'A UK sort code and account number for pound payments',
+				'Several currencies in one account',
+				'International payments (country count to confirm for Opello)',
+				'A virtual debit card (card scheme to confirm)'
+			] },
+			{ heading: 'Fees and protection', body: '[Placeholder: Opello exchange fee, monthly fee and how fees are shown before you pay. Confirm against the Opello fee schedule.]', note: 'Placeholder. Algbra\'s figures (a flat 0.5% exchange fee and £10 a month) are not used here until Opello confirms its own fees.', source: 'placeholder' },
+			{ heading: 'Who it is for', body: 'People who live outside the UK and need access to UK payment services, and who want the account to match Sharia principles or be interest-free.', note: 'Source: algbra.com Malaysia and Qatar articles. Sharia and interest-free claims need Opello sign-off and a named oversight body before publishing. Opello eligibility is flagged above.', source: 'algbra' },
+			{ heading: 'How to apply', body: 'The application is completed in the app. You will need to pass identity and eligibility checks. Availability depends on where you live and your situation, so check the app before you apply.', note: 'Source: algbra.com Malaysia and Qatar articles. Opello app availability and the list of documents are placeholders.', source: 'placeholder' }
+		],
+		cta: { label: 'Open account with us', href: OPEN }
+	},
+	{
 		slug: 'sitemap',
 		title: 'Sitemap',
 		kicker: 'Help',
@@ -1016,7 +1049,7 @@ export const pages: StudioPage[] = [
 				{ label: 'Personal', href: '/studio/personal/' }, { label: 'All plans', href: '/studio/all-plans/' }, { label: 'Transfers', href: '/studio/transfers/' }, { label: 'Cards', href: '/studio/cards/' }, { label: 'Donations', href: '/studio/donations/' }, { label: 'Planet Impact', href: '/studio/carbon-tracking/' }, { label: 'Download the app', href: '/studio/download/' }
 			] },
 			{ heading: 'Accounts and savings', body: 'Savings, Cubes, currency accounts and other account types.', source: 'placeholder', links: [
-				{ label: 'Current accounts', href: '/studio/current-accounts/' }, { label: 'Multi-currency accounts', href: '/studio/multi-currency/' }, { label: 'Borderless account', href: '/studio/borderless-account/' }, { label: 'Premium', href: '/studio/premium/' }, { label: 'Savings', href: '/studio/savings/' }, { label: 'Cubes', href: '/studio/cubes/' }, { label: 'Ethical Saver Cubes', href: '/studio/ethical-savings/' }, { label: 'Ethical finance', href: '/studio/ethical-finance/' }, { label: 'Pensions', href: '/studio/pensions/' }, { label: 'Open an account', href: '/studio/open-account/' }
+				{ label: 'Current accounts', href: '/studio/current-accounts/' }, { label: 'Multi-currency accounts', href: '/studio/multi-currency/' }, { label: 'Borderless account', href: '/studio/borderless-account/' }, { label: 'UK account from abroad', href: '/studio/uk-account-from-abroad/' }, { label: 'Premium', href: '/studio/premium/' }, { label: 'Savings', href: '/studio/savings/' }, { label: 'Cubes', href: '/studio/cubes/' }, { label: 'Ethical Saver Cubes', href: '/studio/ethical-savings/' }, { label: 'Ethical finance', href: '/studio/ethical-finance/' }, { label: 'Pensions', href: '/studio/pensions/' }, { label: 'Open an account', href: '/studio/open-account/' }
 			] },
 			{ heading: 'Business', body: 'Accounts and payments for businesses.', source: 'placeholder', links: [
 				{ label: 'Business', href: '/studio/business/' }
