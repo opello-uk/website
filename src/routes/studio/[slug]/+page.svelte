@@ -8,6 +8,10 @@
 	let { data }: { data: PageData } = $props();
 	const p = $derived(data.page);
 	const isAlgbra = $derived(p.source === 'algbra');
+	// Card notes are not shown on the cards; they roll up into one page-level list.
+	const notes = $derived(
+		p.sourceNotes ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
+	);
 </script>
 
 <svelte:head>
@@ -60,11 +64,11 @@
 			{/each}
 		</section>
 
-		{#if p.sourceNotes}
+		{#if notes.length}
 			<section class="sources" aria-labelledby="sources-heading">
 				<h2 id="sources-heading">Sources and open points</h2>
 				<ul>
-					{#each p.sourceNotes as n (n)}
+					{#each notes as n (n)}
 						<li>{n}</li>
 					{/each}
 				</ul>
