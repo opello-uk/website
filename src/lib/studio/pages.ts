@@ -194,7 +194,9 @@ export const pages: StudioPage[] = [
 		lede: 'Hold, send and spend in multiple currencies from one account.',
 		source: 'algbra',
 		sections: [
-			{ heading: 'Multi-currency', body: 'Keep different currencies together in one place, no need for multiple apps.', note: 'Source: algbra.com/features/multi-currency.', source: 'algbra', href: '/studio/multi-currency/', linkLabel: 'See multi-currency accounts' }
+			{ heading: 'Multi-currency', body: 'Keep different currencies together in one place, no need for multiple apps.', note: 'Source: algbra.com/features/multi-currency.', source: 'algbra', href: '/studio/multi-currency/', linkLabel: 'See multi-currency accounts' },
+			{ heading: 'Send and receive money', body: 'Instant bank transfers, international transfers, and payments to friends and family.', note: 'Source: algbra.com/features/transfers. Country count and availability are flagged on the Transfers page.', source: 'algbra', href: '/studio/transfers/', linkLabel: 'See transfers' },
+			{ heading: 'Spend with your card', body: 'Physical and virtual cards, card controls and spending abroad.', note: 'Source: algbra.com/features/cards. Wording taken from the Cards page.', source: 'algbra', href: '/studio/cards/', linkLabel: 'See cards' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
