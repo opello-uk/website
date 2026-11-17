@@ -18,6 +18,7 @@
 </svelte:head>
 
 <div class="studio">
+	<a class="skip" href="#personal">Skip to content</a>
 	<StudioNav />
 
 	<main id="personal">
@@ -35,6 +36,21 @@
 </div>
 
 <style>
+	.skip {
+		position: absolute;
+		left: -9999px;
+		z-index: 100;
+	}
+	.skip:focus {
+		left: 16px;
+		top: 16px;
+		background: var(--peach);
+		color: var(--deep);
+		padding: 10px 18px;
+		border-radius: 999px;
+		font-size: 14px;
+		font-weight: 500;
+	}
 	.studio {
 		min-height: 100svh;
 		display: grid;

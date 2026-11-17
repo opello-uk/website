@@ -20,9 +20,10 @@
 </svelte:head>
 
 <div class="studio">
+	<a class="skip" href="#content">Skip to content</a>
 	<StudioNav />
 
-	<main class="subpage">
+	<main class="subpage" id="content">
 		<section class="hero">
 			<div class="ring" aria-hidden="true"><Ring /></div>
 			<div class="copy">
@@ -84,6 +85,21 @@
 </div>
 
 <style>
+	.skip {
+		position: absolute;
+		left: -9999px;
+		z-index: 100;
+	}
+	.skip:focus {
+		left: 16px;
+		top: 16px;
+		background: var(--peach);
+		color: var(--deep);
+		padding: 10px 18px;
+		border-radius: 999px;
+		font-size: 14px;
+		font-weight: 500;
+	}
 	/* the ring may bleed past the content column on desktop; keep that bleed from adding a sideways scroll */
 	.studio {
 		overflow-x: clip;

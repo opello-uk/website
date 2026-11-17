@@ -127,7 +127,9 @@
 		color: var(--peach);
 		text-decoration: underline;
 	}
-	.cols a:focus-visible {
+	.cols a:focus-visible,
+	.legal a:focus-visible,
+	.base a:focus-visible {
 		outline: 2px solid var(--peach);
 		outline-offset: 3px;
 	}

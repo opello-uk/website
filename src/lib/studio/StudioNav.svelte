@@ -64,6 +64,11 @@
 		display: block;
 		width: clamp(96px, 9vw, 128px);
 	}
+	.brand:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 4px;
+		border-radius: 4px;
+	}
 
 	.tabs {
 		display: flex;
@@ -87,6 +92,10 @@
 	}
 	.tab:hover {
 		color: var(--clay);
+	}
+	.tab:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 2px;
 	}
 	.tab[aria-current='page'] {
 		background: var(--clay);
@@ -118,6 +127,11 @@
 	.icon:hover {
 		background: var(--rule);
 	}
+	.region:focus-visible,
+	.icon:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 2px;
+	}
 
 	.pills {
 		display: flex;
@@ -145,6 +159,10 @@
 	}
 	.pill:hover {
 		transform: translateY(-1px);
+	}
+	.pill:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 3px;
 	}
 	.pill-peach {
 		background: var(--peach);
