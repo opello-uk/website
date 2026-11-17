@@ -9,6 +9,7 @@ export type StudioPage = {
 	kicker: string;
 	lede: string;
 	source: Source;
+	sourceNotes?: string[];
 	sections: Section[];
 	cta: { label: string; href: string };
 };
@@ -280,12 +281,20 @@ export const pages: StudioPage[] = [
 		lede: 'Find answers to frequently asked questions here or get in touch via our in-app support chat.',
 		source: 'algbra',
 		sections: [
-			{ heading: 'Find an answer', body: 'Check out the questions we hear most often, then use the emojis at the end of each answer to tell us whether it helped.', note: 'Source: algbra.com/help. Opello answer feedback is not built yet.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
-			{ heading: 'Chat to our support team', body: 'You can chat to our dedicated support team in real time from the app. If you prefer, you can send us an email instead.', note: 'Source: algbra.com/help. Opello support hours and in-app chat to confirm before publishing.', source: 'algbra', href: '/studio/contact/', linkLabel: 'See contact options' },
-			{ heading: 'Lost or stolen card', body: 'Freeze it instantly in the app. If you cannot get into the app, call us on [support phone, placeholder].', note: 'Source: algbra.com/help and algbra.com/faq. Opello support number still placeholder.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read about lost cards' },
-			{ heading: 'Help articles by category', body: 'Getting started, My card, Security and data, and About Opello. Browse the article titles in each category.', note: 'Source: help.algbra.com collection pages (Getting started, My Card, Security & Data, About Algbra). Opello renames the last one. Answers are written for all four categories; the Opello product list and rename wording still need confirming.', source: 'algbra', href: '/studio/help-articles/', linkLabel: 'See article titles' },
-			{ heading: 'Get in touch', body: 'Thoughts, ideas, suggestions, or a question about your account. Email: [support email, placeholder]', note: 'Source: algbra.com/help. Opello support email still to be set up.', source: 'algbra', href: '/studio/contact/', linkLabel: 'Contact us' },
-			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account.', note: 'Source: algbra.com/faq, Closing your account. Support email still placeholder.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the closing steps' }
+			{ heading: 'Find an answer', body: 'Check out the questions we hear most often, then use the emojis at the end of each answer to tell us whether it helped.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
+			{ heading: 'Chat to our support team', body: 'You can chat to our dedicated support team in real time from the app. If you prefer, you can send us an email instead.', source: 'algbra', href: '/studio/contact/', linkLabel: 'See contact options' },
+			{ heading: 'Lost or stolen card', body: 'Freeze it instantly in the app. If you cannot get into the app, call us on [support phone, placeholder].', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read about lost cards' },
+			{ heading: 'Help articles by category', body: 'Getting started, My card, Security and data, and About Opello. Browse the article titles in each category.', source: 'algbra', href: '/studio/help-articles/', linkLabel: 'See article titles' },
+			{ heading: 'Get in touch', body: 'Thoughts, ideas, suggestions, or a question about your account. Email: [support email, placeholder]', source: 'algbra', href: '/studio/contact/', linkLabel: 'Contact us' },
+			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the closing steps' }
+		],
+		sourceNotes: [
+			'Find an answer: Source: algbra.com/help. Opello answer feedback is not built yet.',
+			'Chat to our support team: Source: algbra.com/help. Opello support hours and in-app chat to confirm before publishing.',
+			'Lost or stolen card: Source: algbra.com/help and algbra.com/faq. Opello support number still placeholder.',
+			'Help articles by category: Source: help.algbra.com collection pages (Getting started, My Card, Security & Data, About Algbra). Opello renames the last one. Answers are written for all four categories; the Opello product list and rename wording still need confirming.',
+			'Get in touch: Source: algbra.com/help. Opello support email still to be set up.',
+			'Closing your account: Source: algbra.com/faq, Closing your account. Support email still placeholder.'
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
@@ -296,15 +305,26 @@ export const pages: StudioPage[] = [
 		lede: "We're here to connect. Answers to the questions we hear most often.",
 		source: 'algbra',
 		sections: [
-			{ heading: 'What you need to open an account', body: 'A smartphone, a mobile number, a valid ID document (passport or driving licence) and proof of your address, such as a utility bill. You will record a short video and take photos of your documents when you sign up.', note: 'Source: algbra.com/faq, Accounts. Document list and video step to confirm for Opello.', source: 'algbra' },
-			{ heading: 'Who can open an account', body: 'You need to be 18 or over, a UK resident, and have a valid ID document and proof of address.', note: 'Source: algbra.com/faq, Accounts. Residency rules and any non-resident programme to confirm.', source: 'algbra' },
-			{ heading: 'Is my money safe?', body: 'We hold the money you deposit or receive in a client money account that we manage on your behalf. We do not lend or invest deposits, and client accounts can only be used to hold your funds.', note: 'Source: algbra.com/faq, You and Your Money. Compliance sign-off needed before publishing.', source: 'algbra' },
-			{ heading: 'Is my balance covered by the FSCS?', body: 'Your balance is e-money, which is not covered by the Financial Services Compensation Scheme. Protection comes from safeguarding instead.', note: 'Source: algbra.com/faq. Regulatory disclosure, compliance sign-off required. Do not soften this wording.', source: 'algbra' },
-			{ heading: 'Payments we support today', body: 'Card payments, ATM withdrawals and Faster Payments. Payments are in pounds sterling. International payments, direct debits, standing orders and CHAPS are not yet available.', note: 'Source: algbra.com/faq, Payments. Conflicts with the Transfers page wording, so Opello must confirm which is right before either is published.', source: 'algbra' },
-			{ heading: 'Lost or stolen card', body: 'Freeze your card in the app straight away, then contact our support team through the in-app chat. If you cannot get into the app, call or email us instead.', note: 'Source: algbra.com/faq, Cards. Opello support number and email still placeholder.', source: 'algbra' },
-			{ heading: 'Unrecognised transactions and chargebacks', body: 'Freeze your card, then tell us the merchant, location and date. For goods or services you have not received or that were faulty, we can help you raise a chargeback claim within 120 days.', note: 'Source: algbra.com/faq, Transactions and Disputes. The 120-day window and card-scheme route to confirm.', source: 'algbra' },
-			{ heading: 'Carbon footprint and offsetting', body: 'Your carbon footprint is the CO2e generated by your transactions. Where you cannot avoid a purchase, you can offset the rest by supporting carbon projects.', note: 'Source: algbra.com/faq, Carbon Tracking and Carbon Offsetting. See the Planet Impact page for detail.', source: 'algbra', href: '/studio/carbon-tracking/', linkLabel: 'Read about Planet Impact' },
-			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account. Once closed, you cannot open a new one.', note: 'Source: algbra.com/faq. Support email still placeholder.', source: 'algbra' }
+			{ heading: 'What you need to open an account', body: 'A smartphone, a mobile number, a valid ID document (passport or driving licence) and proof of your address, such as a utility bill. You will record a short video and take photos of your documents when you sign up.', source: 'algbra' },
+			{ heading: 'Who can open an account', body: 'You need to be 18 or over, a UK resident, and have a valid ID document and proof of address.', source: 'algbra' },
+			{ heading: 'Is my money safe?', body: 'We hold the money you deposit or receive in a client money account that we manage on your behalf. We do not lend or invest deposits, and client accounts can only be used to hold your funds.', source: 'algbra' },
+			{ heading: 'Is my balance covered by the FSCS?', body: 'Your balance is e-money, which is not covered by the Financial Services Compensation Scheme. Protection comes from safeguarding instead.', source: 'algbra' },
+			{ heading: 'Payments we support today', body: 'Card payments, ATM withdrawals and Faster Payments. Payments are in pounds sterling. International payments, direct debits, standing orders and CHAPS are not yet available.', source: 'algbra' },
+			{ heading: 'Lost or stolen card', body: 'Freeze your card in the app straight away, then contact our support team through the in-app chat. If you cannot get into the app, call or email us instead.', source: 'algbra' },
+			{ heading: 'Unrecognised transactions and chargebacks', body: 'Freeze your card, then tell us the merchant, location and date. For goods or services you have not received or that were faulty, we can help you raise a chargeback claim within 120 days.', source: 'algbra' },
+			{ heading: 'Carbon footprint and offsetting', body: 'Your carbon footprint is the CO2e generated by your transactions. Where you cannot avoid a purchase, you can offset the rest by supporting carbon projects.', source: 'algbra', href: '/studio/carbon-tracking/', linkLabel: 'Read about Planet Impact' },
+			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account. Once closed, you cannot open a new one.', source: 'algbra' }
+		],
+		sourceNotes: [
+			'What you need to open an account: Source: algbra.com/faq, Accounts. Document list and video step to confirm for Opello.',
+			'Who can open an account: Source: algbra.com/faq, Accounts. Residency rules and any non-resident programme to confirm.',
+			'Is my money safe?: Source: algbra.com/faq, You and Your Money. Compliance sign-off needed before publishing.',
+			'Is my balance covered by the FSCS?: Source: algbra.com/faq. Regulatory disclosure, compliance sign-off required. Do not soften this wording.',
+			'Payments we support today: Source: algbra.com/faq, Payments. Conflicts with the Transfers page wording, so Opello must confirm which is right before either is published.',
+			'Lost or stolen card: Source: algbra.com/faq, Cards. Opello support number and email still placeholder.',
+			'Unrecognised transactions and chargebacks: Source: algbra.com/faq, Transactions and Disputes. The 120-day window and card-scheme route to confirm.',
+			'Carbon footprint and offsetting: Source: algbra.com/faq, Carbon Tracking and Carbon Offsetting. See the Planet Impact page for detail.',
+			'Closing your account: Source: algbra.com/faq. Support email still placeholder.'
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},

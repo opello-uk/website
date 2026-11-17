@@ -41,7 +41,6 @@
 				<article class="card">
 					<h2>{s.heading}</h2>
 					<p>{s.body}</p>
-					{#if s.note}<p class="note">{s.note}</p>{/if}
 					{#if s.href}<a class="link" href={resolve(s.href as '/')}>{s.linkLabel ?? 'Learn more'}</a>{/if}
 					{#if s.items}
 						<ul class="links items">
@@ -60,6 +59,17 @@
 				</article>
 			{/each}
 		</section>
+
+		{#if p.sourceNotes}
+			<section class="sources" aria-labelledby="sources-heading">
+				<h2 id="sources-heading">Sources and open points</h2>
+				<ul>
+					{#each p.sourceNotes as n (n)}
+						<li>{n}</li>
+					{/each}
+				</ul>
+			</section>
+		{/if}
 
 		<section class="cta">
 			<a class="pill" href={resolve(p.cta.href as '/')}>{p.cta.label}</a>
@@ -148,11 +158,18 @@
 	}
 	.marker {
 		margin: 24px 0 0;
+
 		font-size: 12px;
 		letter-spacing: 0.04em;
 		color: rgba(233, 228, 224, 0.72);
 		border-top: 1px solid var(--rule);
 		padding-top: 12px;
+	}
+	@media (min-width: 900px) {
+		/* desktop: keep the ring bleed above the rule, not on top of it */
+		.marker {
+			margin-top: 56px;
+		}
 	}
 	.sections {
 		display: grid;
@@ -196,10 +213,31 @@
 		line-height: 1.6;
 		color: var(--muted);
 	}
-	.card .note {
-		margin-top: 12px;
+	.sources {
+		margin-top: 20px;
+		padding: 22px 24px;
+		border: 1px solid var(--rule);
+		border-radius: 14px;
+	}
+	.sources h2 {
+		margin: 0 0 12px;
 		font-size: 0.8rem;
-		color: rgba(233, 228, 224, 0.72);
+		font-weight: 400;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: var(--peach);
+	}
+	.sources ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 10px;
+	}
+	.sources li {
+		font-size: 0.85rem;
+		line-height: 1.55;
+		color: rgba(233, 228, 224, 0.78);
 	}
 	.card .link {
 		display: inline-block;
