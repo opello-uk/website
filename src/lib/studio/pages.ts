@@ -882,13 +882,13 @@ export const pages: StudioPage[] = [
 		],
 		sections: [
 			{ heading: 'Topics to write', body: 'Subjects Algbra has already written about on its blog. Each one becomes an Opello post only once it is written in Opello wording and approved.', source: 'algbra', items: [
-				'Money and mental health: 5 free mood boosters',
 				'A green break: how to holiday sustainably',
 				'The pros and cons of a cashless society',
 				'Seven principles for implementing the Consumer Duty',
 				'The bright side of dark mode'
 			] },
 			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', source: 'algbra', links: [
+				{ label: 'Money and mental health: 5 free mood boosters', href: '/studio/money-and-mental-health/' },
 				{ label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' },
 				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
@@ -1010,6 +1010,33 @@ export const pages: StudioPage[] = [
 		cta: { label: 'See Planet Impact', href: '/studio/carbon-tracking/' }
 	},
 	{
+		slug: 'money-and-mental-health',
+		title: 'Money and mental health: 5 free mood boosters',
+		kicker: 'Insights',
+		lede: 'The link between money and mental health is often overlooked. Financial strain can worsen mental health, and poor mental health can make money harder to manage. Here are five free things that can help.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/money-and-mental-health-5-free-mood-boosters (Algbra blog article, 6 September 2022). Wording adapted for Opello. Algbra product references and community initiatives are left out.',
+			'The statistics (almost half of people in problem debt also have a mental health problem, 4 in 10 with a mental health problem reported a detrimental impact on their finances) are Algbra figures and need checking against their original source before publishing.',
+			'The AlgbraX community initiatives (Cycle Sisters, CWSA, Chai Mama) are Algbra specifics and are not reused. Opello community initiatives are a placeholder. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'The link between money and mind', body: 'A common cause of mental health struggles is financial pressure, and vice versa. Poor mental health can make it harder to keep good money habits or stay on top of bill payments. Almost half of people in problem debt also have a mental health problem, and 4 in 10 people with a mental health problem said it had a detrimental impact on their financial situation.', note: 'Source: algbra.com article, opening paragraphs. The statistics are Algbra figures and need checking against their original source.', source: 'algbra' },
+			{ heading: 'Finding water', body: 'Studies have shown that people living near water generally report better mental health and wellbeing, and the same applies to green spaces. The mere sight and sound of water can induce neurochemicals that promote wellness, increase blood flow to the brain and heart, and induce relaxation.', note: 'Source: algbra.com article, "Finding water". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Keeping a journal', body: 'Putting thoughts on paper, or in a notes app, can reduce stress and improve emotional functions and even the immune system. When thoughts, worries or fears are rushing at you, the first step is to organise them before you can start working towards solutions.', note: 'Source: algbra.com article, "Keeping a Journal". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Consuming positivity', body: 'Go out of your way to watch or read something positive. Better yet, write down something you are grateful for, small or big. We are exposed to more information than ever before, and constantly consuming negative news can unknowingly put us in bad mental states or lead to spiralling thoughts.', note: 'Source: algbra.com article, "Consuming positivity". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Connecting with community', body: 'Human connection is integral to feeling whole. There are many ways to connect with people in your community and nurture relationships, new and old. Local sports centres, community groups, volunteering and social platforms are all starting points.', note: 'Source: algbra.com article, "Connecting with community". Algbra community initiatives (Cycle Sisters, CWSA, Chai Mama) are not reused. Opello community work is a placeholder.', source: 'algbra' },
+			{ heading: 'Recharging your brain', body: 'A good night sleep has wondrous effects on both emotional stability and cognitive functions, including how we respond to stress and our decision-making skills. Research shows sleep and mental health are intertwined. Meditation videos, classical music or white noise can help if you struggle to get to sleep.', note: 'Source: algbra.com article, "Recharging our brain". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'In it for the long haul', body: 'Being strapped for cash can also mean being strapped for time, and these activities require time and energy. Seeing mental health as an investment means taking time now so you are healthier and happier for longer, and more present for the people you love.', note: 'Source: algbra.com article, "In it for the long haul". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Read next', body: 'More from Opello on wellbeing, money and sustainability.', source: 'placeholder', links: [
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
+				{ label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' },
+				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' }
+			] }
+		],
+		cta: { label: 'Read the insights', href: '/studio/news/' }
+	},
+	{
 		slug: 'world-wildlife-day',
 		title: 'What is World Wildlife Day, and why does it matter?',
 		kicker: 'Insights',
@@ -1086,7 +1113,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Blog', href: '/studio/blog/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'World Wildlife Day insight', href: '/studio/world-wildlife-day/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'World Wildlife Day insight', href: '/studio/world-wildlife-day/' }, { label: 'Money and mental health insight', href: '/studio/money-and-mental-health/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
