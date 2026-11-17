@@ -276,13 +276,13 @@
 		display: inline-flex;
 		align-items: center;
 		min-height: 36px;
-		color: var(--clay);
-		text-decoration: none;
+		color: var(--peach);
+		text-decoration: underline;
+		text-underline-offset: 3px;
 		font-size: 0.95rem;
 	}
 	.card .links a:hover {
-		color: var(--peach);
-		text-decoration: underline;
+		color: var(--clay);
 	}
 	.card .links a:focus-visible {
 		outline: 2px solid var(--peach);

@@ -401,7 +401,7 @@ export const pages: StudioPage[] = [
 		source: 'placeholder',
 		sourceNotes: [
 			'Algbra\'s news page (algbra.com/news) is its corporate newsroom: partnerships, licences and investment. None of it is reused for Opello.',
-			'Insights topics below are Algbra article subjects (algbra.com/news/category/insights). They are topics to write for Opello, not copy, and each needs sign-off before it publishes.',
+			'Insights topics are Algbra article subjects (algbra.com/news/category/insights). They are topics to write for Opello, not copy, and each needs sign-off before it publishes.',
 			'Algbra\'s Updates category page returns not found, so Updates is Opello wording only.',
 			'Blog category names come from algbra.com/news/category/blog. Opello posts are not written yet.'
 		],
@@ -409,10 +409,12 @@ export const pages: StudioPage[] = [
 			{ heading: 'News', body: '[Placeholder: announcements about Opello, such as new products, partnerships and approvals.]', source: 'placeholder' },
 			{ heading: 'Updates', body: '[Placeholder: changes to the app and new features for customers, with dates.]', source: 'placeholder' },
 			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: first posts.]', source: 'placeholder' },
-			{ heading: 'Insights', body: 'Plain-English explainers on money, fees and sustainability. Topics to write next:', source: 'placeholder', items: [
-				'What are chargebacks, and when can you claim?',
+			{ heading: 'Read the insights', body: 'Plain-English explainers on money, fees and sustainability.', source: 'algbra', links: [
+				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
+				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' }
+			] },
+			{ heading: 'Insights to write next', body: 'Topics still to write for Opello. Each needs its own sign-off.', source: 'placeholder', items: [
 				'What are virtual cards, and how do they work?',
-				'An intro to carbon offsetting',
 				'What is green banking, and why does it matter?'
 			] }
 		],
@@ -730,6 +732,31 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Get in touch', href: '/studio/contact/' }
 	},
 	{
+		slug: 'carbon-offsetting',
+		title: 'An intro to carbon offsetting',
+		kicker: 'Insights',
+		lede: 'Carbon offsetting is one way to pay for the emissions you cannot avoid. Here is what it means, how it works, and where it can fall short.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/an-intro-to-carbon-offsetting (Algbra Insights article, 30 January 2023). Wording adapted for Opello. Project examples, the rating scheme and the calculation partner are left out, because they are Algbra\'s own.',
+			'Claims about Opello\'s own projects, quality checks and calculation method are flagged. Opello to confirm its project partners and verification before publishing.',
+			'Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What carbon offsetting is', body: 'Carbon offsetting looks to avoid, reduce or remove the impact of carbon dioxide equivalent (CO2e) emissions that you cannot avoid producing. It does this through verified projects, such as reforestation, energy efficiency or renewable energy.', note: 'Source: algbra.com carbon offsetting article, "Okay, what is carbon offsetting?". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'An example', body: 'Say you have to fly for work. The journey creates CO2e emissions, so you buy a carbon credit that pays for an equal amount of emissions to be avoided or removed somewhere else. The credit does not stop the flight from producing emissions. It pays for an equal amount to be cut elsewhere.', note: 'Source: algbra.com carbon offsetting article, the flight example. Reworded so the offset is not described as making the flight carbon neutral.', source: 'algbra' },
+			{ heading: 'Two kinds of project', body: 'Carbon offsetting projects usually fall into two groups. Avoidance projects stop greenhouse gases being released in the first place. Removal projects capture carbon that is already in the air and store it.', note: 'Source: algbra.com carbon offsetting article, "The types of carbon offsetting, explained". Adapted for Opello.', source: 'algbra', items: [
+				'Avoidance: for example, a solar farm that creates no emissions',
+				'Removal: for example, planting trees, or capturing carbon and storing it',
+				'Both can be technology-based or nature-based'
+			] },
+			{ heading: 'Why quality matters', body: 'Not every project is high quality. Cheaper projects are sometimes unverified, and they may not give measurable evidence that carbon has really been removed or avoided. Buying those credits can be greenwashing. Offsetting works best when it sits alongside cutting emissions at source.', note: 'Source: algbra.com carbon offsetting article, "Isn\'t that greenwashing?" and "How are carbon offsetting projects rated?". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'How Opello uses it', body: 'Planet Impact in the Opello app works out the emissions from your card spending, so you can see your footprint and choose what to offset. Opello only lists verified projects.', note: 'Claim to confirm: Opello uses Planet Impact to show footprint and offset it, and that only verified projects are listed. Project partners and verification route are placeholders. Not for publication until approved.', source: 'placeholder', href: '/studio/carbon-tracking/', linkLabel: 'See Planet Impact' },
+			{ heading: 'How emissions are worked out', body: '[Placeholder: the method and data source Opello uses to estimate the emissions for each transaction, described in plain English. Algbra\'s calculation partner is not named here.]', note: 'Placeholder. Opello to confirm the method and what it says about accuracy. Do not publish a figure without a source.', source: 'placeholder' }
+		],
+		cta: { label: 'See Planet Impact', href: '/studio/carbon-tracking/' }
+	},
+	{
 		slug: 'sitemap',
 		title: 'Sitemap',
 		kicker: 'Help',
@@ -749,7 +776,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
