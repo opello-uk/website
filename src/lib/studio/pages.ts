@@ -882,12 +882,12 @@ export const pages: StudioPage[] = [
 		],
 		sections: [
 			{ heading: 'Topics to write', body: 'Subjects Algbra has already written about on its blog. Each one becomes an Opello post only once it is written in Opello wording and approved.', source: 'algbra', items: [
-				'A green break: how to holiday sustainably',
 				'The pros and cons of a cashless society',
 				'Seven principles for implementing the Consumer Duty',
 				'The bright side of dark mode'
 			] },
 			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', source: 'algbra', links: [
+				{ label: 'A Green Break: how to holiday sustainably', href: '/studio/green-break/' },
 				{ label: 'Money and mental health: 5 free mood boosters', href: '/studio/money-and-mental-health/' },
 				{ label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' },
 				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
@@ -1010,6 +1010,33 @@ export const pages: StudioPage[] = [
 		cta: { label: 'See Planet Impact', href: '/studio/carbon-tracking/' }
 	},
 	{
+		slug: 'green-break',
+		title: 'A Green Break: how to holiday sustainably',
+		kicker: 'Insights',
+		lede: 'It is hard to travel in a completely green way, but a few conscious choices can let you enjoy a break while limiting the harm. Here are five tips for greener travel.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/a-green-break-how-to-holiday-sustainably (Algbra blog article, 1 July 2022). Wording adapted for Opello. Algbra product references (track emissions in the Algbra app, sign up for early access) are left out.',
+			'The opening examples (5 million displaced in Sylhet, Bangladesh; 5,000-acre wildfire in New Mexico, California; 32°C in Suffolk) are Algbra figures and need checking against their original source before publishing.',
+			'The CO2 figures (371.4kg for a return London to Marrakech; 685kg for a return London to Dubai) and the World Tourism Organisation $5 of $100 statistic are Algbra figures and need checking against their original source before publishing.',
+			'The named hotels and lodges (Nayara Springs, Wilderness Safaris Bisate Lodge, Pousada Literaria de Paraty) are Algbra examples, not Opello recommendations. Opello to confirm its own examples or leave them out. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'Why it matters', body: 'As we see more unpredictable and extreme weather around the world, the question is how we can enjoy our breaks while contributing as little as possible to climate damage. It is difficult to travel in a completely green way, but more conscious decisions can let us enjoy memorable resets while limiting their negative effects.', note: 'Source: algbra.com article, opening paragraphs. The climate examples are Algbra figures and need checking against their original source.', source: 'algbra' },
+			{ heading: 'Stay local', body: 'Staying local does not mean giving up good views or a good time. In the UK there are sights on our doorstep, and if you live elsewhere, try the overlooked gems a few cities away or destinations within a train ride from home. Even short-haul flights over longer journeys mean a much smaller share of carbon emissions. A number of online tools, including the ICAO calculator endorsed by the UN, can help you work out your carbon footprint.', note: 'Source: algbra.com article, "Stay local". The UK place examples are kept as Algbra published them. The CO2 figures are left out as they need checking. ICAO is a public UN body, not a vendor.', source: 'algbra' },
+			{ heading: 'Eco-conscious accommodation', body: 'If you do travel further, some research into environmentally friendly places to stay can go a long way. Hotel developments can disrupt the local ecosystem, but some go to great lengths to minimise the disruption or even build back natural areas.', note: 'Source: algbra.com article, "Eco-conscious Accommodation". The named hotels and lodges are Algbra examples, not Opello recommendations.', source: 'algbra' },
+			{ heading: 'Limit plastic waste', body: 'Plastic often ends up in nature, poisoning the environment and directly killing wildlife. Of all plastic waste, single-use bottles may be the most harmful. There is an abundance of reusable water bottles for every kind of traveller.', note: 'Source: algbra.com article, "Limit plastic waste". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Shop local', body: 'The World Tourism Organisation reports that of each one hundred dollars spent on a trip, only five dollars reaches local economies. By shopping at markets abroad you can support independent owners who source ingredients more locally.', note: 'Source: algbra.com article, "Shop local". The World Tourism Organisation statistic is an Algbra figure and needs checking against its original source.', source: 'algbra' },
+			{ heading: 'Offset your carbon emissions', body: 'There are a growing number of organisations offering carbon offsetting to help reduce carbon footprints. If you want to see the carbon footprint of your spending, Planet Impact in the Opello app estimates the emissions from each card purchase so you can choose what to offset.', note: 'Source: algbra.com article, "Offset your carbon emissions". The third-party offsetting companies are left out. The Planet Impact reference is an Opello claim that needs confirmation before publishing.', source: 'algbra', href: '/studio/carbon-tracking/', linkLabel: 'See Planet Impact' },
+			{ heading: 'Read next', body: 'More on sustainability and travel from Opello.', source: 'placeholder', links: [
+				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
+				{ label: 'Planet Impact', href: '/studio/carbon-tracking/' }
+			] }
+		],
+		cta: { label: 'Read the insights', href: '/studio/news/' }
+	},
+	{
 		slug: 'money-and-mental-health',
 		title: 'Money and mental health: 5 free mood boosters',
 		kicker: 'Insights',
@@ -1113,7 +1140,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Blog', href: '/studio/blog/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'World Wildlife Day insight', href: '/studio/world-wildlife-day/' }, { label: 'Money and mental health insight', href: '/studio/money-and-mental-health/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'World Wildlife Day insight', href: '/studio/world-wildlife-day/' }, { label: 'A Green Break insight', href: '/studio/green-break/' }, { label: 'Money and mental health insight', href: '/studio/money-and-mental-health/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
