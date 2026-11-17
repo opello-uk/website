@@ -399,13 +399,13 @@ export const pages: StudioPage[] = [
 		sections: [
 			{ heading: 'News', body: '[Placeholder: announcements about Opello, such as new products, partnerships and approvals.]', source: 'placeholder' },
 			{ heading: 'Updates', body: '[Placeholder: changes to the app and new features for customers, with dates.]', source: 'placeholder' },
+			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: first posts.]', source: 'placeholder' },
 			{ heading: 'Insights', body: 'Plain-English explainers on money, fees and sustainability. Topics to write next:', source: 'placeholder', items: [
 				'What are chargebacks, and when can you claim?',
 				'What are virtual cards, and how do they work?',
 				'An intro to carbon offsetting',
 				'What is green banking, and why does it matter?'
-			] },
-			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: first posts.]', source: 'placeholder' }
+			] }
 		],
 		cta: { label: 'Get in touch', href: '/studio/contact/' }
 	},

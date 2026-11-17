@@ -193,6 +193,11 @@
 		.sections.rem-1 .card:last-child {
 			grid-column: 1 / -1;
 		}
+		/* a full-width card with a topic list: lay the topics in two columns */
+		.sections.rem-1 .card:last-child .items {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			column-gap: 32px;
+		}
 		/* two left over: they split the row */
 		.sections.rem-2 .card:nth-last-child(-n + 2) {
 			grid-column: span 3;
