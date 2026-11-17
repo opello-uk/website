@@ -1,13 +1,13 @@
 <script lang="ts">
 	const colPage: Record<string, string> = { Personal: 'personal', Business: 'business', About: 'about', Help: 'help' };
 	// Links that have their own page go there; the rest fall back to their column page.
-	const linkPage: Record<string, string> = { 'Everyday account': 'current-accounts', Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', 'Business payments': 'transfers', Contact: 'contact', 'Get in touch': 'contact', 'Account support': 'help-get-in-touch', 'Help centre': 'help-articles', FAQs: 'faq', 'Our approach': 'ethical-finance', Careers: 'careers', News: 'news' };
+	const linkPage: Record<string, string> = { 'Everyday account': 'current-accounts', Savings: 'savings', Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', 'Business payments': 'transfers', Contact: 'contact', 'Get in touch': 'contact', 'Account support': 'help-get-in-touch', 'Help centre': 'help-articles', FAQs: 'faq', 'Our approach': 'ethical-finance', Careers: 'careers', News: 'news' };
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 
 	// Placeholder link columns from the deck. Every label needs confirming before launch.
 	const columns = [
-		{ title: 'Personal', links: ['Everyday account', 'Payments', 'Cards'] },
+		{ title: 'Personal', links: ['Everyday account', 'Savings', 'Payments', 'Cards'] },
 		{ title: 'Business', links: ['Business account', 'Business payments', 'Global transfers'] },
 		{ title: 'About', links: ['About us', 'Our approach', 'Careers', 'News', 'Contact'] },
 		{ title: 'Help', links: ['Help centre', 'FAQs', 'Account support', 'Get in touch'] }
