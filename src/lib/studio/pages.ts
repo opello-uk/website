@@ -497,11 +497,14 @@ export const pages: StudioPage[] = [
 		slug: 'help-articles',
 		title: 'Help articles',
 		kicker: 'Help',
-		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started, My card, Security and data and About Opello answers are written.',
+		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started, Logging in, My card, Security and data and About Opello answers are written.',
 		source: 'placeholder',
 		sections: [
 			{ heading: 'Getting started', body: 'Opening your account and setting up.', note: 'Source: help.algbra.com, Getting started with Algbra. Algbra article titles. Answers for these nine are written; see the link.', source: 'algbra', href: '/studio/help-getting-started/', linkLabel: 'Read the answers', items: [
 				'Am I eligible for an account?', 'Do you carry out credit checks?', 'Where can I download the app?', 'What do I need to open an account?', 'Why do I need to verify my identity?', 'Finding your tax identification number (TIN)', 'How can I add funds?', 'Does Opello accept Bacs payments?', 'Can I deposit cash or cheques into my account?'
+			] },
+			{ heading: 'Logging in', body: 'Getting into your account, and what to do if the confirmation email does not arrive.', note: 'Source: help.algbra.com, Logging In (one article). Answers are written; see the link. The app screen names need checking against the Opello app.', source: 'algbra', href: '/studio/help-logging-in/', linkLabel: 'Read the answers', items: [
+				'Why am I not getting a confirmation email?'
 			] },
 			{ heading: 'My card', body: 'Using, protecting and managing your card.', note: 'Source: help.algbra.com, My Card. Algbra article titles. Answers for these thirteen are written; see the link. Card wallet and card scheme wording is left out until Opello confirms its partners.', source: 'algbra', href: '/studio/help-my-card/', linkLabel: 'Read the answers', items: [
 				'How do I get my card?', 'How long until my card arrives?', 'Where can I use my card?', 'Can I add my card to a digital wallet?', 'Can I use my card to withdraw cash?', 'How is the exchange rate calculated?', 'Are my card transactions protected?', 'Can I use my card abroad?', 'What if my card is lost or stolen?', 'What is 3D Secure?', 'How can I change my card PIN?', 'How do I check my card PIN?', 'How do I freeze my card?'
@@ -531,6 +534,22 @@ export const pages: StudioPage[] = [
 			{ heading: 'How can I add funds?', body: 'Tap Add Money on the Home tab. You can make an instant bank transfer from a supported bank account, with no bank details to enter. You can also send money by transfer from your account details. Most transfers are instant. To move money from your Cubes to your main balance, use the Cubes option, which is instant.', note: 'Source: help.algbra.com, How can I add funds (18 Mar 2026). App screen names and "instant" wording to confirm for Opello.', source: 'algbra', href: '/studio/transfers/', linkLabel: 'See transfers' },
 			{ heading: 'Does Opello accept Bacs payments?', body: 'Yes. You can have your salary or benefits paid into your Opello account.', note: 'Source: help.algbra.com, Bacs payments (18 Mar 2026). Conflicts with the FAQ, which lists Faster Payments only and says direct debits and standing orders are not yet available. Opello must confirm before publishing.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Check payments in the FAQ' },
 			{ heading: 'Can I deposit cash or cheques into my account?', body: 'Not at the moment. We do not accept cash or cheque deposits.', note: 'Source: help.algbra.com, Cash or cheques (18 Mar 2026). Confirm for Opello before publishing.', source: 'algbra' }
+		],
+		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
+	},
+	{
+		slug: 'help-logging-in',
+		title: 'Logging in',
+		kicker: 'Help articles',
+		lede: 'Answers to the Logging in questions, taken from the Algbra help centre and written for Opello. Not final until the app screens and support route are confirmed.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Why am I not getting a confirmation email?', body: 'When you log in, we send a confirmation email to check it is you on this device. It should arrive within a couple of minutes. If it does not, work through the checks on this page.', note: 'Source: help.algbra.com, Why am I not getting a confirmation email (Algbra wording, adapted for Opello). App screen and button names to confirm against the Opello app.', source: 'algbra' },
+			{ heading: 'Check your email address', body: 'Look for typos, and for a capital letter in the wrong place. If the address is wrong, choose Change your email address in the app and try again.', note: 'Source: help.algbra.com, Why am I not getting a confirmation email (step 1, adapted).', source: 'algbra' },
+			{ heading: 'Check your spam or junk folder', body: 'The email can land there by mistake. If you find it, mark it as not spam so future emails reach your inbox.', note: 'Source: help.algbra.com, Why am I not getting a confirmation email (step 2, adapted).', source: 'algbra' },
+			{ heading: 'Check your connection', body: 'Make sure your phone or device is online, then try again. A weak signal can hold up the email.', note: 'Source: help.algbra.com, Why am I not getting a confirmation email (step 3, adapted).', source: 'algbra' },
+			{ heading: 'New to the app, or already started?', body: 'If this is your first time in the app, choose Get started. If you have opened the app before, choose I have an account to log in and carry on with your registration. Use the Having trouble? button if you are still stuck.', note: 'Source: help.algbra.com, Why am I not getting a confirmation email (Algbra screen names). Opello app screen names are placeholders until the app is published.', source: 'algbra' },
+			{ heading: 'Still stuck?', body: 'Use the chat icon at the top right of the app and tell us what is happening. You can also email us at [placeholder: Opello support email].', note: 'Source: help.algbra.com (chat route, adapted). Opello support email and chat route are placeholders.', source: 'placeholder', href: '/studio/contact/', linkLabel: 'See contact options' }
 		],
 		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
 	},
@@ -609,7 +628,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
