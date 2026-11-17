@@ -82,20 +82,19 @@
 	}
 	.hero {
 		position: relative;
-		min-height: min(46vh, 440px);
+		min-height: min(36vh, 340px);
 		display: grid;
 		align-items: end;
-		padding: clamp(40px, 8vh, 96px) 0 clamp(24px, 4vh, 40px);
+		padding: clamp(16px, 3vh, 32px) 0 clamp(24px, 4vh, 40px);
 		/* desktop: let the ring bleed past the content column instead of being cut off at its edge */
 		overflow: visible;
 	}
 	.ring {
 		position: absolute;
-		top: 50%;
+		top: -32px;
 		right: -12vw;
-		width: min(56vw, 540px);
+		width: min(44vw, 420px);
 		aspect-ratio: 1;
-		transform: translateY(-50%);
 		opacity: 0.8;
 		pointer-events: none;
 	}
