@@ -196,14 +196,15 @@
 		}
 		.pill {
 			min-height: 44px;
-			padding: 6px 10px;
+			padding: 6px 8px;
 			font-size: 10px;
+			letter-spacing: 0.04em;
 			line-height: 1.15;
 			white-space: normal;
 			max-width: 88px;
 		}
 		.pill-white {
-			padding: 0 14px;
+			padding: 6px 8px;
 		}
 	}
 
