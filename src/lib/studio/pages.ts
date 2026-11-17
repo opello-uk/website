@@ -95,7 +95,10 @@ export const pages: StudioPage[] = [
 			{ heading: 'Control your Cubes', body: 'Customise a Cube, hide its balance, lock it, create goals, see statements and track your progress.', note: 'Source: algbra.com/features/cubes.', source: 'algbra' },
 			{ heading: 'Lock a Cube', body: 'Lock a Cube until a date you choose. While it is locked, you cannot withdraw from it. Change your mind and you can turn the lock off from the Cube\'s settings.', note: 'Source: algbra.com/features/cubes, FAQ. Confirm the lock feature for Opello before publishing.', source: 'algbra' },
 			{ heading: 'Tribes', body: 'Invite up to 10 friends and family to reach a shared goal together.', note: 'Source: algbra.com/features/cubes. Confirm availability for Opello.', source: 'algbra' },
-			{ heading: 'Smart Cubes', body: 'Automate your carbon offset contributions, or donate your round-ups to the charities you choose.', note: 'Source: algbra.com/features/cubes, which marks planet impact Cubes as available soon. Opello availability and charity partners are placeholders.', source: 'algbra', href: '/studio/carbon-tracking/', linkLabel: 'See Planet Impact' }
+			{ heading: 'Smart Cubes', body: 'Automate your carbon offset contributions, or donate your round-ups to the charities you choose.', note: 'Source: algbra.com/features/cubes, which marks planet impact Cubes as available soon. Opello availability and charity partners are placeholders.', source: 'algbra', links: [
+				{ label: 'See Planet Impact', href: '/studio/carbon-tracking/' },
+				{ label: 'See donations', href: '/studio/donations/' }
+			] }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
@@ -170,7 +173,10 @@ export const pages: StudioPage[] = [
 			{ heading: 'Business account', body: 'International account with IBANs for GBP, USD, EUR and other supported currencies.', note: 'Source: algbra.com/business. IBAN currency list and "built for" line need confirming for Opello before publishing.', source: 'algbra' },
 			{ heading: 'Send, hold and receive', body: 'Send, hold, and receive payments in multiple supported currencies, wherever your customers are.', note: 'Source: algbra.com/business. Opello currency list to be confirmed.', source: 'algbra' },
 			{ heading: 'Currency exchange', body: 'Convert currencies with clear rates. No surprises.', note: 'Source: algbra.com/business, which says features vary by region and rates may vary. No rates shown here. Rate wording needs compliance sign-off.', source: 'algbra', href: '/studio/multi-currency/', linkLabel: 'See multi-currency accounts' },
-			{ heading: 'Cards and Savings Cubes', body: 'Spend with physical and virtual debit cards, and put business funds into Savings Cubes.', note: 'Source: algbra.com/business. "Profit generating" Savings Cubes is a product claim: confirm with Algbra or compliance before publishing. Savings Cubes are not yet confirmed for business accounts.', source: 'algbra', href: '/studio/cards/', linkLabel: 'See cards' },
+			{ heading: 'Cards and Savings Cubes', body: 'Spend with physical and virtual debit cards, and put business funds into Savings Cubes.', note: 'Source: algbra.com/business. "Profit generating" Savings Cubes is a product claim: confirm with Algbra or compliance before publishing. Savings Cubes are not yet confirmed for business accounts.', source: 'algbra', links: [
+				{ label: 'See cards', href: '/studio/cards/' },
+				{ label: 'See Cubes', href: '/studio/cubes/' }
+			] },
 			{ heading: 'Who can apply', body: 'You need a fully incorporated, active business, or be a sole trader. Your company must be registered in an eligible country and work in a supported industry. You will need up to date company documents, and the same for anyone with significant control.', note: 'Source: algbra.com/business, eligibility FAQ. Opello eligibility rules to be confirmed.', source: 'algbra' },
 			{ heading: 'Your money is safeguarded', body: 'Deposits are not covered by the FSCS. They are protected by safeguarding instead: we keep all of your money separate from our own, and there is no upper limit.', note: 'Source: algbra.com/business, FAQ on FSCS and safeguarding. Opello\'s own status and this wording need compliance sign-off before publishing.', source: 'algbra' }
 		],
@@ -198,7 +204,10 @@ export const pages: StudioPage[] = [
 		sections: [
 			{ heading: 'Multi-currency', body: 'Keep different currencies together in one place, no need for multiple apps.', note: 'Source: algbra.com/features/multi-currency.', source: 'algbra', href: '/studio/multi-currency/', linkLabel: 'See multi-currency accounts' },
 			{ heading: 'Send and receive money', body: 'Instant bank transfers, international transfers, and payments to friends and family.', note: 'Source: algbra.com/features/transfers. Country count and availability are flagged on the Transfers page.', source: 'algbra', href: '/studio/transfers/', linkLabel: 'See transfers' },
-			{ heading: 'Spend with your card', body: 'Physical and virtual cards, card controls and spending abroad.', note: 'Source: algbra.com/features/cards. Wording taken from the Cards page.', source: 'algbra', href: '/studio/cards/', linkLabel: 'See cards' }
+			{ heading: 'Spend with your card', body: 'Physical and virtual cards, card controls and spending abroad.', note: 'Source: algbra.com/features/cards. Wording taken from the Cards page.', source: 'algbra', links: [
+				{ label: 'See cards', href: '/studio/cards/' },
+				{ label: 'Learn about virtual cards', href: '/studio/virtual-cards/' }
+			] }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
@@ -340,7 +349,7 @@ export const pages: StudioPage[] = [
 			{ heading: 'Is my balance covered by the FSCS?', body: 'Your balance is e-money, which is not covered by the Financial Services Compensation Scheme. Protection comes from safeguarding instead.', source: 'algbra' },
 			{ heading: 'Payments we support today', body: 'Card payments, ATM withdrawals and Faster Payments. Payments are in pounds sterling. International payments, direct debits, standing orders and CHAPS are not yet available.', source: 'algbra' },
 			{ heading: 'Lost or stolen card', body: 'Freeze your card in the app straight away, then contact our support team through the in-app chat. If you cannot get into the app, call or email us instead.', source: 'algbra' },
-			{ heading: 'Unrecognised transactions and chargebacks', body: 'Freeze your card, then tell us the merchant, location and date. For goods or services you have not received or that were faulty, we can help you raise a chargeback claim within 120 days.', source: 'algbra' },
+			{ heading: 'Unrecognised transactions and chargebacks', body: 'Freeze your card, then tell us the merchant, location and date. For goods or services you have not received or that were faulty, we can help you raise a chargeback claim within 120 days.', source: 'algbra', href: '/studio/chargebacks/', linkLabel: 'Read about chargebacks' },
 			{ heading: 'Carbon footprint and offsetting', body: 'Your carbon footprint is the CO2e generated by your transactions. Where you cannot avoid a purchase, you can offset the rest by supporting carbon projects.', source: 'algbra', href: '/studio/carbon-tracking/', linkLabel: 'Read about Planet Impact' },
 			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account. Once closed, you cannot open a new one.', source: 'algbra' }
 		],
@@ -547,9 +556,9 @@ export const pages: StudioPage[] = [
 		source: 'algbra',
 		sections: [
 			{ heading: 'Standard account', body: 'No monthly account fee. UK payments are free: sending and receiving by FPS, BACS or CHAPS, and paying by card in pounds in store, online or over the phone.', note: 'Source: algbra.com fees and charges PDF (last updated 7 April 2026), Standard retail customers. Opello fees to confirm before publishing.', source: 'algbra' },
-			{ heading: 'Borderless account', body: 'A monthly account fee of £10, charged in advance on the first day of each month. Cancel or close your account and no fees are charged in arrears.', note: 'Source: algbra.com fees and charges PDF, Borderless customers. The £10 figure must match the Opello fee schedule and needs compliance sign-off.', source: 'algbra' },
+			{ heading: 'Borderless account', body: 'A monthly account fee of £10, charged in advance on the first day of each month. Cancel or close your account and no fees are charged in arrears.', note: 'Source: algbra.com fees and charges PDF, Borderless customers. The £10 figure must match the Opello fee schedule and needs compliance sign-off.', source: 'algbra', href: '/studio/borderless-account/', linkLabel: 'See the Borderless account' },
 			{ heading: 'Sending and receiving money abroad', body: 'Sending money outside the UK: a fixed £15 fee per transaction, plus an FX fee of 1.00%. Receiving money from outside the UK in pounds: a fixed £10 fee, plus an FX fee of 1.00% for other currencies. Intermediary bank fees may also apply.', note: 'Source: algbra.com fees and charges PDF. Feature availability on each account and the Opello fee schedule are placeholders until confirmed.', source: 'algbra' },
-			{ heading: 'Cards and cash', body: 'First physical card £5, replacements £5 each. First three virtual cards free, then £1 each. Card cancellation after 14 days: £2.50. UK cash withdrawals 1.00%. Foreign withdrawals and foreign-currency card payments: 1.50% FX fee. ATM operators may charge their own fee.', note: 'Source: algbra.com fees and charges PDF. Card fees need confirming for Opello and the card scheme.', source: 'algbra' },
+			{ heading: 'Cards and cash', body: 'First physical card £5, replacements £5 each. First three virtual cards free, then £1 each. Card cancellation after 14 days: £2.50. UK cash withdrawals 1.00%. Foreign withdrawals and foreign-currency card payments: 1.50% FX fee. ATM operators may charge their own fee.', note: 'Source: algbra.com fees and charges PDF. Card fees need confirming for Opello and the card scheme.', source: 'algbra', href: '/studio/cards/', linkLabel: 'See cards' },
 			{ heading: 'Converting currencies', body: 'Converting money from one currency to another in your account costs a 0.50% FX fee on the amount converted.', note: 'Source: algbra.com fees and charges PDF. Confirm for Opello before publishing.', source: 'algbra', href: '/studio/multi-currency/', linkLabel: 'See multi-currency accounts' },
 			{ heading: 'Other fees', body: 'Administration fee up to £10, for example returning funds after account closure or mediating a disputed payment. Paper statements £5. Dormant accounts: up to £1 a month after six months. Overdrafts are not supported; repeated negative balances may lead to an administration fee.', note: 'Source: algbra.com fees and charges PDF. Confirm the list and amounts for Opello before publishing.', source: 'algbra' }
 		],
