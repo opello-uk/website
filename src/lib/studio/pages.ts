@@ -255,13 +255,22 @@ export const pages: StudioPage[] = [
 		slug: 'open-account',
 		title: 'Open an account',
 		kicker: 'Get started',
-		lede: 'Accounts open when Opello launches. Register your interest and we will let you know.',
-		source: 'placeholder',
-		sections: [
-			{ heading: 'What you will need', body: 'Identity document, proof of address and details of where you are living. Final requirements to be confirmed with Algbra during onboarding.', source: 'placeholder' },
-			{ heading: 'How it works', body: 'You apply, we check your details, and your account opens. Timings and eligibility are placeholders until launch.', source: 'placeholder' }
+		lede: 'Here is what you will need to open an Opello account in the app, and what happens next.',
+		source: 'algbra',
+		sourceNotes: [
+			'What you need and the identity steps come from the Algbra help centre (help.algbra.com, "What do I need to open an account" and "Why do I need to verify my identity", 18 Mar 2026 and 1 Nov 2022), reworded for Opello.',
+			'The "Get started for free" button label is from algbra.com/all-plans. Opello has not chosen its own label yet.',
+			'Eligibility conflict: Algbra help says UK residents only, but the homepage banner says "A UK account for non-UK residents". Opello must confirm residency rules before this page publishes.',
+			'Approval timing, the video step and any waiting list are placeholders until Opello confirms them. Accounts are not open yet, so no sign-up is live.'
 		],
-		cta: { label: 'Register your interest', href: '/studio/' }
+		sections: [
+			{ heading: 'What you will need', body: 'An internet-connected phone or device with a camera, a mobile number, a valid photo ID such as a passport or driving licence, and proof of address, such as a utility bill.', source: 'algbra' },
+			{ heading: 'How it works', body: 'Download the app and enter your email address and mobile number. Then add your ID and proof of address, and record a short video of yourself. We check your details, and once approved you can start using your account.', note: 'Source: help.algbra.com, What do I need (18 Mar 2026). Video step and approval timing to confirm for Opello.', source: 'algbra' },
+			{ heading: 'Why we check your identity', body: 'Financial rules require us to verify who you are. These checks are known as Know Your Customer (KYC) and Customer Due Diligence (CDD). They protect our community and keep your account secure. You will need a valid, in-date government photo ID, and we can only use the original document.', note: 'Source: help.algbra.com, Why do I need to verify my identity (1 Nov 2022). Compliance sign-off needed before publishing.', source: 'algbra' },
+			{ heading: 'No credit check', body: 'We do not carry out credit checks, so opening an Opello account has no impact on your credit rating or borrowing ability.', note: 'Source: help.algbra.com, Do you carry out credit checks? (18 Mar 2026). Credit wording needs compliance sign-off.', source: 'algbra', href: '/studio/help-getting-started/', linkLabel: 'More getting started answers' },
+			{ heading: 'Ready to start?', body: 'Get the app first, then open your account in a few steps. Have your ID and proof of address to hand.', note: 'Source: algbra.com/download for the app steps. The app is not published yet, so the store links are placeholders.', source: 'algbra', href: '/studio/download/', linkLabel: 'Get the app' }
+		],
+		cta: { label: 'Get started for free', href: '/studio/download/' }
 	},
 	{
 		slug: 'about',
