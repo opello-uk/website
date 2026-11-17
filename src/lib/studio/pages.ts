@@ -283,7 +283,7 @@ export const pages: StudioPage[] = [
 			{ heading: 'Find an answer', body: 'Check out the questions we hear most often, then use the emojis at the end of each answer to tell us whether it helped.', note: 'Source: algbra.com/help. Opello answer feedback is not built yet.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
 			{ heading: 'Chat to our support team', body: 'You can chat to our dedicated support team in real time from the app. If you prefer, you can send us an email instead.', note: 'Source: algbra.com/help. Opello support hours and in-app chat to confirm before publishing.', source: 'algbra', href: '/studio/contact/', linkLabel: 'See contact options' },
 			{ heading: 'Lost or stolen card', body: 'Freeze it instantly in the app. If you cannot get into the app, call us on [support phone, placeholder].', note: 'Source: algbra.com/help and algbra.com/faq. Opello support number still placeholder.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read about lost cards' },
-			{ heading: 'Help articles by category', body: 'Getting started, My card, Security and data, and About Opello. Browse the article titles in each category.', note: 'Source: help.algbra.com collection pages (Getting started, My Card, Security & Data, About Algbra). Opello renames the last one. Article answers are not written yet.', source: 'algbra', href: '/studio/help-articles/', linkLabel: 'See article titles' },
+			{ heading: 'Help articles by category', body: 'Getting started, My card, Security and data, and About Opello. Browse the article titles in each category.', note: 'Source: help.algbra.com collection pages (Getting started, My Card, Security & Data, About Algbra). Opello renames the last one. Answers are written for all four categories; the Opello product list and rename wording still need confirming.', source: 'algbra', href: '/studio/help-articles/', linkLabel: 'See article titles' },
 			{ heading: 'Get in touch', body: 'Thoughts, ideas, suggestions, or a question about your account. Email: [support email, placeholder]', note: 'Source: algbra.com/help. Opello support email still to be set up.', source: 'algbra', href: '/studio/contact/', linkLabel: 'Contact us' },
 			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account.', note: 'Source: algbra.com/faq, Closing your account. Support email still placeholder.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the closing steps' }
 		],
@@ -497,7 +497,7 @@ export const pages: StudioPage[] = [
 		slug: 'help-articles',
 		title: 'Help articles',
 		kicker: 'Help',
-		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started, My card and Security and data answers are written; About Opello is still to write.',
+		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started, My card, Security and data and About Opello answers are written.',
 		source: 'placeholder',
 		sections: [
 			{ heading: 'Getting started', body: 'Opening your account and setting up.', note: 'Source: help.algbra.com, Getting started with Algbra. Algbra article titles. Answers for these nine are written; see the link.', source: 'algbra', href: '/studio/help-getting-started/', linkLabel: 'Read the answers', items: [
@@ -509,7 +509,7 @@ export const pages: StudioPage[] = [
 			{ heading: 'Security and data', body: 'How we protect your money and your information.', note: 'Source: help.algbra.com, Security & Data. Algbra article titles, partial list. Answers for these six are written; see the link. Fraud and data answers need compliance sign-off.', source: 'algbra', href: '/studio/help-security-data/', linkLabel: 'Read the answers', items: [
 				'Is my money safe?', 'How secure is my account?', 'What personal data do I need to share?', 'How does Opello process my data?', 'How do I opt out of marketing notifications?', 'Keeping your money safe: authorised push payment (APP) scams'
 			] },
-			{ heading: 'About Opello', body: 'Who we are and what we do.', note: 'Source: help.algbra.com, About Algbra, renamed for Opello. Partial list. Algbra is swapped for Opello in the titles; Opello to confirm.', source: 'algbra', items: [
+			{ heading: 'About Opello', body: 'Who we are and what we do.', note: 'Source: help.algbra.com, About Algbra, renamed for Opello. Algbra is swapped for Opello in the titles; Opello to confirm. Answers for these six are written; see the link.', source: 'algbra', href: '/studio/help-about-opello/', linkLabel: 'Read the answers', items: [
 				'What is Opello?', 'What makes Opello different?', 'Does Opello have any fees?', 'Why is community important to us?', 'Where is Opello based?', 'From which countries can I open an account?'
 			] }
 		],
@@ -574,6 +574,22 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
 	},
 	{
+		slug: 'help-about-opello',
+		title: 'About Opello',
+		kicker: 'Help articles',
+		lede: 'Answers to the About Opello questions, adapted from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'What is Opello?', body: 'Opello is a sustainable and values-focused finance app. It gives you an e-money account and a debit card, plus tools to help you live a socially and environmentally conscious life, such as a carbon tracker to review the impact of your spending, the option to offset your footprint, and Donations to support causes you care about. [Placeholder: the full Opello product list, to confirm before publishing.]', note: 'Source: help.algbra.com, What is Algbra? (16 May 2022), adapted for Opello. Product list, e-money wording and tool names need Opello confirmation. Card scheme left out.', source: 'algbra', href: '/studio/personal/', linkLabel: 'See the personal account' },
+			{ heading: 'What makes Opello different?', body: 'We will never hold your money in an unethical or high-risk way, and we follow strict policies on the industries we invest in. You can always see where your money is held. We aim to be open about everything we do, from where your money sits to clear details on every fee or charge. We will also give you ways to join our social impact work, so you can be part of the difference.', note: 'Source: help.algbra.com, What makes Algbra different? (9 Apr 2026), adapted for Opello. Promise and investment policy need Opello and compliance sign-off. Team background line from Algbra is left out until Opello has its own.', source: 'algbra' },
+			{ heading: 'Does Opello have any fees?', body: 'Our fees and charges are set out in full on our fees page, so you can check what applies to the account you choose before you open it.', note: 'Source: help.algbra.com, Does Algbra have any fees? (9 Apr 2026), adapted for Opello. Opello fee schedule still to be confirmed; see the fees page.', source: 'algbra', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
+			{ heading: 'Why is community important to us?', body: 'Our success is measured by the work we do to educate, engage and empower communities that banks have often overlooked, and to help them take control of their finances. [Placeholder: Opello social impact programme and any charity or foundation details. Algbra\'s foundation is not Opello\'s, so none of its details are used here.]', note: 'Source: help.algbra.com, Why is community important to us? (8 Apr 2022), reworded. Opello community work and any charity registration to be supplied by Opello.', source: 'placeholder', href: '/studio/donations/', linkLabel: 'See donations' },
+			{ heading: 'Where is Opello based?', body: 'Opello is based in London, United Kingdom. You can find our company details and how to reach us on the contact page.', note: 'Source: help.algbra.com, Where is Algbra based? (8 Apr 2022), adapted for Opello. Opello registered address to confirm on the contact page. Algbra contact address not reused.', source: 'algbra', href: '/studio/contact/', linkLabel: 'See contact details' },
+			{ heading: 'From which countries can I open an account?', body: 'At the moment you can open an Opello account if you live in the UK. We plan to open to other countries over time, and we will tell you when that happens.', note: 'Source: help.algbra.com, From which countries can I open an account? (8 Apr 2022), adapted for Opello. Conflicts with the homepage banner, which says "A UK account for non-UK residents". Opello must confirm residency rules before publishing.', source: 'algbra', href: '/studio/help-getting-started/', linkLabel: 'Read the eligibility answer' }
+		],
+		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
+	},
+	{
 		slug: 'sitemap',
 		title: 'Sitemap',
 		kicker: 'Help',
@@ -593,7 +609,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
