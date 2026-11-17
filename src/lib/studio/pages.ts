@@ -411,10 +411,10 @@ export const pages: StudioPage[] = [
 			{ heading: 'Blog', body: 'Stories from the Opello team and the community. [Placeholder: first posts.]', source: 'placeholder' },
 			{ heading: 'Read the insights', body: 'Plain-English explainers on money, fees and sustainability.', source: 'algbra', links: [
 				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
-				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' }
+				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
+				{ label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' }
 			] },
 			{ heading: 'Insights to write next', body: 'Topics still to write for Opello. Each needs its own sign-off.', source: 'placeholder', items: [
-				'What are virtual cards, and how do they work?',
 				'What is green banking, and why does it matter?'
 			] }
 		],
@@ -732,6 +732,31 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Get in touch', href: '/studio/contact/' }
 	},
 	{
+		slug: 'virtual-cards',
+		title: 'What are virtual cards, and how do they work?',
+		kicker: 'Insights',
+		lede: 'A virtual card is a debit card that lives in your phone. Here is what it is, where you can use one, and how it compares with a physical card.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/what-are-virtual-cards-and-how-do-they-work (Algbra Insights article, 18 April 2023). Wording adapted for Opello. Algbra\'s cashback, carbon and biodegradable card lines are left out.',
+			'Whether Opello offers virtual cards, single-use cards and which phone wallets they work with are placeholders until Opello confirms them. Not for publication until approved.',
+			'Security claims (cannot be skimmed, freeze in the app) need Opello confirmation and compliance sign-off before publishing.'
+		],
+		sections: [
+			{ heading: 'Virtual, digital and disposable', body: 'There are three kinds of electronic card. A virtual card is a debit card that lives in your phone, with its own card number and expiry date. A digital card is a copy of your physical card, using the same details. A disposable card is a single-use virtual card, which cannot be used again once it has been used to pay.', note: 'Source: algbra.com virtual cards article, "Virtual, digital and disposable cards". Adapted for Opello. Opello products are a placeholder until confirmed.', source: 'algbra' },
+			{ heading: 'Where you can use one', body: 'You can use a virtual card to pay online, in shops and in apps. For shops, add the card to your phone\'s wallet app, turn on the phone\'s contactless setting, and tap to pay. [Placeholder: the phone wallets Opello cards work with.]', note: 'Source: algbra.com virtual cards article, "Where can I use a virtual card?" Wallet names are left out here. Placeholder until Opello confirms its wallet list.', source: 'algbra' },
+			{ heading: 'Why people use them', body: 'Your card details are kept in your app rather than on a plastic card. You cannot leave a virtual card behind, and it is harder for someone to copy the details from a card reader. You can also freeze a card in the app if you think someone has your details.', note: 'Source: algbra.com virtual cards article, "How easy are virtual cards to use?" and "Instantly block and unblock". Freeze-in-app and safety claims need Opello confirmation.', source: 'algbra', items: [
+				'Start using it straight away, with no card to wait for',
+				'Hard to lose, because it lives in your app',
+				'Hard to copy, because a card reader cannot read it',
+				'Freeze the card in the app, without waiting for a call'
+			] },
+			{ heading: 'Single-use cards', body: 'Disposable cards are useful for a website you have not used before, or for a sign-up you do not want to commit to. [Placeholder: whether Opello offers single-use cards, and how to create one.]', note: 'Source: algbra.com virtual cards article, "Can I only use my virtual card one time?". Opello availability is a placeholder.', source: 'placeholder' },
+			{ heading: 'Getting a virtual card', body: '[Placeholder: how to get a virtual card in the Opello app, and whether it is offered on every account.]', note: 'Placeholder. Algbra\'s steps are for its own app, so the Opello steps need checking in the app before publishing.', source: 'placeholder' }
+		],
+		cta: { label: 'See cards', href: '/studio/cards/' }
+	},
+	{
 		slug: 'carbon-offsetting',
 		title: 'An intro to carbon offsetting',
 		kicker: 'Insights',
@@ -776,7 +801,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
