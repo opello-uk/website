@@ -24,7 +24,7 @@ export const pages: StudioPage[] = [
 		lede: 'Finance, made for humans. Transparent, accessible products, and you will never be confused or surprised by a fee.',
 		source: 'algbra',
 		sections: [
-			{ heading: 'One app. Multiple currencies.', body: 'We offer transparent, accessible, interest-free products, and you will never be confused or surprised by a fee.', source: 'algbra' },
+			{ heading: 'One app. Multiple currencies.', body: 'We offer transparent, accessible, interest-free products, and you will never be confused or surprised by a fee.', source: 'algbra', href: '/studio/multi-currency/', linkLabel: 'See multi-currency accounts' },
 			{ heading: 'Earn % EPR* with Ethical Saver Cubes', body: 'Put money aside in Cubes and earn on your savings.', note: '*Placeholder. EPR rate, eligibility and protection wording need compliance sign-off. Not for publication until approved.', source: 'algbra' },
 			{ heading: 'Send and receive money', body: 'Instant bank transfers, international transfers, and payments to friends and family.', source: 'algbra', href: '/studio/transfers/', linkLabel: 'See transfers' },
 			{ heading: 'Spend with your card', body: 'Physical and virtual cards, card controls and spending abroad.', note: 'Source: algbra.com/features/cards. Wording taken from the Cards page.', source: 'algbra', href: '/studio/cards/', linkLabel: 'See cards' },
