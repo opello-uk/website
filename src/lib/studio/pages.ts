@@ -313,7 +313,7 @@ export const pages: StudioPage[] = [
 			{ heading: 'Find an answer', body: 'Check out the questions we hear most often, then use the emojis at the end of each answer to tell us whether it helped.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
 			{ heading: 'Chat to our support team', body: 'You can chat to our dedicated support team in real time from the app. If you prefer, you can send us an email instead.', source: 'algbra', href: '/studio/contact/', linkLabel: 'See contact options' },
 			{ heading: 'Lost or stolen card', body: 'Freeze it instantly in the app. If you cannot get into the app, call us on [support phone, placeholder].', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read about lost cards' },
-			{ heading: 'Help articles by category', body: 'Getting started, My card, Security and data, and About Opello. Browse the article titles in each category.', source: 'algbra', href: '/studio/help-articles/', linkLabel: 'See article titles' },
+			{ heading: 'Help articles by category', body: 'Getting started, Logging in, My card, My account, Ethical Saver Cubes, Security and data, About Opello, and Get in touch. Browse the article titles in each category.', source: 'algbra', href: '/studio/help-articles/', linkLabel: 'See article titles' },
 			{ heading: 'Get in touch', body: 'Thoughts, ideas, suggestions, or a question about your account. Email: [support email, placeholder]', source: 'algbra', href: '/studio/contact/', linkLabel: 'Contact us' },
 			{ heading: 'Closing your account', body: 'Chat to the support team in the app, or email us, and we will help you close your account.', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the closing steps' }
 		],
@@ -321,7 +321,7 @@ export const pages: StudioPage[] = [
 			'Find an answer: Source: algbra.com/help. Opello answer feedback is not built yet.',
 			'Chat to our support team: Source: algbra.com/help. Opello support hours and in-app chat to confirm before publishing.',
 			'Lost or stolen card: Source: algbra.com/help and algbra.com/faq. Opello support number still placeholder.',
-			'Help articles by category: Source: help.algbra.com collection pages (Getting started, My Card, Security & Data, About Algbra). Opello renames the last one. Answers are written for all four categories; the Opello product list and rename wording still need confirming.',
+			'Help articles by category: Source: help.algbra.com collection pages (Getting started, Logging in, My Card, My Account, Ethical Saver Cubes, Security & Data, About Algbra, Get in touch). Opello renames About Algbra. Answers are written for all eight categories; the Opello product list and rename wording still need confirming.',
 			'Get in touch: Source: algbra.com/help. Opello support email still to be set up.',
 			'Closing your account: Source: algbra.com/faq, Closing your account. Support email still placeholder.'
 		],
