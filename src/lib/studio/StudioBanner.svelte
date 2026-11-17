@@ -188,15 +188,16 @@
 			mask-image: none;
 			-webkit-mask-image: none;
 		}
-		/* Navy scrim under the copy so the peach headline and body stay readable over the photo. */
+		/* Navy scrim under the copy so the peach headline and body stay readable over the photo.
+		   The headline sits at the top of the strip, so the top is dark too. */
 		.art::after {
 			content: '';
 			position: absolute;
 			inset: 0;
 			background: linear-gradient(
 				180deg,
-				rgba(0, 20, 49, 0.1) 0%,
-				rgba(0, 20, 49, 0.55) 45%,
+				rgba(0, 20, 49, 0.82) 0%,
+				rgba(0, 20, 49, 0.78) 50%,
 				rgba(0, 20, 49, 0.9) 100%
 			);
 		}
