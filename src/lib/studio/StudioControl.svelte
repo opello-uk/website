@@ -1,9 +1,9 @@
 <script lang="ts">
-	// "More control. More confidence." tiles. Tile labels follow the Figma board. The intro line is Algbra homepage wording (algbra.com, "One app. Multiple currencies." block), with the fee claim flagged for Algbra or compliance sign-off. The heading is still placeholder.
+	// "More control. More confidence." tiles. Tile labels follow the Figma board; each now links to its studio page. The intro line is Algbra homepage wording (algbra.com, "One app. Multiple currencies." block), with the fee claim flagged for Algbra or compliance sign-off. The heading is still placeholder.
 	const tiles = [
-		{ title: 'Global transfers', icon: 'globe' },
-		{ title: 'Virtual cards', icon: 'card' },
-		{ title: 'Currency exchange', icon: 'exchange' }
+		{ title: 'Global transfers', icon: 'globe', href: '/studio/transfers/' },
+		{ title: 'Virtual cards', icon: 'card', href: '/studio/virtual-cards/' },
+		{ title: 'Currency exchange', icon: 'exchange', href: '/studio/multi-currency/' }
 	];
 </script>
 
@@ -12,6 +12,7 @@
 	<ul class="grid">
 		{#each tiles as t (t.title)}
 			<li class="tile">
+				<a href={t.href} class="tile-link">
 				<span class="icon" aria-hidden="true">
 					{#if t.icon === 'globe'}
 						<svg viewBox="0 0 24 24" width="30" height="30" focusable="false">
@@ -30,6 +31,7 @@
 					{/if}
 				</span>
 				<h3>{t.title}</h3>
+				</a>
 			</li>
 		{/each}
 	</ul>
@@ -88,13 +90,30 @@
 	}
 	.tile {
 		min-width: 0;
-		padding: clamp(22px, 2.2vw, 30px) clamp(14px, 1.6vw, 22px);
+		padding: 0;
 		border-radius: 16px;
 		text-align: center;
 		display: grid;
 		justify-items: center;
 		background: #ffffff;
 		box-shadow: 0 1px 2px rgba(0, 20, 49, 0.06);
+	}
+	.tile-link {
+		display: grid;
+		justify-items: center;
+		gap: 0;
+		padding: clamp(22px, 2.2vw, 30px) clamp(14px, 1.6vw, 22px);
+		text-decoration: none;
+		color: inherit;
+		border-radius: 16px;
+		outline-offset: -2px;
+	}
+	.tile-link:hover {
+		background: rgba(245, 136, 81, 0.06);
+	}
+	.tile-link:focus-visible {
+		outline: 2px solid var(--deep);
+		outline-offset: 2px;
 	}
 	.icon {
 		display: inline-grid;
@@ -145,6 +164,9 @@
 			gap: 6px;
 		}
 		.tile {
+			border-radius: 10px;
+		}
+		.tile-link {
 			padding: 12px 4px;
 			border-radius: 10px;
 		}
