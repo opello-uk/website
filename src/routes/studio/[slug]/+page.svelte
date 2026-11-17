@@ -126,6 +126,7 @@
 			overflow: hidden;
 			display: flex;
 			flex-direction: column;
+			align-items: stretch;
 			min-height: 0;
 			padding-top: 8px;
 		}
