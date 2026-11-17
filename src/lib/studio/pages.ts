@@ -497,7 +497,7 @@ export const pages: StudioPage[] = [
 		slug: 'help-articles',
 		title: 'Help articles',
 		kicker: 'Help',
-		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started, Logging in, My card, Security and data and About Opello answers are written.',
+		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started, Logging in, My card, My account, Security and data and About Opello answers are written.',
 		source: 'placeholder',
 		sections: [
 			{ heading: 'Getting started', body: 'Opening your account and setting up.', note: 'Source: help.algbra.com, Getting started with Algbra. Algbra article titles. Answers for these nine are written; see the link.', source: 'algbra', href: '/studio/help-getting-started/', linkLabel: 'Read the answers', items: [
@@ -508,6 +508,9 @@ export const pages: StudioPage[] = [
 			] },
 			{ heading: 'My card', body: 'Using, protecting and managing your card.', note: 'Source: help.algbra.com, My Card. Algbra article titles. Answers for these thirteen are written; see the link. Card wallet and card scheme wording is left out until Opello confirms its partners.', source: 'algbra', href: '/studio/help-my-card/', linkLabel: 'Read the answers', items: [
 				'How do I get my card?', 'How long until my card arrives?', 'Where can I use my card?', 'Can I add my card to a digital wallet?', 'Can I use my card to withdraw cash?', 'How is the exchange rate calculated?', 'Are my card transactions protected?', 'Can I use my card abroad?', 'What if my card is lost or stolen?', 'What is 3D Secure?', 'How can I change my card PIN?', 'How do I check my card PIN?', 'How do I freeze my card?'
+			] },
+			{ heading: 'My account', body: 'Statements, limits, Cubes and transfers.', note: 'Source: help.algbra.com, My Account collection. Five answers are written; the seventeen Ethical Saver articles sit on the Ethical Saver page. Algbra article titles, Opello wording.', source: 'algbra', href: '/studio/help-my-account/', linkLabel: 'Read the answers', items: [
+				'How do I generate a statement?', 'What are my account limits?', 'What are Cubes?', 'How do I create a regular Cube?', 'Can I make international transfers?'
 			] },
 			{ heading: 'Security and data', body: 'How we protect your money and your information.', note: 'Source: help.algbra.com, Security & Data. Algbra article titles, partial list. Answers for these six are written; see the link. Fraud and data answers need compliance sign-off.', source: 'algbra', href: '/studio/help-security-data/', linkLabel: 'Read the answers', items: [
 				'Is my money safe?', 'How secure is my account?', 'What personal data do I need to share?', 'How does Opello process my data?', 'How do I opt out of marketing notifications?', 'Keeping your money safe: authorised push payment (APP) scams'
@@ -593,6 +596,22 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
 	},
 	{
+		slug: 'help-my-account',
+		title: 'My account',
+		kicker: 'Help articles',
+		lede: 'Answers to the My account questions that are not about Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'How do I generate a statement?', body: 'In the app, tap the three dots on the Home tab, then tap Statements. Choose the date range you want to see and the format you need: PDF, or CSV and QIF if you use a compatible accounting tool.', note: 'Source: help.algbra.com, How do I generate a statement (Algbra steps, adapted). App screen names and export formats to confirm for Opello.' },
+			{ heading: 'What are my account limits?', body: 'Your account has no maximum balance. To see your spending limits, tap your profile icon at the top of the Home screen, then tap Limits. If you have a question, get in touch through the in-app chat or email us.', note: 'Source: help.algbra.com, What are my account limits (Algbra wording, adapted). "No maximum balance" needs compliance sign-off. Support email is a placeholder.', href: '/studio/contact/', linkLabel: 'See contact details' },
+			{ heading: 'What are Cubes?', body: 'Cubes are savings spaces inside your account. A regular Cube helps you set a goal and track your progress. Moving money from a Cube to your main balance takes a couple of taps, or you can lock a Cube until a date you choose to stop withdrawals. You can unlock it at any time if you need to. Ethical Saver Cubes are a separate type with a fixed term and agreed profit, and have their own page.', note: 'Source: help.algbra.com, What are Cubes (Algbra wording, adapted). Lock feature and Ethical Saver wording to confirm for Opello. Ethical Saver claims need compliance sign-off.', href: '/studio/cubes/', linkLabel: 'See Cubes' },
+			{ heading: 'How do I create a regular Cube?', body: 'In the app, tap Cubes on the Home or Other tab, tap the plus sign and choose a saving Cube. Give it a name, pick an image, and set a savings goal if you want one.', note: 'Source: help.algbra.com, How do I create a regular Cube (Algbra steps, adapted). App screen names to confirm for Opello.', href: '/studio/cubes/', linkLabel: 'See Cubes' },
+			{ heading: 'Can I make international transfers?', body: 'At the moment you can receive pound sterling transfers from accounts outside the UK, and there is no charge for receiving them. You cannot send money outside the UK yet, and we will tell you when that changes. We cannot accept transfers from some countries, including Belarus, Cuba, Iran, North Korea, Russia, Syria and some regions of Ukraine. Payments in any other currency are sent back to the sending account, which can take several days.', note: 'Source: help.algbra.com, Can I make international transfers (Algbra wording, adapted). CONFLICT: the Transfers page says Opello sends and receives internationally. Resolve before either publishes. The country list may change; compliance to confirm.', href: '/studio/transfers/', linkLabel: 'See transfers' },
+			{ heading: 'Ethical Saver Cube questions', body: 'Seventeen Algbra articles cover Ethical Saver Cubes: what they are, how they work, profit rates, early withdrawal, tax, Sharia compliance and whether savings are protected. Their answers stay on the Ethical Saver page until compliance has signed them off.', note: 'Source: help.algbra.com, My Account collection. Not copied here on purpose: the FSCS, profit and Sharia wording needs sign-off first.', source: 'algbra', href: '/studio/ethical-savings/', linkLabel: 'See Ethical Saver Cubes' }
+		],
+		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
+	},
+	{
 		slug: 'help-about-opello',
 		title: 'About Opello',
 		kicker: 'Help articles',
@@ -628,7 +647,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
