@@ -881,10 +881,8 @@ export const pages: StudioPage[] = [
 			'Every Opello post needs Opello sign-off before it publishes. Not for publication until approved.'
 		],
 		sections: [
-			{ heading: 'Topics to write', body: 'Subjects Algbra has already written about on its blog. Each one becomes an Opello post only once it is written in Opello wording and approved.', source: 'algbra', items: [
-				'The bright side of dark mode'
-			] },
 			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', source: 'algbra', links: [
+				{ label: 'The bright side of dark mode', href: '/studio/dark-mode/' },
 				{ label: 'Seven principles for implementing the Consumer Duty', href: '/studio/consumer-duty/' },
 				{ label: 'The pros and cons of a cashless society', href: '/studio/cashless-society/' },
 				{ label: 'A Green Break: how to holiday sustainably', href: '/studio/green-break/' },
@@ -1182,6 +1180,29 @@ export const pages: StudioPage[] = [
 		cta: { label: 'Read the insights', href: '/studio/news/' }
 	},
 	{
+		slug: 'dark-mode',
+		title: 'The bright side of dark mode',
+		kicker: 'Insights',
+		lede: 'One simple change on your phone could save battery, money and even a little of the planet. Here is why dark mode is worth switching on.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/the-bright-side-of-dark-mode (Algbra blog article, 29 April 2025). Wording adapted for Opello. Algbra product references (dark mode in the Algbra app, the Instagram post, "Join the dark side with Algbra") are left out.',
+			'The statistics (5.3 billion of 16 billion phones thrown away in 2022, up to 47% battery saving, OLED screens making up almost half the market) are Algbra\'s and need checking against their original source before publishing.',
+			'Opello dark mode availability, supported screens and launch timing are placeholders until confirmed. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'A small switch with a big difference', body: 'Ever thought that one simple change could make a huge difference? Switching to dark mode on your phone could be that game-changer. It is not just about looking cool; it is about saving time, money, your health and even the planet.', note: 'Source: algbra.com dark mode article, opening. Adapted for Opello. Algbra app reference left out.', source: 'algbra' },
+			{ heading: 'Protect your phone and the planet', body: 'By switching to dark mode, you reduce the number of times you need to charge your phone. Fewer charges mean your battery stays healthier for longer, and with battery issues the top complaint among smartphone users, anything that helps your battery last is a win. Longer battery life also means fewer dead batteries polluting the planet with harmful chemicals. In 2022 alone, an estimated 5.3 billion of the 16 billion phones worldwide were thrown away.', note: 'Source: algbra.com dark mode article, "Protect Your Phone and the Planet". The 5.3 billion of 16 billion figure is Algbra\'s and needs checking against its original source. Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Up to 47% less battery', body: 'Using dark mode can save up to 47% battery power, which is nearly doubling your phone\'s battery life and cutting your energy use in half. This is especially true for phones with OLED screens, which now make up almost half the market, but other screen types see benefits too.', note: 'Source: algbra.com dark mode article, "Protect Your Phone and the Planet". The 47% figure and the OLED market share are Algbra\'s and need checking against their original source. Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Be kinder to your eyes and sleep better', body: 'Switching to dark mode can also reduce the strain on your eyes, especially in low-light conditions. It cuts blue light emissions, which can interfere with your melatonin levels and disrupt your sleep. Better sleep equals better health.', note: 'Source: algbra.com dark mode article, "Be Kinder to Your Eyes and Sleep Better". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Join the dark side', body: 'Your eyes, wallet and the planet will thank you. [Placeholder: when dark mode is available in the Opello app and which screens it covers, to be confirmed.]', note: 'Source: algbra.com dark mode article, closing. Algbra product plug left out. Opello dark mode availability is a placeholder.', source: 'algbra', links: [
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
+				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' }
+			] }
+		],
+		cta: { label: 'Read the insights', href: '/studio/news/' }
+	},
+	{
 		slug: 'sitemap',
 		title: 'Sitemap',
 		kicker: 'Help',
@@ -1201,7 +1222,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'News', href: '/studio/news/' }, { label: 'Blog', href: '/studio/blog/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'Help', body: 'Answers and support.', source: 'placeholder', links: [
-				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'World Wildlife Day insight', href: '/studio/world-wildlife-day/' }, { label: 'A Green Break insight', href: '/studio/green-break/' }, { label: 'Money and mental health insight', href: '/studio/money-and-mental-health/' }, { label: 'Cashless society insight', href: '/studio/cashless-society/' }, { label: 'Consumer Duty insight', href: '/studio/consumer-duty/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
+				{ label: 'Help', href: '/studio/help/' }, { label: 'Chargebacks insight', href: '/studio/chargebacks/' }, { label: 'Carbon offsetting insight', href: '/studio/carbon-offsetting/' }, { label: 'Virtual cards insight', href: '/studio/virtual-cards/' }, { label: 'Green banking insight', href: '/studio/green-banking/' }, { label: 'World Wildlife Day insight', href: '/studio/world-wildlife-day/' }, { label: 'A Green Break insight', href: '/studio/green-break/' }, { label: 'Money and mental health insight', href: '/studio/money-and-mental-health/' }, { label: 'Cashless society insight', href: '/studio/cashless-society/' }, { label: 'Consumer Duty insight', href: '/studio/consumer-duty/' }, { label: 'Dark mode insight', href: '/studio/dark-mode/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Accessibility', href: '/studio/accessibility/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
 			{ heading: 'Legal', body: 'Policies, terms and fees.', source: 'placeholder', links: [
 				{ label: 'Privacy policy', href: '/studio/privacy-policy/' }, { label: 'Terms and conditions', href: '/studio/terms-and-conditions/' }, { label: 'Customer terms', href: '/studio/customer-terms-and-conditions/' }, { label: 'Cookie policy', href: '/studio/cookies-policy/' }, { label: 'Fees and charges', href: '/studio/fees-and-charges/' }, { label: 'Responsible disclosure', href: '/studio/responsible-disclosure/' }
