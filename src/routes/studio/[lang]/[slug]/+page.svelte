@@ -75,7 +75,7 @@
 <style>
 	.skip {
 		position: absolute;
-		left: -9999px;
+		inset-inline-start: -9999px;
 		z-index: 100;
 	}
 	.skip:focus {
