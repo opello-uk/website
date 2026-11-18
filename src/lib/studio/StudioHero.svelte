@@ -167,14 +167,15 @@
 		background: linear-gradient(160deg, #3a3f49, #14171f 60%);
 		box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
 	}
+	/* Nudged up ~20px so the bottoms clear the "How can we help today?" heading row */
 	.phone-back {
 		left: 4%;
-		top: 6%;
+		top: calc(6% - 20px);
 		rotate: -7deg;
 	}
 	.phone-front {
 		right: 2%;
-		top: 0;
+		top: -20px;
 		rotate: 4deg;
 	}
 	.screen {
@@ -182,10 +183,10 @@
 		height: 100%;
 		border-radius: 28px;
 		background: var(--clay);
-		padding: 12px 14px;
+		padding: 14px 16px;
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
+		gap: 11px;
 		overflow: hidden;
 		color: var(--deep);
 		font-size: 10px;
@@ -233,7 +234,7 @@
 	.input {
 		background: #fff;
 		border-radius: 12px;
-		padding: 8px 10px;
+		padding: 12px 12px;
 		display: flex;
 		align-items: center;
 		gap: 8px;
@@ -268,8 +269,8 @@
 	.amount {
 		background: #fff;
 		border-radius: 12px;
-		padding: 8px 10px;
-		font-size: 18px;
+		padding: 12px 12px;
+		font-size: 21px;
 		font-weight: 500;
 	}
 	.chips {
@@ -280,7 +281,7 @@
 		flex: 1;
 		text-align: center;
 		border-radius: 999px;
-		padding: 4px 0;
+		padding: 7px 0;
 		background: #fff;
 		font-size: 8px;
 	}
@@ -289,11 +290,12 @@
 		font-weight: 700;
 	}
 	.send-btn {
-		margin-top: 4px;
+		/* pinned above the tab bar so the Send screen fills the phone as in the baseline */
+		margin-top: auto;
 		border-radius: 999px;
 		background: var(--peach);
 		text-align: center;
-		padding: 9px 0;
+		padding: 12px 0;
 		font-size: 10px;
 		font-weight: 600;
 	}
