@@ -1092,6 +1092,63 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 			],
 			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
 		},
+		{
+			slug: 'news',
+			title: 'الأخبار',
+			kicker: 'عن أوبيلو',
+			lede: 'أخبار وتحديثات المنتجات وشروحات وقصص من أوبيلو. [Placeholder: Opello newsroom intro, in Opello wording.]',
+			source: 'placeholder',
+			sections: [
+				{ source: 'placeholder', heading: 'الأخبار', body: '[Placeholder: announcements about Opello, such as new products, partnerships and approvals.]' },
+				{ source: 'placeholder', heading: 'التحديثات', body: '[Placeholder: changes to the app and new features for customers, with dates.]' },
+				{ source: 'placeholder', heading: 'المدونة', body: 'قصص من فريق أوبيلو والمجتمع. [Placeholder: first posts.]', href: '/studio/blog/', linkLabel: 'اقرأ مواضيع المدونة' },
+				{ source: 'placeholder', heading: 'اقرأ الشروحات', body: 'شروحات بلغة واضحة عن المال والرسوم والاستدامة.', links: [] }
+			],
+			cta: { label: 'تواصل معنا', href: '/studio/contact/' }
+		},
+		{
+			slug: 'blog',
+			title: 'المدونة',
+			kicker: 'عن أوبيلو',
+			lede: 'قصص من فريق أوبيلو والمجتمع، عن المال والاستدامة والإنفاق اليومي. [Placeholder: first posts, in Opello wording.]',
+			source: 'placeholder',
+			sections: [
+				{ source: 'placeholder', heading: 'اقرأ الشروحات', body: 'الشروحات المكتوبة سابقاً لأوبيلو.', links: [] },
+				{ source: 'placeholder', heading: 'أول منشورات أوبيلو', body: '[Placeholder: the first two or three posts from the Opello team, once written and approved.]' }
+			],
+			cta: { label: 'العودة إلى الأخبار', href: '/studio/news/' }
+		},
+		{
+			slug: 'accessibility',
+			title: 'إمكانية الوصول',
+			kicker: 'قانوني',
+			lede: 'كيف نعمل لجعل أوبيلو قابلاً للاستخدام من الجميع، وما تحققناه حتى الآن، وكيف تخبرنا عندما يعيقك أمر ما. [Placeholder: statement to be confirmed.]',
+			source: 'placeholder',
+			sections: [
+				{ source: 'placeholder', heading: 'التزامنا', body: '[Placeholder: we aim to make our website and app meet the WCAG 2.2 AA standard, and we treat accessibility problems as bugs to fix.]' },
+				{ source: 'placeholder', heading: 'ما تحققنا منه', body: 'فحص آلي لتباين الألوان في كل صفحة بأحجام الحاسوب والهاتف، مع إصلاح الإخفاقات (17 نوفمبر 2026). فحص التخطيطات بصرياً عند 1440 و390 بكسل. الوصول بلوحة المفاتيح وحلقات التركيز المرئية في التنقل والتذييل وروابط البطاقات، ورابط تخطي إلى المحتوى في كل صفحة (17 نوفمبر 2026). فحوصات موضعية لقارئ الشاشة: ترتيب العناوين وروابط التخطي والمعالم وترتيب التنقل (17 نوفمبر 2026). الحركة المخففة: كل مكوّن متحرك يحتوي على كتلة prefers-reduced-motion تعطّل الانتقالات والحركات (17 نوفمبر 2026).' },
+				{ source: 'placeholder', heading: 'الفجوات المعروفة', body: 'صور الصفحة الرئيسية وصور المنتجات هي صور مؤقتة لا تزال بحاجة إلى نص بديل وصفي. شاشات الهاتف في الواجهة تعرض محتوى تجريبياً، وليس شاشات التطبيق الحقيقية. لم يُجرَ بعد تدقيق كامل من طرف ثالث.' },
+				{ source: 'placeholder', heading: 'أخبرنا عن مشكلة', body: '[Placeholder: if something is hard to use, email the accessibility team at a placeholder address and say what you were trying to do. We will reply and suggest another way to get it done.]', href: '/studio/contact/', linkLabel: 'اطلع على تفاصيل التواصل' },
+				{ source: 'placeholder', heading: 'التقنيات المساعدة والبدائل', body: '[Placeholder: options such as contacting us by phone or in branch, if they are offered.]' },
+				{ source: 'placeholder', heading: 'تاريخ المراجعة', body: '[Placeholder: date this statement was last reviewed, and how often we will review it.]' }
+			],
+			cta: { label: 'اقرأ شروطنا', href: '/studio/terms-and-conditions/' }
+		},
+		{
+			slug: 'responsible-disclosure',
+			title: 'الإفصاح المسؤول',
+			kicker: 'قانوني',
+			lede: 'نأخذ خصوصية عملائنا وأمانهم على محمل الجد، ونقدّر عمل الباحثين في مجال الأمن الذين يساعدوننا في الحفاظ على ذلك.',
+			source: 'placeholder',
+			sections: [
+				{ source: 'placeholder', heading: 'التزامنا', body: 'نطبّق سياسة الإفصاح المسؤول. نعمل عن قرب مع الباحثين في مجال الأمن بحيث تُراجَع أي ثغرة محتملة يُبلَّغ عنها وتُصلَح في أقرب وقت ممكن.' },
+				{ source: 'placeholder', heading: 'متى تُبلّغ', body: 'إذا كنت تعتقد أنك وجدت ثغرة أمنية تؤثر على أنظمة أوبيلو أو منتجاتها أو تطبيقاتها أو عملائها، فأرسل لنا تقريراً في أقرب وقت ممكن.' },
+				{ source: 'placeholder', heading: 'إرشاداتنا', body: 'لا تجعل الثغرة علنية دون موافقتنا. لا تصل إلى المعلومات الشخصية للعملاء أو الموظفين أو أي معلومات سرية لأوبيلو. إن فعلت ذلك بالخطأ، أوقف الاختبار وأبلغنا فوراً. إن حصلت على وصول إلى نظام غير عام أو بيانات اعتماد غير عامة، أوقف وأبلغنا فوراً. لا تُضعف خدماتنا ولا تعطّل أنظمة الإنتاج ولا تدمّر البيانات. لا تُشغّل فحوصات ثغرات آلية.' },
+				{ source: 'placeholder', heading: 'خارج النطاق', body: 'التقارير التي ليست مشكلات أمنية حقيقية، مثل نسيان كلمة المرور. الرسائل غير المرغوبة والهندسة الاجتماعية والتصيّد الاحتيالي. الملفات المقروءة للعامة مثل robots.txt. البصمة أو الإفصاح عن إصدارات البرامج الشائعة. تخمين أسماء المستخدمين أو عناوين البريد من رسائل الخطأ، ما لم توجد مخاطرة استثنائية.' },
+				{ source: 'placeholder', heading: 'كيف ترسل تقريراً', body: '[Placeholder: Opello security mailbox, to be set up before this page is published.]' }
+			],
+			cta: { label: 'تواصل معنا', href: '/studio/contact/' }
+		},
 	],
 	tr: [
 		{
@@ -2172,6 +2229,63 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'news',
+			title: 'Haberler',
+			kicker: 'Hakkında',
+			lede: 'Opello\u2019dan haberler, ürün güncellemeleri, açıklamalar ve hikâyeler. [Placeholder: Opello newsroom intro, in Opello wording.]',
+			source: 'placeholder',
+			sections: [
+				{ source: 'placeholder', heading: 'Haberler', body: '[Placeholder: announcements about Opello, such as new products, partnerships and approvals.]' },
+				{ source: 'placeholder', heading: 'Güncellemeler', body: '[Placeholder: changes to the app and new features for customers, with dates.]' },
+				{ source: 'placeholder', heading: 'Blog', body: 'Opello ekibinden ve topluluktan hikâyeler. [Placeholder: first posts.]', href: '/studio/blog/', linkLabel: 'Blog konularını oku' },
+				{ source: 'placeholder', heading: 'Açıklamaları okuyun', body: 'Para, ücretler ve sürdürülebilirlik hakkında sade bir dille açıklamalar.', links: [] }
+			],
+			cta: { label: 'Bize ulaşın', href: '/studio/contact/' }
+		},
+		{
+			slug: 'blog',
+			title: 'Blog',
+			kicker: 'Hakkında',
+			lede: 'Opello ekibinden ve topluluktan, para, sürdürülebilirlik ve günlük harcama üzerine hikâyeler. [Placeholder: first posts, in Opello wording.]',
+			source: 'placeholder',
+			sections: [
+				{ source: 'placeholder', heading: 'Açıklamaları okuyun', body: 'Opello için önceden yazılmış açıklamalar.', links: [] },
+				{ source: 'placeholder', heading: 'İlk Opello yazıları', body: '[Placeholder: the first two or three posts from the Opello team, once written and approved.]' }
+			],
+			cta: { label: 'Haberlere dön', href: '/studio/news/' }
+		},
+		{
+			slug: 'accessibility',
+			title: 'Erişilebilirlik',
+			kicker: 'Yasal',
+			lede: 'Opello\u2019yu herkes için kullanılabilir kılmak için nasıl çalıştığımız, şimdiye kadar neleri kontrol ettiğimiz ve bir şey yolunda gitmediğinde bize nasıl haber vereceğiniz. [Placeholder: statement to be confirmed.]',
+			source: 'placeholder',
+			sections: [
+				{ source: 'placeholder', heading: 'Taahhüdümüz', body: '[Placeholder: we aim to make our website and app meet the WCAG 2.2 AA standard, and we treat accessibility problems as bugs to fix.]' },
+				{ source: 'placeholder', heading: 'Neleri kontrol ettik', body: 'Her sayfanın masaüstü ve telefon genişliklerinde otomatik renk kontrastı taraması, hatalar giderilerek (17 Kasım 2026). Düzenlerin 1440 ve 390 pikselde görsel kontrolü. Klavye erişimi ve görünür odak: gezinme, altbilgi ve kart bağlantılarında odak halkaları, her sayfa şablonunda içeriğe atlama bağlantısı (17 Kasım 2026). Ekran okuyucu kontrolleri: başlık sırası, atlama bağlantıları, ana işaret, bağlantı metni ve sekme sırası (17 Kasım 2026). Azaltılmış hareket: her animasyonlu bileşende geçişleri ve animasyonları devre dışı bırakan bir prefers-reduced-motion bloğu (17 Kasım 2026).' },
+				{ source: 'placeholder', heading: 'Bilinen eksikler', body: 'Ana sayfa ve ürün fotoğrafları, hâlâ açıklayıcı alternatif metin gerektiren geçici görsellerdir. Giriş ekranındaki telefon ekranları örnek içerik gösterir, gerçek uygulama ekranlarını değil. Üçüncü taraf denetimi henüz yapılmadı.' },
+				{ source: 'placeholder', heading: 'Bize bir sorun bildirin', body: '[Placeholder: if something is hard to use, email the accessibility team at a placeholder address and say what you were trying to do. We will reply and suggest another way to get it done.]', href: '/studio/contact/', linkLabel: 'İletişim bilgilerine bak' },
+				{ source: 'placeholder', heading: 'Yardımcı teknolojiler ve alternatifler', body: '[Placeholder: options such as contacting us by phone or in branch, if they are offered.]' },
+				{ source: 'placeholder', heading: 'Gözden geçirme tarihi', body: '[Placeholder: date this statement was last reviewed, and how often we will review it.]' }
+			],
+			cta: { label: 'Şartlarımızı okuyun', href: '/studio/terms-and-conditions/' }
+		},
+		{
+			slug: 'responsible-disclosure',
+			title: 'Sorumlu açıklama',
+			kicker: 'Yasal',
+			lede: 'Müşterilerimizin gizliliğini ve güvenliğini ciddiye alıyor, bu böyle kalmasını sağlamamıza yardım eden güvenlik araştırmacılarının işine değer veriyoruz.',
+			source: 'placeholder',
+			sections: [
+				{ source: 'placeholder', heading: 'Taahhüdümüz', body: 'Sorumlu açıklama politikası uyguluyoruz. Bize bildirilen her olası güvenlik açığının en kısa sürede incelenip giderilmesi için güvenlik araştırmacılarıyla yakından çalışıyoruz.' },
+				{ source: 'placeholder', heading: 'Ne zaman bildirilir', body: 'Opello sistemlerini, ürünlerini, uygulamalarını veya müşterilerini etkileyen bir güvenlik açığı bulduğunuzu düşünüyorsanız, lütfen bize en kısa sürede bir rapor gönderin.' },
+				{ source: 'placeholder', heading: 'Kurallarımız', body: 'Onayımız olmadan güvenlik açığını kamuya açmayın. Müşteri veya çalışan kişisel bilgilerine ya da gizli Opello bilgilerine erişmeyin. Yanlışlıkla yaptıysanız testi bırakın ve hemen bildirin. Herkese açık olmayan bir sisteme veya kimlik bilgilerine erişim kazandıysanız durun ve derhal bildirin. Hizmetlerimizi bozmayın, üretim sistemlerini aksatmayın, veri yok etmeyin. Otomatik güvenlik taraması çalıştırmayın.' },
+				{ source: 'placeholder', heading: 'Kapsam dışı', body: 'Unutulmuş şifre gibi gerçek güvenlik sorunu olmayan bildirimler. Spam, sosyal mühendislik veya kimlik avı. robots.txt gibi herkese açık dosyalar. Yaygın yazılımların parmak izi veya sürüm bilgisi. Hata mesajlarından kullanıcı adı veya e-posta tahmini, olağanüstü bir risk yoksa.' },
+				{ source: 'placeholder', heading: 'Rapor gönderme', body: '[Placeholder: Opello security mailbox, to be set up before this page is published.]' }
+			],
+			cta: { label: 'Bize ulaşın', href: '/studio/contact/' }
 		},
 	]
 };
