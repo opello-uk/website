@@ -112,8 +112,8 @@
 	   shrink it slightly so its lower edge clears the card row (LTR pages keep
 	   the baseline-size ring) */
 	:global([dir="rtl"]) .ring {
-		top: -48px;
-		width: min(40vw, 380px);
+		top: -72px;
+		width: min(34vw, 330px);
 	}
 	.copy {
 		position: relative;
