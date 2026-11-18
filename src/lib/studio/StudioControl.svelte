@@ -13,7 +13,7 @@
 	<!-- Heading and intro line. -->
 	<header>
 		<h2 id="control-title">More control.<br />More confidence.</h2>
-		<p>We offer transparent, accessible products, and you'll never be confused or surprised by a fee.</p>
+		<p>A financial experience designed to give you greater choice in how you manage your money.</p>
 	</header>
 	<ul class="grid">
 		{#each tiles as t (t.title)}

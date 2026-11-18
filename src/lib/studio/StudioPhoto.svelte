@@ -1,6 +1,6 @@
 <script lang="ts">
 	import band from '#lib/assets/studio/band.jpg';
-	// "A place where you belong." full-bleed photo band. Copy is placeholder; the photo is a placeholder ground until licensed imagery is supplied.
+	// "A place where you belong." full-bleed photo band. Copy matches the baseline deck (baseline-02); the photo is a placeholder ground until licensed imagery is supplied.
 </script>
 
 <section class="photo" aria-labelledby="photo-title">
@@ -10,8 +10,8 @@
 
 	<div class="inner">
 		<div class="copy">
-			<h2 id="photo-title">Humans on the other end, too.</h2>
-			<p>Need a hand? Reach out anytime, and we’ll be happy to help.</p>
+			<h2 id="photo-title">A place where<br />you belong.</h2>
+			<p>Whatever your background or starting point, Opello believes access to financial services should be more inclusive.</p>
 		</div>
 	</div>
 </section>

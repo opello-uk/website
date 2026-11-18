@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	// "Your world. Your freedom." banner, copy from the baseline deck (baseline-03). The baseline line
+	// "across multiple currencies" is left out: multi-currency holding is out of MLP1 scope (2026-11-18).
 	import banner from '#lib/assets/studio/banner.jpg';
-	// Navy banner. Copy is Algbra homepage wording: residency and no-borders claims need sign-off before launch.
 </script>
 
 <section class="banner" aria-labelledby="banner-title">
@@ -12,9 +13,9 @@
 		<!-- Outside .art so the tag is not washed out by the faded photo on phones -->
 
 		<div class="copy">
-			<h2 id="banner-title">A UK account for non-UK residents.</h2>
+			<h2 id="banner-title">Your world.<br />Your freedom.</h2>
 			<p>
-				Multiple currencies. No borders.
+				Use your account at home and abroad, so you can move and live more freely.
 			</p>
 		</div>
 

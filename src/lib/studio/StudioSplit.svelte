@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	// "Your money on your terms." split section. Paragraph and ticks are Algbra homepage wording; heading is still placeholder.
+	// "Your money on your terms." split section. Copy matches the baseline deck (baseline-04).
 	import split from '#lib/assets/studio/split.jpg';
-	// Generated placeholder photo, marked on the tile, until licensed photography is supplied.
+	// Generated placeholder photo until licensed photography is supplied.
 	const points = [
-		'One app. Multiple currencies.',
-		'Your funds are securely held in safeguarded accounts.',
-		'Humans on the other end, too.'
+		'A simple, straightforward account.',
+		'Clearer fees and conditions.',
+		'Tools to help you stay in control.'
 	];
 </script>
 
@@ -20,7 +20,7 @@
 
 		<div class="mid">
 			<p>
-				We offer transparent, accessible, interest-free products, and you’ll never be confused or surprised by a fee.
+				Manage your finances with more flexibility, clearer conditions and fewer unnecessary barriers.
 			</p>
 
 			<ul class="ticks">
@@ -127,14 +127,13 @@
 		gap: 12px;
 		font-size: clamp(15px, 1.25vw, 18px);
 	}
+	/* Baseline shows a bare peach check, no circle behind it. */
 	.ticks .dot {
 		flex: none;
 		display: grid;
 		place-items: center;
 		width: 22px;
 		height: 22px;
-		border-radius: 50%;
-		background: var(--deep);
 		color: var(--peach);
 	}
 	.ticks svg {
