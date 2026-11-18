@@ -389,6 +389,100 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'عودة إلى المساعدة', href: '/studio/help/' }
+		},
+		{
+			slug: 'ethical-savings',
+			source: 'placeholder',
+			title: 'مكعبات الادخار الأخلاقي',
+			kicker: 'التوفير',
+			lede: 'أخلاقي. مربح. إنساني. خصّص مبلغاً لمدة ثابتة وشاهد عائدك المتفق عليه قبل التأكيد.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'كيف يعمل المكعب',
+					body: 'اختر المدة التي تناسبك، وحدد مبلغ الإيداع، وشاهد الربح المتوقع قبل التأكيد. في نهاية المدة تسترد إيداعك بالإضافة إلى الربح المتفق عليه.',
+					links: [
+						{ label: 'عودة إلى التوفير', href: '/studio/savings/' }
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'ادّخر لمدة 3 أو 6 أو 12 شهراً',
+					body: 'اختر مدتك. تُتفق على العوائد مسبقاً وتُثبّت عند إنشاء المكعب، لذا تعرف ما ستسترد عند الاستحقاق.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'في نهاية المدة',
+					body: 'اختر إعادة الإيداع في مكعب جديد، أو انقل إيداعك وربحك إلى حسابك الرئيسي لسحبها أو إنفاقها أو ادّخارها في مكان آخر.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'الضريبة على ربحك',
+					body: 'قد يخضع الربح للضريبة حسب ظروفك. ويُحتسب ضمن حدّ التوفير الشخصي. ولا تُقتطع الضريبة تلقائياً، لذا قد تحتاج إلى الإقرار بها لهيئة الضرائب البريطانية (HMRC).',
+					href: '/studio/help-ethical-saver/',
+					linkLabel: 'اقرأ عن الضريبة على الادخار الأخلاقي'
+				}
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'fees-and-charges',
+			source: 'placeholder',
+			title: 'الرسوم والتكاليف',
+			kicker: 'قانوني',
+			lede: 'كل رسوم نتقاضاها في مكان واحد، لترى ما ينطبق عليك قبل فتح الحساب.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'الحساب القياسي',
+					body: 'لا رسوم شهرية على الحساب. المدفوعات داخل المملكة المتحدة مجانية: الإرسال والاستلام عبر أنظمة FPS أو BACS أو CHAPS، والدفع بالبطاقة بالجنيه عبر الإنترنت أو الهاتف.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'إرسال واستلام الأموال من الخارج',
+					body: 'إرسال الأموال خارج المملكة المتحدة: رسم ثابت قدره 15 جنيهاً لكل عملية، بالإضافة إلى رسم صرف عملات بنسبة 1.00%. استلام الأموال من خارج المملكة المتحدة بالجنيه: رسم ثابت قدره 10 جنيهات، بالإضافة إلى رسم صرف بنسبة 1.00% للعملات الأخرى. قد تُطبق أيضاً رسوم البنوك الوسيطة.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'البطاقات',
+					body: 'أول ثلاث بطاقات افتراضية مجاناً، ثم جنيه واحد لكل بطاقة. إلغاء البطاقة بعد 14 يوماً: 2.50 جنيه. مدفوعات البطاقة بعملة أجنبية: رسم صرف 1.50%.',
+					href: '/studio/cards/',
+					linkLabel: 'اطلع على البطاقات'
+				},
+				{
+					source: 'placeholder',
+					heading: 'رسوم أخرى',
+					body: 'رسم إداري يصل إلى 10 جنيهات، مثل إعادة أموال بعد إغلاق الحساب أو الوساطة في دفعة متنازع عليها. كشوف ورقية بـ5 جنيهات. الحسابات الخاملة: حتى جنيه واحد شهرياً بعد ستة أشهر. السحب على المكشوف غير مدعوم؛ وقد تؤدي الأرصدة السالبة المتكررة إلى رسم إداري.'
+				}
+			],
+			cta: { label: 'اقرأ شروطنا', href: '/studio/terms-and-conditions/' }
+		},
+		{
+			slug: 'download',
+			source: 'placeholder',
+			title: 'حمّل التطبيق',
+			kicker: 'شخصي',
+			lede: 'إنشاء حساب رقمي سلس داخل التطبيق.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'امسح الرمز',
+					body: 'على هاتفك، افتح الكاميرا ووجّه الجهاز نحو رمز الاستجابة السريعة لتنزيل التطبيق. لا تستطيع المسح؟ استخدم روابط التنزيل أدناه.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'iOS وAndroid',
+					body: 'التطبيق متاح على iOS وAndroid. [Placeholder: app store badges and links]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'افتح حسابك رقمياً',
+					body: 'إنشاء حساب رقمي سلس داخل التطبيق. كل ما تحتاجه هو بريد إلكتروني ورقم هاتف ومستند هوية، مثل جواز السفر.',
+					href: '/studio/faq/',
+					linkLabel: 'اقرأ الأسئلة الشائعة'
+				}
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
 		}
 	],
 	tr: [
@@ -769,6 +863,100 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'Yardıma dön', href: '/studio/help/' }
+		},
+		{
+			slug: 'ethical-savings',
+			source: 'placeholder',
+			title: 'Etik Birikim Küpleri',
+			kicker: 'Birikim',
+			lede: 'Etik. Kârlı. İnsani. Paranızı sabit bir süre için ayırın ve onaylamadan önce uzlaşılan getirinizi görün.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Bir Küp nasıl çalışır',
+					body: 'Size uyan süreyi seçin, yatırmak istediğiniz tutarı belirleyin ve onaylamadan önce beklenen kârınızı görün. Süre sonunda para geri döner ve uzlaşılan kâr da eklenir.',
+					links: [
+						{ label: 'Birikime dön', href: '/studio/savings/' }
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: '3, 6 veya 12 ay için birikim yapın',
+					body: 'Sürenizi seçin. Getiriler önceden uzlaşıılır ve Küp oluşturulduğunda sabitlenir; böylece vadede ne geri alacağınızı bilirsiniz.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Süre sonunda',
+					body: 'Yeni bir Küpe yeniden yatırmayı seçebilir ya da para ve kârınızı ana hesabınıza taşıyıp çekebilir, harcayabilir veya başka bir yerde biriktirebilirsiniz.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kârınız üzerinden vergi',
+					body: 'Kâr, durumunuza bağlı olarak vergiye tabi olabilir. Kişisel Tasarruf Limiti kapsamına girer. Vergi otomatik kesilmez; bu nedenle HMRC’ye beyan etmeniz gerekebilir.',
+					href: '/studio/help-ethical-saver/',
+					linkLabel: 'Etik Birikim vergisi hakkında okuyun'
+				}
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'fees-and-charges',
+			source: 'placeholder',
+			title: 'Ücretler ve masraflar',
+			kicker: 'Yasal',
+			lede: 'Aldığımız her ücret tek bir yerde; hesap açmadan önce hangilerinin size uygulandığını görün.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Standart hesap',
+					body: 'Aylık hesap ücreti yok. Birleşik Krallık içi ödemeler ücretsizdir: FPS, BACS veya CHAPS ile gönderme ve alma ile sterlin cinsinden çevrimiçi veya telefonla kartla ödeme.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Yurt dışına para gönderme ve alma',
+					body: 'Birleşik Krallık dışına para gönderme: işlem başına sabit 15 £ ücret artı %1,00 döviz ücreti. Birleşik Krallık dışından sterlin cinsinden para alma: sabit 10 £ ücret, diğer para birimleri için %1,00 döviz ücreti. Aracı banka ücretleri de geçerli olabilir.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kartlar',
+					body: 'İlk üç sanal kart ücretsiz, sonrasında her biri 1 £. 14 gün sonraki kart iptali: 2,50 £. Yabancı para birimiyle kart ödemeleri: %1,50 döviz ücreti.',
+					href: '/studio/cards/',
+					linkLabel: 'Kartlara göz atın'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Diğer ücretler',
+					body: '10 £’a kadar idari ücret; örneğin hesap kapanışından sonra fon iadesi veya itirazlı bir ödemede arabuluculuk. Kâğıt hesap özeti 5 £. Atıl hesaplar: altı aydan sonra aylık 1 £’a kadar. Kredi limiti (overdraft) desteklenmez; tekrarlayan negatif bakiyeler idari ücrete yol açabilir.'
+				}
+			],
+			cta: { label: 'Şartlarımızı okuyun', href: '/studio/terms-and-conditions/' }
+		},
+		{
+			slug: 'download',
+			source: 'placeholder',
+			title: 'Uygulamayı indir',
+			kicker: 'Bireysel',
+			lede: 'Uygulamada kusursuz dijital hesap açma.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Kodu okutun',
+					body: 'Telefonunuzda kamerayı açın ve uygulamayı indirmek için cihazınızı QR koduna doğrultun. Kodu okutamıyor musunuz? Aşağıdaki indirme bağlantılarını kullanın.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'iOS ve Android',
+					body: 'Uygulama iOS ve Android’de mevcuttur. [Placeholder: app store badges and links]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hesabınızı dijital olarak açın',
+					body: 'Uygulamada kusursuz dijital hesap açma. Tek ihtiyacınız olan bir e-posta adresi, telefon numarası ve pasaport gibi bir kimlik belgesi.',
+					href: '/studio/faq/',
+					linkLabel: 'SSS’yi okuyun'
+				}
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
 		}
 	]
 };
