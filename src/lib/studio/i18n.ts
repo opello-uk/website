@@ -135,6 +135,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "افتح حساباً",
       kicker: "ابدأ",
       lede: "هذا ما تحتاجه لفتح حساب أوبيلو في التطبيق، وما يحدث بعد ذلك.",
+      hero: { variant: "photo-ring", alt: "رجل على مكتب مشمس بجانبه جواز سفر وهاتف ذكي، وهو يسجل مقطع فيديو قصيراً للتحقق من الهوية، مع فاتورة مطوية على المكتب" },
       source: "placeholder",
       sections: [
         {
@@ -1780,6 +1781,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Hesap aç",
       kicker: "Başla",
       lede: "Uygulamada bir Opello hesabı açmak için gerekli olanlar ve sonrasında neler olacağı.",
+      hero: { variant: "photo-ring", alt: "Güneşli bir masada, yanında pasaport ve akıllı telefonla kısa bir kimlik doğrulama videosu kaydeden bir adam, masada katlanmış bir fatura" },
       source: "placeholder",
       sections: [
         {

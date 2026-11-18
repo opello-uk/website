@@ -9,6 +9,8 @@
 	// Current accounts split hero: generated placeholder until licensed photography is supplied.
 	import currentAccountsHero from '#lib/assets/studio/current-accounts-hero.jpg';
 	import cardsHero from '#lib/assets/studio/cards-hero.jpg';
+	// Open account photo-ring hero: generated placeholder until licensed photography is supplied.
+	import openAccountHero from '#lib/assets/studio/open-account-hero.jpg';
 	import { resolve } from '$app/paths';
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
 	import type { PageData } from './$types';
@@ -67,6 +69,19 @@
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
 				<img src={cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+			</div>
+		</section>
+		{:else if p.hero?.variant === 'photo-ring'}
+		<section class="hero hero-ringphoto hero-photoring">
+			<div class="ring" aria-hidden="true"><Ring /></div>
+			<!-- Placeholder photo; update alt with the licensed replacement -->
+			<div class="media">
+				<img src={p.slug === 'open-account' ? openAccountHero : cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+			</div>
+			<div class="copy">
+				<p class="kicker">{p.kicker}</p>
+				<h1>{p.title}</h1>
+				<p class="lede">{p.lede}</p>
 			</div>
 		</section>
 		{:else}
@@ -231,6 +246,16 @@
 	.hero-ringphoto .copy {
 		max-width: none;
 		padding-bottom: 4px;
+	}
+	/* Photo-ring hero variant (Open an account): photo card left, copy right, ring behind the photo.
+	   Reuses the ring-photo card styles; grid order flips the media to the left and the ring
+	   mirrors to the left with logical properties, so RTL keeps the ring behind the photo. */
+	.hero-photoring .media {
+		order: -1;
+	}
+	.hero-photoring .ring {
+		inset-inline-end: auto;
+		inset-inline-start: -6vw;
 	}
 	@media (max-width: 720px) {
 		.hero-ringphoto {
