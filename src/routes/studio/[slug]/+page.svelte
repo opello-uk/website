@@ -298,7 +298,7 @@
 	.hero-band .band-scrim {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(180deg, rgba(0, 20, 49, 0.55) 0%, rgba(0, 20, 49, 0.2) 45%, rgba(0, 20, 49, 0.62) 100%);
+		background: linear-gradient(180deg, rgba(0, 20, 49, 0.62) 0%, rgba(0, 20, 49, 0.34) 45%, rgba(0, 20, 49, 0.78) 100%);
 	}
 	.hero-band .copy {
 		max-width: 30rem;
