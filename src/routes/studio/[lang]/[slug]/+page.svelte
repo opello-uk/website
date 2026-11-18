@@ -47,6 +47,13 @@
 							{/each}
 						</ul>
 					{/if}
+					{#if s.items}
+						<ul class="links items">
+							{#each s.items as item (item)}
+								<li>{item}</li>
+							{/each}
+						</ul>
+					{/if}
 				</article>
 			{/each}
 		</section>

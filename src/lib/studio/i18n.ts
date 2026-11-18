@@ -917,6 +917,181 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 			],
 			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
 		},
+		{
+			slug: 'help-about-opello',
+			title: 'نبذة عن أوبيلو',
+			kicker: 'مقالات المساعدة',
+			lede: 'إجابات على أسئلة «نبذة عن أوبيلو»، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'هل لدى أوبيلو أي رسوم؟',
+					body: 'تُفصَل رسومنا وتكاليفنا كاملةً في صفحة الرسوم، ليمكنك الاطلاع على ما ينطبق على الحساب الذي تختاره قبل فتحه.',
+					href: '/studio/fees-and-charges/',
+					linkLabel: 'اطّلع على الرسوم والتكاليف'
+				},
+				{
+					source: 'placeholder',
+					heading: 'أين يقع مقر أوبيلو؟',
+					body: 'يقع مقر أوبيلو في لندن بالمملكة المتحدة. تجد بيانات شركتنا وطرق التواصل معنا في صفحة التواصل.',
+					href: '/studio/contact/',
+					linkLabel: 'اطّلع على بيانات التواصل'
+				},
+				{
+					source: 'placeholder',
+					heading: 'من أي الدول يمكنني فتح حساب؟',
+					body: 'في الوقت الحالي يمكنك فتح حساب أوبيلو إذا كنت تقيم في المملكة المتحدة. نخطط للانفتاح على دول أخرى مع مرور الوقت، وسنخبرك عند حدوث ذلك.',
+					href: '/studio/help-getting-started/',
+					linkLabel: 'اقرأ إجابة الأهلية'
+				}
+			],
+			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-articles',
+			title: 'مقالات المساعدة',
+			kicker: 'المساعدة',
+			lede: 'المقالات في كل فئة من فئات المساعدة. العناوين مأخوذة من مركز مساعدة ألجبرا. إجابات البدء وتسجيل الدخول وبطاقتي وحسابي والموفر الأخلاقي والأمن والبيانات ونبذة عن أوبيلو والتواصل معنا مكتوبة.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'البدء',
+					body: 'فتح حسابك وإعداده.',
+					href: '/studio/help-getting-started/',
+					linkLabel: 'اقرأ الإجابات',
+					items: [
+						'هل يحق لي فتح حساب؟', 'هل تجرون فحصًا ائتمانيًا؟', 'من أين أحمّل التطبيق؟', 'ماذا أحتاج لفتح حساب؟', 'لماذا أحتاج إلى التحقق من هويتي؟', 'إيجاد رقمك الضريبي (TIN)', 'كيف أضيف أموالًا؟', 'هل يقبل أوبيلو مدفوعات Bacs؟', 'هل يمكنني إيداع نقود أو شيكات في حسابي؟'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'تسجيل الدخول',
+					body: 'الدخول إلى حسابك، وما تفعله إذا لم تصل رسالة التأكيد بالبريد الإلكتروني.',
+					href: '/studio/help-logging-in/',
+					linkLabel: 'اقرأ الإجابات',
+					items: [
+						'لماذا لا تصلني رسالة تأكيد بالبريد الإلكتروني؟'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'بطاقتي',
+					body: 'استخدام بطاقتك وحمايتها وإدارتها.',
+					href: '/studio/help-my-card/',
+					linkLabel: 'اقرأ الإجابات',
+					items: [
+						'كيف أحصل على بطاقتي؟', 'كم يستغرق وصول بطاقتي؟', 'أين يمكنني استخدام بطاقتي؟', 'هل يمكنني إضافة بطاقتي إلى محفظة رقمية؟', 'هل يمكنني استخدام بطاقتي لسحب النقود؟', 'كيف يُحتسب سعر الصرف؟', 'هل معاملات بطاقتي محمية؟', 'هل يمكنني استخدام بطاقتي في الخارج؟', 'ماذا لو فُقدت بطاقتي أو سُرقت؟', 'ما المقصود بـ 3D Secure؟', 'كيف أغيّر الرقم السري لبطاقتي؟', 'كيف أتحقق من الرقم السري لبطاقتي؟', 'كيف أجمّد بطاقتي؟'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'حسابي',
+					body: 'كشوف الحساب والحدود والمكعبات والتحويلات.',
+					href: '/studio/help-my-account/',
+					linkLabel: 'اقرأ الإجابات',
+					items: [
+						'كيف أصدر كشف حساب؟', 'ما حدود حسابي؟', 'ما المقصود بالمكعبات (Cubes)؟', 'كيف أنشئ مكعبًا عاديًا؟', 'هل يمكنني إجراء تحويلات دولية؟'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'الأمن والبيانات',
+					body: 'كيف نحمي أموالك ومعلوماتك.',
+					href: '/studio/help-security-data/',
+					linkLabel: 'اقرأ الإجابات',
+					items: [
+						'هل أموالي في أمان؟', 'ما مدى أمان حسابي؟', 'ما البيانات الشخصية التي يجب أن أشاركها؟', 'كيف تعالج أوبيلو بياناتي؟', 'كيف أتوقف عن استلام إشعارات التسويق؟', 'حماية أموالك: عمليات الاحتيال بالدفع المصرّح به (APP)'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'نبذة عن أوبيلو',
+					body: 'من نحن وماذا نفعل.',
+					href: '/studio/help-about-opello/',
+					linkLabel: 'اقرأ الإجابات',
+					items: [
+						'ما هي أوبيلو؟', 'ما الذي يميز أوبيلو؟', 'هل لدى أوبيلو أي رسوم؟', 'لماذا يهمّنا المجتمع؟', 'أين يقع مقر أوبيلو؟', 'من أي الدول يمكنني فتح حساب؟'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'التواصل معنا',
+					body: 'التواصل معنا والشكاوى وإغلاق حسابك.',
+					href: '/studio/help-get-in-touch/',
+					linkLabel: 'اقرأ الإجابات',
+					items: [
+						'كيف أتواصل معكم؟', 'ما إجراءات الشكاوى لديكم؟', 'كيف أغلق حسابي؟'
+					]
+				}
+			],
+			cta: { label: 'العودة إلى المساعدة', href: '/studio/help/' }
+		},
+		{
+			slug: 'help-ethical-saver',
+			title: 'مساعدة الموفر الأخلاقي',
+			kicker: 'مقالات المساعدة',
+			lede: 'ستة عشر إجابة عن مكعبات الموفر الأخلاقي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. لا تُنشر قبل موافقة الامتثال على صياغة المدخرات والحماية والشريعة.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'ما المقصود بمكعبات الموفر الأخلاقي؟',
+					body: 'مكعبات الموفر الأخلاقي ميزة مدخرات في تطبيق أوبيلو. تكسب مبلغًا ثابتًا متفقًا عليه من الربح خلال مدة محددة، وتساهم مدخراتك في مشاريع بيئية واجتماعية. ترتبط أموالك بمحفظة تمويل مستدام يديرها بنك شركائنا، ونعرض لك تقدير انبعاثات ثاني أكسيد الكربون المتجنَّبة والمياه النظيفة المتولدة.',
+					href: '/studio/ethical-savings/',
+					linkLabel: 'اطّلع على مكعبات الموفر الأخلاقي'
+				},
+				{
+					source: 'placeholder',
+					heading: 'كيف تعمل مكعبات الموفر الأخلاقي؟',
+					body: 'اختر مقدار ما تدّخره ومدة ثابتة، مثل 3 أو 6 أو 12 شهرًا. يُعرض ربحك المتوقع قبل التأكيد. تُقفل أموالك طوال المدة، وفي نهايتها تحصل على مدخراتك بالإضافة إلى الربح المتفق عليه. العائد ثابت مسبقًا، فلا توجد صعود وهبوط في السوق.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل هناك حد أدنى للإيداع؟',
+					body: 'لا يوجد حد أدنى للإيداع في الوقت الحالي. قد يتغير هذا مستقبلًا.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل يمكنني سحب أموالي مبكرًا؟',
+					body: 'لا. مكعبات الموفر الأخلاقي مدخرات لأجل ثابت، لذا لا يمكنك السحب مبكرًا، ولا يمكنك إضافة أموال بعد إنشاء المكعب. يمكنك فتح مكعب موفر أخلاقي آخر إذا أردت الادخار أكثر. ادّخر فقط ما يمكنك تركه دون تصرف حتى يستحق المكعب.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'كيف تتوافق مكعبات الموفر الأخلاقي مع الشريعة؟',
+					body: 'تُبنى على المُرابحة، وهي بيع بتكلفة زائدة وربح متوافق مع الشريعة. يأتي ربحك من نسبة ربح متفق عليها مسبقًا على عملية بيع، لا من فائدة. ولا تُستخدم أموالك أبدًا لتمويل قطاعات تُعد ضارة، كالكحول والقمار والتبغ والأسلحة.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل يمكنني فتح أكثر من مكعب؟',
+					body: 'نعم. يمكنك فتح عدة مكعبات بمدد مختلفة، حتى إجمالي 120,000 جنيه إسترليني عبر جميع مكعبات الموفر الأخلاقي النشطة.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ماذا يحدث عند استحقاق مكعبي؟',
+					body: 'عند الاستحقاق نعرض عليك نقل أموالك إلى مكعب موفر أخلاقي جديد. إن لم ترغب في ذلك، يعود الإيداع والربح إلى حسابك في أوبيلو، حيث يمكنك سحبهما أو إنفاقهما أو ادخارهما في مكعب جديد.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل الأرباح مضمونة؟',
+					body: 'نعم. يُتفق على نسبة الربح المتوقعة مسبقًا وتُثبَّت بمجرد فتح المكعب.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل يمكنني إغلاق حسابي ولديّ مكعبات؟',
+					body: 'لا. عليك الانتظار حتى تستحق جميع مكعباتك النشطة وتعود الأموال إلى رصيد حسابك.',
+					href: '/studio/help-get-in-touch/',
+					linkLabel: 'اقرأ عن إغلاق الحساب'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل أدفع ضريبة على ربحي؟',
+					body: 'قد يكون ربحك خاضعًا للضريبة حسب ظروفك. ويُحتسب ضمن بدل المدخرات الشخصي. لا تقتطع أوبيلو الضريبة تلقائيًا، لذا قد تحتاج إلى الإبلاغ عنها لهيئة الضرائب البريطانية (HMRC).'
+				}
+			],
+			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
+		},
 	],
 	tr: [
 		{
@@ -1819,6 +1994,181 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 					body: 'Giriş sekmesinde Kartlar\'a dokun, dondurmak istediğin karta kaydır ve Kartı dondur\'u aç. Şüpheli bir hareket görürsen ya da kartını kaybedersen uygulamada bize ulaşarak da dondurabilirsin.',
 					href: '/studio/contact/',
 					linkLabel: 'İletişim seçeneklerine bak'
+				}
+			],
+			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-about-opello',
+			title: 'Opello hakkında',
+			kicker: 'Yardım makaleleri',
+			lede: 'Opello hakkında sorularının yanıtları, Algbra yardım merkezinden uyarlanıp Opello için yazıldı. İşaretli noktalar onaylanana kadar kesin değildir.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Opello\u2019nun ücretleri var mı?',
+					body: 'Ücret ve masraflarımız ücretler sayfamızda eksiksiz listelenir; böylece hesabınızı açmadan önce seçtiğiniz hesap için geçerli olanları görebilirsiniz.',
+					href: '/studio/fees-and-charges/',
+					linkLabel: 'Ücretlere ve masraflara bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Opello nerede bulunuyor?',
+					body: 'Opello, Birleşik Krallık\u2019ta Londra merkezlidir. Şirket bilgilerimize ve bize ulaşma yollarına iletişim sayfasından ulaşabilirsiniz.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim bilgilerine bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hangi ülkelerden hesap açabilirim?',
+					body: 'Şu anda Birleşik Krallık\u2019ta yaşıyorsanız bir Opello hesabı açabilirsiniz. Zamanla diğer ülkelere açılmayı planlıyoruz; bu olduğunda size haber vereceğiz.',
+					href: '/studio/help-getting-started/',
+					linkLabel: 'Uygunluk yanıtını oku'
+				}
+			],
+			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-articles',
+			title: 'Yardım makaleleri',
+			kicker: 'Yardım',
+			lede: 'Her yardım kategorisindeki makaleler. Başlıklar Algbra yardım merkezinden alınmıştır. Başlarken, Giriş yapma, Kartım, Hesabım, Etik Tasarruf, Güvenlik ve veriler, Opello hakkında ve Bize ulaşın yanıtları yazıldı.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Başlarken',
+					body: 'Hesabınızı açma ve kurma.',
+					href: '/studio/help-getting-started/',
+					linkLabel: 'Yanıtları oku',
+					items: [
+						'Bir hesap açmaya uygun muyum?', 'Kredi kontrolü yapıyor musunuz?', 'Uygulamayı nereden indirebilirim?', 'Hesap açmak için neye ihtiyacım var?', 'Kimliğimi neden doğrulamam gerekiyor?', 'Vergi kimlik numaranızı (TIN) bulma', 'Nasıl para eklerim?', 'Opello Bacs ödemelerini kabul ediyor mu?', 'Hesabıma nakit veya çek yatırabilir miyim?'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'Giriş yapma',
+					body: 'Hesabınıza giriş ve onay e-postası gelmezse yapılacaklar.',
+					href: '/studio/help-logging-in/',
+					linkLabel: 'Yanıtları oku',
+					items: [
+						'Neden onay e-postası gelmiyor?'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kartım',
+					body: 'Kartınızı kullanma, koruma ve yönetme.',
+					href: '/studio/help-my-card/',
+					linkLabel: 'Yanıtları oku',
+					items: [
+						'Kartımı nasıl alırım?', 'Kartım ne kadar sürede gelir?', 'Kartımı nerede kullanabilirim?', 'Kartımı dijital cüzdana ekleyebilir miyim?', 'Kartımla nakit çekebilir miyim?', 'Kur nasıl hesaplanır?', 'Kart işlemlerim korunuyor mu?', 'Kartımı yurt dışında kullanabilir miyim?', 'Kartım kaybolur veya çalınırsa ne olur?', '3D Secure nedir?', 'Kart PIN\u2019imi nasıl değiştiririm?', 'Kart PIN\u2019imi nasıl öğrenirim?', 'Kartımı nasıl dondururum?'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hesabım',
+					body: 'Hesap özetleri, limitler, Küpler ve transferler.',
+					href: '/studio/help-my-account/',
+					linkLabel: 'Yanıtları oku',
+					items: [
+						'Nasıl hesap özeti alırım?', 'Hesap limitlerim nelerdir?', 'Küp (Cubes) nedir?', 'Nasıl düzenli bir Küp oluştururum?', 'Uluslararası transfer yapabilir miyim?'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'Güvenlik ve veriler',
+					body: 'Paranızı ve bilgilerinizi nasıl koruyoruz.',
+					href: '/studio/help-security-data/',
+					linkLabel: 'Yanıtları oku',
+					items: [
+						'Param güvende mi?', 'Hesabım ne kadar güvenli?', 'Hangi kişisel verileri paylaşmam gerekiyor?', 'Opello verilerimi nasıl işliyor?', 'Pazarlama bildirimlerinden nasıl çıkış yaparım?', 'Paranızı güvende tutmak: yetkilendirilmiş ödeme (APP) dolandırıcılığı'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'Opello hakkında',
+					body: 'Biz kimiz ve ne yapıyoruz.',
+					href: '/studio/help-about-opello/',
+					linkLabel: 'Yanıtları oku',
+					items: [
+						'Opello nedir?', 'Opello\u2019yu farklı kılan nedir?', 'Opello\u2019nun ücretleri var mı?', 'Topluluk neden bizim için önemli?', 'Opello nerede bulunuyor?', 'Hangi ülkelerden hesap açabilirim?'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'Bize ulaşın',
+					body: 'Bize ulaşma, şikâyetler ve hesabınızı kapatma.',
+					href: '/studio/help-get-in-touch/',
+					linkLabel: 'Yanıtları oku',
+					items: [
+						'Nasıl iletişime geçerim?', 'Şikâyet süreciniz nedir?', 'Hesabımı nasıl kapatırım?'
+					]
+				}
+			],
+			cta: { label: 'Yardıma dön', href: '/studio/help/' }
+		},
+		{
+			slug: 'help-ethical-saver',
+			title: 'Etik Tasarruf yardımı',
+			kicker: 'Yardım makaleleri',
+			lede: 'Etik Tasarruf Küpleri hakkında on altı yanıt, Algbra yardım merkezinden alınarak Opello için yazıldı. Tasarruf, koruma ve Şeriat ifadeleri uyum ekibi onaylayana kadar yayımlanmaz.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Etik Tasarruf Küpleri nedir?',
+					body: 'Etik Tasarruf Küpleri, Opello uygulamasında bir tasarruf özelliğidir. Belirli bir süre boyunca sabit, önceden kararlaştırılmış bir kâr kazanırsınız ve tasarruflarınız çevresel ve sosyal projeleri destekler. Paranız partner bankamızın yönettiği sürdürülebilir finans portföyüne bağlıdır; kaçınılan tahmini CO₂ emisyonunu ve üretilen temiz suyu size gösteririz.',
+					href: '/studio/ethical-savings/',
+					linkLabel: 'Etik Tasarruf Küplerine bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Etik Tasarruf Küpleri nasıl çalışır?',
+					body: 'Ne kadar biriktireceğinizi ve 3, 6 veya 12 ay gibi sabit bir vade seçersiniz. Beklenen kârınız onaylamadan önce gösterilir. Paranız vade boyunca kilitli kalır ve vade sonunda tasarrufunuz artı anlaşılan kârınız ödenir. Getiri önceden sabitlendiği için piyasa dalgalanması yoktur.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Minimum yatırım tutarı var mı?',
+					body: 'Şu anda minimum yatırım tutarı yoktur. Bu ileride değişebilir.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Paramı erken çekebilir miyim?',
+					body: 'Hayır. Etik Tasarruf Küpleri vadeli tasarruftur; erken çekemezsiniz ve Küp oluşturulduktan sonra para ekleyemezsiniz. Daha fazla biriktirmek isterseniz başka bir Etik Tasarruf Küpü açabilirsiniz. Yalnızca Küp olgunlaşıncaya kadar dokunmayacağınız parayı biriktirin.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Etik Tasarruf Küpleri Şeriat uyumlu nasıl olur?',
+					body: 'Şeriat uyumlu, maliyete kâr eklenerek yapılan satış olan Murabaha üzerine kuruludur. Kârınız faizden değil, satışta önceden kararlaştırılan kâr oranından gelir. Paranız hiçbir zaman alkol, kumar, tütün ve silah gibi zararlı kabul edilen sektörlerin finansmanında kullanılmaz.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Birden fazla açabilir miyim?',
+					body: 'Evet. Farklı vadelerle birden çok Küp açabilirsiniz; tüm aktif Etik Tasarruf Küplerinde toplam 120.000 £ sınırıyla.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Küpüm olgunlaştığında ne olur?',
+					body: 'Olgunlaşınca paranızı yeni bir Etik Tasarruf Küpüne aktarmayı teklif ederiz. İstemezseniz yatırımınız ve kârınız Opello hesabınıza döner; oradan çekebilir, harcayabilir veya yeni bir Küpe yatırabilirsiniz.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kârlar garantili mi?',
+					body: 'Evet. Beklenen Kâr Oranı önceden kararlaştırılır ve Küp açıldığı anda sabitlenir.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Küplerim varken hesabımı kapatabilir miyim?',
+					body: 'Hayır. Tüm aktif Küplerinizin olgunlaşmasını ve paranın hesap bakiyenize dönmesini beklemeniz gerekir.',
+					href: '/studio/help-get-in-touch/',
+					linkLabel: 'Hesap kapatma hakkında oku'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kârım üzerinden vergi öder miyim?',
+					body: 'Kârınız durumunuza bağlı olarak vergiye tabi olabilir. Kişisel Tasarruf Ödeneği\u2019ne sayılır. Opello vergiyi otomatik kesmez; HMRC\u2019ye beyan etmeniz gerekebilir.'
 				}
 			],
 			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
