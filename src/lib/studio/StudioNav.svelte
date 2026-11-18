@@ -319,6 +319,11 @@
 	}
 
 	@media (max-width: 560px) {
+		/* Mobile: anchor the language menu to the button's left edge so it cannot clip off-screen. */
+		.menu {
+			left: 0;
+			right: auto;
+		}
 		/* Mobile: keep the region flag, search and both pills, as in the 390 Figma header.
 		   Tighter column gap and logo so the Login pill sits inside 390px. */
 		.nav {
