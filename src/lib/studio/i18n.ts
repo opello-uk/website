@@ -218,6 +218,177 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'about',
+			source: 'placeholder',
+			title: 'من نحن',
+			kicker: 'من نحن',
+			lede: 'خدمات مالية صُممت للبشر. نضع الإنسان والكوكب أولاً.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'هدفنا',
+					body: 'القضاء على الاستبعاد الاجتماعي والمالي وخلق مجتمع أكثر استدامة، باستخدام تقنيتنا المالية القائمة على القيم وبمقاربة تضع المجتمع أولاً. نضع الإنسان والكوكب أولاً. صُممت Opello لمن يريد أكثر من خدمات مالية ممتازة: من يريد تجربة جديدة مع المال، تجربة تعكس هويته وقيمه وأسلوب حياته، وتساعده في أعماله اليومية.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'لماذا نحن مختلفون',
+					body: 'خمسة أمور نلتزم بها.',
+					items: [
+						'لا نحتفظ بأموالك أبداً بطريقة غير أخلاقية أو عالية المخاطر.',
+						'نقدم منتجات وخدمات واضحة وسهلة الوصول وخالية من الفوائد.',
+						'نضع قيمنا موضع التنفيذ عبر ردّ العطاء لمجتمعنا والعمل معه على مبادرات الأثر الاجتماعي.',
+						'نساعدك على المشاركة من خلال أدوات الأثر الاجتماعي والبيئي داخل التطبيق.',
+						'نتّبع مقاربة منهجية للمال الأخلاقي، مع التركيز على الوصول العادل إلى الخدمات المالية المستدامة.'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'نحن لسنا بنكاً',
+					body: 'نحن حركة. انضم إلينا في رحلة نحو مال أكثر عدلاً وأخلاقية وشفافية.',
+					links: []
+				}
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'help',
+			source: 'placeholder',
+			title: 'المساعدة',
+			kicker: 'المساعدة',
+			lede: 'اعثر هنا على إجابات الأسئلة الأكثر شيوعاً أو تواصل معنا عبر دردشة الدعم داخل التطبيق.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'اعثر على إجابة',
+					body: 'اطّلع على الأسئلة التي نسمعها أكثر من غيرها، ثم استخدم الرموز التعبيرية في نهاية كل إجابة لإخبارنا هل كانت مفيدة.',
+					href: '/studio/faq/',
+					linkLabel: 'اقرأ الأسئلة المتكررة'
+				},
+				{
+					source: 'placeholder',
+					heading: 'تحدث مع فريق الدعم',
+					body: 'يمكنك الدردشة مع فريق الدعم المخصص لك في الوقت الفعلي من داخل التطبيق. وإذا فضّلت ذلك، يمكنك مراسلتنا بالبريد الإلكتروني بدلاً من ذلك.',
+					href: '/studio/contact/',
+					linkLabel: 'اطلع على خيارات التواصل'
+				},
+				{
+					source: 'placeholder',
+					heading: 'بطاقة مفقودة أو مسروقة',
+					body: 'جمّدها فوراً من التطبيق. وإذا لم تستطع الدخول إلى التطبيق، اتصل بنا على [رقم الدعم - عنصر نائب].',
+					href: '/studio/faq/',
+					linkLabel: 'اقرأ عن البطاقات المفقودة'
+				},
+				{
+					source: 'placeholder',
+					heading: 'مقالات المساعدة حسب الفئة',
+					body: 'البداية، تسجيل الدخول، بطاقتي، حسابي، مكعبات الادخار الأخلاقي، الأمان والبيانات، عن Opello، والتواصل معنا. تصفّح عناوين المقالات في كل فئة.',
+					href: '/studio/help-articles/',
+					linkLabel: 'اطلع على عناوين المقالات'
+				},
+				{
+					source: 'placeholder',
+					heading: 'تواصل معنا',
+					body: 'أفكار أو اقتراحات أو سؤال عن حسابك. البريد الإلكتروني: [بريد الدعم - عنصر نائب]',
+					href: '/studio/contact/',
+					linkLabel: 'تواصل معنا'
+				},
+				{
+					source: 'placeholder',
+					heading: 'إغلاق حسابك',
+					body: 'تحدث مع فريق الدعم داخل التطبيق أو راسلنا بالبريد الإلكتروني، وسنساعدك على إغلاق حسابك.',
+					href: '/studio/faq/',
+					linkLabel: 'اقرأ خطوات الإغلاق'
+				}
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'faq',
+			source: 'placeholder',
+			title: 'الأسئلة المتكررة',
+			kicker: 'المساعدة',
+			lede: 'نحن هنا للتواصل. إجابات على الأسئلة التي نسمعها أكثر من غيرها.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'ما تحتاجه لفتح حساب',
+					body: 'هاتف ذكي، ورقم جوال، ووثيقة هوية سارية (جواز سفر أو رخصة قيادة) وإثبات عنوانك مثل فاتورة خدمات. عند التسجيل ستسجّل فيديو قصيراً وتلتقط صوراً لوثائقك.',
+					href: '/studio/open-account/',
+					linkLabel: 'اطلع على كيفية فتح حساب'
+				},
+				{
+					source: 'placeholder',
+					heading: 'من يمكنه فتح حساب',
+					body: 'يجب أن يكون عمرك 18 عاماً أو أكثر، وأن تكون مقيم المملكة المتحدة، وأن تملك وثيقة هوية سارية وإثبات عنوان.',
+					href: '/studio/help-getting-started/',
+					linkLabel: 'اقرأ عن أهلية الفتح'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل أموالي آمنة؟',
+					body: 'نحتفظ بالأموال التي تودعها أو تستلمها في حساب أموال العملاء نديره نيابة عنك. لا نُقرض الودائع ولا نستثمرها، ولا تُستخدم حسابات العملاء إلا لحفظ أموالك.',
+					href: '/studio/help-security-data/',
+					linkLabel: 'اقرأ عن الأمان'
+				},
+				{
+					source: 'placeholder',
+					heading: 'المدفوعات المدعومة اليوم',
+					body: 'مدفوعات البطاقات، وسحب أجهزة الصراف، والمدفوعات الفورية (Faster Payments). المدفوعات بالجنيه الإسترليني. التحويلات الدولية والخصم المباشر والأوامر الدائمة وCHAPS غير متاحة بعد.',
+					href: '/studio/current-accounts/',
+					linkLabel: 'اطلع على الحسابات الجارية'
+				},
+				{
+					source: 'placeholder',
+					heading: 'بطاقة مفقودة أو مسروقة',
+					body: 'جمّد بطاقتك في التطبيق فوراً، ثم تواصل مع فريق الدعم عبر الدردشة داخل التطبيق. وإذا لم تستطع الدخول إلى التطبيق، اتصل بنا أو راسلنا بالبريد الإلكتروني.',
+					href: '/studio/help-my-card/',
+					linkLabel: 'اقرأ عن البطاقات المفقودة'
+				},
+				{
+					source: 'placeholder',
+					heading: 'إغلاق حسابك',
+					body: 'تحدث مع فريق الدعم داخل التطبيق أو راسلنا بالبريد الإلكتروني، وسنساعدك على إغلاق حسابك. بعد الإغلاق لا يمكن فتح حساب جديد.',
+					href: '/studio/help-get-in-touch/',
+					linkLabel: 'اقرأ عن إغلاق الحساب'
+				}
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'contact',
+			source: 'placeholder',
+			title: 'تواصل معنا',
+			kicker: 'المساعدة',
+			lede: 'نحن هنا للتواصل. أفكارك واقتراحاتك مرحّب بها دائماً.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'الاستفسارات العامة',
+					body: 'أفكار، واقتراحات، وملاحظات. تواصل معنا هنا. البريد الإلكتروني: [بريد الاستفسارات العامة - عنصر نائب]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'استفسارات الصحافة',
+					body: 'لكافة استفسارات الصحافة. البريد الإلكتروني: [بريد الصحافة - عنصر نائب]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'مشاكل في حسابك',
+					body: 'بطاقة مفقودة أو مسروقة، أو عملية دفع لا تعرفها: جمّد بطاقتك في التطبيق أولاً، ثم استخدم الدردشة داخل التطبيق. وإذا لم تستطع الدخول إلى التطبيق، اتصل بنا أو راسلنا بالبريد الإلكتروني.',
+					href: '/studio/faq/',
+					linkLabel: 'اقرأ الأسئلة المتكررة أولاً'
+				},
+				{
+					source: 'placeholder',
+					heading: 'الشركة والخصوصية',
+					body: 'Opello Ltd، مسجّلة في إنجلترا وويلز، رقم الشركة 17324431. Suite 401–402, Cumberland House, 80 Scrubs Lane, London NW10 6RF. للأسئلة حول بياناتك الشخصية: privacy@opello.co.uk',
+					href: '/studio/privacy-policy/',
+					linkLabel: 'اقرأ سياسة الخصوصية'
+				}
+			],
+			cta: { label: 'عودة إلى المساعدة', href: '/studio/help/' }
 		}
 	],
 	tr: [
@@ -427,6 +598,177 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'about',
+			source: 'placeholder',
+			title: 'Hakkımızda',
+			kicker: 'Hakkımızda',
+			lede: 'İnsanlar için tasarlanmış finans. İnsanı ve gezegeni önce koyarız.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Amacımız',
+					body: 'Değerlerimizle hareket eden finansal teknolojimizi ve topluluk öncelikli yaklaşımımızı kullanarak sosyal ve finansal dışlanmayı ortadan kaldırmak ve daha sürdürülebilir bir toplum yaratmak. İnsanı ve gezegeni önce koyarız. Opello, mükemmel finansal hizmetlerin ötesini isteyenler için var: kimliğini, değerlerini ve yaşam tarzını yansıtan, günlük adımlarında ona destek olan yeni bir finans deneyimi isteyenler için.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Neden farklıyız',
+					body: 'Kendimize bağlı olduğumuz beş şey.',
+					items: [
+						'Paranızı asla etik olmayan ya da yüksek riskli bir şekilde tutmayız.',
+						'Net, erişilebilir ve faizsiz ürün ve hizmetler sunarız.',
+						'Değerlerimizi topluluğumuza geri vererek ve onlarla sosyal etki girişimlerinde çalışarak hayata geçiririz.',
+						'Uygulama içindeki sosyal ve çevresel etki araçlarıyla sizi sürecin bir parçası yaparız.',
+						'Sürdürülebilir finansal hizmetlere adil erişime odaklanan, sistematik bir etik finans yaklaşımı benimseriz.'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'Biz bir banka değiliz',
+					body: 'Biz bir harekız. Daha adil, daha etik ve daha şeffaf bir finans yolculuğunda bize katılın.',
+					links: []
+				}
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'help',
+			source: 'placeholder',
+			title: 'Yardım',
+			kicker: 'Yardım',
+			lede: 'En sık duyduğumuz soruların yanıtlarını burada bulabilir ya da uygulama içi destek sohbetinden bize ulaşabilirsiniz.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Bir yanıt bulun',
+					body: 'En sık duyduğumuz sorulara göz atın; sonra her yanıtın sonundaki emojileri kullanarak işinize yarayıp yaramadığını bize bildirin.',
+					href: '/studio/faq/',
+					linkLabel: 'SSS sayfasını okuyun'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Destek ekibimizle sohbet edin',
+					body: 'Uygulamadan destek ekibimizle gerçek zamanlı sohbet edebilirsiniz. İsterseniz bunun yerine bize e-posta gönderebilirsiniz.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim seçeneklerini görün'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kayıp ya da çalınan kart',
+					body: 'Uygulamadan anında dondurun. Uygulamaya giremiyorsanız bizi [destek telefonu - yer tutucu] numarasından arayın.',
+					href: '/studio/faq/',
+					linkLabel: 'Kayıp kartlar hakkında okuyun'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kategorilere göre yardım makaleleri',
+					body: 'Başlangıç, Giriş yapma, Kartım, Hesabım, Etik Birikim Küpleri, Güvenlik ve veri, Opello hakkında ve Bize ulaşın. Her kategorideki makale başlıklarına göz atın.',
+					href: '/studio/help-articles/',
+					linkLabel: 'Makale başlıklarını görün'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Bize ulaşın',
+					body: 'Görüş, fikir, öneri ya da hesabınızla ilgili bir soru. E-posta: [destek e-postası - yer tutucu]',
+					href: '/studio/contact/',
+					linkLabel: 'Bize ulaşın'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hesabınızı kapatma',
+					body: 'Uygulamadaki destek ekibiyle sohbet edin ya da bize e-posta gönderin; hesabınızı kapatmanıza yardımcı olalım.',
+					href: '/studio/faq/',
+					linkLabel: 'Kapatma adımlarını okuyun'
+				}
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'faq',
+			source: 'placeholder',
+			title: 'Sıkça sorulan sorular',
+			kicker: 'Yardım',
+			lede: 'Bağlanmak için buradayız. En sık duyduğumuz soruların yanıtları.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Hesap açmak için gerekenler',
+					body: 'Bir akıllı telefon, bir cep telefonu numarası, geçerli bir kimlik belgesi (pasaport ya da ehliyet) ve fatura gibi adres kanıtı. Kayıt olurken kısa bir video kaydı alır ve belgelerinizin fotoğraflarını çekersiniz.',
+					href: '/studio/open-account/',
+					linkLabel: 'Hesap açma adımlarını görün'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kimler hesap açabilir',
+					body: '18 yaşından büyük, Birleşik Krallık’da ikamet eden ve geçerli bir kimlik belgesi ile adres kanıtına sahip olmanız gerekir.',
+					href: '/studio/help-getting-started/',
+					linkLabel: 'Uygunluk hakkında okuyun'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Param güvende mi?',
+					body: 'Yatırdığınız ya da aldığınız parayı sizin adınıza yönettiğimiz bir müşteri paraları hesabında tutarız. Mevduatları borç olarak vermeyiz ya da yatırım yapmayız; müşteri hesapları yalnızca fonlarınızı tutmak için kullanılabilir.',
+					href: '/studio/help-security-data/',
+					linkLabel: 'Güvenlik hakkında okuyun'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Bugün desteklediğimiz ödemeler',
+					body: 'Kart ödemeleri, ATM çekimleri ve Faster Payments. Ödemeler sterlin cinsindendir. Uluslararası ödemeler, otomatik ödeme talimatları, düzenli ödeme emirleri ve CHAPS henüz mevcut değildir.',
+					href: '/studio/current-accounts/',
+					linkLabel: 'Günlük hesapları görün'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kayıp ya da çalınan kart',
+					body: 'Kartınızı hemen uygulamadan dondurun, sonra uygulama içi sohbetten destek ekibimize ulaşın. Uygulamaya giremiyorsanız bizi arayın ya da e-posta gönderin.',
+					href: '/studio/help-my-card/',
+					linkLabel: 'Kayıp kartlar hakkında okuyun'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hesabınızı kapatma',
+					body: 'Uygulamadaki destek ekibiyle sohbet edin ya da bize e-posta gönderin; hesabınızı kapatmanıza yardımcı olalım. Kapatıldıktan sonra yeni bir hesap açılamaz.',
+					href: '/studio/help-get-in-touch/',
+					linkLabel: 'Hesap kapatma hakkında okuyun'
+				}
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'contact',
+			source: 'placeholder',
+			title: 'İletişim',
+			kicker: 'Yardım',
+			lede: 'Bağlanmak için buradayız. Görüş, fikir ve önerileriniz her zaman değerlidir.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Genel talepler',
+					body: 'Görüş, fikir ve öneriler. Buradan bize ulaşın. E-posta: [genel talep e-postası - yer tutucu]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Basın talepleri',
+					body: 'Tüm basın talepleri için. E-posta: [basın e-postası - yer tutucu]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hesabınızla ilgili sorunlar',
+					body: 'Kayıp ya da çalınan kart ya da tanımadığınız bir ödeme: önce kartınızı uygulamadan dondurun, sonra uygulama içi sohbeti kullanın. Uygulamaya giremiyorsanız bizi arayın ya da e-posta gönderin.',
+					href: '/studio/faq/',
+					linkLabel: 'Önce SSS sayfasını okuyun'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Şirket ve gizlilik',
+					body: 'Opello Ltd, İngiltere ve Galler\'de kayıtlı, şirket numarası 17324431. Suite 401–402, Cumberland House, 80 Scrubs Lane, London NW10 6RF. Kişisel verilerinizle ilgili sorular için: privacy@opello.co.uk',
+					href: '/studio/privacy-policy/',
+					linkLabel: 'Gizlilik politikasını okuyun'
+				}
+			],
+			cta: { label: 'Yardıma dön', href: '/studio/help/' }
 		}
 	]
 };
