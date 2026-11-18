@@ -126,6 +126,7 @@ export const pages: StudioPage[] = [
 		title: 'Savings',
 		kicker: 'Personal',
 		lede: 'Earn on the money you are saving. Available to UK residents.',
+		hero: { variant: 'split', alt: 'A pale peach savings jar on a sunlit wooden table beside a potted plant and a small stack of coins' },
 		sections: [
 			// OUT OF MLP1 SCOPE — section removed, do not publish.
 		],
