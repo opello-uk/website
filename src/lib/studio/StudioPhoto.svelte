@@ -20,9 +20,10 @@
 	.photo {
 		position: relative;
 		isolation: isolate;
-		min-height: clamp(420px, 51vw, 740px);
+		/* Reference band is about 0.29 of the page width tall (baseline-01): much shorter than a full-bleed hero. */
+		min-height: clamp(280px, 29vw, 440px);
 		display: flex;
-		align-items: flex-end;
+		align-items: flex-start;
 		overflow: hidden;
 		background: var(--deep);
 		color: var(--clay);
@@ -44,18 +45,25 @@
 			radial-gradient(60% 80% at 80% 30%, rgba(245, 136, 81, 0.55) 0%, rgba(245, 136, 81, 0) 60%),
 			linear-gradient(120deg, #0c6470 0%, var(--mid) 45%, var(--deep) 100%);
 	}
-	/* Scrim keeps the copy legible whatever photo replaces the placeholder. */
+	/* Soft scrim only over the top-left where the copy sits, so the photo stays bright as in the reference. */
 	.photo::before {
 		content: '';
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background: linear-gradient(90deg, rgba(0, 20, 49, 0.85) 0%, rgba(0, 20, 49, 0.35) 60%, rgba(0, 20, 49, 0) 100%);
+		background: linear-gradient(
+			115deg,
+			rgba(0, 20, 49, 0.72) 0%,
+			rgba(0, 20, 49, 0.38) 42%,
+			rgba(0, 20, 49, 0) 68%
+		);
 	}
 	/* Phones: the reference band is a short strip (about 200px at 390), copy bottom-left. */
 	@media (max-width: 800px) {
 		.photo {
 			min-height: 280px;
+			/* Phones: short strip, copy bottom-left as in the 390 frame. */
+			align-items: flex-end;
 		}
 		/* Phones: let the photo read as the band, with a bottom scrim behind the copy only. */
 		.photo::before {
@@ -83,16 +91,16 @@
 		width: 100%;
 		max-width: none;
 		margin: 0;
-		padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 72px) clamp(48px, 8vw, 120px);
+		padding: clamp(36px, 4.5vw, 64px) clamp(20px, 5vw, 72px) clamp(48px, 6vw, 88px);
 		display: grid;
-		gap: clamp(28px, 3vw, 40px);
+		gap: clamp(20px, 2.4vw, 32px);
 		justify-items: start;
 	}
 
 	h2 {
-		margin: 0 0 14px;
+		margin: 0 0 10px;
 		font-weight: 500;
-		font-size: clamp(28px, 4.6vw, 66px);
+		font-size: clamp(28px, 4.4vw, 62px);
 		line-height: 1.08;
 		letter-spacing: -0.015em;
 		max-width: 14ch;
