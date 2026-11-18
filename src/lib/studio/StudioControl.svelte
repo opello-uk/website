@@ -1,9 +1,9 @@
 <script lang="ts">
 	// "More control. More confidence." tiles. Tile labels follow the Figma board; each now links to its studio page. The intro line is Algbra homepage wording (algbra.com, "One app. Multiple currencies." block), with the fee claim flagged for Algbra or compliance sign-off. The heading is still placeholder.
+	// MLP1: transfers only. Virtual cards page and currency-exchange (multi-currency) are out of MLP1 scope for now; restore when in scope.
 	const tiles = [
 		{ title: 'Global transfers', icon: 'globe', href: '/studio/transfers/' },
-		{ title: 'Virtual cards', icon: 'card', href: '/studio/virtual-cards/' },
-		{ title: 'Currency exchange', icon: 'exchange', href: '/studio/multi-currency/' }
+		{ title: 'Virtual card', icon: 'card', href: '/studio/cards/' }
 	];
 </script>
 

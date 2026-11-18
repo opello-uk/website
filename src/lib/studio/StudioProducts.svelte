@@ -7,16 +7,16 @@
 	// Photos are generated placeholders, marked on the tile, until licensed photography is supplied.
 	const products = [
 		{
-			slug: 'multi-currency',
-			title: 'Hold money in multiple currencies',
-			body: 'One app. Multiple currencies.',
+			slug: 'transfers',
+			title: 'Send money home and abroad',
+			body: 'Send GBP overseas and pay friends and family in seconds.',
 			tone: 'a',
 			src: current
 		},
 		{
-			slug: 'cubes',
-			title: 'Transform how you save with Cubes',
-			body: 'Create a Cube for each goal, set money aside and track your progress in a few taps.',
+			slug: 'savings',
+			title: 'Savings pots',
+			body: 'Set money aside for the things that matter, in a few taps.',
 			tone: 'b',
 			src: savings
 		},

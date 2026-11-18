@@ -5,8 +5,8 @@
 	// Placeholder tabs: they will switch the hero and sections once built.
 	const tabs = [
 		{ id: 'personal', label: 'Personal', href: '/studio/personal/' },
-		{ id: 'business', label: 'Business', href: '/studio/business/' },
-		{ id: 'premium', label: 'Premium', href: '/studio/premium/' }
+		{ id: 'business', label: 'Business', href: '/studio/all-plans/' } /* out of MLP1; routed to all-plans until business launches */,
+		{ id: 'premium', label: 'Premium', href: '/studio/all-plans/' } /* out of MLP1; routed to all-plans */
 	];
 	// Studio build: the active tab is fixed until the tabs drive real sections.
 	const active = 'personal';
