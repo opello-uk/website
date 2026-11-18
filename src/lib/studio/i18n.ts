@@ -67,6 +67,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "البطاقات",
       kicker: "شخصي",
       lede: "أنفق في أي مكان يُقبل فيه بطاقك، مع بطاقات يمكنك تجميدها والتحكم بها من التطبيق.",
+      hero: { variant: "ring-photo", alt: "بطاقة خصم بلون الخوخ بجانب هاتف يُستخدم للتسوق عبر الإنترنت على طاولة مشرقة" },
       source: "placeholder",
       sections: [
         {
@@ -1675,6 +1676,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Kartlar",
       kicker: "Bireysel",
       lede: "Kartının kabul edildiği her yerde harca; kartlarını uygulama içinde dondurup kontrol edebilirsin.",
+      hero: { variant: "ring-photo", alt: "Güneşli bir masada online alışveriş için kullanılan bir telefonun yanında duran açık şeftali renkli bir banka kartı" },
       source: "placeholder",
       sections: [
         {

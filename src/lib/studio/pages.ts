@@ -10,7 +10,7 @@ export type StudioPage = {
 	lede: string;
 	// Optional unique hero. 'split' = photo card beside the copy (landing-page card language);
 	// default is the shared ring hero. Placeholder photos keep their alt updated with the licensed replacement.
-	hero?: { variant: 'split'; alt: string };
+	hero?: { variant: 'split' | 'ring-photo'; alt: string };
 	source: Source;
 	sourceNotes?: string[];
 	sections: Section[];
@@ -73,6 +73,8 @@ export const pages: StudioPage[] = [
 		slug: 'cards',
 		title: 'Cards',
 		kicker: 'Personal',
+		// Placeholder photo (generated until licensed photography lands).
+		hero: { variant: 'ring-photo', alt: 'A pale peach debit card resting beside a phone being used to shop online at a sunlit table' },
 		lede: 'Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app.',
 		sections: [
 			/* Out of MLP1 scope — physical cards and mobile wallets (Apple Pay / Google Pay) are not confirmed for day one. Do not publish.

@@ -4,6 +4,7 @@
 	import Ring from '#lib/components/Ring.svelte';
 	// Generated placeholder photo until licensed photography is supplied.
 	import split from '#lib/assets/studio/split.jpg';
+	import cardsHero from '#lib/assets/studio/cards-hero.jpg';
 	import { resolve } from '$app/paths';
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
 	import type { PageData } from './$types';
@@ -49,6 +50,19 @@
 				<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
 				<p class="lede">{p.lede}</p>
+			</div>
+		</section>
+		{:else if p.hero?.variant === 'ring-photo'}
+		<section class="hero hero-ringphoto">
+			<div class="ring" aria-hidden="true"><Ring /></div>
+			<div class="copy">
+				<p class="kicker">{p.kicker}</p>
+				<h1>{p.title}</h1>
+				<p class="lede">{p.lede}</p>
+			</div>
+			<!-- Placeholder photo; update alt with the licensed replacement -->
+			<div class="media">
+				<img src={cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
 			</div>
 		</section>
 		{:else}
@@ -181,6 +195,52 @@
 	.hero-split .copy {
 		max-width: none;
 		padding-bottom: 4px;
+	}
+	/* Ring-photo hero variant: copy left, photo card right, ring motif behind the photo (Cards). */
+	.hero-ringphoto {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		gap: clamp(24px, 4vw, 48px);
+		align-items: end;
+		min-height: min(46vh, 420px);
+	}
+	.hero-ringphoto .ring {
+		top: -40px;
+		inset-inline-end: -6vw;
+		width: min(38vw, 360px);
+	}
+	.hero-ringphoto .media {
+		position: relative;
+		align-self: stretch;
+		min-height: 260px;
+		border-radius: 24px;
+		overflow: hidden;
+		background: linear-gradient(135deg, #f58851 0%, #001431 70%);
+	}
+	.hero-ringphoto .media img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.hero-ringphoto .copy {
+		max-width: none;
+		padding-bottom: 4px;
+	}
+	@media (max-width: 720px) {
+		.hero-ringphoto {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 18px;
+			min-height: 0;
+		}
+		.hero-ringphoto .media {
+			min-height: 0;
+			aspect-ratio: 16 / 10;
+		}
+		.hero-ringphoto .ring {
+			width: 62vw;
+		}
 	}
 	@media (max-width: 720px) {
 		.hero-split {
