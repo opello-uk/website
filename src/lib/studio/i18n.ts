@@ -734,6 +734,189 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 			],
 			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
 		},
+
+		{
+			slug: 'help-getting-started',
+			title: 'البدء',
+			kicker: 'مقالات المساعدة',
+			lede: 'إجابات على أسئلة البدء، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'هل يحق لي فتح حساب؟',
+					body: 'لفتح حساب أوبيلو، يجب أن تكون مقيمًا في المملكة المتحدة وعمرك 18 عامًا أو أكثر. ستحتاج أيضًا إلى وثيقة هوية سارية مع صورة، مثل جواز سفر أو رخصة قيادة.',
+					href: '/studio/help-articles/',
+					linkLabel: 'العودة إلى عناوين المقالات'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل تجرون فحصًا ائتمانيًا؟',
+					body: 'لا. لا نجري فحصًا ائتمانيًا، لذا فإن فتح حساب أوبيلو لا يؤثر في تصنيفك الائتماني أو قدرتك على الاقتراض. وقد تترك فحوصات الهوية لدينا أثرًا خفيفًا في سجلك الائتماني لا يؤثر في تصنيفك.',
+					href: '/studio/open-account/',
+					linkLabel: 'اطّلع على كيفية فتح حساب'
+				},
+				{
+					source: 'placeholder',
+					heading: 'من أين أحمّل التطبيق؟',
+					body: 'تطبيق أوبيلو متاح لنظام iOS من متجر التطبيقات، ولنظام Android من متجر Play.',
+					href: '/studio/download/',
+					linkLabel: 'احصل على التطبيق'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ماذا أحتاج لفتح حساب؟',
+					body: 'تحتاج إلى جهاز متصل بالإنترنت به كاميرا، ورقم هاتف محمول، ووثيقة هوية سارية مثل جواز سفر أو رخصة قيادة، وإثبات عنوان مثل فاتورة مرافق. في التطبيق تسجّل فيديو قصيرًا لنفسك وتلتقط صورة لوثيقتك. وبعد الموافقة يمكنك استخدام حسابك فورًا.',
+					href: '/studio/faq/',
+					linkLabel: 'المزيد في الأسئلة الشائعة'
+				},
+				{
+					source: 'placeholder',
+					heading: 'لماذا أحتاج إلى التحقق من هويتي؟',
+					body: 'تقتضي القواعد المالية التحقق من هويتك، ويُعرف ذلك باسم «اعرف عميلك» (KYC) والعناية الواجبة بالعميل (CDD). تحمي هذه الفحوصات مجتمعنا وتحافظ على أمان حسابك. ستحتاج إلى وثيقة هوية حكومية سارية مع صورة، ويمكننا قبول الوثيقة الأصلية فقط. وإذا لم نتمكن من التحقق من عنوانك مما قدّمته، فقد نطلب إثبات عنوان وسنخبرك بما نحتاجه.',
+					href: '/studio/open-account/',
+					linkLabel: 'اطّلع على كيفية فتح حساب'
+				},
+				{
+					source: 'placeholder',
+					heading: 'إيجاد رقمك الضريبي (TIN)',
+					body: 'يعتمد رقمك الضريبي على البلد الذي أصدره. بعض الدول تستخدم رقم هوية وطنية بدلًا منه، وبعضها لا يصدر رقمًا ضريبيًا إطلاقًا. قائمة الدول موجودة في صفحتها الخاصة.',
+					href: '/studio/help-tin/',
+					linkLabel: 'اطّلع على قائمة الدول'
+				},
+				{
+					source: 'placeholder',
+					heading: 'كيف أضيف أموالًا؟',
+					body: 'انقر على «إضافة أموال» في تبويب الصفحة الرئيسية. يمكنك إجراء تحويل بنكي فوري من حساب بنكي مدعوم دون إدخال أي بيانات بنكية. يمكنك أيضًا إرسال أموال بالتحويل من بيانات حسابك، ومعظم التحويلات فورية. ولنقل الأموال من مكعباتك إلى رصيدك الرئيسي، استخدم خيار المكعبات، وهو فوري أيضًا.',
+					href: '/studio/transfers/',
+					linkLabel: 'اطّلع على التحويلات'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل يقبل أوبيلو مدفوعات Bacs؟',
+					body: 'نعم. يمكنك استلام راتبك أو مزاياك في حساب أوبيلو.',
+					href: '/studio/faq/',
+					linkLabel: 'تحقق من المدفوعات في الأسئلة الشائعة'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل يمكنني إيداع نقود أو شيكات في حسابي؟',
+					body: 'ليس في الوقت الحالي. لا نقبل إيداع النقود أو الشيكات.'
+				}
+			],
+			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
+		},
+
+		{
+			slug: 'help-security-data',
+			title: 'الأمن والبيانات',
+			kicker: 'مقالات المساعدة',
+			lede: 'إجابات على أسئلة الأمن والبيانات، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'ما مدى أمان حسابي؟',
+					body: 'يستخدم تطبيق أوبيلو تشفيرًا بمعايير بنكية لحماية بياناتك أثناء انتقالها وأثناء تخزينها. وللحفاظ على أمان حسابك، احفظ سرية بيانات حسابك وبطاقتك. وإذا ظننت أن شخصًا آخر يصل إلى حسابك، جمّد بطاقتك وتواصل معنا فورًا.',
+					href: '/studio/contact/',
+					linkLabel: 'اطّلع على خيارات التواصل'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ما البيانات الشخصية التي أحتاج إلى مشاركتها؟',
+					body: 'لفتح حساب نحتاج اسمك القانوني، وتاريخ ميلادك، ورقم هاتفك، وبريدك الإلكتروني، ووثائق الهوية، وتفاصيل تسليم البطاقة. وقد نطلب في بعض الحالات معلومات إضافية لنتمكن من دعمك في خدماتنا. نستخدمها للتحقق من هويتك، وحماية الحسابات من الاحتيال، ومنع الجرائم المالية، وتقديم خدماتنا. إشعار الخصوصية يشرح المزيد.',
+					href: '/privacy/',
+					linkLabel: 'اقرأ إشعار الخصوصية'
+				},
+				{
+					source: 'placeholder',
+					heading: 'كيف تعالج أوبيلو بياناتي؟',
+					body: 'يشرح إشعار الخصوصية كيف نعالج بياناتك الشخصية ونحميها. يمكنك قراءته على هذا الموقع أو في التطبيق.',
+					href: '/studio/privacy-policy/',
+					linkLabel: 'اقرأ سياسة الخصوصية'
+				},
+				{
+					source: 'placeholder',
+					heading: 'كيف أتوقف عن تلقّي الإشعارات التسويقية؟',
+					body: 'انتقل إلى قسم الخصوصية في تطبيق أوبيلو. هناك يمكنك إلغاء الاشتراك في رسائل البريد الإلكتروني التسويقية والإشعارات الفورية أو إعادته في أي وقت.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'حماية أموالك: عمليات الاحتيال بالتحويل الفوري (APP)',
+					body: 'الاحتيال بالتحويل الفوري هو أن يُخدعك أحد لإرسال أموال بتحويل بنكي إلى محتال. قد يتظاهر المحتالون بأنهم بنكك أو مكتب ضرائب المملكة المتحدة أو شركة توصيل، أو يتظاهرون بأنهم صديق أو قريب يمر بمحنة، أو يعرضون مشتريات لا تصل أبدًا، أو يبنون علاقة حب ثم يطلبون المال، أو يعدون بعوائد سريعة على استثمار. احمِ نفسك بالبقاء يقظًا تجاه الطلبات العاجلة، والتحقق من تفاصيل الدفع عبر رقم تعرفه أصلًا، وعدم نقل المال إلى حساب «آمن» لمجرد أن أحدهم طلب ذلك هاتفيًا. وإذا أرسلت المال في عملية احتيال، تواصل معنا في التطبيق أو بالبريد الإلكتروني فورًا، وأبلغ مكتب الاحتيال الإجرامي على 0300 123 2040 (وفي اسكتلندا تواصل مع الشرطة على 101). وكلما أبلغت أسرع، زادت فرصنا في استرداد المال.',
+					href: '/studio/faq/',
+					linkLabel: 'اقرأ الأسئلة الشائعة'
+				}
+			],
+			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-my-card',
+			title: 'بطاقتي',
+			kicker: 'مقالات المساعدة',
+			lede: 'إجابات على أسئلة بطاقتي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'كيف أحصل على بطاقتي؟',
+					body: 'انقر على «البطاقات» في تبويب الصفحة الرئيسية، ثم انقر على + للطلب. بطاقتك الافتراضية في التطبيق وتعمل في المدفوعات عبر الإنترنت.',
+					links: [
+						{ label: 'تعرّف على البطاقات', href: '/studio/cards/' }
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'أين يمكنني استخدام بطاقتي؟',
+					body: 'نعم. يمكنك استخدام بطاقتك للدفع عبر الإنترنت في أي مكان يظهر فيه شعار شبكة البطاقة. وإذا واجهتك أي مشكلة، تواصل معنا عبر الدردشة داخل التطبيق.',
+					href: '/studio/cards/',
+					linkLabel: 'تعرّف على البطاقات'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل يمكنني استخدام بطاقتي في الخارج؟',
+					body: 'نعم. يمكنك استخدام بطاقتك عبر الإنترنت في أي مكان تقبل فيه شبكة البطاقة، وهو ما يغطي أكثر من 210 دولة وإقليمًا.',
+					href: '/studio/fees-and-charges/',
+					linkLabel: 'اطّلع على الرسوم والأسعار'
+				},
+				{
+					source: 'placeholder',
+					heading: 'كيف يُحسب سعر الصرف؟',
+					body: 'عند الدفع بعملة أخرى، نستخدم سعر صرف شبكة البطاقة. ويمكنك الاطلاع على الأسعار الحالية في موقع شبكة البطاقة في أي وقت.',
+					href: '/studio/fees-and-charges/',
+					linkLabel: 'اطّلع على الرسوم والأسعار'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل معاملات بطاقتي محمية؟',
+					body: 'نعم. مشتريات البطاقة تغطيها خطة استرداد المبالغ المدفوعة لشبكة البطاقة. يمكنك الاعتراض على دفعة إذا لم تصل السلع أو الخدمات، أو كانت مخالفة للوصف أو معيبة، أو لم تُعالج عملية استرداد، أو تكرّر الرسوم أو وقع خطأ فيها، أو لم يُصرَّح بالدفع. حاول حل الأمر مع التاجر أولًا. وبعد رفع مطالبة الاسترداد، يملك التاجر عادةً حتى 45 يومًا للرد، وقد تستغرق العملية عدة أسابيع. وسنُبقيك على اطلاع دائم.',
+					href: '/studio/faq/',
+					linkLabel: 'اقرأ الأسئلة الشائعة'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ماذا لو فُقدت بطاقتي أو سُرقت؟',
+					body: 'جمّد البطاقة فورًا. انقر على «البطاقات» في تبويب الصفحة الرئيسية، ثم انقر على «تجميد البطاقة»، ثم اختر «الإبلاغ عن فقد أو سرقة». يُرجى أيضًا التواصل معنا، خاصة إذا رأيت معاملات لم تجريها.',
+					href: '/studio/help/',
+					linkLabel: 'تواصل معنا'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ما المقصود بـ 3D Secure؟',
+					body: '3D Secure فحص إضافي لبعض المدفوعات عبر الإنترنت. عند حاجة الدفعة إليه، نرسل رمزًا لمرة واحدة برسالة نصية إلى رقم الهاتف المحمول المسجَّل في حسابك، وأدخله عند الدفع. ولن تحتاج إليه إلا عندما تُؤشَّر الدفعة، وليس في كل مرة. لن نطلب منك مشاركة الرمز أبدًا، فلا تعطه لأي شخص مهما بدل موثوقًا. وإذا لم تتعرف على الدفعة، لا تدخل الرمز. جمّد بطاقتك في التطبيق وتواصل معنا فورًا.',
+					href: '/studio/contact/',
+					linkLabel: 'اطّلع على خيارات التواصل'
+				},
+				{
+					source: 'placeholder',
+					heading: 'كيف أجمّد بطاقتي؟',
+					body: 'انقر على «البطاقات» في تبويب الصفحة الرئيسية، ومرّر إلى البطاقة التي تريد تجميدها، وفعّل «تجميد البطاقة». ويمكنك أيضًا تجميدها بالتواصل معنا في التطبيق فور ملاحظة نشاط مشبوه أو فقدان بطاقتك.',
+					href: '/studio/contact/',
+					linkLabel: 'اطّلع على خيارات التواصل'
+				}
+			],
+			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
+		},
 	],
 	tr: [
 		{
@@ -1454,6 +1637,188 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 					body: 'Hesabını uygulama içi sohbetten Destek ekibimizle konuşarak kapatabilirsin. Giriş yapıp orada bize söylemen, bunu senin istediğini doğrulamamızı sağlar. Önce bakiyeni sıfıra indirmen gerekir. Şu anda bir hesap kapatıldığında yeniden açamıyor ya da sana sonradan yeni bir hesap açamıyoruz. Bir şey ters gittiyse lütfen karar vermeden önce bize söyle ki düzeltme şansımız olsun.',
 					href: '/studio/contact/',
 					linkLabel: 'İletişim bilgilerine bak'
+				}
+			],
+			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
+		},
+
+		{
+			slug: 'help-getting-started',
+			title: 'Başlarken',
+			kicker: 'Yardım makaleleri',
+			lede: 'Başlarken sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Hesap açmaya uygun muyum?',
+					body: 'Bir Opello hesabı açmak için Birleşik Krallık\'ta ikamet eden ve 18 yaşından büyük olman gerekir. Ayrıca geçerli bir fotoğraflı kimlik gerekir; pasaport ya da sürücü belgesi gibi.',
+					href: '/studio/help-articles/',
+					linkLabel: 'Makale başlıklarına dön'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kredi sorgulaması yapıyor musunuz?',
+					body: 'Hayır. Kredi sorgulaması yapmıyoruz, yani bir Opello hesabı açmak kredi puanını ya da borç alma gücünü etkilemez. Kimlik kontrollerimiz kredi geçmişinde puanını etkilemeyen hafif bir iz bırakabilir.',
+					href: '/studio/open-account/',
+					linkLabel: 'Hesap açmayı gör'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Uygulamayı nereden indiririm?',
+					body: 'Opello uygulaması iOS için App Store\'dan, Android için Play Store\'dan indirilebilir.',
+					href: '/studio/download/',
+					linkLabel: 'Uygulamayı al'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hesap açmak için neye ihtiyacım var?',
+					body: 'Kamerası olan internete bağlı bir cihaz, bir cep telefonu numarası, pasaport ya da sürücü belgesi gibi geçerli bir kimlik belgesi ve fatura gibi bir adres kanıtı gerekir. Uygulamada kendinin kısa bir videosunu çekersin ve kimlik belgenin fotoğrafını çekersin. Onaydan sonra hesabını hemen kullanabilirsin.',
+					href: '/studio/faq/',
+					linkLabel: 'SSS\'de daha fazlası'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kimliğimi neden doğrulamam gerekiyor?',
+					body: 'Mali kurallar kim olduğunu doğrulamamızı gerektirir; buna Müşterini Tanı (KYC) ve Müşteri Tespiti (CDD) denir. Bu kontroller topluluğumuzu korur ve hesabını güvende tutar. Geçerli, süresi dolmamış devlet fotoğraflı kimlik belgesi gerekir ve yalnızca orijinal belgeyi kullanabiliriz. Verdiğin bilgilerden adresini doğrulayamazsak adres kanıtı isteyebiliriz ve neye ihtiyacımız olduğunu söyleriz.',
+					href: '/studio/open-account/',
+					linkLabel: 'Hesap açmayı gör'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Vergi numaranı (TIN) bulmak',
+					body: 'Vergi numaran, onu veren ülkeye bağlıdır. Bazı ülkeler bunun yerine ulusal kimlik numarası kullanır, bazıları hiç vergi numarası vermez. Ülke listesi kendi sayfasındadır.',
+					href: '/studio/help-tin/',
+					linkLabel: 'Ülke listesini gör'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Nasıl para eklerim?',
+					body: 'Giriş sekmesinde Para Ekle\'ye dokun. Desteklenen bir banka hesabından, banka bilgisi girmeden anında banka transferi yapabilirsin. Ayrıca kendi hesap bilgilerinle transferle para gönderebilirsin; transferlerin çoğu anında gerçekleşir. Küplerinden ana bakiyene para taşımak için Küpler seçeneğini kullan, o da anındadır.',
+					href: '/studio/transfers/',
+					linkLabel: 'Transferlere bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Opello Bacs ödemelerini kabul ediyor mu?',
+					body: 'Evet. Maaşını ya da sosyal yardımlarını Opello hesabına alabilirsin.',
+					href: '/studio/faq/',
+					linkLabel: 'SSS\'de ödemeleri kontrol et'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hesabıma nakit veya çek yatırabilir miyim?',
+					body: 'Şu an için hayır. Nakit ya da çek kabul etmiyoruz.'
+				}
+			],
+			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-security-data',
+			title: 'Güvenlik ve veriler',
+			kicker: 'Yardım makaleleri',
+			lede: 'Güvenlik ve veri sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Hesabım ne kadar güvenli?',
+					body: 'Opello uygulaması verilerini hem taşınırken hem de depolanırken banka seviyesinde şifrelemeyle korur. Hesabını güvende tutmak için hesap bilgilerini ve kartını gizli tut. Başkasının hesabına eriştiğini düşünürsen kartını dondur ve hemen bize ulaş.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim seçeneklerine bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hangi kişisel verileri paylaşmam gerekiyor?',
+					body: 'Hesap açmak için yasal adına, doğum tarihine, telefon numaranı, e-posta adresini, kimlik belgelerini ve kart teslim bilgilerini vermen gerekir. Bazı durumlarda hizmetlerimizle sana destek olmak için daha fazla bilgi isteyebiliriz. Bunları kimliğini doğrulamak, hesapları dolandırıcılıktan korumak, mali suçları önlemek ve hizmetlerimizi sunmak için kullanırız. Gizlilik bildirimimiz daha fazlasını açıklar.',
+					href: '/privacy/',
+					linkLabel: 'Gizlilik bildirimini oku'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Opello verilerimi nasıl işliyor?',
+					body: 'Gizlilik bildirimimiz kişisel verilerini nasıl işlediğimizi ve koruduğumuzu açıklar. Bunu bu web sitesinde ya da uygulamada okuyabilirsin.',
+					href: '/studio/privacy-policy/',
+					linkLabel: 'Gizlilik politikasını oku'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Pazarlama bildirimlerinden nasıl çıkabilirim?',
+					body: 'Opello uygulamasındaki Gizlilik bölümüne git. Oradan pazarlama e-postalarından ve anlık bildirimlerden istediğin an çıkabilir ya da geri abone olabilirsin.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Paranı güvende tutmak: yetkili anlık ödeme (APP) dolandırıcılığı',
+					body: 'APP dolandırıcılığı, banka transferiyle parayı bir dolandırıcıya göndermek için kandırılmaktır. Dolandırıcılar bankanın, vergi dairesinin ya da bir kargo firmasının gibi davranabilir; belası olan bir arkadaş ya da akraba rolü oynayabilir; hiç gelmeyen satışlar teklif edebilir; para istemek için bir aşk ilişkisi kurabilir ya da yatırıma hızlı getiri vaat edebilir. Kendini koru: acele isteklere karşı tetikte ol, ödeme detaylarını zaten tanıdığın bir numaradan kontrol et ve telefonda birisi istedi diye parayı "güvenli" bir hesaba taşıma. Dolandırıcılıkla para gönderdiysen uygulama ya da e-posta üzerinden hemen bize ulaş ve Action Fraud\'a 0300 123 2040 üzerinden bildir (İskoçya\'da 101 ile polise haber ver). Ne kadar erken bildirirsen paranı geri alma şansımız o kadar yüksek olur.',
+					href: '/studio/faq/',
+					linkLabel: 'SSS\'yi oku'
+				}
+			],
+			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-my-card',
+			title: 'Kartım',
+			kicker: 'Yardım makaleleri',
+			lede: 'Kartım sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Kartımı nasıl alırım?',
+					body: 'Giriş sekmesinde Kartlar\'a dokun, sonra sipariş vermek için +\'ya dokun. Sanal kartın uygulamadadır ve çevrim içi ödemelerde çalışır.',
+					links: [
+						{ label: 'Kartları öğren', href: '/studio/cards/' }
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kartımı nerede kullanabilirim?',
+					body: 'Evet. Kartını kart ağı logosunun göründüğü her yerde çevrim içi ödemelerde kullanabilirsin. Sorun yaşarsan uygulama içi sohbetten bize ulaş.',
+					href: '/studio/cards/',
+					linkLabel: 'Kartları öğren'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kartımı yurt dışında kullanabilir miyim?',
+					body: 'Evet. Kartını kart ağının kabul edildiği her yerde çevrim içi kullanabilirsin; bu 210\'dan fazla ülke ve bölgeyi kapsar.',
+					href: '/studio/fees-and-charges/',
+					linkLabel: 'Ücret ve masraflara bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Döviz kuru nasıl hesaplanır?',
+					body: 'Başka bir para birimiyle ödediğinde kart ağının döviz kurunu kullanırız. Güncel kurları kart ağının web sitesinden istediğin an kontrol edebilirsin.',
+					href: '/studio/fees-and-charges/',
+					linkLabel: 'Ücret ve masraflara bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kart işlemlerim korunuyor mu?',
+					body: 'Evet. Kart alışverişleri kart ağının geri ödeme (chargeback) planı kapsamındadır. Mallar ya da hizmetler gelmediyse, tanımlandığı gibi olmadıysa ya da hatalıysa, iade işlenmediyse, ücret iki kez ya da yanlış kesildiyse veya ödeme yetkilendirilmemişse bir ödemeye itiraz edebilirsin. Önce satıcıyla çözmeye çalış. Geri ödeme talebi açıldıktan sonra satıcının genelde 45 günü olur ve süreç birkaç hafta sürebilir. Seni bilgilendirmeye devam edeceğiz.',
+					href: '/studio/faq/',
+					linkLabel: 'SSS\'yi oku'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kartım kaybolursa ya da çalınırsa ne yaparım?',
+					body: 'Kartı hemen dondur. Giriş sekmesinde Kartlar\'a dokun, Kartı dondur\'a dokun, sonra Kayıp veya çalıntı bildir\'i seç. Özellikle yapmadığın işlemler görürsen lütfen bize de ulaş.',
+					href: '/studio/help/',
+					linkLabel: 'İletişime geç'
+				},
+				{
+					source: 'placeholder',
+					heading: '3D Secure nedir?',
+					body: '3D Secure bazı çevrim içi ödemeler için ekstra bir kontroldür. Bir ödeme buna ihtiyaç duyduğunda hesabında kayıtlı mobil numaraya tek kullanımlık bir kodu kısa mesajla göndeririz ve kodu ödeme sırasında girersin. Yalnızca ödeme işaretlendiğinde gerekir, her seferinde değil. Senden kod paylaşmanı asla istemeyiz; kime söylerse söylesin, kod verme. Ödemeyi tanımıyorsan kodu girme. Kartını uygulamada dondur ve hemen bize ulaş.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim seçeneklerine bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kartımı nasıl dondururum?',
+					body: 'Giriş sekmesinde Kartlar\'a dokun, dondurmak istediğin karta kaydır ve Kartı dondur\'u aç. Şüpheli bir hareket görürsen ya da kartını kaybedersen uygulamada bize ulaşarak da dondurabilirsin.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim seçeneklerine bak'
 				}
 			],
 			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
