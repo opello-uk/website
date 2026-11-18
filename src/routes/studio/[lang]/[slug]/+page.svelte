@@ -9,6 +9,12 @@
 	let { data }: { data: PageData } = $props();
 	const p = $derived(data.page);
 	const lang = $derived(data.lang as 'ar' | 'tr');
+	// Keep the document element in sync after client-side navigation
+	// (the prerender hook sets it in the static HTML).
+	$effect(() => {
+		document.documentElement.lang = lang;
+		document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+	});
 	const t = $derived(chrome[lang]);
 	// Internal links point to this language's equivalent when it exists,
 	// otherwise they keep their English target.
