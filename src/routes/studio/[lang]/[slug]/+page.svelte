@@ -108,6 +108,13 @@
 		height: 100%;
 		display: block;
 	}
+	/* RTL: the mirrored ring hangs over the first card's text at 1440; lift and
+	   shrink it slightly so its lower edge clears the card row (LTR pages keep
+	   the baseline-size ring) */
+	:global([dir="rtl"]) .ring {
+		top: -48px;
+		width: min(40vw, 380px);
+	}
 	.copy {
 		position: relative;
 		max-width: 40rem;
