@@ -28,7 +28,8 @@ export const pages: StudioPage[] = [
 			// OUT OF MLP1 SCOPE — section removed, do not publish.
 
 			{ heading: 'Send and receive money', body: 'Instant bank transfers, international transfers, and payments to friends and family.', href: '/studio/transfers/', linkLabel: 'See transfers' },
-			{ heading: 'Spend with your card', body: 'Physical and virtual cards, card controls and spending abroad.', href: '/studio/cards/', linkLabel: 'See cards' },
+			// Out of MLP1 scope — physical cards not confirmed for day one; wording changed to virtual cards only.
+			{ heading: 'Spend with your card', body: 'Virtual cards, card controls and spending abroad.', href: '/studio/cards/', linkLabel: 'See cards' },
 			{ heading: 'Find your fit', body: 'Different plans for different needs. Explore features, pricing, and benefits to find the one that works best for you.', href: '/studio/all-plans/', linkLabel: 'See all plans' },
 			// OUT OF MLP1 SCOPE — section removed, do not publish.
 
@@ -69,19 +70,25 @@ export const pages: StudioPage[] = [
 		kicker: 'Personal',
 		lede: 'Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app.',
 		sections: [
+			/* Out of MLP1 scope — physical cards and mobile wallets (Apple Pay / Google Pay) are not confirmed for day one. Do not publish.
 			{ heading: 'Physical cards', body: 'Choose from one of three biodegradable cards and get it delivered to your home for free.' }, { heading: 'Add your card to your phone', body: 'Pay with your phone using a mobile wallet. It is an easy, secure and private way to pay.' },
+			*/
+			{ heading: 'Virtual cards', body: 'A virtual card lives in the app and works for online payments.' },
 			{ heading: 'Card controls and alerts', body: 'In the app, freeze or unfreeze your card and change your PIN with a few taps. Get a real-time push notification after every transaction.', href: '/studio/help-my-card/', linkLabel: 'Read about card controls' },
-			{ heading: 'Contactless and identity checks', body: 'One tap pays in stores, online or in-app. Your card scheme\'s identity check helps confirm that online purchases are yours.', href: '/studio/open-account/', linkLabel: 'See how to open an account' }],
+			// Out of MLP1 scope — contactless in-store payment needs a physical card or wallet, which are not confirmed for day one; trimmed to the online identity check.
+			{ heading: 'Identity checks', body: 'Your card scheme\'s identity check helps confirm that online purchases are yours.', href: '/studio/open-account/', linkLabel: 'See how to open an account' }],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
 	{
 		slug: 'current-accounts',
 		title: 'Current accounts',
 		kicker: 'Personal',
-		lede: 'Hold, send and spend in multiple currencies from one account.',
+		// Out of MLP1 scope — multi-currency holding is not in the first release; GBP-first wording.
+		lede: 'Send, spend and manage your money in pounds from one account.',
 		sections: [
 			{ heading: 'Send and receive money', body: 'Instant bank transfers, international transfers, and payments to friends and family.', href: '/studio/transfers/', linkLabel: 'See transfers' },
-			{ heading: 'Spend with your card', body: 'Physical and virtual cards, card controls and spending abroad.', links: [
+			// Out of MLP1 scope — physical cards not confirmed for day one; wording changed to virtual cards only.
+			{ heading: 'Spend with your card', body: 'Virtual cards, card controls and spending abroad.', links: [
 				{ label: 'See cards', href: '/studio/cards/' }] }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
@@ -322,10 +329,12 @@ export const pages: StudioPage[] = [
 		slug: 'fees-and-charges',
 		title: 'Fees and charges',
 		kicker: 'Legal',
-		lede: 'Every fee we charge, set out in one place. Standard and Borderless accounts are listed separately, so you can see what applies to you before you open an account.',
+		// Out of MLP1 scope — Borderless account is not in the first release; Borderless reference removed.
+		lede: 'Every fee we charge, set out in one place, so you can see what applies to you before you open an account.',
 		sections: [
 			{ heading: 'Standard account', body: 'No monthly account fee. UK payments are free: sending and receiving by FPS, BACS or CHAPS, and paying by card in pounds in store, online or over the phone.' }, { heading: 'Sending and receiving money abroad', body: 'Sending money outside the UK: a fixed £15 fee per transaction, plus an FX fee of 1.00%. Receiving money from outside the UK in pounds: a fixed £10 fee, plus an FX fee of 1.00% for other currencies. Intermediary bank fees may also apply.' },
-			{ heading: 'Cards and cash', body: 'First physical card £5, replacements £5 each. First three virtual cards free, then £1 each. Card cancellation after 14 days: £2.50. UK cash withdrawals 1.00%. Foreign withdrawals and foreign-currency card payments: 1.50% FX fee. ATM operators may charge their own fee.', href: '/studio/cards/', linkLabel: 'See cards' }, { heading: 'Other fees', body: 'Administration fee up to £10, for example returning funds after account closure or mediating a disputed payment. Paper statements £5. Dormant accounts: up to £1 a month after six months. Overdrafts are not supported; repeated negative balances may lead to an administration fee.' }
+			// Out of MLP1 scope — physical-card and cash-machine fees removed (no physical card at launch); virtual card and FX fees kept.
+			{ heading: 'Cards', body: 'First three virtual cards free, then £1 each. Card cancellation after 14 days: £2.50. Foreign-currency card payments: 1.50% FX fee.', href: '/studio/cards/', linkLabel: 'See cards' }, { heading: 'Other fees', body: 'Administration fee up to £10, for example returning funds after account closure or mediating a disputed payment. Paper statements £5. Dormant accounts: up to £1 a month after six months. Overdrafts are not supported; repeated negative balances may lead to an administration fee.' }
 		],
 		cta: { label: 'Read our terms', href: '/studio/terms-and-conditions/' }
 	},
@@ -550,19 +559,29 @@ export const pages: StudioPage[] = [
 		kicker: 'Help articles',
 		lede: 'Answers to the My card questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
 		sections: [
-			{ heading: 'How do I get my card?', body: 'Tap Cards on the Home tab, then tap + to order. You can choose a physical card or a virtual card. A physical card works in shops, online and at cash machines, and can be added to a digital wallet on your phone. A virtual card lives in the app and works for online payments. You can have a virtual card on its own or alongside a physical one.', links: [
+			// Out of MLP1 scope — physical cards and wallets not confirmed for day one; answer rewritten for virtual cards only.
+			{ heading: 'How do I get my card?', body: 'Tap Cards on the Home tab, then tap + to order. Your virtual card lives in the app and works for online payments.', links: [
 				{ label: 'Learn about cards', href: '/studio/cards/' }] },
+			/* Out of MLP1 scope — physical card delivery is not applicable at launch. Do not publish.
 			{ heading: 'How long until my card arrives?', body: 'When you order a physical card, the app shows an estimated delivery time. It usually takes 3 to 5 working days in the UK. If it has not arrived by then, allow a couple of extra days for postal delays. If it still has not arrived, contact us in the app and we will send a replacement.' },
+			*/
 			{ heading: 'Where can I use my card?', body: 'You can use your card to pay online and in shops anywhere that shows the card network logo. If you have any trouble, get in touch with us through the in-app chat.', href: '/studio/cards/', linkLabel: 'Learn about cards' },
 			{ heading: 'Can I use my card abroad?', body: 'Yes. You can use your card in shops, online and at cash machines anywhere the card network is accepted, which covers over 210 countries and territories.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
+			/* Out of MLP1 scope — cash withdrawals need a physical card, which is not confirmed for day one. Do not publish.
 			{ heading: 'Can I use my card to withdraw cash?', body: 'Yes. Your physical card works in cash machines in the UK and abroad. If you forget your PIN, tap Cards on the Home tab, swipe to your physical card and tap Security.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
+			*/
+			/* Out of MLP1 scope — digital wallets (Apple Pay / Google Pay) are not confirmed for day one. Do not publish.
 			{ heading: 'Can I add my card to a digital wallet?', body: 'Yes. Tap Cards on the Home tab, swipe to the card you want to add, and tap Add to wallet.', href: '/studio/cards/', linkLabel: 'Learn about cards' },
+			*/
 			{ heading: 'How is the exchange rate calculated?', body: 'When you pay in another currency, we use the card network\'s exchange rate. You can check the current rates on the card network\'s website at any time.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
 			{ heading: 'Are my card transactions protected?', body: 'Yes. Card purchases are covered by the card network\'s chargeback scheme. You can dispute a payment if goods or services did not arrive, were not as described or were faulty, a refund was not processed, a charge was duplicated or wrong, or the payment was not authorised. Try to sort it out with the merchant first. Once a chargeback is raised, the merchant usually has up to 45 days to respond, and the process can take several weeks. We will keep you updated.', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
-			{ heading: 'What if my card is lost or stolen?', body: 'Freeze the card straight away. Tap Cards on the Home tab, swipe to your physical card, tap Freeze card, then select Report lost or stolen. Please also contact us, especially if you see transactions you did not make.', href: '/studio/help/', linkLabel: 'Get in touch' },
+			// Out of MLP1 scope — physical-card step removed from the freeze instructions (virtual cards only at launch).
+			{ heading: 'What if my card is lost or stolen?', body: 'Freeze the card straight away. Tap Cards on the Home tab, tap Freeze card, then select Report lost or stolen. Please also contact us, especially if you see transactions you did not make.', href: '/studio/help/', linkLabel: 'Get in touch' },
 			{ heading: 'What is 3D Secure?', body: '3D Secure is an extra check for some online payments. When a payment needs it, we send a one-time passcode by text message to the mobile number on your account. Enter the code at checkout. You will only need it when a payment is flagged, not every time. We will never ask you to share a passcode, so never give one to anyone, even someone who sounds trustworthy. If you do not recognise a payment, do not enter the code. Freeze your card in the app and contact us straight away.', href: '/studio/contact/', linkLabel: 'See contact options' },
+			/* Out of MLP1 scope — PIN management steps describe a physical card and cash machines, which are not confirmed for day one. Do not publish.
 			{ heading: 'How can I change my card PIN?', body: 'Tap Cards on the Home tab, swipe to your physical card, tap Security, then tap Change PIN and follow the steps on screen. Then visit any cash machine, insert your card, and do a balance check or cash withdrawal to confirm the new PIN.' },
 			{ heading: 'How do I check my card PIN?', body: 'Tap Cards on the Home tab, swipe to your physical card, tap Security, then tap See your PIN.' },
+			*/
 			{ heading: 'How do I freeze my card?', body: 'Tap Cards on the Home tab, swipe to the card you want to freeze, and turn on Freeze card. You can also freeze it by contacting us in the app as soon as you notice suspicious activity or lose your card.', href: '/studio/contact/', linkLabel: 'See contact options' }
 		],
 		cta: { label: 'Back to help articles', href: '/studio/help-articles/' }
