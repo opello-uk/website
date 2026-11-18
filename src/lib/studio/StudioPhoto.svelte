@@ -6,7 +6,6 @@
 <section class="photo" aria-labelledby="photo-title">
 	<div class="ground">
 		<img src={band} alt="" decoding="async" />
-		<span class="ph-label">Placeholder photo</span>
 	</div>
 
 	<div class="inner">
@@ -77,19 +76,7 @@
 		}
 	}
 
-	.ph-label {
-		position: absolute;
-		right: 20px;
-		bottom: 16px;
-		font-size: 10px;
-		letter-spacing: 0.14em;
-		text-transform: uppercase;
-		color: var(--clay);
-		background: rgba(0, 20, 49, 0.62);
-		padding: 4px 9px;
-		border-radius: 999px;
-		line-height: 1.2;
-	}
+	
 
 	.inner {
 		position: relative;

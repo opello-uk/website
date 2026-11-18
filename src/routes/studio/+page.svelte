@@ -22,7 +22,6 @@
 	<StudioNav />
 
 	<main id="personal">
-		<p class="marker">Wording taken from algbra.com where noted. Not for publication until approved.</p>
 		<StudioHero />
 		<StudioProducts />
 		<StudioSplit />
@@ -61,14 +60,5 @@
 	main {
 		min-height: 40svh;
 		min-width: 0;
-	}
-	.marker {
-		margin: 0;
-		padding: 8px clamp(20px, 4vw, 56px);
-		font-size: 11px;
-		letter-spacing: 0.18em;
-		text-transform: uppercase;
-		color: var(--muted);
-		background: rgba(233, 228, 224, 0.04);
 	}
 </style>

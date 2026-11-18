@@ -4,7 +4,7 @@
 	import current from '#lib/assets/studio/current.jpg';
 	import savings from '#lib/assets/studio/savings.jpg';
 	import pensions from '#lib/assets/studio/pensions.jpg';
-	// Photos are generated placeholders, marked on the tile, until licensed photography is supplied.
+	// Photography is generated for this build until licensed photography is supplied.
 	const products = [
 		{
 			slug: 'transfers',
@@ -38,7 +38,6 @@
 			<li class="card">
 				<div class="photo tone-{p.tone}">
 					<img src={p.src} alt="" decoding="async" />
-					<span class="ph-label">Placeholder photo</span>
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>
@@ -109,19 +108,7 @@
 	.tone-c {
 		background: linear-gradient(160deg, #f58851 0%, #6f5153 100%);
 	}
-	.ph-label {
-		position: absolute;
-		z-index: 1;
-		left: 14px;
-		bottom: 12px;
-		font-size: 10px;
-		letter-spacing: 0.14em;
-		text-transform: uppercase;
-		color: var(--clay);
-		background: rgba(0, 20, 49, 0.55);
-		padding: 3px 8px;
-		border-radius: 999px;
-	}
+	
 	h3 {
 		margin: 0 0 8px;
 		font-size: 20px;

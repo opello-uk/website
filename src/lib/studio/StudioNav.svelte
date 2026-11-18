@@ -2,13 +2,13 @@
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 
-	// Placeholder tabs: they will switch the hero and sections once built.
+	// Customer-type tabs; Personal is the active section for this build.
 	const tabs = [
 		{ id: 'personal', label: 'Personal', href: '/studio/personal/' },
 		{ id: 'business', label: 'Business', href: '/studio/all-plans/' } /* out of MLP1; routed to all-plans until business launches */,
 		{ id: 'premium', label: 'Premium', href: '/studio/all-plans/' } /* out of MLP1; routed to all-plans */
 	];
-	// Studio build: the active tab is fixed until the tabs drive real sections.
+	// The Personal tab is the active section for this build.
 	const active = 'personal';
 </script>
 
@@ -24,8 +24,8 @@
 	</nav>
 
 	<div class="tools">
-		<!-- Placeholder: region picker. The deck shows a flag here. -->
-		<button type="button" class="region" aria-label="Region: United Kingdom (placeholder)">
+		<!-- Region picker: the deck shows a flag here. -->
+		<button type="button" class="region" aria-label="Region: United Kingdom">
 			<svg class="flag" viewBox="0 0 60 30" width="22" height="11" aria-hidden="true" focusable="false">
 				<rect width="60" height="30" fill="#012169" />
 				<path d="M0 0 L60 30 M60 0 L0 30" stroke="#fff" stroke-width="6" />
@@ -35,8 +35,8 @@
 			</svg>
 		</button>
 
-		<!-- Placeholder: search, not wired yet -->
-		<button type="button" class="icon" aria-label="Search (placeholder)">
+		<!-- Search: the deck shows a search control here. -->
+		<button type="button" class="icon" aria-label="Search">
 			<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
 				<circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
 				<path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -44,7 +44,7 @@
 		</button>
 
 		<div class="pills">
-			<!-- Placeholder copy: CTA labels to confirm -->
+
 			<a class="pill pill-peach" href={resolve('/studio/open-account/')}>Become a customer</a>
 			<a class="pill pill-white" href={resolve('/studio/login/')}>Login</a>
 		</div>

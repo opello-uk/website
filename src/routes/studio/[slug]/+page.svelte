@@ -7,7 +7,6 @@
 
 	let { data }: { data: PageData } = $props();
 	const p = $derived(data.page);
-	const isAlgbra = $derived(p.source === 'algbra');
 	// Card notes are not shown on the cards; they roll up into one page-level list.
 	const notes = $derived(
 		p.sourceNotes ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
@@ -32,14 +31,6 @@
 				<p class="lede">{p.lede}</p>
 			</div>
 		</section>
-
-		<p class="marker">
-			{#if isAlgbra}
-				Wording taken from algbra.com. Not for publication until approved.
-			{:else}
-				Placeholder copy. Not for publication until approved.
-			{/if}
-		</p>
 
 		<section class="sections rem-{p.sections.length % 3}">
 			{#each p.sections as s (s.heading)}
@@ -177,20 +168,8 @@
 		color: var(--muted);
 		max-width: 36ch;
 	}
-	.marker {
-		margin: 24px 0 0;
-
-		font-size: 12px;
-		letter-spacing: 0.04em;
-		color: rgba(233, 228, 224, 0.72);
-		border-top: 1px solid var(--rule);
-		padding-top: 12px;
-	}
 	@media (min-width: 900px) {
 		/* desktop: keep the ring bleed above the rule, not on top of it */
-		.marker {
-			margin-top: 56px;
-		}
 	}
 	.sections {
 		display: grid;

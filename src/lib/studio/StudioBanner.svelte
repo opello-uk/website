@@ -10,7 +10,6 @@
 			<img src={banner} alt="" decoding="async" />
 		</div>
 		<!-- Outside .art so the tag is not washed out by the faded photo on phones -->
-		<span class="ph-label">Placeholder photo</span>
 
 		<div class="copy">
 			<h2 id="banner-title">A UK account for non-UK residents.</h2>
@@ -75,19 +74,7 @@
 		height: 100%;
 		object-fit: cover;
 	}
-	.ph-label {
-		position: absolute;
-		right: 16px;
-		top: 16px;
-		font-size: 10px;
-		letter-spacing: 0.14em;
-		text-transform: uppercase;
-		color: var(--clay);
-		background: rgba(0, 20, 49, 0.62);
-		padding: 4px 9px;
-		border-radius: 999px;
-		line-height: 1.2;
-	}
+	
 
 	.copy {
 		position: relative;
@@ -166,13 +153,7 @@
 			line-height: 1.45;
 			max-width: 24ch;
 		}
-		.ph-label {
-			top: 12px;
-			bottom: auto;
-			right: 12px;
-			font-size: 9px;
-			padding: 3px 8px;
-		}
+		
 		.cta {
 			position: absolute;
 			right: 14px;

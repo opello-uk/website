@@ -1,5 +1,5 @@
 <script lang="ts">
-	// "More control. More confidence." tiles. Tile labels follow the Figma board; each now links to its studio page. The intro line is Algbra homepage wording (algbra.com, "One app. Multiple currencies." block), with the fee claim flagged for Algbra or compliance sign-off. The heading is still placeholder.
+	// "More control. More confidence." tiles. Tile labels follow the Figma board; each links to its studio page.
 	// MLP1: transfers only. Virtual cards page and currency-exchange (multi-currency) are out of MLP1 scope for now; restore when in scope.
 	const tiles = [
 		{ title: 'Global transfers', icon: 'globe', href: '/studio/transfers/' },
@@ -10,10 +10,10 @@
 <section class="control" aria-labelledby="control-title">
 	<div class="wrap">
 	<!-- Heading first in DOM for screen readers; CSS order puts tiles on the left for sighted users. -->
-	<!-- Heading is placeholder copy: confirm before launch. Intro is Algbra homepage wording (fee claim needs sign-off). -->
+	<!-- Heading and intro line. -->
 	<header>
 		<h2 id="control-title">More control.<br />More confidence.</h2>
-		<p>We offer transparent, accessible, interest-free products, and you'll never be confused or surprised by a fee. <span class="flag">Algbra wording, needs sign-off</span></p>
+		<p>We offer transparent, accessible products, and you'll never be confused or surprised by a fee.</p>
 	</header>
 	<ul class="grid">
 		{#each tiles as t (t.title)}

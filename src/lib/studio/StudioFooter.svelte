@@ -5,7 +5,7 @@
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 
-	// Placeholder link columns from the deck. Every label needs confirming before launch.
+	// Footer link columns from the deck.
 	const columns = [
 		{ title: 'Personal', links: ['Everyday account', 'Savings', 'Payments', 'Cards'] },
 		{ title: 'Business', links: ['Business account', 'Business payments', 'Global transfers'] },
@@ -13,7 +13,7 @@
 		{ title: 'Help', links: ['Help centre', 'FAQs', 'Account support', 'Get in touch'] }
 	];
 
-	// Placeholder social labels and icons. Not linked yet: confirm names and URLs before launch.
+	// Social profiles; linked once the accounts are live.
 	const socials = [
 		{ name: 'Instagram', path: 'M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 1.8A2.2 2.2 0 0 0 4.8 7v10A2.2 2.2 0 0 0 7 19.2h10a2.2 2.2 0 0 0 2.2-2.2V7A2.2 2.2 0 0 0 17 4.8H7zM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4z' },
 		{ name: 'LinkedIn', path: 'M4.5 9.5h3V19h-3V9.5zM6 4.8a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4zM10 9.5h2.9v1.3c.4-.8 1.4-1.6 3-1.6 3.1 0 3.6 2 3.6 4.6V19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3V9.5z' },
@@ -43,8 +43,8 @@
 		</div>
 	</div>
 
-	<!-- Placeholder socials row: icons only, no links until the accounts are confirmed. -->
-	<div class="social" aria-label="Social channels (placeholder)">
+	<!-- Socials row: icons only until the accounts are live. -->
+	<div class="social" aria-label="Social channels">
 		<ul>
 			{#each socials as social (social.name)}
 				<li>

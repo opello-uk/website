@@ -13,7 +13,6 @@
 <section class="split" aria-labelledby="split-title">
 	<div class="media">
 		<img src={split} alt="" decoding="async" />
-		<span class="ph-label">Placeholder photo</span>
 	</div>
 
 	<div class="copy">
@@ -87,19 +86,7 @@
 		overflow: hidden;
 		background: linear-gradient(135deg, #0c6470 0%, #001431 60%, #f58851 140%);
 	}
-	.ph-label {
-		position: absolute;
-		left: 16px;
-		bottom: 14px;
-		font-size: 10px;
-		letter-spacing: 0.14em;
-		text-transform: uppercase;
-		color: var(--clay);
-		background: rgba(0, 20, 49, 0.62);
-		padding: 4px 9px;
-		border-radius: 999px;
-		line-height: 1.2;
-	}
+	
 
 	h2 {
 		margin: 0 0 16px;

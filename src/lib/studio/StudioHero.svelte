@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	// Hero rebuilt 1-for-1 against the high-res baseline (baseline-07). Sample app data is placeholder.
+	// Hero rebuilt 1-for-1 against the high-res baseline. App screens use sample data.
 </script>
 
 <section class="hero" aria-labelledby="hero-title">
