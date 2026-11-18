@@ -82,7 +82,7 @@
 	.media {
 		position: relative;
 		aspect-ratio: 19 / 12;
-		border-radius: 18px;
+		border-radius: 24px;
 		overflow: hidden;
 		background: linear-gradient(135deg, #0c6470 0%, #001431 60%, #f58851 140%);
 	}
@@ -111,7 +111,8 @@
 		max-width: 40ch;
 		font-size: clamp(15px, 1.25vw, 18px);
 		line-height: 1.5;
-		color: var(--mushroom);
+		color: var(--deep);
+		opacity: 0.78;
 	}
 
 	.ticks {
@@ -135,6 +136,10 @@
 		width: 22px;
 		height: 22px;
 		color: var(--peach);
+	}
+	.ticks .dot svg {
+		width: 14px;
+		height: 14px;
 	}
 	.ticks svg {
 		display: block;
@@ -202,6 +207,7 @@
 			font-size: 13px;
 			line-height: 1.5;
 			margin: 0 0 14px;
+			opacity: 1;
 		}
 		.ticks {
 			gap: 8px;
