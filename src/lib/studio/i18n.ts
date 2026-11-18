@@ -166,6 +166,58 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'ابدأ مجاناً', href: '/studio/download/' }
+		},
+		{
+			slug: 'current-accounts',
+			source: 'placeholder',
+			title: 'الحسابات الجارية',
+			kicker: 'شخصي',
+			lede: 'أرسل وأنفق وأدر أموالك بالجنيه الإسترليني من حساب واحد.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'أرسل واستقبل الأموال',
+					body: 'تحويلات بنكية فورية، تحويلات دولية، ومدفوعات للأصدقاء والعائلة.',
+					href: '/studio/transfers/',
+					linkLabel: 'اطّلع على التحويلات'
+				},
+				{
+					source: 'placeholder',
+					heading: 'أنفق ببطاقتك',
+					body: 'بطاقات افتراضية، إعدادات تحكم بالبطاقة، وأنفاق خارج المملكة المتحدة.',
+					href: '/studio/cards/',
+					linkLabel: 'اطّلع على البطاقات'
+				}
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'savings',
+			source: 'placeholder',
+			title: 'المدخرات',
+			kicker: 'شخصي',
+			lede: 'اكسب على الأموال التي تدّخرها. متاح لمقيمي المملكة المتحدة.',
+			sections: [
+
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'all-plans',
+			source: 'placeholder',
+			title: 'جميع الخطط',
+			kicker: 'شخصي',
+			lede: 'خطط مختلفة لاحتياجات مختلفة. استكشف الميزات والأسعار والفوائد لتجد ما يناسبك.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'الخطة القياسية',
+					body: 'مجانية. الخدمات المالية اليومية الأساسية للإنفاق والادخار وإدارة الأموال. متاح لمقيمي المملكة المتحدة. تنطبق الشروط والأحكام.',
+					href: '/studio/open-account/',
+					linkLabel: 'ابدأ مجاناً'
+				}
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
 		}
 	],
 	tr: [
@@ -323,6 +375,58 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'Ücretsiz başla', href: '/studio/download/' }
+		},
+		{
+			slug: 'current-accounts',
+			source: 'placeholder',
+			title: 'Günlük hesaplar',
+			kicker: 'Bireysel',
+			lede: 'Paranızı sterlin cinsinden tek bir hesaptan gönderin, harcayın ve yönetin.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Para gönderin ve alın',
+					body: 'Anında banka transferleri, uluslararası transferler ve arkadaşlara-aileye ödemeler.',
+					href: '/studio/transfers/',
+					linkLabel: 'Transferleri gör'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kartınızla harcayın',
+					body: 'Sanal kartlar, kart kontrolleri ve yurt dışında harcama.',
+					href: '/studio/cards/',
+					linkLabel: 'Kartları gör'
+				}
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'savings',
+			source: 'placeholder',
+			title: 'Tasarruf',
+			kicker: 'Bireysel',
+			lede: 'Biriktirdiğiniz paradan kazanın. Birleşik Krallık sakinlerine açıktır.',
+			sections: [
+
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'all-plans',
+			source: 'placeholder',
+			title: 'Tüm planlar',
+			kicker: 'Bireysel',
+			lede: 'Farklı ihtiyaçlar için farklı planlar. Özellikleri, fiyatları ve avantajları keşfedip size en uygun olanı bulun.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Standart plan',
+					body: 'Ücretsiz. Günlük finansal temel ihtiyaçlar: harcamak, biriktirmek ve parayı yönetmek. Birleşik Krallık sakinlerine açıktır. Şartlar ve koşullar geçerlidir.',
+					href: '/studio/open-account/',
+					linkLabel: 'Ücretsiz başla'
+				}
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
 		}
 	]
 };
