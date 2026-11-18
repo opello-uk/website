@@ -2,6 +2,8 @@
 	import StudioNav from '#lib/studio/StudioNav.svelte';
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import Ring from '#lib/components/Ring.svelte';
+	// Generated placeholder photo until licensed photography is supplied.
+	import split from '#lib/assets/studio/split.jpg';
 	import { resolve } from '$app/paths';
 	import { hasTranslation, langName, STUDIO_ORIGIN, type Lang } from '#lib/studio/i18n';
 	import type { PageData } from './$types';
@@ -42,6 +44,19 @@
 	<StudioNav />
 
 	<main class="subpage" id="content">
+		{#if p.hero?.variant === 'split'}
+		<section class="hero hero-split">
+			<!-- Placeholder photo; update alt with the licensed replacement -->
+			<div class="media">
+				<img src={split} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+			</div>
+			<div class="copy">
+				<p class="kicker">{p.kicker}</p>
+				<h1>{p.title}</h1>
+				<p class="lede">{p.lede}</p>
+			</div>
+		</section>
+		{:else}
 		<section class="hero">
 			<div class="ring" aria-hidden="true"><Ring /></div>
 			<div class="copy">
@@ -50,6 +65,7 @@
 				<p class="lede">{p.lede}</p>
 			</div>
 		</section>
+		{/if}
 
 		<section class="sections rem-{p.sections.length % 3}">
 			{#each p.sections as s (s.heading)}
@@ -146,6 +162,45 @@
 	.copy {
 		position: relative;
 		max-width: 40rem;
+	}
+	/* Split hero variant: photo card beside the copy, in the landing-page card language (24px corners). */
+	.hero-split {
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+		gap: clamp(24px, 4vw, 48px);
+		align-items: end;
+		min-height: min(46vh, 420px);
+	}
+	.hero-split .media {
+		position: relative;
+		align-self: stretch;
+		min-height: 260px;
+		border-radius: 24px;
+		overflow: hidden;
+		background: linear-gradient(135deg, #0c6470 0%, #001431 60%, #f58851 140%);
+	}
+	.hero-split .media img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 35% 50%;
+	}
+	.hero-split .copy {
+		max-width: none;
+		padding-bottom: 4px;
+	}
+	@media (max-width: 720px) {
+		.hero-split {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 18px;
+			min-height: 0;
+		}
+		.hero-split .media {
+			min-height: 0;
+			aspect-ratio: 16 / 10;
+		}
 	}
 	@media (max-width: 720px) {
 		.hero {

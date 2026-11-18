@@ -17,6 +17,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "التحويلات",
       kicker: "شخصي",
       lede: "استخدم حسابك لإرسال الأموال واستقبالها بسرعة وسهولة.",
+      hero: { variant: "split", alt: "مسافر ينظر من نافذة كبيرة في المطار، على وشك إرسال المال إلى وطنه" },
       source: "placeholder",
       sections: [
         {
@@ -1624,6 +1625,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Transferler",
       kicker: "Bireysel",
       lede: "Hesabını parayı hızlı ve kolay gönderip almak için kullan.",
+      hero: { variant: "split", alt: "Havalimanında geniş bir pencereden dışarı bakan, yakında ailesine para gönderecek bir yolcu" },
       source: "placeholder",
       sections: [
         {

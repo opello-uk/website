@@ -8,6 +8,9 @@ export type StudioPage = {
 	title: string;
 	kicker: string;
 	lede: string;
+	// Optional unique hero. 'split' = photo card beside the copy (landing-page card language);
+	// default is the shared ring hero. Placeholder photos keep their alt updated with the licensed replacement.
+	hero?: { variant: 'split'; alt: string };
 	source: Source;
 	sourceNotes?: string[];
 	sections: Section[];
@@ -54,6 +57,8 @@ export const pages: StudioPage[] = [
 		title: 'Transfers',
 		kicker: 'Personal',
 		lede: 'Use your account to send and receive money quickly and easily.',
+		// Placeholder photo (reused from the homepage split until licensed photography lands).
+		hero: { variant: 'split', alt: 'Traveller looking out of a large window at an airport, about to send money home' },
 		sections: [
 			{ heading: 'Friends and family', body: 'Receive and send money to your friends and family instantly, no matter where they are.' },
 			{ heading: 'Free instant bank transfers', body: 'Pay and get paid in seconds, not days. Instant bank transfers work 24/7, so your money arrives straight away.', href: '/studio/current-accounts/', linkLabel: 'See current accounts' }, { heading: 'Safer transfers', body: 'Open banking technology checks that the account details you enter match the account you are sending to.', href: '/studio/help-security-data/', linkLabel: 'Read about security' },
