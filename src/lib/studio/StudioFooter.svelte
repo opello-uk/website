@@ -1,14 +1,14 @@
 <script lang="ts">
-	const colPage: Record<string, string> = { Personal: 'personal', Business: 'all-plans', About: 'about', Help: 'help' };
+	const colPage: Record<string, string> = { Personal: 'personal', About: 'about', Help: 'help' };
 	// Links that have their own page go there; the rest fall back to their column page.
-	const linkPage: Record<string, string> = { 'Everyday account': 'current-accounts', Savings: 'savings', Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', 'Business payments': 'transfers', Contact: 'contact', 'Get in touch': 'contact', 'Account support': 'help-get-in-touch', 'Help centre': 'help-articles', FAQs: 'faq', 'Our approach': 'about', Careers: 'about', News: 'news' };
+	const linkPage: Record<string, string> = { 'Everyday account': 'current-accounts', Savings: 'savings', Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', Contact: 'contact', 'Get in touch': 'contact', 'Account support': 'help-get-in-touch', 'Help centre': 'help-articles', FAQs: 'faq', 'Our approach': 'about', Careers: 'about', News: 'news' };
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 
-	// Footer link columns from the deck.
+	// Footer link columns from the deck. The Business column is out of MLP1 scope (Vinay, 2026-11-18);
+	// Global transfers moved into Personal so the link survives. Footer IA to confirm with Opello.
 	const columns = [
-		{ title: 'Personal', links: ['Everyday account', 'Savings', 'Payments', 'Cards'] },
-		{ title: 'Business', links: ['Business account', 'Business payments', 'Global transfers'] },
+		{ title: 'Personal', links: ['Everyday account', 'Savings', 'Payments', 'Cards', 'Global transfers'] },
 		{ title: 'About', links: ['About us', 'Our approach', 'Careers', 'News', 'Contact'] },
 		{ title: 'Help', links: ['Help centre', 'FAQs', 'Account support', 'Get in touch'] }
 	];
@@ -96,16 +96,14 @@
 	}
 	.cols {
 		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 24px;
 	}
 	h2 {
 		margin: 0 0 14px;
-		font-size: 11px;
+		font-size: 14px;
 		font-weight: 500;
-		letter-spacing: 0.18em;
-		text-transform: uppercase;
-		color: var(--peach);
+		color: var(--clay);
 	}
 	ul {
 		list-style: none;
@@ -154,6 +152,7 @@
 	.social {
 		margin-top: clamp(36px, 5vw, 56px);
 		display: flex;
+		justify-content: flex-end;
 		align-items: center;
 		gap: 20px;
 		flex-wrap: wrap;
@@ -165,6 +164,9 @@
 	}
 	.social-icon {
 		display: inline-flex;
+		color: var(--muted);
+	}
+	.social-icon:hover {
 		color: var(--peach);
 	}
 	.legal {
@@ -191,14 +193,13 @@
 		}
 	}
 	@media (max-width: 560px) {
-		/* Phones: four columns in one row, as in the 390 frame. */
+		/* Phones: three columns in one row, as in the 390 frame. */
 		.cols {
-			grid-template-columns: repeat(4, minmax(0, 1fr));
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 			gap: 12px;
 		}
 		h2 {
-			font-size: 9px;
-			letter-spacing: 0.12em;
+			font-size: 12px;
 			margin-bottom: 10px;
 		}
 		ul {

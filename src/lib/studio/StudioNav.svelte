@@ -3,10 +3,9 @@
 	import { resolve } from '$app/paths';
 
 	// Customer-type tabs; Personal is the active section for this build.
+	// Out of MLP1 scope: Business and Premium tabs (Vinay, 2026-11-18). Restored code kept in git history.
 	const tabs = [
-		{ id: 'personal', label: 'Personal', href: '/studio/personal/' },
-		{ id: 'business', label: 'Business', href: '/studio/all-plans/' } /* out of MLP1; routed to all-plans until business launches */,
-		{ id: 'premium', label: 'Premium', href: '/studio/all-plans/' } /* out of MLP1; routed to all-plans */
+		{ id: 'personal', label: 'Personal', href: '/studio/personal/' }
 	];
 	// The Personal tab is the active section for this build.
 	const active = 'personal';

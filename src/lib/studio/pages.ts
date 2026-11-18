@@ -682,7 +682,8 @@ export const pages: StudioPage[] = [
 			{ heading: 'Accounts and savings', body: 'Savings, Cubes, currency accounts and other account types.', links: [
 				{ label: 'Current accounts', href: '/studio/current-accounts/' }, { label: 'UK account from abroad', href: '/studio/uk-account-from-abroad/' }, { label: 'Savings', href: '/studio/savings/' }, { label: 'Ethical Saver Cubes', href: '/studio/ethical-savings/' }, { label: 'Open an account', href: '/studio/open-account/' }
 			] },
-			{ heading: 'Business', body: 'Accounts and payments for businesses.', links: [] },
+			/* Out of MLP1 scope — Business section removed (Vinay, 2026-11-18). Do not publish.
+			{ heading: 'Business', body: 'Accounts and payments for businesses.', links: [] }, */
 			{ heading: 'About', body: 'Who we are, what we are building and how to reach us.', links: [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
