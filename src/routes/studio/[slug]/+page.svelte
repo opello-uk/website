@@ -3,10 +3,25 @@
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import Ring from '#lib/components/Ring.svelte';
 	import { resolve } from '$app/paths';
+	import { hasTranslation, langName, STUDIO_ORIGIN, type Lang } from '#lib/studio/i18n';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
 	const p = $derived(data.page);
+	// hreflang alternates: this English page plus each language it has a twin for.
+	// Studio pages are noindex, so this is plumbing for launch, not SEO today.
+	const slug = $derived(p.slug);
+	const alts = $derived((['en', 'ar', 'tr'] as const).filter((l) => l === 'en' || hasTranslation(l, slug)));
+	const altHref = $derived((l: 'en' | Lang) => `${STUDIO_ORIGIN}/studio/${l === 'en' ? '' : l + '/'}${slug}/`);
+	// The sitemap page also lists the language route for each English link.
+	const langVariants = $derived((href: string) => {
+		const m = /\/studio\/([a-z-]+)\//.exec(href);
+		if (!m) return [];
+		return (['ar', 'tr'] as const).filter((l) => hasTranslation(l, m[1])).map((l) => ({
+			label: langName[l],
+			href: `/studio/${l}/${m[1]}/`
+		}));
+	});
 	// Card notes are not shown on the cards; they roll up into one page-level list.
 	const notes = $derived(
 		p.sourceNotes ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
@@ -16,6 +31,10 @@
 <svelte:head>
 	<title>{p.title} · Opello studio (unlisted)</title>
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+	{#each alts as l (l)}
+		<link rel="alternate" hreflang={l} href={altHref(l)} />
+	{/each}
+	<link rel="alternate" hreflang="x-default" href={altHref('en')} />
 </svelte:head>
 
 <div class="studio">
@@ -48,7 +67,7 @@
 					{#if s.links}
 						<ul class="links">
 							{#each s.links as l (l.href)}
-								<li><a href={resolve(l.href as '/')}>{l.label}</a></li>
+								<li><a href={resolve(l.href as '/')}>{l.label}</a>{#if p.slug === 'sitemap'}{#each langVariants(l.href) as v (v.href)} <a class="langlink" href={resolve(v.href as '/')} lang={v.label === 'Türkçe' ? 'tr' : 'ar'}>{v.label}</a>{/each}{/if}</li>
 							{/each}
 						</ul>
 					{/if}
@@ -281,6 +300,21 @@
 		color: var(--clay);
 	}
 	.card .links a:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 3px;
+	}
+	/* language variants listed beside each sitemap link */
+	.card .langlink {
+		margin-inline-start: 8px;
+		color: rgba(233, 228, 224, 0.72);
+		font-size: 0.8rem;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+	.card .langlink:hover {
+		color: var(--peach);
+	}
+	.card .langlink:focus-visible {
 		outline: 2px solid var(--peach);
 		outline-offset: 3px;
 	}

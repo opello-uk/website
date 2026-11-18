@@ -3,7 +3,7 @@
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import Ring from '#lib/components/Ring.svelte';
 	import { resolve } from '$app/paths';
-	import { chrome, langHref } from '#lib/studio/i18n';
+	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -24,6 +24,12 @@
 <svelte:head>
 	<title>{p.title} · Opello studio (unlisted)</title>
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+	<link rel="alternate" hreflang={lang} href={`${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`} />
+	<link rel="alternate" hreflang="en" href={`${STUDIO_ORIGIN}/studio/${p.slug}/`} />
+	<link rel="alternate" hreflang="x-default" href={`${STUDIO_ORIGIN}/studio/${p.slug}/`} />
+	{#each (['ar', 'tr'] as const).filter((l) => l !== lang && hasTranslation(l, p.slug)) as l (l)}
+		<link rel="alternate" hreflang={l} href={`${STUDIO_ORIGIN}/studio/${l}/${p.slug}/`} />
+	{/each}
 </svelte:head>
 
 <div class="studio" dir={lang === 'ar' ? 'rtl' : 'ltr'} lang={lang}>

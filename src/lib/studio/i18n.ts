@@ -3139,6 +3139,10 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
   ],
 };
 
+// Origin used for hreflang alternate URLs while the build lives in the unlisted
+// studio. Studio pages are noindex; re-point this at the public domain at launch.
+export const STUDIO_ORIGIN = "https://studio-5c4fcfa636.onrender.com";
+
 export function hasTranslation(lang: Lang, slug: string): boolean {
   return pagesByLang[lang].some((p) => p.slug === slug);
 }
