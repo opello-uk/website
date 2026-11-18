@@ -262,6 +262,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "المساعدة",
       kicker: "المساعدة",
       lede: "اعثر هنا على إجابات الأسئلة الأكثر شيوعاً أو تواصل معنا عبر دردشة الدعم داخل التطبيق.",
+      // Help ring-photo hero: generated placeholder until licensed photography is supplied.
+      hero: { variant: "ring-photo", alt: "شابة ترتدي سماعات على طاولة مطبخ مشمسة، تبتسم أثناء الدردشة مع موظف الدعم عبر هاتفها، وبجانبها كوب من السيراميك" },
       sections: [
         {
           source: "placeholder",
@@ -1909,6 +1911,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Yardım",
       kicker: "Yardım",
       lede: "En sık duyduğumuz soruların yanıtlarını burada bulabilir ya da uygulama içi destek sohbetinden bize ulaşabilirsiniz.",
+      // Help ring-photo hero: generated placeholder until licensed photography is supplied.
+      hero: { variant: "ring-photo", alt: "Güneşli bir mutfak masasında kulaklık takmış genç bir kadın, akıllı telefonundan destek temsilcisiyle sohbet ederek gülüyor; masada seramik bir kupa" },
       sections: [
         {
           source: "placeholder",

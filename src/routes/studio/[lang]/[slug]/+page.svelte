@@ -8,6 +8,8 @@
 	import savingsHero from '#lib/assets/studio/savings-hero.jpg';
 	// Current accounts split hero: generated placeholder until licensed photography is supplied.
 	import currentAccountsHero from '#lib/assets/studio/current-accounts-hero.jpg';
+	// Help ring-photo hero: generated placeholder until licensed photography is supplied.
+	import helpHero from '#lib/assets/studio/help-hero.jpg';
 	import cardsHero from '#lib/assets/studio/cards-hero.jpg';
 	// Open account photo-ring hero: generated placeholder until licensed photography is supplied.
 	import openAccountHero from '#lib/assets/studio/open-account-hero.jpg';
@@ -70,7 +72,7 @@
 			</div>
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+				<img src={p.slug === 'help' ? helpHero : cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
 			</div>
 		</section>
 		{:else if p.hero?.variant === 'photo-ring'}

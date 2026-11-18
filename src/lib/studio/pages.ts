@@ -192,6 +192,8 @@ export const pages: StudioPage[] = [
 		title: 'Help',
 		kicker: 'Help',
 		lede: 'Find answers to frequently asked questions here or get in touch via our in-app support chat.',
+		// Help ring-photo hero: generated placeholder until licensed photography is supplied.
+		hero: { variant: 'ring-photo', alt: 'A woman wearing headphones at a sunlit kitchen table, smiling while chatting to a support agent on her smartphone, a ceramic mug beside it' },
 		sections: [
 			{ heading: 'Find an answer', body: 'Check out the questions we hear most often, then use the emojis at the end of each answer to tell us whether it helped.', href: '/studio/faq/', linkLabel: 'Read the FAQ' },
 			{ heading: 'Chat to our support team', body: 'You can chat to our dedicated support team in real time from the app. If you prefer, you can send us an email instead.', href: '/studio/contact/', linkLabel: 'See contact options' },
