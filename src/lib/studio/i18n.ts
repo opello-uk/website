@@ -623,6 +623,117 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 			],
 			cta: { label: 'اقرأ إشعار الخصوصية', href: '/privacy/' }
 		},
+		{
+			slug: 'help-logging-in',
+			title: 'تسجيل الدخول',
+			kicker: 'مقالات المساعدة',
+			lede: 'إجابات على أسئلة تسجيل الدخول، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى يُعتمد شاشات التطبيق ومسار الدعم.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'لماذا لا تصلني رسالة تأكيد بالبريد الإلكتروني؟',
+					body: 'عند تسجيل دخولك، نرسل رسالة تأكيد إلى بريدك للتحقق من أنك أنت على هذا الجهاز. من المفترض أن تصل خلال دقيقتين تقريباً. إن لم تصل، اتبع الفحوصات في هذه الصفحة.',
+					href: '/studio/contact/',
+					linkLabel: 'اطلع على خيارات التواصل'
+				},
+				{
+					source: 'placeholder',
+					heading: 'تحقق من عنوان بريدك الإلكتروني',
+					body: 'ابحث عن الأخطاء الإملائية، وعن حرف كبير في غير مكانه. إذا كان العنوان خاطئاً، اختر «تغيير عنوان بريدك الإلكتروني» في التطبيق وحاول مرة أخرى.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'تحقق من مجلد البريد المزعج',
+					body: 'قد تصل الرسالة إلى هناك بالخطأ. إذا وجدتها، ضع علامة «ليس بريداً مزعجاً» لتصل رسائل المستقبل إلى صندوق بريدك.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'تحقق من اتصالك',
+					body: 'تأكد من أن هاتفك أو جهازك متصل بالإنترنت، ثم حاول مرة أخرى. الإشارة الضعيفة قد تؤخر وصول الرسالة.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'جديد على التطبيق أم بدأت بالفعل؟',
+					body: 'إذا كانت هذه أول مرة تستخدم التطبيق، اختر «البدء». إذا كنت قد فتحت التطبيق من قبل، اختر «لدي حساب» لتسجيل الدخول ومتابعة تسجيلك. استخدم زر «تواجه مشكلة؟» إذا بقيت عالقاً.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ما زلت عالقاً؟',
+					body: 'استخدم أيقونة الدردشة أعلى يمين التطبيق وأخبرنا بما يحدث. يمكنك أيضاً مراسلتنا على [placeholder: Opello support email].',
+					href: '/studio/contact/',
+					linkLabel: 'اطلع على خيارات التواصل'
+				}
+			],
+			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-my-account',
+			title: 'حسابي',
+			kicker: 'مقالات المساعدة',
+			lede: 'إجابات على أسئلة حسابي التي لا تتعلق بمكعبات التوفير الأخلاقي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'كيف أُنشئ كشف حساب؟',
+					body: 'في التطبيق، انقر على النقاط الثلاث في تبويب الصفحة الرئيسية، ثم انقر على «كشوف الحساب». اختر الفترة الزمنية التي تريد عرضها والصيغة التي تحتاجها: PDF، أو CSV و QIF إذا كنت تستخدم أداة محاسبة متوافقة.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ما حدود حسابي؟',
+					body: 'لا يوجد حد أقصى لرصيد حسابك. للاطلاع على حدود الإنفاق، انقر على أيقونة ملفك الشخصي أعلى الشاشة الرئيسية، ثم انقر على «الحدود». إذا كان لديك سؤال، تواصل معنا عبر الدردشة داخل التطبيق أو راسلنا بالبريد الإلكتروني.',
+					href: '/studio/contact/',
+					linkLabel: 'اطلع على بيانات التواصل'
+				},
+				{
+					source: 'placeholder',
+					heading: 'هل يمكنني إجراء تحويلات دولية؟',
+					body: 'في الوقت الحالي يمكنك استلام تحويلات بالجنيه الإسترليني من حسابات خارج المملكة المتحدة، ولا توجد رسوم على استلامها. لا يمكنك بعد إرسال الأموال خارج المملكة المتحدة، وسنخبرك عندما يتغير ذلك. لا يمكننا قبول تحويلات من بعض الدول، بما في ذلك بيلاروسيا وكوبا وإيران وكوريا الشمالية وروسيا وسوريا وبعض مناطق أوكرانيا. وتُعاد المدفوعات بأي عملة أخرى إلى الحساب المرسل، وهو ما قد يستغرق عدة أيام.',
+					href: '/studio/transfers/',
+					linkLabel: 'اطلع على التحويلات'
+				},
+				{
+					source: 'placeholder',
+					heading: 'أسئلة مكعبات التوفير الأخلاقي',
+					body: 'ستة عشر مقالاً تغطي مكعبات التوفير الأخلاقي: ما هي، وكيف تعمل، ومعدلات الربح، والسحب المبكر، والضرائب، والامتثال للشريعة، وما إذا كانت المدخرات محمية. مدونة في صفحتها الخاصة في انتظار اعتماد جهة الامتثال.',
+					href: '/studio/help-ethical-saver/',
+					linkLabel: 'اقرأ الإجابات'
+				}
+			],
+			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-get-in-touch',
+			title: 'تواصل معنا',
+			kicker: 'مقالات المساعدة',
+			lede: 'إجابات على أسئلة التواصل، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. كل بيانات التواصل عنصر نائب حتى تُنشئ أوبيلو قنواتها الخاصة.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'كيف أتواصل معكم؟',
+					body: 'للاستفسارات العامة، راسل [placeholder: Opello general enquiries email]. للتحدث مع فريق الدعم، انقر على أيقونة الملف الشخصي أعلى يسار الشاشة الرئيسية في تطبيق أوبيلو واختر «الدعم». هناك يمكنك الدردشة معنا مباشرة، أو مراسلتنا على [placeholder: Opello support email]. إذا فقدت بطاقتك أو لاحظت نشاطاً مشبوهاً ولم تستطع الدخول إلى التطبيق، راسل [placeholder: Opello emergency email] أو اتصل على [placeholder: Opello emergency phone number] فوراً.',
+					href: '/studio/contact/',
+					linkLabel: 'اطلع على بيانات التواصل'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ما إجراءات الشكوى لديكم؟',
+					body: 'نريد أن نعرف متى لم نلبي توقعاتك. أخبر فريقنا عبر الدردشة داخل التطبيق، أو راسل [placeholder: Opello complaints email]. يُرجى تضمين اسمك الأول ولقبك، ورقم الهاتف والبريد الإلكتروني المسجلين على حسابك، ووصف المشكلة، ومتى بدأت، وكيف تحب أن نصلحها. سنؤكد استلام شكواك وننظر فيها بأسرع ما يمكن. يستغرق ذلك عادةً بضعة أيام، لكنه قد يستغرق حتى 15 يوم عمل، وفي الحالات الاستثنائية حتى 35 يوم عمل، لإرسال ردنا النهائي. وإذا احتجنا إلى أكثر من 15 يوم عمل، سنخبرك مسبقاً. إذا لم تكن راضياً عن ردنا النهائي، يمكنك تصعيد شكواك إلى هيئة أمين المظالم المالية (FOS) عبر موقعها أو بالاتصال على 0800 023 4567.',
+					href: '/studio/contact/',
+					linkLabel: 'اطلع على بيانات التواصل'
+				},
+				{
+					source: 'placeholder',
+					heading: 'كيف أغلق حسابي؟',
+					body: 'يمكنك إغلاق حسابك بالتحدث مع فريق الدعم عبر الدردشة داخل التطبيق. تسجيل الدخول وإخبارنا هناك يتيح لنا التأكد من أنك من يطلب ذلك. ستحتاج أولاً إلى تصفير رصيدك. في الوقت الحالي، بعد إغلاق الحساب لا يمكننا إعادة فتحه أو منحك حساباً جديداً لاحقاً. وإذا حدث خطأ ما، فأخبرنا قبل أن تقرر حتى تتاح لنا فرصة تصحيحه.',
+					href: '/studio/contact/',
+					linkLabel: 'اطلع على بيانات التواصل'
+				}
+			],
+			cta: { label: 'العودة إلى مقالات المساعدة', href: '/studio/help-articles/' }
+		},
 	],
 	tr: [
 		{
@@ -1235,6 +1346,117 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'Gizlilik bildirimimizi oku', href: '/privacy/' }
+		},
+		{
+			slug: 'help-logging-in',
+			title: 'Giriş yapma',
+			kicker: 'Yardım makaleleri',
+			lede: 'Giriş yapma sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. Uygulama ekranları ve destek yolu onaylanana kadar nihai değildir.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Neden onay e-postası gelmiyor?',
+					body: 'Giriş yaptığında bu cihazda sen olduğunu doğrulamak için bir onay e-postası gönderiyoruz. Birkaç dakika içinde gelmeli. Gelmezse bu sayfadaki kontrolleri uygula.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim seçeneklerine bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'E-posta adresini kontrol et',
+					body: 'Yazım hatalarını ve yanlış yerde kalan büyük harfi ara. Adres yanlışsa uygulamada «E-posta adresini değiştir»i seç ve yeniden dene.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Spam veya önemsiz klasörünü kontrol et',
+					body: 'E-posta yanlışlıkla oraya düşebilir. Bulursan «spam değil» olarak işaretle ki gelecekteki e-postalar kutuna düşsün.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Bağlantını kontrol et',
+					body: 'Telefonun ya da cihazının çevrimiçi olduğundan emin ol, sonra tekrar dene. Zayıf sinyal e-postayı geciktirebilir.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Uygulamada yeni misin, yoksa başladın mı?',
+					body: 'Uygulamaya ilk kez girdiysen «Başla»yı seç. Uygulamayı daha önce açtıysan giriş yapıp kaydına devam etmek için «Hesabım var»ı seç. Hâlâ takıldıysan «Sorun mu var?» düğmesini kullan.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hâlâ takıldın mı?',
+					body: 'Uygulamanın sağ üstündeki sohbet simgesini kullan ve bize ne olduğunu anlat. Ayrıca bize [placeholder: Opello support email] adresinden e-posta gönderebilirsin.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim seçeneklerine bak'
+				}
+			],
+			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-my-account',
+			title: 'Hesabım',
+			kicker: 'Yardım makaleleri',
+			lede: 'Etik Tasarruf Küpleriyle ilgili olmayan Hesabım sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Nasıl ekstre oluştururum?',
+					body: 'Uygulamada Ana sekmedeki üç noktaya dokun, sonra «Ekstreler»e dokun. Görmek istediğin tarih aralığını ve ihtiyacın olan biçimi seç: PDF ya da uyumlu bir muhasebe aracı kullanıyorsan CSV ve QIF.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hesap limitlerim neler?',
+					body: 'Hesabının üst bakiye sınırı yok. Harcama limitlerini görmek için Ana ekranın üstündeki profil simgene dokun, sonra «Limitler»e dokun. Sorun varsa uygulama içi sohbetten bize ulaş ya da bize e-posta gönder.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim bilgilerine bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Uluslararası transfer yapabilir miyim?',
+					body: 'Şu anda Birleşik Krallık dışındaki hesaplardan sterlin transferi alabilirsin; almak ücrete tabi değildir. Henüz Birleşik Krallık dışına para gönderemezsin; bu değiştiğinde haber vereceğiz. Belarus, Küba, İran, Kuzey Kore, Rusya, Suriye ve Ukrayna’nın bazı bölgeleri dahil bazı ülkelerden transfer kabul edemiyoruz. Başka herhangi bir para birimindeki ödemeler, birkaç gün sürebilen bir işlemle gönderen hesaba geri gönderilir.',
+					href: '/studio/transfers/',
+					linkLabel: 'Transferlere bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Etik Tasarruf Küpü soruları',
+					body: 'On altı makale Etik Tasarruf Küplerini ele alıyor: neler oldukları, nasıl çalıştıkları, kâr oranları, erken çekilme, vergi, Şeriata uygunluk ve tasarrufların korunup korunmadığı. Uygunluk onayı beklenirken kendi sayfalarında yazılı hâlde duruyorlar.',
+					href: '/studio/help-ethical-saver/',
+					linkLabel: 'Yanıtları oku'
+				}
+			],
+			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
+		},
+		{
+			slug: 'help-get-in-touch',
+			title: 'Bize ulaşın',
+			kicker: 'Yardım makaleleri',
+			lede: 'Bize ulaşma sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. Opello kendi kanallarını kurana kadar her iletişim bilgisi yer tutucudur.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Nasıl iletişime geçerim?',
+					body: 'Genel sorular için [placeholder: Opello general enquiries email] adresine e-posta gönder. Destek ekibimizle konuşmak için Opello uygulamasında Ana ekranın sol üstündeki profil simgesine dokun ve «Destek»i seç. Orada canlı sohbet edebilir ya da [placeholder: Opello support email] adresine e-posta gönderebilirsin. Kartını kaybettiysen ya da şüpheli işlem görüp uygulamaya giremiyorsan hemen [placeholder: Opello emergency email] adresine yaz ya da [placeholder: Opello emergency phone number] numarasını ara.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim bilgilerine bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Şikâyet prosedürünüz nedir?',
+					body: 'Beklentilerini karşılayamadığımızda bunu duymak istiyoruz. Ekibimize uygulama içi sohbetten bildir ya da [placeholder: Opello complaints email] adresine yaz. Lütfen adını soyadını, hesabındaki telefon numarası ve e-posta adresini, sorunun ne olduğunu, ne zaman başladığını ve nasıl düzeltmemizi istediğini ekle. Şikâyetini alındı onayıyla birlikte en kısa sürede inceliyoruz. Bu genellikle birkaç gün sürer; ancak nihai yanıtımızı göndermek 15 iş gününe, olağanüstü durumlarda 35 iş gününe kadar sürebilir. 15 iş gününden uzun sürecekse bunu önceden bildiririz. Nihai yanıtımızdan memnun kalmazsan şikâyetini Finansal Ombudsman Hizmeti’ne (FOS) web sitesi üzerinden ya da 0800 023 4567 numarasını arayarak taşıyabilirsin.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim bilgilerine bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hesabımı nasıl kapatırım?',
+					body: 'Hesabını uygulama içi sohbetten Destek ekibimizle konuşarak kapatabilirsin. Giriş yapıp orada bize söylemen, bunu senin istediğini doğrulamamızı sağlar. Önce bakiyeni sıfıra indirmen gerekir. Şu anda bir hesap kapatıldığında yeniden açamıyor ya da sana sonradan yeni bir hesap açamıyoruz. Bir şey ters gittiyse lütfen karar vermeden önce bize söyle ki düzeltme şansımız olsun.',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim bilgilerine bak'
+				}
+			],
+			cta: { label: 'Yardım makalelerine dön', href: '/studio/help-articles/' }
 		},
 	]
 };
