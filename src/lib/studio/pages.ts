@@ -252,7 +252,7 @@ export const pages: StudioPage[] = [
 		sections: [
 			{ heading: 'Social impact at the core', body: 'Our B Corp certification recognises our efforts to create a more equitable and sustainable society by delivering the infrastructure and technologies needed to democratise financial services.', note: 'Source: algbra.com/ethical-finance, "B Corp Certified". The certification belongs to Algbra. Do not claim it for Opello until the certificate and status are verified.', source: 'algbra' },
 			{ heading: 'What you see is what you get', body: 'We offer transparent, accessible, interest-free products, and you will never be confused or surprised by hidden fees.', note: 'Source: algbra.com/ethical-finance. "Interest-free" and "no hidden fees" need checking against Opello\'s fee schedule and the Ethical Saver Cubes, which pay a return. Compliance sign-off needed.', source: 'algbra' },
-			{ heading: 'Tools for change', body: 'Our Carbon Tracker lets you calculate your CO2e footprint for every transaction. Our Donate feature lets you support local causes and charities.', note: 'Source: algbra.com/ethical-finance. Algbra says "over 100" causes and charities: the Opello count and charity list are placeholders until confirmed.', source: 'algbra', href: '/studio/carbon-tracking/', linkLabel: 'See Planet Impact' },
+			{ heading: 'Tools for change', body: 'Our Carbon Tracker lets you calculate your CO2e footprint for every transaction. Our Donate feature lets you support local causes and charities.', note: 'Source: algbra.com/ethical-finance. Algbra says "over 100" causes and charities: the Opello count and charity list are placeholders until confirmed.', source: 'algbra', links: [{ href: '/studio/carbon-tracking/', label: 'See Planet Impact' }, { href: '/studio/donations/', label: 'See donations' }] },
 			{ heading: 'Recycled materials', body: 'Our cards are biodegradable, and our packaging is made from a non-virgin cane sugar by-product. It is 100% recyclable, biodegradable and compostable.', note: 'Source: algbra.com/ethical-finance. Packaging and recyclability claims need supplier evidence before publishing. Card materials to be confirmed for Opello.', source: 'algbra', href: '/studio/cards/', linkLabel: 'See cards' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
@@ -304,7 +304,7 @@ export const pages: StudioPage[] = [
 				'We bring you into the equation through social and environmental impact tools inside the app.',
 				'We adopt a systematic approach to ethical finance, with a focus on equitable access to sustainable financial services.'
 			] },
-			{ heading: 'We are not a bank', body: 'We are a movement. Join us on the journey to fairer, more ethical and transparent finance.', source: 'algbra', href: '/studio/ethical-finance/', linkLabel: 'See ethical finance' }
+			{ heading: 'We are not a bank', body: 'We are a movement. Join us on the journey to fairer, more ethical and transparent finance.', source: 'algbra', links: [{ href: '/studio/ethical-finance/', label: 'See ethical finance' }, { href: '/studio/careers/', label: 'Join us' }] }
 		],
 		sourceNotes: [
 			'Lede and sections: Source: algbra.com/about, "Values that Drive Ambition", and the algbra.com homepage headline "Finance, made for humans". Wording is Algbra\'s and needs Opello approval.',
@@ -1136,10 +1136,10 @@ export const pages: StudioPage[] = [
 				'Several currencies in one account',
 				'International payments (country count to confirm for Opello)',
 				'A virtual debit card (card scheme to confirm)'
-			] },
-			{ heading: 'Fees and protection', body: '[Placeholder: Opello exchange fee, monthly fee and how fees are shown before you pay. Confirm against the Opello fee schedule.]', note: 'Placeholder. Algbra\'s figures (a flat 0.5% exchange fee and £10 a month) are not used here until Opello confirms its own fees.', source: 'placeholder' },
+			], links: [{ href: '/studio/multi-currency/', label: 'See multi-currency accounts' }, { href: '/studio/borderless-account/', label: 'See the Borderless account' }] },
+			{ heading: 'Fees and protection', body: '[Placeholder: Opello exchange fee, monthly fee and how fees are shown before you pay. Confirm against the Opello fee schedule.]', note: 'Placeholder. Algbra\'s figures (a flat 0.5% exchange fee and £10 a month) are not used here until Opello confirms its own fees.', source: 'placeholder', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
 			{ heading: 'Who it is for', body: 'People who live outside the UK and need access to UK payment services, and who want the account to match Sharia principles or be interest-free.', note: 'Source: algbra.com Malaysia and Qatar articles. Sharia and interest-free claims need Opello sign-off and a named oversight body before publishing. Opello eligibility is flagged above.', source: 'algbra' },
-			{ heading: 'How to apply', body: 'The application is completed in the app. You will need to pass identity and eligibility checks. Availability depends on where you live and your situation, so check the app before you apply.', note: 'Source: algbra.com Malaysia and Qatar articles. Opello app availability and the list of documents are placeholders.', source: 'placeholder' }
+			{ heading: 'How to apply', body: 'The application is completed in the app. You will need to pass identity and eligibility checks. Availability depends on where you live and your situation, so check the app before you apply.', note: 'Source: algbra.com Malaysia and Qatar articles. Opello app availability and the list of documents are placeholders.', source: 'placeholder', href: '/studio/open-account/', linkLabel: 'See how to open an account' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
