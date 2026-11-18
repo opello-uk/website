@@ -387,9 +387,9 @@ export const pages: StudioPage[] = [
 		lede: 'Be a part of something great. Finance that is fairer, more ethical and more transparent.',
 		source: 'algbra',
 		sections: [
-			{ heading: 'Our mission', body: 'Our mission is to eradicate social and financial exclusion by using technology and a community-first approach to provide equitable access to ethical and sustainable financial services.', note: 'Source: algbra.com/careers, Our Mission. Opello mission wording to confirm before publishing.', source: 'algbra' },
-			{ heading: 'Use your money differently', body: 'Opello is for people who want to use their money differently. Join us on the journey to fairer, more ethical and transparent finance.', note: 'Adapted from algbra.com/careers. Opello wording to confirm.', source: 'algbra' },
-			{ heading: 'Benefits', body: 'Benefits for the Opello team are being confirmed. [Placeholder: benefits list]', note: 'Placeholder. Algbra lists its own benefits on algbra.com/careers. Do not reuse them for Opello until Opello confirms its own.', source: 'placeholder' },
+			{ heading: 'Our mission', body: 'Our mission is to eradicate social and financial exclusion by using technology and a community-first approach to provide equitable access to ethical and sustainable financial services. Our approach is underpinned by a fundamental set of principles. We are people and planet first.', note: 'Source: algbra.com/careers, Our Mission. Opello mission wording to confirm before publishing.', source: 'algbra', href: '/studio/ethical-finance/', linkLabel: 'Read about our approach' },
+			{ heading: 'Use your money differently', body: 'Opello is for people who want to use their money differently. Join us on the journey to fairer, more ethical and transparent finance. We are not a bank. We are a movement.', note: 'Adapted from algbra.com/careers. "We are not a bank. We are a movement." is a claim that needs Opello sign-off before publishing. Opello wording to confirm.', source: 'algbra' },
+			{ heading: 'Benefits', body: 'Our benefits reflect our inclusive values and are extended to every member of the team, regardless of location or seniority. Benefits for the Opello team are being confirmed. [Placeholder: benefits list]', note: 'Source: algbra.com/careers. Benefits intro line is Algbra\'s wording. Algbra lists its own specific benefits on algbra.com/careers. Do not reuse them for Opello until Opello confirms its own.', source: 'algbra' },
 			{ heading: 'Open roles', body: 'There are no open roles to show yet. [Placeholder: current vacancies]', note: 'Placeholder. Vacancies and how to apply to be confirmed by Opello.', source: 'placeholder' }
 		],
 		cta: { label: 'Get in touch', href: '/studio/contact/' }
@@ -401,7 +401,7 @@ export const pages: StudioPage[] = [
 		lede: 'Seamless digital onboarding onto the app.',
 		source: 'algbra',
 		sections: [
-			{ heading: 'Scan the code', body: 'On your mobile, open the camera and point your device at the QR code to download the app.', note: 'Source: algbra.com/download. QR code image is a placeholder until the Opello app is published.', source: 'algbra' },
+			{ heading: 'Scan the code', body: 'On your mobile, open the camera and point your device at the QR code to download the app. Can\'t scan the QR code? Use the download links below.', note: 'Source: algbra.com/download. QR code image is a placeholder until the Opello app is published.', source: 'algbra' },
 			{ heading: 'iOS and Android', body: 'The app is available on iOS and Android. [Placeholder: app store badges and links]', note: 'Placeholder. Store listings and links are not set up for Opello yet.', source: 'placeholder' },
 			{ heading: 'Open your account digitally', body: 'Seamless digital onboarding in the app. All you need is an email address, a phone number and an ID document, like your passport.', note: 'Source: algbra.com/download. Accepted ID documents and any video step to confirm for Opello (see the FAQ).', source: 'algbra', href: '/studio/faq/', linkLabel: 'Read the FAQ' }
 		],
