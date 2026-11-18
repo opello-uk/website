@@ -111,6 +111,8 @@ export const pages: StudioPage[] = [
 		slug: 'current-accounts',
 		title: 'Current accounts',
 		kicker: 'Personal',
+		// Split hero with a generated placeholder photo until licensed photography is supplied.
+		hero: { variant: 'split', alt: 'A woman paying at a cafe counter by holding her phone over a card terminal' },
 		// Out of MLP1 scope — multi-currency holding is not in the first release; GBP-first wording.
 		lede: 'Send, spend and manage your money in pounds from one account.',
 		sections: [

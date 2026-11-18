@@ -172,6 +172,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "current-accounts",
       source: "placeholder",
+      hero: { variant: "split", alt: "امرأة تدفع على طاولة مقهى حاملة هاتفها فوق جهاز الدفع" },
       title: "الحسابات الجارية",
       kicker: "شخصي",
       lede: "أرسل وأنفق وأدر أموالك بالجنيه الإسترليني من حساب واحد.",
@@ -1782,6 +1783,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "current-accounts",
       source: "placeholder",
+      hero: { variant: "split", alt: "Bir kadın, telefonunu ödeme terminalinin üzerinde tutarak bir kafede ödeme yapıyor" },
       title: "Günlük hesaplar",
       kicker: "Bireysel",
       lede: "Paranızı sterlin cinsinden tek bir hesaptan gönderin, harcayın ve yönetin.",

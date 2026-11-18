@@ -6,6 +6,8 @@
 	import split from '#lib/assets/studio/split.jpg';
 	// Savings split hero: generated placeholder until licensed photography is supplied.
 	import savingsHero from '#lib/assets/studio/savings-hero.jpg';
+	// Current accounts split hero: generated placeholder until licensed photography is supplied.
+	import currentAccountsHero from '#lib/assets/studio/current-accounts-hero.jpg';
 	import cardsHero from '#lib/assets/studio/cards-hero.jpg';
 	import { resolve } from '$app/paths';
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
@@ -46,7 +48,7 @@
 		<section class="hero hero-split">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'savings' ? savingsHero : split} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+				<img src={p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} alt={p.hero.alt} decoding="async" fetchpriority="high" />
 			</div>
 			<div class="copy">
 				<p class="kicker">{p.kicker}</p>
