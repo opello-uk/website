@@ -148,6 +148,12 @@
 		align-items: center;
 		min-height: 44px;
 		color: var(--clay);
+		/* Baseline-01 shows the legal links without underlines. */
+		text-decoration: none;
+	}
+	.base a:hover,
+	.legal a:hover {
+		text-decoration: underline;
 	}
 	.social {
 		margin-top: clamp(36px, 5vw, 56px);
