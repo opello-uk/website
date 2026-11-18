@@ -66,7 +66,7 @@
 		<span>{t.copyright}</span>
 		<ul class="legal">
 			<li><a href={resolve('/studio/privacy-policy/')}>{lang === 'en' ? 'Privacy policy' : footerLinkLabel['Privacy policy'][lang]}</a></li>
-			<li><a href={resolve('/studio/terms-and-conditions/')}>{lang === 'en' ? 'Terms &amp; Conditions' : footerLinkLabel['Terms & Conditions'][lang]}</a></li>
+			<li><a href={resolve('/studio/terms-and-conditions/')}>{lang === 'en' ? 'Terms & Conditions' : footerLinkLabel['Terms & Conditions'][lang]}</a></li>
 			<li><a href={resolve('/studio/cookies-policy/')}>{lang === 'en' ? 'Cookie policy' : footerLinkLabel['Cookie policy'][lang]}</a></li>
 			<li><a href={resolve('/studio/fees-and-charges/')}>{lang === 'en' ? 'Fees and charges' : footerLinkLabel['Fees and charges'][lang]}</a></li>
 			<li><a href={resolve('/studio/customer-terms-and-conditions/')}>{lang === 'en' ? 'Customer terms' : footerLinkLabel['Customer terms'][lang]}</a></li>
