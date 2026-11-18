@@ -2,17 +2,19 @@
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
+	import { chrome, hasTranslation, langHref, type Lang } from '#lib/studio/i18n';
 
-	// Language picker (Vinay, 2026-11-18): the flag in the nav opens the language
-	// dropdown. The site ships in English, Arabic and Turkish; picking a language
-	// must land on that language's version of the page you are on. Only English
-	// pages are built so far, so Arabic and Türkçe are listed but not yet live —
-	// they become real routes (with RTL for Arabic) as translations land.
+	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
+	const t = $derived(chrome[lang]);
+
+	// The language is live for this page only when its translation exists, so
+	// the dropdown never links to a page that is not built.
+	const currentSlug = $derived(page.url.pathname.replace(/^\/studio(?:\/[a-z]{2})?\//, '').replace(/\/$/, ''));
 	const languages = [
-		{ id: 'en', label: 'English', live: true },
-		{ id: 'ar', label: 'العربية', live: false },
-		{ id: 'tr', label: 'Türkçe', live: false }
-	] as const;
+		{ id: 'en' as const, label: 'English' },
+		{ id: 'ar' as const, label: 'العربية' },
+		{ id: 'tr' as const, label: 'Türkçe' }
+	];
 
 	let open = $state(false);
 	let menu: HTMLElement | undefined = $state();
@@ -32,9 +34,12 @@
 	}
 
 	function href(langId: string) {
-		// Every page keeps its path under its language; English pages live at
-		// /studio/... and other languages will live at /studio/ar/... etc.
-		return langId === 'en' ? page.url.pathname : `/studio/${langId}${page.url.pathname.replace(/^\/studio/, '')}`;
+		// Same language keeps your page. Another language lands on that language's
+		// version of the current page; English strips the language prefix.
+		if (langId === lang) return page.url.pathname;
+		if (langId === 'en') return page.url.pathname.replace(/^(\/studio)\/[a-z]{2}/, '$1') || '/studio/';
+		if (hasTranslation(langId as Lang, currentSlug)) return `/studio/${langId}/${currentSlug}/`;
+		return page.url.pathname.replace(/^(\/studio)\/[a-z]{2}/, '$1') || '/studio/';
 	}
 
 	// Customer-type tabs; Personal is the active section for this build.
@@ -49,13 +54,13 @@
 <svelte:window onkeydown={onWindowKeydown} onpointerdown={onWindowPointerdown} />
 
 <header class="nav">
-	<a class="brand" href={resolve('/studio/')} aria-label="Opello, home">
+	<a class="brand" href={resolve('/studio/')} aria-label={t.brandAria}>
 		<Wordmark />
 	</a>
 
 	<nav class="tabs" aria-label="Customer type">
 		{#each tabs as tab (tab.id)}
-			<a class="tab" href={resolve(tab.href as '/')} aria-current={tab.id === active ? 'page' : undefined}>{tab.label}</a>
+			<a class="tab" href={resolve(langHref(lang, tab.href) as '/')} aria-current={tab.id === active ? 'page' : undefined}>{t.tabsPersonal}</a>
 		{/each}
 	</nav>
 
@@ -66,7 +71,7 @@
 				type="button"
 				class="region"
 				bind:this={regionButton}
-				aria-label="Choose language"
+				aria-label={t.langLabel}
 				aria-haspopup="menu"
 				aria-expanded={open}
 				onclick={() => (open = !open)}
@@ -80,17 +85,19 @@
 				</svg>
 			</button>
 			{#if open}
-				<div class="menu" bind:this={menu} role="menu" aria-label="Languages">
-					{#each languages as lang (lang.id)}
-						{#if lang.live}
-							<a role="menuitem" class="item" href={href(lang.id)} lang={lang.id} onclick={close}>
-								<span class="name">{lang.label}</span>
-								{#if lang.id === 'en'}<span class="tag current">Current</span>{/if}
+				<div class="menu" bind:this={menu} role="menu" aria-label={t.menuLabel}>
+					{#each languages as langItem (langItem.id)}
+						{@const live = langItem.id === 'en' || hasTranslation(langItem.id, currentSlug)}
+						{@const current = langItem.id === lang}
+						{#if live}
+							<a role="menuitem" class="item" href={href(langItem.id)} lang={langItem.id} onclick={close}>
+								<span class="name">{langItem.label}</span>
+								{#if current}<span class="tag current">{t.current}</span>{/if}
 							</a>
 						{:else}
-							<span class="item soon" role="menuitem" aria-disabled="true" lang={lang.id}>
-								<span class="name">{lang.label}</span>
-								<span class="tag">Coming soon</span>
+							<span class="item soon" role="menuitem" aria-disabled="true" lang={langItem.id}>
+								<span class="name">{langItem.label}</span>
+								<span class="tag">{t.soon}</span>
 							</span>
 						{/if}
 					{/each}
@@ -108,8 +115,8 @@
 
 		<div class="pills">
 
-			<a class="pill pill-peach" href={resolve('/studio/open-account/')}>Become a customer</a>
-			<a class="pill pill-white" href={resolve('/studio/login/')}>Login</a>
+			<a class="pill pill-peach" href={resolve(langHref(lang, '/studio/open-account/') as '/')}>{t.ctaAccount}</a>
+			<a class="pill pill-white" href={resolve(langHref(lang, '/studio/login/') as '/')}>{t.login}</a>
 		</div>
 	</div>
 </header>

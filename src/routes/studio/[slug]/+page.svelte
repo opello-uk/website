@@ -113,7 +113,7 @@
 	.ring {
 		position: absolute;
 		top: -32px;
-		right: -12vw;
+		inset-inline-end: -12vw;
 		width: min(44vw, 420px);
 		aspect-ratio: 1;
 		opacity: 0.8;
@@ -140,7 +140,7 @@
 		.ring {
 			position: relative;
 			top: auto;
-			right: auto;
+			inset-inline-end: auto;
 			transform: none;
 			width: 62vw;
 			align-self: flex-end;

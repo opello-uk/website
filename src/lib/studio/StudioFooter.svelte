@@ -1,9 +1,13 @@
 <script lang="ts">
+	import Wordmark from '#lib/components/Wordmark.svelte';
+	import { resolve } from '$app/paths';
+	import { chrome, footerColumnTitle, footerLinkLabel, type Lang } from '#lib/studio/i18n';
+
+	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
+	const t = $derived(chrome[lang]);
 	const colPage: Record<string, string> = { Personal: 'personal', About: 'about', Help: 'help' };
 	// Links that have their own page go there; the rest fall back to their column page.
 	const linkPage: Record<string, string> = { 'Everyday account': 'current-accounts', Savings: 'savings', Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', Contact: 'contact', 'Get in touch': 'contact', 'Account support': 'help-get-in-touch', 'Help centre': 'help-articles', FAQs: 'faq', 'Our approach': 'about', Careers: 'about', News: 'news' };
-	import Wordmark from '#lib/components/Wordmark.svelte';
-	import { resolve } from '$app/paths';
 
 	// Footer link columns from the deck. The Business column is out of MLP1 scope (Vinay, 2026-11-18);
 	// Global transfers moved into Personal so the link survives. Footer IA to confirm with Opello.
@@ -26,16 +30,16 @@
 	<div class="top">
 		<div class="intro">
 			<span class="brand"><Wordmark /></span>
-			<p class="tagline">Your own money, unlocked.</p>
+			<p class="tagline">{t.footerTagline}</p>
 		</div>
 
 		<div class="cols">
 			{#each columns as col (col.title)}
 				<section>
-					<h2>{col.title}</h2>
+					<h2>{lang === 'en' ? col.title : footerColumnTitle[col.title][lang]}</h2>
 					<ul>
 						{#each col.links as link (link)}
-							<li><a href={resolve(`/studio/${linkPage[link] ?? colPage[col.title] ?? 'help'}/` as '/')}>{link}</a></li>
+							<li><a href={resolve(`/studio/${linkPage[link] ?? colPage[col.title] ?? 'help'}/` as '/')}>{lang === 'en' ? link : footerLinkLabel[link][lang]}</a></li>
 						{/each}
 					</ul>
 				</section>
@@ -44,7 +48,7 @@
 	</div>
 
 	<!-- Socials row: icons only until the accounts are live. -->
-	<div class="social" aria-label="Social channels">
+	<div class="social" aria-label={t.socialAria}>
 		<ul>
 			{#each socials as social (social.name)}
 				<li>
@@ -59,16 +63,16 @@
 	</div>
 
 	<div class="base">
-		<span>© 2026 Opello. All rights reserved.</span>
+		<span>{t.copyright}</span>
 		<ul class="legal">
-			<li><a href={resolve('/studio/privacy-policy/')}>Privacy policy</a></li>
-			<li><a href={resolve('/studio/terms-and-conditions/')}>Terms &amp; Conditions</a></li>
-			<li><a href={resolve('/studio/cookies-policy/')}>Cookie policy</a></li>
-			<li><a href={resolve('/studio/fees-and-charges/')}>Fees and charges</a></li>
-			<li><a href={resolve('/studio/customer-terms-and-conditions/')}>Customer terms</a></li>
-			<li><a href={resolve('/studio/responsible-disclosure/')}>Responsible disclosure</a></li>
-			<li><a href={resolve('/studio/accessibility/')}>Accessibility</a></li>
-			<li><a href={resolve('/studio/sitemap/')}>Sitemap</a></li>
+			<li><a href={resolve('/studio/privacy-policy/')}>{lang === 'en' ? 'Privacy policy' : footerLinkLabel['Privacy policy'][lang]}</a></li>
+			<li><a href={resolve('/studio/terms-and-conditions/')}>{lang === 'en' ? 'Terms &amp; Conditions' : footerLinkLabel['Terms & Conditions'][lang]}</a></li>
+			<li><a href={resolve('/studio/cookies-policy/')}>{lang === 'en' ? 'Cookie policy' : footerLinkLabel['Cookie policy'][lang]}</a></li>
+			<li><a href={resolve('/studio/fees-and-charges/')}>{lang === 'en' ? 'Fees and charges' : footerLinkLabel['Fees and charges'][lang]}</a></li>
+			<li><a href={resolve('/studio/customer-terms-and-conditions/')}>{lang === 'en' ? 'Customer terms' : footerLinkLabel['Customer terms'][lang]}</a></li>
+			<li><a href={resolve('/studio/responsible-disclosure/')}>{lang === 'en' ? 'Responsible disclosure' : footerLinkLabel['Responsible disclosure'][lang]}</a></li>
+			<li><a href={resolve('/studio/accessibility/')}>{lang === 'en' ? 'Accessibility' : footerLinkLabel['Accessibility'][lang]}</a></li>
+			<li><a href={resolve('/studio/sitemap/')}>{lang === 'en' ? 'Sitemap' : footerLinkLabel['Sitemap'][lang]}</a></li>
 		</ul>
 	</div>
 </footer>
