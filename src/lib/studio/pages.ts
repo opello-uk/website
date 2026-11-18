@@ -332,7 +332,7 @@ export const pages: StudioPage[] = [
 		// Out of MLP1 scope — Borderless account is not in the first release; Borderless reference removed.
 		lede: 'Every fee we charge, set out in one place, so you can see what applies to you before you open an account.',
 		sections: [
-			{ heading: 'Standard account', body: 'No monthly account fee. UK payments are free: sending and receiving by FPS, BACS or CHAPS, and paying by card in pounds in store, online or over the phone.' }, { heading: 'Sending and receiving money abroad', body: 'Sending money outside the UK: a fixed £15 fee per transaction, plus an FX fee of 1.00%. Receiving money from outside the UK in pounds: a fixed £10 fee, plus an FX fee of 1.00% for other currencies. Intermediary bank fees may also apply.' },
+			{ heading: 'Standard account', body: 'No monthly account fee. UK payments are free: sending and receiving by FPS, BACS or CHAPS, and paying by card in pounds online or over the phone.' }, { heading: 'Sending and receiving money abroad', body: 'Sending money outside the UK: a fixed £15 fee per transaction, plus an FX fee of 1.00%. Receiving money from outside the UK in pounds: a fixed £10 fee, plus an FX fee of 1.00% for other currencies. Intermediary bank fees may also apply.' },
 			// Out of MLP1 scope — physical-card and cash-machine fees removed (no physical card at launch); virtual card and FX fees kept.
 			{ heading: 'Cards', body: 'First three virtual cards free, then £1 each. Card cancellation after 14 days: £2.50. Foreign-currency card payments: 1.50% FX fee.', href: '/studio/cards/', linkLabel: 'See cards' }, { heading: 'Other fees', body: 'Administration fee up to £10, for example returning funds after account closure or mediating a disputed payment. Paper statements £5. Dormant accounts: up to £1 a month after six months. Overdrafts are not supported; repeated negative balances may lead to an administration fee.' }
 		],
@@ -565,8 +565,8 @@ export const pages: StudioPage[] = [
 			/* Out of MLP1 scope — physical card delivery is not applicable at launch. Do not publish.
 			{ heading: 'How long until my card arrives?', body: 'When you order a physical card, the app shows an estimated delivery time. It usually takes 3 to 5 working days in the UK. If it has not arrived by then, allow a couple of extra days for postal delays. If it still has not arrived, contact us in the app and we will send a replacement.' },
 			*/
-			{ heading: 'Where can I use my card?', body: 'You can use your card to pay online and in shops anywhere that shows the card network logo. If you have any trouble, get in touch with us through the in-app chat.', href: '/studio/cards/', linkLabel: 'Learn about cards' },
-			{ heading: 'Can I use my card abroad?', body: 'Yes. You can use your card in shops, online and at cash machines anywhere the card network is accepted, which covers over 210 countries and territories.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
+			{ heading: 'Where can I use my card?', body: 'Yes. You can use your card to pay online anywhere that shows the card network logo. If you have any trouble, get in touch with us through the in-app chat.', href: '/studio/cards/', linkLabel: 'Learn about cards' },
+			{ heading: 'Can I use my card abroad?', body: 'Yes. You can use your card online anywhere the card network is accepted, which covers over 210 countries and territories.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
 			/* Out of MLP1 scope — cash withdrawals need a physical card, which is not confirmed for day one. Do not publish.
 			{ heading: 'Can I use my card to withdraw cash?', body: 'Yes. Your physical card works in cash machines in the UK and abroad. If you forget your PIN, tap Cards on the Home tab, swipe to your physical card and tap Security.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
 			*/
