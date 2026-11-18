@@ -11,21 +11,25 @@
 			title: 'Send money home and abroad',
 			body: 'Send GBP overseas and pay friends and family in seconds.',
 			tone: 'a',
-			src: current
+			src: current,
+			// Placeholder photo; update alt with the licensed replacement
+			alt: 'Woman smiling at her phone at the kitchen table'
 		},
 		{
 			slug: 'savings',
 			title: 'Savings pots',
 			body: 'Set money aside for the things that matter, in a few taps.',
 			tone: 'b',
-			src: savings
+			src: savings,
+			alt: 'Family on a sofa looking at a tablet together'
 		},
 		{
 			slug: 'cards',
 			title: 'Spend worldwide with one card',
 			body: 'Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app.',
 			tone: 'c',
-			src: pensions
+			src: pensions,
+			alt: 'Woman on a park bench holding her phone'
 		}
 	];
 </script>
@@ -48,7 +52,7 @@
 		{#each products as p (p.title)}
 			<li class="card">
 				<div class="photo tone-{p.tone}">
-					<img src={p.src} alt="" decoding="async" />
+					<img src={p.src} alt={p.alt} decoding="async" loading="lazy" />
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>

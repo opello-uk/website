@@ -8,7 +8,8 @@
 <section class="banner" aria-labelledby="banner-title">
 	<div class="card">
 		<div class="art">
-			<img src={banner} alt="" decoding="async" />
+			<!-- Placeholder photo; update alt with the licensed replacement -->
+			<img src={banner} alt="Man relaxing in an armchair by a window overlooking the city at sunset" decoding="async" loading="lazy" />
 		</div>
 		<!-- Outside .art so the tag is not washed out by the faded photo on phones -->
 

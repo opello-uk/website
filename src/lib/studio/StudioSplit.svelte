@@ -12,7 +12,8 @@
 
 <section class="split" aria-labelledby="split-title">
 	<div class="media">
-		<img src={split} alt="" decoding="async" />
+		<!-- Placeholder photo; update alt with the licensed replacement -->
+		<img src={split} alt="Traveller looking out of a large window at an airport" decoding="async" loading="lazy" />
 	</div>
 
 	<div class="copy">

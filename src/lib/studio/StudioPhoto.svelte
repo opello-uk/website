@@ -5,7 +5,8 @@
 
 <section class="photo" aria-labelledby="photo-title">
 	<div class="ground">
-		<img src={band} alt="" decoding="async" />
+		<!-- Placeholder photo; update alt with the licensed replacement -->
+		<img src={band} alt="Two friends laughing together on a sunny beach" decoding="async" loading="lazy" />
 	</div>
 
 	<div class="inner">
