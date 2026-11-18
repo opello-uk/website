@@ -228,6 +228,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "من نحن",
       kicker: "من نحن",
       lede: "خدمات مالية صُممت للبشر. نضع الإنسان والكوكب أولاً.",
+      hero: { variant: "band", alt: "أربعة أشخاص يتحدثون بأريحية في صالة مشرقة دافئة بجدران طينية وكريمية" },
       sections: [
         {
           source: "placeholder",
@@ -1874,6 +1875,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Hakkımızda",
       kicker: "Hakkımızda",
       lede: "İnsanlar için tasarlanmış finans. İnsanı ve gezegeni önce koyarız.",
+      hero: { variant: "band", alt: "Kil ve krem duvarlı, aydınlık sıcak bir salonda rahatça sohbet eden dört kişi" },
       sections: [
         {
           source: "placeholder",

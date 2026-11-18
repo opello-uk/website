@@ -11,6 +11,8 @@
 	import cardsHero from '#lib/assets/studio/cards-hero.jpg';
 	// Open account photo-ring hero: generated placeholder until licensed photography is supplied.
 	import openAccountHero from '#lib/assets/studio/open-account-hero.jpg';
+	// About band hero: generated placeholder until licensed photography is supplied.
+	import aboutHero from '#lib/assets/studio/about-hero.jpg';
 	import { resolve } from '$app/paths';
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
 	import type { PageData } from './$types';
@@ -78,6 +80,17 @@
 			<div class="media">
 				<img src={p.slug === 'open-account' ? openAccountHero : cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
 			</div>
+			<div class="copy">
+				<p class="kicker">{p.kicker}</p>
+				<h1>{p.title}</h1>
+				<p class="lede">{p.lede}</p>
+			</div>
+		</section>
+		{:else if p.hero?.variant === 'band'}
+		<section class="hero hero-band">
+			<!-- Placeholder photo; update alt with the licensed replacement -->
+			<img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+			<div class="band-scrim" aria-hidden="true"></div>
 			<div class="copy">
 				<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
@@ -256,6 +269,30 @@
 	.hero-photoring .ring {
 		inset-inline-end: auto;
 		inset-inline-start: -6vw;
+	}
+	/* Band hero variant (About): full-bleed photo, copy overlaid on a navy scrim,
+	   like the baseline photo band. Full column width, photo behind the copy. */
+	.hero-band {
+		min-height: min(52vh, 480px);
+		padding: clamp(16px, 3vh, 32px) clamp(20px, 4vw, 48px) clamp(24px, 4vh, 40px);
+		border-radius: 24px;
+		overflow: hidden;
+		align-items: end;
+	}
+	.hero-band .band-photo {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.hero-band .band-scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0, 20, 49, 0.55) 0%, rgba(0, 20, 49, 0.2) 45%, rgba(0, 20, 49, 0.62) 100%);
+	}
+	.hero-band .copy {
+		max-width: 30rem;
 	}
 	@media (max-width: 720px) {
 		.hero-ringphoto {

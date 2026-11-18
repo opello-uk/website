@@ -9,8 +9,9 @@ export type StudioPage = {
 	kicker: string;
 	lede: string;
 	// Optional unique hero. 'split' = photo card beside the copy (landing-page card language);
+	// 'band' = full-bleed photo with the copy overlaid. Default is the shared ring hero.
 	// default is the shared ring hero. Placeholder photos keep their alt updated with the licensed replacement.
-	hero?: { variant: 'split' | 'ring-photo'; alt: string };
+	hero?: { variant: 'split' | 'ring-photo' | 'photo-ring' | 'band'; alt: string };
 	source: Source;
 	sourceNotes?: string[];
 	sections: Section[];
@@ -171,6 +172,8 @@ export const pages: StudioPage[] = [
 		title: 'About',
 		kicker: 'About',
 		lede: 'Finance, made for humans. We are people and planet first.',
+		// About band hero: generated placeholder until licensed photography is supplied.
+		hero: { variant: 'band', alt: 'Four people chatting casually in a bright, warm lounge with clay and cream walls' },
 		sections: [
 			{ heading: 'Our objective', body: 'To eradicate social and financial exclusion and create a more sustainable society, using our values-driven financial technology and a community-first approach. We are people and planet first. Opello is for people who want more than excellent financial services: people who want a new experience with finance, one that reflects their identity, values and lifestyle, and that helps them in everyday actions.' },
 			{ heading: 'Why we are different', body: 'Five things we hold ourselves to.', items: [
