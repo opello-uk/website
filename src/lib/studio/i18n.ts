@@ -13,6 +13,84 @@ export const langName: Record<Lang, string> = { ar: 'العربية', tr: 'Türk
 export const pagesByLang: Record<Lang, StudioPage[]> = {
 	ar: [
 		{
+			slug: 'transfers',
+			title: 'التحويلات',
+			kicker: 'شخصي',
+			lede: 'استخدم حسابك لإرسال الأموال واستقبالها بسرعة وسهولة.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'الأصدقاء والعائلة',
+					body: 'استقبل وأرسل الأموال إلى أصدقائك وعائلتك فوراً، أينما كانوا.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'تحويلات بنكية فورية مجانية',
+					body: 'ادفع واستلم المال في ثوانٍ لا أيام. التحويلات البنكية الفورية تعمل على مدار الساعة، فيصل مالك فوراً.',
+					href: '/studio/current-accounts/',
+					linkLabel: 'اطلع على الحسابات الجارية'
+				},
+				{
+					source: 'placeholder',
+					heading: 'تحويلات أكثر أماناً',
+					body: 'تتحقق تقنية المصرف المفتوح من أن بيانات الحساب التي أدخلتها تطابق الحساب الذي ترسل إليه.',
+					href: '/studio/help-security-data/',
+					linkLabel: 'اقرأ عن الأمان'
+				},
+				{
+					source: 'placeholder',
+					heading: 'اطلب المال',
+					body: 'تشاركت في وجبة أو تحتاج إلى دفع الإيجار؟ اطلب المال وقسّم الفاتورة بالطريقة السهلة.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'مدفوعات قريبة',
+					body: 'اعثر على أصدقائك القريبين منك وادفع لهم فوراً.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ادفع برمز الاستجابة السريعة',
+					body: 'استخدم رمز الاستجابة السريعة الخاص بصديق أو فرد من العائلة للدفع له.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'استلم أموالك عبر رابطك الخاص',
+					body: 'اجعل مهمة استلام الأموال اليومية أسهل بإنشاء رابط فريد لمشاركته.'
+				}
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'cards',
+			title: 'البطاقات',
+			kicker: 'شخصي',
+			lede: 'أنفق في أي مكان يُقبل فيه بطاقك، مع بطاقات يمكنك تجميدها والتحكم بها من التطبيق.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'بطاقات افتراضية',
+					body: 'البطاقة الافتراضية موجودة في التطبيق وتصلح للمدفوعات عبر الإنترنت.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'التحكم في البطاقة والتنبيهات',
+					body: 'من التطبيق، جمّد بطاقتك أو ألغِ التجميد وغيّر الرقم السري بلمسات قليلة. احصل على إشعار فوري بعد كل معاملة.',
+					href: '/studio/help-my-card/',
+					linkLabel: 'اقرأ عن التحكم في البطاقة'
+				},
+				{
+					source: 'placeholder',
+					heading: 'التحقق من الهوية',
+					body: 'يساعد التحقق من الهوية الخاص بشبكة بطاقتك في التأكد من أن المشتريات عبر الإنترنت هي لك.',
+					href: '/studio/open-account/',
+					linkLabel: 'اطلع على كيفية فتح حساب'
+				}
+			],
+			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
+		},
+		{
 			slug: 'personal',
 			title: 'شخصي',
 			kicker: 'شخصي',
@@ -91,6 +169,84 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 		}
 	],
 	tr: [
+		{
+			slug: 'transfers',
+			title: 'Transferler',
+			kicker: 'Bireysel',
+			lede: 'Hesabını parayı hızlı ve kolay gönderip almak için kullan.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Arkadaşlar ve aile',
+					body: 'Arkadaşlarına ve ailenize nerede olurlarsa olsunlar anında para gönderin ve alın.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Ücretsiz anında banka transferleri',
+					body: 'Günler değil saniyeler içinde ödeyin ve ödeme alın. Anında banka transferleri 7/24 çalışır; paranız hemen ulaşır.',
+					href: '/studio/current-accounts/',
+					linkLabel: 'Günlük hesapları gör'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Daha güvenli transferler',
+					body: 'Açık bankacılık teknolojisi, girdiğiniz hesap bilgilerini para gönderdiğiniz hesapla eşleştirir.',
+					href: '/studio/help-security-data/',
+					linkLabel: 'Güvenlik hakkında oku'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Para iste',
+					body: 'Dışarıda yemek mi paylaştınız, kira mı ödeyeceksiniz? Kolay yoldan para isteyin ve hesabı bölüşün.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Yakındaki ödemeler',
+					body: 'Yakınınızdaki arkadaşlarınızı bulun ve anında ödeme yapın.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'QR koduyla öde',
+					body: 'Arkadaşınızın veya ailenizin QR kodunu kullanarak ona ödeme yapın.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kendi bağlantınla ödeme al',
+					body: 'Paylaşabileceğiniz benzersiz bir bağlantı oluşturarak ödeme almayı kolaylaştırın.'
+				}
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'cards',
+			title: 'Kartlar',
+			kicker: 'Bireysel',
+			lede: 'Kartının kabul edildiği her yerde harca; kartlarını uygulama içinde dondurup kontrol edebilirsin.',
+			source: 'placeholder',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Sanal kartlar',
+					body: 'Sanal kart uygulamada yaşar ve çevrimiçi ödemelerde kullanılır.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kart kontrolleri ve bildirimler',
+					body: 'Uygulamada birkaç dokunuşla kartını dondur veya çöz ve PIN kodunu değiştir. Her işlemden sonra anlık bildirim al.',
+					href: '/studio/help-my-card/',
+					linkLabel: 'Kart kontrolleri hakkında oku'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kimlik doğrulama',
+					body: 'Kart şebekesinin kimlik doğrulaması, çevrimiçi alışverişlerin sana ait olduğunu doğrulamaya yardımcı olur.',
+					href: '/studio/open-account/',
+					linkLabel: 'Hesap açmayı gör'
+				}
+			],
+			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
+		},
 		{
 			slug: 'personal',
 			title: 'Bireysel',
