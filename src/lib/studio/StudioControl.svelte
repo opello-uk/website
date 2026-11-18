@@ -170,8 +170,13 @@
 		}
 		header {
 			order: 0;
+			/* Tiles sit in the first (auto) column even though the header comes first in the DOM. */
+			grid-column: 2;
+			grid-row: 1;
 		}
 		.grid {
+			grid-column: 1;
+			grid-row: 1;
 			grid-template-columns: repeat(3, 60px);
 			gap: 6px;
 		}
