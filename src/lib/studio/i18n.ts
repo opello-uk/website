@@ -483,7 +483,146 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'افتح حسابك معنا', href: '/studio/open-account/' }
-		}
+		},
+		{
+			slug: 'login',
+			source: 'placeholder',
+			title: 'تسجيل الدخول',
+			kicker: 'الحساب',
+			lede: 'سجّل الدخول إلى تطبيق أوبيلو باستخدام بريدك الإلكتروني. الحسابات لم تُفتح بعد، لذا لا يوجد ما تسجّل الدخول إليه اليوم.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'كيف تسجّل الدخول',
+					body: 'افتح التطبيق وأدخل بريدك الإلكتروني. نرسل لك رسالة تأكيد للتحقق من أنك أنت على هذا الجهاز. تصل عادةً خلال دقائق قليلة.',
+					href: '/studio/help-logging-in/',
+					linkLabel: 'اقرأ مساعدة تسجيل الدخول'
+				},
+				{
+					source: 'placeholder',
+					heading: 'أول مرة، أم بدأت سابقاً؟',
+					body: 'إذا كانت هذه أول مرة تدخل فيها التطبيق، اختر «ابدأ». وإذا فتحت التطبيق من قبل، اختر «لدي حساب» لتسجيل الدخول ومتابعة تسجيلك.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'لم تصل رسالة التأكيد؟',
+					body: 'قد تستغرق الرسالة بضع دقائق وأحياناً تصل إلى مكان خاطئ. جرّب الآتي بالترتيب.',
+					items: [
+						'تحقق من بريدك الإلكتروني بحثاً عن أخطاء إملائية أو أحرف كبيرة في مواضع خاطئة.',
+						'تحقق من مجلد البريد المزعج وعلّم الرسالة كليست مزعجة.',
+						'تأكد من اتصال هاتفك أو جهازك بالإنترنت، ثم أعد المحاولة.'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'محجوب أو ما زلت عالقاً؟',
+					body: 'أخبرنا بما يحدث وسنساعدك على العودة إلى حسابك. [Placeholder: support email and in-app chat route.]',
+					href: '/studio/contact/',
+					linkLabel: 'اطلع على خيارات التواصل'
+				},
+				{
+					source: 'placeholder',
+					heading: 'غير متاح بعد',
+					body: 'تُفتح الحسابات للعملاء عند الإطلاق. حتى ذلك الحين لا يوجد حساب لتسجيل الدخول. [Placeholder: launch date and the sign-up route, once Opello confirms them.]'
+				}
+			],
+			cta: { label: 'اطلع على كيفية فتح الحساب', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'privacy-policy',
+			source: 'placeholder',
+			title: 'سياسة الخصوصية',
+			kicker: 'قانوني',
+			lede: 'كيف تستخدم أوبيلو بياناتك الشخصية، بلغة واضحة. هذا ملخص لإشعار الخصوصية الخاص بنا، والإشعار الكامل هو المذكور في الرابط أدناه.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'من نحن',
+					body: 'Opello Ltd، مسجّلة في إنجلترا وويلز، رقم الشركة 17324431. المقر المسجل: Suite 401–402, Cumberland House, 80 Scrubs Lane, London NW10 6RF. الأسئلة حول بياناتك: privacy@opello.co.uk'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ما نجمعه',
+					body: 'اسمك وتاريخ ميلادك وبيانات التواصل وعنوانك. وثائق الهوية والتحقق بالصورة الذاتية. إثبات العنوان. بيانات المقصد الضريبي. كيفية استخدامك التطبيق وهذا الموقع. سجلات المدفوعات التي تُرسلها وتستقبلها. محادثات الدعم.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'لماذا نستخدمه',
+					body: 'لفتح حسابك وإدارته، وللتحقق من هويتك، وللوفاء بمسؤولياتنا القانونية والتنظيمية، وللحفاظ على أمان خدماتنا. لا نرسل التسويق إلا بعد موافقتك، ويمكنك سحب موافقتك في أي وقت.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'مع من نشاركه',
+					body: 'شريكنا المرخّص في الأموال الإلكترونية الذي يوفر حسابك وبطاقتك، ومزوّدو الخدمات الذين نستخدمهم لتشغيل أوبيلو، مثل التحقق من الهوية وفحص الاحتيال والاستضافة. نحن لا نبيع بياناتك الشخصية أبداً.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'البيانات خارج المملكة المتحدة',
+					body: 'تعمل بعض خدماتنا عبر أكثر من دولة، لذا قد تُرسل بعض البيانات خارج المملكة المتحدة. وعند حدوث ذلك نستخدم ضوابط معتمدة لحمايتها.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'مدة الاحتفاظ به',
+					body: 'طوال فترة فتح حسابك، ثم لمدة تصل إلى ست سنوات بعد إغلاقه، لوفاء القواعد القانونية والضريبية وحفظ السجلات. تُحفظ تفضيلات التسويق حتى تسحب موافقتك.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'حقوقك',
+					body: 'يمكنك طلب نسخة من بياناتك، أو تصحيحها أو حذفها، أو تقييد استخدامها أو الاعتراض عليه، أو طلبها بصيغة قابلة للنقل. ويمكنك سحب موافقتك في أي وقت.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'ملفات تعريف الارتباط',
+					body: 'يضع هذا الموقع حالياً الملفات اللازمة لعمله فقط. لن نضع أي ملفات أخرى دون سؤالك أولاً، ويمكنك حظرها أو حذفها من متصفحك.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'الشكاوى',
+					body: 'تواصل معنا أولاً وسنبحث في الأمر. يمكنك أيضاً الشكوى إلى مكتب مفوضية المعلومات (ICO) عبر ico.org.uk أو على 0303 123 1113.'
+				}
+			],
+			cta: { label: 'اقرأ إشعار الخصوصية الكامل', href: '/privacy/' }
+		},
+		{
+			slug: 'cookies-policy',
+			source: 'placeholder',
+			title: 'سياسة ملفات تعريف الارتباط',
+			kicker: 'قانوني',
+			lede: 'ما هي ملفات تعريف الارتباط، والأنواع التي قد نستخدمها، وكيف يمكنك إدارتها. عنصر نائب حتى يُعتمد قائمة ملفات أوبيلو.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'ما هو ملف تعريف الارتباط',
+					body: 'هو ملف صغير من أحرف وأرقام يخزّنه الموقع في متصفحك أو جهازك. يتيح للموقع التعرف عليك عند عودتك وتذكّر بعض اختياراتك.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'الملفات الضرورية',
+					body: 'تحافظ على عمل الموقع ولا يمكن إيقافها. تشمل الملفات التي تُبقيك مسجلاً في المناطق الآمنة، والملفات التي تتذكر اختيارات الموافقة.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'الملفات الاختيارية',
+					body: '[Placeholder: analytics, functionality and marketing cookies, only if Opello uses them. We will ask for your consent before setting any optional cookie.]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'الملفات التي نستخدمها',
+					body: '[Placeholder: table of cookie name, provider category, purpose and how long it lasts.]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'إدارة الملفات',
+					body: '[Placeholder: how to block or delete cookies in your browser, and what happens to the site if you do.]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'التغييرات على هذه السياسة',
+					body: '[Placeholder: how we will tell you about changes to this cookie policy.]'
+				}
+			],
+			cta: { label: 'اقرأ إشعار الخصوصية', href: '/privacy/' }
+		},
 	],
 	tr: [
 		{
@@ -957,9 +1096,149 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
 				}
 			],
 			cta: { label: 'Hesabını bizimle aç', href: '/studio/open-account/' }
-		}
+		},
+		{
+			slug: 'login',
+			source: 'placeholder',
+			title: 'Giriş yap',
+			kicker: 'Hesap',
+			lede: 'Opello uygulamasına e-posta adresinle giriş yap. Hesaplar henüz açılmadı, bu yüzden bugün giriş yapılacak bir şey yok.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Nasıl giriş yaparsın',
+					body: 'Uygulamayı aç ve e-posta adresini gir. Bu cihazda sen olduğunu doğrulamak için sana bir onay e-postası gönderiyoruz. Birkaç dakika içinde ulaşır.',
+					href: '/studio/help-logging-in/',
+					linkLabel: 'Giriş yardımını oku'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Yeni misin, yoksa başlamış mıydın?',
+					body: 'Uygulamaya ilk kez giriyorsan Başla’yı seç. Daha önce uygulama açtıysan, kaydına devam etmek ve giriş yapmak için Hesabım var seçeneğini seç.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Onay e-postası gelmedi mi?',
+					body: 'E-posta birkaç dakika sürebilir ve bazen yanlış yere düşebilir. Şunları sırayla dene.',
+					items: [
+						'E-posta adresini yazım hataları ve yanlış yerdeki büyük harfler açısından kontrol et.',
+						'İstenmeyen veya önemsiz klasörünü kontrol et ve e-postayı istenmeyen değil olarak işaretle.',
+						'Telefonunun veya cihazının çevrimiçi olduğunu kontrol et, sonra tekrar dene.'
+					]
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kilitlendin mi yoksa takıldın mı?',
+					body: 'Bize ne olduğunu anlat, geri girmen için yardımcı olalım. [Placeholder: support email and in-app chat route.]',
+					href: '/studio/contact/',
+					linkLabel: 'İletişim seçeneklerine bak'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Henüz yayında değil',
+					body: 'Hesaplar lansmanda müşterilere açılacak. O zamana kadar giriş yapılacak bir hesap yok. [Placeholder: launch date and the sign-up route, once Opello confirms them.]'
+				}
+			],
+			cta: { label: 'Nasıl hesap açacağını gör', href: '/studio/open-account/' }
+		},
+		{
+			slug: 'privacy-policy',
+			source: 'placeholder',
+			title: 'Gizlilik politikası',
+			kicker: 'Yasal',
+			lede: 'Opello kişisel verilerini nasıl kullanır, sade bir dille. Bu, gizlilik bildirimimizin bir özetidir; tam bildirim aşağıdaki bağlantıdadır.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Biz kimiz',
+					body: 'Opello Ltd, İngiltere ve Galler’de kayıtlı, şirket numarası 17324431. Kayıtlı ofis: Suite 401–402, Cumberland House, 80 Scrubs Lane, London NW10 6RF. Verilerinizle ilgili sorular için: privacy@opello.co.uk'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Neleri toplarız',
+					body: 'Adın, doğum tarihin, iletişim bilgilerin ve adresin. Kimlik belgeleri ve selfie kontrolleri. Adres kanıtı. Vergi ikamet bilgileri. Uygulamayı ve bu web sitesini nasıl kullandığın. Yaptığın ve aldığın ödemelerin kayıtları. Destek görüşmeleri.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Neyi için kullanırız',
+					body: 'Hesabını açmak ve yönetmek, kim olduğunu doğrulamak, yasal ve düzenleyici yükümlülüklerimizi yerine getirmek ve hizmetlerimizi güvenli tutmak için. Pazarlama yalnızca kabul ettiysen gönderilir ve bunu dilediğin zaman geri çekebilirsin.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kiminle paylaşırız',
+					body: 'Hesabını ve kartını sağlayan düzenlemeye tabi e-para ortağımız ve Opello’yu yürütmek için kullandığımız hizmet sağlayıcıları, örneğin kimlik kontrolleri, dolandırıcılık taraması ve barındırma. Kişisel verilerini asla satmayız.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Birleşik Krallık dışındaki veriler',
+					body: 'Hizmetlerimizden bazıları birden fazla ülkede çalışır, bu yüzden bazı veriler Birleşik Krallık dışına gönderilebilir. Bu olduğunda, verilerini korumak için onaylanmış önlemler kullanırız.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Ne kadar süre saklarız',
+					body: 'Hesabın açık olduğu sürece ve kapandıktan sonra yasal, vergi ve kayıt saklama kuralları için altı yıla kadar. Pazarlama tercihleri, onayını geri çekene kadar saklanır.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Hakların',
+					body: 'Verilerinin bir kopyasını isteyebilir, düzeltilmesini veya silinmesini isteyebilir, kullanımını kısıtlayabilir veya buna itiraz edebilir ve taşınabilir bir biçimde isteyebilirsin. Onayını dilediğin zaman geri çekebilirsin.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Çerezler',
+					body: 'Şu anda bu web sitesi yalnızca çalışması için gereken çerezleri ayarlar. Önce sana sormadan başka hiçbir çerez ayarlamayız ve tarayıcında çerezleri engelleyebilir veya silebilirsin.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Şikâyetler',
+					body: 'Önce bize ulaş, inceleyelim. Ayrıca Bilgi Komiserliği Ofisi’ne (ICO) ico.org.uk veya 0303 123 1113 üzerinden şikâyet edebilirsin.'
+				}
+			],
+			cta: { label: 'Tam gizlilik bildirimini oku', href: '/privacy/' }
+		},
+		{
+			slug: 'cookies-policy',
+			source: 'placeholder',
+			title: 'Çerez politikası',
+			kicker: 'Yasal',
+			lede: 'Çerez nedir, kullanabileceğimiz türler ve bunları nasıl yönetebilirsin. Opello çerez listesi onaylanana kadar yer tutucudur.',
+			sections: [
+				{
+					source: 'placeholder',
+					heading: 'Çerez nedir',
+					body: 'Çerez, bir web sitesinin tarayıcında veya cihazında sakladığı harfler ve sayılardan oluşan küçük bir dosyadır. Geri döndüğünde seni tanımayı ve bazı tercihlerini hatırlamayı sağlar.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Zorunlu çerezler',
+					body: 'Bunlar web sitesinin çalışmasını sağlar ve kapatılamaz. Güvenli alanlarda oturumunu açık tutan çerezleri ve onay tercihlerini hatırlayan çerezleri kapsar.'
+				},
+				{
+					source: 'placeholder',
+					heading: 'İsteğe bağlı çerezler',
+					body: '[Placeholder: analytics, functionality and marketing cookies, only if Opello uses them. We will ask for your consent before setting any optional cookie.]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Kullandığımız çerezler',
+					body: '[Placeholder: table of cookie name, provider category, purpose and how long it lasts.]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Çerezleri yönetme',
+					body: '[Placeholder: how to block or delete cookies in your browser, and what happens to the site if you do.]'
+				},
+				{
+					source: 'placeholder',
+					heading: 'Bu politikadaki değişiklikler',
+					body: '[Placeholder: how we will tell you about changes to this cookie policy.]'
+				}
+			],
+			cta: { label: 'Gizlilik bildirimimizi oku', href: '/privacy/' }
+		},
 	]
 };
+
 
 export function hasTranslation(lang: Lang, slug: string): boolean {
 	return pagesByLang[lang].some((p) => p.slug === slug);
