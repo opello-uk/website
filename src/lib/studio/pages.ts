@@ -677,12 +677,18 @@ export const pages: StudioPage[] = [
 			{ heading: 'Can you open a traditional UK bank account from abroad?', body: 'It may be possible, but it is often hard. High-street banks commonly ask for a UK credit history, a UK address or a branch visit. Some offer non-resident accounts, but these can need large minimum balances or sit within private banking.' },
 			// OUT OF MLP1 SCOPE — section removed, do not publish.
 
-			{ heading: 'How a UK e-money account can work for you', body: 'You get a UK sort code and account number to receive pound payments, a multi-currency account for pounds, dollars, euros and other major currencies, and an international payments service. You can apply in an app with identity checks, with no branch visit and no UK address needed.', items: [
+			{ heading: 'How a UK e-money account can work for you', body: 'You get a UK sort code and account number to receive pound payments, and an international payments service for sending pounds abroad. You can apply in an app with identity checks, with no branch visit and no UK address needed.', items: [
+				'A UK sort code and account number for pound payments',
+				'Send pounds overseas (country count to confirm for Opello)',
+				'A virtual debit card (card scheme to confirm)'
+			], links: [] },
+			/* Out of MLP1 scope — multi-currency holding (pounds, dollars, euros and other currencies in one account) is not confirmed for day one. Do not publish. Restore the body and items below once multi-currency holding is confirmed:
+			body: 'You get a UK sort code and account number to receive pound payments, a multi-currency account for pounds, dollars, euros and other major currencies, and an international payments service. You can apply in an app with identity checks, with no branch visit and no UK address needed.', items: [
 				'A UK sort code and account number for pound payments',
 				'Several currencies in one account',
 				'International payments (country count to confirm for Opello)',
 				'A virtual debit card (card scheme to confirm)'
-			], links: [] },
+			] */
 			{ heading: 'Fees and protection', body: '[Placeholder: Opello exchange fee, monthly fee and how fees are shown before you pay. Confirm against the Opello fee schedule.]', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
 			{ heading: 'Who it is for', body: 'People who live outside the UK and need access to UK payment services, and who want the account to match Sharia principles or be interest-free.' },
 			{ heading: 'How to apply', body: 'The application is completed in the app. You will need to pass identity and eligibility checks. Availability depends on where you live and your situation, so check the app before you apply.', href: '/studio/open-account/', linkLabel: 'See how to open an account' }
