@@ -31,6 +31,17 @@
 </script>
 
 <section class="products" aria-labelledby="products-title">
+	<!-- Soft peach ring motif on the clay ground, as in the reference; drifts gently and is decorative only -->
+	<svg class="ground-rings" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+		<defs>
+			<radialGradient id="prodRingA" cx="0.5" cy="0.5" r="0.5">
+				<stop offset="0.55" stop-color="#f58851" stop-opacity="0" />
+				<stop offset="0.82" stop-color="#f58851" stop-opacity="0.3" />
+				<stop offset="1" stop-color="#f58851" stop-opacity="0" />
+			</radialGradient>
+		</defs>
+		<circle class="ground-ring" cx="760" cy="300" r="340" fill="url(#prodRingA)" />
+	</svg>
 	<h2 id="products-title">How can we help today?</h2>
 
 	<ul class="grid">
@@ -62,9 +73,34 @@
 <style>
 	.products {
 		--gutter: clamp(20px, 4vw, 56px);
+		position: relative;
 		background: var(--clay);
 		color: var(--deep);
 		padding: clamp(56px, 7vw, 96px) var(--gutter);
+		overflow: hidden;
+	}
+	.ground-rings {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+	.ground-ring {
+		transform-origin: center;
+		animation: ground-drift 30s ease-in-out infinite alternate;
+	}
+	@keyframes ground-drift {
+		from {
+			transform: translate(-24px, 16px) scale(1);
+		}
+		to {
+			transform: translate(28px, -20px) scale(1.04);
+		}
+	}
+	.products > :not(.ground-rings) {
+		position: relative;
+		z-index: 1;
 	}
 	h2 {
 		margin: 0 0 clamp(28px, 4.5vw, 65px);
@@ -95,7 +131,7 @@
 	.photo {
 		position: relative;
 		aspect-ratio: 1 / 1;
-		border-radius: 18px;
+		border-radius: 24px;
 		overflow: hidden;
 		margin-bottom: 36px;
 	}
@@ -110,17 +146,18 @@
 	}
 	
 	h3 {
-		margin: 0 0 8px;
-		font-size: 20px;
-		font-weight: 500;
-		letter-spacing: -0.005em;
+		margin: 0 0 10px;
+		font-size: clamp(20px, 1.8vw, 25px);
+		font-weight: 600;
+		letter-spacing: -0.01em;
 	}
 	p {
-		margin: 0 0 18px;
+		margin: 0 0 22px;
 		font-size: 15px;
 		line-height: 1.5;
-		color: var(--mushroom);
-		max-width: 36ch;
+		color: var(--deep);
+		opacity: 0.85;
+		max-width: 34ch;
 	}
 	.learn {
 		margin-top: auto;
@@ -174,7 +211,14 @@
 	@media (max-width: 800px) {
 		/* Reference proportions: the phone heading sits smaller against the 390 width. */
 		h2 {
-			font-size: 24px;
+			font-size: 26px;
+			position: relative;
+		}
+		h3 {
+			font-size: 20px;
+		}
+		.ground-rings {
+			opacity: 0.7;
 		}
 		.grid {
 			display: flex;
@@ -210,6 +254,9 @@
 		.learn,
 		.learn svg {
 			transition: none;
+		}
+		.ground-ring {
+			animation: none;
 		}
 	}
 </style>
