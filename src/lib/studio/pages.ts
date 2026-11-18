@@ -943,6 +943,7 @@ export const pages: StudioPage[] = [
 				'Evidence that the goods were damaged or not as described, such as a photo'
 			] },
 			{ heading: 'How long it takes', body: '[Placeholder: how long a chargeback takes and what you will hear from us, to be confirmed by Opello.]', note: 'Placeholder. Algbra does not give a timescale in this article.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'Read the FAQ', href: '/studio/faq/' },
 				{ label: 'Back to News', href: '/studio/news/' }
 			] }
@@ -971,6 +972,7 @@ export const pages: StudioPage[] = [
 			] },
 			{ heading: 'Single-use cards', body: 'Disposable cards are useful for a website you have not used before, or for a sign-up you do not want to commit to. [Placeholder: whether Opello offers single-use cards, and how to create one.]', note: 'Source: algbra.com virtual cards article, "Can I only use my virtual card one time?". Opello availability is a placeholder.', source: 'placeholder' },
 			{ heading: 'Getting a virtual card', body: '[Placeholder: how to get a virtual card in the Opello app, and whether it is offered on every account.]', note: 'Placeholder. Algbra\'s steps are for its own app, so the Opello steps need checking in the app before publishing.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'Back to News', href: '/studio/news/' }
 			] }
 		],
@@ -998,12 +1000,13 @@ export const pages: StudioPage[] = [
 			] },
 			{ heading: 'How Opello fits in', body: '[Placeholder: what Opello does with customer money and how it supports sustainability, in Opello wording. Needs Opello confirmation before publishing.]', note: 'Placeholder. Opello sustainability claims need Opello confirmation and compliance sign-off.', source: 'placeholder' },
 			{ heading: 'Read next', body: 'See how Opello tracks the impact of your spending, and how Ethical Saver works.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'Planet Impact', href: '/studio/carbon-tracking/' },
 				{ label: 'Ethical Saver', href: '/studio/ethical-savings/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' }
 			] }
 		],
-		cta: { label: 'Read the insights', href: '/studio/news/' }
+		cta: { label: 'Back to News', href: '/studio/news/' }
 	},
 	{
 		slug: 'carbon-offsetting',
@@ -1027,6 +1030,7 @@ export const pages: StudioPage[] = [
 			{ heading: 'Why quality matters', body: 'Not every project is high quality. Cheaper projects are sometimes unverified, and they may not give measurable evidence that carbon has really been removed or avoided. Buying those credits can be greenwashing. Offsetting works best when it sits alongside cutting emissions at source.', note: 'Source: algbra.com carbon offsetting article, "Isn\'t that greenwashing?" and "How are carbon offsetting projects rated?". Adapted for Opello.', source: 'algbra' },
 			{ heading: 'How Opello uses it', body: 'Planet Impact in the Opello app works out the emissions from your card spending, so you can see your footprint and choose what to offset. Opello only lists verified projects.', note: 'Claim to confirm: Opello uses Planet Impact to show footprint and offset it, and that only verified projects are listed. Project partners and verification route are placeholders. Not for publication until approved.', source: 'placeholder', href: '/studio/carbon-tracking/', linkLabel: 'See Planet Impact' },
 			{ heading: 'How emissions are worked out', body: '[Placeholder: the method and data source Opello uses to estimate the emissions for each transaction, described in plain English. Algbra\'s calculation partner is not named here.]', note: 'Placeholder. Opello to confirm the method and what it says about accuracy. Do not publish a figure without a source.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'Back to News', href: '/studio/news/' }
 			] }
 		],
@@ -1052,12 +1056,13 @@ export const pages: StudioPage[] = [
 			{ heading: 'Shop local', body: 'The World Tourism Organisation reports that of each one hundred dollars spent on a trip, only five dollars reaches local economies. By shopping at markets abroad you can support independent owners who source ingredients more locally.', note: 'Source: algbra.com article, "Shop local". The World Tourism Organisation statistic is an Algbra figure and needs checking against its original source.', source: 'algbra' },
 			{ heading: 'Offset your carbon emissions', body: 'There are a growing number of organisations offering carbon offsetting to help reduce carbon footprints. If you want to see the carbon footprint of your spending, Planet Impact in the Opello app estimates the emissions from each card purchase so you can choose what to offset.', note: 'Source: algbra.com article, "Offset your carbon emissions". The third-party offsetting companies are left out. The Planet Impact reference is an Opello claim that needs confirmation before publishing.', source: 'algbra', href: '/studio/carbon-tracking/', linkLabel: 'See Planet Impact' },
 			{ heading: 'Read next', body: 'More on sustainability and travel from Opello.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
 				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
 				{ label: 'Planet Impact', href: '/studio/carbon-tracking/' }
 			] }
 		],
-		cta: { label: 'Read the insights', href: '/studio/news/' }
+		cta: { label: 'Back to News', href: '/studio/news/' }
 	},
 	{
 		slug: 'money-and-mental-health',
@@ -1079,12 +1084,13 @@ export const pages: StudioPage[] = [
 			{ heading: 'Recharging your brain', body: 'A good night sleep has wondrous effects on both emotional stability and cognitive functions, including how we respond to stress and our decision-making skills. Research shows sleep and mental health are intertwined. Meditation videos, classical music or white noise can help if you struggle to get to sleep.', note: 'Source: algbra.com article, "Recharging our brain". Adapted for Opello.', source: 'algbra' },
 			{ heading: 'In it for the long haul', body: 'Being strapped for cash can also mean being strapped for time, and these activities require time and energy. Seeing mental health as an investment means taking time now so you are healthier and happier for longer, and more present for the people you love.', note: 'Source: algbra.com article, "In it for the long haul". Adapted for Opello.', source: 'algbra' },
 			{ heading: 'Read next', body: 'More from Opello on wellbeing, money and sustainability.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
 				{ label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' }
 			] }
 		],
-		cta: { label: 'Read the insights', href: '/studio/news/' }
+		cta: { label: 'Back to News', href: '/studio/news/' }
 	},
 	{
 		slug: 'world-wildlife-day',
@@ -1103,12 +1109,13 @@ export const pages: StudioPage[] = [
 			{ heading: 'The theme', body: 'The 2023 theme was "Forests and Livelihoods: Sustaining People and Planet", focusing on the role of forests in sustaining the livelihoods of millions of people and in maintaining the planet\'s ecological balance.', note: 'Source: algbra.com World Wildlife Day article, "World Wildlife Day 2023 theme". This is the 2023 theme from a dated article. Opello to update with the current year\'s theme before publishing.', source: 'algbra' },
 			{ heading: 'How to make an impact', body: '[Placeholder: what Opello does with customer money so it never funds harm to people or the planet, and how Opello helps customers offset their carbon footprint into projects that help reverse the loss of biodiversity. Opello wording to confirm before publishing.]', note: 'Placeholder. Adapted from algbra.com World Wildlife Day article, "How can I make an impact?". Algbra\'s product claims are not reused. Opello sustainability claims need Opello confirmation and compliance sign-off.', source: 'placeholder', href: '/studio/carbon-tracking/', linkLabel: 'See Planet Impact' },
 			{ heading: 'Read next', body: 'More on sustainability and ethical finance from Opello.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'Planet Impact', href: '/studio/carbon-tracking/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' },
 				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' }
 			] }
 		],
-		cta: { label: 'Read the insights', href: '/studio/news/' }
+		cta: { label: 'Back to News', href: '/studio/news/' }
 	},
 	{
 		slug: 'uk-account-from-abroad',
@@ -1170,12 +1177,13 @@ export const pages: StudioPage[] = [
 			{ heading: 'Pro: easier to travel abroad', body: 'Sorting out your finances abroad can be a nightmare when you are trying to find an ATM or bureau de change. Payment cards make your trip easier because they are globally accepted through the card scheme. With exchange rates, not all payment cards are born equal: some banks add a mark-up to the exchange rate when you buy something in a foreign currency.', note: 'Source: algbra.com cashless society article, "Pro: Easier to travel abroad". The card scheme is named by category only. Algbra\'s "Mastercard Exchange rate with no extra fees" claim is left out; Opello exchange rate and fees are a placeholder until confirmed against the Opello fee schedule.', source: 'algbra' },
 			{ heading: 'Con: cash can hold sentimental value', body: 'Cash can look cool. Notes from different countries make great keepsakes from a trip, and banknotes can feature beautiful designs that tell you about a country\'s culture. It is still big news when a new note is launched, and there is no feeling quite like finding a fiver from a grandparent in your birthday card. Creating those memories is harder in a cashless future.', note: 'Source: algbra.com cashless society article, "Con: Cash can hold sentimental value". The Alan Turing £50 note example is kept as Algbra published it. Adapted for Opello.', source: 'algbra' },
 			{ heading: 'The future of money', body: 'Whether you are already cashless or clinging firmly to your coin collection, money is changing.', source: 'algbra', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' },
 				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
 				{ label: 'Planet Impact', href: '/studio/carbon-tracking/' }
 			] }
 		],
-		cta: { label: 'Read the insights', href: '/studio/news/' }
+		cta: { label: 'Back to News', href: '/studio/news/' }
 	},
 	{
 		slug: 'consumer-duty',
@@ -1198,11 +1206,12 @@ export const pages: StudioPage[] = [
 			{ heading: '6. Ensuring all requirements are met', body: 'After reviewing implementation plans, the FCA thinks firms may have considered the requirements superficially. We are doing a line-by-line review of the FCA\'s rules and tracking how we comply with them.', note: 'Source: algbra.com Consumer Duty article, principle 6. The FCA quote is Algbra\'s summary of FCA guidance. Adapted for Opello.', source: 'algbra' },
 			{ heading: '7. Working closely with our partners', body: 'To provide our customers with services, we work with partners. We are working with each of them to make sure we have the most comprehensive approach to the Consumer Duty possible.', note: 'Source: algbra.com Consumer Duty article, principle 7. Partners are described by category only. Adapted for Opello.', source: 'algbra' },
 			{ heading: 'A big change in regulation', body: 'The Consumer Duty is a big change in the FCA\'s approach to regulation. It is an opportunity for us to do what we do best, but even better. You can read more on the FCA\'s Consumer Duty page.', note: 'Source: algbra.com Consumer Duty article, closing paragraph. The FCA Consumer Duty page is at fca.org.uk/firms/consumer-duty (public resource, not a vendor link). Adapted for Opello.', source: 'algbra', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
 				{ label: 'Frequently asked questions', href: '/studio/faq/' }
 			] }
 		],
-		cta: { label: 'Read the insights', href: '/studio/news/' }
+		cta: { label: 'Back to News', href: '/studio/news/' }
 	},
 	{
 		slug: 'dark-mode',
@@ -1221,11 +1230,12 @@ export const pages: StudioPage[] = [
 			{ heading: 'Up to 47% less battery', body: 'Using dark mode can save up to 47% battery power, which is nearly doubling your phone\'s battery life and cutting your energy use in half. This is especially true for phones with OLED screens, which now make up almost half the market, but other screen types see benefits too.', note: 'Source: algbra.com dark mode article, "Protect Your Phone and the Planet". The 47% figure and the OLED market share are Algbra\'s and need checking against their original source. Adapted for Opello.', source: 'algbra' },
 			{ heading: 'Be kinder to your eyes and sleep better', body: 'Switching to dark mode can also reduce the strain on your eyes, especially in low-light conditions. It cuts blue light emissions, which can interfere with your melatonin levels and disrupt your sleep. Better sleep equals better health.', note: 'Source: algbra.com dark mode article, "Be Kinder to Your Eyes and Sleep Better". Adapted for Opello.', source: 'algbra' },
 			{ heading: 'Join the dark side', body: 'Your eyes, wallet and the planet will thank you. [Placeholder: when dark mode is available in the Opello app and which screens it covers, to be confirmed.]', note: 'Source: algbra.com dark mode article, closing. Algbra product plug left out. Opello dark mode availability is a placeholder.', source: 'algbra', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
 				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
 				{ label: 'An intro to carbon offsetting', href: '/studio/carbon-offsetting/' }
 			] }
 		],
-		cta: { label: 'Read the insights', href: '/studio/news/' }
+		cta: { label: 'Back to News', href: '/studio/news/' }
 	},
 	{
 		slug: 'sitemap',
