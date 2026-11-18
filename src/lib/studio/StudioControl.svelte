@@ -77,7 +77,9 @@
 		margin: 0;
 		font-size: 15px;
 		line-height: 1.5;
-		color: var(--mushroom);
+		/* Baseline-02: intro reads as neutral deep navy, not the mauve mushroom tone. */
+		color: var(--deep);
+		opacity: 0.78;
 	}
 	.flag {
 		display: block;
