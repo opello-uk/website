@@ -73,10 +73,31 @@ export const pages: StudioPage[] = [
 			/* Out of MLP1 scope — physical cards and mobile wallets (Apple Pay / Google Pay) are not confirmed for day one. Do not publish.
 			{ heading: 'Physical cards', body: 'Choose from one of three biodegradable cards and get it delivered to your home for free.' }, { heading: 'Add your card to your phone', body: 'Pay with your phone using a mobile wallet. It is an easy, secure and private way to pay.' },
 			*/
-			{ heading: 'Virtual cards', body: 'A virtual card lives in the app and works for online payments.' },
+			{ heading: 'Virtual cards', body: 'A virtual card lives in the app and works for online payments.', href: '/studio/virtual-cards/', linkLabel: 'Learn about virtual cards' },
 			{ heading: 'Card controls and alerts', body: 'In the app, freeze or unfreeze your card and change your PIN with a few taps. Get a real-time push notification after every transaction.', href: '/studio/help-my-card/', linkLabel: 'Read about card controls' },
 			// Out of MLP1 scope — contactless in-store payment needs a physical card or wallet, which are not confirmed for day one; trimmed to the online identity check.
 			{ heading: 'Identity checks', body: 'Your card scheme\'s identity check helps confirm that online purchases are yours.', href: '/studio/open-account/', linkLabel: 'See how to open an account' }],
+		cta: { label: 'Open account with us', href: OPEN }
+	},
+	{
+		// Virtual cards product page. In MLP1 scope (virtual card for spending globally).
+		// Rebuilt 2026-11-20 as a product page after the insight article was purged in the MLP1 scope purge.
+		// Wording adapted from Algbra's virtual cards article (algbra.com/news/what-are-virtual-cards-and-how-do-they-work, 18 Apr 2023).
+		// Out of scope for this page: contactless in-store payment and mobile wallets (physical card / wallet not confirmed for day one),
+		// environment claims from the Algbra article (no source for our materials), card scheme named by category only.
+		// Disposable (single-use) cards: Algbra publishes the concept; whether Opello ships single-use cards is unconfirmed, so the body describes it as an option only.
+		slug: 'virtual-cards',
+		title: 'Virtual cards',
+		kicker: 'Personal',
+		lede: 'A card that lives in your app. Pay online with your own card number, and freeze it whenever you like.',
+		sections: [
+			{ heading: 'What is a virtual card?', body: 'A virtual card works like a debit card, but it lives in your app instead of your wallet. It has its own card number, expiry date and security code, always kept safe in the app.' },
+			{ heading: 'Pay online in a few taps', body: 'Fill in your virtual card details at checkout, just as you would with any other card. No card to carry, nothing to leave behind.', href: '/studio/current-accounts/', linkLabel: 'See current accounts' },
+			{ heading: 'Harder to lose, harder to skim', body: 'A virtual card cannot be skimmed at a machine or left behind at a till. And if something does not look right, freeze your card in the app with a few taps, then unfreeze it just as quickly.', href: '/studio/help-my-card/', linkLabel: 'Read about card controls' },
+			{ heading: 'Disposable cards', body: 'Some virtual cards are single-use: after one online checkout they are destroyed, and you generate a new one for the next purchase. Handy for trying a new shop or subscription.', href: '/studio/cards/', linkLabel: 'See cards' }
+			// Out of MLP1 scope — contactless in-store payment and mobile wallets are not confirmed for day one. Do not publish.
+			// Out of MLP1 scope — environment claims from the Algbra article need a source for our materials. Do not publish.
+		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
 	{
@@ -702,7 +723,7 @@ export const pages: StudioPage[] = [
 		lede: 'Every page in the Opello studio build, grouped the way the footer groups them. Placeholder layout until the site map is confirmed for launch.',
 		sections: [
 			{ heading: 'Personal', body: 'Accounts, payments and cards for everyday use.', links: [
-				{ label: 'Personal', href: '/studio/personal/' }, { label: 'All plans', href: '/studio/all-plans/' }, { label: 'Transfers', href: '/studio/transfers/' }, { label: 'Cards', href: '/studio/cards/' }, { label: 'Download the app', href: '/studio/download/' }
+				{ label: 'Personal', href: '/studio/personal/' }, { label: 'All plans', href: '/studio/all-plans/' }, { label: 'Transfers', href: '/studio/transfers/' }, { label: 'Cards', href: '/studio/cards/' }, { label: 'Virtual cards', href: '/studio/virtual-cards/' }, { label: 'Download the app', href: '/studio/download/' }
 			] },
 			{ heading: 'Accounts and savings', body: 'Savings, Cubes, currency accounts and other account types.', links: [
 				{ label: 'Current accounts', href: '/studio/current-accounts/' }, { label: 'UK account from abroad', href: '/studio/uk-account-from-abroad/' }, { label: 'Savings', href: '/studio/savings/' }, { label: 'Ethical Saver Cubes', href: '/studio/ethical-savings/' }, { label: 'Open an account', href: '/studio/open-account/' }
