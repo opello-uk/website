@@ -28,6 +28,34 @@
 	<link rel="alternate" hreflang="ar" href={`${STUDIO_ORIGIN}/studio/ar/`} />
 	<link rel="alternate" hreflang="tr" href={`${STUDIO_ORIGIN}/studio/tr/`} />
 	<link rel="alternate" hreflang="x-default" href={`${STUDIO_ORIGIN}/studio/`} />
+	<!-- Structured data for agent readers: facts match the visible page only
+		(hero line, slogan in the footer, site language). Social sameAs is left
+		out until the accounts are live. URL rides on STUDIO_ORIGIN so the
+		launch-time repoint updates it with hreflang, canonical and og:url.
+		Rendered with @html because Svelte does not interpolate expressions
+		inside a literal <script> element in the head. -->
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		'@context': 'https://schema.org',
+		'@graph': [
+			{
+				'@type': 'Organization',
+				'@id': `${STUDIO_ORIGIN}/studio/#org`,
+				name: 'Opello',
+				url: `${STUDIO_ORIGIN}/studio/`,
+				description:
+					'Unlock your life. For different lives, different circumstances and different starting points.',
+				slogan: 'Your own money, unlocked.'
+			},
+			{
+				'@type': 'WebSite',
+				'@id': `${STUDIO_ORIGIN}/studio/#site`,
+				url: `${STUDIO_ORIGIN}/studio/`,
+				name: 'Opello',
+				inLanguage: 'en-GB',
+				publisher: { '@id': `${STUDIO_ORIGIN}/studio/#org` }
+			}
+		]
+	})}<\/script>`}
 </svelte:head>
 
 <div class="studio">

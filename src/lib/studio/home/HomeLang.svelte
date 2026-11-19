@@ -46,6 +46,35 @@
 	<meta property="og:url" content={`${STUDIO_ORIGIN}/studio/${lang}/`} />
 	<link rel="canonical" href={`${STUDIO_ORIGIN}/studio/${lang}/`} />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
+	<!-- Structured data for agent readers: facts match the visible page only
+		(hero line, site language). Same facts as the English root, in this
+		language; URL rides on STUDIO_ORIGIN for the launch-time repoint.
+		Rendered with @html because Svelte does not interpolate expressions
+		inside a literal <script> element in the head. -->
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		'@context': 'https://schema.org',
+		'@graph': [
+			{
+				'@type': 'Organization',
+				'@id': `${STUDIO_ORIGIN}/studio/#org`,
+				name: 'Opello',
+				url: `${STUDIO_ORIGIN}/studio/`,
+				description:
+					lang === 'ar'
+						? 'افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة.'
+						: 'Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için.',
+				slogan: 'Your own money, unlocked.'
+			},
+			{
+				'@type': 'WebSite',
+				'@id': `${STUDIO_ORIGIN}/studio/#site`,
+				url: `${STUDIO_ORIGIN}/studio/`,
+				name: 'Opello',
+				inLanguage: lang === 'ar' ? 'ar' : 'tr',
+				publisher: { '@id': `${STUDIO_ORIGIN}/studio/#org` }
+			}
+		]
+	})}<\/script>`}
 </svelte:head>
 
 <div class="studio" dir={lang === 'ar' ? 'rtl' : 'ltr'} lang={lang}>

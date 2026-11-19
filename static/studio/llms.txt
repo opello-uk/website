@@ -1,0 +1,46 @@
+# Opello
+
+> The Opello website build: a full pre-launch preview served as an unlisted studio preview at /studio/ while the product is in development. The public domain (https://opello.co.uk/) is still a coming-soon page. This preview is marked noindex and carries a "not for publication until approved" marker on every page; wording is draft and may change before launch. Pages are server-rendered HTML in three languages: English, Arabic (RTL) and Turkish.
+
+## Facts
+
+- Name: Opello
+- Status: pre-launch build preview (noindex, unlisted, not for publication)
+- Domain: opello.co.uk (public site is a coming-soon page; the build lives at /studio/)
+- First-release product scope: personal GBP e-money accounts, domestic and international GBP payments, a virtual card for spending worldwide, savings pots, refer-a-friend
+- Customer-residence markets: UK, UAE and Türkiye (onboarding scope still being confirmed)
+- Languages: English (/studio/), Arabic RTL (/studio/ar/), Turkish (/studio/tr/). Every page has a twin in each language at /studio/{lang}/{slug}/
+- Draft copy: product wording is under review; contact details, app links and social accounts are placeholders until they are set up
+
+## Pages
+
+English pages below; replace /studio/ with /studio/ar/ or /studio/tr/ for the Arabic or Turkish twin of the same page.
+
+- [Home](https://studio-5c4fcfa636.onrender.com/studio/)
+- [Personal](https://studio-5c4fcfa636.onrender.com/studio/personal/): the everyday account overview
+- [Open an account](https://studio-5c4fcfa636.onrender.com/studio/open-account/): what you need and how onboarding works
+- [Current accounts](https://studio-5c4fcfa636.onrender.com/studio/current-accounts/): the everyday account in detail
+- [Transfers](https://studio-5c4fcfa636.onrender.com/studio/transfers/): sending money at home and abroad
+- [Cards](https://studio-5c4fcfa636.onrender.com/studio/cards/): the virtual card
+- [Virtual cards](https://studio-5c4fcfa636.onrender.com/studio/virtual-cards/): how virtual cards work
+- [Savings](https://studio-5c4fcfa636.onrender.com/studio/savings/): savings pots and Cubes
+- [Refer a friend](https://studio-5c4fcfa636.onrender.com/studio/referrals/)
+- [All plans](https://studio-5c4fcfa636.onrender.com/studio/all-plans/)
+- [UK account from abroad](https://studio-5c4fcfa636.onrender.com/studio/uk-account-from-abroad/)
+- [Help](https://studio-5c4fcfa636.onrender.com/studio/help/): help centre
+- [Help articles](https://studio-5c4fcfa636.onrender.com/studio/help-articles/): every article title by category
+- [FAQ](https://studio-5c4fcfa636.onrender.com/studio/faq/)
+- [Contact](https://studio-5c4fcfa636.onrender.com/studio/contact/)
+- [About](https://studio-5c4fcfa636.onrender.com/studio/about/)
+- [Careers](https://studio-5c4fcfa636.onrender.com/studio/careers/)
+- [News](https://studio-5c4fcfa636.onrender.com/studio/news/) and [Blog](https://studio-5c4fcfa636.onrender.com/studio/blog/): insight and article indexes
+- [Log in](https://studio-5c4fcfa636.onrender.com/studio/login/)
+- [Download](https://studio-5c4fcfa636.onrender.com/studio/download/)
+- [Fees and charges](https://studio-5c4fcfa636.onrender.com/studio/fees-and-charges/)
+- [Terms and conditions](https://studio-5c4fcfa636.onrender.com/studio/terms-and-conditions/)
+- [Customer terms and conditions](https://studio-5c4fcfa636.onrender.com/studio/customer-terms-and-conditions/)
+- [Privacy policy](https://studio-5c4fcfa636.onrender.com/studio/privacy-policy/)
+- [Cookies policy](https://studio-5c4fcfa636.onrender.com/studio/cookies-policy/)
+- [Accessibility](https://studio-5c4fcfa636.onrender.com/studio/accessibility/)
+- [Responsible disclosure](https://studio-5c4fcfa636.onrender.com/studio/responsible-disclosure/)
+- [Sitemap](https://studio-5c4fcfa636.onrender.com/studio/sitemap/): every page in every language
