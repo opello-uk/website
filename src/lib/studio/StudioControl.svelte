@@ -3,7 +3,7 @@
 	import { homeCopy, langHref, type Lang } from '#lib/studio/i18n';
 	// "More control. More confidence." heading + intro are the baseline deck's own wording (baseline-02,
 	// Vinay's design reference) — not placeholder copy. Tile labels follow the baseline too; each links to its studio page.
-	// MLP1: transfers only. Virtual cards page and currency-exchange (multi-currency) are out of MLP1 scope for now; restore when in scope.
+	// MLP1: transfers and virtual cards. The virtual-card tile points at the dedicated /studio/virtual-cards/ page (in scope, rebuilt 2026-11-20); currency-exchange (multi-currency) stays out of scope.
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const c = $derived(homeCopy[lang]);
 </script>

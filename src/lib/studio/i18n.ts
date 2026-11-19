@@ -1277,6 +1277,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "الكوارث المناخية: على عتبة بابنا", href: "/studio/climate-catastrophes/" },
             { label: "الانتقال العادل: هل هو هدف قابل للتحقيق؟", href: "/studio/just-transition/" },
             { label: "5 نصائح لعيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
+            { label: "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة", href: "/studio/card-exchange-rates/" },
           ],
         },
       ],
@@ -1310,6 +1311,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "الكوارث المناخية: على عتبة بابنا", href: "/studio/climate-catastrophes/" },
             { label: "الانتقال العادل: هل هو هدف قابل للتحقيق؟", href: "/studio/just-transition/" },
             { label: "5 نصائح لعيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
+            { label: "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة", href: "/studio/card-exchange-rates/" },
           ],
         },
         {
@@ -1672,6 +1674,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "الكوارث المناخية", href: "/studio/climate-catastrophes/" },
             { label: "الانتقال العادل", href: "/studio/just-transition/" },
             { label: "عيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
+            { label: "رسوم وأسعار صرف البطاقة في الخارج", href: "/studio/card-exchange-rates/" },
           ],
         },
         {
@@ -2044,6 +2047,28 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           { label: "عطلة خضراء: كيف تسافر بأسلوب مستدام؟", href: "/studio/green-break/" },
           { label: "ما هو المصرف الأخضر، ولماذا يهم؟", href: "/studio/green-banking/" },
         ] },
+      ],
+      cta: { label: "العودة إلى الأخبار", href: "/studio/news/" },
+    },
+    {
+      slug: "card-exchange-rates",
+      title: "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة",
+      kicker: "شروحات",
+      lede: "إنفاق المال في الخارج لا يجب أن يحتاج إلى جدول حسابات. كيف تعمل أسعار صرف البطاقات، وأربع عادات تجعل الإنفاق في السفر بسيطاً.",
+      source: "placeholder",
+      sections: [
+        { source: "placeholder", heading: "ترتيب أموالك في الخارج", body: "أجمل لحظة في السفر هي النزول من الطائرة في بلد جديد. وأقبحها؟ ترتيب أموالك. معرفة أسعار الصرف ورسوم المعاملات التي ستدفعها صداعٌ لا يحتاجه أحد، والخطأ فيها قد يكلفك. إليك كيف تعمل أسعار صرف البطاقات، وبعض العادات التي تجعل الأمور بسيطة." },
+        { source: "placeholder", heading: "كيف يعمل سعر صرف البطاقة", body: "عندما تدفع أو تسحب نقداً بالعملة المحلية في الخارج، تحوّل جهة إصدار البطاقات عملتك المحلية إلى العملة المحلية تلقائياً بسعر الصرف الخاص بها. يُطبَّق ذلك السعر وقت خروج الأموال من حسابك، فلا تحتاج إلى حساب سعر الصرف عند الدفع. بعض الجهات تضيف هامشاً فوق السعر؛ وادّعاء عدم وجود أي هامش أو رسوم إضافية على معاملات العملات الأجنبية على بطاقتك أمرٌ يتعين على أوبيلو تأكيده وفق جدول رسومه." },
+        { source: "placeholder", heading: "تحقق من سعر الصرف قبل الدفع", body: "قبل الدفع، تحقق سريعاً من السعر الحالي للعملة المحلية لتكون لديك فكرة عما ستدفعه بالجنيهات. يمكنك بعدها مقارنته بالأسعار الأخرى في السوق. قد تحصل على صفقة جيدة عند الدفع نقداً، لكن تذكر أن بعض أجهزة الصرف الآلي تضيف رسوماً خاصة بها على السحب." },
+        { source: "placeholder", heading: "ادفع بالعملة المحلية", body: "أحياناً في الخارج يُسأل عما إذا كنت تريد الدفع بالعملة المحلية أم بالجنيهات. من الأفضل عادةً اختيار العملة المحلية؛ عندها يُطبَّق سعر صرف جهة إصدار البطاقات، وتتجنب الهوامش التي قد تُضاف عند تحويل الدفعة إلى الجنيه الإسترليني في نفس اللحظة." },
+        { source: "placeholder", heading: "ارفض التحويل الديناميكي للعملة", body: "التحويل الديناميكي للعملة خدمة تقدمها بعض الجهات وأجهزة الصرف الآلي تتيح لك الدفع بعملتك المحلية بدلاً من العملة المحلية. تبدو مريحة، وميزتها أنك تعرف بالضبط ما ستدفعه بالجنيهات، لكنها عادةً تكلف أكثر من الدفع بالعملة المحلية. ارفض التحويل و والتزم بالعملة المحلية." },
+        { source: "placeholder", heading: "راقب معاملاتك", body: "أثناء سفرك، تحقق من كل معاملة في التطبيق للتأكد من أنها حُوّلت بالسعر الذي توقعته. إذا بدأ شيء ما خاطئاً، تواصل معنا: قد نتمكن من مساعدتك في رفع استرجاع دفع." },
+        { source: "placeholder", heading: "ما الرسوم التي تفرضها أوبيلو على الإنفاق في الخارج؟", body: "[عنصر بديل: موقف أوبيلو من الرسوم على الإنفاق بالبطاقة في الخارج، يُؤكَّد وفق جدول رسوم أوبيلو. جواب ألجبرا (لا رسوم إضافية، سعر صرف جهة إصدار البطاقات فقط) ادّعاءٌ لمنتج وليس يُعاد استخدامه كحقيقة.]" , href: "/studio/fees-and-charges/", linkLabel: "اطلع على الرسوم والرسوم" },
+        { source: "placeholder", heading: "اقرأ التالي", body: "المزيد عن المال والسفر من أوبيلو.", links: [
+          { label: "العودة إلى المدونة", href: "/studio/blog/" },
+          { label: "التحويلات العالمية", href: "/studio/transfers/" },
+          { label: "ما هو الاسترجاع، ومتى يمكنك المطالبة به؟", href: "/studio/chargebacks/" }
+        ] }
       ],
       cta: { label: "العودة إلى الأخبار", href: "/studio/news/" },
     },
@@ -3293,6 +3318,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "İklim felaketleri: kapımızda", href: "/studio/climate-catastrophes/" },
             { label: "Adil geçiş: ulaşılabilir bir hedef mi?", href: "/studio/just-transition/" },
             { label: "Sürdürülebilir bir Sevgililer Günü için 5 ipucu", href: "/studio/sustainable-valentines-day/" },
+            { label: "Kartınla seyahat: ücretler ve döviz kurları açıklandı", href: "/studio/card-exchange-rates/" },
           ],
         },
       ],
@@ -3326,6 +3352,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "İklim felaketleri: kapımızda", href: "/studio/climate-catastrophes/" },
             { label: "Adil geçiş: ulaşılabilir bir hedef mi?", href: "/studio/just-transition/" },
             { label: "Sürdürülebilir bir Sevgililer Günü için 5 ipucu", href: "/studio/sustainable-valentines-day/" },
+            { label: "Kartınla seyahat: ücretler ve döviz kurları açıklandı", href: "/studio/card-exchange-rates/" },
           ],
         },
         {
@@ -3692,6 +3719,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "İklim felaketleri", href: "/studio/climate-catastrophes/" },
             { label: "Adil geçiş", href: "/studio/just-transition/" },
             { label: "Sürdürülebilir Sevgililer Günü", href: "/studio/sustainable-valentines-day/" },
+            { label: "Yurt dışında kart ücretleri ve döviz kurları", href: "/studio/card-exchange-rates/" },
           ],
         },
         {
@@ -4070,6 +4098,29 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       ],
       cta: { label: "Haberlere dön", href: "/studio/news/" },
     },
+    {
+      slug: "card-exchange-rates",
+      title: "Kartınla seyahat: ücretler ve döviz kurları açıklandı",
+      kicker: "Açıklamalar",
+      lede: "Yurt dışında harcama hesap tablosu gerektirmemeli. Kart döviz kurları nasıl işler ve tatil harcamalarını basit tutan dört alışkanlık.",
+      source: "placeholder",
+      sections: [
+        { source: "placeholder", heading: "Yurt dışında paranı düzenlemek", body: "Tatilin en güzel yanı yeni bir ülkede uçağa binmek. En kötüsü? Paranı düzenlemek. Ödeyeceğin döviz kurlarını ve işlem ücretlerini anlamak kimsenin ihtiyaç duymadığı bir baş ağrısıdır ve yanlış yapmak sana pahalıya patlayabilir. Kart döviz kurlarının nasıl işlediğini ve işleri basit tutan birkaç alışkanlığı burada bulacaksın." },
+        { source: "placeholder", heading: "Kart döviz kuru nasıl işler", body: "Yurt dışında yerel para birimiyle ödediğinde veya nakit çektiğinde, kart şeması ana para birimini kendi döviz kuruyla otomatik olarak yerel para birimine çevirir. Bu kur, fonlar hesabından çıktığı anda uygulanır; böylece kasada kur hesaplaman gerekmez. Bazı sağlayıcılar kurun üzerine bir fark ekler; kartında fark veya ek yabancı para işlem ücreti uygulanmadığı iddiasını Opello kendi ücret çizelgesine göre teyit etmelidir." },
+        { source: "placeholder", heading: "Ödeme yapmadan önce kurubak", body: "Ödemeden önce yerel para biriminin güncel kurunu hızlıca kontrol et; sterlin cinsinden ne ödediğin hakkında fikrin olsun. Sonra bunu piyasadaki diğer oranlarla karşılaştırabilirsin. Nakit ödemede iyi bir işlem bulabilirsin, ama bazı bankamatiklerin çekimlere kendi ücretlerini eklediğini unutma." },
+        { source: "placeholder", heading: "Yerel para birimiyle öde", body: "Yurt dışında bazen tutarın yerel para birimiyle mi sterlinle mi tahsil edileceği sorulur. Genellikle yerel para birimini seçmek daha iyidir: böylece kart şemasının kuru uygulanır ve ödeme anında sterline çevrilirken eklenebilecek farklardan kaçınırsın." },
+        { source: "placeholder", heading: "Dinamik para birimi dönüşümünü reddet", body: "Dinamik para birimi dönüşümü, bazı sağlayıcıların ve bankamatiklerin sunduğu, yerel para birimi yerine ana para biriminle ödemene izin veren bir hizmettir. Kulağa pratik gelir ve artısı sterlin cinsinden ne ödediğini tam bilmen; ama genellikle yerel para birimiyle ödemekten daha pahalıya gelir. Dönüşümü reddet ve yerel para biriminde kal." },
+        { source: "placeholder", heading: "İşlemlerini takip et", body: "Tatildeyken uygulamadaki her işlemi kontrol et; beklediğin kurda çevrildiğinden emin ol. Bir şey yanlış görünüyorsa bize ulaş: itiraz (chargeback) başlatmanda sana yardımcı olabiliriz." },
+        { source: "placeholder", heading: "Opello yurt dışında harcama için ne ücret alır?", body: "[Yer tutucu: Opello'nun yurt dışında kartla harcama ücret politikası, Opello ücret çizelgesine göre teyit edilecek. Algbra'nın cevabı (ek ücret yok, yalnızca kart şeması kuru) bir ürün iddiasıdır ve gerçek olarak yeniden kullanılmaz.]", href: "/studio/fees-and-charges/", linkLabel: "Ücretlere bak" },
+        { source: "placeholder", heading: "Sıradaki yazılar", body: "Opello'dan para ve seyahat üzerine daha fazlası.", links: [
+          { label: "Bloga dön", href: "/studio/blog/" },
+          { label: "Küresel transferler", href: "/studio/transfers/" },
+          { label: "Chargeback nedir ve ne zaman talep edebilirsin?", href: "/studio/chargebacks/" }
+        ] }
+      ],
+      cta: { label: "Haberlere dön", href: "/studio/news/" },
+    },
+
   ],
 };
 
@@ -4303,7 +4354,7 @@ export const homeCopy: Record<'en' | Lang, {
     controlIntro: 'A financial experience designed to give you greater choice in how you manage your money.',
     controlTiles: [
       { title: 'Global transfers', icon: 'globe', href: '/studio/transfers/' },
-      { title: 'Virtual card', icon: 'card', href: '/studio/cards/' }
+      { title: 'Virtual card', icon: 'card', href: '/studio/virtual-cards/' } // Virtual cards are in MLP1 scope; dedicated page rebuilt 2026-11-20
     ],
     photoTitle1: 'A place where', photoTitle2: 'you belong.',
     photoBody: 'Whatever your background or starting point, Opello believes access to financial services should be more inclusive.',
@@ -4330,7 +4381,7 @@ export const homeCopy: Record<'en' | Lang, {
     controlIntro: 'تجربة مالية مصممة لمنحك خيارات أكبر في كيفية إدارة أموالك.',
     controlTiles: [
       { title: 'التحويلات العالمية', icon: 'globe', href: '/studio/transfers/' },
-      { title: 'بطاقة افتراضية', icon: 'card', href: '/studio/cards/' }
+      { title: 'بطاقة افتراضية', icon: 'card', href: '/studio/virtual-cards/' }
     ],
     photoTitle1: 'مكانٌ', photoTitle2: 'تنتمي إليه.',
     photoBody: 'أياً كانت خلفيتك أو نقطة انطلاقك، تؤمن أوبيلو بأن الوصول إلى الخدمات المالية يجب أن يكون أكثر شمولاً.',
@@ -4357,7 +4408,7 @@ export const homeCopy: Record<'en' | Lang, {
     controlIntro: 'Paranızı nasıl yöneteceğiniz konusunda daha fazla seçenek sunmak için tasarlanmış bir finans deneyimi.',
     controlTiles: [
       { title: 'Küresel transferler', icon: 'globe', href: '/studio/transfers/' },
-      { title: 'Sanal kart', icon: 'card', href: '/studio/cards/' }
+      { title: 'Sanal kart', icon: 'card', href: '/studio/virtual-cards/' }
     ],
     photoTitle1: 'Ait olduğunuz', photoTitle2: 'bir yer.',
     photoBody: 'Arka planınız ya da başlangıç noktanız ne olursa olsun, Opello finansal hizmetlere erişimin daha kapsayıcı olması gerektiğine inanır.',
