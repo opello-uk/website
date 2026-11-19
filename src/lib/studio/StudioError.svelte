@@ -30,8 +30,15 @@
 	// is already rtl before hydration.
 	$effect(() => {
 		document.documentElement.lang = lang === 'en' ? 'en-GB' : lang;
+		// The static shell prerenders with the English title (no pathname at build
+		// time); keep the document title in step when a translated route 404s.
+		document.title = (notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)';
 	});
 </script>
+
+<svelte:head>
+	<title>{(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'}</title>
+</svelte:head>
 
 <div class="studio" lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
 	<a class="skip" href="#content">Skip to content</a>
