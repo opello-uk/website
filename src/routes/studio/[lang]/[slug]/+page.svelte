@@ -21,6 +21,7 @@
 	import blogHero from '#lib/assets/studio/blog-hero.jpg';
 	import { resolve } from '$app/paths';
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
+	import { faqJsonLd } from '#lib/studio/faqLd';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -55,6 +56,10 @@
 	{#each (['ar', 'tr'] as const).filter((l) => l !== lang && hasTranslation(l, p.slug)) as l (l)}
 		<link rel="alternate" hreflang={l} href={`${STUDIO_ORIGIN}/studio/${l}/${p.slug}/`} />
 	{/each}
+	{#if p.slug === 'faq'}
+		<!-- FAQPage schema mirroring the visible Q&A cards only. -->
+		{@html `<script type="application/ld+json">${JSON.stringify(faqJsonLd(p.sections, p.title, `${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`))}</script>`}
+	{/if}
 </svelte:head>
 
 <div class="studio" dir={lang === 'ar' ? 'rtl' : 'ltr'} lang={lang}>

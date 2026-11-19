@@ -21,6 +21,7 @@
 	import blogHero from '#lib/assets/studio/blog-hero.jpg';
 	import { resolve } from '$app/paths';
 	import { hasTranslation, langName, STUDIO_ORIGIN, type Lang } from '#lib/studio/i18n';
+	import { faqJsonLd } from '#lib/studio/faqLd';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -60,6 +61,10 @@
 		<link rel="alternate" hreflang={l} href={altHref(l)} />
 	{/each}
 	<link rel="alternate" hreflang="x-default" href={altHref('en')} />
+	{#if p.slug === 'faq'}
+		<!-- FAQPage schema mirroring the visible Q&A cards only. -->
+		{@html `<script type="application/ld+json">${JSON.stringify(faqJsonLd(p.sections, p.title, altHref('en')))}</script>`}
+	{/if}
 </svelte:head>
 
 <div class="studio">
