@@ -21,6 +21,7 @@
 	<meta property="og:description" content="Unlock your life. For different lives, different circumstances and different starting points." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={`${STUDIO_ORIGIN}/studio/`} />
+	<link rel="canonical" href={`${STUDIO_ORIGIN}/studio/`} />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	<link rel="alternate" hreflang="en" href={`${STUDIO_ORIGIN}/studio/`} />

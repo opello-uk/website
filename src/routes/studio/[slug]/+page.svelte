@@ -53,6 +53,7 @@
 	<meta property="og:description" content={p.lede} />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={altHref('en')} />
+	<link rel="canonical" href={altHref('en')} />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	{#each alts as l (l)}

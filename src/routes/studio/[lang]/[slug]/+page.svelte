@@ -46,6 +46,7 @@
 	<meta property="og:description" content={p.lede} />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={`${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`} />
+	<link rel="canonical" href={`${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`} />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	<link rel="alternate" hreflang={lang} href={`${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`} />

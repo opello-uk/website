@@ -44,6 +44,7 @@
 	{/if}
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={`${STUDIO_ORIGIN}/studio/${lang}/`} />
+	<link rel="canonical" href={`${STUDIO_ORIGIN}/studio/${lang}/`} />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 </svelte:head>
 
