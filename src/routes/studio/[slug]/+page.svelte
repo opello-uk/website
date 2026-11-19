@@ -199,9 +199,12 @@
 	}
 	.ring {
 		position: absolute;
-		top: -32px;
+		/* lifted and shrunk so the lower edge clears the first card row: the old
+		   420px ring crossed the third card's heading and body at 1440 (verified
+		   live). Same geometry the RTL pages already ship. */
+		top: -72px;
 		inset-inline-end: -12vw;
-		width: min(44vw, 420px);
+		width: min(34vw, 330px);
 		aspect-ratio: 1;
 		opacity: 0.8;
 		pointer-events: none;
@@ -217,6 +220,23 @@
 	@keyframes ring-drift {
 		from { transform: rotate(-1deg) translateY(-6px); }
 		to { transform: rotate(1.2deg) translateY(7px); }
+	}
+	/* Baseline-phase parallax: the ring rises a touch faster than the page and
+	   fades slightly as you scroll, so it reads as a layer above the content.
+	   Scroll-driven CSS (no JS); browsers without animation-timeline keep the
+	   static ring, and reduced-motion users get the drift only. */
+	@keyframes ring-parallax {
+		from { translate: 0 0; opacity: 0.8; }
+		to { translate: 0 -6vh; opacity: 0.45; }
+	}
+	@supports (animation-timeline: scroll()) {
+		@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+			.hero .ring {
+				animation: ring-parallax linear both;
+				animation-timeline: scroll(root block);
+				animation-range: 0 90vh;
+			}
+		}
 	}
 	@media (prefers-reduced-motion: reduce) {
 		.ring :global(svg) { animation: none; }

@@ -102,6 +102,23 @@
 	.ring { transform-origin: center; }
 	.ring-a { animation: drift 26s ease-in-out infinite alternate; }
 	.ring-b { animation: drift 34s ease-in-out 2s infinite alternate-reverse; }
+	/* Baseline-phase parallax: the rings lag the scroll slightly inside their
+	   clipped layer, so the hero reads as deep ground behind the phones.
+	   Scroll-driven CSS (no JS); without animation-timeline the rings stay
+	   static, and reduced-motion keeps them still (drift block below). */
+	@keyframes rings-parallax {
+		from { transform: translate3d(0, 0, 0); }
+		to { transform: translate3d(0, 9vh, 0); }
+	}
+	@supports (animation-timeline: scroll()) {
+		@media (prefers-reduced-motion: no-preference) {
+			.rings {
+				animation: rings-parallax linear both;
+				animation-timeline: scroll(root block);
+				animation-range: 0 110vh;
+			}
+		}
+	}
 	@keyframes drift {
 		from { transform: rotate(-2deg) translateY(-8px); }
 		to { transform: rotate(2.5deg) translateY(10px); }

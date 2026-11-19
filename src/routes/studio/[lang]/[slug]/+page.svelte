@@ -183,9 +183,12 @@
 	}
 	.ring {
 		position: absolute;
-		top: -32px;
+		/* lifted and shrunk so the lower edge clears the first card row (verified
+		   overlapping the third card's heading at 1440; geometry now shared by
+		   LTR and RTL pages, so the old RTL-only override is gone) */
+		top: -72px;
 		inset-inline-end: -12vw;
-		width: min(44vw, 420px);
+		width: min(34vw, 330px);
 		aspect-ratio: 1;
 		opacity: 0.8;
 		pointer-events: none;
@@ -202,15 +205,25 @@
 		from { transform: rotate(-1deg) translateY(-6px); }
 		to { transform: rotate(1.2deg) translateY(7px); }
 	}
+	/* Baseline-phase parallax: same scroll-linked ring as the EN template
+	   (rises a touch faster than the page and fades slightly; scroll-driven
+	   CSS, no JS; static ring without animation-timeline; reduced-motion gets
+	   the drift only). */
+	@keyframes ring-parallax {
+		from { translate: 0 0; opacity: 0.8; }
+		to { translate: 0 -6vh; opacity: 0.45; }
+	}
+	@supports (animation-timeline: scroll()) {
+		@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+			.hero .ring {
+				animation: ring-parallax linear both;
+				animation-timeline: scroll(root block);
+				animation-range: 0 90vh;
+			}
+		}
+	}
 	@media (prefers-reduced-motion: reduce) {
 		.ring :global(svg) { animation: none; }
-	}
-	/* RTL: the mirrored ring hangs over the first card's text at 1440; lift and
-	   shrink it slightly so its lower edge clears the card row (LTR pages keep
-	   the baseline-size ring) */
-	:global([dir="rtl"]) .ring {
-		top: -72px;
-		width: min(34vw, 330px);
 	}
 	.copy {
 		position: relative;
