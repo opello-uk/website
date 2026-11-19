@@ -114,7 +114,10 @@
 		</section>
 		{/if}
 
-		<section class="sections rem-{p.sections.length % 3}" class:clay={['personal','transfers','cards','virtual-cards','current-accounts','savings','help','faq','contact'].includes(p.slug as string)}>
+		<!-- Clay card language is now the studio-wide default (baseline-05): every sub-page's cards
+		     match the landing page. Per-slug opt-out is back to the earlier conditional list if a
+		     page ever needs the navy ground again. -->
+		<section class="sections clay rem-{p.sections.length % 3}">
 			{#each p.sections as s (s.heading)}
 				<article class="card" class:wide={s.wide}>
 					<h2>{s.heading}</h2>
@@ -487,6 +490,10 @@
 	/* Peach link lists fail contrast on clay; lists go navy like the single links. */
 	.sections.clay .card .links a {
 		color: var(--deep);
+	}
+	/* Sitemap language twins were clay-tinted for the navy ground; navy on clay. */
+	.sections.clay .card .langlink {
+		color: rgba(0, 20, 49, 0.72);
 	}
 	.sections.clay .card .links a:hover {
 		opacity: 0.75;
