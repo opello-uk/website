@@ -38,6 +38,34 @@
 		object-fit: cover;
 		object-position: 60% 30%;
 	}
+	/* Baseline-phase parallax: the band photo drifts gently inside the band as
+	   the section crosses the viewport (slight oversize keeps the edges covered).
+	   Scroll-driven CSS (no JS), named view timeline on the section; browsers
+	   without animation-timeline keep the photo static, and reduced-motion keeps
+	   it still (block below). */
+	@keyframes band-photo-parallax {
+		from { transform: scale(1.14) translate3d(0, 3%, 0); }
+		to { transform: scale(1.14) translate3d(0, -3%, 0); }
+	}
+	@supports (animation-timeline: view()) {
+		@media (prefers-reduced-motion: no-preference) {
+			.photo {
+				view-timeline-name: --photoband;
+			}
+			.ground img {
+				animation: band-photo-parallax linear both;
+				animation-timeline: --photoband;
+				animation-range: cover 0% cover 100%;
+			}
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		@supports (animation-timeline: view()) {
+			.ground img {
+				animation: none;
+			}
+		}
+	}
 	.ground {
 		position: absolute;
 		inset: 0;

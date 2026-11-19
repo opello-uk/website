@@ -76,7 +76,27 @@
 		height: 100%;
 		object-fit: cover;
 	}
-	
+	/* Baseline-phase parallax: the banner photo drifts gently inside its clipped
+	   panel as the section crosses the viewport (slight oversize keeps the edges
+	   covered). Scroll-driven CSS (no JS), named view timeline on the section;
+	   browsers without animation-timeline keep the photo static, and
+	   reduced-motion keeps it still (block below). */
+	@keyframes banner-photo-parallax {
+		from { transform: scale(1.12) translate3d(0, 2.5%, 0); }
+		to { transform: scale(1.12) translate3d(0, -2.5%, 0); }
+	}
+	@supports (animation-timeline: view()) {
+		@media (prefers-reduced-motion: no-preference) {
+			.banner {
+				view-timeline-name: --banner;
+			}
+			.art img {
+				animation: banner-photo-parallax linear both;
+				animation-timeline: --banner;
+				animation-range: cover 0% cover 100%;
+			}
+		}
+	}
 
 	.copy {
 		position: relative;
@@ -190,6 +210,11 @@
 		.cta,
 		.cta svg {
 			transition: none;
+		}
+		@supports (animation-timeline: view()) {
+			.art img {
+				animation: none;
+			}
 		}
 	}
 </style>

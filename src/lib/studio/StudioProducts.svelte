@@ -106,6 +106,26 @@
 		position: relative;
 		z-index: 1;
 	}
+	/* Baseline-phase parallax: the ring layer slides gently against the scroll
+	   as the section crosses the viewport. Scroll-driven CSS (no JS), named view
+	   timeline on the section; browsers without animation-timeline keep the
+	   static ground, and reduced-motion keeps them still (block below). */
+	@keyframes ground-parallax {
+		from { transform: translate3d(0, 5vh, 0); }
+		to { transform: translate3d(0, -5vh, 0); }
+	}
+	@supports (animation-timeline: view()) {
+		@media (prefers-reduced-motion: no-preference) {
+			.products {
+				view-timeline-name: --products;
+			}
+			.ground-rings {
+				animation: ground-parallax linear both;
+				animation-timeline: --products;
+				animation-range: cover 0% cover 100%;
+			}
+		}
+	}
 	h2 {
 		margin: 0 0 clamp(28px, 4.5vw, 65px);
 		font-weight: 500;
@@ -261,6 +281,11 @@
 		}
 		.ground-ring {
 			animation: none;
+		}
+		@supports (animation-timeline: view()) {
+			.ground-rings {
+				animation: none;
+			}
 		}
 	}
 </style>
