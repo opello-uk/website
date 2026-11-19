@@ -1336,12 +1336,12 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "ما تحققنا منه",
-          body: "فحص آلي لتباين الألوان في كل صفحة بأحجام الحاسوب والهاتف، مع إصلاح الإخفاقات (17 نوفمبر 2026). فحص التخطيطات بصرياً عند 1440 و390 بكسل. الوصول بلوحة المفاتيح وحلقات التركيز المرئية في التنقل والتذييل وروابط البطاقات، ورابط تخطي إلى المحتوى في كل صفحة (17 نوفمبر 2026). فحوصات موضعية لقارئ الشاشة: ترتيب العناوين وروابط التخطي والمعالم وترتيب التنقل (17 نوفمبر 2026). الحركة المخففة: كل مكوّن متحرك يحتوي على كتلة prefers-reduced-motion تعطّل الانتقالات والحركات (17 نوفمبر 2026).",
+          body: "فحص آلي لتباين الألوان في كل صفحة بأحجام الحاسوب والهاتف، مع إصلاح الإخفاقات (17 نوفمبر 2026). فحص التخطيطات بصرياً عند 1440 و390 بكسل. الوصول بلوحة المفاتيح وحلقات التركيز المرئية في التنقل والتذييل وروابط البطاقات، ورابط تخطي إلى المحتوى في كل صفحة (17 نوفمبر 2026). فحوصات موضعية لقارئ الشاشة: ترتيب العناوين وروابط التخطي والمعالم وترتيب التنقل (17 نوفمبر 2026). الحركة المخففة: كل مكوّن متحرك يحتوي على كتلة prefers-reduced-motion تعطّل الانتقالات والحركات (17 نوفمبر 2026). فحوصات وصول آلية (axe) عبر صفحات الاستوديو عند 1440 و390 بكسل، أُعيدت بعد تحديث تنسيق البطاقات، دون أي ملاحظات (19 نوفمبر 2026).",
         },
         {
           source: "placeholder",
           heading: "الفجوات المعروفة",
-          body: "صور الصفحة الرئيسية وصور المنتجات هي صور مؤقتة لا تزال بحاجة إلى نص بديل وصفي. شاشات الهاتف في الواجهة تعرض محتوى تجريبياً، وليس شاشات التطبيق الحقيقية. لم يُجرَ بعد تدقيق كامل من طرف ثالث.",
+          body: "صور الصفحة الرئيسية وصور المنتجات صور مؤقتة تحمل نصاً بديلاً وصفياً وسيُعاد فحصه عند استبدالها بتصوير مرخّص. شاشات الهاتف في الواجهة تعرض محتوى تجريبياً، وليس شاشات التطبيق الحقيقية (مخفية عن قارئات الشاشة). لم يُجرَ بعد تدقيق كامل من طرف ثالث.",
         },
         {
           source: "placeholder",
@@ -3325,12 +3325,12 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "Neleri kontrol ettik",
-          body: "Her sayfanın masaüstü ve telefon genişliklerinde otomatik renk kontrastı taraması, hatalar giderilerek (17 Kasım 2026). Düzenlerin 1440 ve 390 pikselde görsel kontrolü. Klavye erişimi ve görünür odak: gezinme, altbilgi ve kart bağlantılarında odak halkaları, her sayfa şablonunda içeriğe atlama bağlantısı (17 Kasım 2026). Ekran okuyucu kontrolleri: başlık sırası, atlama bağlantıları, ana işaret, bağlantı metni ve sekme sırası (17 Kasım 2026). Azaltılmış hareket: her animasyonlu bileşende geçişleri ve animasyonları devre dışı bırakan bir prefers-reduced-motion bloğu (17 Kasım 2026).",
+          body: "Her sayfanın masaüstü ve telefon genişliklerinde otomatik renk kontrastı taraması, hatalar giderilerek (17 Kasım 2026). Düzenlerin 1440 ve 390 pikselde görsel kontrolü. Klavye erişimi ve görünür odak: gezinme, altbilgi ve kart bağlantılarında odak halkaları, her sayfa şablonunda içeriğe atlama bağlantısı (17 Kasım 2026). Ekran okuyucu kontrolleri: başlık sırası, atlama bağlantıları, ana işaret, bağlantı metni ve sekme sırası (17 Kasım 2026). Azaltılmış hareket: her animasyonlu bileşende geçişleri ve animasyonları devre dışı bırakan bir prefers-reduced-motion bloğu (17 Kasım 2026). Stüdyo sayfalarında 1440 ve 390 pikselde otomatik erişilebilirlik kontrolleri (axe), kart stil güncellemesinden sonra yeniden çalıştırıldı, ihlal bulunamadı (19 Kasım 2026).",
         },
         {
           source: "placeholder",
           heading: "Bilinen eksikler",
-          body: "Ana sayfa ve ürün fotoğrafları, hâlâ açıklayıcı alternatif metin gerektiren geçici görsellerdir. Giriş ekranındaki telefon ekranları örnek içerik gösterir, gerçek uygulama ekranlarını değil. Üçüncü taraf denetimi henüz yapılmadı.",
+          body: "Ana sayfa ve ürün fotoğrafları, açıklayıcı alternatif metin taşıyan geçici görsellerdir; lisanslı fotoğraflarla değiştirildiğinde yeniden kontrol edilecek. Giriş ekranındaki telefon ekranları örnek içerik gösterir, gerçek uygulama ekranlarını değil (ekran okuyuculardan gizli). Üçüncü taraf denetimi henüz yapılmadı.",
         },
         {
           source: "placeholder",
