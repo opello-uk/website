@@ -499,7 +499,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "البطاقات",
-          body: "أول ثلاث بطاقات افتراضية مجاناً، ثم جنيه واحد لكل بطاقة. إلغاء البطاقة بعد 14 يوماً: 2.50 جنيه. مدفوعات البطاقة بعملة أجنبية: رسم صرف 1.50%.",
+          body: "أول ثلاث بطاقات افتراضية مجاناً، ثم جنيه واحد لكل بطاقة، بحد أقصى خمس بطاقات إجمالاً. إلغاء البطاقة بعد 14 يوماً: 2.50 جنيه. مدفوعات البطاقة بعملة أجنبية: رسم صرف 1.50%.",
           href: "/studio/cards/",
           linkLabel: "اطلع على البطاقات",
         },
@@ -2536,7 +2536,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "Kartlar",
-          body: "İlk üç sanal kart ücretsiz, sonrasında her biri 1 £. 14 gün sonraki kart iptali: 2,50 £. Yabancı para birimiyle kart ödemeleri: %1,50 döviz ücreti.",
+          body: "İlk üç sanal kart ücretsiz, sonrasında her biri 1 £, toplam en fazla beş kart. 14 gün sonraki kart iptali: 2,50 £. Yabancı para birimiyle kart ödemeleri: %1,50 döviz ücreti.",
           href: "/studio/cards/",
           linkLabel: "Kartlara göz atın",
         },

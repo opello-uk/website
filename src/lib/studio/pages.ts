@@ -411,10 +411,21 @@ export const pages: StudioPage[] = [
 		kicker: 'Legal',
 		// Out of MLP1 scope — Borderless account is not in the first release; Borderless reference removed.
 		lede: 'Every fee we charge, set out in one place, so you can see what applies to you before you open an account.',
+		// Full-PDF re-check 2026-11-20 (00:50 Dubai run): the Standard customer table is now covered
+		// in full. Rows deliberately left out are out of MLP1 scope (physical-card issuance and
+		// replacement, cash withdrawals, in-account currency conversion) or not yet available
+		// (Direct Debit and standing orders, per the FAQ). The PDF's Borderless and Business
+		// customer tables are out of scope and not summarised. The PDF has no chargeback fee row;
+		// the chargeback window lives in the help answers.
+		sourceNotes: [
+			'Source: algbra.com fees and charges PDF (last updated 7 April 2026), re-checked in full on 20 November 2026 — the Standard customer table is covered above; the PDF\'s other customer tables (Borderless and Business) are out of the first-release scope and are not summarised.',
+			'Rows left out on purpose: physical-card issuance and replacement, cash withdrawals and in-account currency conversion (out of first-release scope), and Direct Debit and standing orders (not yet available, per the FAQ). The PDF has no chargeback fee row; the chargeback claim window is covered in the help answers.',
+			'Every figure is Algbra\'s published rate, shown for reference. The Opello fee schedule must be confirmed before this page publishes.'
+		],
 		sections: [
 			{ heading: 'Standard account', body: 'No monthly account fee. UK payments are free: sending and receiving by FPS, BACS or CHAPS, and paying by card in pounds online or over the phone.' }, { heading: 'Sending and receiving money abroad', body: 'Sending money outside the UK: a fixed £15 fee per transaction, plus an FX fee of 1.00%. Receiving money from outside the UK in pounds: a fixed £10 fee, plus an FX fee of 1.00% for other currencies. Intermediary bank fees may also apply.' },
 			// Out of MLP1 scope — physical-card and cash-machine fees removed (no physical card at launch); virtual card and FX fees kept.
-			{ heading: 'Cards', body: 'First three virtual cards free, then £1 each. Card cancellation after 14 days: £2.50. Foreign-currency card payments: 1.50% FX fee.', href: '/studio/cards/', linkLabel: 'See cards' }, { heading: 'Other fees', body: 'Administration fee up to £10, for example returning funds after account closure or mediating a disputed payment. Paper statements £5. Dormant accounts: up to £1 a month after six months. Overdrafts are not supported; repeated negative balances may lead to an administration fee.' }
+			{ heading: 'Cards', body: 'First three virtual cards free, then £1 each, up to five in total. Card cancellation after 14 days: £2.50. Foreign-currency card payments: 1.50% FX fee.', href: '/studio/cards/', linkLabel: 'See cards' }, { heading: 'Other fees', body: 'Administration fee up to £10, for example returning funds after account closure or mediating a disputed payment. Paper statements £5. Dormant accounts: up to £1 a month after six months. Overdrafts are not supported; repeated negative balances may lead to an administration fee.' }
 		],
 		cta: { label: 'Read our terms', href: '/studio/terms-and-conditions/' }
 	},
