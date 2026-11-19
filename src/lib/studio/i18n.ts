@@ -210,7 +210,16 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       hero: { variant: "split", alt: "برطمان مدخرات بلون الخوخ على طاولة خشبية بجانب نبات صغير وكومة من العملات المعدنية" },
       kicker: "شخصي",
       lede: "اكسب على الأموال التي تدّخرها. متاح لمقيمي المملكة المتحدة.",
-      sections: [],
+      // Goal-based Cubes restored 2026-11-21: swept out in the MLP1 purge, but savings pots are in scope.
+      sections: [
+        {
+          source: "placeholder",
+          heading: "مكعبات لكل هدف",
+          body: "أنشئ مكعباً لكل هدف، من عطلة إلى دفعة منزل، وتابع تقدمك.",
+          href: "/studio/help-my-account/",
+          linkLabel: "اقرأ عن المكعبات",
+        },
+      ],
       cta: { label: "افتح حسابك معنا", href: "/studio/open-account/" },
     },
     {
@@ -2214,7 +2223,16 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       hero: { variant: "split", alt: "Şeftali renkli bir kumbara, ahşap bir masada küçük bir bitki ve az sayıda paranın yanında" },
       kicker: "Bireysel",
       lede: "Biriktirdiğiniz paradan kazanın. Birleşik Krallık sakinlerine açıktır.",
-      sections: [],
+      // Goal-based Cubes restored 2026-11-21: swept out in the MLP1 purge, but savings pots are in scope.
+      sections: [
+        {
+          source: "placeholder",
+          heading: "Her hedefe bir Küp",
+          body: "Tatilden ev peşinatına kadar her hedef için bir Küp oluşturun ve ilerlemenizi takip edin.",
+          href: "/studio/help-my-account/",
+          linkLabel: "Küpler hakkında oku",
+        },
+      ],
       cta: { label: "Hesabını bizimle aç", href: "/studio/open-account/" },
     },
     {

@@ -133,7 +133,12 @@ export const pages: StudioPage[] = [
 		lede: 'Earn on the money you are saving. Available to UK residents.',
 		hero: { variant: 'split', alt: 'A pale peach savings jar on a sunlit wooden table beside a potted plant and a small stack of coins' },
 		sections: [
-			// OUT OF MLP1 SCOPE — section removed, do not publish.
+			// Out of MLP1 scope? No — savings pots and Cubes are in scope, but the EPR rate, eligibility and
+			// protection wording need compliance sign-off, so this card stays unpublished. Do not publish.
+			// { heading: 'Earn % EPR* with Ethical Saver Cubes', body: 'Put money aside in Cubes and earn on your savings.', source: 'algbra', href: '/studio/ethical-savings/', linkLabel: 'See Ethical Saver Cubes' },
+			// Goal-based Cubes restored 2026-11-21: swept out with the EPR card in the MLP1 purge, but savings pots are in scope.
+			{ heading: 'Goal-based Cubes', body: 'Create a Cube for each goal, from a holiday to a house deposit, and track your progress.', source: 'algbra', href: '/studio/help-my-account/', linkLabel: 'Read about Cubes' }
+			// The Cubes product page is out of MLP1 scope (round-up donations), so this card points at the in-scope help answer.
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},

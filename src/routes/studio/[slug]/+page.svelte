@@ -119,7 +119,7 @@
 		</section>
 		{/if}
 
-		<section class="sections rem-{p.sections.length % 3}" class:clay={p.slug === 'personal'}>
+		<section class="sections rem-{p.sections.length % 3}" class:clay={['personal','transfers','cards','virtual-cards','current-accounts','savings'].includes(p.slug as string)}>
 			{#each p.sections as s (s.heading)}
 				<article class="card" class:wide={s.wide}>
 					<h2>{s.heading}</h2>
@@ -467,7 +467,7 @@
 		border-radius: 14px;
 		padding: 26px 24px;
 	}
-	/* Personal carries the landing-page card language (baseline-05): clay ground, navy copy, 24px corners,
+	/* Product pages carry the landing-page card language (baseline-05): clay ground, navy copy, 24px corners,
 	   gentle hover lift. Slug-keyed so the Arabic and Turkish twins match automatically. */
 	.sections.clay .card {
 		background: var(--clay);
@@ -498,6 +498,16 @@
 		opacity: 0.75;
 	}
 	.sections.clay .card .link:focus-visible {
+		outline-color: var(--deep);
+	}
+	/* Peach link lists fail contrast on clay; lists go navy like the single links. */
+	.sections.clay .card .links a {
+		color: var(--deep);
+	}
+	.sections.clay .card .links a:hover {
+		opacity: 0.75;
+	}
+	.sections.clay .card .links a:focus-visible {
 		outline-color: var(--deep);
 	}
 	@media (prefers-reduced-motion: reduce) {
