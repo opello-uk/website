@@ -471,6 +471,11 @@ export const pages: StudioPage[] = [
 		title: 'Finding your TIN',
 		kicker: 'Help articles',
 		lede: 'Which tax number to use for your country. Some countries use a national ID number instead, and some issue no tax number at all.',
+		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
+		sourceNotes: [
+			'Source: help.algbra.com TIN article (26 Jun 2026), reproduced as published.',
+			'Opello to confirm the list scope (all 109 countries or applicant countries only) and whether to add a country filter before this publishes.'
+		],
 		sections: [
 			{ heading: 'Tax number by country', body: 'Find your country below. Some countries use a national ID number instead, and some issue no tax number at all. If your country does not issue a TIN, you may be asked to confirm this instead.', items: [
 		  "Albania: National Identity Number (NID) (Numri i Identitetit (NID)). Found on: National ID card",
@@ -590,6 +595,13 @@ export const pages: StudioPage[] = [
 		title: 'Getting started',
 		kicker: 'Help articles',
 		lede: 'Answers to the Getting started questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		// Page-level sources restored 2026-11-19 (23:45 Dubai): the help pages had lost their per-answer notes in an earlier edit, leaving Algbra-sourced claims unmarked.
+		sourceNotes: [
+			'Source: help.algbra.com Getting started articles, adapted for Opello.',
+			'Eligibility: Algbra help says UK residents only, which conflicts with the customer-residence markets in MLP1 scope. See DECISION-eligibility.md in the cycle folder. Do not publish until decided.',
+			'The Bacs answer (salary and benefits paid in) conflicts with the FAQ, which lists Faster Payments only. See DECISION-payments.md.',
+			'Identity-check, cash/cheque and approval-timing wording, and the app-store names, need Opello confirmation before publishing.'
+		],
 		sections: [
 			{ heading: 'Am I eligible for an account?', body: 'To open an Opello account you need to be a UK resident aged 18 or over. You will also need a valid photo ID, like a passport or driving licence.', href: '/studio/help-articles/', linkLabel: 'Back to article titles' },
 			{ heading: 'Do you carry out credit checks?', body: 'No. We do not carry out credit checks, so opening an Opello account has no impact on your credit rating or borrowing ability. Our identity checks may leave a soft footprint on your credit history, which has no effect on your rating.', href: '/studio/open-account/', linkLabel: 'See how to open an account' },
@@ -608,6 +620,11 @@ export const pages: StudioPage[] = [
 		title: 'Logging in',
 		kicker: 'Help articles',
 		lede: 'Answers to the Logging in questions, taken from the Algbra help centre and written for Opello. Not final until the app screens and support route are confirmed.',
+		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
+		sourceNotes: [
+			'Source: help.algbra.com Logging in articles, adapted for Opello.',
+			'App screen names, whether a web log in exists, and the locked-out support route are placeholders until Opello confirms them.'
+		],
 		sections: [
 			{ heading: 'Why am I not getting a confirmation email?', body: 'When you log in, we send a confirmation email to check it is you on this device. It should arrive within a couple of minutes. If it does not, work through the checks on this page.', href: '/studio/contact/', linkLabel: 'See contact options' },
 			{ heading: 'Check your email address', body: 'Look for typos, and for a capital letter in the wrong place. If the address is wrong, choose Change your email address in the app and try again.' },
@@ -623,6 +640,11 @@ export const pages: StudioPage[] = [
 		title: 'Security and data',
 		kicker: 'Help articles',
 		lede: 'Answers to the Security and data questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
+		sourceNotes: [
+			'Source: help.algbra.com Security and data articles, adapted for Opello.',
+			'Safeguarding and protection wording, the APP-scam answer (shortened from Algbra\'s article) and the Action Fraud reporting details need Algbra or compliance sign-off.'
+		],
 		sections: [
 			// OUT OF MLP1 SCOPE — section removed, do not publish.
 
@@ -639,6 +661,13 @@ export const pages: StudioPage[] = [
 		title: 'My card',
 		kicker: 'Help articles',
 		lede: 'Answers to the My card questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
+		sourceNotes: [
+			'Source: help.algbra.com My card articles, adapted for Opello and trimmed to virtual cards (physical cards and wallets are out of MLP1 scope).',
+			'The "over 210 countries and territories" figure is the card network\'s published acceptance reach, taken from Algbra\'s answer. Confirm for Opello before publishing.',
+			'The exchange-rate and chargeback answers describe the card network\'s rate and scheme; the 45-day merchant window is Algbra\'s wording. Needs Algbra or compliance sign-off.',
+			'The 3D Secure passcode wording needs compliance sign-off. Loss, freeze and contact routes depend on the Opello support contacts, which are placeholders.'
+		],
 		sections: [
 			// Out of MLP1 scope — physical cards and wallets not confirmed for day one; answer rewritten for virtual cards only.
 			{ heading: 'How do I get my card?', body: 'Tap Cards on the Home tab, then tap + to order. Your virtual card lives in the app and works for online payments.', links: [
@@ -672,6 +701,12 @@ export const pages: StudioPage[] = [
 		title: 'My account',
 		kicker: 'Help articles',
 		lede: 'Answers to the My account questions that are not about Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
+		sourceNotes: [
+			'Source: help.algbra.com My account articles, adapted for Opello.',
+			'The no-maximum-balance claim and the app steps need Opello confirmation.',
+			'The international-transfers answer (receive-only, no charge for receiving, sanctioned-countries list) is Algbra\'s published wording and conflicts with the MLP1 scope, which lists international GBP payments as in scope. See DECISION-payments.md. Do not publish until decided.'
+		],
 		sections: [
 			{ heading: 'How do I generate a statement?', body: 'In the app, tap the three dots on the Home tab, then tap Statements. Choose the date range you want to see and the format you need: PDF, or CSV and QIF if you use a compatible accounting tool.' },
 			{ heading: 'What are my account limits?', body: 'Your account has no maximum balance. To see your spending limits, tap your profile icon at the top of the Home screen, then tap Limits. If you have a question, get in touch through the in-app chat or email us.', href: '/studio/contact/', linkLabel: 'See contact details' }, { heading: 'Can I make international transfers?', body: 'At the moment you can receive pound sterling transfers from accounts outside the UK, and there is no charge for receiving them. You cannot send money outside the UK yet, and we will tell you when that changes. We cannot accept transfers from some countries, including Belarus, Cuba, Iran, North Korea, Russia, Syria and some regions of Ukraine. Payments in any other currency are sent back to the sending account, which can take several days.', href: '/studio/transfers/', linkLabel: 'See transfers' },
@@ -684,6 +719,10 @@ export const pages: StudioPage[] = [
 		title: 'Ethical Saver help',
 		kicker: 'Help articles',
 		lede: 'Sixteen answers on Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not for publication until compliance has signed off the savings, protection and Sharia wording.',
+		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
+		sourceNotes: [
+			'Source: sixteen help.algbra.com Ethical Saver articles, adapted for Opello. The whole page is held for compliance sign-off (savings protection, Murabaha/Sharia, profit rate, tax, early withdrawal); nothing here extends until signed off.'
+		],
 		sections: [
 			{ heading: 'What are Ethical Saver Cubes?', body: 'Ethical Saver Cubes are a savings feature in the Opello app. You earn a fixed, agreed amount of profit over a set period, and your savings support environmental and social projects. Your money is linked to a sustainable finance portfolio run by our partner bank, and we show you the estimated CO\u2082 emissions avoided and clean water generated.', href: '/studio/ethical-savings/', linkLabel: 'See Ethical Saver Cubes' },
 			{ heading: 'How do Ethical Saver Cubes work?', body: 'Choose how much to save and a fixed term, such as 3, 6 or 12 months. Your expected profit is shown before you confirm. Your money is locked for the term, and at the end you get your savings plus the agreed profit. The return is fixed in advance, so there are no market ups and downs.' },
@@ -709,6 +748,11 @@ export const pages: StudioPage[] = [
 		title: 'About Opello',
 		kicker: 'Help articles',
 		lede: 'Answers to the About Opello questions, adapted from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
+		sourceNotes: [
+			'Source: help.algbra.com About Algbra articles, adapted for Opello (Algbra\'s charity, card scheme and London contact not reused).',
+			'The product list and community work are placeholders. The eligibility answer (UK residents, with a plan to open to other countries) conflicts with the other eligibility touchpoints; see DECISION-eligibility.md.'
+		],
 		sections: [
 			// OUT OF MLP1 SCOPE — section removed, do not publish.,
 			{ heading: 'Does Opello have any fees?', body: 'Our fees and charges are set out in full on our fees page, so you can check what applies to the account you choose before you open it.', href: '/studio/fees-and-charges/', linkLabel: 'See fees and charges' },
@@ -724,6 +768,11 @@ export const pages: StudioPage[] = [
 		title: 'Get in touch',
 		kicker: 'Help articles',
 		lede: 'Answers to the Get in touch questions, taken from the Algbra help centre and written for Opello. Every contact detail is a placeholder until Opello sets up its own channels.',
+		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
+		sourceNotes: [
+			'Source: help.algbra.com Get in touch articles, adapted for Opello.',
+			'Complaints timescales (15 and 35 working days), the Financial Ombudsman Service details and the close-account rules need compliance sign-off. Every contact detail is a placeholder.'
+		],
 		sections: [
 			{ heading: 'How do I get in touch?', body: 'For general enquiries, email [placeholder: Opello general enquiries email]. To speak to our Support team, tap the profile icon at the top left of your Home screen in the Opello app and choose Support. There you can chat with us live, or email [placeholder: Opello support email]. If you have lost your card or see suspicious activity and cannot get into the app, email [placeholder: Opello emergency email] or call [placeholder: Opello emergency phone number] straight away.', href: '/studio/contact/', linkLabel: 'See contact details' },
 			{ heading: 'What is your complaints procedure?', body: 'We want to hear when we have not met your expectations. Tell our team through the in-app chat, or email [placeholder: Opello complaints email]. Please include your first name and surname, the phone number and email address on your account, what the issue is, when it started, and how you would like us to put it right. We will acknowledge your complaint and look into it as quickly as we can. This usually takes a few days, but it can take up to 15 working days, and in extraordinary cases up to 35 working days, to send our final response. If we need more than 15 working days, we will tell you in advance. If you are not happy with our final response, you can escalate your complaint to the Financial Ombudsman Service (FOS) through their website or by calling 0800 023 4567.', href: '/studio/contact/', linkLabel: 'See contact details' },
