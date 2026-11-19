@@ -119,7 +119,7 @@
 		</section>
 		{/if}
 
-		<section class="sections rem-{p.sections.length % 3}" class:clay={['personal','transfers','cards','virtual-cards','current-accounts','savings'].includes(p.slug as string)}>
+		<section class="sections rem-{p.sections.length % 3}" class:clay={['personal','transfers','cards','virtual-cards','current-accounts','savings','help','faq','contact'].includes(p.slug as string)}>
 			{#each p.sections as s (s.heading)}
 				<article class="card" class:wide={s.wide}>
 					<h2>{s.heading}</h2>
@@ -503,6 +503,13 @@
 	/* Peach link lists fail contrast on clay; lists go navy like the single links. */
 	.sections.clay .card .links a {
 		color: var(--deep);
+	}
+	/* Topic lists (help collections): the default clay-on-navy text would vanish on the
+	   clay ground, so items go navy with a navy rule between rows. */
+	.sections.clay .card .items li {
+		color: var(--deep);
+		opacity: 0.9;
+		border-bottom-color: rgba(0, 20, 49, 0.14);
 	}
 	.sections.clay .card .links a:hover {
 		opacity: 0.75;
