@@ -359,7 +359,7 @@
 			padding: 0 4px;
 		}
 		.pills {
-			gap: 6px;
+			gap: 0; /* joined capsule, as on desktop */
 		}
 		.pill {
 			min-height: 44px;
