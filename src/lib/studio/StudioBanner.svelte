@@ -12,7 +12,7 @@
 	<div class="card">
 		<div class="art">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
-			<img src={banner} alt={c.bannerAlt} decoding="async" loading="lazy" />
+			<img src={banner} alt={c.bannerAlt} width="900" height="600" decoding="async" loading="lazy" />
 		</div>
 		<!-- Outside .art so the tag is not washed out by the faded photo on phones -->
 

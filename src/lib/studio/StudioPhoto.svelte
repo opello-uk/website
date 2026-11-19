@@ -9,7 +9,7 @@
 <section class="photo" aria-labelledby="photo-title">
 	<div class="ground">
 		<!-- Placeholder photo; update alt with the licensed replacement -->
-		<img src={band} alt={c.photoAlt} decoding="async" loading="lazy" />
+		<img src={band} alt={c.photoAlt} width="1200" height="800" decoding="async" loading="lazy" />
 	</div>
 
 	<div class="inner">

@@ -36,7 +36,7 @@
 		{#each c.products as p (p.title)}
 			<li class="card">
 				<div class="photo tone-{p.tone}">
-					<img src={photos[p.slug]} alt={p.alt} decoding="async" loading="lazy" />
+					<img src={photos[p.slug]} alt={p.alt} width="800" height="800" decoding="async" loading="lazy" />
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>

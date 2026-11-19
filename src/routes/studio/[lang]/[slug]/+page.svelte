@@ -58,7 +58,7 @@
 		<section class="hero hero-split">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'blog' ? blogHero : p.slug === 'news' ? newsHero : p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+				<img src={p.slug === 'blog' ? blogHero : p.slug === 'news' ? newsHero : p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} alt={p.hero.alt} width={p.slug === 'savings' ? 800 : 900} height={p.slug === 'savings' ? 800 : 600} decoding="async" fetchpriority="high" />
 			</div>
 			<div class="copy">
 				<p class="kicker">{p.kicker}</p>
@@ -76,7 +76,7 @@
 			</div>
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'help' ? helpHero : cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+				<img src={p.slug === 'help' ? helpHero : cardsHero} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" />
 			</div>
 		</section>
 		{:else if p.hero?.variant === 'photo-ring'}
@@ -84,7 +84,7 @@
 			<div class="ring" aria-hidden="true"><Ring /></div>
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'open-account' ? openAccountHero : cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+				<img src={p.slug === 'open-account' ? openAccountHero : cardsHero} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" />
 			</div>
 			<div class="copy">
 				<p class="kicker">{p.kicker}</p>
@@ -95,7 +95,7 @@
 		{:else if p.hero?.variant === 'band'}
 		<section class="hero hero-band">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
-			<img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+			<img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} alt={p.hero.alt} width={p.slug === 'about' ? 900 : 800} height={p.slug === 'about' ? 600 : 800} decoding="async" fetchpriority="high" />
 			<div class="band-scrim" aria-hidden="true"></div>
 			<div class="copy">
 				<p class="kicker">{p.kicker}</p>

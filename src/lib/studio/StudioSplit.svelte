@@ -11,7 +11,7 @@
 <section class="split" aria-labelledby="split-title">
 	<div class="media">
 		<!-- Placeholder photo; update alt with the licensed replacement -->
-		<img src={split} alt={c.splitAlt} decoding="async" loading="lazy" />
+		<img src={split} alt={c.splitAlt} width="900" height="600" decoding="async" loading="lazy" />
 	</div>
 
 	<div class="copy">
