@@ -8,33 +8,14 @@
 	import savings from '#lib/assets/studio/savings.jpg';
 	import pensions from '#lib/assets/studio/pensions.jpg';
 	// Photography is generated for this build until licensed photography is supplied.
-	const products = [
-		{
-			slug: 'transfers',
-			title: 'Send money home and abroad',
-			body: 'Send GBP overseas and pay friends and family in seconds.',
-			tone: 'a',
-			src: current,
-			// Placeholder photo; update alt with the licensed replacement
-			alt: 'Woman smiling at her phone at the kitchen table'
-		},
-		{
-			slug: 'savings',
-			title: 'Savings pots',
-			body: 'Set money aside for the things that matter, in a few taps.',
-			tone: 'b',
-			src: savings,
-			alt: 'Family on a sofa looking at a tablet together'
-		},
-		{
-			slug: 'cards',
-			title: 'Spend worldwide with one card',
-			body: 'Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app.',
-			tone: 'c',
-			src: pensions,
-			alt: 'Woman on a park bench holding her phone'
-		}
-	];
+	// Copy and alt text live in i18n (homeCopy[lang]); the photos stay here and
+	// join by slug. (Fixed 2026-11-19: the i18n move dropped the image sources,
+	// which left the three product cards with no src on the live page.)
+	const photos: Record<string, string> = {
+		transfers: current,
+		savings: savings,
+		cards: pensions
+	};
 </script>
 
 <section class="products" aria-labelledby="products-title">
@@ -55,7 +36,7 @@
 		{#each c.products as p (p.title)}
 			<li class="card">
 				<div class="photo tone-{p.tone}">
-					<img src={p.src} alt={p.alt} decoding="async" loading="lazy" />
+					<img src={photos[p.slug]} alt={p.alt} decoding="async" loading="lazy" />
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>
