@@ -1599,6 +1599,16 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       sections: [
         {
           source: "placeholder",
+          heading: "الرئيسية",
+          body: "صفحة البداية في كل لغة.",
+          links: [
+            { label: "الرئيسية (بالإنجليزية)", href: "/studio/" },
+            { label: "الرئيسية (بالعربية)", href: "/studio/ar/" },
+            { label: "الرئيسية (بالتركية)", href: "/studio/tr/" },
+          ],
+        },
+        {
+          source: "placeholder",
           heading: "شخصي",
           body: "حسابات ومدفوعات وبطاقات للاستخدام اليومي.",
           links: [
@@ -1607,6 +1617,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "التحويلات", href: "/studio/transfers/" },
             { label: "البطاقات", href: "/studio/cards/" },
             { label: "بطاقات افتراضية", href: "/studio/virtual-cards/" },
+            { label: "رشّح صديقاً", href: "/studio/referrals/" },
             { label: "حمّل التطبيق", href: "/studio/download/" },
           ],
         },
@@ -1635,6 +1646,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "من نحن، وما نبنيه، وكيف تصل إلينا.",
           links: [
             { label: "عن أوبيلو", href: "/studio/about/" },
+            { label: "الوظائف", href: "/studio/careers/" },
             { label: "اتصل بنا", href: "/studio/contact/" },
           ],
         },
@@ -1645,6 +1657,18 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           links: [
             { label: "الأخبار", href: "/studio/news/" },
             { label: "المدونة", href: "/studio/blog/" },
+            { label: "الاسترداد العكسي", href: "/studio/chargebacks/" },
+            { label: "بطاقات افتراضية", href: "/studio/virtual-cards/" },
+            { label: "المصرف الأخضر", href: "/studio/green-banking/" },
+            { label: "عطلة خضراء", href: "/studio/green-break/" },
+            { label: "المال والصحة النفسية", href: "/studio/money-and-mental-health/" },
+            { label: "اليوم العالمي للحياة البرية", href: "/studio/world-wildlife-day/" },
+            { label: "مجتمع بلا نقد", href: "/studio/cashless-society/" },
+            { label: "واجب المستهلك", href: "/studio/consumer-duty/" },
+            { label: "الوضع الداكن", href: "/studio/dark-mode/" },
+            { label: "الكوارث المناخية", href: "/studio/climate-catastrophes/" },
+            { label: "الانتقال العادل", href: "/studio/just-transition/" },
+            { label: "عيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
           ],
         },
         {
@@ -3592,6 +3616,16 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       sections: [
         {
           source: "placeholder",
+          heading: "Ana sayfa",
+          body: "Her dildeki açılış sayfası.",
+          links: [
+            { label: "Ana sayfa (İngilizce)", href: "/studio/" },
+            { label: "Ana sayfa (Arapça)", href: "/studio/ar/" },
+            { label: "Ana sayfa (Türkçe)", href: "/studio/tr/" },
+          ],
+        },
+        {
+          source: "placeholder",
           heading: "Bireysel",
           body: "Günlük kullanım için hesaplar, ödemeler ve kartlar.",
           links: [
@@ -3600,6 +3634,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "Transferler", href: "/studio/transfers/" },
             { label: "Kartlar", href: "/studio/cards/" },
             { label: "Sanal kartlar", href: "/studio/virtual-cards/" },
+            { label: "Bir arkadaşını davet et", href: "/studio/referrals/" },
             { label: "Uygulamayı indir", href: "/studio/download/" },
           ],
         },
@@ -3628,6 +3663,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "Biz kimiz, ne yapıyoruz, bize nasıl ulaşırsınız.",
           links: [
             { label: "Hakkımızda", href: "/studio/about/" },
+            { label: "Kariyer", href: "/studio/careers/" },
             { label: "İletişim", href: "/studio/contact/" },
           ],
         },
@@ -3638,6 +3674,18 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           links: [
             { label: "Haberler", href: "/studio/news/" },
             { label: "Blog", href: "/studio/blog/" },
+            { label: "Chargeback", href: "/studio/chargebacks/" },
+            { label: "Sanal kartlar", href: "/studio/virtual-cards/" },
+            { label: "Yeşil bankacılık", href: "/studio/green-banking/" },
+            { label: "Yeşil bir mola", href: "/studio/green-break/" },
+            { label: "Para ve ruh sağlığı", href: "/studio/money-and-mental-health/" },
+            { label: "Dünya Yaşam Günü", href: "/studio/world-wildlife-day/" },
+            { label: "Nakitsiz toplum", href: "/studio/cashless-society/" },
+            { label: "Tüketici Yükümlülüğü", href: "/studio/consumer-duty/" },
+            { label: "Karanlık mod", href: "/studio/dark-mode/" },
+            { label: "İklim felaketleri", href: "/studio/climate-catastrophes/" },
+            { label: "Adil geçiş", href: "/studio/just-transition/" },
+            { label: "Sürdürülebilir Sevgililer Günü", href: "/studio/sustainable-valentines-day/" },
           ],
         },
         {

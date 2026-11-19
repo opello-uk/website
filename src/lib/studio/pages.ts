@@ -1092,6 +1092,9 @@ export const pages: StudioPage[] = [
 		kicker: 'Help',
 		lede: 'Every page in the Opello studio build, grouped the way the footer groups them. Placeholder layout until the site map is confirmed for launch.',
 		sections: [
+			{ heading: 'Home', body: 'The studio landing page in each language.', links: [
+				{ label: 'Home (English)', href: '/studio/' }, { label: 'Home (العربية)', href: '/studio/ar/' }, { label: 'Home (Türkçe)', href: '/studio/tr/' }
+			] },
 			{ heading: 'Personal', body: 'Accounts, payments and cards for everyday use.', links: [
 				{ label: 'Personal', href: '/studio/personal/' }, { label: 'All plans', href: '/studio/all-plans/' }, { label: 'Transfers', href: '/studio/transfers/' }, { label: 'Cards', href: '/studio/cards/' }, { label: 'Virtual cards', href: '/studio/virtual-cards/' }, { label: 'Refer a friend', href: '/studio/referrals/' }, { label: 'Download the app', href: '/studio/download/' }
 			] },
