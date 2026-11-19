@@ -2,7 +2,8 @@
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import { chrome, hasTranslation, langHref, type Lang } from '#lib/studio/i18n';
+	import { chrome, hasTranslation, langHref, pagesByLang, type Lang } from '#lib/studio/i18n';
+	import { pages } from '#lib/studio/pages';
 
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const t = $derived(chrome[lang]);
@@ -31,10 +32,65 @@
 	// Close on Escape (and return focus) and on a click outside the menu.
 	function onWindowKeydown(e: KeyboardEvent) {
 		if (open && e.key === 'Escape') close();
+		if (searchOpen && e.key === 'Escape') closeSearch();
 	}
 	function onWindowPointerdown(e: PointerEvent) {
 		if (open && menu && !menu.contains(e.target as Node) && !regionButton?.contains(e.target as Node)) open = false;
+		if (searchOpen && searchPanel && !searchPanel.contains(e.target as Node) && !searchButton?.contains(e.target as Node)) closeSearch();
 	}
+
+	// Search: the deck shows a search control in the header, so the button opens
+	// a real page search instead of being a dead control. The index is this
+	// language's page list (en reads pages.ts; ar/tr read pagesByLang), and every
+	// result links through langHref so it lands on the language twin.
+	type SearchEntry = { title: string; kicker: string; lede: string; blob: string; href: string };
+	// The page type comes from pagesByLang, so no extra import is needed.
+	type IndexPage = (typeof pagesByLang)[Lang][number];
+	const searchIndex: SearchEntry[] = $derived.by(() => {
+		const src: IndexPage[] = lang === 'en' ? pages : pagesByLang[lang];
+		const entries: SearchEntry[] = src.map((p: IndexPage) => ({
+			title: p.title,
+			kicker: p.kicker,
+			lede: p.lede,
+			blob: (p.title + ' ' + p.kicker + ' ' + p.lede + ' ' + p.sections.map((s: { heading: string }) => s.heading).join(' ')).toLowerCase(),
+			href: langHref(lang, `/studio/${p.slug}/`)
+		}));
+		// The homepage twin (Home / الرئيسية / Ana sayfa) sits at the top, like the sitemap order.
+		entries.unshift({
+			title: t.searchHome,
+			kicker: 'Opello',
+			lede: '',
+			blob: (t.searchHome + ' opello').toLowerCase(),
+			href: lang === 'en' ? '/studio/' : `/studio/${lang}/`
+		});
+		return entries;
+	});
+
+	const searchResults = $derived.by(() => {
+		const q = query.trim().toLowerCase();
+		if (q === '') return searchIndex.slice(0, 8);
+		return searchIndex.filter((p) => p.blob.includes(q)).slice(0, 8);
+	});
+
+	let searchButton = $state<HTMLButtonElement>();
+	let searchPanel = $state<HTMLElement>();
+	let searchInput = $state<HTMLInputElement>();
+	let searchOpen = $state(false);
+	let query = $state('');
+
+	function openSearch() {
+		open = false;
+		query = '';
+		searchOpen = true;
+	}
+	function closeSearch() {
+		searchOpen = false;
+		searchButton?.focus();
+	}
+	// Move focus into the field when the panel opens (button → panel, like the language menu).
+	$effect(() => {
+		if (searchOpen) searchInput?.focus();
+	});
 
 	function href(langId: string) {
 		// Same language keeps your page. Another language lands on that language's
@@ -113,13 +169,48 @@
 			{/if}
 		</div>
 
-		<!-- Search: the deck shows a search control here. -->
-		<button type="button" class="icon" aria-label="Search">
-			<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
-				<circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
-				<path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-			</svg>
-		</button>
+		<!-- Search: the deck shows a search control in the header. The button opens a
+		     page search (index built from this language's page list, results via langHref). -->
+		<div class="searchwrap">
+			<button
+				type="button"
+				class="icon"
+				bind:this={searchButton}
+				aria-label={t.searchLabel}
+				aria-expanded={searchOpen}
+				aria-controls="nav-search"
+				onclick={searchOpen ? closeSearch : openSearch}
+			>
+				<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+					<circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
+					<path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+			{#if searchOpen}
+				<div class="search" id="nav-search" bind:this={searchPanel} role="dialog" aria-label={t.searchLabel}>
+					<input
+						class="field"
+						type="search"
+						bind:this={searchInput}
+						bind:value={query}
+						placeholder={t.searchPlaceholder}
+						aria-label={t.searchLabel}
+					/>
+					<ul class="results">
+						{#each searchResults as r (r.href)}
+							<li>
+								<a href={r.href} onclick={closeSearch}>
+									<span class="rtitle">{r.title}</span>
+									{#if r.kicker}<span class="rkicker">{r.kicker}</span>{/if}
+								</a>
+							</li>
+						{:else}
+							<li class="none">{t.searchNone}</li>
+						{/each}
+					</ul>
+				</div>
+			{/if}
+		</div>
 
 		<!-- One split capsule as in baseline-07: peach half (open account) joined to the white half (log in). -->
 		<div class="pills">
@@ -243,6 +334,103 @@
 		}
 	}
 
+	/* Search panel: same panel language as the language menu (deep ground, rule border, shadow). */
+	.searchwrap {
+		position: relative;
+	}
+	.search {
+		position: absolute;
+		top: calc(100% + 8px);
+		inset-inline-end: 0;
+		z-index: 30;
+		width: min(340px, calc(100vw - 24px));
+		padding: 10px;
+		border-radius: 14px;
+		background: var(--deep);
+		border: 1px solid var(--rule);
+		box-shadow: 0 12px 32px rgba(0, 10, 30, 0.35);
+		animation: search-in 160ms var(--ease);
+	}
+	@keyframes search-in {
+		from {
+			opacity: 0;
+			transform: translateY(-4px);
+		}
+	}
+	.field {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 10px 12px;
+		border-radius: 10px;
+		border: 1px solid var(--rule);
+		background: transparent;
+		color: var(--clay);
+		font: inherit;
+		font-size: 14px;
+	}
+	.field::placeholder {
+		color: var(--muted);
+	}
+	.field:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 1px;
+	}
+	.field::-webkit-search-cancel-button {
+		filter: invert(1);
+		opacity: 0.6;
+	}
+	.results {
+		list-style: none;
+		margin: 8px 0 0;
+		padding: 0;
+		max-height: min(52vh, 420px);
+		overflow-y: auto;
+		display: grid;
+		gap: 2px;
+	}
+	.results a {
+		display: flex;
+		align-items: baseline;
+		gap: 10px;
+		justify-content: space-between;
+		padding: 9px 12px;
+		border-radius: 10px;
+		font-size: 13px;
+		color: var(--clay);
+		text-decoration: none;
+		transition: background-color 200ms var(--ease);
+	}
+	.results a:hover {
+		background: var(--rule);
+	}
+	.results a:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 1px;
+	}
+	.rtitle {
+		font-weight: 500;
+	}
+	.rkicker {
+		flex: none;
+		font-size: 10px;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+	.none {
+		padding: 9px 12px;
+		font-size: 13px;
+		color: var(--muted);
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.search {
+			animation: none;
+		}
+		.results a {
+			transition: none;
+		}
+	}
+
 	.region,
 	.icon {
 		display: inline-grid;
@@ -357,10 +545,23 @@
 	}
 
 	@media (max-width: 560px) {
-		/* Mobile: anchor the language menu to the button's left edge so it cannot clip off-screen. */
+		/* Mobile: anchor the language menu and search panel to the inline edges so they cannot clip off-screen. */
 		.menu {
 			left: 0;
 			right: auto;
+		}
+		.search {
+			/* Mobile: the button sits mid-header, so a panel anchored to it would clip.
+			     Anchor the panel to the whole nav instead (searchwrap goes static). */
+			inset-inline-end: auto;
+			inset-inline-start: clamp(20px, 4vw, 56px);
+			width: min(340px, calc(100vw - 32px));
+		}
+		.searchwrap {
+			position: static;
+		}
+		.nav {
+			position: relative;
 		}
 		/* Mobile: keep the region flag, search and both pills, as in the 390 Figma header.
 		   Tighter column gap and logo so the Login pill sits inside 390px. */

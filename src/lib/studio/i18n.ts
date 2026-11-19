@@ -4039,6 +4039,10 @@ export type Chrome = {
   soon: string;
   skip: string;
   learnMore: string;
+  searchLabel: string;
+  searchPlaceholder: string;
+  searchHome: string;
+  searchNone: string;
   footerTagline: string;
   socialAria: string;
   copyright: string;
@@ -4068,6 +4072,10 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "Coming soon",
     skip: "Skip to content",
     learnMore: "Learn more",
+    searchLabel: "Search the site",
+    searchPlaceholder: "Search pages…",
+    searchHome: "Home",
+    searchNone: "No pages match.",
     footerTagline: "Your own money, unlocked.",
     socialAria: "Social channels",
     copyright: "© 2026 Opello. All rights reserved.",
@@ -4096,6 +4104,10 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "قريباً",
     skip: "تخطَّ إلى المحتوى",
     learnMore: "اعرف المزيد",
+    searchLabel: "ابحث في الموقع",
+    searchPlaceholder: "ابحث في الصفحات…",
+    searchHome: "الرئيسية",
+    searchNone: "لا توجد صفحات مطابقة.",
     footerTagline: "أموالك الخاصة، بلا قيود.",
     socialAria: "قنوات التواصل",
     copyright: "© 2026 أوبيلو. جميع الحقوق محفوظة.",
@@ -4124,6 +4136,10 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "Yakında",
     skip: "İçeriğe atla",
     learnMore: "Daha fazla",
+    searchLabel: "Sitede ara",
+    searchPlaceholder: "Sayfalarda ara…",
+    searchHome: "Ana sayfa",
+    searchNone: "Eşleşen sayfa yok.",
     footerTagline: "Kendi paran, serbest.",
     socialAria: "Sosyal kanallar",
     copyright: "© 2026 Opello. Tüm hakları saklıdır.",
