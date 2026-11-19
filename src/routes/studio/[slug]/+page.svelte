@@ -430,6 +430,17 @@
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 			column-gap: 32px;
 		}
+		/* same for a full-width card with a link list (news insights) */
+		.sections.rem-1 .card:last-child .links {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			column-gap: 32px;
+			row-gap: 6px;
+		}
+		.sections.rem-1 .card:last-child .links a {
+			min-height: 0;
+			padding: 4px 0;
+			align-items: start;
+		}
 		/* two left over: they split the row */
 		.sections.rem-2 .card:nth-last-child(-n + 2) {
 			grid-column: span 3;

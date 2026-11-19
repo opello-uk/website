@@ -1190,7 +1190,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "news",
       title: "الأخبار",
-      kicker: "عن أوبيلو",
+      kicker: "الأخبار",
       // News split hero: generated placeholder until licensed photography is supplied.
       hero: { variant: "split", alt: "شخص على مكتب خشبي مشمس يكتب في دفتر بجانب حاسوب محمول مفتوح وفنجان قهوة ونسخ مطبوعة من مسودات قصصية" },
       lede: "أخبار وتحديثات المنتجات وشروحات وقصص من أوبيلو. [Placeholder: Opello newsroom intro, in Opello wording.]",
@@ -1236,7 +1236,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "blog",
       title: "المدونة",
-      kicker: "عن أوبيلو",
+      kicker: "المدونة",
       // Blog split hero: generated placeholder until licensed photography is supplied.
       hero: { variant: "split", alt: "شخص يستريح في كرسي بجوار نافذة كبيرة يقرأ مجلة مطبوعة مع فنجان خزفي على طاولة جانبية" },
       lede: "قصص من فريق أوبيلو والمجتمع، عن المال والاستدامة والإنفاق اليومي. [Placeholder: first posts, in Opello wording.]",
@@ -3062,7 +3062,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "news",
       title: "Haberler",
-      kicker: "Hakkında",
+      kicker: "Haberler",
       // News split hero: generated placeholder until licensed photography is supplied.
       hero: { variant: "split", alt: "Güneşli ahşap bir masada, açık dizüstü bilgisayar, kahve fincanı ve basılı hikâye taslaklarının yanında bir deftere yazı yazan bir kişi" },
       lede: "Opello\u2019dan haberler, ürün güncellemeleri, açıklamalar ve hikâyeler. [Placeholder: Opello newsroom intro, in Opello wording.]",
@@ -3108,7 +3108,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "blog",
       title: "Blog",
-      kicker: "Hakkında",
+      kicker: "Blog",
       // Blog split hero: generated placeholder until licensed photography is supplied.
       hero: { variant: "split", alt: "Geniş bir pencerenin yanındaki koltukta, yan masada seramik bir fincanla dergi okuyan biri" },
       lede: "Opello ekibinden ve topluluktan, para, sürdürülebilirlik ve günlük harcama üzerine hikâyeler. [Placeholder: first posts, in Opello wording.]",

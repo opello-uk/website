@@ -269,7 +269,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'news',
 		title: 'News',
-		kicker: 'About',
+		kicker: 'News',
 		// News split hero: generated placeholder until licensed photography is supplied.
 		hero: { variant: 'split', alt: 'A person at a sunlit wooden desk writing in a notebook beside an open laptop, a coffee mug and printed story drafts' },
 		lede: 'News, product updates, explainers and stories from Opello. [Placeholder: Opello newsroom intro, in Opello wording.]',
@@ -713,7 +713,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'blog',
 		title: 'Blog',
-		kicker: 'About',
+		kicker: 'Blog',
 		// Blog split hero: generated placeholder until licensed photography is supplied.
 		hero: { variant: 'split', alt: 'A person relaxing in an armchair by a large window, reading a printed magazine with a ceramic mug on a side table' },
 		lede: 'Stories from the Opello team and the community, on money, sustainability and everyday spending. [Placeholder: first posts, in Opello wording.]',
