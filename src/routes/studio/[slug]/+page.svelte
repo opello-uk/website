@@ -119,7 +119,7 @@
 		</section>
 		{/if}
 
-		<section class="sections rem-{p.sections.length % 3}">
+		<section class="sections rem-{p.sections.length % 3}" class:clay={p.slug === 'personal'}>
 			{#each p.sections as s (s.heading)}
 				<article class="card" class:wide={s.wide}>
 					<h2>{s.heading}</h2>
@@ -466,6 +466,48 @@
 		border: 1px solid var(--rule);
 		border-radius: 14px;
 		padding: 26px 24px;
+	}
+	/* Personal carries the landing-page card language (baseline-05): clay ground, navy copy, 24px corners,
+	   gentle hover lift. Slug-keyed so the Arabic and Turkish twins match automatically. */
+	.sections.clay .card {
+		background: var(--clay);
+		border-color: var(--clay);
+		border-radius: 24px;
+		transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
+	}
+	.sections.clay .card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 14px 30px rgba(0, 20, 49, 0.35);
+	}
+	.sections.clay .card h2 {
+		color: var(--deep);
+		font-weight: 600;
+		font-size: 1.3rem;
+	}
+	.sections.clay .card p {
+		color: var(--deep);
+		opacity: 0.85;
+	}
+	.sections.clay .card .link {
+		color: var(--deep);
+		font-weight: 600;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+	.sections.clay .card .link:hover {
+		opacity: 0.75;
+	}
+	.sections.clay .card .link:focus-visible {
+		outline-color: var(--deep);
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.sections.clay .card {
+			transition: none;
+		}
+		.sections.clay .card:hover {
+			transform: none;
+			box-shadow: none;
+		}
 	}
 	.card h2 {
 		margin: 0 0 10px;

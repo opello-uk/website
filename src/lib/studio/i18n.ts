@@ -127,6 +127,14 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           href: "/studio/download/",
           linkLabel: "كيفية التنزيل",
         },
+        {
+          // Refer-a-friend is in MLP1 scope (Vinay, 2026-11-17); reward and terms stay placeholder pending Opello sign-off.
+          source: "placeholder",
+          heading: "ارفع صديقاً",
+          body: "شارك رمز الإحالة ورمز QR مع صديق. [مؤقت: المكافأة والشروط تؤكدها أوبيلو.]",
+          href: "/studio/referrals/",
+          linkLabel: "اطلع على كيفية الإحالة",
+        },
       ],
       cta: { label: "افتح حسابك معنا", href: "/studio/open-account/" },
     },
@@ -2122,6 +2130,14 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "Kusursuz dijital katılım. İndirmek için telefonundaki kodu tara; sonra e-posta adresi, telefon numarası ve bir kimlik belgesiyle hesabını aç.",
           href: "/studio/download/",
           linkLabel: "İndirme adımları",
+        },
+        {
+          // Refer-a-friend is in MLP1 scope (Vinay, 2026-11-17); reward and terms stay placeholder pending Opello sign-off.
+          source: "placeholder",
+          heading: "Arkadaşını davet et",
+          body: "Davet kodunu ve QR kodunu bir arkadaşınla paylaş. [Temp: Ödül ve şartlar Opello tarafından onaylanacak.]",
+          href: "/studio/referrals/",
+          linkLabel: "Davetin nasıl çalıştığını gör",
         },
       ],
       cta: { label: "Hesabını bizimle aç", href: "/studio/open-account/" },
