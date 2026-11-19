@@ -698,11 +698,240 @@ export const pages: StudioPage[] = [
 		hero: { variant: 'split', alt: 'A person relaxing in an armchair by a large window, reading a printed magazine with a ceramic mug on a side table' },
 		lede: 'Stories from the Opello team and the community, on money, sustainability and everyday spending. [Placeholder: first posts, in Opello wording.]',
 		sections: [
-			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', links: [] },
+			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', links: [{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' }, { label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' }, { label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' }, { label: 'A Green Break: how to holiday sustainably', href: '/studio/green-break/' }, { label: 'Money and mental health: 5 free mood boosters', href: '/studio/money-and-mental-health/' }, { label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' }, { label: 'The pros and cons of a cashless society', href: '/studio/cashless-society/' }, { label: 'Seven principles for implementing the Consumer Duty', href: '/studio/consumer-duty/' }, { label: 'The bright side of dark mode', href: '/studio/dark-mode/' }] },
 			{ heading: 'First Opello posts', body: '[Placeholder: the first two or three posts from the Opello team, once written and approved.]' }
 		],
 		cta: { label: 'Back to News', href: '/studio/news/' }
 	},
+	{
+		slug: 'chargebacks',
+		title: 'What are chargebacks, and when can you claim?',
+		kicker: 'Insights',
+		lede: 'If a card payment goes wrong, you can often get your money back. Here is how a chargeback works and when it can help.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/what-are-chargebacks-and-when-you-claim (Algbra Insights article, 6 January 2023). Wording adapted for Opello. Algbra\'s article describes its own dispute team, so the Opello process is marked for confirmation.',
+			'The card scheme rules are named by category only ("card scheme rules"). Opello to confirm its scheme and rule set before publishing.',
+			'Timescales, the evidence list and how Opello hands a claim to the card issuer need Opello and compliance sign-off. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What a chargeback is', body: 'A chargeback is the process your card provider runs after you dispute a card payment. Your provider contacts the shop or merchant with the evidence you have sent, and if the claim succeeds, the payment amount goes back to your card.', note: 'Source: algbra.com chargeback article, "Chargebacks, the beginner\'s guide". Wording adapted for Opello.', source: 'algbra' },
+			{ heading: 'When you can raise one', body: 'You can raise a chargeback in situations such as these, and in many others:', note: 'Source: algbra.com chargeback article. The list is Algbra\'s example list. Check it against the rules that apply to Opello cards.', source: 'algbra', items: [
+				'The goods or services you paid for were not provided',
+				'The goods or services are damaged or not as described',
+				'An ATM did not dispense the funds',
+				'The merchant charged you twice',
+				'The merchant kept charging you for a subscription you cancelled'
+			] },
+			{ heading: 'Try the shop first', body: 'Start by asking the shop or merchant for a refund. If they will not help, contact us and we will look at raising a chargeback for you.', note: 'Source: algbra.com chargeback article ("contact the shop or merchant first"). The Opello route after that is a placeholder until the chargeback process is confirmed.', source: 'algbra' },
+			{ heading: 'What to send us', body: 'The more evidence you have, the better. If you do not have everything, still get in touch: we will tell you what is needed.', note: 'Source: algbra.com chargeback article. Evidence list (proof of purchase, description of the goods or service, photos, records of contact with the merchant) is Algbra wording and needs Opello confirmation.', source: 'algbra', items: [
+				'Evidence that you have tried to sort it out with the merchant',
+				'A description of the goods or service you ordered',
+				'Proof of purchase, such as a receipt or invoice',
+				'Evidence that the goods were damaged or not as described, such as a photo'
+			] },
+			{ heading: 'How long it takes', body: '[Placeholder: how long a chargeback takes and what you will hear from us, to be confirmed by Opello.]', note: 'Placeholder. Algbra does not give a timescale in this article.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
+				{ label: 'Read the FAQ', href: '/studio/faq/' },
+				{ label: 'Back to News', href: '/studio/news/' }
+			] }
+		],
+		cta: { label: 'Get in touch', href: '/studio/contact/' }
+	},
+	{
+		slug: 'green-banking',
+		title: 'What is green banking, and why does it matter?',
+		kicker: 'Insights',
+		lede: 'Green banking looks at where your money goes, not just where it sits. Here is what it means and why it matters.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/what-is-green-banking-and-why-does-it-matter (Algbra Insights article, 26 June 2023). Wording adapted for Opello.',
+			'Left out until each figure is checked against its original source: Algbra\'s statistics (household emissions, pension comparison, bank investment totals, climate costs, the 42% greenwashing estimate) and its third-party directory link.',
+			'Opello\'s own green claims (how we invest, lend or offset) are placeholders until Opello confirms them. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What green banking is', body: 'Green banking is a way of banking that focuses on lowering environmental risk and having a positive effect on the planet, while still handling your day-to-day money. It can mean investing in renewable energy rather than harmful industries, offering green loans and helping people cut their carbon footprint.', note: 'Source: algbra.com green banking article, "What is green banking?". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Why it matters', body: 'Most of us already think about sustainability in what we buy and eat. Money is part of that too. Banks decide what to lend to and what to invest in, and most people never get a say in it. Where you bank can make a difference.', note: 'Source: algbra.com green banking article, "Why is green banking important?" and "What high street banks do with your money". Adapted; the statistics are left out.', source: 'algbra' },
+			{ heading: 'Climate and social goals together', body: 'Some green banks look at climate and social issues as one problem. The people who contribute least to climate change often feel its effects first, so helping low-income communities is part of the same job.', note: 'Source: algbra.com green banking article, "What is green banking?". Adapted for Opello.', source: 'algbra', items: [
+				'Lower environmental risk in what the bank funds',
+				'Invest in renewable energy instead of harmful industries',
+				'Help people reduce their carbon footprint',
+				'Look at climate and social impact together'
+			] },
+			{ heading: 'How Opello fits in', body: '[Placeholder: what Opello does with customer money and how it supports sustainability, in Opello wording. Needs Opello confirmation before publishing.]', note: 'Placeholder. Opello sustainability claims need Opello confirmation and compliance sign-off.', source: 'placeholder' },
+			// Out of MLP1 scope — Planet Impact and carbon-offsetting links removed (Donations / Planet Impact are out of scope for MLP1). Do not publish those links.
+			{ heading: 'Read next', body: 'More on saving and ethical finance from Opello.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
+				{ label: 'Ethical Saver', href: '/studio/ethical-savings/' },
+				{ label: 'World Wildlife Day', href: '/studio/world-wildlife-day/' }
+			] }
+		],
+		cta: { label: 'Back to News', href: '/studio/news/' }
+	},
+	{
+		slug: 'green-break',
+		title: 'A Green Break: how to holiday sustainably',
+		kicker: 'Insights',
+		lede: 'It is hard to travel in a completely green way, but a few conscious choices can let you enjoy a break while limiting the harm. Here are five tips for greener travel.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/a-green-break-how-to-holiday-sustainably (Algbra blog article, 1 July 2022). Wording adapted for Opello. Algbra product references (track emissions in the Algbra app, sign up for early access) are left out.',
+			'The opening examples (5 million displaced in Sylhet, Bangladesh; 5,000-acre wildfire in New Mexico, California; 32°C in Suffolk) are Algbra figures and need checking against their original source before publishing.',
+			'The CO2 figures (371.4kg for a return London to Marrakech; 685kg for a return London to Dubai) and the World Tourism Organisation $5 of $100 statistic are Algbra figures and need checking against their original source before publishing.',
+			'The named hotels and lodges (Nayara Springs, Wilderness Safaris Bisate Lodge, Pousada Literaria de Paraty) are Algbra examples, not Opello recommendations. Opello to confirm its own examples or leave them out. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'Why it matters', body: 'As we see more unpredictable and extreme weather around the world, the question is how we can enjoy our breaks while contributing as little as possible to climate damage. It is difficult to travel in a completely green way, but more conscious decisions can let us enjoy memorable resets while limiting their negative effects.', note: 'Source: algbra.com article, opening paragraphs. The climate examples are Algbra figures and need checking against their original source.', source: 'algbra' },
+			{ heading: 'Stay local', body: 'Staying local does not mean giving up good views or a good time. In the UK there are sights on our doorstep, and if you live elsewhere, try the overlooked gems a few cities away or destinations within a train ride from home. Even short-haul flights over longer journeys mean a much smaller share of carbon emissions. A number of online tools, including the ICAO calculator endorsed by the UN, can help you work out your carbon footprint.', note: 'Source: algbra.com article, "Stay local". The UK place examples are kept as Algbra published them. The CO2 figures are left out as they need checking. ICAO is a public UN body, not a vendor.', source: 'algbra' },
+			{ heading: 'Eco-conscious accommodation', body: 'If you do travel further, some research into environmentally friendly places to stay can go a long way. Hotel developments can disrupt the local ecosystem, but some go to great lengths to minimise the disruption or even build back natural areas.', note: 'Source: algbra.com article, "Eco-conscious Accommodation". The named hotels and lodges are Algbra examples, not Opello recommendations.', source: 'algbra' },
+			{ heading: 'Limit plastic waste', body: 'Plastic often ends up in nature, poisoning the environment and directly killing wildlife. Of all plastic waste, single-use bottles may be the most harmful. There is an abundance of reusable water bottles for every kind of traveller.', note: 'Source: algbra.com article, "Limit plastic waste". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Shop local', body: 'The World Tourism Organisation reports that of each one hundred dollars spent on a trip, only five dollars reaches local economies. By shopping at markets abroad you can support independent owners who source ingredients more locally.', note: 'Source: algbra.com article, "Shop local". The World Tourism Organisation statistic is an Algbra figure and needs checking against its original source.', source: 'algbra' },
+			// Out of MLP1 scope — 'Offset your carbon emissions' section removed (Planet Impact is out of scope for MLP1; the offsetting claim is unconfirmed for Opello). Do not publish.
+			{ heading: 'Read next', body: 'More on sustainability and travel from Opello.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
+				{ label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' }
+			] }
+		],
+		cta: { label: 'Back to News', href: '/studio/news/' }
+	},
+	{
+		slug: 'money-and-mental-health',
+		title: 'Money and mental health: 5 free mood boosters',
+		kicker: 'Insights',
+		lede: 'The link between money and mental health is often overlooked. Financial strain can worsen mental health, and poor mental health can make money harder to manage. Here are five free things that can help.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/money-and-mental-health-5-free-mood-boosters (Algbra blog article, 6 September 2022). Wording adapted for Opello. Algbra product references and community initiatives are left out.',
+			'The statistics (almost half of people in problem debt also have a mental health problem, 4 in 10 with a mental health problem reported a detrimental impact on their finances) are Algbra figures and need checking against their original source before publishing.',
+			'The AlgbraX community initiatives (Cycle Sisters, CWSA, Chai Mama) are Algbra specifics and are not reused. Opello community initiatives are a placeholder. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'The link between money and mind', body: 'A common cause of mental health struggles is financial pressure, and vice versa. Poor mental health can make it harder to keep good money habits or stay on top of bill payments. Almost half of people in problem debt also have a mental health problem, and 4 in 10 people with a mental health problem said it had a detrimental impact on their financial situation.', note: 'Source: algbra.com article, opening paragraphs. The statistics are Algbra figures and need checking against their original source.', source: 'algbra' },
+			{ heading: 'Finding water', body: 'Studies have shown that people living near water generally report better mental health and wellbeing, and the same applies to green spaces. The mere sight and sound of water can induce neurochemicals that promote wellness, increase blood flow to the brain and heart, and induce relaxation.', note: 'Source: algbra.com article, "Finding water". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Keeping a journal', body: 'Putting thoughts on paper, or in a notes app, can reduce stress and improve emotional functions and even the immune system. When thoughts, worries or fears are rushing at you, the first step is to organise them before you can start working towards solutions.', note: 'Source: algbra.com article, "Keeping a Journal". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Consuming positivity', body: 'Go out of your way to watch or read something positive. Better yet, write down something you are grateful for, small or big. We are exposed to more information than ever before, and constantly consuming negative news can unknowingly put us in bad mental states or lead to spiralling thoughts.', note: 'Source: algbra.com article, "Consuming positivity". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Connecting with community', body: 'Human connection is integral to feeling whole. There are many ways to connect with people in your community and nurture relationships, new and old. Local sports centres, community groups, volunteering and social platforms are all starting points.', note: 'Source: algbra.com article, "Connecting with community". Algbra community initiatives (Cycle Sisters, CWSA, Chai Mama) are not reused. Opello community work is a placeholder.', source: 'algbra' },
+			{ heading: 'Recharging your brain', body: 'A good night sleep has wondrous effects on both emotional stability and cognitive functions, including how we respond to stress and our decision-making skills. Research shows sleep and mental health are intertwined. Meditation videos, classical music or white noise can help if you struggle to get to sleep.', note: 'Source: algbra.com article, "Recharging our brain". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'In it for the long haul', body: 'Being strapped for cash can also mean being strapped for time, and these activities require time and energy. Seeing mental health as an investment means taking time now so you are healthier and happier for longer, and more present for the people you love.', note: 'Source: algbra.com article, "In it for the long haul". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Read next', body: 'More from Opello on wellbeing, money and sustainability.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
+				{ label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' }
+			] }
+		],
+		cta: { label: 'Back to News', href: '/studio/news/' }
+	},
+	{
+		slug: 'world-wildlife-day',
+		title: 'What is World Wildlife Day, and why does it matter?',
+		kicker: 'Insights',
+		lede: 'World Wildlife Day celebrates our planet\'s wildlife and reminds us that our survival is tied to theirs. Here is what it is and why it matters.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/what-is-world-wildlife-day-and-why-does-it-matter (Algbra blog article, 27 February 2023). Wording adapted for Opello. Algbra\'s product references (Algbra account, carbon offsetting product) are left out.',
+			'The extinction statistics (over 42,100 species threatened, 28% of assessed species, extinction rate 1,000 to 10,000 times the natural rate) are Algbra\'s figures and need checking against their original source before publishing.',
+			'The 2023 theme ("Forests and Livelihoods: Sustaining People and Planet") is from the dated article. Opello to update with the current year\'s theme before publishing. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What World Wildlife Day is', body: 'World Wildlife Day is held on 3 March each year. It marks the day the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) was signed in 1973. It celebrates our planet\'s wildlife and raises awareness of the importance of conserving wildlife and their habitats, and of protecting endangered species.', note: 'Source: algbra.com World Wildlife Day article, "What is World Wildlife Day?". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Why it matters', body: 'World Wildlife Day is about highlighting the importance of biodiversity to our continued survival. Right now, over 42,100 species are threatened with extinction, around 28% of all the species assessed, and the current rate of extinction is between 1,000 and 10,000 times higher than it should be naturally. Losing one species can trigger an extinction domino effect with impacts far larger than losing a single animal. It could lead to an uninhabitable planet.', note: 'Source: algbra.com World Wildlife Day article, "Why does World Wildlife Day matter?". The statistics are Algbra\'s figures and need checking against their original source before publishing.', source: 'algbra' },
+			{ heading: 'The theme', body: 'The 2023 theme was "Forests and Livelihoods: Sustaining People and Planet", focusing on the role of forests in sustaining the livelihoods of millions of people and in maintaining the planet\'s ecological balance.', note: 'Source: algbra.com World Wildlife Day article, "World Wildlife Day 2023 theme". This is the 2023 theme from a dated article. Opello to update with the current year\'s theme before publishing.', source: 'algbra' },
+			{ heading: 'How to make an impact', body: '[Placeholder: what Opello does with customer money so it never funds harm to people or the planet, and how Opello supports projects that help reverse the loss of biodiversity (Planet Impact is out of scope for MLP1, so no offsetting claim). Opello wording to confirm before publishing.]', note: 'Placeholder. Adapted from algbra.com World Wildlife Day article, "How can I make an impact?". Algbra\'s product claims are not reused. Opello sustainability claims need Opello confirmation and compliance sign-off.', source: 'placeholder' },
+			{ heading: 'Read next', body: 'More on sustainability and ethical finance from Opello.', source: 'placeholder', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
+				{ label: 'A Green Break: how to holiday sustainably', href: '/studio/green-break/' }
+			] }
+		],
+		cta: { label: 'Back to News', href: '/studio/news/' }
+	},
+	{
+		slug: 'cashless-society',
+		title: 'The pros and cons of a cashless society',
+		kicker: 'Insights',
+		lede: 'As we move towards a cashless society, there is less money in our wallets. Is that a bad thing? Here are the pros and cons.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/the-pros-and-cons-of-a-cashless-society (Algbra blog article, 14 February 2023). Wording adapted for Opello. Algbra product references (freeze card in the Algbra app, Algbra card exchange rate, biodegradable cards, Chai Mama, opening an account with a UK mobile number and ID) are left out.',
+			'The third-party figures (crime reduction cited to Swift Money, untraceable cash cited to the Access to Cash Review, the ECB stopping the €500 note, 50% of adults in Bangladesh, 99% of UK adults via the World Bank, 0.00378 kgCO2e per debit card transaction) are Algbra\'s figures and need checking against their original source before publishing.',
+			'The card scheme is named by category only ("card scheme"). Opello card features (freeze in app, exchange rate, biodegradable cards) are placeholders until Opello confirms them. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What a cashless society is', body: 'A cashless society is one where physical coins and banknotes are not used in financial transactions. Around the world, people, businesses and entire countries are going cashless. They are not ditching money; they are moving to electronic money, waving goodbye to notes and coins.', note: 'Source: algbra.com cashless society article, "What is a cashless society?". Adapted for Opello.', source: 'algbra', items: [
+				'Pros: quicker transactions, lower crime risk, greater financial inclusion, better for the environment, easier travel abroad',
+				'Cons: harder to budget with cash, greater cybercrime risk, leaves some people behind, makes donating harder, cash can hold sentimental value'
+			] },
+			{ heading: 'Pro: quicker, easier transactions', body: 'With digital payments, you always have the right amount to hand, so there is no more digging for coins and no more waiting. You can check out with a tap, and you do not even need your wallet when your cards are on your phone.', note: 'Source: algbra.com cashless society article, "Pro: Quicker, easier transactions". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Con: it is easier to budget with cash', body: 'Budgeting can be easier with physical cash. You can lay it out and sort it into pots to keep you from overspending. It is easier to overdo it when you can check out with a tap, but with physical cash, you can only spend the money you have on you.', note: 'Source: algbra.com cashless society article, "Con: It\'s easier to budget with cash". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Pro: lower risk of crime', body: 'Cash makes crime easier. Bank robberies, burglaries, extortion and corruption fall when physical cash is harder to come by. When cash is stolen from your wallet, it is gone, but if your card is missing you can block it from your app. Digital payments also leave a trail, which can make fraudsters think twice, and cashless payments help prevent money laundering by removing the chance to circulate fake notes.', note: 'Source: algbra.com cashless society article, "Pro: Lower risk of crime". The crime-reduction figure is cited to a third party (Swift Money) and the untraceable-cash point to the Access to Cash Review; both need checking against their original source. The ECB €500 note point is Algbra\'s wording and needs checking. Opello card-freeze feature is a placeholder until confirmed.', source: 'algbra' },
+			{ heading: 'Con: greater risk of cybercrime', body: 'When money is involved, criminals are never far behind. Cybercriminals use schemes such as hacking, phishing and malicious software, and these change all the time. As money becomes more digital, the window of opportunity widens. Looking to stay safe online? Check the National Crime Agency website.', note: 'Source: algbra.com cashless society article, "Con: Greater risk of cybercrime". The National Crime Agency is a public body, not a vendor. Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Pro: increases financial inclusion', body: 'The move towards a cashless society can increase financial inclusion, because mobile money accounts are easy to open, unlike traditional bank accounts. They make people\'s lives easier, especially in developing countries, and digital finance apps have also brought more people into the financial system in the UK.', note: 'Source: algbra.com cashless society article, "Pro: Increases financial inclusion". The Bangladesh 50% and UK 99% figures are Algbra\'s and need checking against their original source (World Bank). The Algbra sign-up line is left out.', source: 'algbra' },
+			{ heading: 'Con: leaves people behind', body: 'A cashless society is all well and good until your internet drops out. Digital payments could leave some people behind, such as those in areas where the internet is less accessible, or people who are not as tech-savvy. If there were a widespread blackout, accessing your money would become a real problem. As we edge towards a cashless future, financial literacy matters more than ever.', note: 'Source: algbra.com cashless society article, "Con: Leaves people behind". The Algbra Chai Mama programme is not reused. Opello financial literacy work is a placeholder.', source: 'algbra' },
+			{ heading: 'Pro: better for the environment', body: 'Going cashless can be better for the planet. Cashless transactions can have a minor impact, while cash has a larger carbon footprint, given the energy to produce banknotes and coins, the chemicals and greenhouse gases released in manufacturing, and the emissions from transporting physical cash around the world. Cashless is not without its issues, though: some payment cards are made from plastic that does not biodegrade.', note: 'Source: algbra.com cashless society article, "Pro: Better for the environment". The 0.00378 kgCO2e figure is Algbra\'s and needs checking against its original source. Algbra\'s biodegradable card claim is left out; Opello card materials are a placeholder.', source: 'algbra' },
+			{ heading: 'Con: makes donating harder', body: 'Ever wanted to give a few coins to a charity collection box, but did not have any change? At these times, physical cash is handy, because you can easily donate whatever you can spare. Contactless card readers alongside collection boxes are a glimpse of how donating is changing.', note: 'Source: algbra.com cashless society article, "Con: Makes donating harder". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Pro: easier to travel abroad', body: 'Sorting out your finances abroad can be a nightmare when you are trying to find an ATM or bureau de change. Payment cards make your trip easier because they are globally accepted through the card scheme. With exchange rates, not all payment cards are born equal: some banks add a mark-up to the exchange rate when you buy something in a foreign currency.', note: 'Source: algbra.com cashless society article, "Pro: Easier to travel abroad". The card scheme is named by category only. Algbra\'s "Mastercard Exchange rate with no extra fees" claim is left out; Opello exchange rate and fees are a placeholder until confirmed against the Opello fee schedule.', source: 'algbra' },
+			{ heading: 'Con: cash can hold sentimental value', body: 'Cash can look cool. Notes from different countries make great keepsakes from a trip, and banknotes can feature beautiful designs that tell you about a country\'s culture. It is still big news when a new note is launched, and there is no feeling quite like finding a fiver from a grandparent in your birthday card. Creating those memories is harder in a cashless future.', note: 'Source: algbra.com cashless society article, "Con: Cash can hold sentimental value". The Alan Turing £50 note example is kept as Algbra published it. Adapted for Opello.', source: 'algbra' },
+			{ heading: 'The future of money', body: 'Whether you are already cashless or clinging firmly to your coin collection, money is changing.', source: 'algbra', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
+				{ label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' },
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
+			] }
+		],
+		cta: { label: 'Back to News', href: '/studio/news/' }
+	},
+	{
+		slug: 'consumer-duty',
+		title: 'Seven principles for implementing the Consumer Duty',
+		kicker: 'Insights',
+		lede: 'The Financial Conduct Authority\'s Consumer Duty is about delivering good outcomes for customers. Here is how we are approaching it.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/seven-principles-for-implementing-the-consumer-duty (Algbra blog article, 16 March 2023). Wording adapted for Opello. Algbra\'s author (Omar Salem, Head of Legal & Regulatory Affairs) is not reused.',
+			'The Consumer Duty effective date (31 July 2023) is a matter of public record published by the FCA. The seven principles are Algbra\'s own approach, adapted for Opello. Opello\'s actual Consumer Duty implementation needs Opello and compliance sign-off before publishing.',
+			'The FCA is a public body, not a vendor. The link to the FCA Consumer Duty page is a public resource. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'What the Consumer Duty is', body: 'The Consumer Duty is an FCA requirement that came in on 31 July 2023. It means FCA-regulated firms need to deliver good outcomes for their customers. The FCA has set out rules on what companies should do to comply, so it is a chance to look at how we do things and how we can improve even more.', note: 'Source: algbra.com Consumer Duty article, "What is the Consumer Duty?". The 31 July 2023 effective date is FCA public record. Adapted for Opello.', source: 'algbra' },
+			{ heading: '1. Better than good', body: 'The Consumer Duty requires firms to deliver good outcomes for customers. We want to go beyond the minimum requirements and provide outstanding outcomes wherever possible.', note: 'Source: algbra.com Consumer Duty article, principle 1. Adapted for Opello.', source: 'algbra' },
+			{ heading: '2. Prioritising what will make the most difference', body: 'We focus on where the greatest risks and greatest potential benefits are for customers, so we make sure we are working on what matters most.', note: 'Source: algbra.com Consumer Duty article, principle 2. Adapted for Opello.', source: 'algbra' },
+			{ heading: '3. Practical steps with real outcomes', body: 'We focus on practical steps that will make a real difference to customers, so our implementation of the Consumer Duty has real outcomes rather than just paperwork.', note: 'Source: algbra.com Consumer Duty article, principle 3. Adapted for Opello.', source: 'algbra' },
+			{ heading: '4. Making improvements as soon as possible', body: 'If it is clear an enhancement makes sense, we do not wait around. We implement improvements as soon as possible.', note: 'Source: algbra.com Consumer Duty article, principle 4. Adapted for Opello.', source: 'algbra' },
+			{ heading: '5. Engaging all consumer-impacting functions', body: 'From customer operations to marketing and finance, many parts of our business affect our customers\' experience. The whole company works together to implement the Consumer Duty.', note: 'Source: algbra.com Consumer Duty article, principle 5. Adapted for Opello.', source: 'algbra' },
+			{ heading: '6. Ensuring all requirements are met', body: 'After reviewing implementation plans, the FCA thinks firms may have considered the requirements superficially. We are doing a line-by-line review of the FCA\'s rules and tracking how we comply with them.', note: 'Source: algbra.com Consumer Duty article, principle 6. The FCA quote is Algbra\'s summary of FCA guidance. Adapted for Opello.', source: 'algbra' },
+			{ heading: '7. Working closely with our partners', body: 'To provide our customers with services, we work with partners. We are working with each of them to make sure we have the most comprehensive approach to the Consumer Duty possible.', note: 'Source: algbra.com Consumer Duty article, principle 7. Partners are described by category only. Adapted for Opello.', source: 'algbra' },
+			{ heading: 'A big change in regulation', body: 'The Consumer Duty is a big change in the FCA\'s approach to regulation. It is an opportunity for us to do what we do best, but even better. You can read more on the FCA\'s Consumer Duty page.', note: 'Source: algbra.com Consumer Duty article, closing paragraph. The FCA Consumer Duty page is at fca.org.uk/firms/consumer-duty (public resource, not a vendor link). Adapted for Opello.', source: 'algbra', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
+				{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' },
+				{ label: 'Frequently asked questions', href: '/studio/faq/' }
+			] }
+		],
+		cta: { label: 'Back to News', href: '/studio/news/' }
+	},
+	{
+		slug: 'dark-mode',
+		title: 'The bright side of dark mode',
+		kicker: 'Insights',
+		lede: 'One simple change on your phone could save battery, money and even a little of the planet. Here is why dark mode is worth switching on.',
+		source: 'algbra',
+		sourceNotes: [
+			'Source: algbra.com/news/the-bright-side-of-dark-mode (Algbra blog article, 29 April 2025). Wording adapted for Opello. Algbra product references (dark mode in the Algbra app, the Instagram post, "Join the dark side with Algbra") are left out.',
+			'The statistics (5.3 billion of 16 billion phones thrown away in 2022, up to 47% battery saving, OLED screens making up almost half the market) are Algbra\'s and need checking against their original source before publishing.',
+			'Opello dark mode availability, supported screens and launch timing are placeholders until confirmed. Not for publication until approved.'
+		],
+		sections: [
+			{ heading: 'A small switch with a big difference', body: 'Ever thought that one simple change could make a huge difference? Switching to dark mode on your phone could be that game-changer. It is not just about looking cool; it is about saving time, money, your health and even the planet.', note: 'Source: algbra.com dark mode article, opening. Adapted for Opello. Algbra app reference left out.', source: 'algbra' },
+			{ heading: 'Protect your phone and the planet', body: 'By switching to dark mode, you reduce the number of times you need to charge your phone. Fewer charges mean your battery stays healthier for longer, and with battery issues the top complaint among smartphone users, anything that helps your battery last is a win. Longer battery life also means fewer dead batteries polluting the planet with harmful chemicals. In 2022 alone, an estimated 5.3 billion of the 16 billion phones worldwide were thrown away.', note: 'Source: algbra.com dark mode article, "Protect Your Phone and the Planet". The 5.3 billion of 16 billion figure is Algbra\'s and needs checking against its original source. Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Up to 47% less battery', body: 'Using dark mode can save up to 47% battery power, which is nearly doubling your phone\'s battery life and cutting your energy use in half. This is especially true for phones with OLED screens, which now make up almost half the market, but other screen types see benefits too.', note: 'Source: algbra.com dark mode article, "Protect Your Phone and the Planet". The 47% figure and the OLED market share are Algbra\'s and need checking against their original source. Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Be kinder to your eyes and sleep better', body: 'Switching to dark mode can also reduce the strain on your eyes, especially in low-light conditions. It cuts blue light emissions, which can interfere with your melatonin levels and disrupt your sleep. Better sleep equals better health.', note: 'Source: algbra.com dark mode article, "Be Kinder to Your Eyes and Sleep Better". Adapted for Opello.', source: 'algbra' },
+			{ heading: 'Join the dark side', body: 'Your eyes, wallet and the planet will thank you. [Placeholder: when dark mode is available in the Opello app and which screens it covers, to be confirmed.]', note: 'Source: algbra.com dark mode article, closing. Algbra product plug left out. Opello dark mode availability is a placeholder.', source: 'algbra', links: [
+				{ label: 'Back to Blog', href: '/studio/blog/' },
+				{ label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' },
+			] }
+		],
+		cta: { label: 'Back to News', href: '/studio/news/' }
+	},
+	// Out of MLP1 scope — 'An intro to carbon offsetting' is Planet Impact content. Do not publish. Restored copy is kept in pages-full.ts.bak.
 	{
 		slug: 'uk-account-from-abroad',
 		title: 'Getting a UK account from abroad',
@@ -755,7 +984,7 @@ export const pages: StudioPage[] = [
 				{ label: 'About', href: '/studio/about/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'News and insights', body: 'Newsroom updates, blog posts and topic articles.', links: [
-				{ label: 'News', href: '/studio/news/' }, { label: 'Blog', href: '/studio/blog/' }] },
+				{ label: 'News', href: '/studio/news/' }, { label: 'Blog', href: '/studio/blog/' }, { label: 'Chargebacks', href: '/studio/chargebacks/' }, { label: 'Virtual cards', href: '/studio/virtual-cards/' }, { label: 'Green banking', href: '/studio/green-banking/' }, { label: 'Green Break', href: '/studio/green-break/' }, { label: 'Money and mental health', href: '/studio/money-and-mental-health/' }, { label: 'World Wildlife Day', href: '/studio/world-wildlife-day/' }, { label: 'Cashless society', href: '/studio/cashless-society/' }, { label: 'Consumer Duty', href: '/studio/consumer-duty/' }, { label: 'Dark mode', href: '/studio/dark-mode/' }] },
 			{ heading: 'Help', body: 'Answers and support.', links: [
 				{ label: 'Help', href: '/studio/help/' }, { label: 'Help articles', href: '/studio/help-articles/' }, { label: 'Getting started answers', href: '/studio/help-getting-started/' }, { label: 'Finding your TIN', href: '/studio/help-tin/' }, { label: 'Logging in answers', href: '/studio/help-logging-in/' }, { label: 'My card answers', href: '/studio/help-my-card/' }, { label: 'My account answers', href: '/studio/help-my-account/' }, { label: 'Ethical Saver help', href: '/studio/help-ethical-saver/' }, { label: 'Security and data answers', href: '/studio/help-security-data/' }, { label: 'About Opello answers', href: '/studio/help-about-opello/' }, { label: 'Get in touch answers', href: '/studio/help-get-in-touch/' }, { label: 'Frequently asked questions', href: '/studio/faq/' }, { label: 'Log in', href: '/studio/login/' }
 			] },
