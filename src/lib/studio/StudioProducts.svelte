@@ -6,7 +6,7 @@
 	const c = $derived(homeCopy[lang]);
 	import current from '#lib/assets/studio/current.jpg';
 	import savings from '#lib/assets/studio/savings.jpg';
-	import pensions from '#lib/assets/studio/pensions.jpg';
+	import cardsPhoto from '#lib/assets/studio/cards.jpg';
 	// Photography is generated for this build until licensed photography is supplied.
 	// Copy and alt text live in i18n (homeCopy[lang]); the photos stay here and
 	// join by slug. (Fixed 2026-11-19: the i18n move dropped the image sources,
@@ -14,7 +14,7 @@
 	const photos: Record<string, string> = {
 		transfers: current,
 		savings: savings,
-		cards: pensions
+		cards: cardsPhoto
 	};
 </script>
 
@@ -112,7 +112,7 @@
 	}
 	h2 {
 		margin: 0 0 clamp(28px, 4.5vw, 65px);
-		font-weight: 500;
+		font-weight: 700;
 		font-size: clamp(28px, 4.6vw, 66px);
 		letter-spacing: -0.01em;
 	}
