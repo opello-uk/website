@@ -226,6 +226,26 @@
 		}
 	}
 
+	/* Very narrow phones: stack so the ticks read as single lines. */
+	@media (max-width: 380px) {
+		.split {
+			grid-template-columns: 1fr;
+			gap: 18px;
+			padding: 44px 20px;
+		}
+		.media {
+			min-height: 0;
+			aspect-ratio: 4 / 3;
+		}
+		.ticks li {
+			font-size: 14px;
+		}
+		.learn {
+			font-size: 13px;
+			padding: 12px 18px;
+		}
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		.learn,
 		.learn svg {

@@ -157,8 +157,7 @@
 			order: 0;
 		}
 	}
-	/* Figma mobile keeps the three tiles in one row, smaller */
-	/* Reference phone layout: three small tiles on the left, the heading and intro on the right, one row. */
+	/* Phone layout: the tiles sit left, the heading and intro on the right, one row. MLP1 has two tiles, so the tile column is a 2-up grid. */
 	@media (max-width: 560px) {
 		.control {
 			padding: 48px 20px;
@@ -177,14 +176,14 @@
 		.grid {
 			grid-column: 1;
 			grid-row: 1;
-			grid-template-columns: repeat(3, 60px);
-			gap: 6px;
+			grid-template-columns: repeat(2, minmax(64px, auto));
+			gap: 8px;
 		}
 		.tile {
 			border-radius: 10px;
 		}
 		.tile-link {
-			padding: 12px 4px;
+			padding: 14px 10px;
 			border-radius: 10px;
 		}
 		.icon {
@@ -201,12 +200,36 @@
 			line-height: 1.2;
 		}
 		h2 {
-			font-size: 20px;
+			font-size: 19px;
 			margin-bottom: 8px;
 		}
 		header p {
 			font-size: 12px;
 			line-height: 1.45;
+		}
+	}
+
+	/* Very narrow phones: the side-by-side row cannot fit; stack heading above full-width tiles. */
+	@media (max-width: 380px) {
+		.wrap {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+		header {
+			grid-column: 1;
+			grid-row: auto;
+		}
+		.grid {
+			grid-column: 1;
+			grid-row: auto;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 10px;
+		}
+		.tile-link {
+			padding: 18px 12px;
+		}
+		h3 {
+			font-size: 12px;
 		}
 	}
 </style>

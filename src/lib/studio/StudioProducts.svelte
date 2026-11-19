@@ -199,7 +199,7 @@
 	}
 
 	/* Desktop: the row runs off the right edge, as in the reference, so the third card is cropped. */
-	@media (min-width: 801px) {
+	@media (min-width: 1025px) {
 		.products {
 			overflow: hidden;
 		}
@@ -216,11 +216,12 @@
 	}
 
 	/* Phone: a swipeable row that runs off the right edge, as in the Figma 390 frame, so the third card is cropped. */
-	@media (max-width: 800px) {
+	@media (max-width: 1024px) {
 		/* Reference proportions: the phone heading sits smaller against the 390 width. */
 		h2 {
 			font-size: 26px;
 			position: relative;
+			margin-bottom: 20px;
 		}
 		h3 {
 			font-size: 20px;
@@ -243,7 +244,8 @@
 			display: none;
 		}
 		.card {
-			flex: 0 0 44vw;
+			/* Wide enough to read at every width from 340 to 1024; the third card peeks as the scroll affordance. */
+			flex: 0 0 clamp(240px, 62vw, 320px);
 			scroll-snap-align: start;
 		}
 		.photo {
@@ -255,6 +257,18 @@
 		}
 		p {
 			font-size: 14px;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.products {
+			padding: 44px 20px 56px;
+		}
+		.card {
+			flex-basis: 66vw;
+		}
+		.photo {
+			margin-bottom: 14px;
 		}
 	}
 
