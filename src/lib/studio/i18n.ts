@@ -1176,7 +1176,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "ما المقصود بمكعبات الموفر الأخلاقي؟",
-          body: "مكعبات الموفر الأخلاقي ميزة مدخرات في تطبيق أوبيلو. تكسب مبلغًا ثابتًا متفقًا عليه من الربح خلال مدة محددة، وتساهم مدخراتك في مشاريع بيئية واجتماعية. ترتبط أموالك بمحفظة تمويل مستدام يديرها بنك شركائنا، ونعرض لك تقدير انبعاثات ثاني أكسيد الكربون المتجنَّبة والمياه النظيفة المتولدة.",
+          body: "مكعبات الموفر الأخلاقي ميزة مدخرات في تطبيق أوبيلو. تكسب مبلغًا ثابتًا متفقًا عليه من الربح خلال مدة محددة. تُحفظ أموالك في محفظة مدخرات يديرها بنك شركائنا.", // خارج نطاق MLP1 — النص الأصلي ذكر "مشاريع بيئية واجتماعية" و"انبعاثات ثاني أكسيد الكربون المتجنَّبة والمياه النظيفة" (تتبع الأثر). لا يُنشر.
           href: "/studio/ethical-savings/",
           linkLabel: "اطّلع على مكعبات الموفر الأخلاقي",
         },
@@ -3195,7 +3195,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "Etik Tasarruf Küpleri nedir?",
-          body: "Etik Tasarruf Küpleri, Opello uygulamasında bir tasarruf özelliğidir. Belirli bir süre boyunca sabit, önceden kararlaştırılmış bir kâr kazanırsınız ve tasarruflarınız çevresel ve sosyal projeleri destekler. Paranız partner bankamızın yönettiği sürdürülebilir finans portföyüne bağlıdır; kaçınılan tahmini CO₂ emisyonunu ve üretilen temiz suyu size gösteririz.",
+          body: "Etik Tasarruf Küpleri, Opello uygulamasında bir tasarruf özelliğidir. Belirli bir süre boyunca sabit, önceden kararlaştırılmış bir kâr kazanırsınız. Paranız partner bankamızın yönettiği bir tasarruf portföyünde tutulur.", // MLP1 kapsamı dışı — özgün metin "çevresel ve sosyal projeleri destekler" ve "kaçınılan tahmini CO₂ emisyonu ve üretilen temiz su" ifadelerini içeriyordu (etki takibi). Yayımlanmaz.
           href: "/studio/ethical-savings/",
           linkLabel: "Etik Tasarruf Küplerine bak",
         },
