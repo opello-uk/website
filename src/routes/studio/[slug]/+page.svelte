@@ -47,6 +47,13 @@
 
 <svelte:head>
 	<title>{p.title} · Opello studio (unlisted)</title>
+	<!-- Description from the page's own lede; og tags make shared links render as a preview card. -->
+	<meta name="description" content={p.lede} />
+	<meta property="og:title" content={p.title} />
+	<meta property="og:description" content={p.lede} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={altHref('en')} />
+	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	{#each alts as l (l)}
 		<link rel="alternate" hreflang={l} href={altHref(l)} />

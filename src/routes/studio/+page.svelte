@@ -15,6 +15,13 @@
 <svelte:head>
 	<title>{title}</title>
 	<!-- Unlisted build: keep out of every index and never link to it. -->
+	<!-- Description from the landing hero copy; og tags make shared links render as a preview card. -->
+	<meta name="description" content="Unlock your life. For different lives, different circumstances and different starting points. Unlisted studio preview of the Opello website." />
+	<meta property="og:title" content="Opello studio" />
+	<meta property="og:description" content="Unlock your life. For different lives, different circumstances and different starting points." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={`${STUDIO_ORIGIN}/studio/`} />
+	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	<link rel="alternate" hreflang="en" href={`${STUDIO_ORIGIN}/studio/`} />
 	<link rel="alternate" hreflang="ar" href={`${STUDIO_ORIGIN}/studio/ar/`} />

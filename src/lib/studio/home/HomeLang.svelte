@@ -32,6 +32,19 @@
 	<link rel="alternate" hreflang="ar" href={`${STUDIO_ORIGIN}/studio/ar/`} />
 	<link rel="alternate" hreflang="tr" href={`${STUDIO_ORIGIN}/studio/tr/`} />
 	<link rel="alternate" hreflang="x-default" href={`${STUDIO_ORIGIN}/studio/`} />
+	<!-- Description from this language's landing hero copy; og tags make shared links render as a preview card. -->
+	{#if lang === 'ar'}
+		<meta name="description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة. معاينة غير مدرجة لموقع أوبيلو." />
+		<meta property="og:title" content="استوديو أوبيلو" />
+		<meta property="og:description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة." />
+	{:else}
+		<meta name="description" content="Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için. Opello web sitesinin listelenmeyen stüdyo önizlemesi." />
+		<meta property="og:title" content="Opello stüdyosu" />
+		<meta property="og:description" content="Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için." />
+	{/if}
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={`${STUDIO_ORIGIN}/studio/${lang}/`} />
+	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 </svelte:head>
 
 <div class="studio" dir={lang === 'ar' ? 'rtl' : 'ltr'} lang={lang}>
