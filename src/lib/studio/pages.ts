@@ -237,6 +237,21 @@ export const pages: StudioPage[] = [
 		],
 		cta: { label: 'Back to help', href: '/studio/help/' }
 	},
+	// Careers restored 2026-11-21: the page was dropped entirely (not commented out) during the MLP1 purge even though it is company content, not a product page. Content comes from pages-full.ts.bak unchanged except the 'Our mission' link, which pointed at the purged ethical-finance page and now points at About.
+	{
+		slug: 'careers',
+		title: 'Careers',
+		kicker: 'About',
+		lede: 'Be a part of something great. Finance that is fairer, more ethical and more transparent.',
+		source: 'algbra',
+		sections: [
+			{ heading: 'Our mission', body: 'Our mission is to eradicate social and financial exclusion by using technology and a community-first approach to provide equitable access to ethical and sustainable financial services. Our approach is underpinned by a fundamental set of principles. We are people and planet first.', note: 'Source: algbra.com/careers, Our Mission. Opello mission wording to confirm before publishing.', source: 'algbra', href: '/studio/about/', linkLabel: 'Read about us' },
+			{ heading: 'Use your money differently', body: 'Opello is for people who want to use their money differently. Join us on the journey to fairer, more ethical and transparent finance. We are not a bank. We are a movement.', note: "Adapted from algbra.com/careers. \"We are not a bank. We are a movement.\" is a claim that needs Opello sign-off before publishing. Opello wording to confirm.", source: 'algbra' },
+			{ heading: 'Benefits', body: 'Our benefits reflect our inclusive values and are extended to every member of the team, regardless of location or seniority. Benefits for the Opello team are being confirmed. [Placeholder: benefits list]', note: "Source: algbra.com/careers. Benefits intro line is Algbra's wording. Algbra lists its own specific benefits on algbra.com/careers. Do not reuse them for Opello until Opello confirms its own.", source: 'algbra' },
+			{ heading: 'Open roles', body: 'There are no open roles to show yet. [Placeholder: current vacancies]', note: 'Placeholder. Vacancies and how to apply to be confirmed by Opello.', source: 'placeholder' }
+		],
+		cta: { label: 'Get in touch', href: '/studio/contact/' }
+	},
 	{
 		slug: 'download',
 		title: 'Download the app',
@@ -1080,7 +1095,7 @@ export const pages: StudioPage[] = [
 			/* Out of MLP1 scope — Business section removed (Vinay, 2026-11-18). Do not publish.
 			{ heading: 'Business', body: 'Accounts and payments for businesses.', links: [] }, */
 			{ heading: 'About', body: 'Who we are, what we are building and how to reach us.', links: [
-				{ label: 'About', href: '/studio/about/' }, { label: 'Contact', href: '/studio/contact/' }
+				{ label: 'About', href: '/studio/about/' }, { label: 'Careers', href: '/studio/careers/' }, { label: 'Contact', href: '/studio/contact/' }
 			] },
 			{ heading: 'News and insights', body: 'Newsroom updates, blog posts and topic articles.', links: [
 				{ label: 'News', href: '/studio/news/' }, { label: 'Blog', href: '/studio/blog/' }, { label: 'Chargebacks', href: '/studio/chargebacks/' }, { label: 'Virtual cards', href: '/studio/virtual-cards/' }, { label: 'Green banking', href: '/studio/green-banking/' }, { label: 'Green Break', href: '/studio/green-break/' }, { label: 'Money and mental health', href: '/studio/money-and-mental-health/' }, { label: 'World Wildlife Day', href: '/studio/world-wildlife-day/' }, { label: 'Cashless society', href: '/studio/cashless-society/' }, { label: 'Consumer Duty', href: '/studio/consumer-duty/' }, { label: 'Dark mode', href: '/studio/dark-mode/' }, { label: 'Climate catastrophes', href: '/studio/climate-catastrophes/' }, { label: 'Just transition', href: '/studio/just-transition/' }, { label: "Sustainable Valentine's Day", href: '/studio/sustainable-valentines-day/' }] },

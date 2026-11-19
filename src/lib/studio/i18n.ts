@@ -396,6 +396,39 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       ],
       cta: { label: "عودة إلى المساعدة", href: "/studio/help/" },
     },
+    // Careers twin: page restored 2026-11-21 (was dropped whole in the MLP1 purge); translation of our own studio copy.
+    {
+      slug: "careers",
+      source: "placeholder",
+      title: "الوظائف",
+      kicker: "عن أوبيلو",
+      lede: "كن جزءاً من شيء عظيم. تمويل أكثر إنصافاً وأكثر أخلاقية وأكثر شفافية. [مؤقت: صياغة المهمة بحاجة إلى موافقة أوبيلو قبل النشر.]",
+      sections: [
+        {
+          source: "placeholder",
+          heading: "مهمتنا",
+          body: "مهمتنا القضاء على الاستبعاد الاجتماعي والمالي باستخدام التكنولوجيا ومنهج يقوم على المجتمع أولاً، لتوفير وصول منصف إلى خدمات مالية أخلاقية ومستدامة. يقوم منهجنا على مجموعة من المبادئ الأساسية. نحن نضع الإنسان والكوكب أولاً.",
+          href: "/studio/about/",
+          linkLabel: "اقرأ عنّا",
+        },
+        {
+          source: "placeholder",
+          heading: "استخدم أموالك بشكل مختلف",
+          body: "أوبيلو لمن يريد استخدام أمواله بشكل مختلف. انضم إلينا في رحلة نحو تمويل أكثر إنصافاً وأكثر أخلاقية وأكثر شفافية. لسنا بنكاً. نحن حركة.",
+        },
+        {
+          source: "placeholder",
+          heading: "المزايا",
+          body: "مزاياونا تعكس قيمنا الشاملة وتمتد إلى كل عضو في الفريق بغض النظر عن الموقع أو الأقدمية. مزايا فريق أوبيلو قيد التأكيد. [مؤقت: قائمة المزايا]",
+        },
+        {
+          source: "placeholder",
+          heading: "الوظائف الشاغرة",
+          body: "لا توجد وظائف شاغرة للعرض بعد. [مؤقت: الوظائف الحالية]",
+        },
+      ],
+      cta: { label: "تواصل معنا", href: "/studio/contact/" },
+    },
     {
       slug: "ethical-savings",
       source: "placeholder",
@@ -2358,6 +2391,39 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         },
       ],
       cta: { label: "Yardıma dön", href: "/studio/help/" },
+    },
+    // Careers twin: page restored 2026-11-21 (was dropped whole in the MLP1 purge); translation of our own studio copy.
+    {
+      slug: "careers",
+      source: "placeholder",
+      title: "Kariyer",
+      kicker: "Hakkımızda",
+      lede: "Büyük bir şeyin parçası ol. Daha adil, daha etik ve daha şeffaf finans. [Temp: misyon metni yayından önce Opello onayı bekliyor.]",
+      sections: [
+        {
+          source: "placeholder",
+          heading: "Misyonumuz",
+          body: "Misyonumuz, teknolojiyi ve topluluk öncelikli yaklaşımı kullanarak sosyal ve finansal dışlanmayı ortadan kaldırmak ve etik, sürdürülebilir finansal hizmetlere eşit erişim sağlamak. Yaklaşımımız temel bir ilkeler dizisine dayanıyor. Önce insan ve gezegen.",
+          href: "/studio/about/",
+          linkLabel: "Bizi tanıyın",
+        },
+        {
+          source: "placeholder",
+          heading: "Paranı farklı kullan",
+          body: "Opello, parasını farklı kullanmak isteyenler için. Daha adil, daha etik ve daha şeffaf finansa giden yolculukta bize katıl. Biz bir banka değiliz. Biz bir hareketiz.",
+        },
+        {
+          source: "placeholder",
+          heading: "Yan haklar",
+          body: "Yan haklarımız kapsayıcı değerlerimizi yansıtır ve konum ya da kıdemden bağımsız olarak her ekip üyesini kapsar. Opello ekibinin yan hakları doğrulanıyor. [Temp: yan haklar listesi]",
+        },
+        {
+          source: "placeholder",
+          heading: "Açık pozisyonlar",
+          body: "Şimdilik gösterilecek açık pozisyon yok. [Temp: güncel ilanlar]",
+        },
+      ],
+      cta: { label: "Bize ulaş", href: "/studio/contact/" },
     },
     {
       slug: "ethical-savings",
