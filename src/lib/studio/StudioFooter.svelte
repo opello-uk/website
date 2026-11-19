@@ -63,6 +63,9 @@
 		</ul>
 	</div>
 
+	<!-- Plan rule: every page carries the financial-promotion marker (PLAN.md). -->
+	<p class="marker">{t.promoMarker}</p>
+
 	<div class="base">
 		<span>{t.copyright}</span>
 		<ul class="legal">
@@ -136,8 +139,14 @@
 		outline: 2px solid var(--peach);
 		outline-offset: 3px;
 	}
+	.marker {
+		margin: clamp(28px, 4vw, 44px) 0 0;
+		font-size: 12px;
+		letter-spacing: 0.02em;
+		color: var(--peach);
+	}
 	.base {
-		margin-top: clamp(40px, 6vw, 72px);
+		margin-top: 16px;
 		padding-top: 22px;
 		border-top: 1px solid var(--rule);
 		display: flex;

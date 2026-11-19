@@ -4100,6 +4100,7 @@ export type Chrome = {
   footerTagline: string;
   socialAria: string;
   copyright: string;
+  promoMarker: string;
   err: {
     notFoundKicker: string;
     serverKicker: string;
@@ -4133,6 +4134,8 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     footerTagline: "Your own money, unlocked.",
     socialAria: "Social channels",
     copyright: "© 2026 Opello. All rights reserved.",
+    // Plan rule: every page carries the financial-promotion marker (PLAN.md).
+    promoMarker: "Opello studio build · not for publication until approved.",
     err: {
       notFoundKicker: "Page not found",
       serverKicker: "Something went wrong",
@@ -4165,6 +4168,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     footerTagline: "أموالك الخاصة، بلا قيود.",
     socialAria: "قنوات التواصل",
     copyright: "© 2026 أوبيلو. جميع الحقوق محفوظة.",
+    promoMarker: "نسخة أوبيلو التجريبية · لا تُنشر قبل الموافقة.",
     err: {
       notFoundKicker: "الصفحة غير موجودة",
       serverKicker: "حدث خطأ ما",
@@ -4197,6 +4201,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     footerTagline: "Kendi paran, serbest.",
     socialAria: "Sosyal kanallar",
     copyright: "© 2026 Opello. Tüm hakları saklıdır.",
+    promoMarker: "Opello stüdyo sürümü · onaylanana kadar yayımlanmaz.",
     err: {
       notFoundKicker: "Sayfa bulunamadı",
       serverKicker: "Bir şeyler ters gitti",
