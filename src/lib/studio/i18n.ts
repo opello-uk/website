@@ -1244,6 +1244,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       sections: [
         {
           source: "placeholder",
+          wide: true,
           heading: "اقرأ الشروحات",
           body: "الشروحات المكتوبة سابقاً لأوبيلو.",
           // Insights list repopulated 2026-11-21 after the article restore; untranslated articles keep English fallback hrefs per the existing rule.
@@ -1261,6 +1262,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         },
         {
           source: "placeholder",
+          wide: true,
           heading: "أول منشورات أوبيلو",
           body: "[Placeholder: the first two or three posts from the Opello team, once written and approved.]",
         },
@@ -3116,6 +3118,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       sections: [
         {
           source: "placeholder",
+          wide: true,
           heading: "Açıklamaları okuyun",
           body: "Opello için önceden yazılmış açıklamalar.",
           // Insights list repopulated 2026-11-21 after the article restore; untranslated articles keep English fallback hrefs per the existing rule.
@@ -3133,6 +3136,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         },
         {
           source: "placeholder",
+          wide: true,
           heading: "İlk Opello yazıları",
           body: "[Placeholder: the first two or three posts from the Opello team, once written and approved.]",
         },

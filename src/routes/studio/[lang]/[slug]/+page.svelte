@@ -116,7 +116,7 @@
 
 		<section class="sections rem-{p.sections.length % 3}">
 			{#each p.sections as s (s.heading)}
-				<article class="card">
+				<article class="card" class:wide={s.wide}>
 					<h2>{s.heading}</h2>
 					<p>{s.body}</p>
 					{#if s.href}<a class="link" href={local(s.href)}>{s.linkLabel ?? t.learnMore}</a>{/if}
@@ -428,6 +428,21 @@
 		/* two left over: they split the row */
 		.sections.rem-2 .card:nth-last-child(-n + 2) {
 			grid-column: span 3;
+		}
+		/* a card explicitly marked wide (blog rebalance): it runs the full row. Global + important because the
+		   rem-2 leftover rule out-specifies any scoped selector here (the template's dynamic rem class) */
+		:global(.sections .card.wide) {
+			grid-column: 1 / -1 !important;
+		}
+		.sections .card.wide .links {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			column-gap: 32px;
+			row-gap: 6px;
+		}
+		.sections .card.wide .links a {
+			min-height: 0;
+			padding: 4px 0;
+			align-items: start;
 		}
 	}
 	.card {

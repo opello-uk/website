@@ -2,7 +2,7 @@
 // = wording taken from algbra.com (homepage, surveyed 2026-11-12)
 //         'placeholder' = not yet surveyed or no direct Algbra equivalent; confirm before use
 export type Source = 'algbra' | 'placeholder';
-export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[]; items?: string[] };
+export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[]; items?: string[]; wide?: boolean };
 export type StudioPage = {
 	slug: string;
 	title: string;
@@ -718,8 +718,10 @@ export const pages: StudioPage[] = [
 		hero: { variant: 'split', alt: 'A person relaxing in an armchair by a large window, reading a printed magazine with a ceramic mug on a side table' },
 		lede: 'Stories from the Opello team and the community, on money, sustainability and everyday spending. [Placeholder: first posts, in Opello wording.]',
 		sections: [
-			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', links: [{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' }, { label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' }, { label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' }, { label: 'A Green Break: how to holiday sustainably', href: '/studio/green-break/' }, { label: 'Money and mental health: 5 free mood boosters', href: '/studio/money-and-mental-health/' }, { label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' }, { label: 'The pros and cons of a cashless society', href: '/studio/cashless-society/' }, { label: 'Seven principles for implementing the Consumer Duty', href: '/studio/consumer-duty/' }, { label: 'The bright side of dark mode', href: '/studio/dark-mode/' }] },
-			{ heading: 'First Opello posts', body: '[Placeholder: the first two or three posts from the Opello team, once written and approved.]' }
+			// Blog rebalance 2026-11-19: both cards run full width (wide flag), like the news insights
+			// card, so the short placeholder card no longer sits beside the tall list with dead space.
+			{ wide: true, heading: 'Read the insights', body: 'The explainers already written for Opello.', links: [{ label: 'What are chargebacks, and when can you claim?', href: '/studio/chargebacks/' }, { label: 'What are virtual cards, and how do they work?', href: '/studio/virtual-cards/' }, { label: 'What is green banking, and why does it matter?', href: '/studio/green-banking/' }, { label: 'A Green Break: how to holiday sustainably', href: '/studio/green-break/' }, { label: 'Money and mental health: 5 free mood boosters', href: '/studio/money-and-mental-health/' }, { label: 'What is World Wildlife Day, and why does it matter?', href: '/studio/world-wildlife-day/' }, { label: 'The pros and cons of a cashless society', href: '/studio/cashless-society/' }, { label: 'Seven principles for implementing the Consumer Duty', href: '/studio/consumer-duty/' }, { label: 'The bright side of dark mode', href: '/studio/dark-mode/' }] },
+			{ wide: true, heading: 'First Opello posts', body: '[Placeholder: the first two or three posts from the Opello team, once written and approved.]' }
 		],
 		cta: { label: 'Back to News', href: '/studio/news/' }
 	},
