@@ -10,6 +10,9 @@
 	// The language is live for this page only when its translation exists, so
 	// the dropdown never links to a page that is not built.
 	const currentSlug = $derived(page.url.pathname.replace(/^\/studio(?:\/[a-z]{2})?\//, '').replace(/\/$/, ''));
+	// The homepage (empty slug) has Arabic and Turkish twins at /studio/{lang}/,
+	// so the dropdown treats it as live like any translated page.
+	const isHome = $derived(currentSlug === '');
 	const languages = [
 		{ id: 'en' as const, label: 'English' },
 		{ id: 'ar' as const, label: 'العربية' },
@@ -37,6 +40,7 @@
 		// Same language keeps your page. Another language lands on that language's
 		// version of the current page; English strips the language prefix.
 		if (langId === lang) return page.url.pathname;
+		if (isHome) return langId === 'en' ? '/studio/' : `/studio/${langId}/`;
 		if (langId === 'en') return page.url.pathname.replace(/^(\/studio)\/[a-z]{2}/, '$1') || '/studio/';
 		if (hasTranslation(langId as Lang, currentSlug)) return `/studio/${langId}/${currentSlug}/`;
 		return page.url.pathname.replace(/^(\/studio)\/[a-z]{2}/, '$1') || '/studio/';
@@ -91,7 +95,7 @@
 			{#if open}
 				<div class="menu" bind:this={menu} role="menu" aria-label={t.menuLabel}>
 					{#each languages as langItem (langItem.id)}
-						{@const live = langItem.id === 'en' || hasTranslation(langItem.id, currentSlug)}
+						{@const live = langItem.id === 'en' || isHome || hasTranslation(langItem.id, currentSlug)}
 						{@const current = langItem.id === lang}
 						{#if live}
 							<a role="menuitem" class="item" href={href(langItem.id)} lang={langItem.id} onclick={close}>
