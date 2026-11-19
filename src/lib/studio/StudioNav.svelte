@@ -113,8 +113,8 @@
 			</svg>
 		</button>
 
+		<!-- One split capsule as in baseline-07: peach half (open account) joined to the white half (log in). -->
 		<div class="pills">
-
 			<a class="pill pill-peach" href={resolve(langHref(lang, '/studio/open-account/') as '/')}>{t.ctaAccount}</a>
 			<a class="pill pill-white" href={resolve(langHref(lang, '/studio/login/') as '/')}>{t.login}</a>
 		</div>
@@ -263,7 +263,12 @@
 
 	.pills {
 		display: flex;
-		gap: 8px;
+		gap: 0;
+		transition: transform 200ms var(--ease);
+	}
+	/* Lift the whole capsule together so the join never splits on hover. */
+	.pills:hover {
+		transform: translateY(-1px);
 	}
 	.pill {
 		border: 0;
@@ -285,9 +290,6 @@
 		white-space: nowrap;
 		transition: transform 200ms var(--ease), background-color 200ms var(--ease);
 	}
-	.pill:hover {
-		transform: translateY(-1px);
-	}
 	.pill:focus-visible {
 		outline: 2px solid var(--peach);
 		outline-offset: 3px;
@@ -295,10 +297,18 @@
 	.pill-peach {
 		background: var(--peach);
 		color: var(--deep);
+		/* First half of the split capsule: rounded on the leading edge only (logical, so RTL mirrors). */
+		border-start-start-radius: 999px;
+		border-end-start-radius: 999px;
+		padding-right: 14px;
 	}
 	.pill-white {
 		background: var(--clay);
 		color: var(--deep);
+		/* Second half of the split capsule: rounded on the trailing edge only. */
+		border-start-end-radius: 999px;
+		border-end-end-radius: 999px;
+		padding-left: 14px;
 	}
 
 	@media (max-width: 960px) {
@@ -366,6 +376,9 @@
 	}
 
 	@media (prefers-reduced-motion: reduce) {
+		.pills {
+			transition: none;
+		}
 		.tab,
 		.pill {
 			transition: none;
