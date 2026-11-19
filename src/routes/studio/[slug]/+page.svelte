@@ -15,6 +15,8 @@
 	import openAccountHero from '#lib/assets/studio/open-account-hero.jpg';
 	// About band hero: generated placeholder until licensed photography is supplied.
 	import aboutHero from '#lib/assets/studio/about-hero.jpg';
+	// News split hero: generated placeholder until licensed photography is supplied.
+	import newsHero from '#lib/assets/studio/news-hero.jpg';
 	import { resolve } from '$app/paths';
 	import { hasTranslation, langName, STUDIO_ORIGIN, type Lang } from '#lib/studio/i18n';
 	import type { PageData } from './$types';
@@ -59,7 +61,7 @@
 		<section class="hero hero-split">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} alt={p.hero.alt} decoding="async" fetchpriority="high" />
+				<img src={p.slug === 'news' ? newsHero : p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} alt={p.hero.alt} decoding="async" fetchpriority="high" />
 			</div>
 			<div class="copy">
 				<p class="kicker">{p.kicker}</p>

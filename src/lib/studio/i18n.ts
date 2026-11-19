@@ -1159,6 +1159,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       slug: "news",
       title: "الأخبار",
       kicker: "عن أوبيلو",
+      // News split hero: generated placeholder until licensed photography is supplied.
+      hero: { variant: "split", alt: "شخص على مكتب خشبي مشمس يكتب في دفتر بجانب حاسوب محمول مفتوح وفنجان قهوة ونسخ مطبوعة من مسودات قصصية" },
       lede: "أخبار وتحديثات المنتجات وشروحات وقصص من أوبيلو. [Placeholder: Opello newsroom intro, in Opello wording.]",
       source: "placeholder",
       sections: [
@@ -2787,6 +2789,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       slug: "news",
       title: "Haberler",
       kicker: "Hakkında",
+      // News split hero: generated placeholder until licensed photography is supplied.
+      hero: { variant: "split", alt: "Güneşli ahşap bir masada, açık dizüstü bilgisayar, kahve fincanı ve basılı hikâye taslaklarının yanında bir deftere yazı yazan bir kişi" },
       lede: "Opello\u2019dan haberler, ürün güncellemeleri, açıklamalar ve hikâyeler. [Placeholder: Opello newsroom intro, in Opello wording.]",
       source: "placeholder",
       sections: [
