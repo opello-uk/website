@@ -694,6 +694,8 @@ export const pages: StudioPage[] = [
 		slug: 'blog',
 		title: 'Blog',
 		kicker: 'About',
+		// Blog split hero: generated placeholder until licensed photography is supplied.
+		hero: { variant: 'split', alt: 'A person relaxing in an armchair by a large window, reading a printed magazine with a ceramic mug on a side table' },
 		lede: 'Stories from the Opello team and the community, on money, sustainability and everyday spending. [Placeholder: first posts, in Opello wording.]',
 		sections: [
 			{ heading: 'Read the insights', body: 'The explainers already written for Opello.', links: [] },

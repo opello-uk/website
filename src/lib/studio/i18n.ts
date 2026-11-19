@@ -1194,6 +1194,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       slug: "blog",
       title: "المدونة",
       kicker: "عن أوبيلو",
+      // Blog split hero: generated placeholder until licensed photography is supplied.
+      hero: { variant: "split", alt: "شخص يستريح في كرسي بجوار نافذة كبيرة يقرأ مجلة مطبوعة مع فنجان خزفي على طاولة جانبية" },
       lede: "قصص من فريق أوبيلو والمجتمع، عن المال والاستدامة والإنفاق اليومي. [Placeholder: first posts, in Opello wording.]",
       source: "placeholder",
       sections: [
@@ -2824,6 +2826,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       slug: "blog",
       title: "Blog",
       kicker: "Hakkında",
+      // Blog split hero: generated placeholder until licensed photography is supplied.
+      hero: { variant: "split", alt: "Geniş bir pencerenin yanındaki koltukta, yan masada seramik bir fincanla dergi okuyan biri" },
       lede: "Opello ekibinden ve topluluktan, para, sürdürülebilirlik ve günlük harcama üzerine hikâyeler. [Placeholder: first posts, in Opello wording.]",
       source: "placeholder",
       sections: [
