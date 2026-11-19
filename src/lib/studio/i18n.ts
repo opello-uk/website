@@ -1095,19 +1095,15 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "استخدام بطاقتك وحمايتها وإدارتها.",
           href: "/studio/help-my-card/",
           linkLabel: "اقرأ الإجابات",
+          // Out of MLP1 scope — five titles kept for later iterations (delivery, digital wallet, cash withdrawal, both PIN answers); answers unpublished on help-my-card.
           items: [
             "كيف أحصل على بطاقتي؟",
-            "كم يستغرق وصول بطاقتي؟",
             "أين يمكنني استخدام بطاقتي؟",
-            "هل يمكنني إضافة بطاقتي إلى محفظة رقمية؟",
-            "هل يمكنني استخدام بطاقتي لسحب النقود؟",
             "كيف يُحتسب سعر الصرف؟",
             "هل معاملات بطاقتي محمية؟",
             "هل يمكنني استخدام بطاقتي في الخارج؟",
             "ماذا لو فُقدت بطاقتي أو سُرقت؟",
             "ما المقصود بـ 3D Secure؟",
-            "كيف أغيّر الرقم السري لبطاقتي؟",
-            "كيف أتحقق من الرقم السري لبطاقتي؟",
             "كيف أجمّد بطاقتي؟",
           ],
         },
@@ -1617,7 +1613,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "الحسابات والتوفير",
-          body: "التوفير والمكعبات وحسابات العملات وأنواع حسابات أخرى.",
+          body: // Out of MLP1 scope — "حسابات العملات" (multi-currency holding) removed from the group intro; wording kept for later iterations.
+          "التوفير والمكعبات وأنواع حسابات أخرى.",
           links: [
             { label: "الحسابات الجارية", href: "/studio/current-accounts/" },
             {
@@ -3090,19 +3087,15 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "Kartınızı kullanma, koruma ve yönetme.",
           href: "/studio/help-my-card/",
           linkLabel: "Yanıtları oku",
+          // Out of MLP1 scope — five titles kept for later iterations (delivery, digital wallet, cash withdrawal, both PIN answers); answers unpublished on help-my-card.
           items: [
             "Kartımı nasıl alırım?",
-            "Kartım ne kadar sürede gelir?",
             "Kartımı nerede kullanabilirim?",
-            "Kartımı dijital cüzdana ekleyebilir miyim?",
-            "Kartımla nakit çekebilir miyim?",
             "Kur nasıl hesaplanır?",
             "Kart işlemlerim korunuyor mu?",
             "Kartımı yurt dışında kullanabilir miyim?",
             "Kartım kaybolur veya çalınırsa ne olur?",
             "3D Secure nedir?",
-            "Kart PIN\u2019imi nasıl değiştiririm?",
-            "Kart PIN\u2019imi nasıl öğrenirim?",
             "Kartımı nasıl dondururum?",
           ],
         },
@@ -3613,7 +3606,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "Hesaplar ve birikim",
-          body: "Birikim, Kutular, para birimi hesapları ve diğer hesap türleri.",
+          // Out of MLP1 scope — "para birimi hesapları" (multi-currency holding) removed from the group intro; wording kept for later iterations.
+          body: "Birikim, Kutular ve diğer hesap türleri.",
           links: [
             { label: "Vadesiz hesaplar", href: "/studio/current-accounts/" },
             {

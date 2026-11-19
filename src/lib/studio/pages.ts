@@ -446,7 +446,8 @@ export const pages: StudioPage[] = [
 				'Why am I not getting a confirmation email?'
 			] },
 			{ heading: 'My card', body: 'Using, protecting and managing your card.', href: '/studio/help-my-card/', linkLabel: 'Read the answers', items: [
-				'How do I get my card?', 'How long until my card arrives?', 'Where can I use my card?', 'Can I add my card to a digital wallet?', 'Can I use my card to withdraw cash?', 'How is the exchange rate calculated?', 'Are my card transactions protected?', 'Can I use my card abroad?', 'What if my card is lost or stolen?', 'What is 3D Secure?', 'How can I change my card PIN?', 'How do I check my card PIN?', 'How do I freeze my card?'
+				'How do I get my card?', 'Where can I use my card?', 'Can I use my card abroad?', 'How is the exchange rate calculated?', 'Are my card transactions protected?', 'What if my card is lost or stolen?', 'What is 3D Secure?', 'How do I freeze my card?'
+				// Out of MLP1 scope — titles kept for later iterations: 'How long until my card arrives?', 'Can I add my card to a digital wallet?', 'Can I use my card to withdraw cash?', 'How can I change my card PIN?', 'How do I check my card PIN?' (answers unpublished on help-my-card).
 			] },
 			{ heading: 'My account', body: 'Statements, limits, Cubes and transfers.', href: '/studio/help-my-account/', linkLabel: 'Read the answers', items: [
 				'How do I generate a statement?', 'What are my account limits?', 'What are Cubes?', 'How do I create a regular Cube?', 'Can I make international transfers?'
@@ -1094,7 +1095,8 @@ export const pages: StudioPage[] = [
 			{ heading: 'Personal', body: 'Accounts, payments and cards for everyday use.', links: [
 				{ label: 'Personal', href: '/studio/personal/' }, { label: 'All plans', href: '/studio/all-plans/' }, { label: 'Transfers', href: '/studio/transfers/' }, { label: 'Cards', href: '/studio/cards/' }, { label: 'Virtual cards', href: '/studio/virtual-cards/' }, { label: 'Refer a friend', href: '/studio/referrals/' }, { label: 'Download the app', href: '/studio/download/' }
 			] },
-			{ heading: 'Accounts and savings', body: 'Savings, Cubes, currency accounts and other account types.', links: [
+			// Out of MLP1 scope — "currency accounts" (multi-currency holding) removed from the group intro; wording kept for later iterations.
+			{ heading: 'Accounts and savings', body: 'Savings, Cubes and account types.', links: [
 				{ label: 'Current accounts', href: '/studio/current-accounts/' }, { label: 'UK account from abroad', href: '/studio/uk-account-from-abroad/' }, { label: 'Savings', href: '/studio/savings/' }, { label: 'Ethical Saver Cubes', href: '/studio/ethical-savings/' }, { label: 'Open an account', href: '/studio/open-account/' }
 			] },
 			/* Out of MLP1 scope — Business section removed (Vinay, 2026-11-18). Do not publish.
