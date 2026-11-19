@@ -37,7 +37,9 @@ export const pages: StudioPage[] = [
 			{ heading: 'Find your fit', body: 'Different plans for different needs. Explore features, pricing, and benefits to find the one that works best for you.', href: '/studio/all-plans/', linkLabel: 'See all plans' },
 			// OUT OF MLP1 SCOPE — section removed, do not publish.
 
-			{ heading: 'Get the app', body: 'Seamless digital onboarding onto the app. Scan the code on your phone to download it, then open your account with an email address, a phone number and an ID document.', href: '/studio/download/', linkLabel: 'See how to download' }
+			{ heading: 'Get the app', body: 'Seamless digital onboarding onto the app. Scan the code on your phone to download it, then open your account with an email address, a phone number and an ID document.', href: '/studio/download/', linkLabel: 'See how to download' },
+			// Refer-a-friend is in MLP1 scope (Vinay, 2026-11-17); the page carries placeholder copy pending sign-off.
+			{ heading: 'Refer a friend', body: 'Share your referral code and QR code with a friend. [Placeholder: reward and terms to be confirmed by Opello.]', href: '/studio/referrals/', linkLabel: 'See how referrals work' }
 			// OUT OF MLP1 SCOPE — section removed, do not publish.
 		],
 		cta: { label: 'Open account with us', href: OPEN }
@@ -244,6 +246,23 @@ export const pages: StudioPage[] = [
 			{ heading: 'Scan the code', body: 'On your mobile, open the camera and point your device at the QR code to download the app. Can\'t scan the QR code? Use the download links below.' },
 			{ heading: 'iOS and Android', body: 'The app is available on iOS and Android. [Placeholder: app store badges and links]' },
 			{ heading: 'Open your account digitally', body: 'Seamless digital onboarding in the app. All you need is an email address, a phone number and an ID document, like your passport.', href: '/studio/faq/', linkLabel: 'Read the FAQ' }
+		],
+		cta: { label: 'Open account with us', href: OPEN }
+	},
+	{
+		slug: 'referrals',
+		title: 'Refer a friend',
+		kicker: 'Personal',
+		// Refer-a-friend is in MLP1 scope (Vinay, 2026-11-17, relaying Harvey's notes: "Refer-a-friend QR code").
+		// Algbra publishes no referral product copy: its /referrals/ page is only a download-link capture
+		// page ("Enter your email address to download Algbra app" / "Scan to Download"), so every claim
+		// here is placeholder until Opello confirms the reward, the terms and the in-app mechanics.
+		lede: 'Share Opello with the people you care about. [Placeholder: referral reward and terms to be confirmed by Opello before publishing.]',
+		sections: [
+			{ heading: 'Share your code', body: 'Find your referral code and QR code in the app and share them with a friend. [Placeholder: where the code and QR code live in the app, to be confirmed by Opello.]', note: 'Placeholder. Algbra publishes no referral product copy; its referrals page is only a download-link capture page (algbra.com/referrals, 2026-11-21). The QR-code mechanic is Opello\'s to confirm.' },
+			{ heading: 'Your friend opens an account', body: 'Your friend opens the app, scans your code or enters it by hand, and applies in a few steps with an ID document and proof of address. [Placeholder: whether the code is entered during sign-up, to be confirmed by Opello.]', note: 'Placeholder. Onboarding steps follow the Opello open-an-account page; the code-entry step is unconfirmed.', links: [{ label: 'See how to open an account', href: '/studio/open-account/' }] },
+			{ heading: 'The reward', body: '[Placeholder: whether there is a reward, its amount, when it is paid, and any conditions. Opello to confirm; do not publish a reward without sign-off.]', note: 'Placeholder. No reward amount or terms exist yet for Opello. Algbra\'s terms do not cover referrals, so none is reused.' },
+			{ heading: 'Good to know', body: 'A referral is not advice and does not change how we look after your money or your friend\'s. [Placeholder: eligibility limits, fair-use rules and fraud checks, to be confirmed by Opello.]', note: 'Placeholder. Fair-use and fraud wording needs Opello and compliance sign-off.' }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},
@@ -974,7 +993,7 @@ export const pages: StudioPage[] = [
 		lede: 'Every page in the Opello studio build, grouped the way the footer groups them. Placeholder layout until the site map is confirmed for launch.',
 		sections: [
 			{ heading: 'Personal', body: 'Accounts, payments and cards for everyday use.', links: [
-				{ label: 'Personal', href: '/studio/personal/' }, { label: 'All plans', href: '/studio/all-plans/' }, { label: 'Transfers', href: '/studio/transfers/' }, { label: 'Cards', href: '/studio/cards/' }, { label: 'Virtual cards', href: '/studio/virtual-cards/' }, { label: 'Download the app', href: '/studio/download/' }
+				{ label: 'Personal', href: '/studio/personal/' }, { label: 'All plans', href: '/studio/all-plans/' }, { label: 'Transfers', href: '/studio/transfers/' }, { label: 'Cards', href: '/studio/cards/' }, { label: 'Virtual cards', href: '/studio/virtual-cards/' }, { label: 'Refer a friend', href: '/studio/referrals/' }, { label: 'Download the app', href: '/studio/download/' }
 			] },
 			{ heading: 'Accounts and savings', body: 'Savings, Cubes, currency accounts and other account types.', links: [
 				{ label: 'Current accounts', href: '/studio/current-accounts/' }, { label: 'UK account from abroad', href: '/studio/uk-account-from-abroad/' }, { label: 'Savings', href: '/studio/savings/' }, { label: 'Ethical Saver Cubes', href: '/studio/ethical-savings/' }, { label: 'Open an account', href: '/studio/open-account/' }

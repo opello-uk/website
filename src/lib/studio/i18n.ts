@@ -489,6 +489,38 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       cta: { label: "افتح حسابك معنا", href: "/studio/open-account/" },
     },
     {
+      slug: "referrals",
+      source: "placeholder",
+      title: "رشّح صديقاً",
+      kicker: "شخصي",
+      lede: "شارك أوبيلو مع من تهتم بهم. [مؤقت: مكافأة الإحالة وشروطها بحاجة إلى موافقة أوبيلو قبل النشر.]",
+      sections: [
+        {
+          source: "placeholder",
+          heading: "شارك رمزك",
+          body: "اعثر على رمز الإحالة ورمز الاستجابة السريعة في التطبيق وشاركهما مع صديق. [مؤقت: مكان الرمزين في التطبيق بحاجة إلى تأكيد أوبيلو.]",
+        },
+        {
+          source: "placeholder",
+          heading: "صديقك يفتح حساباً",
+          body: "يفتح صديقك التطبيق، ثم يمسح رمزك أو يدخله يدوياً، ويتقدم بطلب في خطوات قليلة بمستند هوية وإثبات عنوان. [مؤقت: مرحلة إدخال الرمز أثناء التسجيل بحاجة إلى تأكيد أوبيلو.]",
+          href: "/studio/open-account/",
+          linkLabel: "اطلع على كيفية فتح الحساب",
+        },
+        {
+          source: "placeholder",
+          heading: "المكافأة",
+          body: "[مؤقت: وجود مكافأة أم لا، وقيمتها، وموعد دفعها، وأي شروط. بحاجة إلى تأكيد أوبيلو؛ لا تُنشر أي مكافأة قبل الموافقة.]",
+        },
+        {
+          source: "placeholder",
+          heading: "جدير بالمعرفة",
+          body: "الإحالة ليست نصيحة مالية ولا تُغيّر طريقة اهتمامنا بأموالك أو بأموال صديقك. [مؤقت: حدود الأهلية وقواعد الاستخدام العادل وضوابط الاحتيال، بحاجة إلى تأكيد أوبيلو.]",
+        },
+      ],
+      cta: { label: "افتح حسابك معنا", href: "/studio/open-account/" },
+    },
+    {
       slug: "login",
       source: "placeholder",
       title: "تسجيل الدخول",
@@ -2348,6 +2380,38 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "Uygulamada kusursuz dijital hesap açma. Tek ihtiyacınız olan bir e-posta adresi, telefon numarası ve pasaport gibi bir kimlik belgesi.",
           href: "/studio/faq/",
           linkLabel: "SSS’yi okuyun",
+        },
+      ],
+      cta: { label: "Hesabını bizimle aç", href: "/studio/open-account/" },
+    },
+    {
+      slug: "referrals",
+      source: "placeholder",
+      title: "Bir arkadaşını davet et",
+      kicker: "Bireysel",
+      lede: "Opello’yu sevdiğin insanlarla paylaş. [Temp: davet ödülü ve koşulları yayınlamadan önce Opello onayı bekliyor.]",
+      sections: [
+        {
+          source: "placeholder",
+          heading: "Kodunu paylaş",
+          body: "Uygulamadaki davet kodunu ve QR kodunu bul ve bir arkadaşınla paylaş. [Temp: kodların uygulamadaki yeri Opello onayı bekliyor.]",
+        },
+        {
+          source: "placeholder",
+          heading: "Arkadaşın hesap açıyor",
+          body: "Arkadaşın uygulamayı açar, kodunu okutur ya da elle girer ve bir kimlik belgesi ile adres kanıtıyla birkaç adımda başvurur. [Temp: kodun başvuru sırasındaki giriş adımı Opello onayı bekliyor.]",
+          href: "/studio/open-account/",
+          linkLabel: "Hesap açmayı gör",
+        },
+        {
+          source: "placeholder",
+          heading: "Ödül",
+          body: "[Temp: ödül olup olmadığı, tutarı, ne zaman ödendiği ve koşulları. Opello onayı bekliyor; onay olmadan ödül yayınlanmaz.]",
+        },
+        {
+          source: "placeholder",
+          heading: "Bilmen iyi olur",
+          body: "Davet finansal tavsiye değildir ve senin ya da arkadaşının paranı koruma şeklimizi değiştirmez. [Temp: uygunluk sınırları, adil kullanım kuralları ve dolandırıcılık kontrolleri Opello onayı bekliyor.]",
         },
       ],
       cta: { label: "Hesabını bizimle aç", href: "/studio/open-account/" },
