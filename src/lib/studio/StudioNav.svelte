@@ -83,6 +83,10 @@
 					<path d="M30 0 V30 M0 15 H60" stroke="#fff" stroke-width="10" />
 					<path d="M30 0 V30 M0 15 H60" stroke="#c8102e" stroke-width="6" />
 				</svg>
+				<!-- Baseline-07 shows a caret beside the flag: the affordance that it opens the language dropdown. -->
+				<svg class="caret" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true" focusable="false">
+					<path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
 			</button>
 			{#if open}
 				<div class="menu" bind:this={menu} role="menu" aria-label={t.menuLabel}>
@@ -251,6 +255,19 @@
 		letter-spacing: 0.08em;
 		cursor: pointer;
 	}
+	/* Flag plus caret in one row; flex row reverses in RTL so the capsule mirrors with it. */
+	.region {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+	.caret {
+		opacity: 0.7;
+		transition: transform 200ms var(--ease);
+	}
+	.region[aria-expanded='true'] .caret {
+		transform: rotate(180deg);
+	}
 	.region:hover,
 	.icon:hover {
 		background: var(--rule);
@@ -381,6 +398,9 @@
 		}
 		.tab,
 		.pill {
+			transition: none;
+		}
+		.caret {
 			transition: none;
 		}
 	}
