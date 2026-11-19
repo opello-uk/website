@@ -7,6 +7,7 @@
 	import StudioBanner from '#lib/studio/StudioBanner.svelte';
 	import StudioControl from '#lib/studio/StudioControl.svelte';
 	import StudioPhoto from '#lib/studio/StudioPhoto.svelte';
+	import { STUDIO_ORIGIN } from '#lib/studio/i18n';
 
 	const title = 'Opello studio (unlisted preview)';
 </script>
@@ -15,6 +16,10 @@
 	<title>{title}</title>
 	<!-- Unlisted build: keep out of every index and never link to it. -->
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+	<link rel="alternate" hreflang="en" href={`${STUDIO_ORIGIN}/studio/`} />
+	<link rel="alternate" hreflang="ar" href={`${STUDIO_ORIGIN}/studio/ar/`} />
+	<link rel="alternate" hreflang="tr" href={`${STUDIO_ORIGIN}/studio/tr/`} />
+	<link rel="alternate" hreflang="x-default" href={`${STUDIO_ORIGIN}/studio/`} />
 </svelte:head>
 
 <div class="studio">

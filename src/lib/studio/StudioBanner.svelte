@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { homeCopy, langHref, type Lang } from '#lib/studio/i18n';
 	// "Your world. Your freedom." banner, copy from the baseline deck (baseline-03). The baseline line
 	// "across multiple currencies" is left out: multi-currency holding is out of MLP1 scope (2026-11-18).
+	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
+	const c = $derived(homeCopy[lang]);
 	import banner from '#lib/assets/studio/banner.jpg';
 </script>
 
@@ -9,19 +12,19 @@
 	<div class="card">
 		<div class="art">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
-			<img src={banner} alt="Man relaxing in an armchair by a window overlooking the city at sunset" decoding="async" loading="lazy" />
+			<img src={banner} alt={c.bannerAlt} decoding="async" loading="lazy" />
 		</div>
 		<!-- Outside .art so the tag is not washed out by the faded photo on phones -->
 
 		<div class="copy">
-			<h2 id="banner-title">Your world.<br />Your freedom.</h2>
+			<h2 id="banner-title">{c.bannerTitle1}<br />{c.bannerTitle2}</h2>
 			<p>
-				Use your account at home and abroad, so you can move and live more freely.
+				{c.bannerBody}
 			</p>
 		</div>
 
-		<a class="cta" href={resolve('/studio/open-account/')}>
-			<span>Get started</span>
+		<a class="cta" href={resolve(langHref(lang, '/studio/open-account/') as '/')}>
+			<span>{c.bannerCta}</span>
 			<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
 				<path
 					d="M5 12h13M13 6l6 6-6 6"

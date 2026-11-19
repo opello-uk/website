@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { homeCopy, langHref, type Lang } from '#lib/studio/i18n';
 	// Hero rebuilt 1-for-1 against the high-res baseline. App screens use sample data.
+	// Sample data in the phone mockups stays English on every language: it is
+	// aria-hidden example content, not page copy.
+	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
+	const c = $derived(homeCopy[lang]);
 </script>
 
 <section class="hero" aria-labelledby="hero-title">
@@ -26,12 +31,12 @@
 	<div class="inner">
 		<div class="copy">
 			<h1 id="hero-title">
-				<span class="unlock">Unlock</span>
-				<span class="life">your life.</span>
+				<span class="unlock">{c.heroUnlock}</span>
+				<span class="life">{c.heroLife}</span>
 			</h1>
-			<p class="sub">For different lives, different circumstances and different starting points.</p>
-			<a class="cta" href={resolve('/studio/open-account/')}>
-				<span>Open account with us</span>
+			<p class="sub">{c.heroSub}</p>
+			<a class="cta" href={resolve(langHref(lang, '/studio/open-account/') as '/')}>
+				<span>{c.heroCta}</span>
 				<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
 					<path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>

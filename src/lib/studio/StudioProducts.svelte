@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { homeCopy, langHref, type Lang } from '#lib/studio/i18n';
 	// "How can we help today?" product cards. Titles and copy are Algbra homepage and feature-page wording.
+	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
+	const c = $derived(homeCopy[lang]);
 	import current from '#lib/assets/studio/current.jpg';
 	import savings from '#lib/assets/studio/savings.jpg';
 	import pensions from '#lib/assets/studio/pensions.jpg';
@@ -46,18 +49,18 @@
 		</defs>
 		<circle class="ground-ring" cx="760" cy="300" r="340" fill="url(#prodRingA)" />
 	</svg>
-	<h2 id="products-title">How can we help today?</h2>
+	<h2 id="products-title">{c.productsTitle}</h2>
 
 	<ul class="grid">
-		{#each products as p (p.title)}
+		{#each c.products as p (p.title)}
 			<li class="card">
 				<div class="photo tone-{p.tone}">
 					<img src={p.src} alt={p.alt} decoding="async" loading="lazy" />
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>
-				<a class="learn" href={resolve(`/studio/${p.slug}/` as '/')} aria-label="Learn more about {p.title}">
-					<span>Learn more</span>
+				<a class="learn" href={resolve(langHref(lang, `/studio/${p.slug}/`) as '/')} aria-label={c.learnAria.replace('{title}', p.title)}>
+					<span>{c.learnMore}</span>
 					<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
 						<path
 							d="M5 12h13M13 6l6 6-6 6"

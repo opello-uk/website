@@ -1,31 +1,29 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { homeCopy, langHref, type Lang } from '#lib/studio/i18n';
 	// "Your money on your terms." split section. Copy matches the baseline deck (baseline-04).
 	import split from '#lib/assets/studio/split.jpg';
 	// Generated placeholder photo until licensed photography is supplied.
-	const points = [
-		'A simple, straightforward account.',
-		'Clearer fees and conditions.',
-		'Tools to help you stay in control.'
-	];
+	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
+	const c = $derived(homeCopy[lang]);
 </script>
 
 <section class="split" aria-labelledby="split-title">
 	<div class="media">
 		<!-- Placeholder photo; update alt with the licensed replacement -->
-		<img src={split} alt="Traveller looking out of a large window at an airport" decoding="async" loading="lazy" />
+		<img src={split} alt={c.splitAlt} decoding="async" loading="lazy" />
 	</div>
 
 	<div class="copy">
-		<h2 id="split-title">Your money on your terms.</h2>
+		<h2 id="split-title">{c.splitTitle}</h2>
 
 		<div class="mid">
 			<p>
-				Manage your finances with more flexibility, clearer conditions and fewer unnecessary barriers.
+				{c.splitIntro}
 			</p>
 
 			<ul class="ticks">
-				{#each points as point (point)}
+				{#each c.splitPoints as point (point)}
 					<li>
 						<span class="dot" aria-hidden="true">
 							<svg viewBox="0 0 24 24" width="12" height="12" focusable="false">
@@ -45,8 +43,8 @@
 			</ul>
 		</div>
 
-		<a class="learn" href={resolve('/studio/open-account/')}>
-			<span>Get started</span>
+		<a class="learn" href={resolve(langHref(lang, '/studio/open-account/') as '/')}>
+			<span>{c.splitCta}</span>
 			<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
 				<path
 					d="M5 12h13M13 6l6 6-6 6"

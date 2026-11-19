@@ -1,10 +1,10 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+	import { homeCopy, langHref, type Lang } from '#lib/studio/i18n';
 	// "More control. More confidence." tiles. Tile labels follow the Figma board; each links to its studio page.
 	// MLP1: transfers only. Virtual cards page and currency-exchange (multi-currency) are out of MLP1 scope for now; restore when in scope.
-	const tiles = [
-		{ title: 'Global transfers', icon: 'globe', href: '/studio/transfers/' },
-		{ title: 'Virtual card', icon: 'card', href: '/studio/cards/' }
-	];
+	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
+	const c = $derived(homeCopy[lang]);
 </script>
 
 <section class="control" aria-labelledby="control-title">
@@ -12,13 +12,13 @@
 	<!-- Heading first in DOM for screen readers; CSS order puts tiles on the left for sighted users. -->
 	<!-- Heading and intro line. -->
 	<header>
-		<h2 id="control-title">More control.<br />More confidence.</h2>
-		<p>A financial experience designed to give you greater choice in how you manage your money.</p>
+		<h2 id="control-title">{c.controlTitle1}<br />{c.controlTitle2}</h2>
+		<p>{c.controlIntro}</p>
 	</header>
 	<ul class="grid">
-		{#each tiles as t (t.title)}
+		{#each c.controlTiles as t (t.title)}
 			<li class="tile">
-				<a href={t.href} class="tile-link">
+				<a href={resolve(langHref(lang, t.href) as '/')} class="tile-link">
 				<span class="icon" aria-hidden="true">
 					{#if t.icon === 'globe'}
 						<svg viewBox="0 0 24 24" width="30" height="30" focusable="false">

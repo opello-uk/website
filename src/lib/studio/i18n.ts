@@ -3901,3 +3901,102 @@ export function langHref(lang: "en" | Lang, href: string): string {
   if (m && hasTranslation(lang, m[1])) return `/studio/${lang}/${m[1]}/`;
   return href;
 }
+
+// Homepage (landing) copy per language. English lives here too so the section
+// components read one source; the EN strings were moved verbatim from the
+// components. Phone mockup sample data stays English on every language (it is
+// aria-hidden example content, not page copy). Source: placeholder — the
+// landing copy comes from the baseline deck and our own studio copy, not
+// algbra.com, so no Algbra citation applies.
+export const homeCopy: Record<'en' | Lang, {
+  heroUnlock: string; heroLife: string; heroSub: string; heroCta: string;
+  productsTitle: string; learnMore: string; learnAria: string;
+  products: { slug: string; title: string; body: string; alt: string }[];
+  splitTitle: string; splitIntro: string; splitPoints: string[]; splitAlt: string; splitCta: string;
+  bannerTitle1: string; bannerTitle2: string; bannerBody: string; bannerAlt: string; bannerCta: string;
+  controlTitle1: string; controlTitle2: string; controlIntro: string;
+  controlTiles: { title: string; href: string; icon: string }[];
+  photoTitle1: string; photoTitle2: string; photoBody: string; photoAlt: string;
+}> = {
+  en: {
+    heroUnlock: 'Unlock', heroLife: 'your life.',
+    heroSub: 'For different lives, different circumstances and different starting points.',
+    heroCta: 'Open account with us',
+    productsTitle: 'How can we help today?', learnMore: 'Learn more', learnAria: 'Learn more about {title}',
+    products: [
+      { slug: 'transfers', title: 'Send money home and abroad', body: 'Send GBP overseas and pay friends and family in seconds.', alt: 'Woman smiling at her phone at the kitchen table' },
+      { slug: 'savings', title: 'Savings pots', body: 'Set money aside for the things that matter, in a few taps.', alt: 'Family on a sofa looking at a tablet together' },
+      { slug: 'cards', title: 'Spend worldwide with one card', body: 'Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app.', alt: 'Woman on a park bench holding her phone' }
+    ],
+    splitTitle: 'Your money on your terms.', splitCta: 'Get started',
+    splitIntro: 'Manage your finances with more flexibility, clearer conditions and fewer unnecessary barriers.',
+    splitPoints: ['A simple, straightforward account.', 'Clearer fees and conditions.', 'Tools to help you stay in control.'],
+    splitAlt: 'Traveller looking out of a large window at an airport',
+    bannerTitle1: 'Your world.', bannerTitle2: 'Your freedom.', bannerCta: 'Get started',
+    bannerBody: 'Use your account at home and abroad, so you can move and live more freely.',
+    bannerAlt: 'Man relaxing in an armchair by a window overlooking the city at sunset',
+    controlTitle1: 'More control.', controlTitle2: 'More confidence.',
+    controlIntro: 'A financial experience designed to give you greater choice in how you manage your money.',
+    controlTiles: [
+      { title: 'Global transfers', icon: 'globe', href: '/studio/transfers/' },
+      { title: 'Virtual card', icon: 'card', href: '/studio/cards/' }
+    ],
+    photoTitle1: 'A place where', photoTitle2: 'you belong.',
+    photoBody: 'Whatever your background or starting point, Opello believes access to financial services should be more inclusive.',
+    photoAlt: 'Two friends laughing together on a sunny beach'
+  },
+  ar: {
+    heroUnlock: 'افتح', heroLife: 'حياتك.',
+    heroSub: 'لحياة مختلفة، وظروف مختلفة، ونقاط بداية مختلفة.',
+    heroCta: 'افتح حسابك معنا',
+    productsTitle: 'كيف نساعدك اليوم؟', learnMore: 'اعرف المزيد', learnAria: 'اعرف المزيد عن {title}',
+    products: [
+      { slug: 'transfers', title: 'أرسل المال إلى بيتك والخارج', body: 'أرسل الجنيه الإسترليني إلى الخارج وادفع لأصدقائك وعائلتك في ثوانٍ.', alt: 'امرأة تبتسم أمام هاتفها على طاولة المطبخ' },
+      { slug: 'savings', title: 'أوعية التوفير', body: 'احتفظ بمبلغ جانباً للأشياء التي تهمك، ببضع نقرات.', alt: 'عائلة على أريكة تنظر إلى جهاز لوحي معاً' },
+      { slug: 'cards', title: 'أنفق في العالم ببطاقة واحدة', body: 'أنفق في أي مكان يُقبل فيه بطاقك، مع بطاقات يمكنك تجميدها والتحكم بها من التطبيق.', alt: 'امرأة على مقعد في الحديقة تمسك هاتفها' }
+    ],
+    splitTitle: 'مالُك بشروطك.', splitCta: 'ابدأ',
+    splitIntro: 'أدر أموالك بمرونة أكبر، وشروط أوضح، وعقبات لا داعي لها أقل.',
+    splitPoints: ['حساب بسيط ومباشر.', 'رسوم وشروط أوضح.', 'أدوات تساعدك على البقاء في سيطرة.'],
+    splitAlt: 'مسافر ينظر من نافذة كبيرة في المطار',
+    bannerTitle1: 'عالمك.', bannerTitle2: 'حريتك.', bannerCta: 'ابدأ',
+    bannerBody: 'استخدم حسابك في الداخل والخارج، لتتحرك وتعيش بحرية أكبر.',
+    bannerAlt: 'رجل يسترخي على مقعد بجانب نافذة تطل على المدينة عند الغروب',
+    controlTitle1: 'تحكم أكبر.', controlTitle2: 'ثقة أكبر.',
+    controlIntro: 'تجربة مالية مصممة لمنحك خيارات أكبر في كيفية إدارة أموالك.',
+    controlTiles: [
+      { title: 'التحويلات العالمية', icon: 'globe', href: '/studio/transfers/' },
+      { title: 'بطاقة افتراضية', icon: 'card', href: '/studio/cards/' }
+    ],
+    photoTitle1: 'مكانٌ', photoTitle2: 'تنتمي إليه.',
+    photoBody: 'أياً كانت خلفيتك أو نقطة انطلاقك، تؤمن أوبيلو بأن الوصول إلى الخدمات المالية يجب أن يكون أكثر شمولاً.',
+    photoAlt: 'صديقان يضحكان معاً على شاطئ مشمس'
+  },
+  tr: {
+    heroUnlock: 'Hayatını', heroLife: 'aç.',
+    heroSub: 'Farklı yaşamlar, farklı koşullar ve farklı başlangıç noktaları için.',
+    heroCta: 'Hesabınızı açın',
+    productsTitle: 'Bugün size nasıl yardımcı olabiliriz?', learnMore: 'Daha fazla', learnAria: '{title} hakkında daha fazla bilgi',
+    products: [
+      { slug: 'transfers', title: 'Yurt içinde ve dışında para gönderin', body: "Sterlin'i yurt dışına gönderin ve saniyeler içinde arkadaşlarınıza ve ailenize ödeme yapın.", alt: 'Mutfak masasında telefonuna gülümseyen kadın' },
+      { slug: 'savings', title: 'Tasarruf amaçları', body: 'Önemli şeyler için birkaç dokunuşta para ayırın.', alt: 'Koltukta birlikte tablete bakan aile' },
+      { slug: 'cards', title: 'Tek kartla dünyada harcayın', body: 'Kartınızın kabul edildiği her yerde harcayın; kartları uygulamadan dondurun ve kontrol edin.', alt: 'Park bankında telefonunu tutan kadın' }
+    ],
+    splitTitle: 'Paranız, sizin koşullarınızda.', splitCta: 'Başlayın',
+    splitIntro: 'Finanslarınızı daha fazla esneklik, daha net koşullar ve gereksiz engeller olmadan yönetin.',
+    splitPoints: ['Basit ve anlaşılır bir hesap.', 'Daha net ücretler ve koşullar.', 'Kontrolde kalmanıza yardımcı olan araçlar.'],
+    splitAlt: 'Havalimanında geniş bir pencereden dışarı bakan yolcu',
+    bannerTitle1: 'Dünyanız.', bannerTitle2: 'Özgürlüğünüz.', bannerCta: 'Başlayın',
+    bannerBody: 'Hesabınızı yurt içinde ve yurt dışında kullanın, böylece daha özgür hareket edip yaşayın.',
+    bannerAlt: 'Gün batımında şehre bakan bir pencere kenarında koltuğunda dinlenen adam',
+    controlTitle1: 'Daha fazla kontrol.', controlTitle2: 'Daha fazla güven.',
+    controlIntro: 'Paranızı nasıl yöneteceğiniz konusunda daha fazla seçenek sunmak için tasarlanmış bir finans deneyimi.',
+    controlTiles: [
+      { title: 'Küresel transferler', icon: 'globe', href: '/studio/transfers/' },
+      { title: 'Sanal kart', icon: 'card', href: '/studio/cards/' }
+    ],
+    photoTitle1: 'Ait olduğunuz', photoTitle2: 'bir yer.',
+    photoBody: 'Arka planınız ya da başlangıç noktanız ne olursa olsun, Opello finansal hizmetlere erişimin daha kapsayıcı olması gerektiğine inanır.',
+    photoAlt: 'Güneşli bir kumsalda birlikte gülen iki arkadaş'
+  }
+};

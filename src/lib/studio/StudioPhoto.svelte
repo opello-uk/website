@@ -1,18 +1,21 @@
 <script lang="ts">
+	import { homeCopy, type Lang } from '#lib/studio/i18n';
 	import band from '#lib/assets/studio/band.jpg';
 	// "A place where you belong." full-bleed photo band. Copy matches the baseline deck (baseline-02); the photo is a placeholder ground until licensed imagery is supplied.
+	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
+	const c = $derived(homeCopy[lang]);
 </script>
 
 <section class="photo" aria-labelledby="photo-title">
 	<div class="ground">
 		<!-- Placeholder photo; update alt with the licensed replacement -->
-		<img src={band} alt="Two friends laughing together on a sunny beach" decoding="async" loading="lazy" />
+		<img src={band} alt={c.photoAlt} decoding="async" loading="lazy" />
 	</div>
 
 	<div class="inner">
 		<div class="copy">
-			<h2 id="photo-title">A place where<br />you belong.</h2>
-			<p>Whatever your background or starting point, Opello believes access to financial services should be more inclusive.</p>
+			<h2 id="photo-title">{c.photoTitle1}<br />{c.photoTitle2}</h2>
+			<p>{c.photoBody}</p>
 		</div>
 	</div>
 </section>
