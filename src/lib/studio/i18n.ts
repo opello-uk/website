@@ -4288,11 +4288,14 @@ export const homeCopy: Record<'en' | Lang, {
       { slug: 'savings', title: 'Savings pots', body: 'Set money aside for the things that matter, in a few taps.', alt: 'Family on a sofa looking at a tablet together' },
       { slug: 'cards', title: 'Spend worldwide with one card', body: 'Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app.', alt: 'Man paying at a café counter with his card' }
     ],
-    splitTitle: 'Your money on your terms.', splitCta: 'Get started',
+    // Split/banner pill label from algbra.com/all-plans ("Get started for free", their Standard plan
+    // button label). The "for free" wording is a price claim: Algbra/compliance sign-off needed before
+    // this publishes (was the plain "Get started" placeholder until 2026-11-22).
+    splitTitle: 'Your money on your terms.', splitCta: 'Get started for free',
     splitIntro: 'Manage your finances with more flexibility, clearer conditions and fewer unnecessary barriers.',
     splitPoints: ['A simple, straightforward account.', 'Clearer fees and conditions.', 'Tools to help you stay in control.'],
     splitAlt: 'Traveller looking out of a large window at an airport',
-    bannerTitle1: 'Your world.', bannerTitle2: 'Your freedom.', bannerCta: 'Get started',
+    bannerTitle1: 'Your world.', bannerTitle2: 'Your freedom.', bannerCta: 'Get started for free', // label cited from algbra.com/all-plans; free claim flagged (see splitCta note)
     bannerBody: 'Use your account at home and abroad, so you can move and live more freely.',
     bannerAlt: 'Man relaxing in an armchair by a window overlooking the city at sunset',
     controlTitle1: 'More control.', controlTitle2: 'More confidence.',
@@ -4315,11 +4318,11 @@ export const homeCopy: Record<'en' | Lang, {
       { slug: 'savings', title: 'أوعية التوفير', body: 'احتفظ بمبلغ جانباً للأشياء التي تهمك، ببضع نقرات.', alt: 'عائلة على أريكة تنظر إلى جهاز لوحي معاً' },
       { slug: 'cards', title: 'أنفق في العالم ببطاقة واحدة', body: 'أنفق في أي مكان يُقبل فيه بطاقك، مع بطاقات يمكنك تجميدها والتحكم بها من التطبيق.', alt: 'رجل يدفع في مقهى ببطاقته' }
     ],
-    splitTitle: 'مالُك بشروطك.', splitCta: 'ابدأ',
+    splitTitle: 'مالُك بشروطك.', splitCta: 'ابدأ مجانًا', // ترجمة لعبارة algbra.com/all-plans "Get started for free" (claim flagged)
     splitIntro: 'أدر أموالك بمرونة أكبر، وشروط أوضح، وعقبات لا داعي لها أقل.',
     splitPoints: ['حساب بسيط ومباشر.', 'رسوم وشروط أوضح.', 'أدوات تساعدك على البقاء في سيطرة.'],
     splitAlt: 'مسافر ينظر من نافذة كبيرة في المطار',
-    bannerTitle1: 'عالمك.', bannerTitle2: 'حريتك.', bannerCta: 'ابدأ',
+    bannerTitle1: 'عالمك.', bannerTitle2: 'حريتك.', bannerCta: 'ابدأ مجانًا', // see EN splitCta note
     bannerBody: 'استخدم حسابك في الداخل والخارج، لتتحرك وتعيش بحرية أكبر.',
     bannerAlt: 'رجل يسترخي على مقعد بجانب نافذة تطل على المدينة عند الغروب',
     controlTitle1: 'تحكم أكبر.', controlTitle2: 'ثقة أكبر.',
@@ -4342,11 +4345,11 @@ export const homeCopy: Record<'en' | Lang, {
       { slug: 'savings', title: 'Tasarruf amaçları', body: 'Önemli şeyler için birkaç dokunuşta para ayırın.', alt: 'Koltukta birlikte tablete bakan aile' },
       { slug: 'cards', title: 'Tek kartla dünyada harcayın', body: 'Kartınızın kabul edildiği her yerde harcayın; kartları uygulamadan dondurun ve kontrol edin.', alt: 'Bir erkek kafede kartıyla ödüyor' }
     ],
-    splitTitle: 'Paranız, sizin koşullarınızda.', splitCta: 'Başlayın',
+    splitTitle: 'Paranız, sizin koşullarınızda.', splitCta: 'Ücretsiz başlayın', // algbra.com/all-plans "Get started for free" çevirisi (claim flagged)
     splitIntro: 'Finanslarınızı daha fazla esneklik, daha net koşullar ve gereksiz engeller olmadan yönetin.',
     splitPoints: ['Basit ve anlaşılır bir hesap.', 'Daha net ücretler ve koşullar.', 'Kontrolde kalmanıza yardımcı olan araçlar.'],
     splitAlt: 'Havalimanında geniş bir pencereden dışarı bakan yolcu',
-    bannerTitle1: 'Dünyanız.', bannerTitle2: 'Özgürlüğünüz.', bannerCta: 'Başlayın',
+    bannerTitle1: 'Dünyanız.', bannerTitle2: 'Özgürlüğünüz.', bannerCta: 'Ücretsiz başlayın', // see EN splitCta note
     bannerBody: 'Hesabınızı yurt içinde ve yurt dışında kullanın, böylece daha özgür hareket edip yaşayın.',
     bannerAlt: 'Gün batımında şehre bakan bir pencere kenarında koltuğunda dinlenen adam',
     controlTitle1: 'Daha fazla kontrol.', controlTitle2: 'Daha fazla güven.',
