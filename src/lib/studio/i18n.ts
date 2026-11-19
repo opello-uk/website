@@ -3808,6 +3808,18 @@ export type Chrome = {
   footerTagline: string;
   socialAria: string;
   copyright: string;
+  err: {
+    notFoundKicker: string;
+    serverKicker: string;
+    nfTitle: string;
+    nfAccent: string;
+    errTitle: string;
+    errAccent: string;
+    nfLede: string;
+    errLede: string;
+    cta: string;
+    sitemap: string;
+  };
 };
 
 export const chrome: Record<"en" | Lang, Chrome> = {
@@ -3825,6 +3837,19 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     footerTagline: "Your own money, unlocked.",
     socialAria: "Social channels",
     copyright: "© 2026 Opello. All rights reserved.",
+    err: {
+      notFoundKicker: "Page not found",
+      serverKicker: "Something went wrong",
+      nfTitle: "This page",
+      nfAccent: "isn't here.",
+      errTitle: "Something",
+      errAccent: "went wrong.",
+      nfLede:
+        "The address may have moved, or it was never on the site. Everything that is here starts from the homepage.",
+      errLede: "Try again from the homepage. If it keeps happening, we are likely already on it.",
+      cta: "Back to the homepage",
+      sitemap: "Every page on the site",
+    },
   },
   ar: {
     tabsPersonal: "شخصي",
@@ -3840,6 +3865,19 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     footerTagline: "أموالك الخاصة، بلا قيود.",
     socialAria: "قنوات التواصل",
     copyright: "© 2026 أوبيلو. جميع الحقوق محفوظة.",
+    err: {
+      notFoundKicker: "الصفحة غير موجودة",
+      serverKicker: "حدث خطأ ما",
+      nfTitle: "هذه الصفحة",
+      nfAccent: "ليست هنا.",
+      errTitle: "حدث",
+      errAccent: "خطأ ما.",
+      nfLede:
+        "قد يكون العنوان قد تغيّر، أو أنه لم يكن على الموقع. كل ما هو هنا يبدأ من الصفحة الرئيسية.",
+      errLede: "حاول مرة أخرى من الصفحة الرئيسية. وإذا تكرر الأمر، فنحن على الأرجح نعمل عليه بالفعل.",
+      cta: "العودة إلى الصفحة الرئيسية",
+      sitemap: "كل صفحات الموقع",
+    },
   },
   tr: {
     tabsPersonal: "Bireysel",
@@ -3855,6 +3893,19 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     footerTagline: "Kendi paran, serbest.",
     socialAria: "Sosyal kanallar",
     copyright: "© 2026 Opello. Tüm hakları saklıdır.",
+    err: {
+      notFoundKicker: "Sayfa bulunamadı",
+      serverKicker: "Bir şeyler ters gitti",
+      nfTitle: "Bu sayfa",
+      nfAccent: "burada değil.",
+      errTitle: "Bir şeyler",
+      errAccent: "ters gitti.",
+      nfLede:
+        "Adres değişmiş olabilir ya da sitede hiç var olmamış olabilir. Burada olan her şey ana sayfadan başlar.",
+      errLede: "Ana sayfadan tekrar deneyin. Sorun sürüyorsa, büyük olasılıkla üzerinde çalışıyoruz.",
+      cta: "Ana sayfaya dön",
+      sitemap: "Sitedeki her sayfa",
+    },
   },
 };
 

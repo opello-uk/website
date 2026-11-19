@@ -17,7 +17,11 @@ export default defineConfig({
 			adapter: adapter({
 				pages: process.env.OUT_DIR ?? 'build',
 				assets: process.env.OUT_DIR ?? 'build',
-				strict: true
+				strict: true,
+				// Static hosts (Render included) serve 404.html from the publish
+				// root for unmatched paths; this boots the app and renders the
+				// branded studio error page instead of the host's plain 404.
+				fallback: '404.html'
 			}),
 			// BASE_PATH is only set for internal previews served under a sub-path.
 			paths: {
