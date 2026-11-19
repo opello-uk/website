@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { homeCopy, langHref, type Lang } from '#lib/studio/i18n';
-	// "More control. More confidence." tiles. Tile labels follow the Figma board; each links to its studio page.
+	// "More control. More confidence." heading + intro are the baseline deck's own wording (baseline-02,
+	// Vinay's design reference) — not placeholder copy. Tile labels follow the baseline too; each links to its studio page.
 	// MLP1: transfers only. Virtual cards page and currency-exchange (multi-currency) are out of MLP1 scope for now; restore when in scope.
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const c = $derived(homeCopy[lang]);

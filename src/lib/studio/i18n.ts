@@ -4298,6 +4298,7 @@ export const homeCopy: Record<'en' | Lang, {
     bannerTitle1: 'Your world.', bannerTitle2: 'Your freedom.', bannerCta: 'Get started for free', // label cited from algbra.com/all-plans; free claim flagged (see splitCta note)
     bannerBody: 'Use your account at home and abroad, so you can move and live more freely.',
     bannerAlt: 'Man relaxing in an armchair by a window overlooking the city at sunset',
+    // Heading wording from the baseline deck (baseline-02, Vinay's design reference), not a placeholder.
     controlTitle1: 'More control.', controlTitle2: 'More confidence.',
     controlIntro: 'A financial experience designed to give you greater choice in how you manage your money.',
     controlTiles: [
