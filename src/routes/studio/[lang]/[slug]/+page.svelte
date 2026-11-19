@@ -194,6 +194,16 @@
 		width: 100%;
 		height: 100%;
 		display: block;
+		/* baseline-phase motion: the same gentle drift the landing hero rings use,
+		   applied to the svg so RTL/mobile positioning transforms on .ring stay intact */
+		animation: ring-drift 30s ease-in-out infinite alternate;
+	}
+	@keyframes ring-drift {
+		from { transform: rotate(-1deg) translateY(-6px); }
+		to { transform: rotate(1.2deg) translateY(7px); }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.ring :global(svg) { animation: none; }
 	}
 	/* RTL: the mirrored ring hangs over the first card's text at 1440; lift and
 	   shrink it slightly so its lower edge clears the card row (LTR pages keep
