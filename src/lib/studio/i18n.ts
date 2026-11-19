@@ -1600,11 +1600,14 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "الرئيسية",
-          body: "صفحة البداية في كل لغة.",
+          body: "صفحة البداية وخريطة الموقع في كل لغة.",
           links: [
             { label: "الرئيسية (بالإنجليزية)", href: "/studio/" },
             { label: "الرئيسية (بالعربية)", href: "/studio/ar/" },
             { label: "الرئيسية (بالتركية)", href: "/studio/tr/" },
+            { label: "خريطة الموقع (بالإنجليزية)", href: "/studio/sitemap/" },
+            { label: "خريطة الموقع (بالعربية)", href: "/studio/ar/sitemap/" },
+            { label: "خريطة الموقع (بالتركية)", href: "/studio/tr/sitemap/" },
           ],
         },
         {
@@ -3617,11 +3620,14 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "Ana sayfa",
-          body: "Her dildeki açılış sayfası.",
+          body: "Her dildeki açılış sayfası ve site haritası.",
           links: [
             { label: "Ana sayfa (İngilizce)", href: "/studio/" },
             { label: "Ana sayfa (Arapça)", href: "/studio/ar/" },
             { label: "Ana sayfa (Türkçe)", href: "/studio/tr/" },
+            { label: "Site haritası (İngilizce)", href: "/studio/sitemap/" },
+            { label: "Site haritası (Arapça)", href: "/studio/ar/sitemap/" },
+            { label: "Site haritası (Türkçe)", href: "/studio/tr/sitemap/" },
           ],
         },
         {
