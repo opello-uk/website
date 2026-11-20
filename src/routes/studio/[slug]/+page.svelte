@@ -57,6 +57,8 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={altHref('en')} />
 	<link rel="canonical" href={altHref('en')} />
+	<!-- Atom feed autodiscovery: the insight articles feed (English edition; ar/tr twins exist for every article). -->
+	<link rel="alternate" type="application/atom+xml" title="Opello insights" href={`${STUDIO_ORIGIN}/studio/feed.xml`} />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
