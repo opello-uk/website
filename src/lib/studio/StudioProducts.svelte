@@ -121,10 +121,13 @@
 			}
 		}
 	}
+	/* Baseline-07 proportion: the heading ends left of the hero phones that dip
+	   into this section (measured ~46px at 1440, ~3.2vw); at 4.6vw the heading's
+	   tail ran under the left phone. */
 	h2 {
 		margin: 0 0 clamp(28px, 4.5vw, 65px);
 		font-weight: 700;
-		font-size: clamp(28px, 4.6vw, 66px);
+		font-size: clamp(28px, 3.3vw, 48px);
 		letter-spacing: -0.01em;
 	}
 	.grid {
