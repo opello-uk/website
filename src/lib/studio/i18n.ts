@@ -714,7 +714,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     },
     {
       slug: "help-logging-in",
-      title: "تسجيل الدخول",
+      title: "كيفية تسجيل الدخول",
       kicker: "مقالات المساعدة",
       lede: "إجابات على أسئلة تسجيل الدخول، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى يُعتمد شاشات التطبيق ومسار الدعم.",
       source: "placeholder",
@@ -800,7 +800,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     },
     {
       slug: "help-get-in-touch",
-      title: "تواصل معنا",
+      title: "كيفية التواصل معنا",
       kicker: "مقالات المساعدة",
       lede: "إجابات على أسئلة التواصل، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. كل بيانات التواصل عنصر نائب حتى تُنشئ أوبيلو قنواتها الخاصة.",
       source: "placeholder",
