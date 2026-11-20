@@ -23,6 +23,13 @@ const OPEN = '/studio/open-account/';
 export const pages: StudioPage[] = [
 {
 		slug: 'personal',
+		// Page-level sources restored 2026-11-20 (15:00 Dubai run): the Algbra-derived product pages
+		// lost their visible source marking in the MLP1 trims; see the log.
+		sourceNotes: [
+			'Source: algbra.com homepage and personal page copy (surveyed 2026-11-12, page built 2026-11-16), adapted for Opello.',
+			'Claims flagged for sign-off: "instant bank transfers", "international transfers" and "you will never be confused or surprised by a fee" are Algbra wording and need Algbra or compliance sign-off before publishing.',
+			'The Refer a friend card carries a placeholder: reward and terms are Opello\'s to confirm (Algbra publishes no referral mechanics). Physical-card and out-of-scope sections are commented out.'
+		],
 		title: 'Personal',
 		kicker: 'Personal',
 		lede: 'Finance, made for humans. Transparent, accessible products, and you will never be confused or surprised by a fee.',
@@ -46,6 +53,11 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'all-plans',
+		sourceNotes: [
+			'Source: algbra.com/all-plans (built 2026-11-16); the Standard card wording is Algbra\'s, adapted.',
+			'Claims flagged for sign-off: the Standard plan "free" wording and the "Get started for free" pill (also in the sign-off sheet). Eligibility "Available to UK residents" needs Opello confirmation against the banner eligibility decision.',
+			'Premium and Borderless plan cards are out of first-release scope and are commented out.'
+		],
 		title: 'All plans',
 		kicker: 'Personal',
 		lede: 'Different plans for different needs. Explore features, pricing and benefits to find the one that works best for you.',
@@ -57,6 +69,11 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'transfers',
+		sourceNotes: [
+			'Source: algbra.com/features/transfers (built 2026-11-16), adapted for Opello.',
+			'Claims flagged for sign-off: "free" instant transfers, 24/7 availability, the open-banking account check, and whether nearby payments are available at launch.',
+			'"Get paid with your own link" is adapted from Algbra\'s own-link card; the Opello product name is a placeholder.'
+		],
 		title: 'Transfers',
 		kicker: 'Personal',
 		lede: 'Use your account to send and receive money quickly and easily.',
@@ -74,6 +91,11 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'cards',
+		sourceNotes: [
+			'Source: algbra.com/features/cards (built 2026-11-16), adapted for Opello. The card scheme is named by category only and wallet providers are left out as vendor names.',
+			'Claims flagged for sign-off: freezing and unfreezing in the app, PIN change, real-time push notification after every transaction, and the identity-check wording.',
+			'Physical cards and mobile wallets are out of first-release scope and are commented out.'
+		],
 		title: 'Cards',
 		kicker: 'Personal',
 		// Placeholder photo (generated until licensed photography lands).
@@ -97,6 +119,11 @@ export const pages: StudioPage[] = [
 		// environment claims from the Algbra article (no source for our materials), card scheme named by category only.
 		// Disposable (single-use) cards: Algbra publishes the concept; whether Opello ships single-use cards is unconfirmed, so the body describes it as an option only.
 		slug: 'virtual-cards',
+		sourceNotes: [
+			'Source: algbra.com/news/what-are-virtual-cards-and-how-do-they-work (18 Apr 2023, rebuilt as a product page 2026-11-20), adapted for Opello. The card scheme is named by category only.',
+			'Disposable (single-use) cards are described as an option only; whether Opello ships them is unconfirmed.',
+			'Contactless in-store payment, mobile wallets and environment claims are left out: not confirmed for day one / no source for our materials.'
+		],
 		title: 'Virtual cards',
 		kicker: 'Personal',
 		lede: 'A card that lives in your app. Pay online with your own card number, and freeze it whenever you like.',
@@ -112,6 +139,11 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'current-accounts',
+		sourceNotes: [
+			'Source: algbra.com current accounts copy (built 2026-11-16), adapted for Opello.',
+			'Reworded GBP-first: multi-currency holding is out of first-release scope, so the lede no longer mentions other currencies.',
+			'Claims flagged for sign-off: "instant bank transfers" and "international transfers" availability.'
+		],
 		title: 'Current accounts',
 		kicker: 'Personal',
 		// Split hero with a generated placeholder photo until licensed photography is supplied.
@@ -128,6 +160,11 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'savings',
+		sourceNotes: [
+			'Source: algbra.com/features/cubes for the Goal-based Cubes card (as originally cited 2026-11-16), adapted for Opello.',
+			'The "Earn % EPR*" card stays unpublished pending compliance sign-off on the rate, eligibility and protection wording.',
+			'The card links to the help answer because the Cubes product page is out of first-release scope (round-up donations).'
+		],
 		title: 'Savings',
 		kicker: 'Personal',
 		lede: 'Earn on the money you are saving. Available to UK residents.',
@@ -213,6 +250,11 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'faq',
+		sourceNotes: [
+			'Source: algbra.com/faq (built 2026-11-16), adapted for Opello.',
+			'Claims flagged for sign-off: the client-money/safeguarding wording, and the payments scope (Faster Payments only; international payments, direct debits, standing orders and CHAPS not yet available).',
+			'The eligibility answer (UK residents, 18+) sits against the homepage banner\'s non-UK-resident wording; Opello to decide which is right before either publishes.'
+		],
 		title: 'Frequently asked questions',
 		kicker: 'Help',
 		lede: "We're here to connect. Answers to the questions we hear most often.",

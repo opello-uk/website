@@ -37,6 +37,7 @@ export type Chrome = {
   soon: string;
   skip: string;
   learnMore: string;
+  sourcesHeading: string;
   searchLabel: string;
   searchPlaceholder: string;
   searchHome: string;
@@ -71,6 +72,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "Coming soon",
     skip: "Skip to content",
     learnMore: "Learn more",
+    sourcesHeading: "Sources and open points",
     searchLabel: "Search the site",
     searchPlaceholder: "Search pages…",
     searchHome: "Home",
@@ -105,6 +107,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "قريباً",
     skip: "تخطَّ إلى المحتوى",
     learnMore: "اعرف المزيد",
+    sourcesHeading: "المصادر والنقاط المفتوحة",
     searchLabel: "ابحث في الموقع",
     searchPlaceholder: "ابحث في الصفحات…",
     searchHome: "الرئيسية",
@@ -138,6 +141,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "Yakında",
     skip: "İçeriğe atla",
     learnMore: "Daha fazla",
+    sourcesHeading: "Kaynaklar ve açık noktalar",
     searchLabel: "Sitede ara",
     searchPlaceholder: "Sayfalarda ara…",
     searchHome: "Ana sayfa",

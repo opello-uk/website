@@ -39,6 +39,9 @@
 
 	import { resolve } from '$app/paths';
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
+	// English page fallback: translated pages inherit the English source notes until the notes
+	// themselves are translated (they are internal review markers, not customer copy).
+	import { bySlug as enBySlug } from '#lib/studio/pages';
 	import { faqJsonLd } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
 	import { breadcrumbJsonLd, parentBySlug } from '#lib/studio/breadcrumbLd';
@@ -54,6 +57,11 @@
 		document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 	});
 	const t = $derived(chrome[lang]);
+	// Source notes for this page: the translated twin's own notes when present, else the English
+	// page's sourceNotes, else a roll-up of per-section notes (same rule as the English template).
+	const notes = $derived(
+		p.sourceNotes ?? enBySlug(p.slug)?.sourceNotes ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
+	);
 	// Internal links point to this language's equivalent when it exists,
 	// otherwise they keep their English target.
 	const local = $derived((href: string) => resolve(langHref(lang, href) as '/'));
@@ -206,6 +214,19 @@
 				</article>
 			{/each}
 		</section>
+
+		<!-- Page-level sources and open points, matching the English template. Translated notes when
+		     the twin carries them; otherwise the English page's notes (review markers, not customer copy). -->
+		{#if notes.length}
+			<section class="sources" aria-labelledby="sources-heading">
+				<h2 id="sources-heading">{t.sourcesHeading}</h2>
+				<ul>
+					{#each notes as n (n)}
+						<li>{n}</li>
+					{/each}
+				</ul>
+			</section>
+		{/if}
 
 		<section class="cta">
 			<a class="pill" href={local(p.cta.href)}>{p.cta.label}</a>
