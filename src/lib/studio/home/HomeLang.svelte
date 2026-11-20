@@ -35,12 +35,15 @@
 	<!-- Description from this language's landing hero copy; og tags make shared links render as a preview card. -->
 	{#if lang === 'ar'}
 		<meta name="description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة. معاينة غير مدرجة لموقع أوبيلو." />
+		<!-- Referrer policy: no-referrer, because the studio is unlisted and its URLs should not leak to external sites when someone clicks out. Re-check at launch with the STUDIO_ORIGIN repoint. -->
+		<meta name="referrer-policy" content="no-referrer" />
 		<meta property="og:title" content="استوديو أوبيلو" />
 		<meta property="og:description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة." />
 		<meta name="twitter:title" content="استوديو أوبيلو" />
 		<meta name="twitter:description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة." />
 	{:else}
 		<meta name="description" content="Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için. Opello web sitesinin listelenmeyen stüdyo önizlemesi." />
+		<meta name="referrer-policy" content="no-referrer" />
 		<meta property="og:title" content="Opello stüdyosu" />
 		<meta property="og:description" content="Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için." />
 		<meta name="twitter:title" content="Opello stüdyosu" />

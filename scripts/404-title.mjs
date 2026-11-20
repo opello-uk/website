@@ -24,6 +24,7 @@ const description =
 const origin = 'https://studio-5c4fcfa636.onrender.com';
 const head =
 	`\n\t\t<meta name="description" content="${description}" />` +
+	`\n\t\t<meta name="referrer-policy" content="no-referrer" />` +
 	`\n\t\t<meta property="og:site_name" content="Opello" />` +
 	`\n\t\t<meta property="og:title" content="${title}" />` +
 	`\n\t\t<meta property="og:description" content="${description}" />` +

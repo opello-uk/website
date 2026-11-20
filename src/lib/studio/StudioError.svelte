@@ -48,6 +48,8 @@
 <svelte:head>
 	<title>{(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'}</title>
 	<meta name="description" content={notFound ? t.nfLede : t.errLede} />
+	<!-- Referrer policy: no-referrer, matching every studio page (unlisted; URLs should not leak). -->
+	<meta name="referrer-policy" content="no-referrer" />
 	<meta property="og:site_name" content="Opello" />
 	<meta property="og:title" content={(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'} />
 	<meta property="og:description" content={notFound ? t.nfLede : t.errLede} />
