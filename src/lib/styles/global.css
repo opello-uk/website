@@ -1,3 +1,13 @@
+/* Nimbus Sans Extd Regular: the brand body face (URW Type Foundry, licensed via Fontspring order 139217353, Desktop EULA 2.0). Self-hosted woff2. */
+@font-face {
+	font-family: 'Nimbus Sans Extd';
+	src: url('../assets/nimbus-sans-extd-regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Fallback: regular-width Nimbus Sans until the Extd Light headline weight is licensed. */
 @font-face {
 	font-family: 'Nimbus Sans';
 	src: url('../assets/nimbus-sans.woff2') format('woff2');
@@ -16,7 +26,8 @@
 	--rule: rgba(233, 228, 224, 0.16);
 	--muted: rgba(233, 228, 224, 0.66);
 	--ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-	--font: 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	/* Brand face first: Nimbus Sans Extd. Regular-width Nimbus Sans is the fallback until Extd Light is licensed for headlines. */
+	--font: 'Nimbus Sans Extd', 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 *,
