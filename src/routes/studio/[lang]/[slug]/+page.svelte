@@ -514,7 +514,8 @@
 		}
 		.sections.rem-1 .card:last-child .links a {
 			min-height: 0;
-			padding: 4px 0;
+			padding: 8px 0;
+			margin: -4px 0; /* keep the compact rhythm while the touch box stays tall */
 			align-items: start;
 		}
 		/* two left over: they split the row */
@@ -538,7 +539,8 @@
 		}
 		.sections .card.wide .links a {
 			min-height: 0;
-			padding: 4px 0;
+			padding: 8px 0;
+			margin: -4px 0; /* keep the compact rhythm while the touch box stays tall */
 			align-items: start;
 		}
 	}
@@ -679,7 +681,11 @@
 	}
 	.card .link {
 		display: inline-block;
-		margin-top: 14px;
+		/* Tap target: the padding widens the touch box to 24px+ without moving the
+		   text; the negative margin gives the space back to the layout. */
+		padding: 9px 0;
+		margin-top: 5px;
+		margin-bottom: -9px;
 		color: var(--peach);
 		text-decoration: none;
 		font-size: 0.9rem;

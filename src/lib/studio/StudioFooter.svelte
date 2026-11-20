@@ -126,6 +126,11 @@
 		color: var(--muted);
 	}
 	.cols a {
+		/* Tap target: inline-block plus vertical padding lifts the touch box to the
+		   24px minimum without changing the column rhythm (negative margin pays it back). */
+		display: inline-block;
+		padding: 5px 0;
+		margin: -5px 0;
 		font-size: 14px;
 		color: var(--clay);
 		text-decoration: none;
