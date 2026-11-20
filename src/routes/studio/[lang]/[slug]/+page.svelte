@@ -2,6 +2,7 @@
 	import StudioNav from '#lib/studio/StudioNav.svelte';
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import Ring from '#lib/components/Ring.svelte';
+	import StudioCrumbs from '#lib/studio/StudioCrumbs.svelte';
 	import '#lib/studio/print.css';
 	// Generated placeholder photo until licensed photography is supplied.
 	import split from '#lib/assets/studio/split.jpg';
@@ -126,7 +127,8 @@
 				<img src={p.slug === 'blog' ? blogHero : p.slug === 'news' ? newsHero : p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} srcset={p.slug === 'blog' ? `${blogHero} 1x, ${blogHero2x} 2x` : p.slug === 'news' ? `${newsHero} 1x, ${newsHero2x} 2x` : p.slug === 'savings' ? `${savingsHero} 1x, ${savingsHero2x} 2x` : p.slug === 'current-accounts' ? `${currentAccountsHero} 1x, ${currentAccountsHero2x} 2x` : `${split} 1x, ${split2x} 2x`} alt={p.hero.alt} width={p.slug === 'savings' ? 800 : 900} height={p.slug === 'savings' ? 800 : 600} decoding="async" fetchpriority="high" />
 			</div>
 			<div class="copy">
-				<p class="kicker">{p.kicker}</p>
+				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
+			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
 				<p class="lede">{p.lede}</p>
 			</div>
@@ -135,7 +137,8 @@
 		<section class="hero hero-ringphoto">
 			<div class="ring" aria-hidden="true"><Ring /></div>
 			<div class="copy">
-				<p class="kicker">{p.kicker}</p>
+				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
+			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
 				<p class="lede">{p.lede}</p>
 			</div>
@@ -152,7 +155,8 @@
 				<img src={p.slug === 'open-account' ? openAccountHero : cardsHero} srcset={p.slug === 'open-account' ? `${openAccountHero} 1x, ${openAccountHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" />
 			</div>
 			<div class="copy">
-				<p class="kicker">{p.kicker}</p>
+				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
+			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
 				<p class="lede">{p.lede}</p>
 			</div>
@@ -163,7 +167,8 @@
 			<img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} srcset={p.slug === 'about' ? `${aboutHero} 1x, ${aboutHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width={p.slug === 'about' ? 900 : 800} height={p.slug === 'about' ? 600 : 800} decoding="async" fetchpriority="high" />
 			<div class="band-scrim" aria-hidden="true"></div>
 			<div class="copy">
-				<p class="kicker">{p.kicker}</p>
+				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
+			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
 				<p class="lede">{p.lede}</p>
 			</div>
@@ -172,7 +177,8 @@
 		<section class="hero">
 			<div class="ring" aria-hidden="true"><Ring /></div>
 			<div class="copy">
-				<p class="kicker">{p.kicker}</p>
+				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
+			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
 				<p class="lede">{p.lede}</p>
 			</div>
