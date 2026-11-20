@@ -23,6 +23,7 @@
 	import { hasTranslation, langName, STUDIO_ORIGIN, type Lang } from '#lib/studio/i18n';
 	import { faqJsonLd } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
+	import { breadcrumbJsonLd, parentBySlug } from '#lib/studio/breadcrumbLd';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -70,7 +71,9 @@
 		<!-- Article schema for the insight articles: visible copy only, no invented dates. -->
 		{@html `<script type="application/ld+json">${JSON.stringify(articleJsonLd(p.title, p.lede, 'en', altHref('en')))}</script>`}
 	{/if}
-</svelte:head>
+		<!-- Breadcrumb schema from the visible hero chrome: brand, kicker, title. -->
+		{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd(p.kicker, p.title, altHref('en'), parentBySlug[p.slug] ? `${STUDIO_ORIGIN}/studio/${parentBySlug[p.slug]}/` : null))}</script>`}
+	</svelte:head>
 
 <div class="studio">
 	<a class="skip" href="#content">Skip to content</a>

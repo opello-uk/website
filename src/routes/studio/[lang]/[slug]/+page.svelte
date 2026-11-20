@@ -23,6 +23,7 @@
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
 	import { faqJsonLd } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
+	import { breadcrumbJsonLd, parentBySlug } from '#lib/studio/breadcrumbLd';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -65,7 +66,9 @@
 		<!-- Article schema for the insight articles: this language's own visible copy, no invented dates. -->
 		{@html `<script type="application/ld+json">${JSON.stringify(articleJsonLd(p.title, p.lede, lang, `${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`))}</script>`}
 	{/if}
-</svelte:head>
+		<!-- Breadcrumb schema from the visible hero chrome: brand, kicker, title. -->
+		{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd(p.kicker, p.title, `${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`, parentBySlug[p.slug] ? (hasTranslation(lang, parentBySlug[p.slug]) ? `${STUDIO_ORIGIN}/studio/${lang}/${parentBySlug[p.slug]}/` : `${STUDIO_ORIGIN}/studio/${parentBySlug[p.slug]}/`) : null))}</script>`}
+	</svelte:head>
 
 <div class="studio" dir={lang === 'ar' ? 'rtl' : 'ltr'} lang={lang}>
 	<a class="skip" href="#content">{t.skip}</a>
