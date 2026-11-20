@@ -80,6 +80,11 @@
     "description": "ما هي ملفات تعريف الارتباط، والأنواع التي قد نستخدمها، وكيف يمكنك إدارتها. عنصر نائب حتى يُعتمد قائمة ملفات أوبيلو."
   },
   {
+    "path": "ar/cop26.png",
+    "title": "COP26: ما هي ولماذا تهم؟",
+    "description": "قمة المناخ في غلاسكو موضحة: ماذا يعني اختصار COP، وما تطلبه اتفاقية باريس من الدول، وما كان العالم ينتظره من القمة."
+  },
+  {
     "path": "ar/current-accounts.png",
     "title": "الحسابات الجارية",
     "description": "أرسل وأنفق وأدر أموالك بالجنيه الإسترليني من حساب واحد."
@@ -320,6 +325,11 @@
     "description": "What cookies are, the kinds we may use, and how you can manage them. Placeholder until the Opello cookie list is confirmed."
   },
   {
+    "path": "cop26.png",
+    "title": "COP26: what it is and why it matters",
+    "description": "The Glasgow climate summit explained: what COP means, what the Paris Agreement asks of countries, and what the world was watching for."
+  },
+  {
     "path": "current-accounts.png",
     "title": "Current accounts",
     "description": "Send, spend and manage your money in pounds from one account."
@@ -553,6 +563,11 @@
     "path": "tr/cookies-policy.png",
     "title": "Çerez politikası",
     "description": "Çerez nedir, kullanabileceğimiz türler ve bunları nasıl yönetebilirsin. Opello çerez listesi onaylanana kadar yer tutucudur."
+  },
+  {
+    "path": "tr/cop26.png",
+    "title": "COP26: nedir ve neden önemlidir?",
+    "description": "Glasgow iklim zirvesi anlatılıyor: COP kısaltmasının anlamı, Paris Anlaşması'nın ülkelerden istediği ve dünyanın zirveden beklediği."
   },
   {
     "path": "tr/current-accounts.png",

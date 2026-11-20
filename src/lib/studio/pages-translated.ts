@@ -1277,6 +1277,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "الانتقال العادل: هل هو هدف قابل للتحقيق؟", href: "/studio/just-transition/" },
             { label: "5 نصائح لعيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
             { label: "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة", href: "/studio/card-exchange-rates/" },
+            { label: "COP26: ما هي ولماذا تهم؟", href: "/studio/cop26/" },
           ],
         },
         {
@@ -1319,6 +1320,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "الانتقال العادل: هل هو هدف قابل للتحقيق؟", href: "/studio/just-transition/" },
             { label: "5 نصائح لعيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
             { label: "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة", href: "/studio/card-exchange-rates/" },
+            { label: "COP26: ما هي ولماذا تهم؟", href: "/studio/cop26/" },
           ],
         },
         {
@@ -1692,6 +1694,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "الانتقال العادل", href: "/studio/just-transition/" },
             { label: "عيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
             { label: "رسوم وأسعار صرف البطاقة في الخارج", href: "/studio/card-exchange-rates/" },
+            { label: "COP26: ما هي ولماذا تهم؟", href: "/studio/cop26/" },
           ],
         },
         {
@@ -2086,6 +2089,29 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           { label: "التحويلات العالمية", href: "/studio/transfers/" },
           { label: "ما هو الاسترجاع، ومتى يمكنك المطالبة به؟", href: "/studio/chargebacks/" }
         ] }
+      ],
+      cta: { label: "العودة إلى الأخبار", href: "/studio/news/" },
+    },
+    {
+      slug: "cop26",
+      title: "COP26: ما هي ولماذا تهم؟",
+      kicker: "شروحات",
+      lede: "قمة المناخ في غلاسكو موضحة: ماذا يعني اختصار COP، وما تطلبه اتفاقية باريس من الدول، وما كان العالم ينتظره من القمة.",
+      source: "placeholder",
+      sections: [
+        { source: "placeholder", heading: "لماذا تابعت العالم غلاسكو", body: "استضافت غلاسكو قمة المناخ COP26 التي طال انتظارها، وب رئاسة المملكة المتحدة وشراكة إيطاليا، وذلك من 31 أكتوبر إلى 12 نوفمبر 2021. شارك نحو 156 زعيماً عالمياً وممثلون عن منظمات المجتمع المدني والقطاع الخاص، لأن نتائجها كان يُتوقع أن ترسم مسار العقود القادمة في مواجهة تغير المناخ. ولفهم سبب هذه الأهمية، من المفيد معرفة ما تعنيه COP، ومن أين جاءت، وما سعت إلى تحقيقه." },
+        { source: "placeholder", heading: "ماذا يعني اختصار COP؟", body: "COP اختصار لـ «مؤتمر الأطراف»، والأطراف هم كل الموقّعين على اتفاقية الأمم المتحدة الإطارية بشأن تغير المناخ، وهي معاهدة دولية أُنشئت لمواجهة أزمة المناخ عبر البحث المستمر والاجتماعات الدورية والمفاوضات واتفاقيات السياسات. ومنذ عام 1995 يُعقد المؤتمر سنوياً في بلد مختلف، مع استثناء واحد هو القمة التي أُجّلت بسبب جائحة كورونا. وكان اجتماع غلاسكو هو الدورة السادسة والعشرين." },
+        { source: "placeholder", heading: "اتفاق باريس", body: "لهذه المؤتمرات تاريخ حافل ببروتوكولات وتفاهمات وتعثرات، لكن عام 2015 شهد إنجازاً تاريخياً: اتفاق باريس. فقد اتفقت جميع دول العالم تقريباً للمرة الأولى على هدف مشترك: حصر ارتفاع درجة حرارة الكوكب بما دون درجتين مئويتين، وبمثالية 1.5 درجة، مقارنة بمستويات ما قبل الصناعة، إلى جانب التكيف مع آثار تغير المناخ وتعبئة التمويل اللازم لهذه الأهداف. وتلا ذلك أسئلة كثيرة: هل الالتزامات كافية؟ وكيف ستُطبَّق؟ وماذا تعني عبارة «ما دون درجتين» فعلاً؟" },
+        { source: "placeholder", heading: "الخطط الوطنية ونقصها", body: "بموجب اتفاق باريس تضبط كل حكومة أهدافها الخاصة لخفض الانبعاثات، أي «المساهمات المحددة وطنياً»، وتُبلغ عنها إلى اتفاقية الأمم المتحدة الإطارية. وأجمعت الدفعة الأولى من الالتزامات على أنها غير كافية بوضوح لتحقيق أهداف 2030، إذ لم تتجاوز خفضاً بنسبة أقل من 1% في الانبعاثات العالمية مقارنة بمستويات 2010." },
+        { source: "placeholder", heading: "النافذة تُغلق", body: "ومع حرائق الغابات وفيضانات ومجاعات تجتاح مجتمعات حول العالم، تزداد الحاجة إلى عمل حاسم. وقد أكد تقرير صادر عن الهيئة الحكومية الدولية المعنية بتغير المناخ (IPCC) في أغسطس من ذلك العام أن النفوذ البشري قد سبق الاحترار في الغلاف الجوي والمحيطات واليابسة، وأن كثيراً من التغيرات لا مثيل لها منذ آلاف السنين، وبعضها لا رجعة فيه بالفعل. وشدد العلماء على أن هدف 1.5 درجة لا يزال ممكناً، لكن فقط مع تخفيضات واسعة وسريعة للانبعاثات العالمية: خفضها إلى النصف تقريباً بحلول 2030 والوصول إلى الصافي الصفري بحلول 2050. قال عالم المناخ مايكل إي. مان لقناة CNN حينها: «الخلاصة أن بقي لدينا صفر سنوات لتجنب تغير المناخ الخطير، لأنه هنا»." },
+        { source: "placeholder", heading: "حافظوا على 1.5 حية", body: "كانت الهتاف الأبرز في القمة «حافظوا على 1.5 حية»: أي حث أكبر عدد ممكن من الدول على الالتزام بالحد الأصعب في هدف باريس. ولم تكن المؤشرات المبكرة مشجعة: فمن أصل 192 طرفاً في الاتفاق، توفر 165 خطة وطنية، وجمعهاً أشار إلى ارتفاع الانبعاثات العالمية بنسبة 16% بحلول 2030 مقارنة بـ2010، أي ما يعادل نحو 2.7 درجة من الاحترار بحلول نهاية القرن. ووجد الراصد المناخي المستقل Climate Action Tracker أن اقتصادات مجموعة العشرين جميعاً، التي تمثل نحو 80% من انبعاثات العالم، بعيدة عن تبني سياسات فعالة لهدف 1.5 درجة. وكل درجة إضافية من الاحترار لها أثر هائل: طقس أكثر تطرفاً، وارتفاع مستوى البحار، وفقدان أرواح ومصادر رزق." },
+        { source: "placeholder", heading: "ما الذي سعت إليه القمة", body: "حددت COP26 ثلاثة أهداف كتحديث لاتفاق باريس. أولاً، الصافي الصفري العالمي بحلول منتصف القرن: التخلص التدريجي من الفحم، ووقف إزالة الغابات، والتحول إلى السيارات الكهربائية والاستثمار في الطاقة المتجددة. ثانياً، التكيف لحماية المجتمعات والنظم البيئية المتأثرة أصلاً، عبر أنظمة إنذار أقوى وبنية تحتية أكثر مرونة. ثالثاً، تعبئة التمويل: فقد وعدت الدول المتقدمة عام 2009 بتعبئة 100 مليار دولار سنوياً بحلول 2020 لدعم الدول النامية، وسيلتزم الحكومات والمؤسسات المالية الدولية بالوفاء بهذا الوعد. وكانت الرسالة الجامعة هي التي لخصها رئيس القمة: أن تطلق غلاسكو عقداً من الطموح المتزايد باستمرار." },
+        { source: "placeholder", heading: "أين يأتي دور أموالك", body: "[عنصر بديل: ما يمكن لأوبيلو قوله بأمانة عن علاقة خيارات المال اليومية بأهداف المناخ. فالخاتمة الأصلية تتناول أهمية عملية COP نفسها وقد أُبقي عليها بصياغة معدلة؛ وأي ربط منتجي من أوبيلو يحتاج صياغة أوبيلو وموافقتها قبل النشر.]" },
+        { source: "placeholder", heading: "اقرأ التالي", body: "المزيد عن المناخ والمال من أوبيلو.", links: [
+          { label: "العودة إلى المدونة", href: "/studio/blog/" },
+          { label: "الكوارث المناخية: على عتبة بابنا", href: "/studio/climate-catastrophes/" },
+          { label: "ما هو المصرف الأخضر، ولماذا يهم؟", href: "/studio/green-banking/" },
+        ] },
       ],
       cta: { label: "العودة إلى الأخبار", href: "/studio/news/" },
     },
@@ -3336,6 +3362,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "Adil geçiş: ulaşılabilir bir hedef mi?", href: "/studio/just-transition/" },
             { label: "Sürdürülebilir bir Sevgililer Günü için 5 ipucu", href: "/studio/sustainable-valentines-day/" },
             { label: "Kartınla seyahat: ücretler ve döviz kurları açıklandı", href: "/studio/card-exchange-rates/" },
+            { label: "COP26: nedir ve neden önemlidir?", href: "/studio/cop26/" },
           ],
         },
         {
@@ -3378,6 +3405,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "Adil geçiş: ulaşılabilir bir hedef mi?", href: "/studio/just-transition/" },
             { label: "Sürdürülebilir bir Sevgililer Günü için 5 ipucu", href: "/studio/sustainable-valentines-day/" },
             { label: "Kartınla seyahat: ücretler ve döviz kurları açıklandı", href: "/studio/card-exchange-rates/" },
+            { label: "COP26: nedir ve neden önemlidir?", href: "/studio/cop26/" },
           ],
         },
         {
@@ -3755,6 +3783,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "Adil geçiş", href: "/studio/just-transition/" },
             { label: "Sürdürülebilir Sevgililer Günü", href: "/studio/sustainable-valentines-day/" },
             { label: "Yurt dışında kart ücretleri ve döviz kurları", href: "/studio/card-exchange-rates/" },
+            { label: "COP26: nedir ve neden önemlidir?", href: "/studio/cop26/" },
           ],
         },
         {
@@ -4152,6 +4181,29 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           { label: "Küresel transferler", href: "/studio/transfers/" },
           { label: "Chargeback nedir ve ne zaman talep edebilirsin?", href: "/studio/chargebacks/" }
         ] }
+      ],
+      cta: { label: "Haberlere dön", href: "/studio/news/" },
+    },
+    {
+      slug: "cop26",
+      title: "COP26: nedir ve neden önemlidir?",
+      kicker: "Rehberler",
+      lede: "Glasgow iklim zirvesi anlatılıyor: COP kısaltmasının anlamı, Paris Anlaşması'nın ülkelerden istediği ve dünyanın zirveden beklediği.",
+      source: "placeholder",
+      sections: [
+        { source: "placeholder", heading: "Dünya neden Glasgow'yu izliyordu", body: "Uzun beklenen COP26 iklim zirvesi, İtalya ortaklığında Birleşik Krallık başkanlığında Glasgow'da düzenlendi; 31 Ekim - 12 Kasım 2021 tarihleri arasında. Yaklaşık 156 devlet başkanı, sivil toplum kuruluşları ve özel sektör temsilcileriyle bir araya geldi; çünkü zirvenin sonuçlarının önümüzdeki birkaç on yılı iklim açısından şekillendirmesi bekleniyordu. Bunun neden bu kadar kritik olduğunu anlamak için COP'un ne olduğunu, tarihçesini ve neyi başarmaya çalıştığını bilmek gerekir." },
+        { source: "placeholder", heading: "COP ne anlama geliyor?", body: "COP, Taraflar Konferansı anlamına gelir; taraflar ise Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi'ni (UNFCCC) imzalayan tüm ülkelerdir. Bu uluslararası anlaşma, iklim kriziyle süregelen araştırma, düzenli toplantılar, müzakereler ve politika anlaşmaları yoluyla mücadele etmek için oluşturuldu. 1995'ten bu yana COP her yıl farklı bir ülkede düzenlenir; tek istisna, Covid-19 salgını nedeniyle ertelenen zirvedir. Glasgow'daki toplantı 26.'sıydı." },
+        { source: "placeholder", heading: "Paris Anlaşması", body: "COP zirvelerinin protokoller, yetki metinleri ve tıkanmalarla dolu çalkantılı bir geçmişi vardır; ancak 2015 tarihi bir başarı getirdi: Paris Anlaşması. Neredeyse tüm ülkeler ilk kez ortak bir hedefte anlaştı: küresel ısınmayı, sanayi öncesi seviyelere göre 2 derecenin çok altında, ideali 1,5 derecede sınırlamak; bunun yanında iklim etkilerine uyum sağlamak ve bu hedefleri destekleyecek finans akışlarını harekete geçirmek. Ardından pek çok soru geldi: Taahhütler yeterli mi? Nasıl uygulanacak? '2 derecenin çok altında' tam olarak ne demek?" },
+        { source: "placeholder", heading: "Ulusal planlar ve eksikleri", body: "Paris Anlaşması uyarınca her hükümet kendi hedef emisyon azaltımını, yani Ulusal Katkı Beyanlarını (NDC) belirler ve UNFCCC'ye bildirir. İlk tur taahhütler toplamda 2030 hedefleri için nesnel olarak yetersizdi: 2010 seviyelerine kıyasla küresel emisyonlarda %1'den daha az bir düşüşe karşılık geliyordu." },
+        { source: "placeholder", heading: "Zaman penceresi kapanıyor", body: "Orman yangınları, seller ve kuraklıklar dünyanın dört bir yanındaki toplulukları vururken hızlı eylemin gerekliliği daha da netleşiyor. Aynı yılın Ağustos ayında yayımlanan IPCC raporu, insan etkisinin atmosferi, okyanusu ve karayı ısıttığını, pek çok değişimin binlerce yıldır eşi görülmemiş boyutlarda olduğunu ve bazılarının çoktan geri dönülemez olduğunu doğruladı. Bilim insanları 1,5 derece hedefinin hâlâ ulaşılabilir olduğunu ama bunun ancak küresel emisyonlarda geniş kapsamlı ve hızlı kesintilerle, yani 2030'a kadar yaklaşık yarıya indirme ve 2050'ye kadar net sıfıra ulaşma ile mümkün olduğunu vurguladı. İklim bilimci Michael E. Mann o günlerde CNN'e şöyle demişti: 'Alt satır şu: tehlikeli iklim değişikliğini önlemek için sıfır yılımız kaldı, çünkü o burada.'" },
+        { source: "placeholder", heading: "1.5'i canlı tutun", body: "Zirvenin öne çıkan çağrısı '1.5'i canlı tutun'dı: Paris hedefinin zor ucuna olabildiğince çok ülkenin bağlanması. İlk işaretler umut verici değildi. Anlaşmanın 192 tarafından 165 ulusal plan mevcuttu ve toplamda 2010'a kıyasla 2030'a kadar küresel emisyonlarda %16 artışa, yüzyıl sonunda ise yaklaşık 2,7 derecelik ısınmaya işaret ediyordu. Bağımsız iklim takip kuruluşu Climate Action Tracker, dünyanın emisyonlarının yaklaşık %80'ini oluşturan G20 ekonomilerinin tümünün 1,5 derece hedefi için etkili politikalar uygulamaktan uzak olduğunu buldu. Isınmadaki her kademe önemli bir etkiye sahip: daha aşırı hava olayları, yükselen denizler ve can ile geçim kaybı." },
+        { source: "placeholder", heading: "Zirvenin amaçları", body: "COP26, Paris çerçevesine bir güncelleme olarak üç hedef belirledi. Birincisi, yüzyılın ortasına kadar küresel net sıfır: kömürden aşamalı çıkış, ormansızlaşmayı durdurma, elektrikli araçlara geçiş ve yenilenebilir enerjiye yatırım. İkincisi, halihazırda etkilenen toplulukları ve ekosistemleri korumak için uyum: daha güçlü erken uyarı sistemleri ve daha dayanıklı altyapı. Üçüncüsü, finansın harekete geçirilmesi: gelişmiş ülkeler 2009'da 2020'ye kadar gelişmekte olan ülkeleri desteklemek için yılda 100 milyar dolar harekete geçirme sözü vermişti ve hükümetlerden ve uluslararası finans kuruluşlarından bu sözü tutmaları istendi. Genel mesaj, zirve başkanının özetlediği gibiydi: Glasgow'un giderek artan bir hedef on yılı başlatması gerekiyordu." },
+        { source: "placeholder", heading: "Paranızın rolü", body: "[Yer tutucu: Opello'nun günlük para kararları ile iklim hedefleri arasındaki ilişki konusunda dürüstçe söyleyebileceği şey. Orijinal kapanış, COP sürecinin kendisinin önemine değinir ve uyarlanmış biçimde burada korunur; Opello'nun herhangi bir ürün bağlantısı, yayımlanmadan önce Opello metni ve onayı gerektirir.]" },
+        { source: "placeholder", heading: "Sıradaki okuma", body: "Opello'dan iklim ve para üzerine daha fazlası.", links: [
+          { label: "Blog'a dön", href: "/studio/blog/" },
+          { label: "İklim felaketleri: kapımızın eşiğinde", href: "/studio/climate-catastrophes/" },
+          { label: "Yeşil bankacılık nedir, neden önemlidir?", href: "/studio/green-banking/" },
+        ] },
       ],
       cta: { label: "Haberlere dön", href: "/studio/news/" },
     },
