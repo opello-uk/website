@@ -49,7 +49,8 @@
 	</div>
 
 	<!-- Socials row: icons only until the accounts are live. -->
-	<div class="social" aria-label={t.socialAria}>
+	<!-- role=group makes the aria-label valid here (W3C validator: aria-label on a plain div is an error). -->
+	<div class="social" role="group" aria-label={t.socialAria}>
 		<ul>
 			{#each socials as social (social.name)}
 				<li>
