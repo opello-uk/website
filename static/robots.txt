@@ -1,5 +1,3 @@
+# Pre-launch studio build: no crawling by anyone, AI or otherwise.
 User-agent: *
 Disallow: /
-
-# Studio sitemap (launch: repoint to the public domain together with STUDIO_ORIGIN in src/lib/studio/i18n.ts)
-Sitemap: https://studio-5c4fcfa636.onrender.com/sitemap.xml
