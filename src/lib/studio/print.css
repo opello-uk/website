@@ -1,0 +1,65 @@
+/* Print styles for the studio pages (both templates, EN/AR/TR and the three
+   homepage roots). Scoped to the studio's own class names so the public-site
+   routes are untouched. The site's ground is navy with clay text — with
+   backgrounds stripped on paper the clay text would be invisible, so print
+   goes navy-on-paper. Decorative chrome (nav, rings, scrims, placeholder
+   photos and sample app screens) comes off the paper; the footer keeps the
+   financial-promotion marker and the legal row. */
+
+@media print {
+	@page {
+		margin: 14mm;
+	}
+
+	/* Chrome off the paper */
+	.nav,
+	.skip,
+	.ring,
+	.rings,
+	.ground-rings,
+	.ground-ring,
+	.band-scrim {
+		display: none !important;
+	}
+
+	/* Placeholder photos and sample app screens: placeholders, keep paper clean */
+	.media,
+	.band-photo,
+	.photo,
+	.art,
+	.art::after,
+	.screens {
+		display: none !important;
+	}
+
+	/* Footer link chrome off the paper; the promo marker and legal row stay */
+	.foot .top,
+	.foot .cols,
+	.foot .social {
+		display: none !important;
+	}
+
+	/* Navy grounds strip to paper */
+	body,
+	.studio,
+	.hero,
+	.sources,
+	.cta,
+	.foot,
+	.banner,
+	.banner .card,
+	.split {
+		background: none !important;
+	}
+
+	/* Clay/white/peach text on stripped grounds fails on paper: everything goes navy */
+	.studio,
+	.studio * {
+		color: #001431 !important;
+	}
+
+	/* Cards keep a visible rule on paper */
+	.card {
+		border: 1px solid rgba(0, 20, 49, 0.25) !important;
+	}
+}

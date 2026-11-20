@@ -7,6 +7,7 @@
 	import StudioBanner from '#lib/studio/StudioBanner.svelte';
 	import StudioControl from '#lib/studio/StudioControl.svelte';
 	import StudioPhoto from '#lib/studio/StudioPhoto.svelte';
+	import '#lib/studio/print.css';
 	import { chrome, langHref, STUDIO_ORIGIN, homeCopy } from '#lib/studio/i18n';
 	import { resolve } from '$app/paths';
 

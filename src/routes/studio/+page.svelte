@@ -7,6 +7,7 @@
 	import StudioBanner from '#lib/studio/StudioBanner.svelte';
 	import StudioControl from '#lib/studio/StudioControl.svelte';
 	import StudioPhoto from '#lib/studio/StudioPhoto.svelte';
+	import '#lib/studio/print.css';
 	import { STUDIO_ORIGIN } from '#lib/studio/i18n';
 
 	const title = 'Opello studio (unlisted preview)';

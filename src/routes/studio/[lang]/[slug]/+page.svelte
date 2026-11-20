@@ -2,6 +2,7 @@
 	import StudioNav from '#lib/studio/StudioNav.svelte';
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import Ring from '#lib/components/Ring.svelte';
+	import '#lib/studio/print.css';
 	// Generated placeholder photo until licensed photography is supplied.
 	import split from '#lib/assets/studio/split.jpg';
 	import split2x from '#lib/assets/studio/split@2x.jpg';
