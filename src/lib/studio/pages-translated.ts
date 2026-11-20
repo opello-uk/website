@@ -1279,6 +1279,14 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة", href: "/studio/card-exchange-rates/" },
           ],
         },
+        {
+          source: "placeholder",
+          wide: true,
+          // Feed card added 2026-11-20 cycle: same card as the blog index, so the news page advertises the feed too.
+          heading: "اشترك في الخلاصة",
+          body: "كل شروحات الرؤى متاحة أيضاً كخلاصة Atom، حتى تتمكن من متابعة المقالات الجديدة في قارئ الخلاصة. الخلاصة هي الإصدار الإنجليزي، وعنوانها ينتقل إلى النطاق العام عند الإطلاق.",
+          links: [{ label: "اشترك في خلاصة Atom", href: "/studio/feed.xml" }],
+        },
       ],
       cta: { label: "تواصل معنا", href: "/studio/contact/" },
     },
@@ -3329,6 +3337,14 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "Sürdürülebilir bir Sevgililer Günü için 5 ipucu", href: "/studio/sustainable-valentines-day/" },
             { label: "Kartınla seyahat: ücretler ve döviz kurları açıklandı", href: "/studio/card-exchange-rates/" },
           ],
+        },
+        {
+          source: "placeholder",
+          wide: true,
+          // Feed card added 2026-11-20 cycle: same card as the blog index, so the news page advertises the feed too.
+          heading: "Akışa abone olun",
+          body: "Her açıklama yazısı aynı zamanda bir Atom akışı olarak yayımlanır, böylece yeni yazıları bir akış okuyucusundan takip edebilirsiniz. Akış İngilizce baskıdır ve adresi lansmanda kamuya alana taşınır.",
+          links: [{ label: "Atom akışına abone ol", href: "/studio/feed.xml" }],
         },
       ],
       cta: { label: "Bize ulaşın", href: "/studio/contact/" },
