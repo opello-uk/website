@@ -150,11 +150,22 @@
 					<p>{s.body}</p>
 					{#if s.href}<a class="link" href={resolve(s.href as '/')}>{s.linkLabel ?? 'Learn more'}</a>{/if}
 					{#if s.items}
-						<ul class="links items">
-							{#each s.items as item (item)}
-								<li>{item}</li>
-							{/each}
-						</ul>
+						{#if s.countries}
+							<!-- Country names bolded and the list split into columns so 109 rows scan
+							     instead of reading as a wall of text; copy unchanged. -->
+							<ul class="links items countries">
+								{#each s.items as item (item)}
+									{@const c = item.indexOf(': ')}
+									<li><strong>{item.slice(0, c)}</strong>{item.slice(c)}</li>
+								{/each}
+							</ul>
+						{:else}
+							<ul class="links items">
+								{#each s.items as item (item)}
+									<li>{item}</li>
+								{/each}
+							</ul>
+						{/if}
 					{/if}
 					{#if s.links}
 						<ul class="links">
@@ -616,6 +627,26 @@
 		color: var(--clay);
 		font-size: 0.95rem;
 		border-bottom: 1px solid rgb(233 228 224 / 0.12);
+	}
+	/* TIN country list (109 rows): bold the country name and split the list into
+	   columns so it scans instead of reading as one wall of text. Copy unchanged. */
+	.card ul.countries {
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		column-gap: 40px;
+	}
+	.card ul.countries li {
+		break-inside: avoid;
+	}
+	.card ul.countries strong {
+		font-weight: 600;
+	}
+	/* On the clay ground: names full navy, detail slightly muted so the country
+	   column reads first. */
+	.sections.clay .card ul.countries li {
+		color: rgb(0 20 49 / 0.78);
+	}
+	.sections.clay .card ul.countries strong {
+		color: var(--deep);
 	}
 	.card .links a {
 		display: inline-flex;

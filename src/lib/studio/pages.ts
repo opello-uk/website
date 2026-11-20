@@ -2,7 +2,7 @@
 // = wording taken from algbra.com (homepage, surveyed 2026-11-12)
 //         'placeholder' = not yet surveyed or no direct Algbra equivalent; confirm before use
 export type Source = 'algbra' | 'placeholder';
-export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[]; items?: string[]; wide?: boolean };
+export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[]; items?: string[]; countries?: boolean; wide?: boolean };
 export type StudioPage = {
 	slug: string;
 	title: string;
@@ -488,7 +488,7 @@ export const pages: StudioPage[] = [
 			'Opello to confirm the list scope (all 109 countries or applicant countries only) and whether to add a country filter before this publishes.'
 		],
 		sections: [
-			{ heading: 'Tax number by country', body: 'Find your country below. Some countries use a national ID number instead, and some issue no tax number at all. If your country does not issue a TIN, you may be asked to confirm this instead.', items: [
+			{ heading: 'Tax number by country', countries: true, body: 'Find your country below. Some countries use a national ID number instead, and some issue no tax number at all. If your country does not issue a TIN, you may be asked to confirm this instead.', items: [
 		  "Albania: National Identity Number (NID) (Numri i Identitetit (NID)). Found on: National ID card",
 		  "Andorra: Administrative Identification Number (Número d'Identificació Administrativa (NIA)). Found on: Tax identification card (Tax & Borders Dept)",
 		  "Anguilla: Tax Identification Number (TIN). Found on: IRD registration reports, official assessment documents",

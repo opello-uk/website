@@ -1409,6 +1409,9 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       sections: [
         {
           source: "placeholder",
+          // Full width so the 109-row list spans the card, with the note card below; country names bolded and columned like the English page.
+          wide: true,
+          countries: true,
           heading: "الرقم الضريبي حسب الدولة",
           body: "اعثر على دولتك أدناه. تستخدم بعض الدول رقم الهوية الوطنية بدلاً منه، وبعضها لا يُصدر رقماً ضريبياً إطلاقاً. إذا لم تُصدر دولتك رقماً ضريبياً، فقد يُطلب منك تأكيد ذلك بدلاً منه.",
           items: [
@@ -3453,6 +3456,9 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       sections: [
         {
           source: "placeholder",
+          // Full width so the 109-row list spans the card, with the note card below; country names bolded and columned like the English page.
+          wide: true,
+          countries: true,
           heading: "Ülkeye göre vergi numarası",
           body: "Aşağıda ülkenizi bulun. Bazı ülkeler yerine ulusal kimlik numarası kullanır, bazıları hiç vergi numarası vermez. Ülkeniz TIN vermiyorsa, bunun yerine bunu teyit etmeniz istenebilir.",
           items: [
