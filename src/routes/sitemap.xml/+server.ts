@@ -10,12 +10,14 @@ export const prerender = true;
 
 const origin = STUDIO_ORIGIN.replace(/\/$/, '');
 
-// Alternate links per URL: en self plus ar/tr where a twin exists.
+// Alternate links per URL: en self plus ar/tr where a twin exists, plus x-default
+// (pointing at the English page), matching the hreflang <link> set every page head
+// carries (en, ar, tr where a twin exists, x-default -> English).
 function urlEntry(path: string, alts: { lang: string; path: string }[]): string {
 	const lines = [
 		'  <url>',
 		`    <loc>${origin}${path}</loc>`,
-		...alts.map((a) => `    <xhtml:link rel="alternate" hreflang="${a.lang}" href="${origin}${a.path}"/>`),
+		...[...alts, { lang: 'x-default', path: alts[0].path }].map((a) => `    <xhtml:link rel="alternate" hreflang="${a.lang}" href="${origin}${a.path}"/>`),
 		'  </url>'
 	];
 	return lines.join('\n');
