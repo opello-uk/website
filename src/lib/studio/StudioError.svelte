@@ -29,6 +29,11 @@
 	// captures; the [lang] pages don't hit this because their prerendered HTML
 	// is already rtl before hydration.
 	$effect(() => {
+		// The static shell (build/404.html, scripts/404-title.mjs) ships a branded
+		// no-JS body that the app replaces on boot — but the fresh client mount
+		// appends alongside it rather than replacing it, so remove it once the
+		// real page is here. Idempotent: no-op when the shell is absent.
+		document.querySelector('.s404')?.remove();
 		document.documentElement.lang = lang === 'en' ? 'en-GB' : lang;
 		// The static shell prerenders with the English title (no pathname at build
 		// time); keep the document title in step when a translated route 404s.
