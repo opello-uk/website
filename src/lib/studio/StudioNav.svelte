@@ -201,8 +201,12 @@
 					<path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
 			</button>
-			{#if open}
-				<div class="menu" bind:this={menu} role="menu" aria-label={t.menuLabel} onkeydown={menuKeydown}>
+			<!-- The menu stays in the DOM on every page (prerendered), hidden with the
+		     hidden attribute rather than conditionally rendered: without JavaScript
+		     the language links still ship in the HTML, so the switcher works JS-off.
+		     Keyboard behaviour is unchanged — a hidden menu has no tab stops, and
+		     the arrow-key/Escape handlers query the same nodes. -->
+			<div class="menu" bind:this={menu} role="menu" aria-label={t.menuLabel} hidden={!open} onkeydown={menuKeydown}>
 					{#each languages as langItem (langItem.id)}
 						{@const live = langItem.id === 'en' || isHome || hasTranslation(langItem.id, currentSlug)}
 						{@const current = langItem.id === lang}
@@ -219,7 +223,6 @@
 						{/if}
 					{/each}
 				</div>
-			{/if}
 		</div>
 
 		<!-- Search: the deck shows a search control in the header. The button opens a
@@ -345,6 +348,10 @@
 	}
 	.menu {
 		position: absolute;
+		/* hidden attribute alone loses to the display:grid rule below, so say it here. */
+		&[hidden] {
+			display: none;
+		}
 		top: calc(100% + 8px);
 		right: 0;
 		z-index: 30;
