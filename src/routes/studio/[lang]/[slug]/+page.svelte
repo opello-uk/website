@@ -187,7 +187,7 @@
 				<article class="card" class:wide={s.wide} class:half={s.half} class:big={s.big}>
 					<h2>{s.heading}</h2>
 					<p>{s.body}</p>
-					{#if s.href}<a class="link" href={local(s.href)}>{s.linkLabel ?? t.learnMore}</a>{/if}
+					{#if s.href}<a class="link" href={local(s.href)} aria-label={`${s.linkLabel ?? t.learnMore}: ${s.heading}`}>{s.linkLabel ?? t.learnMore}</a>{/if}
 					{#if s.links}
 						<ul class="links">
 							{#each s.links as l (l.href)}

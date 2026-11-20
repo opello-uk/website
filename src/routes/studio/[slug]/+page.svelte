@@ -184,7 +184,7 @@
 				<article class="card" class:wide={s.wide} class:half={s.half} class:big={s.big}>
 					<h2>{s.heading}</h2>
 					<p>{s.body}</p>
-					{#if s.href}<a class="link" href={resolve(s.href as '/')}>{s.linkLabel ?? 'Learn more'}</a>{/if}
+					{#if s.href}<a class="link" href={resolve(s.href as '/')} aria-label={`${s.linkLabel ?? 'Learn more'}: ${s.heading}`}>{s.linkLabel ?? 'Learn more'}</a>{/if}
 					{#if s.items}
 						{#if s.countries}
 							<!-- Country names bolded and the list split into columns so 109 rows scan

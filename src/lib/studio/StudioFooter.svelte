@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
-	import { chrome, footerColumnTitle, footerLinkLabel, type Lang } from '#lib/studio/i18n';
+	import { chrome, footerColumnTitle, footerLinkLabel, langHref, type Lang } from '#lib/studio/i18n';
 
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const t = $derived(chrome[lang]);
@@ -40,7 +40,8 @@
 					<h2>{lang === 'en' ? col.title : footerColumnTitle[col.title][lang]}</h2>
 					<ul>
 						{#each col.links as link (link)}
-							<li><a href={resolve(`/studio/${linkPage[link] ?? colPage[col.title] ?? 'help'}/` as '/')}>{lang === 'en' ? link : footerLinkLabel[link][lang]}</a></li>
+							<!-- langHref keeps the footer in the page's language: on ar/tr pages every footer link goes to its language twin where one exists, instead of dropping the visitor back to English. -->
+							<li><a href={resolve(langHref(lang, `/studio/${linkPage[link] ?? colPage[col.title] ?? 'help'}/`) as '/')}>{lang === 'en' ? link : footerLinkLabel[link][lang]}</a></li>
 						{/each}
 					</ul>
 				</section>
@@ -70,14 +71,14 @@
 	<div class="base">
 		<span>{t.copyright}</span>
 		<ul class="legal">
-			<li><a href={resolve('/studio/privacy-policy/')}>{lang === 'en' ? 'Privacy policy' : footerLinkLabel['Privacy policy'][lang]}</a></li>
-			<li><a href={resolve('/studio/terms-and-conditions/')}>{lang === 'en' ? 'Terms & Conditions' : footerLinkLabel['Terms & Conditions'][lang]}</a></li>
-			<li><a href={resolve('/studio/cookies-policy/')}>{lang === 'en' ? 'Cookie policy' : footerLinkLabel['Cookie policy'][lang]}</a></li>
-			<li><a href={resolve('/studio/fees-and-charges/')}>{lang === 'en' ? 'Fees and charges' : footerLinkLabel['Fees and charges'][lang]}</a></li>
-			<li><a href={resolve('/studio/customer-terms-and-conditions/')}>{lang === 'en' ? 'Customer terms' : footerLinkLabel['Customer terms'][lang]}</a></li>
-			<li><a href={resolve('/studio/responsible-disclosure/')}>{lang === 'en' ? 'Responsible disclosure' : footerLinkLabel['Responsible disclosure'][lang]}</a></li>
-			<li><a href={resolve('/studio/accessibility/')}>{lang === 'en' ? 'Accessibility' : footerLinkLabel['Accessibility'][lang]}</a></li>
-			<li><a href={resolve('/studio/sitemap/')}>{lang === 'en' ? 'Sitemap' : footerLinkLabel['Sitemap'][lang]}</a></li>
+			<li><a href={resolve(langHref(lang, '/studio/privacy-policy/') as '/')}>{lang === 'en' ? 'Privacy policy' : footerLinkLabel['Privacy policy'][lang]}</a></li>
+			<li><a href={resolve(langHref(lang, '/studio/terms-and-conditions/') as '/')}>{lang === 'en' ? 'Terms & Conditions' : footerLinkLabel['Terms & Conditions'][lang]}</a></li>
+			<li><a href={resolve(langHref(lang, '/studio/cookies-policy/') as '/')}>{lang === 'en' ? 'Cookie policy' : footerLinkLabel['Cookie policy'][lang]}</a></li>
+			<li><a href={resolve(langHref(lang, '/studio/fees-and-charges/') as '/')}>{lang === 'en' ? 'Fees and charges' : footerLinkLabel['Fees and charges'][lang]}</a></li>
+			<li><a href={resolve(langHref(lang, '/studio/customer-terms-and-conditions/') as '/')}>{lang === 'en' ? 'Customer terms' : footerLinkLabel['Customer terms'][lang]}</a></li>
+			<li><a href={resolve(langHref(lang, '/studio/responsible-disclosure/') as '/')}>{lang === 'en' ? 'Responsible disclosure' : footerLinkLabel['Responsible disclosure'][lang]}</a></li>
+			<li><a href={resolve(langHref(lang, '/studio/accessibility/') as '/')}>{lang === 'en' ? 'Accessibility' : footerLinkLabel['Accessibility'][lang]}</a></li>
+			<li><a href={resolve(langHref(lang, '/studio/sitemap/') as '/')}>{lang === 'en' ? 'Sitemap' : footerLinkLabel['Sitemap'][lang]}</a></li>
 		</ul>
 	</div>
 </footer>
