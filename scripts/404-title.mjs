@@ -16,6 +16,13 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
+// 2026-11-20 19:38 Dubai run: brand the static shell itself. The pre-boot flash
+// (and any no-JS visit) rendered in system-ui with no wordmark — the shell's own
+// style pinned system-ui even though the fallback's stylesheet link already
+// carries the Nimbus @font-face. Now: brand font stack, plus the Opello wordmark
+// (same SVG the nav brand uses, peach, linked to the homepage) at the top of the
+// shell. StudioError still removes the shell once the app mounts.
+
 const outDir = process.env.OUT_DIR ?? 'build';
 const file = join(outDir, '404.html');
 const title = 'Page not found · Opello studio (unlisted)';
@@ -40,6 +47,15 @@ const head =
 	`\n\t\t<meta name="twitter:title" content="${title}" />` +
 	`\n\t\t<meta name="twitter:description" content="${description}" />` +
 	`\n\t\t<meta name="twitter:image" content="${origin}/assets/og.png" />`;
+// Same source the Wordmark component imports; strip the file's fixed size and
+// label the same way the component does (the link around it carries the name).
+const WORDMARK = readFileSync(
+	new URL('../src/lib/assets/opello-wordmark.svg', import.meta.url),
+	'utf8'
+)
+	.replace(/\s(width|height)="[^"]*"/g, '')
+	.replace(/\srole="img"/, '')
+	.replace(/\saria-label="[^"]*"/, ' aria-hidden="true" focusable="false"');
 const RING_SVG = '<svg viewBox="-520 -520 1040 1040" aria-hidden="true" focusable="false"><defs><linearGradient id="opring-fill" gradientUnits="userSpaceOnUse" x1="-260" y1="-500" x2="200" y2="500"><stop offset="0" stop-color="#FF9A66"></stop><stop offset="0.38" stop-color="#F58851"></stop><stop offset="0.72" stop-color="#D9784F"></stop><stop offset="1" stop-color="#A9604E"></stop></linearGradient><clipPath id="opring-lockclip" clipPathUnits="userSpaceOnUse"><ellipse rx="258" ry="447.5" transform="rotate(30)"></ellipse></clipPath><mask id="opring-cut" maskUnits="userSpaceOnUse" x="-520" y="-520" width="1040" height="1040"><circle r="500" fill="#fff"></circle><ellipse rx="258" ry="447.5" transform="rotate(30)" fill="#000" fill-opacity="0.45"></ellipse><ellipse rx="258" ry="447.5" transform="rotate(-30)" fill="#000" fill-opacity="0.45"></ellipse><g clip-path="url(#opring-lockclip)"><ellipse rx="258" ry="447.5" transform="rotate(-30)" fill="#000"></ellipse></g></mask></defs><circle r="500" fill="url(#opring-fill)" mask="url(#opring-cut)"></circle></svg>';
 
 
@@ -48,6 +64,7 @@ const body = `
 	<a class="s404-skip" href="#s404-main">Skip to content</a>
 	<main class="s404-main" id="s404-main">
 		<div class="s404-ring" aria-hidden="true">${RING_SVG}</div>
+		<a class="s404-brand" href="/studio/" aria-label="Opello, home">${WORDMARK}</a>
 		<p class="s404-kicker">Page not found &middot; 404</p>
 		<h1>This page <span class="s404-accent">isn't here.</span></h1>
 		<p class="s404-lede">${description}</p>
@@ -69,7 +86,23 @@ const styles = `
 		background: var(--deep);
 		color: var(--clay);
 		overflow-x: clip;
-		font-family: system-ui, -apple-system, sans-serif;
+		font-family: 'Nimbus Sans Extd', 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+	.s404-brand {
+		display: block;
+		width: clamp(96px, 9vw, 128px);
+		color: var(--peach);
+		line-height: 0;
+		margin: 0 0 42px;
+	}
+	.s404-brand svg {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	.s404-brand:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 3px;
 	}
 	.s404-skip {
 		position: absolute;
@@ -96,6 +129,12 @@ const styles = `
 		flex-direction: column;
 		justify-content: end;
 		min-height: min(52vh, 480px);
+	}
+	@media (max-width: 560px) {
+		.s404-brand {
+			width: 84px;
+			margin-bottom: 30px;
+		}
 	}
 	.s404-ring {
 		position: absolute;
