@@ -2,8 +2,8 @@
 	import Wordmark from '#lib/components/Wordmark.svelte';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import { chrome, hasTranslation, langHref, pagesByLang, type Lang } from '#lib/studio/i18n';
-	import { pages } from '#lib/studio/pages';
+	import { chrome, hasTranslation, langHref, type Lang } from '#lib/studio/i18n';
+	import type { StudioPage } from '#lib/studio/pages';
 
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const t = $derived(chrome[lang]);
@@ -39,16 +39,36 @@
 		if (searchOpen && searchPanel && !searchPanel.contains(e.target as Node) && !searchButton?.contains(e.target as Node)) closeSearch();
 	}
 
+	type SearchEntry = { title: string; kicker: string; lede: string; blob: string; href: string };
+	const searchResults = $derived.by(() => {
+		if (!searchIndexLoaded) return [];
+		const q = query.trim().toLowerCase();
+		if (q === '') return searchIndex.slice(0, 8);
+		return searchIndex.filter((p) => p.blob.includes(q)).slice(0, 8);
+	});
+
+	let searchButton = $state<HTMLButtonElement>();
+	let searchPanel = $state<HTMLElement>();
+	let searchInput = $state<HTMLInputElement>();
+	let searchOpen = $state(false);
+	let query = $state('');
+
 	// Search: the deck shows a search control in the header, so the button opens
 	// a real page search instead of being a dead control. The index is this
 	// language's page list (en reads pages.ts; ar/tr read pagesByLang), and every
 	// result links through langHref so it lands on the language twin.
-	type SearchEntry = { title: string; kicker: string; lede: string; blob: string; href: string };
-	// The page type comes from pagesByLang, so no extra import is needed.
-	type IndexPage = (typeof pagesByLang)[Lang][number];
-	const searchIndex: SearchEntry[] = $derived.by(() => {
-		const src: IndexPage[] = lang === 'en' ? pages : pagesByLang[lang];
-		const entries: SearchEntry[] = src.map((p: IndexPage) => ({
+	// The index loads lazily on first open: the page lists carry every page's
+	// content (all three languages), so a static import would pull hundreds of KB
+	// into every page bundle for a control most visits never open.
+	let searchIndex: SearchEntry[] = $state([]);
+	let searchIndexLoaded = $state(false);
+	async function loadSearchIndex() {
+		if (searchIndexLoaded) return;
+		const mod = lang === 'en'
+			? await import('#lib/studio/pages')
+			: await import('#lib/studio/pages-translated');
+		const src: StudioPage[] = lang === 'en' ? mod.pages : mod.pagesByLang[lang];
+		const entries: SearchEntry[] = src.map((p) => ({
 			title: p.title,
 			kicker: p.kicker,
 			lede: p.lede,
@@ -63,24 +83,14 @@
 			blob: (t.searchHome + ' opello').toLowerCase(),
 			href: lang === 'en' ? '/studio/' : `/studio/${lang}/`
 		});
-		return entries;
-	});
-
-	const searchResults = $derived.by(() => {
-		const q = query.trim().toLowerCase();
-		if (q === '') return searchIndex.slice(0, 8);
-		return searchIndex.filter((p) => p.blob.includes(q)).slice(0, 8);
-	});
-
-	let searchButton = $state<HTMLButtonElement>();
-	let searchPanel = $state<HTMLElement>();
-	let searchInput = $state<HTMLInputElement>();
-	let searchOpen = $state(false);
-	let query = $state('');
+		searchIndex = entries;
+		searchIndexLoaded = true;
+	}
 
 	function openSearch() {
 		open = false;
 		query = '';
+		void loadSearchIndex();
 		searchOpen = true;
 	}
 	function closeSearch() {

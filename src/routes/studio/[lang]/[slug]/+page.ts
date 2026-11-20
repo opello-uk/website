@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { pagesByLang } from '#lib/studio/i18n';
+import { pagesByLang } from '#lib/studio/pages-translated';
 
 export const prerender = true;
 export function entries() {

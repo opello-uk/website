@@ -4,7 +4,8 @@
 // file updates automatically. Out-of-scope pages are not in pages.ts, so they never
 // appear here. The HTML sitemap page (/studio/sitemap/) remains the human-readable twin.
 import { pages, } from '#lib/studio/pages';
-import { pagesByLang, STUDIO_ORIGIN } from '#lib/studio/i18n';
+import { pagesByLang } from '#lib/studio/pages-translated';
+import { STUDIO_ORIGIN } from '#lib/studio/i18n';
 
 export const prerender = true;
 
