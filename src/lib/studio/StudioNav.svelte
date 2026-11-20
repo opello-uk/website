@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Wordmark from '#lib/components/Wordmark.svelte';
+	import { tick } from 'svelte';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import { chrome, hasTranslation, langHref, type Lang } from '#lib/studio/i18n';
@@ -27,6 +28,35 @@
 	function close() {
 		open = false;
 		regionButton?.focus();
+	}
+
+	// Arrow-key navigation inside the language menu (APG menu pattern): the
+	// role="menu" markup promises arrows, so Up/Down/Home/End move focus through
+	// the live language links (the disabled "coming soon" items are skipped).
+	function menuKeydown(e: KeyboardEvent) {
+		const items = Array.from(menu?.querySelectorAll<HTMLAnchorElement>('a[role="menuitem"]') ?? []);
+		if (!items.length) return;
+		const idx = items.indexOf(document.activeElement as HTMLAnchorElement);
+		let next = -1;
+		if (e.key === 'ArrowDown') next = idx < 0 ? 0 : (idx + 1) % items.length;
+		else if (e.key === 'ArrowUp') next = idx < 0 ? items.length - 1 : (idx - 1 + items.length) % items.length;
+		else if (e.key === 'Home') next = 0;
+		else if (e.key === 'End') next = items.length - 1;
+		if (next >= 0) {
+			e.preventDefault();
+			items[next].focus();
+		}
+	}
+	// ArrowDown on the closed flag button opens the menu straight onto the first
+	// item (keyboard equivalent of the click-open path, which keeps focus on the
+	// button so Tab still enters the menu in DOM order).
+	async function regionKeydown(e: KeyboardEvent) {
+		if (e.key === 'ArrowDown' && !open) {
+			e.preventDefault();
+			open = true;
+			await tick();
+			menu?.querySelector<HTMLAnchorElement>('a[role="menuitem"]')?.focus();
+		}
 	}
 
 	// Close on Escape (and return focus) and on a click outside the menu.
@@ -97,6 +127,18 @@
 		searchOpen = false;
 		searchButton?.focus();
 	}
+	// ArrowDown in the field hands focus to the first result link, so the results
+	// are reachable without leaving the keyboard flow; Escape still closes and
+		// returns focus to the button.
+	function searchKeydown(e: KeyboardEvent) {
+		if (e.key === 'ArrowDown') {
+			const first = searchPanel?.querySelector<HTMLAnchorElement>('.results a');
+			if (first) {
+				e.preventDefault();
+				first.focus();
+			}
+		}
+	}
 	// Move focus into the field when the panel opens (button → panel, like the language menu).
 	$effect(() => {
 		if (searchOpen) searchInput?.focus();
@@ -145,6 +187,7 @@
 				aria-haspopup="menu"
 				aria-expanded={open}
 				onclick={() => (open = !open)}
+				onkeydown={regionKeydown}
 			>
 				<svg class="flag" viewBox="0 0 60 30" width="22" height="11" aria-hidden="true" focusable="false">
 					<rect width="60" height="30" fill="#012169" />
@@ -159,7 +202,7 @@
 				</svg>
 			</button>
 			{#if open}
-				<div class="menu" bind:this={menu} role="menu" aria-label={t.menuLabel}>
+				<div class="menu" bind:this={menu} role="menu" aria-label={t.menuLabel} onkeydown={menuKeydown}>
 					{#each languages as langItem (langItem.id)}
 						{@const live = langItem.id === 'en' || isHome || hasTranslation(langItem.id, currentSlug)}
 						{@const current = langItem.id === lang}
@@ -169,7 +212,7 @@
 								{#if current}<span class="tag current">{t.current}</span>{/if}
 							</a>
 						{:else}
-							<span class="item soon" role="menuitem" aria-disabled="true" lang={langItem.id}>
+							<span class="item soon" role="menuitem" aria-disabled="true" tabindex="-1" lang={langItem.id}>
 								<span class="name">{langItem.label}</span>
 								<span class="tag">{t.soon}</span>
 							</span>
@@ -205,6 +248,7 @@
 						bind:value={query}
 						placeholder={t.searchPlaceholder}
 						aria-label={t.searchLabel}
+						onkeydown={searchKeydown}
 					/>
 					<ul class="results">
 						{#each searchResults as r (r.href)}
