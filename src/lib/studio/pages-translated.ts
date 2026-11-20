@@ -1277,7 +1277,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "الانتقال العادل: هل هو هدف قابل للتحقيق؟", href: "/studio/just-transition/" },
             { label: "5 نصائح لعيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
             { label: "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة", href: "/studio/card-exchange-rates/" },
-            { label: "COP26: ما هي ولماذا تهم؟", href: "/studio/cop26/" },
+            { label: "COP26: ما هي ولماذا تهم؟", href: "/studio/cop26/" }, { label: "هل يمكن للتقنية المالية أن تكون قوة للخير؟", href: "/studio/fintech-for-good/" },
           ],
         },
         {
@@ -1320,7 +1320,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "الانتقال العادل: هل هو هدف قابل للتحقيق؟", href: "/studio/just-transition/" },
             { label: "5 نصائح لعيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
             { label: "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة", href: "/studio/card-exchange-rates/" },
-            { label: "COP26: ما هي ولماذا تهم؟", href: "/studio/cop26/" },
+            { label: "COP26: ما هي ولماذا تهم؟", href: "/studio/cop26/" }, { label: "هل يمكن للتقنية المالية أن تكون قوة للخير؟", href: "/studio/fintech-for-good/" },
           ],
         },
         {
@@ -1694,7 +1694,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "الانتقال العادل", href: "/studio/just-transition/" },
             { label: "عيد حب مستدام", href: "/studio/sustainable-valentines-day/" },
             { label: "رسوم وأسعار صرف البطاقة في الخارج", href: "/studio/card-exchange-rates/" },
-            { label: "COP26: ما هي ولماذا تهم؟", href: "/studio/cop26/" },
+            { label: "COP26: ما هي ولماذا تهم؟", href: "/studio/cop26/" }, { label: "هل يمكن للتقنية المالية أن تكون قوة للخير؟", href: "/studio/fintech-for-good/" },
           ],
         },
         {
@@ -2093,7 +2093,28 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       cta: { label: "العودة إلى الأخبار", href: "/studio/news/" },
     },
     {
-      slug: "cop26",
+      slug: "fintech-for-good",
+      title: "هل يمكن للتقنية المالية أن تكون قوة للخير؟",
+      kicker: "شروحات",
+      lede: "تحقيق الربح وإحداث الأثر معاً: أربعة أمور تفصل بين خدمات مالية مبنية للمهمشين وأخرى مبنية للجميع على حد سواء.",
+      source: "placeholder",
+      sections: [
+        { source: "placeholder", heading: "الربح والأثر معاً", body: "التقنية المالية تُعنى بالمال بطبيعتها. فهل يمكن لشركة يعمل قطاعها في المال أن تخدم أيضاً الأشخاص الذين يتركهم التمويل التقليدي خلفه؟ هذا السؤال يتكرر في هذا القطاع، ويستحق إجابة صادقة: الربح والغرض ليسا عدوّين، لكنهما ليسا صديقين تلقائياً أيضاً؛ فالأمر يحتاج إلى خيارات تصميم واعية. إليك ما يفصل بين الخدمات المالية المبنية للفئات التي لا تحظى بالخدمة وتلك المبنية للجميع." },
+        { source: "placeholder", heading: "ابدأ بما هو أفضل للعميل", body: "كثير من المنتجات المالية سدّت فجوة حقيقية دون أن تخدم مستخدميها كما ينبغي. المنتج الموجّه لفئة لا تحظى بالخدمة لا ينجح إلا عندما يُشرك الناس أنفسهم في التصميم: أبحاث مع مستخدمين محتملين حقيقيين، وشركة ترى أن استدامتها المالية وأثرها الإيجابي على العائلات التي تخدمها مهمّان بالدرجة نفسها." },
+        { source: "placeholder", heading: "البنوك التقليدية لم تُبنَ للجميع", body: "البنوك التقليدية مصممة لخدمة شريحة عامة جداً. أما الأشخاص ذوو الاحتياجات الخاصة، سواء كان ذلك إعاقة أو ظروفاً لا تناسب النماذج القياسية، فقد يصطدمون بجدار من الردود السلبية. ونادراً ما يكون ذلك لأن البنوك قلّت اهتماماً: فالتنظيم وضغوط التكلفة والأنظمة القديمة تجعل من الصعب فعلاً على مؤسسة كبيرة التعامل مع حالة غير معتادة بشكل جيد. كما أن بعض المجتمعات فقدت ثقتها بالبنوك بعد الأزمة المالية عام 2008، وهو ما يصعّب الوصول إليها أكثر." },
+        { source: "placeholder", heading: "لكن البنوك القائمة تظل مهمة", body: "تحتفظ البنوك الكبرى بمكان أساسي في المنظومة المالية. فهي أسماء مألوفة ولها فرع في معظم الشوارع الرئيسية، ما يجعلها في متناول عدد كبير جداً من الناس، وقد دفعها ضغط المنافسين الجدد إلى التحسن بشكل ملموس: فتطبيقات البنك التي أصبحت مألوفة اليوم ما كانت لتوجد بدون هذه المنافسة. التغيير في هذا القطاع لا يأتي من جهة واحدة." },
+        { source: "placeholder", heading: "الشراكات توسّع نطاق الخير", body: "لا توجد شركة واحدة تخدم كل مجتمع بشكل جيد. خدمة الفئات التي لا تحظى بالخدمة على نطاق واسع تعتمد على الشراكات: بين التقنية المالية الناشئة والمؤسسات القائمة، وبين التقنية والتنظيم، حتى لا تبقى فكرة جيدة بُنيت لفئة واحدة صغيرة الحجم." },
+        { source: "placeholder", heading: "ماذا يعني هذا لأوبيلو", body: "[عنصر بديل: موقف أوبيلو من خدمة الفئات التي لا تحظى بالخدمة، بصياغة أوبيلو وبموافقتها قبل النشر. الأفكار أعلاه هي ملاحظات عامة عن القطاع وليست ادعاءات من أوبيلو.]" },
+        { source: "placeholder", heading: "اقرأ التالي", body: "المزيد عن المال وكيف ينبغي أن يعمل التمويل.", links: [
+          { label: "العودة إلى المدونة", href: "/studio/blog/" },
+          { label: "إيجابيات وسلبيات المجتمع غير النقدي", href: "/studio/cashless-society/" },
+          { label: "سبعة مبادئ لتطبيق واجب المستهلك", href: "/studio/consumer-duty/" }
+        ] }
+      ],
+      cta: { label: "العودة إلى الأخبار", href: "/studio/news/" },
+    },
+    {
+      slug: "cop26",      slug: "cop26",
       title: "COP26: ما هي ولماذا تهم؟",
       kicker: "شروحات",
       lede: "قمة المناخ في غلاسكو موضحة: ماذا يعني اختصار COP، وما تطلبه اتفاقية باريس من الدول، وما كان العالم ينتظره من القمة.",
@@ -3362,7 +3383,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "Adil geçiş: ulaşılabilir bir hedef mi?", href: "/studio/just-transition/" },
             { label: "Sürdürülebilir bir Sevgililer Günü için 5 ipucu", href: "/studio/sustainable-valentines-day/" },
             { label: "Kartınla seyahat: ücretler ve döviz kurları açıklandı", href: "/studio/card-exchange-rates/" },
-            { label: "COP26: nedir ve neden önemlidir?", href: "/studio/cop26/" },
+            { label: "COP26: nedir ve neden önemlidir?", href: "/studio/cop26/" }, { label: "Fintech bir iyilik gücü olabilir mi?", href: "/studio/fintech-for-good/" },
           ],
         },
         {
@@ -3405,7 +3426,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "Adil geçiş: ulaşılabilir bir hedef mi?", href: "/studio/just-transition/" },
             { label: "Sürdürülebilir bir Sevgililer Günü için 5 ipucu", href: "/studio/sustainable-valentines-day/" },
             { label: "Kartınla seyahat: ücretler ve döviz kurları açıklandı", href: "/studio/card-exchange-rates/" },
-            { label: "COP26: nedir ve neden önemlidir?", href: "/studio/cop26/" },
+            { label: "COP26: nedir ve neden önemlidir?", href: "/studio/cop26/" }, { label: "Fintech bir iyilik gücü olabilir mi?", href: "/studio/fintech-for-good/" },
           ],
         },
         {
@@ -3783,7 +3804,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
             { label: "Adil geçiş", href: "/studio/just-transition/" },
             { label: "Sürdürülebilir Sevgililer Günü", href: "/studio/sustainable-valentines-day/" },
             { label: "Yurt dışında kart ücretleri ve döviz kurları", href: "/studio/card-exchange-rates/" },
-            { label: "COP26: nedir ve neden önemlidir?", href: "/studio/cop26/" },
+            { label: "COP26: nedir ve neden önemlidir?", href: "/studio/cop26/" }, { label: "Fintech bir iyilik gücü olabilir mi?", href: "/studio/fintech-for-good/" },
           ],
         },
         {
@@ -4185,7 +4206,28 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       cta: { label: "Haberlere dön", href: "/studio/news/" },
     },
     {
-      slug: "cop26",
+      slug: "fintech-for-good",
+      title: "Fintech bir iyilik gücü olabilir mi?",
+      kicker: "Rehberler",
+      lede: "Kâr etmek ve fark yaratmak: herkese göre değil, hizmetten mahrum kalanlar için tasarlanmış finansı ayıran dört şey.",
+      source: "placeholder",
+      sections: [
+        { source: "placeholder", heading: "Kâr ve amaç birlikte", body: "Fintech tanımı gereği paraya odaklıdır. Peki işi finans olan bir şirket, ana akım finansın geride bıraktığı insanlara da hizmet edebilir mi? Bu soru sektörde sıkça gündeme gelir ve dürüst bir cevap hak eder: kâr ile amaç birbirinin düşmanı değildir ama otomatik olarak dostu da değildir; bu, bilinçli tasarım kararları gerektirir. Hizmetten mahrum kalanlar için tasarlanan finans ile herkes için tasarlanan finansı ayıran şey işte budur." },
+        { source: "placeholder", heading: "Müşteri için en iyisinden başlayın", body: "Çok sayıda finans ürünü kullanıcılarına iyi hizmet etmeden gerçek bir boşluğu doldurdu. Hizmetten mahrum kalan bir gruba yönelik bir ürün ancak, ürünün tasarımına o insanların kendisi dahil edildiğinde iyi işler: gerçek potansiyel kullanıcılarla araştırma ve finansal sürdürülebilirliği ile hizmet ettiği ailelere olan olumlu etkisini eşit önemde gören bir şirket." },
+        { source: "placeholder", heading: "Geleneksel bankalar herkes için tasarlanmadı", body: "Şube bankaları çok genel bir kitleye hizmet edecek şekilde tasarlanır. Özel ihtiyaçları olan kişiler, ister bir engel ister standart formlara uymayan durumlar olsun, 'bilgisayar hayır diyor' duvarına çarpabilir. Bu nadiren bankaların ilgisizliğinden kaynaklanır: düzenlemeler, maliyet baskıları ve eski sistemler, büyük bir kurumun sıra dışı bir durumu iyi yönetmesini gerçekten zorlaştırır. Ayrıca bazı topluluklar 2008 finansal krizinden sonra bankalara olan güvenini yitirdi ve bu da onlara ulaşmayı daha da zorlaştırıyor." },
+        { source: "placeholder", heading: "Ama yerleşik oyuncular hâlâ önemli", body: "Büyük bankalar finansal ekosistemde kilit bir yeri koruyor. Çoğu ana caddede şubesi olan tanıdık markalar oldukları için çok sayıda insan için erişilebilirler ve yeni rakiplerin baskısı onları görünür biçimde daha iyi olmaya itti: bugün sıradan saydığımız bankacılık uygulamaları bu rekabet olmadan var olmayabilirdi. Bu sektörde değişim tek taraftan gelmez." },
+        { source: "placeholder", heading: "Ortaklıklar iyiliği ölçekler", body: "Tek bir şirket her topluluğa iyi hizmet edemez. Hizmetten mahrum kalan gruplara ölçekte hizmet etmek ortaklıklara dayanır: genç fintech'ler ile yerleşik kurumlar arasında, teknoloji ile düzenleme arasında; böylece bir grup için geliştirilen iyi bir fikir küçük kalmaz." },
+        { source: "placeholder", heading: "Bu Opello için ne anlama geliyor", body: "[Yer tutucu: Opello'nun hizmetten mahrum kalan müşterilere hizmet konusundaki kendi duruşu, Opello diliyle ve yayımlanmadan önce onaylanmış şekilde. Yukarıdaki görüşler genel sektör yorumudur, Opello iddiası değildir.]" },
+        { source: "placeholder", heading: "Sıradaki yazı", body: "Para ve finansın nasıl işlemesi gerektiği üzerine daha fazlası.", links: [
+          { label: "Bloga dön", href: "/studio/blog/" },
+          { label: "Nakitsiz toplumun artıları ve eksileri", href: "/studio/cashless-society/" },
+          { label: "Tüketici Yükümlülüğü'nün uygulanması için yedi ilke", href: "/studio/consumer-duty/" }
+        ] }
+      ],
+      cta: { label: "Haberlere dön", href: "/studio/news/" },
+    },
+    {
+      slug: "cop26",      slug: "cop26",
       title: "COP26: nedir ve neden önemlidir?",
       kicker: "Rehberler",
       lede: "Glasgow iklim zirvesi anlatılıyor: COP kısaltmasının anlamı, Paris Anlaşması'nın ülkelerden istediği ve dünyanın zirveden beklediği.",

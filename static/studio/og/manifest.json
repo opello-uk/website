@@ -120,6 +120,11 @@
     "description": "كل رسوم نتقاضاها في مكان واحد، لترى ما ينطبق عليك قبل فتح الحساب."
   },
   {
+    "path": "ar/fintech-for-good.png",
+    "title": "هل يمكن للتقنية المالية أن تكون قوة للخير؟",
+    "description": "تحقيق الربح وإحداث الأثر معاً: أربعة أمور تفصل بين خدمات مالية مبنية للمهمشين وأخرى مبنية للجميع على حد سواء."
+  },
+  {
     "path": "ar/green-banking.png",
     "title": "ما هو المصرف الأخضر، ولماذا يهم؟",
     "description": "المصرف الأخضر ينظر إلى أين يذهب أموالك، لا فقط إلى أين تقبع. إليك ما يعنيه ولماذا يهم."
@@ -365,6 +370,11 @@
     "description": "Every fee we charge, set out in one place, so you can see what applies to you before you open an account."
   },
   {
+    "path": "fintech-for-good.png",
+    "title": "Can fintech be a force for good?",
+    "description": "Make a profit and make a difference: four things that separate finance built for the underserved from finance built for everyone else."
+  },
+  {
     "path": "green-banking.png",
     "title": "What is green banking, and why does it matter?",
     "description": "Green banking looks at where your money goes, not just where it sits. Here is what it means and why it matters."
@@ -603,6 +613,11 @@
     "path": "tr/fees-and-charges.png",
     "title": "Ücretler ve masraflar",
     "description": "Aldığımız her ücret tek bir yerde; hesap açmadan önce hangilerinin size uygulandığını görün."
+  },
+  {
+    "path": "tr/fintech-for-good.png",
+    "title": "Fintech bir iyilik gücü olabilir mi?",
+    "description": "Kâr etmek ve fark yaratmak: herkese göre değil, hizmetten mahrum kalanlar için tasarlanmış finansı ayıran dört şey."
   },
   {
     "path": "tr/green-banking.png",

@@ -21,7 +21,8 @@ export const articleSlugs = [
 	'just-transition',
 	'sustainable-valentines-day',
 	'card-exchange-rates',
-	'cop26'
+	'cop26',
+	'fintech-for-good'
 ] as const;
 
 export function isArticle(slug: string): boolean {
