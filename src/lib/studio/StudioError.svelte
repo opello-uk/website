@@ -12,7 +12,7 @@
 	import Ring from '#lib/components/Ring.svelte';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import { chrome } from '#lib/studio/i18n';
+	import { chrome, STUDIO_ORIGIN } from '#lib/studio/i18n';
 
 	// Match the lang wrapper the URL already carries, so the nav chrome and the
 	// document dir agree on translated routes.
@@ -36,8 +36,33 @@
 	});
 </script>
 
+<!--
+  Head metadata to match every other studio page (the 2026-11-20 head sweeps
+  covered the 153 sitemap pages but never this route, since a 404 is not in
+  sitemap.xml): description, og + twitter preview tags, og:site_name/locale.
+  No canonical or og:url: a 404 serves on any unmatched path, so naming one
+  URL as the page's own would be wrong. English strings in the static shell
+  (prerendered before the pathname is known); the runtime effect below keeps
+  the title language-matched.
+-->
 <svelte:head>
 	<title>{(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'}</title>
+	<meta name="description" content={notFound ? t.nfLede : t.errLede} />
+	<meta property="og:site_name" content="Opello" />
+	<meta property="og:title" content={(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'} />
+	<meta property="og:description" content={notFound ? t.nfLede : t.errLede} />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Opello" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:locale:alternate" content="ar_AR" />
+	<meta property="og:locale:alternate" content="tr_TR" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'} />
+	<meta name="twitter:description" content={notFound ? t.nfLede : t.errLede} />
+	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 </svelte:head>
 
 <div class="studio" lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
