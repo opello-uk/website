@@ -24,6 +24,7 @@ English pages below; replace /studio/ with /studio/ar/ or /studio/tr/ for the Ar
 - [Cards](https://studio-5c4fcfa636.onrender.com/studio/cards/): the virtual card
 - [Virtual cards](https://studio-5c4fcfa636.onrender.com/studio/virtual-cards/): how virtual cards work
 - [Savings](https://studio-5c4fcfa636.onrender.com/studio/savings/): savings pots and Cubes
+- [Ethical Saver Cubes](https://studio-5c4fcfa636.onrender.com/studio/ethical-savings/): the savings-with-profit product; still under review for the first-release scope, so treat its wording as draft
 - [Refer a friend](https://studio-5c4fcfa636.onrender.com/studio/referrals/)
 - [All plans](https://studio-5c4fcfa636.onrender.com/studio/all-plans/)
 - [UK account from abroad](https://studio-5c4fcfa636.onrender.com/studio/uk-account-from-abroad/)
