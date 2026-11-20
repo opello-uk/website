@@ -2,7 +2,7 @@
 // = wording taken from algbra.com (homepage, surveyed 2026-11-12)
 //         'placeholder' = not yet surveyed or no direct Algbra equivalent; confirm before use
 export type Source = 'algbra' | 'placeholder';
-export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[]; items?: string[]; countries?: boolean; wide?: boolean };
+export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[]; items?: string[]; countries?: boolean; wide?: boolean; half?: boolean; big?: boolean };
 export type StudioPage = {
 	slug: string;
 	title: string;
@@ -225,8 +225,8 @@ export const pages: StudioPage[] = [
 		// About band hero: generated placeholder until licensed photography is supplied.
 		hero: { variant: 'band', alt: 'Four people chatting casually in a bright, warm lounge with clay and cream walls' },
 		sections: [
-			{ heading: 'Our objective', body: 'To eradicate social and financial exclusion and create a more sustainable society, using our values-driven financial technology and a community-first approach. We are people and planet first. Opello is for people who want more than excellent financial services: people who want a new experience with finance, one that reflects their identity, values and lifestyle, and that helps them in everyday actions.' },
-			{ heading: 'Why we are different', body: 'Three things we hold ourselves to.', items: [
+			{ heading: 'Our objective', body: 'To eradicate social and financial exclusion and create a more sustainable society, using our values-driven financial technology and a community-first approach. We are people and planet first. Opello is for people who want more than excellent financial services: people who want a new experience with finance, one that reflects their identity, values and lifestyle, and that helps them in everyday actions.', half: true },
+			{ heading: 'Why we are different', body: 'Three things we hold ourselves to.', half: true, items: [
 				'We never hold your money in an unethical or high-risk manner.',
 				'We offer clear, accessible and interest-free products and services.',
 				// Out of MLP1 scope — giving back/social impact initiatives is donation and community-programme content. Do not publish.
@@ -235,7 +235,11 @@ export const pages: StudioPage[] = [
 				// 'We bring you into the equation through social and environmental impact tools inside the app.',
 				'We adopt a systematic approach to ethical finance, with a focus on equitable access to sustainable financial services.'
 			] },
-			{ heading: 'We are not a bank', body: 'We are a movement. Join us on the journey to fairer, more ethical and transparent finance.', links: [] }
+			// About rebalance 2026-11-20 (19:07 Dubai run): the short statement card ran mostly
+			// empty beside its two tall neighbours at 1440, so it now runs full width as a
+			// statement band and the two cards above split the row. Careers link restored (in
+			// scope; the ethical-finance link stayed out with the purged page).
+			{ heading: 'We are not a bank', body: 'We are a movement. Join us on the journey to fairer, more ethical and transparent finance.', wide: true, big: true, links: [{ label: 'Join us', href: '/studio/careers/' }] }
 		],
 		cta: { label: 'Open account with us', href: OPEN }
 	},

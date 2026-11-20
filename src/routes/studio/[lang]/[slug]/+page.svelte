@@ -184,7 +184,7 @@
 		     page ever needs the navy ground again. -->
 		<section class="sections clay rem-{p.sections.length % 3}">
 			{#each p.sections as s (s.heading)}
-				<article class="card" class:wide={s.wide}>
+				<article class="card" class:wide={s.wide} class:half={s.half} class:big={s.big}>
 					<h2>{s.heading}</h2>
 					<p>{s.body}</p>
 					{#if s.href}<a class="link" href={local(s.href)}>{s.linkLabel ?? t.learnMore}</a>{/if}
@@ -521,6 +521,11 @@
 		.sections.rem-2 .card:nth-last-child(-n + 2) {
 			grid-column: span 3;
 		}
+		/* a card explicitly marked half: it takes half the row (used when a following
+		   wide card needs the two above it to fill the row without dead space) */
+		:global(.sections .card.half) {
+			grid-column: span 3 !important;
+		}
 		/* a card explicitly marked wide (blog rebalance): it runs the full row. Global + important because the
 		   rem-2 leftover rule out-specifies any scoped selector here (the template's dynamic rem class) */
 		:global(.sections .card.wide) {
@@ -618,6 +623,33 @@
 		font-size: 0.97rem;
 		line-height: 1.6;
 		color: var(--muted);
+	}
+	/* Statement card (big flag): a full-width card that reads as a declaration, not a list
+	   card — larger type so the row it rules does not read as under-filled. */
+	.card.big {
+		padding: 34px 30px;
+	}
+	.card.big h2 {
+		font-size: 1.75rem;
+		line-height: 1.2;
+	}
+	.card.big p {
+		font-size: 1.1rem;
+		max-width: 62ch;
+	}
+	.sections.clay .card.big h2 {
+		font-size: 1.75rem;
+	}
+	.sections.clay .card.big p {
+		font-size: 1.1rem;
+	}
+	@media (min-width: 900px) {
+		.sections .card.big h2 {
+			font-size: 2rem;
+		}
+		.sections.clay .card.big h2 {
+			font-size: 2rem;
+		}
 	}
 	.sources {
 		margin-top: 20px;

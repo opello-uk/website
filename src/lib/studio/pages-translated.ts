@@ -249,12 +249,12 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "هدفنا",
-          body: "القضاء على الاستبعاد الاجتماعي والمالي وخلق مجتمع أكثر استدامة، باستخدام تقنيتنا المالية القائمة على القيم وبمقاربة تضع المجتمع أولاً. نضع الإنسان والكوكب أولاً. صُممت Opello لمن يريد أكثر من خدمات مالية ممتازة: من يريد تجربة جديدة مع المال، تجربة تعكس هويته وقيمه وأسلوب حياته، وتساعده في أعماله اليومية.",
+          body: "القضاء على الاستبعاد الاجتماعي والمالي وخلق مجتمع أكثر استدامة، باستخدام تقنيتنا المالية القائمة على القيم وبمقاربة تضع المجتمع أولاً. نضع الإنسان والكوكب أولاً. صُممت Opello لمن يريد أكثر من خدمات مالية ممتازة: من يريد تجربة جديدة مع المال، تجربة تعكس هويته وقيمه وأسلوب حياته، وتساعده في أعماله اليومية.", half: true,
         },
         {
           source: "placeholder",
           heading: "لماذا نحن مختلفون",
-          body: "ثلاثة أمور نلتزم بها.",
+          body: "ثلاثة أمور نلتزم بها.", half: true,
           items: [
             "لا نحتفظ بأموالك أبداً بطريقة غير أخلاقية أو عالية المخاطر.",
             "نقدم منتجات وخدمات واضحة وسهلة الوصول وخالية من الفوائد.",
@@ -268,9 +268,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "نحن لسنا بنكاً",
-          body: "نحن حركة. انضم إلينا في رحلة نحو مال أكثر عدلاً وأخلاقية وشفافية.",
-          links: [],
-        },
+          body: "نحن حركة. انضم إلينا في رحلة نحو مال أكثر عدلاً وأخلاقية وشفافية.", wide: true, big: true, links: [{ label: "انضم إلينا", href: "/studio/careers/" }] },
       ],
       cta: { label: "افتح حسابك معنا", href: "/studio/open-account/" },
     },
@@ -2331,12 +2329,12 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "Amacımız",
-          body: "Değerlerimizle hareket eden finansal teknolojimizi ve topluluk öncelikli yaklaşımımızı kullanarak sosyal ve finansal dışlanmayı ortadan kaldırmak ve daha sürdürülebilir bir toplum yaratmak. İnsanı ve gezegeni önce koyarız. Opello, mükemmel finansal hizmetlerin ötesini isteyenler için var: kimliğini, değerlerini ve yaşam tarzını yansıtan, günlük adımlarında ona destek olan yeni bir finans deneyimi isteyenler için.",
+          body: "Değerlerimizle hareket eden finansal teknolojimizi ve topluluk öncelikli yaklaşımımızı kullanarak sosyal ve finansal dışlanmayı ortadan kaldırmak ve daha sürdürülebilir bir toplum yaratmak. İnsanı ve gezegeni önce koyarız. Opello, mükemmel finansal hizmetlerin ötesini isteyenler için var: kimliğini, değerlerini ve yaşam tarzını yansıtan, günlük adımlarında ona destek olan yeni bir finans deneyimi isteyenler için.", half: true,
         },
         {
           source: "placeholder",
           heading: "Neden farklıyız",
-          body: "Kendimize bağlı olduğumuz üç şey.",
+          body: "Kendimize bağlı olduğumuz üç şey.", half: true,
           items: [
             "Paranızı asla etik olmayan ya da yüksek riskli bir şekilde tutmayız.",
             "Net, erişilebilir ve faizsiz ürün ve hizmetler sunarız.",
@@ -2350,9 +2348,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "Biz bir banka değiliz",
-          body: "Biz bir harekız. Daha adil, daha etik ve daha şeffaf bir finans yolculuğunda bize katılın.",
-          links: [],
-        },
+          body: "Biz bir hareketiz. Daha adil, daha etik ve daha şeffaf bir finans yolculuğunda bize katılın.", wide: true, big: true, links: [{ label: "Aramıza katıl", href: "/studio/careers/" }] },
       ],
       cta: { label: "Hesabını bizimle aç", href: "/studio/open-account/" },
     },
