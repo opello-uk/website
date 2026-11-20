@@ -1,27 +1,29 @@
-// Post-build: generate a per-page og:image (1200x630) for every prerendered
-// studio page, so a shared link shows that page's own title instead of the one
-// generic card all 150+ pages shared.
+// Offline tool: generate a per-page og:image (1200x630) for every prerendered
+// studio page, so a shared link shows that page's own title instead of one
+// generic card. Run this in the sandbox after any copy change, then commit
+// static/studio/og/ — Render's build image has no Chromium, so the cards are checked
+// at build time (scripts/og-cards-check.mjs) rather than rendered there.
 //
-// How it works: adapter-static emits build/studio/**/index.html. Each file
-// already carries og:title and og:description (head templates, 2026-11-20).
+// How it works: `vite build` first (adapter-static emits build/studio/**/index.html).
+// Each file carries og:title and og:description (head templates, 2026-11-20).
 // This script walks those files, renders a brand card (deep navy #001431, the
-// ring motif, peach wordmark, page kicker/title/lede) and screenshots it with
-// Playwright Chromium into build/studio/og/<page path>.png, mirroring the page
-// URL: /studio/personal/ -> og/personal.png, /studio/ar/personal/ ->
+// ring motif, peach wordmark, page title/lede) and screenshots it with Playwright
+// Chromium into static/studio/og/<page path>.png, mirroring the page URL:
+// /studio/personal/ -> og/personal.png, /studio/ar/personal/ ->
 // og/ar/personal.png, /studio/ -> og/home.png, /studio/ar/ -> og/ar/home.png.
 //
 // The head templates point og:image/twitter:image at these paths directly
-// (deterministic from slug + lang), so a page added later is covered by the
-// next build automatically. Images are generated, not committed: og/ lives in
-// the build output only. Card copy comes from the page's own og tags — no new
-// claims are introduced. The studio marker line is carried on the card.
+// (deterministic from slug + lang). Card copy comes from the page's own og
+// tags — no new claims are introduced. The studio marker line is on the card.
+// The manifest (og/manifest.json) records each card's source title/description;
+// og-cards-check.mjs fails the build when a page is missing or its copy drifted.
 import { readdirSync, readFileSync, mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs';
 import { join, relative, dirname } from 'node:path';
 import { chromium } from 'playwright-core';
 
-const outDir = process.env.OUT_DIR ?? 'build';
-const studioDir = join(outDir, 'studio');
-const ogDir = join(studioDir, 'og');
+const outDir = process.env.OUT_DIR ?? 'static/studio/og';
+const sourceDir = join(process.env.BUILD_DIR ?? 'build', 'studio');
+const ogDir = outDir;
 const marker = 'Opello studio · Not for publication until approved.';
 
 function findIndexFiles(dir) {
@@ -43,8 +45,8 @@ function meta(html, prop) {
 // og:title is the marketing line ("Unlock your life." / translated), which
 // reads fine as the card headline.
 const pages = [];
-for (const file of findIndexFiles(studioDir)) {
-	const rel = relative(studioDir, file); // e.g. ar/personal/index.html
+for (const file of findIndexFiles(sourceDir)) {
+	const rel = relative(sourceDir, file); // e.g. ar/personal/index.html
 	const html = readFileSync(file, 'utf8');
 	const title = meta(html, 'og:title');
 	const description = meta(html, 'og:description');
@@ -127,6 +129,10 @@ for (const p of pages) {
 	n++;
 }
 await browser.close();
-// Small manifest so a future run can diff coverage without re-rendering.
-writeFileSync(join(ogDir, 'manifest.json'), JSON.stringify(pages.map((p) => p.ogPath), null, 2));
+// Manifest: ogPath -> the og:title/og:description the card was rendered from,
+// so the build-time check can catch stale cards after copy changes.
+writeFileSync(
+	join(ogDir, 'manifest.json'),
+	JSON.stringify(pages.map((p) => ({ path: p.ogPath, title: p.title, description: p.description })), null, 2)
+);
 console.log(`og-cards: generated ${n} cards into ${ogDir}`);

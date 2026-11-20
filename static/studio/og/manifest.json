@@ -1,0 +1,767 @@
+[
+  {
+    "path": "about.png",
+    "title": "About",
+    "description": "Finance, made for humans. We are people and planet first."
+  },
+  {
+    "path": "accessibility.png",
+    "title": "Accessibility",
+    "description": "How we are working to make Opello usable by everyone, what we have checked so far, and how to tell us when something gets in your way. Placeholder until the statement is confirmed."
+  },
+  {
+    "path": "all-plans.png",
+    "title": "All plans",
+    "description": "Different plans for different needs. Explore features, pricing and benefits to find the one that works best for you."
+  },
+  {
+    "path": "ar/about.png",
+    "title": "من نحن",
+    "description": "خدمات مالية صُممت للبشر. نضع الإنسان والكوكب أولاً."
+  },
+  {
+    "path": "ar/accessibility.png",
+    "title": "إمكانية الوصول",
+    "description": "كيف نعمل لجعل أوبيلو قابلاً للاستخدام من الجميع، وما تحققناه حتى الآن، وكيف تخبرنا عندما يعيقك أمر ما. [Placeholder: statement to be confirmed.]"
+  },
+  {
+    "path": "ar/all-plans.png",
+    "title": "جميع الخطط",
+    "description": "خطط مختلفة لاحتياجات مختلفة. استكشف الميزات والأسعار والفوائد لتجد ما يناسبك."
+  },
+  {
+    "path": "ar/blog.png",
+    "title": "المدونة",
+    "description": "قصص من فريق أوبيلو والمجتمع، عن المال والاستدامة والإنفاق اليومي. [Placeholder: first posts, in Opello wording.]"
+  },
+  {
+    "path": "ar/card-exchange-rates.png",
+    "title": "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة",
+    "description": "إنفاق المال في الخارج لا يجب أن يحتاج إلى جدول حسابات. كيف تعمل أسعار صرف البطاقات، وأربع عادات تجعل الإنفاق في السفر بسيطاً."
+  },
+  {
+    "path": "ar/cards.png",
+    "title": "البطاقات",
+    "description": "أنفق في أي مكان يُقبل فيه بطاقك، مع بطاقات يمكنك تجميدها والتحكم بها من التطبيق."
+  },
+  {
+    "path": "ar/careers.png",
+    "title": "الوظائف",
+    "description": "كن جزءاً من شيء عظيم. تمويل أكثر إنصافاً وأكثر أخلاقية وأكثر شفافية. [مؤقت: صياغة المهمة بحاجة إلى موافقة أوبيلو قبل النشر.]"
+  },
+  {
+    "path": "ar/cashless-society.png",
+    "title": "إيجابيات وسلبيات مجتمع بلا نقد",
+    "description": "كلما اتجهنا نحو مجتمع بلا نقد قلّ النقد في محافظنا. هل هذا أمر سيئ؟ إليك الإيجابيات والسلبيات."
+  },
+  {
+    "path": "ar/chargebacks.png",
+    "title": "ما هو الاسترداد العكسي، ومتى يمكنك المطالبة به؟",
+    "description": "إذا لم يسرِ دفع ببطاقتك على ما يرام، فغالباً يمكنك استعادة أموالك. إليك كيف يعمل الاسترداد العكسي ومتى ينفعك."
+  },
+  {
+    "path": "ar/climate-catastrophes.png",
+    "title": "الكوارث المناخية: على عتبة بابنا",
+    "description": "لسنا بعيدين كما نظن عن الفيضانات والحرائق وموجات الحر التي تملأ الأخبار. إليك ما يجري، ولماذا يصل أثره إلينا جميعاً."
+  },
+  {
+    "path": "ar/consumer-duty.png",
+    "title": "سبع مبادئ لتطبيق واجب المستهلك",
+    "description": "واجب المستهلك من هيئة الرقابة المالية يدور حول تحقيق نتائج جيدة للعملاء. إليك نهجنا في ذلك."
+  },
+  {
+    "path": "ar/contact.png",
+    "title": "تواصل معنا",
+    "description": "نحن هنا للتواصل. أفكارك واقتراحاتك مرحّب بها دائماً."
+  },
+  {
+    "path": "ar/cookies-policy.png",
+    "title": "سياسة ملفات تعريف الارتباط",
+    "description": "ما هي ملفات تعريف الارتباط، والأنواع التي قد نستخدمها، وكيف يمكنك إدارتها. عنصر نائب حتى يُعتمد قائمة ملفات أوبيلو."
+  },
+  {
+    "path": "ar/current-accounts.png",
+    "title": "الحسابات الجارية",
+    "description": "أرسل وأنفق وأدر أموالك بالجنيه الإسترليني من حساب واحد."
+  },
+  {
+    "path": "ar/customer-terms-and-conditions.png",
+    "title": "شروط العميل",
+    "description": "الاتفاق بينك وبين أوبيلو لحسابك وبطاقتك. ملخص مؤقت حتى تتم الموافقة على الشروط الكاملة من المستشار القانوني."
+  },
+  {
+    "path": "ar/dark-mode.png",
+    "title": "الوجه المشرق للوضع الداكن",
+    "description": "تغيير واحد بسيط في هاتفك قد يوفر البطارية والمال بل وشوطاً من الكوكب. إليك لماذا يستحق الوضع الداكن التفعيل."
+  },
+  {
+    "path": "ar/download.png",
+    "title": "حمّل التطبيق",
+    "description": "إنشاء حساب رقمي سلس داخل التطبيق."
+  },
+  {
+    "path": "ar/ethical-savings.png",
+    "title": "مكعبات الادخار الأخلاقي",
+    "description": "أخلاقي. مربح. إنساني. خصّص مبلغاً لمدة ثابتة وشاهد عائدك المتفق عليه قبل التأكيد."
+  },
+  {
+    "path": "ar/faq.png",
+    "title": "الأسئلة المتكررة",
+    "description": "نحن هنا للتواصل. إجابات على الأسئلة التي نسمعها أكثر من غيرها."
+  },
+  {
+    "path": "ar/fees-and-charges.png",
+    "title": "الرسوم والتكاليف",
+    "description": "كل رسوم نتقاضاها في مكان واحد، لترى ما ينطبق عليك قبل فتح الحساب."
+  },
+  {
+    "path": "ar/green-banking.png",
+    "title": "ما هو المصرف الأخضر، ولماذا يهم؟",
+    "description": "المصرف الأخضر ينظر إلى أين يذهب أموالك، لا فقط إلى أين تقبع. إليك ما يعنيه ولماذا يهم."
+  },
+  {
+    "path": "ar/green-break.png",
+    "title": "عطلة خضراء: كيف تسافر بأسلوب مستدام؟",
+    "description": "السفر بطريقة خضراء تماماً صعب، لكن بعض الخيارات الواعية تتيح لك الاستمتاع بعطلتك مع الحد من الضرر. إليك خمس نصائح لسفر أكثر خضرة."
+  },
+  {
+    "path": "ar/help.png",
+    "title": "المساعدة",
+    "description": "اعثر هنا على إجابات الأسئلة الأكثر شيوعاً أو تواصل معنا عبر دردشة الدعم داخل التطبيق."
+  },
+  {
+    "path": "ar/help-about-opello.png",
+    "title": "نبذة عن أوبيلو",
+    "description": "إجابات على أسئلة «نبذة عن أوبيلو»، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة."
+  },
+  {
+    "path": "ar/help-articles.png",
+    "title": "مقالات المساعدة",
+    "description": "المقالات في كل فئة من فئات المساعدة. العناوين مأخوذة من مركز مساعدة ألجبرا. إجابات البدء وتسجيل الدخول وبطاقتي وحسابي والموفر الأخلاقي والأمن والبيانات ونبذة عن أوبيلو والتواصل معنا مكتوبة."
+  },
+  {
+    "path": "ar/help-ethical-saver.png",
+    "title": "مساعدة الموفر الأخلاقي",
+    "description": "ستة عشر إجابة عن مكعبات الموفر الأخلاقي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. لا تُنشر قبل موافقة الامتثال على صياغة المدخرات والحماية والشريعة."
+  },
+  {
+    "path": "ar/help-get-in-touch.png",
+    "title": "كيفية التواصل معنا",
+    "description": "إجابات على أسئلة التواصل، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. كل بيانات التواصل عنصر نائب حتى تُنشئ أوبيلو قنواتها الخاصة."
+  },
+  {
+    "path": "ar/help-getting-started.png",
+    "title": "البدء",
+    "description": "إجابات على أسئلة البدء، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة."
+  },
+  {
+    "path": "ar/help-logging-in.png",
+    "title": "كيفية تسجيل الدخول",
+    "description": "إجابات على أسئلة تسجيل الدخول، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى يُعتمد شاشات التطبيق ومسار الدعم."
+  },
+  {
+    "path": "ar/help-my-account.png",
+    "title": "حسابي",
+    "description": "إجابات على أسئلة حسابي التي لا تتعلق بمكعبات التوفير الأخلاقي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة."
+  },
+  {
+    "path": "ar/help-my-card.png",
+    "title": "بطاقتي",
+    "description": "إجابات على أسئلة بطاقتي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة."
+  },
+  {
+    "path": "ar/help-security-data.png",
+    "title": "الأمن والبيانات",
+    "description": "إجابات على أسئلة الأمن والبيانات، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة."
+  },
+  {
+    "path": "ar/help-tin.png",
+    "title": "إيجاد رقمك الضريبي (TIN)",
+    "description": "أي رقم ضريبي تستخدمه لدولتك. تستخدم بعض الدول رقم الهوية الوطنية بدلاً منه، وبعضها لا يُصدر رقماً ضريبياً إطلاقاً."
+  },
+  {
+    "path": "ar/home.png",
+    "title": "استوديو أوبيلو",
+    "description": "افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة."
+  },
+  {
+    "path": "ar/just-transition.png",
+    "title": "الانتقال العادل: هل هو هدف قابل للتحقيق؟",
+    "description": "عالم عادل ومزدهر ومحايد كربونياً دون أن نترك أحداً خلفنا: ما معنى الانتقال العادل، وما يتطلبه تحقيقه."
+  },
+  {
+    "path": "ar/login.png",
+    "title": "تسجيل الدخول",
+    "description": "سجّل الدخول إلى تطبيق أوبيلو باستخدام بريدك الإلكتروني. الحسابات لم تُفتح بعد، لذا لا يوجد ما تسجّل الدخول إليه اليوم."
+  },
+  {
+    "path": "ar/money-and-mental-health.png",
+    "title": "المال والصحة النفسية: 5 مصادر مجانية لتحسين مزاجك",
+    "description": "غالباً ما يُغفل الرابط بين المال والصحة النفسية. الضغط المالي قد يفاقم الصحة النفسية، وسوء الصحة النفسية قد يجعل إدارة المال أصعب. إليك خمسة أمور مجانية قد تفيدك."
+  },
+  {
+    "path": "ar/news.png",
+    "title": "الأخبار",
+    "description": "أخبار وتحديثات المنتجات وشروحات وقصص من أوبيلو. [Placeholder: Opello newsroom intro, in Opello wording.]"
+  },
+  {
+    "path": "ar/open-account.png",
+    "title": "افتح حساباً",
+    "description": "هذا ما تحتاجه لفتح حساب أوبيلو في التطبيق، وما يحدث بعد ذلك."
+  },
+  {
+    "path": "ar/personal.png",
+    "title": "شخصي",
+    "description": "خدمات مالية صُممت للبشر. منتجات شفافة وسهلة الوصول، ولن تُربكك رسوم مفاجئة أبداً."
+  },
+  {
+    "path": "ar/privacy-policy.png",
+    "title": "سياسة الخصوصية",
+    "description": "كيف تستخدم أوبيلو بياناتك الشخصية، بلغة واضحة. هذا ملخص لإشعار الخصوصية الخاص بنا، والإشعار الكامل هو المذكور في الرابط أدناه."
+  },
+  {
+    "path": "ar/referrals.png",
+    "title": "رشّح صديقاً",
+    "description": "شارك أوبيلو مع من تهتم بهم. [مؤقت: مكافأة الإحالة وشروطها بحاجة إلى موافقة أوبيلو قبل النشر.]"
+  },
+  {
+    "path": "ar/responsible-disclosure.png",
+    "title": "الإفصاح المسؤول",
+    "description": "نأخذ خصوصية عملائنا وأمانهم على محمل الجد، ونقدّر عمل الباحثين في مجال الأمن الذين يساعدوننا في الحفاظ على ذلك."
+  },
+  {
+    "path": "ar/savings.png",
+    "title": "المدخرات",
+    "description": "اكسب على الأموال التي تدّخرها. متاح لمقيمي المملكة المتحدة."
+  },
+  {
+    "path": "ar/sitemap.png",
+    "title": "خريطة الموقع",
+    "description": "كل صفحة في نسخة أوبيلو التجريبية، مجمّعة كما تجمعها القائمة السفلية. تخطيط مبدئي حتى يُعتمد خريطة الموقع."
+  },
+  {
+    "path": "ar/sustainable-valentines-day.png",
+    "title": "5 نصائح لعيد حب مستدام",
+    "description": "الحب لا يجب أن يكلّف الأرض شيئاً. خمس طرق أقل أثراً للاحتفال بعيد الحب، من الهدايا الحية إلى وجبة تُعدّ في المنزل."
+  },
+  {
+    "path": "ar/terms-and-conditions.png",
+    "title": "الشروط والأحكام",
+    "description": "كيف يمكنك استخدام موقع أوبيلو. شروط مؤقتة حتى تتم الموافقة على الصيغة النهائية من المستشار القانوني."
+  },
+  {
+    "path": "ar/transfers.png",
+    "title": "التحويلات",
+    "description": "استخدم حسابك لإرسال الأموال واستقبالها بسرعة وسهولة."
+  },
+  {
+    "path": "ar/uk-account-from-abroad.png",
+    "title": "الحصول على حساب بريطاني من الخارج",
+    "description": "كثير من الناس الذين يعيشون خارج المملكة المتحدة لا يزال يتقاضون رواتبهم بالجنيه الإسترليني، أو يمتلكون عقارات في بريطانيا، أو يحتاجون إلى تحويل الأموال إلى المملكة المتحدة. إليك كيف يعمل الحساب البريطاني عندما لا تسكن هناك."
+  },
+  {
+    "path": "ar/virtual-cards.png",
+    "title": "بطاقات افتراضية",
+    "description": "بطاقة تعيش في تطبيقك. ادفع عبر الإنترنت برقم بطاقتك الخاص، وأجمّدها متى شئت."
+  },
+  {
+    "path": "ar/world-wildlife-day.png",
+    "title": "ما هو اليوم العالمي للحياة البرية، ولماذا يهم؟",
+    "description": "يحتفل اليوم العالمي للحياة البرية بحياة برية كوكبنا، ويذكّرنا أن بقاءنا مرتبط ببقائها. إليك ما هو ولماذا يهم."
+  },
+  {
+    "path": "blog.png",
+    "title": "Blog",
+    "description": "Stories from the Opello team and the community, on money, sustainability and everyday spending. [Placeholder: first posts, in Opello wording.]"
+  },
+  {
+    "path": "card-exchange-rates.png",
+    "title": "Travelling with your card: fees and exchange rates explained",
+    "description": "Spending abroad should not need a spreadsheet. How card exchange rates work, and four habits that keep holiday spending simple."
+  },
+  {
+    "path": "cards.png",
+    "title": "Cards",
+    "description": "Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app."
+  },
+  {
+    "path": "careers.png",
+    "title": "Careers",
+    "description": "Be a part of something great. Finance that is fairer, more ethical and more transparent."
+  },
+  {
+    "path": "cashless-society.png",
+    "title": "The pros and cons of a cashless society",
+    "description": "As we move towards a cashless society, there is less money in our wallets. Is that a bad thing? Here are the pros and cons."
+  },
+  {
+    "path": "chargebacks.png",
+    "title": "What are chargebacks, and when can you claim?",
+    "description": "If a card payment goes wrong, you can often get your money back. Here is how a chargeback works and when it can help."
+  },
+  {
+    "path": "climate-catastrophes.png",
+    "title": "Climate catastrophes: at our doorstep",
+    "description": "We are not as far removed from the floods, fires and heatwaves in the news as we may think. Here is what is happening, and why it reaches all of us."
+  },
+  {
+    "path": "consumer-duty.png",
+    "title": "Seven principles for implementing the Consumer Duty",
+    "description": "The Financial Conduct Authority's Consumer Duty is about delivering good outcomes for customers. Here is how we are approaching it."
+  },
+  {
+    "path": "contact.png",
+    "title": "Contact",
+    "description": "We're here to connect. Thoughts, ideas and suggestions are always welcome."
+  },
+  {
+    "path": "cookies-policy.png",
+    "title": "Cookie policy",
+    "description": "What cookies are, the kinds we may use, and how you can manage them. Placeholder until the Opello cookie list is confirmed."
+  },
+  {
+    "path": "current-accounts.png",
+    "title": "Current accounts",
+    "description": "Send, spend and manage your money in pounds from one account."
+  },
+  {
+    "path": "customer-terms-and-conditions.png",
+    "title": "Customer terms",
+    "description": "The agreement between you and Opello for your account and card. Placeholder summary until counsel signs off the full terms."
+  },
+  {
+    "path": "dark-mode.png",
+    "title": "The bright side of dark mode",
+    "description": "One simple change on your phone could save battery, money and even a little of the planet. Here is why dark mode is worth switching on."
+  },
+  {
+    "path": "download.png",
+    "title": "Download the app",
+    "description": "Seamless digital onboarding onto the app."
+  },
+  {
+    "path": "ethical-savings.png",
+    "title": "Ethical Saver Cubes",
+    "description": "Ethical. Profitable. Human. Set money aside for a fixed term and see your agreed return before you confirm."
+  },
+  {
+    "path": "faq.png",
+    "title": "Frequently asked questions",
+    "description": "We're here to connect. Answers to the questions we hear most often."
+  },
+  {
+    "path": "fees-and-charges.png",
+    "title": "Fees and charges",
+    "description": "Every fee we charge, set out in one place, so you can see what applies to you before you open an account."
+  },
+  {
+    "path": "green-banking.png",
+    "title": "What is green banking, and why does it matter?",
+    "description": "Green banking looks at where your money goes, not just where it sits. Here is what it means and why it matters."
+  },
+  {
+    "path": "green-break.png",
+    "title": "A Green Break: how to holiday sustainably",
+    "description": "It is hard to travel in a completely green way, but a few conscious choices can let you enjoy a break while limiting the harm. Here are five tips for greener travel."
+  },
+  {
+    "path": "help.png",
+    "title": "Help",
+    "description": "Find answers to frequently asked questions here or get in touch via our in-app support chat."
+  },
+  {
+    "path": "help-about-opello.png",
+    "title": "About Opello",
+    "description": "Answers to the About Opello questions, adapted from the Algbra help centre and written for Opello. Not final until the flagged points are signed off."
+  },
+  {
+    "path": "help-articles.png",
+    "title": "Help articles",
+    "description": "The articles in each help category. Titles are taken from Algbra's help centre. Getting started, Logging in, My card, My account, Ethical Saver, Security and data, About Opello and Get in touch answers are written."
+  },
+  {
+    "path": "help-ethical-saver.png",
+    "title": "Ethical Saver help",
+    "description": "Sixteen answers on Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not for publication until compliance has signed off the savings, protection and Sharia wording."
+  },
+  {
+    "path": "help-get-in-touch.png",
+    "title": "Get in touch",
+    "description": "Answers to the Get in touch questions, taken from the Algbra help centre and written for Opello. Every contact detail is a placeholder until Opello sets up its own channels."
+  },
+  {
+    "path": "help-getting-started.png",
+    "title": "Getting started",
+    "description": "Answers to the Getting started questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off."
+  },
+  {
+    "path": "help-logging-in.png",
+    "title": "Logging in",
+    "description": "Answers to the Logging in questions, taken from the Algbra help centre and written for Opello. Not final until the app screens and support route are confirmed."
+  },
+  {
+    "path": "help-my-account.png",
+    "title": "My account",
+    "description": "Answers to the My account questions that are not about Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off."
+  },
+  {
+    "path": "help-my-card.png",
+    "title": "My card",
+    "description": "Answers to the My card questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off."
+  },
+  {
+    "path": "help-security-data.png",
+    "title": "Security and data",
+    "description": "Answers to the Security and data questions, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off."
+  },
+  {
+    "path": "help-tin.png",
+    "title": "Finding your TIN",
+    "description": "Which tax number to use for your country. Some countries use a national ID number instead, and some issue no tax number at all."
+  },
+  {
+    "path": "home.png",
+    "title": "Opello studio",
+    "description": "Unlock your life. For different lives, different circumstances and different starting points."
+  },
+  {
+    "path": "just-transition.png",
+    "title": "A just transition: an achievable goal?",
+    "description": "A fair, thriving and net-zero world without leaving people behind: what a just transition means, and what it takes to get there."
+  },
+  {
+    "path": "login.png",
+    "title": "Log in",
+    "description": "Log in to the Opello app with your email address. Accounts are not open yet, so there is nothing to sign in to today."
+  },
+  {
+    "path": "money-and-mental-health.png",
+    "title": "Money and mental health: 5 free mood boosters",
+    "description": "The link between money and mental health is often overlooked. Financial strain can worsen mental health, and poor mental health can make money harder to manage. Here are five free things that can help."
+  },
+  {
+    "path": "news.png",
+    "title": "News",
+    "description": "News, product updates, explainers and stories from Opello. [Placeholder: Opello newsroom intro, in Opello wording.]"
+  },
+  {
+    "path": "open-account.png",
+    "title": "Open an account",
+    "description": "Here is what you will need to open an Opello account in the app, and what happens next."
+  },
+  {
+    "path": "personal.png",
+    "title": "Personal",
+    "description": "Finance, made for humans. Transparent, accessible products, and you will never be confused or surprised by a fee."
+  },
+  {
+    "path": "privacy-policy.png",
+    "title": "Privacy policy",
+    "description": "How Opello uses your personal data, in plain English. This is a summary of our privacy notice. The full notice is the one linked below."
+  },
+  {
+    "path": "referrals.png",
+    "title": "Refer a friend",
+    "description": "Share Opello with the people you care about. [Placeholder: referral reward and terms to be confirmed by Opello before publishing.]"
+  },
+  {
+    "path": "responsible-disclosure.png",
+    "title": "Responsible disclosure",
+    "description": "We take the privacy and security of our customers seriously, and we value the work of security researchers who help us keep it that way."
+  },
+  {
+    "path": "savings.png",
+    "title": "Savings",
+    "description": "Earn on the money you are saving. Available to UK residents."
+  },
+  {
+    "path": "sitemap.png",
+    "title": "Sitemap",
+    "description": "Every page in the Opello studio build, grouped the way the footer groups them. Placeholder layout until the site map is confirmed for launch."
+  },
+  {
+    "path": "sustainable-valentines-day.png",
+    "title": "5 tips for a sustainable Valentine's Day",
+    "description": "Love does not have to cost the earth. Five lower-impact ways to celebrate Valentine's Day, from living gifts to a meal made at home."
+  },
+  {
+    "path": "terms-and-conditions.png",
+    "title": "Terms and conditions",
+    "description": "How you may use the Opello website. Placeholder terms until counsel signs off the final wording."
+  },
+  {
+    "path": "tr/about.png",
+    "title": "Hakkımızda",
+    "description": "İnsanlar için tasarlanmış finans. İnsanı ve gezegeni önce koyarız."
+  },
+  {
+    "path": "tr/accessibility.png",
+    "title": "Erişilebilirlik",
+    "description": "Opello’yu herkes için kullanılabilir kılmak için nasıl çalıştığımız, şimdiye kadar neleri kontrol ettiğimiz ve bir şey yolunda gitmediğinde bize nasıl haber vereceğiniz. [Placeholder: statement to be confirmed.]"
+  },
+  {
+    "path": "tr/all-plans.png",
+    "title": "Tüm planlar",
+    "description": "Farklı ihtiyaçlar için farklı planlar. Özellikleri, fiyatları ve avantajları keşfedip size en uygun olanı bulun."
+  },
+  {
+    "path": "tr/blog.png",
+    "title": "Blog",
+    "description": "Opello ekibinden ve topluluktan, para, sürdürülebilirlik ve günlük harcama üzerine hikâyeler. [Placeholder: first posts, in Opello wording.]"
+  },
+  {
+    "path": "tr/card-exchange-rates.png",
+    "title": "Kartınla seyahat: ücretler ve döviz kurları açıklandı",
+    "description": "Yurt dışında harcama hesap tablosu gerektirmemeli. Kart döviz kurları nasıl işler ve tatil harcamalarını basit tutan dört alışkanlık."
+  },
+  {
+    "path": "tr/cards.png",
+    "title": "Kartlar",
+    "description": "Kartının kabul edildiği her yerde harca; kartlarını uygulama içinde dondurup kontrol edebilirsin."
+  },
+  {
+    "path": "tr/careers.png",
+    "title": "Kariyer",
+    "description": "Büyük bir şeyin parçası ol. Daha adil, daha etik ve daha şeffaf finans. [Temp: misyon metni yayından önce Opello onayı bekliyor.]"
+  },
+  {
+    "path": "tr/cashless-society.png",
+    "title": "Nakitsiz toplumun artıları ve eksileri",
+    "description": "Nakitsiz bir topluma yaklaştıkça cüzdanlarımızdaki nakit azalıyor. Bu kötü bir şey mi? Artılar ve eksiler burada."
+  },
+  {
+    "path": "tr/chargebacks.png",
+    "title": "Chargeback nedir ve ne zaman talep edebilirsiniz?",
+    "description": "Bir kart ödemesi ters giderse çoğu zaman paranızı geri alabilirsiniz. Chargeback'in nasıl işlediğini ve ne zaman işe yaradığını burada anlatıyoruz."
+  },
+  {
+    "path": "tr/climate-catastrophes.png",
+    "title": "İklim felaketleri: kapımızda",
+    "description": "Haberlerdeki sellere, yangınlara ve sıcak dalgalarına sandığımız kadar uzak değiliz. Neler olduğunu ve neden hepimize uzandığını burada bul."
+  },
+  {
+    "path": "tr/consumer-duty.png",
+    "title": "Tüketici Yükümlülüğü'nü uygulamanın yedi ilkesi",
+    "description": "Finansal Yaptırım Kurumu'nun (FCA) Tüketici Yükümlülüğü, müşterilere iyi sonuçlar sunmak üzerine kuruludur. Biz nasıl yaklaşıyoruz, burada."
+  },
+  {
+    "path": "tr/contact.png",
+    "title": "İletişim",
+    "description": "Bağlanmak için buradayız. Görüş, fikir ve önerileriniz her zaman değerlidir."
+  },
+  {
+    "path": "tr/cookies-policy.png",
+    "title": "Çerez politikası",
+    "description": "Çerez nedir, kullanabileceğimiz türler ve bunları nasıl yönetebilirsin. Opello çerez listesi onaylanana kadar yer tutucudur."
+  },
+  {
+    "path": "tr/current-accounts.png",
+    "title": "Günlük hesaplar",
+    "description": "Paranızı sterlin cinsinden tek bir hesaptan gönderin, harcayın ve yönetin."
+  },
+  {
+    "path": "tr/customer-terms-and-conditions.png",
+    "title": "Müşteri şartları",
+    "description": "Hesabınız ve kartınız için sizinle Opello arasındaki sözleşme. Tam şartlar hukuk danışmanı onaylanana kadar geçici özet."
+  },
+  {
+    "path": "tr/dark-mode.png",
+    "title": "Karanlık modun parlak tarafı",
+    "description": "Telefonundaki tek bir basit değişiklik pil tasarrufu, para ve hatta gezegen için bile iyi olabilir. Karanlık mod neden açılmaya değer, burada."
+  },
+  {
+    "path": "tr/download.png",
+    "title": "Uygulamayı indir",
+    "description": "Uygulamada kusursuz dijital hesap açma."
+  },
+  {
+    "path": "tr/ethical-savings.png",
+    "title": "Etik Birikim Küpleri",
+    "description": "Etik. Kârlı. İnsani. Paranızı sabit bir süre için ayırın ve onaylamadan önce uzlaşılan getirinizi görün."
+  },
+  {
+    "path": "tr/faq.png",
+    "title": "Sıkça sorulan sorular",
+    "description": "Bağlanmak için buradayız. En sık duyduğumuz soruların yanıtları."
+  },
+  {
+    "path": "tr/fees-and-charges.png",
+    "title": "Ücretler ve masraflar",
+    "description": "Aldığımız her ücret tek bir yerde; hesap açmadan önce hangilerinin size uygulandığını görün."
+  },
+  {
+    "path": "tr/green-banking.png",
+    "title": "Yeşil bankacılık nedir ve neden önemlidir?",
+    "description": "Yeşil bankacılık, paranızın nerede durduğuna değil nereye gittiğine bakar. Ne anlama geldiğini ve neden önemli olduğunu burada anlatıyoruz."
+  },
+  {
+    "path": "tr/green-break.png",
+    "title": "Yeşil bir mola: tatili sürdürülebilir nasıl geçirirsiniz?",
+    "description": "Tamamen yeşil bir şekilde seyahat etmek zordur; ama birkaç bilinçli seçim, zararı sınırlarken molanızın tadını çıkarmanızı sağlar. Daha yeşil seyahat için beş ipucu."
+  },
+  {
+    "path": "tr/help.png",
+    "title": "Yardım",
+    "description": "En sık duyduğumuz soruların yanıtlarını burada bulabilir ya da uygulama içi destek sohbetinden bize ulaşabilirsiniz."
+  },
+  {
+    "path": "tr/help-about-opello.png",
+    "title": "Opello hakkında",
+    "description": "Opello hakkında sorularının yanıtları, Algbra yardım merkezinden uyarlanıp Opello için yazıldı. İşaretli noktalar onaylanana kadar kesin değildir."
+  },
+  {
+    "path": "tr/help-articles.png",
+    "title": "Yardım makaleleri",
+    "description": "Her yardım kategorisindeki makaleler. Başlıklar Algbra yardım merkezinden alınmıştır. Başlarken, Giriş yapma, Kartım, Hesabım, Etik Tasarruf, Güvenlik ve veriler, Opello hakkında ve Bize ulaşın yanıtları yazıldı."
+  },
+  {
+    "path": "tr/help-ethical-saver.png",
+    "title": "Etik Tasarruf yardımı",
+    "description": "Etik Tasarruf Küpleri hakkında on altı yanıt, Algbra yardım merkezinden alınarak Opello için yazıldı. Tasarruf, koruma ve Şeriat ifadeleri uyum ekibi onaylayana kadar yayımlanmaz."
+  },
+  {
+    "path": "tr/help-get-in-touch.png",
+    "title": "Bize ulaşın",
+    "description": "Bize ulaşma sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. Opello kendi kanallarını kurana kadar her iletişim bilgisi yer tutucudur."
+  },
+  {
+    "path": "tr/help-getting-started.png",
+    "title": "Başlarken",
+    "description": "Başlarken sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir."
+  },
+  {
+    "path": "tr/help-logging-in.png",
+    "title": "Giriş yapma",
+    "description": "Giriş yapma sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. Uygulama ekranları ve destek yolu onaylanana kadar nihai değildir."
+  },
+  {
+    "path": "tr/help-my-account.png",
+    "title": "Hesabım",
+    "description": "Etik Tasarruf Küpleriyle ilgili olmayan Hesabım sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir."
+  },
+  {
+    "path": "tr/help-my-card.png",
+    "title": "Kartım",
+    "description": "Kartım sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir."
+  },
+  {
+    "path": "tr/help-security-data.png",
+    "title": "Güvenlik ve veriler",
+    "description": "Güvenlik ve veri sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir."
+  },
+  {
+    "path": "tr/help-tin.png",
+    "title": "TIN numaranızı bulun",
+    "description": "Ülkeniz için hangi vergi numarası kullanılır. Bazı ülkeler ulusal kimlik numarası kullanır, bazıları hiç vergi numarası vermez."
+  },
+  {
+    "path": "tr/home.png",
+    "title": "Opello stüdyosu",
+    "description": "Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için."
+  },
+  {
+    "path": "tr/just-transition.png",
+    "title": "Adil geçiş: ulaşılabilir bir hedef mi?",
+    "description": "Kimsenin geride bırakılmadığı adil, gelişen ve net sıfır bir dünya: adil geçişin ne demek olduğunu ve gerçekleşmesi için ne gerektiğini burada bul."
+  },
+  {
+    "path": "tr/login.png",
+    "title": "Giriş yap",
+    "description": "Opello uygulamasına e-posta adresinle giriş yap. Hesaplar henüz açılmadı, bu yüzden bugün giriş yapılacak bir şey yok."
+  },
+  {
+    "path": "tr/money-and-mental-health.png",
+    "title": "Para ve ruh sağlığı: Ücretsiz 5 keyif artırıcı",
+    "description": "Para ile ruh sağlığı arasındaki bağ sık sık gözden kaçar. Maddi sıkışıklık ruh sağlığını bozabilir; kötü ruh sağlığı da parayı yönetmeyi zorlaştırabilir. Yardımcı olabilecek beş ücretsiz şey burada."
+  },
+  {
+    "path": "tr/news.png",
+    "title": "Haberler",
+    "description": "Opello’dan haberler, ürün güncellemeleri, açıklamalar ve hikâyeler. [Placeholder: Opello newsroom intro, in Opello wording.]"
+  },
+  {
+    "path": "tr/open-account.png",
+    "title": "Hesap aç",
+    "description": "Uygulamada bir Opello hesabı açmak için gerekli olanlar ve sonrasında neler olacağı."
+  },
+  {
+    "path": "tr/personal.png",
+    "title": "Bireysel",
+    "description": "Finans, insanlar için tasarlandı. Şeffaf ve erişilebilir ürünler; hiçbir zaman kafa karıştıran ya da sürpriz ücretler yok."
+  },
+  {
+    "path": "tr/privacy-policy.png",
+    "title": "Gizlilik politikası",
+    "description": "Opello kişisel verilerini nasıl kullanır, sade bir dille. Bu, gizlilik bildirimimizin bir özetidir; tam bildirim aşağıdaki bağlantıdadır."
+  },
+  {
+    "path": "tr/referrals.png",
+    "title": "Bir arkadaşını davet et",
+    "description": "Opello’yu sevdiğin insanlarla paylaş. [Temp: davet ödülü ve koşulları yayınlamadan önce Opello onayı bekliyor.]"
+  },
+  {
+    "path": "tr/responsible-disclosure.png",
+    "title": "Sorumlu açıklama",
+    "description": "Müşterilerimizin gizliliğini ve güvenliğini ciddiye alıyor, bu böyle kalmasını sağlamamıza yardım eden güvenlik araştırmacılarının işine değer veriyoruz."
+  },
+  {
+    "path": "tr/savings.png",
+    "title": "Tasarruf",
+    "description": "Biriktirdiğiniz paradan kazanın. Birleşik Krallık sakinlerine açıktır."
+  },
+  {
+    "path": "tr/sitemap.png",
+    "title": "Site haritası",
+    "description": "Opello stüdyo sürümündeki her sayfa, alt bilginin gruplandırmasıyla aynı şekilde. Site haritası lansman için onaylanana kadar geçici düzen."
+  },
+  {
+    "path": "tr/sustainable-valentines-day.png",
+    "title": "Sürdürülebilir bir Sevgililer Günü için 5 ipucu",
+    "description": "Aşk, dünyaya bir şey kaybettirmek zorunda değil. Evde yapılan bir yemekten yaşayan hediyelere kadar, Sevgililer Günü'nü daha az etkileyerek kutlamanın beş yolu."
+  },
+  {
+    "path": "tr/terms-and-conditions.png",
+    "title": "Şartlar ve koşullar",
+    "description": "Opello web sitesini nasıl kullanabilirsiniz. Nihai metin hukuk danışmanı onaylanana kadar geçici şartlar."
+  },
+  {
+    "path": "tr/transfers.png",
+    "title": "Transferler",
+    "description": "Hesabını parayı hızlı ve kolay gönderip almak için kullan."
+  },
+  {
+    "path": "tr/uk-account-from-abroad.png",
+    "title": "Yurt dışından Birleşik Krallık hesabı almak",
+    "description": "Birleşik Krallık dışında yaşayan birçok kişi maaşını sterlin olarak alıyor, Birleşik Krallık’ta mülk sahibi veya parayı Birleşik Krallık’a taşıması gerekiyor. Orada yaşamıyorsanız Birleşik Krallık hesabı nasıl çalışır, işte karşınızda."
+  },
+  {
+    "path": "tr/virtual-cards.png",
+    "title": "Sanal kartlar",
+    "description": "Cebinde değil uygulamanda yaşayan bir kart. Kendi kart numaranla çevrimiçi öde, dilediğinde dondur."
+  },
+  {
+    "path": "tr/world-wildlife-day.png",
+    "title": "Dünya Yaşam Günü nedir ve neden önemlidir?",
+    "description": "Dünya Yaşam Günü gezegenimizin vahşi yaşamını kutlar ve hayatta kalmamızın onlarınkiyle bağlı olduğunu hatırlatır. Nedir ve neden önemlidir, burada."
+  },
+  {
+    "path": "transfers.png",
+    "title": "Transfers",
+    "description": "Use your account to send and receive money quickly and easily."
+  },
+  {
+    "path": "uk-account-from-abroad.png",
+    "title": "Getting a UK account from abroad",
+    "description": "Many people living outside the UK still get paid in pounds, own UK property or need to move money to the UK. Here is how a UK account can work when you do not live here."
+  },
+  {
+    "path": "virtual-cards.png",
+    "title": "Virtual cards",
+    "description": "A card that lives in your app. Pay online with your own card number, and freeze it whenever you like."
+  },
+  {
+    "path": "world-wildlife-day.png",
+    "title": "What is World Wildlife Day, and why does it matter?",
+    "description": "World Wildlife Day celebrates our planet's wildlife and reminds us that our survival is tied to theirs. Here is what it is and why it matters."
+  }
+]
