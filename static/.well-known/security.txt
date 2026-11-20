@@ -1,0 +1,7 @@
+# security.txt (RFC 9116) for the Opello studio preview build.
+# Point of contact for security reports is the responsible-disclosure page:
+# Opello has no published security mailbox yet, so no email address is listed here.
+Contact: https://studio-5c4fcfa636.onrender.com/studio/responsible-disclosure/
+Expires: 2027-05-20T00:00:00Z
+Preferred-Languages: en, ar, tr
+Canonical: https://studio-5c4fcfa636.onrender.com/.well-known/security.txt
