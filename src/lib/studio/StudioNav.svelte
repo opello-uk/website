@@ -262,6 +262,16 @@
 							<li class="none">{t.searchNone}</li>
 						{/each}
 					</ul>
+					<!-- Screen-reader feedback: the results list itself is not a live region
+					     (announcing the whole list on every keystroke is noisy), so a polite
+					     status line reports the count, or the no-results message. -->
+					<p class="sr-status" role="status">
+						{#if searchResults.length > 0}
+							{t.searchStatus.replace('{n}', String(searchResults.length))}
+						{:else}
+							{t.searchNone}
+						{/if}
+					</p>
 				</div>
 			{/if}
 		</div>
@@ -441,6 +451,17 @@
 		overflow-y: auto;
 		display: grid;
 		gap: 2px;
+	}
+	/* The live-region status line: present for screen readers, never visible. */
+	.sr-status {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
 	}
 	.results a {
 		display: flex;

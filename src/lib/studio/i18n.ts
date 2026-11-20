@@ -42,6 +42,8 @@ export type Chrome = {
   searchPlaceholder: string;
   searchHome: string;
   searchNone: string;
+  // Live-region status line for the nav search (announced politely as results change).
+  searchStatus: string;
   footerTagline: string;
   socialAria: string;
   copyright: string;
@@ -77,6 +79,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     searchPlaceholder: "Search pages…",
     searchHome: "Home",
     searchNone: "No pages match.",
+    searchStatus: "Results: {n}",
     footerTagline: "Your own money, unlocked.",
     socialAria: "Social channels",
     copyright: "© 2026 Opello. All rights reserved.",
@@ -112,6 +115,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     searchPlaceholder: "ابحث في الصفحات…",
     searchHome: "الرئيسية",
     searchNone: "لا توجد صفحات مطابقة.",
+    searchStatus: "النتائج: {n}",
     footerTagline: "أموالك الخاصة، بلا قيود.",
     socialAria: "قنوات التواصل",
     copyright: "© 2026 أوبيلو. جميع الحقوق محفوظة.",
@@ -146,6 +150,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     searchPlaceholder: "Sayfalarda ara…",
     searchHome: "Ana sayfa",
     searchNone: "Eşleşen sayfa yok.",
+    searchStatus: "Sonuç: {n}",
     footerTagline: "Kendi paran, serbest.",
     socialAria: "Sosyal kanallar",
     copyright: "© 2026 Opello. Tüm hakları saklıdır.",
