@@ -233,6 +233,12 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'help',
+		// sourceNotes added 2026-11-20 (~13:30 Dubai run): re-surveyed algbra.com/help today; the adapted
+		// wording had no visible source marking.
+		sourceNotes: [
+			'Source: algbra.com/help (re-surveyed 2026-11-20): the lede, the find-an-answer and in-app support wording and the lost-or-stolen-card freeze wording follow Algbra\'s help page, adapted for Opello.',
+			'Placeholders: the support phone number and support email are Opello\'s to set up. Algbra\'s own phone number and email are not reused.'
+		],
 		title: 'Help',
 		kicker: 'Help',
 		lede: 'Find answers to frequently asked questions here or get in touch via our in-app support chat.',
@@ -301,6 +307,12 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'download',
+		// sourceNotes added 2026-11-20 (~13:30 Dubai run): the page's Algbra-derived wording had no visible
+		// source marking (the pre-purge notes in pages-full.ts.bak were dropped); re-surveyed algbra.com/download today.
+		sourceNotes: [
+			'Source: algbra.com/download (re-surveyed 2026-11-20): the QR instruction and the onboarding wording ("All you need is an email address, phone number and an ID document like your passport") are Algbra\'s published copy, adapted for Opello. Algbra\'s download page is thin beyond this; nothing else is reusable.',
+			'Placeholders: the QR code image and the app-store badges and links wait for the Opello app to be published; app-store availability itself is Opello to confirm.'
+		],
 		title: 'Download the app',
 		kicker: 'Personal',
 		lede: 'Seamless digital onboarding onto the app.',
