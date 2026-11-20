@@ -26,10 +26,11 @@
 	<link rel="canonical" href={`${STUDIO_ORIGIN}/studio/`} />
 	<!-- Atom feed autodiscovery: the insight articles feed (English edition; ar/tr twins exist for every article). -->
 	<link rel="alternate" type="application/atom+xml" title="Opello insights" href={`${STUDIO_ORIGIN}/studio/feed.xml`} />
-	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
+	<!-- Per-page preview card: scripts/og-cards.mjs generates one card per page at build time. -->
+	<meta property="og:image" content={`${STUDIO_ORIGIN}/studio/og/home.png`} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Opello" />
+	<meta property="og:image:alt" content="Opello studio: Unlock your life." />
 	<meta property="og:site_name" content="Opello" />
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:locale:alternate" content="ar_AR" />
@@ -38,7 +39,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Opello studio" />
 	<meta name="twitter:description" content="Unlock your life. For different lives, different circumstances and different starting points." />
-	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
+	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/studio/og/home.png`} />
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	<link rel="alternate" hreflang="en" href={`${STUDIO_ORIGIN}/studio/`} />
 	<link rel="alternate" hreflang="ar" href={`${STUDIO_ORIGIN}/studio/ar/`} />

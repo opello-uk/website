@@ -7,7 +7,7 @@
 	import StudioBanner from '#lib/studio/StudioBanner.svelte';
 	import StudioControl from '#lib/studio/StudioControl.svelte';
 	import StudioPhoto from '#lib/studio/StudioPhoto.svelte';
-	import { chrome, langHref, STUDIO_ORIGIN } from '#lib/studio/i18n';
+	import { chrome, langHref, STUDIO_ORIGIN, homeCopy } from '#lib/studio/i18n';
 	import { resolve } from '$app/paths';
 
 	let { lang: langProp = 'ar' }: { lang?: 'ar' | 'tr' } = $props();
@@ -54,17 +54,18 @@
 	<link rel="canonical" href={`${STUDIO_ORIGIN}/studio/${lang}/`} />
 	<!-- Atom feed autodiscovery: the insight articles feed (English edition; ar/tr twins exist for every article). -->
 	<link rel="alternate" type="application/atom+xml" title="Opello insights" href={`${STUDIO_ORIGIN}/studio/feed.xml`} />
-	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
+	<!-- Per-page preview card: scripts/og-cards.mjs generates one card per page at build time. -->
+	<meta property="og:image" content={`${STUDIO_ORIGIN}/studio/og/${lang}/home.png`} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Opello" />
+	<meta property="og:image:alt" content={`Opello studio: ${homeCopy[lang].heroUnlock} ${homeCopy[lang].heroLife}`} />
 	<meta property="og:site_name" content="Opello" />
 	<meta property="og:locale" content={lang === 'ar' ? 'ar_AR' : 'tr_TR'} />
 	<meta property="og:locale:alternate" content="en_GB" />
 	<meta property="og:locale:alternate" content={lang === 'ar' ? 'tr_TR' : 'ar_AR'} />
 	<!-- Twitter card so links shared on X render the same preview card. -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
+	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/studio/og/${lang}/home.png`} />
 	<!-- Structured data for agent readers: facts match the visible page only
 		(hero line, site language). Same facts as the English root, in this
 		language; URL rides on STUDIO_ORIGIN for the launch-time repoint.
