@@ -9,7 +9,7 @@
 - Domain: opello.co.uk (public site is a coming-soon page; the build lives at /studio/)
 - First-release product scope: personal GBP e-money accounts, domestic and international GBP payments, a virtual card for spending worldwide, savings pots, refer-a-friend
 - Customer-residence markets: UK, UAE and Türkiye (onboarding scope still being confirmed)
-- Languages: English (/studio/), Arabic RTL (/studio/ar/), Turkish (/studio/tr/). Every page has a twin in each language at /studio/{lang}/{slug}/
+- Languages: [English](https://studio-5c4fcfa636.onrender.com/studio/), [Arabic, RTL](https://studio-5c4fcfa636.onrender.com/studio/ar/), [Turkish](https://studio-5c4fcfa636.onrender.com/studio/tr/). Every page has a twin in each language at /studio/{lang}/{slug}/
 - Draft copy: product wording is under review; contact details, app links and social accounts are placeholders until they are set up
 
 ## Pages
