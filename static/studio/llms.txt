@@ -29,11 +29,33 @@ English pages below; replace /studio/ with /studio/ar/ or /studio/tr/ for the Ar
 - [UK account from abroad](https://studio-5c4fcfa636.onrender.com/studio/uk-account-from-abroad/)
 - [Help](https://studio-5c4fcfa636.onrender.com/studio/help/): help centre
 - [Help articles](https://studio-5c4fcfa636.onrender.com/studio/help-articles/): every article title by category
+- [Getting started help](https://studio-5c4fcfa636.onrender.com/studio/help-getting-started/): eligibility, opening, identity checks
+- [Logging in help](https://studio-5c4fcfa636.onrender.com/studio/help-logging-in/)
+- [My card help](https://studio-5c4fcfa636.onrender.com/studio/help-my-card/)
+- [My account help](https://studio-5c4fcfa636.onrender.com/studio/help-my-account/)
+- [Ethical Saver help](https://studio-5c4fcfa636.onrender.com/studio/help-ethical-saver/)
+- [Security and data help](https://studio-5c4fcfa636.onrender.com/studio/help-security-data/): safeguarding and protection questions
+- [About Opello help](https://studio-5c4fcfa636.onrender.com/studio/help-about-opello/)
+- [Get in touch help](https://studio-5c4fcfa636.onrender.com/studio/help-get-in-touch/): complaints and closing an account
+- [Tax residency (TIN) list](https://studio-5c4fcfa636.onrender.com/studio/help-tin/): 109 countries, reproduced as published
 - [FAQ](https://studio-5c4fcfa636.onrender.com/studio/faq/)
 - [Contact](https://studio-5c4fcfa636.onrender.com/studio/contact/)
 - [About](https://studio-5c4fcfa636.onrender.com/studio/about/)
 - [Careers](https://studio-5c4fcfa636.onrender.com/studio/careers/)
 - [News](https://studio-5c4fcfa636.onrender.com/studio/news/) and [Blog](https://studio-5c4fcfa636.onrender.com/studio/blog/): insight and article indexes
+- Articles (general financial content, not product claims):
+  [Chargebacks](https://studio-5c4fcfa636.onrender.com/studio/chargebacks/),
+  [Card exchange rates explained](https://studio-5c4fcfa636.onrender.com/studio/card-exchange-rates/),
+  [What is green banking](https://studio-5c4fcfa636.onrender.com/studio/green-banking/),
+  [A green break: holidaying sustainably](https://studio-5c4fcfa636.onrender.com/studio/green-break/),
+  [Money and mental health](https://studio-5c4fcfa636.onrender.com/studio/money-and-mental-health/),
+  [World Wildlife Day](https://studio-5c4fcfa636.onrender.com/studio/world-wildlife-day/),
+  [Pros and cons of a cashless society](https://studio-5c4fcfa636.onrender.com/studio/cashless-society/),
+  [Seven principles for implementing the Consumer Duty](https://studio-5c4fcfa636.onrender.com/studio/consumer-duty/),
+  [The bright side of dark mode](https://studio-5c4fcfa636.onrender.com/studio/dark-mode/),
+  [Climate catastrophes: at our doorstep](https://studio-5c4fcfa636.onrender.com/studio/climate-catastrophes/),
+  [A just transition: an achievable goal?](https://studio-5c4fcfa636.onrender.com/studio/just-transition/),
+  [5 tips for a sustainable Valentine's Day](https://studio-5c4fcfa636.onrender.com/studio/sustainable-valentines-day/)
 - [Log in](https://studio-5c4fcfa636.onrender.com/studio/login/)
 - [Download](https://studio-5c4fcfa636.onrender.com/studio/download/)
 - [Fees and charges](https://studio-5c4fcfa636.onrender.com/studio/fees-and-charges/)
