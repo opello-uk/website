@@ -23,6 +23,14 @@
 	<meta property="og:url" content={`${STUDIO_ORIGIN}/studio/`} />
 	<link rel="canonical" href={`${STUDIO_ORIGIN}/studio/`} />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Opello" />
+	<!-- Twitter card so links shared on X render the same preview card. -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Opello studio" />
+	<meta name="twitter:description" content="Unlock your life. For different lives, different circumstances and different starting points." />
+	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	<link rel="alternate" hreflang="en" href={`${STUDIO_ORIGIN}/studio/`} />
 	<link rel="alternate" hreflang="ar" href={`${STUDIO_ORIGIN}/studio/ar/`} />

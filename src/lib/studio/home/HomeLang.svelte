@@ -37,15 +37,25 @@
 		<meta name="description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة. معاينة غير مدرجة لموقع أوبيلو." />
 		<meta property="og:title" content="استوديو أوبيلو" />
 		<meta property="og:description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة." />
+		<meta name="twitter:title" content="استوديو أوبيلو" />
+		<meta name="twitter:description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة." />
 	{:else}
 		<meta name="description" content="Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için. Opello web sitesinin listelenmeyen stüdyo önizlemesi." />
 		<meta property="og:title" content="Opello stüdyosu" />
 		<meta property="og:description" content="Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için." />
+		<meta name="twitter:title" content="Opello stüdyosu" />
+		<meta name="twitter:description" content="Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için." />
 	{/if}
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={`${STUDIO_ORIGIN}/studio/${lang}/`} />
 	<link rel="canonical" href={`${STUDIO_ORIGIN}/studio/${lang}/`} />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Opello" />
+	<!-- Twitter card so links shared on X render the same preview card. -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 	<!-- Structured data for agent readers: facts match the visible page only
 		(hero line, site language). Same facts as the English root, in this
 		language; URL rides on STUDIO_ORIGIN for the launch-time repoint.

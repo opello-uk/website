@@ -51,6 +51,14 @@
 	<meta property="og:url" content={`${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`} />
 	<link rel="canonical" href={`${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`} />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Opello" />
+	<!-- Twitter card so links shared on X render the same preview card. -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={p.title} />
+	<meta name="twitter:description" content={p.lede} />
+	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	<link rel="alternate" hreflang={lang} href={`${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`} />
 	<link rel="alternate" hreflang="en" href={`${STUDIO_ORIGIN}/studio/${p.slug}/`} />
