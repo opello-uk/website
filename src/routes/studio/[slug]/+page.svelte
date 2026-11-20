@@ -4,21 +4,39 @@
 	import Ring from '#lib/components/Ring.svelte';
 	// Generated placeholder photo until licensed photography is supplied.
 	import split from '#lib/assets/studio/split.jpg';
+	import split2x from '#lib/assets/studio/split@2x.jpg';
+
 	import cardsHero from '#lib/assets/studio/cards-hero.jpg';
+	import cardsHero2x from '#lib/assets/studio/cards-hero@2x.jpg';
+
 	// Savings split hero: generated placeholder until licensed photography is supplied.
 	import savingsHero from '#lib/assets/studio/savings-hero.jpg';
+	import savingsHero2x from '#lib/assets/studio/savings-hero@2x.jpg';
+
 	// Current accounts split hero: generated placeholder until licensed photography is supplied.
 	import currentAccountsHero from '#lib/assets/studio/current-accounts-hero.jpg';
+	import currentAccountsHero2x from '#lib/assets/studio/current-accounts-hero@2x.jpg';
+
 	// Help ring-photo hero: generated placeholder until licensed photography is supplied.
 	import helpHero from '#lib/assets/studio/help-hero.jpg';
+	import helpHero2x from '#lib/assets/studio/help-hero@2x.jpg';
+
 	// Open account photo-ring hero: generated placeholder until licensed photography is supplied.
 	import openAccountHero from '#lib/assets/studio/open-account-hero.jpg';
+	import openAccountHero2x from '#lib/assets/studio/open-account-hero@2x.jpg';
+
 	// About band hero: generated placeholder until licensed photography is supplied.
 	import aboutHero from '#lib/assets/studio/about-hero.jpg';
+	import aboutHero2x from '#lib/assets/studio/about-hero@2x.jpg';
+
 	// News split hero: generated placeholder until licensed photography is supplied.
 	import newsHero from '#lib/assets/studio/news-hero.jpg';
+	import newsHero2x from '#lib/assets/studio/news-hero@2x.jpg';
+
 	// Blog split hero: generated placeholder until licensed photography is supplied.
 	import blogHero from '#lib/assets/studio/blog-hero.jpg';
+	import blogHero2x from '#lib/assets/studio/blog-hero@2x.jpg';
+
 	import { resolve } from '$app/paths';
 	import { hasTranslation, langName, STUDIO_ORIGIN, type Lang } from '#lib/studio/i18n';
 	import { faqJsonLd } from '#lib/studio/faqLd';
@@ -100,7 +118,7 @@
 		<section class="hero hero-split">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'blog' ? blogHero : p.slug === 'news' ? newsHero : p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} alt={p.hero.alt} width={p.slug === 'savings' ? 800 : 900} height={p.slug === 'savings' ? 800 : 600} decoding="async" fetchpriority="high" />
+				<img src={p.slug === 'blog' ? blogHero : p.slug === 'news' ? newsHero : p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} srcset={p.slug === 'blog' ? `${blogHero} 1x, ${blogHero2x} 2x` : p.slug === 'news' ? `${newsHero} 1x, ${newsHero2x} 2x` : p.slug === 'savings' ? `${savingsHero} 1x, ${savingsHero2x} 2x` : p.slug === 'current-accounts' ? `${currentAccountsHero} 1x, ${currentAccountsHero2x} 2x` : `${split} 1x, ${split2x} 2x`} alt={p.hero.alt} width={p.slug === 'savings' ? 800 : 900} height={p.slug === 'savings' ? 800 : 600} decoding="async" fetchpriority="high" />
 			</div>
 			<div class="copy">
 				<p class="kicker">{p.kicker}</p>
@@ -118,7 +136,7 @@
 			</div>
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'help' ? helpHero : cardsHero} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" />
+				<img src={p.slug === 'help' ? helpHero : cardsHero} srcset={p.slug === 'help' ? `${helpHero} 1x, ${helpHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" />
 			</div>
 		</section>
 		{:else if p.hero?.variant === 'photo-ring'}
@@ -126,7 +144,7 @@
 			<div class="ring" aria-hidden="true"><Ring /></div>
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'open-account' ? openAccountHero : cardsHero} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" />
+				<img src={p.slug === 'open-account' ? openAccountHero : cardsHero} srcset={p.slug === 'open-account' ? `${openAccountHero} 1x, ${openAccountHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" />
 			</div>
 			<div class="copy">
 				<p class="kicker">{p.kicker}</p>
@@ -137,7 +155,7 @@
 		{:else if p.hero?.variant === 'band'}
 		<section class="hero hero-band">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
-			<img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} alt={p.hero.alt} width={p.slug === 'about' ? 900 : 800} height={p.slug === 'about' ? 600 : 800} decoding="async" fetchpriority="high" />
+			<img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} srcset={p.slug === 'about' ? `${aboutHero} 1x, ${aboutHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width={p.slug === 'about' ? 900 : 800} height={p.slug === 'about' ? 600 : 800} decoding="async" fetchpriority="high" />
 			<div class="band-scrim" aria-hidden="true"></div>
 			<div class="copy">
 				<p class="kicker">{p.kicker}</p>

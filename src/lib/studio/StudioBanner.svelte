@@ -6,13 +6,15 @@
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const c = $derived(homeCopy[lang]);
 	import banner from '#lib/assets/studio/banner.jpg';
+	import banner2x from '#lib/assets/studio/banner@2x.jpg';
+
 </script>
 
 <section class="banner" aria-labelledby="banner-title">
 	<div class="card">
 		<div class="art">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
-			<img src={banner} alt={c.bannerAlt} width="900" height="600" decoding="async" loading="lazy" />
+			<img src={banner} srcset="{banner} 1x, {banner2x} 2x" alt={c.bannerAlt} width="900" height="600" decoding="async" loading="lazy" />
 		</div>
 		<!-- Outside .art so the tag is not washed out by the faded photo on phones -->
 

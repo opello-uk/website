@@ -5,8 +5,14 @@
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const c = $derived(homeCopy[lang]);
 	import current from '#lib/assets/studio/current.jpg';
+	import current2x from '#lib/assets/studio/current@2x.jpg';
+
 	import savings from '#lib/assets/studio/savings.jpg';
+	import savings2x from '#lib/assets/studio/savings@2x.jpg';
+
 	import cardsPhoto from '#lib/assets/studio/cards.jpg';
+	import cardsPhoto2x from '#lib/assets/studio/cards@2x.jpg';
+
 	// Photography is generated for this build until licensed photography is supplied.
 	// Copy and alt text live in i18n (homeCopy[lang]); the photos stay here and
 	// join by slug. (Fixed 2026-11-19: the i18n move dropped the image sources,
@@ -15,6 +21,11 @@
 		transfers: current,
 		savings: savings,
 		cards: cardsPhoto
+	};
+	const photos2x: Record<string, string> = {
+		transfers: current2x,
+		savings: savings2x,
+		cards: cardsPhoto2x
 	};
 </script>
 
@@ -36,7 +47,7 @@
 		{#each c.products as p (p.title)}
 			<li class="card">
 				<div class="photo tone-{p.tone}">
-					<img src={photos[p.slug]} alt={p.alt} width="800" height="800" decoding="async" loading="lazy" />
+					<img src={photos[p.slug]} srcset="{photos[p.slug]} 1x, {photos2x[p.slug]} 2x" alt={p.alt} width="800" height="800" decoding="async" loading="lazy" />
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>

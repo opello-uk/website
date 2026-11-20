@@ -3,6 +3,8 @@
 	import { homeCopy, langHref, type Lang } from '#lib/studio/i18n';
 	// "Your money on your terms." split section. Copy matches the baseline deck (baseline-04).
 	import split from '#lib/assets/studio/split.jpg';
+	import split2x from '#lib/assets/studio/split@2x.jpg';
+
 	// Generated placeholder photo until licensed photography is supplied.
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const c = $derived(homeCopy[lang]);
@@ -11,7 +13,7 @@
 <section class="split" aria-labelledby="split-title">
 	<div class="media">
 		<!-- Placeholder photo; update alt with the licensed replacement -->
-		<img src={split} alt={c.splitAlt} width="900" height="600" decoding="async" loading="lazy" />
+		<img src={split} srcset="{split} 1x, {split2x} 2x" alt={c.splitAlt} width="900" height="600" decoding="async" loading="lazy" />
 	</div>
 
 	<div class="copy">
