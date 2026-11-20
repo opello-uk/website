@@ -53,6 +53,10 @@
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="Opello" />
+	<meta property="og:site_name" content="Opello" />
+	<meta property="og:locale" content={lang === 'ar' ? 'ar_AR' : 'tr_TR'} />
+	<meta property="og:locale:alternate" content="en_GB" />
+	<meta property="og:locale:alternate" content={lang === 'ar' ? 'tr_TR' : 'ar_AR'} />
 	<!-- Twitter card so links shared on X render the same preview card. -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
