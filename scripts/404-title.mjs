@@ -79,6 +79,17 @@ const body = `
 </div>`;
 const styles = `
 <style>
+/* 2026-11-20 (evening run): the shell uses the brand custom properties but never
+   defined them and links no stylesheet, so a no-JS visit rendered default black on
+   transparent white instead of navy/clay. Define the four inline (same values as
+   src/lib/styles/global.css), and carry print rules matching the studio print pass:
+   navy-on-paper, decorative ring off, peach pill keeps its fill. */
+	:root {
+		--deep: #001431;
+		--peach: #f58851;
+		--clay: #e9e4e0;
+		--muted: rgba(233, 228, 224, 0.66);
+	}
 	.s404 {
 		min-height: 100svh;
 		display: flex;
@@ -223,6 +234,28 @@ const styles = `
 	@media (prefers-reduced-motion: reduce) {
 		.s404-ring svg {
 			animation: none;
+		}
+	}
+	@media print {
+		.s404-ring {
+			display: none;
+		}
+		.s404 {
+			background: transparent;
+			color: var(--deep);
+			min-height: auto;
+		}
+		.s404-brand,
+		.s404-accent,
+		.s404-quiet {
+			color: var(--deep);
+		}
+		.s404-kicker,
+		.s404-footer p {
+			color: rgba(0, 20, 49, 0.66);
+		}
+		.s404-footer {
+			border-top-color: rgba(0, 20, 49, 0.16);
 		}
 	}
 </style>`;
