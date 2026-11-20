@@ -22,6 +22,7 @@
 	import { resolve } from '$app/paths';
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
 	import { faqJsonLd } from '#lib/studio/faqLd';
+	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -59,6 +60,10 @@
 	{#if p.slug === 'faq'}
 		<!-- FAQPage schema mirroring the visible Q&A cards only. -->
 		{@html `<script type="application/ld+json">${JSON.stringify(faqJsonLd(p.sections, p.title, `${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`))}</script>`}
+	{/if}
+	{#if isArticle(p.slug)}
+		<!-- Article schema for the insight articles: this language's own visible copy, no invented dates. -->
+		{@html `<script type="application/ld+json">${JSON.stringify(articleJsonLd(p.title, p.lede, lang, `${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`))}</script>`}
 	{/if}
 </svelte:head>
 
