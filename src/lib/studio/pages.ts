@@ -213,6 +213,12 @@ export const pages: StudioPage[] = [
 	},
 	{
 		slug: 'about',
+		// sourceNote added 2026-11-21 (~07:30 Dubai run): the "Why we are different" list originally carried
+		// five items; the two impact/donation items are out of MLP1 scope (Planet Impact / community initiatives)
+		// and were commented out in EN/AR/TR, leaving three.
+		sourceNotes: [
+			'Scope trim: the "Why we are different" list originally carried two further items about community giving-back and in-app social and environmental impact tools; both are out of the first-release scope and are commented out, leaving three.',
+		],
 		title: 'About',
 		kicker: 'About',
 		lede: 'Finance, made for humans. We are people and planet first.',
@@ -220,11 +226,13 @@ export const pages: StudioPage[] = [
 		hero: { variant: 'band', alt: 'Four people chatting casually in a bright, warm lounge with clay and cream walls' },
 		sections: [
 			{ heading: 'Our objective', body: 'To eradicate social and financial exclusion and create a more sustainable society, using our values-driven financial technology and a community-first approach. We are people and planet first. Opello is for people who want more than excellent financial services: people who want a new experience with finance, one that reflects their identity, values and lifestyle, and that helps them in everyday actions.' },
-			{ heading: 'Why we are different', body: 'Five things we hold ourselves to.', items: [
+			{ heading: 'Why we are different', body: 'Three things we hold ourselves to.', items: [
 				'We never hold your money in an unethical or high-risk manner.',
 				'We offer clear, accessible and interest-free products and services.',
-				'We put our values into action by giving back to our community, and working with them on social impact initiatives.',
-				'We bring you into the equation through social and environmental impact tools inside the app.',
+				// Out of MLP1 scope — giving back/social impact initiatives is donation and community-programme content. Do not publish.
+				// 'We put our values into action by giving back to our community, and working with them on social impact initiatives.',
+				// Out of MLP1 scope — in-app social and environmental impact tools are Planet Impact content. Do not publish.
+				// 'We bring you into the equation through social and environmental impact tools inside the app.',
 				'We adopt a systematic approach to ethical finance, with a focus on equitable access to sustainable financial services.'
 			] },
 			{ heading: 'We are not a bank', body: 'We are a movement. Join us on the journey to fairer, more ethical and transparent finance.', links: [] }

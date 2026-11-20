@@ -254,12 +254,14 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "لماذا نحن مختلفون",
-          body: "خمسة أمور نلتزم بها.",
+          body: "ثلاثة أمور نلتزم بها.",
           items: [
             "لا نحتفظ بأموالك أبداً بطريقة غير أخلاقية أو عالية المخاطر.",
             "نقدم منتجات وخدمات واضحة وسهلة الوصول وخالية من الفوائد.",
-            "نضع قيمنا موضع التنفيذ عبر ردّ العطاء لمجتمعنا والعمل معه على مبادرات الأثر الاجتماعي.",
-            "نساعدك على المشاركة من خلال أدوات الأثر الاجتماعي والبيئي داخل التطبيق.",
+            // Out of MLP1 scope — social impact initiatives / donation content. Do not publish.
+            // "نضع قيمنا موضع التنفيذ عبر ردّ العطاء لمجتمعنا والعمل معه على مبادرات الأثر الاجتماعي.",
+            // Out of MLP1 scope — in-app impact tools are Planet Impact content. Do not publish.
+            // "نساعدك على المشاركة من خلال أدوات الأثر الاجتماعي والبيئي داخل التطبيق.",
             "نتّبع مقاربة منهجية للمال الأخلاقي، مع التركيز على الوصول العادل إلى الخدمات المالية المستدامة.",
           ],
         },
@@ -2334,12 +2336,14 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         {
           source: "placeholder",
           heading: "Neden farklıyız",
-          body: "Kendimize bağlı olduğumuz beş şey.",
+          body: "Kendimize bağlı olduğumuz üç şey.",
           items: [
             "Paranızı asla etik olmayan ya da yüksek riskli bir şekilde tutmayız.",
             "Net, erişilebilir ve faizsiz ürün ve hizmetler sunarız.",
-            "Değerlerimizi topluluğumuza geri vererek ve onlarla sosyal etki girişimlerinde çalışarak hayata geçiririz.",
-            "Uygulama içindeki sosyal ve çevresel etki araçlarıyla sizi sürecin bir parçası yaparız.",
+            // Out of MLP1 scope — social impact initiatives / donation content. Do not publish.
+            // "Değerlerimizi topluluğumuza geri vererek ve onlarla sosyal etki girişimlerinde çalışarak hayata geçiririz.",
+            // Out of MLP1 scope — in-app impact tools are Planet Impact content. Do not publish.
+            // "Uygulama içindeki sosyal ve çevresel etki araçlarıyla sizi sürecin bir parçası yaparız.",
             "Sürdürülebilir finansal hizmetlere adil erişime odaklanan, sistematik bir etik finans yaklaşımı benimseriz.",
           ],
         },
