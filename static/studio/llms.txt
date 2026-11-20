@@ -66,3 +66,7 @@ English pages below; replace /studio/ with /studio/ar/ or /studio/tr/ for the Ar
 - [Accessibility](https://studio-5c4fcfa636.onrender.com/studio/accessibility/)
 - [Responsible disclosure](https://studio-5c4fcfa636.onrender.com/studio/responsible-disclosure/)
 - [Sitemap](https://studio-5c4fcfa636.onrender.com/studio/sitemap/): every page in every language
+
+## Feeds
+
+- [Atom feed](https://studio-5c4fcfa636.onrender.com/studio/feed.xml): the insight articles above as a machine-readable feed (English edition; every article has an Arabic and Turkish twin at /studio/{lang}/{slug}/).
