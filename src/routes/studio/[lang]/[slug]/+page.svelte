@@ -46,6 +46,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	// English page fallback: translated pages inherit the English source notes until the notes
 	// themselves are translated (they are internal review markers, not customer copy).
 	import { bySlug as enBySlug } from '#lib/studio/pages';
+	import { markLangs } from '#lib/studio/scriptLangs';
 	import { faqJsonLd, qaPageSlugs, questionSections } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
 	import { breadcrumbJsonLd, parentBySlug } from '#lib/studio/breadcrumbLd';
@@ -216,10 +217,13 @@ focusMainOnNavigate();
 						{#if s.countries}
 							<!-- Country names bolded and the list split into columns so 109 rows scan
 							     instead of reading as a wall of text; copy unchanged. -->
-							<ul class="links items countries">
+							<!-- The country list is English source data (country names and document
+							     names are not translated), so it is marked lang="en" inside the ar/tr
+							     document (WCAG 3.1.2). -->
+							<ul class="links items countries" lang="en" dir="ltr">
 								{#each s.items as item (item)}
 									{@const c = item.indexOf(': ')}
-									<li><strong>{item.slice(0, c)}</strong>{item.slice(c)}</li>
+									<li><strong>{@html markLangs(item.slice(0, c))}</strong>{@html markLangs(item.slice(c))}</li>
 								{/each}
 							</ul>
 						{:else}

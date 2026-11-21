@@ -5,6 +5,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import Ring from '#lib/components/Ring.svelte';
 	import StudioCrumbs from '#lib/studio/StudioCrumbs.svelte';
 	import EmailBody from '#lib/studio/EmailBody.svelte';
+	import { markLangs } from '#lib/studio/scriptLangs';
 	import '#lib/studio/print.css';
 	// Generated placeholder photo until licensed photography is supplied.
 	import split from '#lib/assets/studio/split.jpg';
@@ -209,7 +210,7 @@ focusMainOnNavigate();
 							<ul class="links items countries">
 								{#each s.items as item (item)}
 									{@const c = item.indexOf(': ')}
-									<li><strong>{item.slice(0, c)}</strong>{item.slice(c)}</li>
+									<li><strong>{@html markLangs(item.slice(0, c))}</strong>{@html markLangs(item.slice(c))}</li>
 								{/each}
 							</ul>
 						{:else}
