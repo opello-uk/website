@@ -46,6 +46,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import { faqJsonLd } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
 	import { breadcrumbJsonLd, parentBySlug } from '#lib/studio/breadcrumbLd';
+	import { siteJsonLd } from '#lib/studio/siteLd';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -111,6 +112,8 @@ focusMainOnNavigate();
 		<!-- Article schema for the insight articles: visible copy only, no invented dates. -->
 		{@html `<script type="application/ld+json">${JSON.stringify(articleJsonLd(p.title, p.lede, 'en', altHref('en')))}</script>`}
 	{/if}
+	<!-- Site-entity schema (Organization + WebSite) so agents landing on any sub-page pick up the site entity, matching the homepage graph. -->
+		{@html `<script type="application/ld+json">${JSON.stringify(siteJsonLd('en'))}</script>`}
 		<!-- Breadcrumb schema from the visible hero chrome: brand, kicker, title. -->
 		{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd(p.kicker, p.title, altHref('en'), parentBySlug[p.slug] ? `${STUDIO_ORIGIN}/studio/${parentBySlug[p.slug]}/` : null))}</script>`}
 	</svelte:head>

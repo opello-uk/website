@@ -6,6 +6,7 @@
 // copy pending sign-off), and inventing one would be a false claim.
 // Studio pages are noindex, so this is agent-legibility plumbing for launch,
 // not search SEO today.
+import { STUDIO_ORIGIN } from '#lib/studio/i18n';
 
 // The insight/blog article slugs (not product pages, not help collections).
 export const articleSlugs = [
@@ -42,8 +43,8 @@ export function articleJsonLd(
 		description: lede,
 		url: pageUrl,
 		inLanguage: lang === 'en' ? 'en-GB' : lang,
-		// Name only: the Opello name is the fact the page itself shows (nav and footer).
-		// No logo, no sameAs, no dates, until each is real.
-		publisher: { '@type': 'Organization', name: 'Opello' }
+		// Reference the site-entity Organization node (siteJsonLd, same @id on every
+		// studio page) instead of embedding a second inline Organization.
+		publisher: { '@id': `${STUDIO_ORIGIN}/studio/#org` }
 	};
 }
