@@ -4,6 +4,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import Ring from '#lib/components/Ring.svelte';
 	import StudioCrumbs from '#lib/studio/StudioCrumbs.svelte';
+	import EmailBody from '#lib/studio/EmailBody.svelte';
 	import '#lib/studio/print.css';
 	// Generated placeholder photo until licensed photography is supplied.
 	import split from '#lib/assets/studio/split.jpg';
@@ -191,7 +192,7 @@ focusMainOnNavigate();
 			{#each p.sections as s (s.heading)}
 				<article class="card" class:wide={s.wide} class:half={s.half} class:big={s.big}>
 					<h2>{s.heading}</h2>
-					<p>{s.body}</p>
+					<EmailBody text={s.body} />
 					{#if s.href}<a class="link" href={resolve(s.href as '/')} aria-label={`${s.linkLabel ?? 'Learn more'}: ${s.heading}`}>{s.linkLabel ?? 'Learn more'}</a>{/if}
 					{#if s.items}
 						{#if s.countries}
