@@ -58,6 +58,21 @@
 		color: #001431 !important;
 	}
 
+	/* Pagination: cards and banner blocks stay whole; a heading never
+	   orphans at the bottom of a page (print gap found 2026-11-22: the FAQ
+	   "Is my money safe?" card tore across the page 1/2 boundary). */
+	.card,
+	.banner .card,
+	.split .card {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+
+	.foot .marker,
+	.foot .base {
+		break-inside: avoid;
+	}
+
 	/* Cards keep a visible rule on paper */
 	.card {
 		border: 1px solid rgba(0, 20, 49, 0.25) !important;
