@@ -260,6 +260,58 @@ const styles = `
 	}
 </style>`;
 
+const shell404Strings = {
+	ar: {
+		dir: 'rtl',
+		docLang: 'ar',
+		title: 'الصفحة غير موجودة · Opello studio (unlisted)',
+		lede: 'قد يكون العنوان قد تغيّر، أو أنه لم يكن على الموقع. كل ما هو هنا يبدأ من الصفحة الرئيسية.',
+		kicker: 'الصفحة غير موجودة &middot; 404',
+		nfTitle: 'هذه الصفحة',
+		nfAccent: 'ليست هنا.',
+		cta: 'العودة إلى الصفحة الرئيسية',
+		sitemap: 'كل صفحات الموقع',
+		skip: 'تخطَّ إلى المحتوى',
+		marker: 'نسخة أوبيلو التجريبية · لا تُنشر قبل الموافقة.',
+	},
+	tr: {
+		dir: 'ltr',
+		docLang: 'tr',
+		title: 'Sayfa bulunamadı · Opello studio (unlisted)',
+		lede: 'Adres değişmiş olabilir ya da sitede hiç var olmamış olabilir. Burada olan her şey ana sayfadan başlar.',
+		kicker: 'Sayfa bulunamadı &middot; 404',
+		nfTitle: 'Bu sayfa',
+		nfAccent: 'burada değil.',
+		cta: 'Ana sayfaya dön',
+		sitemap: 'Sitedeki her sayfa',
+		skip: 'İçeriğe atla',
+		marker: 'Opello stüdyo sürümü · onaylanana kadar yayımlanmaz.',
+	},
+};
+const localizeScript =
+	'<script>\n' +
+	'(function(){\n' +
+	'var m=/\\/studio\\/(ar|tr)\\//.exec(location.pathname);if(!m)return;' +
+	'var s=' + JSON.stringify(shell404Strings) + '[m[1]];' +
+	'var r=document.querySelector(".s404");if(!r)return;' +
+	'r.lang=s.docLang;r.dir=s.dir;document.documentElement.lang=s.docLang;' +
+	'r.querySelector(".s404-skip").textContent=s.skip;' +
+	'r.querySelector(".s404-kicker").innerHTML=s.kicker;' +
+	'r.querySelector(".s404-main h1").innerHTML=s.nfTitle+" <span class=\\"s404-accent\\">"+s.nfAccent+"</span>";' +
+	'r.querySelector(".s404-lede").textContent=s.lede;' +
+	'r.querySelector(".s404-pill").textContent=s.cta;' +
+	'r.querySelector(".s404-quiet").textContent=s.sitemap;' +
+	'r.querySelector(".s404-footer p").innerHTML=s.marker;' +
+	'document.title=s.title;' +
+	'var q=function(a,b){var e=document.querySelector(a);if(e)e.setAttribute(b?b:"content","")},f=function(a){var e=document.querySelector(a);return e},set=function(a,v){var e=document.querySelector(a);if(e)e.setAttribute("content",v)};' +
+	'set("meta[name=description]",s.lede);set("meta[property=og:title]",s.title);set("meta[property=og:description]",s.lede);set("meta[name=twitter:title]",s.title);set("meta[name=twitter:description]",s.lede);' +
+	'})();\n</' + 'script>';
+
+// Injected after the static body so the elements exist when it runs (it is
+// synchronous, placed at the end of the shell body; English stays for en and
+// for anything else until StudioError boots).
+function injectLocalizer(html) { return html.replace(/(<div class="s404"[\s\S]*?<\/div>\s*)<\/body>/, (m, body) => `${body}\n\t${localizeScript}\n</body>`);
+}
 let html = readFileSync(file, 'utf8');
 let injectedHead = false;
 if (html.includes('<title>')) {
@@ -291,6 +343,21 @@ if (html.includes('class="s404"')) {
 		/<body[^>]*>/,
 		(match) => `${match}\n\t${body}`
 	);
-	writeFileSync(file, html);
+	writeFileSync(file, injectLocalizer(html));
 	console.log(`404-title: injected title, head tags and static branded body into ${file}`);
 }
+
+// 2026-11-21 07:37 Dubai run: per-path localization of the static shell.
+// The shell was English for every path, so a no-JS visit to /studio/ar/<bogus>/
+// or /studio/tr/<bogus>/ showed English (lang=en-GB, dir=ltr) — a language
+// coverage gap on every wrong URL in those languages (the booted app already
+// translated via StudioError, so this only fixes the no-JS view and the
+// pre-boot flash). A tiny inline script reads location.pathname and swaps the
+// shell's lang/dir and visible strings (skip link, kicker, h1, lede, pill,
+// sitemap link, footer marker) plus the title/description/og/twitter meta to
+// Arabic or Turkish when the path carries the language prefix; English is the
+// fallback. Strings are the same i18n err block StudioError renders, copied
+// verbatim so the shell and the booted page can never disagree. The 404 shell
+// only ever serves unmatched paths, so only the not-found strings are needed.
+// The script tag is split in the source so the file itself never contains a
+// closing script sequence.
