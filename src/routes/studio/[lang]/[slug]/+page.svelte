@@ -261,7 +261,9 @@ focusMainOnNavigate();
 		z-index: 100;
 	}
 	.skip:focus {
-		left: 16px;
+		/* logical property so RTL mirrors: a physical left would leave inset-inline-start
+		   (right in RTL) still at -9999px and stretch the link thousands of px wide */
+		inset-inline-start: 16px;
 		top: 16px;
 		background: var(--peach);
 		color: var(--deep);
