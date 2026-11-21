@@ -490,7 +490,7 @@ export const pages: StudioPage[] = [
 		// customer tables are out of scope and not summarised. The PDF has no chargeback fee row;
 		// the chargeback window lives in the help answers.
 		sourceNotes: [
-			'Source: algbra.com fees and charges PDF (last updated 7 April 2026), re-checked in full on 20 November 2026 — the Standard customer table is covered above; the PDF\'s other customer tables (Borderless and Business) are out of the first-release scope and are not summarised.',
+			'Source: algbra.com fees and charges PDF (last updated 7 April 2026), re-checked in full on 20 November 2026: the Standard customer table is covered above; the PDF\'s other customer tables (Borderless and Business) are out of the first-release scope and are not summarised.',
 			'Rows left out on purpose: physical-card issuance and replacement, cash withdrawals and in-account currency conversion (out of first-release scope), and Direct Debit and standing orders (not yet available, per the FAQ). The PDF has no chargeback fee row; the chargeback claim window is covered in the help answers.',
 			'Every figure is Algbra\'s published rate, shown for reference. The Opello fee schedule must be confirmed before this page publishes.'
 		],
