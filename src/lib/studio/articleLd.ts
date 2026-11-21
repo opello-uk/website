@@ -45,6 +45,16 @@ export function articleJsonLd(
 		inLanguage: lang === 'en' ? 'en-GB' : lang,
 		// Reference the site-entity Organization node (siteJsonLd, same @id on every
 		// studio page) instead of embedding a second inline Organization.
-		publisher: { '@id': `${STUDIO_ORIGIN}/studio/#org` }
+		publisher: { '@id': `${STUDIO_ORIGIN}/studio/#org` },
+		author: { '@id': `${STUDIO_ORIGIN}/studio/#org` },
+		// The page's own og card: mirrors scripts/og-cards.mjs layout (og/<slug>.png,
+		// og/<lang>/<slug>.png for ar/tr twins) so the article image is a real asset.
+		image: ogImageFor(pageUrl)
 	};
+}
+
+function ogImageFor(pageUrl: string): string {
+	const rest = pageUrl.replace(STUDIO_ORIGIN, '').replace(/^\/studio\//, '').replace(/\/$/, '');
+	if (rest === '') return `${STUDIO_ORIGIN}/studio/og/home.png`;
+	return `${STUDIO_ORIGIN}/studio/og/${rest}.png`;
 }
