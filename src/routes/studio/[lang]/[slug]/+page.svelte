@@ -231,9 +231,11 @@ focusMainOnNavigate();
 		{#if notes.length}
 			<section class="sources" aria-labelledby="sources-heading">
 				<h2 id="sources-heading">{t.sourcesHeading}</h2>
+				<!-- dir=auto: most notes are English review markers on an RTL page; without this the
+				     paragraph direction is RTL and their trailing punctuation shuffles to the line start. -->
 				<ul>
 					{#each notes as n (n)}
-						<li>{n}</li>
+						<li dir="auto">{n}</li>
 					{/each}
 				</ul>
 			</section>
