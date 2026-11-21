@@ -232,8 +232,10 @@ focusMainOnNavigate();
 			<section class="sources" aria-labelledby="sources-heading">
 				<h2 id="sources-heading">{t.sourcesHeading}</h2>
 				<!-- dir=auto: most notes are English review markers on an RTL page; without this the
-				     paragraph direction is RTL and their trailing punctuation shuffles to the line start. -->
-				<ul>
+				     paragraph direction is RTL and their trailing punctuation shuffles to the line start.
+				     lang=en: every note in pages.ts is English (checked 2026-11-21), so WCAG 3.1.2 needs
+				     the language of parts marked instead of inheriting the page's ar/tr lang. -->
+				<ul lang="en">
 					{#each notes as n (n)}
 						<li dir="auto">{n}</li>
 					{/each}
