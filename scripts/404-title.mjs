@@ -85,6 +85,7 @@ const styles = `
    src/lib/styles/global.css), and carry print rules matching the studio print pass:
    navy-on-paper, decorative ring off, peach pill keeps its fill. */
 	:root {
+		color-scheme: light;
 		--deep: #001431;
 		--peach: #f58851;
 		--clay: #e9e4e0;

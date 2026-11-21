@@ -22,6 +22,7 @@ focusMainOnNavigate();
 	<meta name="description" content="Unlock your life. For different lives, different circumstances and different starting points. Unlisted studio preview of the Opello website." />
 	<!-- Referrer policy: no-referrer, because the studio is unlisted and its URLs should not leak to external sites when someone clicks out. Re-check at launch with the STUDIO_ORIGIN repoint. -->
 	<meta name="referrer-policy" content="no-referrer" />
+	<meta name="color-scheme" content="light" />
 	<meta property="og:title" content="Opello studio" />
 	<meta property="og:description" content="Unlock your life. For different lives, different circumstances and different starting points." />
 	<meta property="og:type" content="website" />

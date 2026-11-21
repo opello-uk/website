@@ -78,6 +78,7 @@ focusMainOnNavigate();
 	<meta name="description" content={p.metaDescription ?? p.lede} />
 	<!-- Referrer policy: no-referrer, because the studio is unlisted and its URLs should not leak to external sites when someone clicks out. Re-check at launch with the STUDIO_ORIGIN repoint. -->
 	<meta name="referrer-policy" content="no-referrer" />
+	<meta name="color-scheme" content="light" />
 	<meta property="og:title" content={p.title} />
 	<meta property="og:description" content={p.metaDescription ?? p.lede} />
 	<meta property="og:type" content="website" />

@@ -40,6 +40,7 @@ focusMainOnNavigate();
 		<meta name="description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة. معاينة غير مدرجة لموقع أوبيلو." />
 		<!-- Referrer policy: no-referrer, because the studio is unlisted and its URLs should not leak to external sites when someone clicks out. Re-check at launch with the STUDIO_ORIGIN repoint. -->
 		<meta name="referrer-policy" content="no-referrer" />
+		<meta name="color-scheme" content="light" />
 		<meta property="og:title" content="استوديو أوبيلو" />
 		<meta property="og:description" content="افتح حياتك. لحياةٍ مختلفة وظروفٍ مختلفة ونقاط بدايةٍ مختلفة." />
 		<meta name="twitter:title" content="استوديو أوبيلو" />

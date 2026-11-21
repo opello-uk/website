@@ -39,6 +39,10 @@
 }
 
 :root {
+	/* Pinned to the design's light surfaces: without a declared scheme, dark-mode
+	   browsers draw scrollbars, carets, autofill and native widgets in their own
+	   dark style over the fixed navy/clay palette. */
+	color-scheme: light;
 	--peach: #f58851;
 	--deep: #001431;
 	--mid: #005385;
