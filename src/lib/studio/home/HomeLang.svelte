@@ -9,6 +9,7 @@
 	import StudioPhoto from '#lib/studio/StudioPhoto.svelte';
 	import '#lib/studio/print.css';
 	import { chrome, langHref, STUDIO_ORIGIN, homeCopy } from '#lib/studio/i18n';
+	import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import { resolve } from '$app/paths';
 
 	let { lang: langProp = 'ar' }: { lang?: 'ar' | 'tr' } = $props();
@@ -23,6 +24,7 @@
 	// Internal links point to this language's equivalent when it exists,
 	// otherwise they keep their English target.
 	const local = $derived((href: string) => resolve(langHref(lang, href) as '/'));
+focusMainOnNavigate();
 </script>
 
 <svelte:head>
@@ -102,7 +104,7 @@
 	<a class="skip" href="#content">{t.skip}</a>
 	<StudioNav {lang} />
 
-	<main id="content">
+	<main id="content" tabindex="-1">
 		<StudioHero {lang} />
 		<StudioProducts {lang} />
 		<StudioSplit {lang} />
@@ -143,4 +145,6 @@
 		min-height: 40svh;
 		min-width: 0;
 	}
+	/* Programmatic focus lands on <main> after client-side navigation; never a visible ring. */
+	main:focus { outline: none; }
 </style>

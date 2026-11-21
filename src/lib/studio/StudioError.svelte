@@ -76,7 +76,7 @@
 	<a class="skip" href="#content">Skip to content</a>
 	<StudioNav {lang} />
 
-	<main class="error" id="content">
+	<main class="error" id="content" tabindex="-1">
 		<div class="ring" aria-hidden="true"><Ring /></div>
 		<p class="kicker">{notFound ? t.notFoundKicker : t.serverKicker} · {status}</p>
 		<h1>
@@ -219,4 +219,6 @@
 			animation: none;
 		}
 	}
+	/* Programmatic focus lands on <main> after client-side navigation; never a visible ring. */
+	main:focus { outline: none; }
 </style>

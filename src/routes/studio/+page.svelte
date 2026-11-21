@@ -1,5 +1,6 @@
 <script lang="ts">
 	import StudioNav from '#lib/studio/StudioNav.svelte';
+import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import StudioHero from '#lib/studio/StudioHero.svelte';
 	import StudioProducts from '#lib/studio/StudioProducts.svelte';
@@ -11,6 +12,7 @@
 	import { STUDIO_ORIGIN } from '#lib/studio/i18n';
 
 	const title = 'Opello studio (unlisted preview)';
+focusMainOnNavigate();
 </script>
 
 <svelte:head>
@@ -80,7 +82,7 @@
 	<a class="skip" href="#personal">Skip to content</a>
 	<StudioNav />
 
-	<main id="personal">
+	<main id="personal" tabindex="-1">
 		<StudioHero />
 		<StudioProducts />
 		<StudioSplit />
@@ -120,4 +122,6 @@
 		min-height: 40svh;
 		min-width: 0;
 	}
+	/* Programmatic focus lands on <main> after client-side navigation; never a visible ring. */
+	main:focus { outline: none; }
 </style>

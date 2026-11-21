@@ -1,5 +1,6 @@
 <script lang="ts">
 	import StudioNav from '#lib/studio/StudioNav.svelte';
+import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import Ring from '#lib/components/Ring.svelte';
 	import StudioCrumbs from '#lib/studio/StudioCrumbs.svelte';
@@ -66,6 +67,7 @@
 	const notes = $derived(
 		p.sourceNotes ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
 	);
+focusMainOnNavigate();
 </script>
 
 <svelte:head>
@@ -116,7 +118,7 @@
 	<a class="skip" href="#content">Skip to content</a>
 	<StudioNav />
 
-	<main class="subpage" id="content">
+	<main class="subpage" id="content" tabindex="-1">
 		{#if p.hero?.variant === 'split'}
 		<section class="hero hero-split">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
@@ -783,4 +785,6 @@
 		outline: 2px solid var(--peach);
 		outline-offset: 3px;
 	}
+	/* Programmatic focus lands on <main> after client-side navigation; never a visible ring. */
+	main:focus { outline: none; }
 </style>

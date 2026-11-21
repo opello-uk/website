@@ -1,5 +1,6 @@
 <script lang="ts">
 	import StudioNav from '#lib/studio/StudioNav.svelte';
+import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import Ring from '#lib/components/Ring.svelte';
 	import StudioCrumbs from '#lib/studio/StudioCrumbs.svelte';
@@ -67,6 +68,7 @@
 	// Internal links point to this language's equivalent when it exists,
 	// otherwise they keep their English target.
 	const local = $derived((href: string) => resolve(langHref(lang, href) as '/'));
+focusMainOnNavigate();
 </script>
 
 <svelte:head>
@@ -119,7 +121,7 @@
 	<a class="skip" href="#content">{t.skip}</a>
 	<StudioNav {lang} />
 
-	<main class="subpage" id="content">
+	<main class="subpage" id="content" tabindex="-1">
 		{#if p.hero?.variant === 'split'}
 		<section class="hero hero-split">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
@@ -773,4 +775,6 @@
 		outline: 2px solid var(--peach);
 		outline-offset: 3px;
 	}
+	/* Programmatic focus lands on <main> after client-side navigation; never a visible ring. */
+	main:focus { outline: none; }
 </style>
