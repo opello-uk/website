@@ -152,7 +152,9 @@
 		border-color: var(--peach);
 	}
 	.cta:focus-visible {
-		outline: 2px solid var(--peach);
+		/* Navy outline: the pill sits on the photo banner, where peach alone samples 2.75-2.98:1 (WCAG 1.4.11 wants 3:1).
+		   The global peach box-shadow stays on underneath, so the ring keeps its two-tone look. */
+		outline: 2px solid var(--deep);
 		outline-offset: 3px;
 	}
 	.cta svg {

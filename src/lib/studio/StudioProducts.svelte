@@ -202,7 +202,9 @@
 		color: var(--clay);
 	}
 	.learn:focus-visible {
-		outline: 2px solid var(--peach);
+		/* Navy outline here: the section ground is light clay (peach alone measures 1.95:1, WCAG 1.4.11 wants 3:1).
+		   The global peach box-shadow stays on underneath, so the ring keeps its two-tone look. */
+		outline: 2px solid var(--deep);
 		outline-offset: 3px;
 	}
 	.learn svg {
