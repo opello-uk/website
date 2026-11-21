@@ -537,7 +537,10 @@ export const pages: StudioPage[] = [
 			{ heading: 'My account', body: 'Statements, limits, Cubes and transfers.', href: '/studio/help-my-account/', linkLabel: 'Read the answers', items: [
 				'How do I generate a statement?', 'What are my account limits?', 'What are Cubes?', 'How do I create a regular Cube?', 'Can I make international transfers?'
 			] },
-			// OUT OF MLP1 SCOPE — section removed, do not publish.
+			{ heading: 'Ethical Saver Cubes', body: 'Fixed-term savings, profit, tax and protection.', href: '/studio/help-ethical-saver/', linkLabel: 'Read the answers', items: [
+				'What are Ethical Saver Cubes?', 'How do Ethical Saver Cubes work?', 'Is there a minimum deposit?', 'Can I withdraw my money early?', 'How are Ethical Saver Cubes Sharia-compliant?', 'Can I open more than one?', 'What happens when my Cube matures?', 'Are the profits guaranteed?', 'Can I close my account while I have Cubes?', 'Do I need to pay tax on my profit?'
+			] },
+			// The Ethical Saver help page is live with these ten answers (six out-of-scope answers purged there 2026-11-20; index section restored 2026-11-21 after the MLP1 purge had dropped it by mistake).
 
 			{ heading: 'Security and data', body: 'How we protect your money and your information.', href: '/studio/help-security-data/', linkLabel: 'Read the answers', items: [
 				'Is my money safe?', 'How secure is my account?', 'What personal data do I need to share?', 'How does Opello process my data?', 'How do I opt out of marketing notifications?', 'Keeping your money safe: authorised push payment (APP) scams'
