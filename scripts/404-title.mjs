@@ -261,26 +261,35 @@ const styles = `
 </style>`;
 
 let html = readFileSync(file, 'utf8');
+let injectedHead = false;
 if (html.includes('<title>')) {
 	console.log('404-title: 404.html already has a title, leaving it alone');
 } else {
 	// Reuse the app shell's head: inject right after the charset declaration so
-	// it is set before anything that could read it.
+	// it is set before anything that could read it. The stylesheet goes in the
+	// head too: <style> in body is invalid HTML (caught by the 2026-11-21
+	// html-validate sweep), and the head placement renders identically.
 	html = html.replace(
 		/<meta charset="utf-8"\s*\/?>/,
-		(match) => `${match}\n\t\t<title>${title}</title>${head}`
+		(match) => `${match}\n\t\t<title>${title}</title>${head}\n\t\t${styles}`
 	);
+	injectedHead = true;
 }
 if (html.includes('class="s404"')) {
 	console.log('404-title: 404.html already has the static body, leaving it alone');
 } else {
+	if (!injectedHead) {
+		// Head tags were injected by an earlier run; carry the stylesheet in the
+		// head so it still lands outside the body.
+		html = html.replace(/<\/head>/, (match) => `${styles}\n${match}`);
+	}
 	// Static branded body: the shell used to be empty until the app booted, so a
 	// no-JS visit (and the pre-boot flash) showed a blank white page. This body
 	// carries the same chrome StudioError renders (navy ground, ring, peach pill,
 	// sitemap link, footer marker); the app's hydration replaces it on boot.
 	html = html.replace(
 		/<body[^>]*>/,
-		(match) => `${match}\n\t${styles}\n\t${body}`
+		(match) => `${match}\n\t${body}`
 	);
 	writeFileSync(file, html);
 	console.log(`404-title: injected title, head tags and static branded body into ${file}`);
