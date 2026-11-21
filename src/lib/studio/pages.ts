@@ -8,6 +8,9 @@ export type StudioPage = {
 	title: string;
 	kicker: string;
 	lede: string;
+	// Optional shorter meta description (search snippets truncate around 155-165 chars).
+	// Used for <meta name=description>/og/twitter description only; the visible lede is untouched.
+	metaDescription?: string;
 	// Optional unique hero. 'split' = photo card beside the copy (landing-page card language);
 	// 'band' = full-bleed photo with the copy overlaid. Default is the shared ring hero.
 	// default is the shared ring hero. Placeholder photos keep their alt updated with the licensed replacement.
@@ -502,6 +505,7 @@ export const pages: StudioPage[] = [
 		title: 'Accessibility',
 		kicker: 'Legal',
 		lede: 'How we are working to make Opello usable by everyone, what we have checked so far, and how to tell us when something gets in your way. Placeholder until the statement is confirmed.',
+		metaDescription: "How we are making Opello usable by everyone, what we have checked so far, and how to tell us when something gets in your way. Draft statement.", // shorter than the lede for search snippets; lede untouched
 		sections: [
 			{ heading: 'Our commitment', body: '[Placeholder: we aim to make our website and app meet the WCAG 2.2 AA standard, and we treat accessibility problems as bugs to fix.]' },
 			{ heading: 'What we have checked', body: 'An automated colour-contrast scan of every studio page at desktop and phone widths, with the failures fixed (17 November 2026). Layouts checked by eye at 1440 and 390 pixels. Keyboard access and visible focus: focus-visible rings on navigation, footer and card links, plus a skip-to-content link on every page template (17 November 2026). Screen-reader spot-checks: heading order, skip links, main landmark, link text and tab order verified on the homepage and sub-pages (17 November 2026). Reduced motion: every animated component has a prefers-reduced-motion block that disables transitions and animations (17 November 2026). Automated accessibility checks (axe) across the studio pages at 1440 and 390 pixels, re-run after the card styling update, with no violations found (19 November 2026).' },
@@ -517,6 +521,7 @@ export const pages: StudioPage[] = [
 		title: 'Help articles',
 		kicker: 'Help',
 		lede: 'The articles in each help category. Titles are taken from Algbra\'s help centre. Getting started, Logging in, My card, My account, Ethical Saver, Security and data, About Opello and Get in touch answers are written.',
+		metaDescription: "Help articles by category: getting started, logging in, my card, my account, Ethical Saver, security and data, about Opello and get in touch.", // shorter than the lede for search snippets; lede untouched
 		sections: [
 			{ heading: 'Getting started', body: 'Opening your account and setting up.', href: '/studio/help-getting-started/', linkLabel: 'Read the answers', items: [
 				'Am I eligible for an account?', 'Do you carry out credit checks?', 'Where can I download the app?', 'What do I need to open an account?', 'Why do I need to verify my identity?', 'Finding your tax identification number (TIN)', 'How can I add funds?', 'Does Opello accept Bacs payments?', 'Can I deposit cash or cheques into my account?'
@@ -780,6 +785,7 @@ export const pages: StudioPage[] = [
 		title: 'My account',
 		kicker: 'Help articles',
 		lede: 'Answers to the My account questions that are not about Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off.',
+		metaDescription: "Answers to the My account questions, written for Opello. Not final until the flagged points are signed off.", // shorter than the lede for search snippets; lede untouched
 		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
 		sourceNotes: [
 			'Source: help.algbra.com My account articles, adapted for Opello.',
@@ -798,6 +804,7 @@ export const pages: StudioPage[] = [
 		title: 'Ethical Saver help',
 		kicker: 'Help articles',
 		lede: 'Sixteen answers on Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not for publication until compliance has signed off the savings, protection and Sharia wording.',
+		metaDescription: "Sixteen answers on Ethical Saver Cubes, written for Opello. Not for publication until compliance has signed off the wording.", // shorter than the lede for search snippets; lede untouched
 		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
 		sourceNotes: [
 			'Source: sixteen help.algbra.com Ethical Saver articles, adapted for Opello. The whole page is held for compliance sign-off (savings protection, Murabaha/Sharia, profit rate, tax, early withdrawal); nothing here extends until signed off.'
@@ -847,6 +854,7 @@ export const pages: StudioPage[] = [
 		title: 'Get in touch',
 		kicker: 'Help articles',
 		lede: 'Answers to the Get in touch questions, taken from the Algbra help centre and written for Opello. Every contact detail is a placeholder until Opello sets up its own channels.',
+		metaDescription: "Answers to the Get in touch questions, written for Opello. Every contact detail is a placeholder until Opello sets up its own channels.", // shorter than the lede for search snippets; lede untouched
 		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
 		sourceNotes: [
 			'Source: help.algbra.com Get in touch articles, adapted for Opello.',
@@ -973,6 +981,7 @@ export const pages: StudioPage[] = [
 		title: 'Money and mental health: 5 free mood boosters',
 		kicker: 'Insights',
 		lede: 'The link between money and mental health is often overlooked. Financial strain can worsen mental health, and poor mental health can make money harder to manage. Here are five free things that can help.',
+		metaDescription: "The link between money and mental health is often overlooked. Five free things that can help.", // shorter than the lede for search snippets; lede untouched
 		source: 'algbra',
 		sourceNotes: [
 			'Source: algbra.com/news/money-and-mental-health-5-free-mood-boosters (Algbra blog article, 6 September 2022). Wording adapted for Opello. Algbra product references and community initiatives are left out.',
@@ -1268,6 +1277,7 @@ export const pages: StudioPage[] = [
 		title: 'Getting a UK account from abroad',
 		kicker: 'Insights',
 		lede: 'Many people living outside the UK still get paid in pounds, own UK property or need to move money to the UK. Here is how a UK account can work when you do not live here.',
+		metaDescription: "Many people living outside the UK still get paid in pounds or need to move money to the UK. Here is how a UK account can work when you do not live here.", // shorter than the lede for search snippets; lede untouched
 		sections: [
 			{ heading: 'Why you might need a UK account', body: 'Freelancers and remote workers paid by UK clients, business owners with UK customers or suppliers, people with UK rental income, and investors with UK assets often need to receive or hold pounds.', items: [
 				'Freelancers and remote professionals paid by UK companies',

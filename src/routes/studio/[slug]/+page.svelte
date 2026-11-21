@@ -74,11 +74,11 @@ focusMainOnNavigate();
 <svelte:head>
 	<title>{p.title} · Opello studio (unlisted)</title>
 	<!-- Description from the page's own lede; og tags make shared links render as a preview card. -->
-	<meta name="description" content={p.lede} />
+	<meta name="description" content={p.metaDescription ?? p.lede} />
 	<!-- Referrer policy: no-referrer, because the studio is unlisted and its URLs should not leak to external sites when someone clicks out. Re-check at launch with the STUDIO_ORIGIN repoint. -->
 	<meta name="referrer-policy" content="no-referrer" />
 	<meta property="og:title" content={p.title} />
-	<meta property="og:description" content={p.lede} />
+	<meta property="og:description" content={p.metaDescription ?? p.lede} />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={altHref('en')} />
 	<link rel="canonical" href={altHref('en')} />
@@ -96,7 +96,7 @@ focusMainOnNavigate();
 	<!-- Twitter card so links shared on X render the same preview card. -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={p.title} />
-	<meta name="twitter:description" content={p.lede} />
+	<meta name="twitter:description" content={p.metaDescription ?? p.lede} />
 	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/studio/og/${p.slug}.png`} />
 	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	{#each alts as l (l)}

@@ -7,7 +7,7 @@
   {
     "path": "accessibility.png",
     "title": "Accessibility",
-    "description": "How we are working to make Opello usable by everyone, what we have checked so far, and how to tell us when something gets in your way. Placeholder until the statement is confirmed."
+    "description": "How we are making Opello usable by everyone, what we have checked so far, and how to tell us when something gets in your way. Draft statement."
   },
   {
     "path": "all-plans.png",
@@ -22,7 +22,7 @@
   {
     "path": "ar/accessibility.png",
     "title": "إمكانية الوصول",
-    "description": "كيف نعمل لجعل أوبيلو قابلاً للاستخدام من الجميع، وما تحققناه حتى الآن، وكيف تخبرنا عندما يعيقك أمر ما. [Placeholder: statement to be confirmed.]"
+    "description": "كيف نعمل لجعل أوبيلو قابلاً للاستخدام من الجميع، وما تحققناه حتى الآن، وكيف تخبرنا عندما يعيقك أمر ما. صياغة أولية."
   },
   {
     "path": "ar/all-plans.png",
@@ -147,17 +147,17 @@
   {
     "path": "ar/help-articles.png",
     "title": "مقالات المساعدة",
-    "description": "المقالات في كل فئة من فئات المساعدة. العناوين مأخوذة من مركز مساعدة ألجبرا. إجابات البدء وتسجيل الدخول وبطاقتي وحسابي والموفر الأخلاقي والأمن والبيانات ونبذة عن أوبيلو والتواصل معنا مكتوبة."
+    "description": "إجابات على أسئلة حسابي، مكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة."
   },
   {
     "path": "ar/help-ethical-saver.png",
     "title": "مساعدة الموفر الأخلاقي",
-    "description": "ستة عشر إجابة عن مكعبات الموفر الأخلاقي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. لا تُنشر قبل موافقة الامتثال على صياغة المدخرات والحماية والشريعة."
+    "description": "ستة عشر إجابة عن مكعبات الموفر الأخلاقي، مكتوبة لأوبيلو. لا تُنشر قبل موافقة الامتثال على الصياغة."
   },
   {
     "path": "ar/help-get-in-touch.png",
     "title": "كيفية التواصل معنا",
-    "description": "إجابات على أسئلة التواصل، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. كل بيانات التواصل عنصر نائب حتى تُنشئ أوبيلو قنواتها الخاصة."
+    "description": "إجابات على أسئلة التواصل، مكتوبة لأوبيلو. كل بيانات التواصل عنصر نائب حتى تُنشئ أوبيلو قنواتها الخاصة."
   },
   {
     "path": "ar/help-getting-started.png",
@@ -172,7 +172,7 @@
   {
     "path": "ar/help-my-account.png",
     "title": "حسابي",
-    "description": "إجابات على أسئلة حسابي التي لا تتعلق بمكعبات التوفير الأخلاقي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة."
+    "description": "إجابات على أسئلة حسابي، مكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة."
   },
   {
     "path": "ar/help-my-card.png",
@@ -207,7 +207,7 @@
   {
     "path": "ar/money-and-mental-health.png",
     "title": "المال والصحة النفسية: 5 مصادر مجانية لتحسين مزاجك",
-    "description": "غالباً ما يُغفل الرابط بين المال والصحة النفسية. الضغط المالي قد يفاقم الصحة النفسية، وسوء الصحة النفسية قد يجعل إدارة المال أصعب. إليك خمسة أمور مجانية قد تفيدك."
+    "description": "غالباً ما يُغفل الرابط بين المال والصحة النفسية. إليك خمسة أمور مجانية قد تفيدك."
   },
   {
     "path": "ar/news.png",
@@ -267,7 +267,7 @@
   {
     "path": "ar/uk-account-from-abroad.png",
     "title": "الحصول على حساب بريطاني من الخارج",
-    "description": "كثير من الناس الذين يعيشون خارج المملكة المتحدة لا يزال يتقاضون رواتبهم بالجنيه الإسترليني، أو يمتلكون عقارات في بريطانيا، أو يحتاجون إلى تحويل الأموال إلى المملكة المتحدة. إليك كيف يعمل الحساب البريطاني عندما لا تسكن هناك."
+    "description": "كثير ممن يعيشون خارج المملكة المتحدة يتقاضون رواتبهم بالجنيه أو يحتاجون إلى تحويل الأموال إلى بريطانيا. إليك كيف يعمل الحساب البريطاني عندما لا تسكن هناك."
   },
   {
     "path": "ar/virtual-cards.png",
@@ -397,17 +397,17 @@
   {
     "path": "help-articles.png",
     "title": "Help articles",
-    "description": "The articles in each help category. Titles are taken from Algbra's help centre. Getting started, Logging in, My card, My account, Ethical Saver, Security and data, About Opello and Get in touch answers are written."
+    "description": "Help articles by category: getting started, logging in, my card, my account, Ethical Saver, security and data, about Opello and get in touch."
   },
   {
     "path": "help-ethical-saver.png",
     "title": "Ethical Saver help",
-    "description": "Sixteen answers on Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not for publication until compliance has signed off the savings, protection and Sharia wording."
+    "description": "Sixteen answers on Ethical Saver Cubes, written for Opello. Not for publication until compliance has signed off the wording."
   },
   {
     "path": "help-get-in-touch.png",
     "title": "Get in touch",
-    "description": "Answers to the Get in touch questions, taken from the Algbra help centre and written for Opello. Every contact detail is a placeholder until Opello sets up its own channels."
+    "description": "Answers to the Get in touch questions, written for Opello. Every contact detail is a placeholder until Opello sets up its own channels."
   },
   {
     "path": "help-getting-started.png",
@@ -422,7 +422,7 @@
   {
     "path": "help-my-account.png",
     "title": "My account",
-    "description": "Answers to the My account questions that are not about Ethical Saver Cubes, taken from the Algbra help centre and written for Opello. Not final until the flagged points are signed off."
+    "description": "Answers to the My account questions, written for Opello. Not final until the flagged points are signed off."
   },
   {
     "path": "help-my-card.png",
@@ -457,7 +457,7 @@
   {
     "path": "money-and-mental-health.png",
     "title": "Money and mental health: 5 free mood boosters",
-    "description": "The link between money and mental health is often overlooked. Financial strain can worsen mental health, and poor mental health can make money harder to manage. Here are five free things that can help."
+    "description": "The link between money and mental health is often overlooked. Five free things that can help."
   },
   {
     "path": "news.png",
@@ -517,7 +517,7 @@
   {
     "path": "tr/accessibility.png",
     "title": "Erişilebilirlik",
-    "description": "Opello’yu herkes için kullanılabilir kılmak için nasıl çalıştığımız, şimdiye kadar neleri kontrol ettiğimiz ve bir şey yolunda gitmediğinde bize nasıl haber vereceğiniz. [Placeholder: statement to be confirmed.]"
+    "description": "Opello’yu herkes için kullanılabilir kılmak için nasıl çalıştığımız, şimdiye kadar neleri kontrol ettiğimiz ve bize nasıl haber vereceğiniz. Taslak metin."
   },
   {
     "path": "tr/all-plans.png",
@@ -642,17 +642,17 @@
   {
     "path": "tr/help-articles.png",
     "title": "Yardım makaleleri",
-    "description": "Her yardım kategorisindeki makaleler. Başlıklar Algbra yardım merkezinden alınmıştır. Başlarken, Giriş yapma, Kartım, Hesabım, Etik Tasarruf, Güvenlik ve veriler, Opello hakkında ve Bize ulaşın yanıtları yazıldı."
+    "description": "Her yardım kategorisindeki makaleler: Başlarken, Giriş yapma, Kartım, Hesabım, Etik Tasarruf, Güvenlik ve veriler, Opello hakkında, Bize ulaşın."
   },
   {
     "path": "tr/help-ethical-saver.png",
     "title": "Etik Tasarruf yardımı",
-    "description": "Etik Tasarruf Küpleri hakkında on altı yanıt, Algbra yardım merkezinden alınarak Opello için yazıldı. Tasarruf, koruma ve Şeriat ifadeleri uyum ekibi onaylayana kadar yayımlanmaz."
+    "description": "Etik Tasarruf Küpleri hakkında on altı yanıt, Opello için yazıldı. İfadeler uyum ekibi onaylayana kadar yayımlanmaz."
   },
   {
     "path": "tr/help-get-in-touch.png",
     "title": "Bize ulaşın",
-    "description": "Bize ulaşma sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. Opello kendi kanallarını kurana kadar her iletişim bilgisi yer tutucudur."
+    "description": "Bize ulaşma sorularının yanıtları, Opello için yazıldı. Opello kendi kanallarını kurana kadar her iletişim bilgisi yer tutucudur."
   },
   {
     "path": "tr/help-getting-started.png",
@@ -667,7 +667,7 @@
   {
     "path": "tr/help-my-account.png",
     "title": "Hesabım",
-    "description": "Etik Tasarruf Küpleriyle ilgili olmayan Hesabım sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir."
+    "description": "Hesabım sorularının yanıtları, Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değerdir."
   },
   {
     "path": "tr/help-my-card.png",
@@ -702,7 +702,7 @@
   {
     "path": "tr/money-and-mental-health.png",
     "title": "Para ve ruh sağlığı: Ücretsiz 5 keyif artırıcı",
-    "description": "Para ile ruh sağlığı arasındaki bağ sık sık gözden kaçar. Maddi sıkışıklık ruh sağlığını bozabilir; kötü ruh sağlığı da parayı yönetmeyi zorlaştırabilir. Yardımcı olabilecek beş ücretsiz şey burada."
+    "description": "Para ile ruh sağlığı arasındaki bağ sık sık gözden kaçar. Yardımcı olabilecek beş ücretsiz şey burada."
   },
   {
     "path": "tr/news.png",
@@ -762,7 +762,7 @@
   {
     "path": "tr/uk-account-from-abroad.png",
     "title": "Yurt dışından Birleşik Krallık hesabı almak",
-    "description": "Birleşik Krallık dışında yaşayan birçok kişi maaşını sterlin olarak alıyor, Birleşik Krallık’ta mülk sahibi veya parayı Birleşik Krallık’a taşıması gerekiyor. Orada yaşamıyorsanız Birleşik Krallık hesabı nasıl çalışır, işte karşınızda."
+    "description": "Birleşik Krallık dışında yaşayan birçok kişi maaşını sterlin olarak alıyor. Orada yaşamıyorsanız Birleşik Krallık hesabı nasıl çalışır?"
   },
   {
     "path": "tr/virtual-cards.png",
@@ -782,7 +782,7 @@
   {
     "path": "uk-account-from-abroad.png",
     "title": "Getting a UK account from abroad",
-    "description": "Many people living outside the UK still get paid in pounds, own UK property or need to move money to the UK. Here is how a UK account can work when you do not live here."
+    "description": "Many people living outside the UK still get paid in pounds or need to move money to the UK. Here is how a UK account can work when you do not live here."
   },
   {
     "path": "virtual-cards.png",

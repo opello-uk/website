@@ -763,6 +763,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "حسابي",
       kicker: "مقالات المساعدة",
       lede: "إجابات على أسئلة حسابي التي لا تتعلق بمكعبات التوفير الأخلاقي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة.",
+      metaDescription: "إجابات على أسئلة حسابي، مكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -802,6 +803,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "كيفية التواصل معنا",
       kicker: "مقالات المساعدة",
       lede: "إجابات على أسئلة التواصل، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. كل بيانات التواصل عنصر نائب حتى تُنشئ أوبيلو قنواتها الخاصة.",
+      metaDescription: "إجابات على أسئلة التواصل، مكتوبة لأوبيلو. كل بيانات التواصل عنصر نائب حتى تُنشئ أوبيلو قنواتها الخاصة.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -1060,6 +1062,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "مقالات المساعدة",
       kicker: "المساعدة",
       lede: "المقالات في كل فئة من فئات المساعدة. العناوين مأخوذة من مركز مساعدة ألجبرا. إجابات البدء وتسجيل الدخول وبطاقتي وحسابي والموفر الأخلاقي والأمن والبيانات ونبذة عن أوبيلو والتواصل معنا مكتوبة.",
+      metaDescription: "إجابات على أسئلة حسابي، مكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -1170,6 +1173,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "مساعدة الموفر الأخلاقي",
       kicker: "مقالات المساعدة",
       lede: "ستة عشر إجابة عن مكعبات الموفر الأخلاقي، مأخوذة من مركز مساعدة ألجبرا ومكتوبة لأوبيلو. لا تُنشر قبل موافقة الامتثال على صياغة المدخرات والحماية والشريعة.",
+      metaDescription: "ستة عشر إجابة عن مكعبات الموفر الأخلاقي، مكتوبة لأوبيلو. لا تُنشر قبل موافقة الامتثال على الصياغة.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -1344,6 +1348,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "إمكانية الوصول",
       kicker: "قانوني",
       lede: "كيف نعمل لجعل أوبيلو قابلاً للاستخدام من الجميع، وما تحققناه حتى الآن، وكيف تخبرنا عندما يعيقك أمر ما. [Placeholder: statement to be confirmed.]",
+      metaDescription: "كيف نعمل لجعل أوبيلو قابلاً للاستخدام من الجميع، وما تحققناه حتى الآن، وكيف تخبرنا عندما يعيقك أمر ما. صياغة أولية.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -1554,6 +1559,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "الحصول على حساب بريطاني من الخارج",
       kicker: "مقالات",
       lede: "كثير من الناس الذين يعيشون خارج المملكة المتحدة لا يزال يتقاضون رواتبهم بالجنيه الإسترليني، أو يمتلكون عقارات في بريطانيا، أو يحتاجون إلى تحويل الأموال إلى المملكة المتحدة. إليك كيف يعمل الحساب البريطاني عندما لا تسكن هناك.",
+      metaDescription: "كثير ممن يعيشون خارج المملكة المتحدة يتقاضون رواتبهم بالجنيه أو يحتاجون إلى تحويل الأموال إلى بريطانيا. إليك كيف يعمل الحساب البريطاني عندما لا تسكن هناك.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -1902,6 +1908,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "المال والصحة النفسية: 5 مصادر مجانية لتحسين مزاجك",
       kicker: "شروحات",
       lede: "غالباً ما يُغفل الرابط بين المال والصحة النفسية. الضغط المالي قد يفاقم الصحة النفسية، وسوء الصحة النفسية قد يجعل إدارة المال أصعب. إليك خمسة أمور مجانية قد تفيدك.",
+      metaDescription: "غالباً ما يُغفل الرابط بين المال والصحة النفسية. إليك خمسة أمور مجانية قد تفيدك.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         { source: "placeholder", heading: "الرابط بين المال والعقل", body: "سبب شائع لمعاناة الصحة النفسية هو الضغط المالي، والعكس صحيح. سوء الصحة النفسية قد يجعل الحفاظ على عادات مالية جيدة أو مواكبة سداد الفواتير أمراً أصعب. نحو نصف من يقعون في مشاكل دين لديهم مشكلة صحية نفسية أيضاً، وقال 4 من كل 10 من لديهم مشكلة صحية نفسية إنها كان لها أثر ضار على وضعهم المالي." },
@@ -2890,6 +2897,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Hesabım",
       kicker: "Yardım makaleleri",
       lede: "Etik Tasarruf Küpleriyle ilgili olmayan Hesabım sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. İşaretli noktalar onaylanana kadar nihai değildir.",
+      metaDescription: "Hesab\u0131m sorular\u0131n\u0131n yan\u0131tlar\u0131, Opello i\u00e7in yaz\u0131ld\u0131. \u0130\u015faretli noktalar onaylanana kadar nihai de\u011ferdir.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -2926,6 +2934,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Bize ulaşın",
       kicker: "Yardım makaleleri",
       lede: "Bize ulaşma sorularının yanıtları, Algbra yardım merkezinden alınarak Opello için yazıldı. Opello kendi kanallarını kurana kadar her iletişim bilgisi yer tutucudur.",
+      metaDescription: "Bize ula\u015fma sorular\u0131n\u0131n yan\u0131tlar\u0131, Opello i\u00e7in yaz\u0131ld\u0131. Opello kendi kanallar\u0131n\u0131 kurana kadar her ileti\u015fim bilgisi yer tutucudur.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -3169,6 +3178,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Yardım makaleleri",
       kicker: "Yardım",
       lede: "Her yardım kategorisindeki makaleler. Başlıklar Algbra yardım merkezinden alınmıştır. Başlarken, Giriş yapma, Kartım, Hesabım, Etik Tasarruf, Güvenlik ve veriler, Opello hakkında ve Bize ulaşın yanıtları yazıldı.",
+      metaDescription: "Her yard\u0131m kategorisindeki makaleler: Ba\u015flarken, Giri\u015f yapma, Kart\u0131m, Hesab\u0131m, Etik Tasarruf, G\u00fcvenlik ve veriler, Opello hakk\u0131nda, Bize ula\u015f\u0131n.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -3279,6 +3289,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Etik Tasarruf yardımı",
       kicker: "Yardım makaleleri",
       lede: "Etik Tasarruf Küpleri hakkında on altı yanıt, Algbra yardım merkezinden alınarak Opello için yazıldı. Tasarruf, koruma ve Şeriat ifadeleri uyum ekibi onaylayana kadar yayımlanmaz.",
+      metaDescription: "Etik Tasarruf K\u00fcpleri hakk\u0131nda on alt\u0131 yan\u0131t, Opello i\u00e7in yaz\u0131ld\u0131. \u0130fadeler uyum ekibi onaylayana kadar yay\u0131mlanmaz.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -3450,6 +3461,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Erişilebilirlik",
       kicker: "Yasal",
       lede: "Opello\u2019yu herkes için kullanılabilir kılmak için nasıl çalıştığımız, şimdiye kadar neleri kontrol ettiğimiz ve bir şey yolunda gitmediğinde bize nasıl haber vereceğiniz. [Placeholder: statement to be confirmed.]",
+      metaDescription: "Opello\u2019yu herkes i\u00e7in kullan\u0131labilir k\u0131lmak i\u00e7in nas\u0131l \u00e7al\u0131\u015ft\u0131\u011f\u0131m\u0131z, \u015fimdiye kadar neleri kontrol etti\u011fimiz ve bize nas\u0131l haber verece\u011finiz. Taslak metin.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -3663,6 +3675,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Yurt dışından Birleşik Krallık hesabı almak",
       kicker: "Makaleler",
       lede: "Birleşik Krallık dışında yaşayan birçok kişi maaşını sterlin olarak alıyor, Birleşik Krallık’ta mülk sahibi veya parayı Birleşik Krallık’a taşıması gerekiyor. Orada yaşamıyorsanız Birleşik Krallık hesabı nasıl çalışır, işte karşınızda.",
+      metaDescription: "Birle\u015fik Krall\u0131k d\u0131\u015f\u0131nda ya\u015fayan bir\u00e7ok ki\u015fi maa\u015f\u0131n\u0131 sterlin olarak al\u0131yor. Orada ya\u015fam\u0131yorsan\u0131z Birle\u015fik Krall\u0131k hesab\u0131 nas\u0131l \u00e7al\u0131\u015f\u0131r?", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         {
@@ -4015,6 +4028,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Para ve ruh sağlığı: Ücretsiz 5 keyif artırıcı",
       kicker: "Açıklamalar",
       lede: "Para ile ruh sağlığı arasındaki bağ sık sık gözden kaçar. Maddi sıkışıklık ruh sağlığını bozabilir; kötü ruh sağlığı da parayı yönetmeyi zorlaştırabilir. Yardımcı olabilecek beş ücretsiz şey burada.",
+      metaDescription: "Para ile ruh sa\u011fl\u0131\u011f\u0131 aras\u0131ndaki ba\u011f s\u0131k s\u0131k g\u00f6zden ka\u00e7ar. Yard\u0131mc\u0131 olabilecek be\u015f \u00fccretsiz \u015fey burada.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sections: [
         { source: "placeholder", heading: "Para ile zihin arasındaki bağ", body: "Ruh sağlığı sorunlarının sık bir nedeni maddi baskıdır, tersi de geçerlidir. Kötü ruh sağlığı, iyi para alışkanlıklarını sürdürmeyi ya da faturaları takip etmeyi zorlaştırabilir. Borç krizine girenlerin yaklaşık yarısının aynı zamanda ruh sağlığı sorunu var; ruh sağlığı sorunu olan her 10 kişiden 4'ü bu durumun mali durumunu olumsuz etkilediğini söylemiş." },
