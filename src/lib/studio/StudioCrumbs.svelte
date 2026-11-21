@@ -32,6 +32,11 @@
 		text-decoration: none;
 		border-bottom: 1px solid transparent;
 		transition: border-color 160ms ease;
+		/* WCAG 2.5.8: the visible text is ~15px tall, so pad the target box to
+		   >=24px in each dimension (padding is inside the link, the text does
+		   not move vertically). */
+		padding: 6px 4px;
+		margin: -6px -4px;
 	}
 	.crumbs a:hover,
 	.crumbs a:focus-visible {
