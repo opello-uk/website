@@ -119,7 +119,7 @@ focusMainOnNavigate();
 		<!-- Site-entity schema (Organization + WebSite) in this language, matching the homepage graph. -->
 		{@html `<script type="application/ld+json">${JSON.stringify(siteJsonLd(lang))}</script>`}
 		<!-- Breadcrumb schema from the visible hero chrome: brand, kicker, title. -->
-		{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd(p.kicker, p.title, `${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`, parentBySlug[p.slug] ? (hasTranslation(lang, parentBySlug[p.slug]) ? `${STUDIO_ORIGIN}/studio/${lang}/${parentBySlug[p.slug]}/` : `${STUDIO_ORIGIN}/studio/${parentBySlug[p.slug]}/`) : null))}</script>`}
+		{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd(p.kicker, p.title, `${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`, parentBySlug[p.slug] ? (hasTranslation(lang, parentBySlug[p.slug] as string) ? `${STUDIO_ORIGIN}/studio/${lang}/${parentBySlug[p.slug]}/` : `${STUDIO_ORIGIN}/studio/${parentBySlug[p.slug]}/`) : null))}</script>`}
 	</svelte:head>
 
 <div class="studio" dir={lang === 'ar' ? 'rtl' : 'ltr'} lang={lang}>

@@ -3,7 +3,7 @@
 // the document element. Applied during prerendering too, so the static HTML
 // ships with the right lang/dir. Matches /studio/{lang}/... subpage routes and
 // the /studio/{lang}/ homepage routes alike.
-import type { Handle } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit/hooks';
 
 export const handle: Handle = async ({ event, resolve }) => {
 	const m = /^\/studio\/(ar|tr)(\/|$)/.exec(event.url.pathname);

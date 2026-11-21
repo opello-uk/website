@@ -1,5 +1,5 @@
 import { beforeNavigate, afterNavigate } from '$app/navigation';
-import { browser } from '$app/environment';
+import { browser } from '$app/env';
 
 // After a client-side navigation, move focus to the main content landmark so
 // keyboard and screen-reader users land on the new page's content. SvelteKit

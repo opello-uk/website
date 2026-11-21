@@ -36,7 +36,7 @@
 		</h1>
 		<!-- Algbra homepage wording -->
 		<p class="sub">Spend and manage your money with the app that helps you put people and the planet first.</p>
-		<a class="cta" href={resolve('/studio/open-account/')}>
+		<a class="cta" href={resolve('/studio/[slug]', { slug: 'open-account' })}>
 			<span>Open account with us</span>
 			<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
 				<path

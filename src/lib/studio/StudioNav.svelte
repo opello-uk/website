@@ -97,7 +97,9 @@
 		const mod = lang === 'en'
 			? await import('#lib/studio/pages')
 			: await import('#lib/studio/pages-translated');
-		const src: StudioPage[] = lang === 'en' ? mod.pages : mod.pagesByLang[lang];
+		const src: StudioPage[] = lang === 'en'
+			? (mod as typeof import('#lib/studio/pages')).pages
+			: (mod as typeof import('#lib/studio/pages-translated')).pagesByLang[lang as 'ar' | 'tr'];
 		const entries: SearchEntry[] = src.map((p) => ({
 			title: p.title,
 			kicker: p.kicker,
@@ -175,7 +177,7 @@
 <svelte:window onkeydown={onWindowKeydown} onpointerdown={onWindowPointerdown} />
 
 <header class="nav">
-	<a class="brand" href={resolve('/studio/')} aria-label={t.brandAria}>
+	<a class="brand" href={resolve('/studio')} aria-label={t.brandAria}>
 		<Wordmark />
 	</a>
 
@@ -215,7 +217,7 @@
 		     the language links still ship in the HTML, so the switcher works JS-off.
 		     Keyboard behaviour is unchanged — a hidden menu has no tab stops, and
 		     the arrow-key/Escape handlers query the same nodes. -->
-			<div class="menu" bind:this={menu} role="menu" aria-label={t.menuLabel} hidden={!open} onkeydown={menuKeydown}>
+			<div class="menu" bind:this={menu} role="menu" tabindex="-1" aria-label={t.menuLabel} hidden={!open} onkeydown={menuKeydown}>
 					{#each languages as langItem (langItem.id)}
 						{@const live = langItem.id === 'en' || isHome || hasTranslation(langItem.id, currentSlug)}
 						{@const current = langItem.id === lang}

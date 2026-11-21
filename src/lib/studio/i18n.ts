@@ -224,7 +224,7 @@ export function langHref(lang: "en" | Lang, href: string): string {
 export const homeCopy: Record<'en' | Lang, {
   heroUnlock: string; heroLife: string; heroSub: string; heroCta: string;
   productsTitle: string; learnMore: string; learnAria: string;
-  products: { slug: string; title: string; body: string; alt: string }[];
+  products: { slug: string; title: string; body: string; alt: string; tone: 'a'|'b'|'c' }[];
   splitTitle: string; splitIntro: string; splitPoints: string[]; splitAlt: string; splitCta: string;
   bannerTitle1: string; bannerTitle2: string; bannerBody: string; bannerAlt: string; bannerCta: string;
   controlTitle1: string; controlTitle2: string; controlIntro: string;
@@ -237,9 +237,9 @@ export const homeCopy: Record<'en' | Lang, {
     heroCta: 'Open account with us',
     productsTitle: 'How can we help today?', learnMore: 'Learn more', learnAria: 'Learn more about {title}',
     products: [
-      { slug: 'transfers', title: 'Send money home and abroad', body: 'Send GBP overseas and pay friends and family in seconds.', alt: 'Woman smiling at her phone at the kitchen table' },
-      { slug: 'savings', title: 'Savings pots', body: 'Set money aside for the things that matter, in a few taps.', alt: 'Family on a sofa looking at a tablet together' },
-      { slug: 'cards', title: 'Spend worldwide with one card', body: 'Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app.', alt: 'Man paying at a café counter with his card' }
+      { tone: 'a', slug: 'transfers', title: 'Send money home and abroad', body: 'Send GBP overseas and pay friends and family in seconds.', alt: 'Woman smiling at her phone at the kitchen table' },
+      { tone: 'b', slug: 'savings', title: 'Savings pots', body: 'Set money aside for the things that matter, in a few taps.', alt: 'Family on a sofa looking at a tablet together' },
+      { tone: 'c', slug: 'cards', title: 'Spend worldwide with one card', body: 'Spend anywhere your card scheme is accepted, with cards you can freeze and control in the app.', alt: 'Man paying at a café counter with his card' }
     ],
     // Split/banner pill label from algbra.com/all-plans ("Get started for free", their Standard plan
     // button label). The "for free" wording is a price claim: Algbra/compliance sign-off needed before
@@ -268,9 +268,9 @@ export const homeCopy: Record<'en' | Lang, {
     heroCta: 'افتح حسابك معنا',
     productsTitle: 'كيف نساعدك اليوم؟', learnMore: 'اعرف المزيد', learnAria: 'اعرف المزيد عن {title}',
     products: [
-      { slug: 'transfers', title: 'أرسل المال إلى بيتك والخارج', body: 'أرسل الجنيه الإسترليني إلى الخارج وادفع لأصدقائك وعائلتك في ثوانٍ.', alt: 'امرأة تبتسم أمام هاتفها على طاولة المطبخ' },
-      { slug: 'savings', title: 'أوعية التوفير', body: 'احتفظ بمبلغ جانباً للأشياء التي تهمك، ببضع نقرات.', alt: 'عائلة على أريكة تنظر إلى جهاز لوحي معاً' },
-      { slug: 'cards', title: 'أنفق في العالم ببطاقة واحدة', body: 'أنفق في أي مكان يُقبل فيه بطاقك، مع بطاقات يمكنك تجميدها والتحكم بها من التطبيق.', alt: 'رجل يدفع في مقهى ببطاقته' }
+      { tone: 'a', slug: 'transfers', title: 'أرسل المال إلى بيتك والخارج', body: 'أرسل الجنيه الإسترليني إلى الخارج وادفع لأصدقائك وعائلتك في ثوانٍ.', alt: 'امرأة تبتسم أمام هاتفها على طاولة المطبخ' },
+      { tone: 'b', slug: 'savings', title: 'أوعية التوفير', body: 'احتفظ بمبلغ جانباً للأشياء التي تهمك، ببضع نقرات.', alt: 'عائلة على أريكة تنظر إلى جهاز لوحي معاً' },
+      { tone: 'c', slug: 'cards', title: 'أنفق في العالم ببطاقة واحدة', body: 'أنفق في أي مكان يُقبل فيه بطاقك، مع بطاقات يمكنك تجميدها والتحكم بها من التطبيق.', alt: 'رجل يدفع في مقهى ببطاقته' }
     ],
     splitTitle: 'مالُك بشروطك.', splitCta: 'ابدأ مجانًا', // ترجمة لعبارة algbra.com/all-plans "Get started for free" (claim flagged)
     splitIntro: 'أدر أموالك بمرونة أكبر، وشروط أوضح، وعقبات لا داعي لها أقل.',
@@ -295,9 +295,9 @@ export const homeCopy: Record<'en' | Lang, {
     heroCta: 'Hesabınızı açın',
     productsTitle: 'Bugün size nasıl yardımcı olabiliriz?', learnMore: 'Daha fazla', learnAria: '{title} hakkında daha fazla bilgi',
     products: [
-      { slug: 'transfers', title: 'Yurt içinde ve dışında para gönderin', body: "Sterlin'i yurt dışına gönderin ve saniyeler içinde arkadaşlarınıza ve ailenize ödeme yapın.", alt: 'Mutfak masasında telefonuna gülümseyen kadın' },
-      { slug: 'savings', title: 'Tasarruf amaçları', body: 'Önemli şeyler için birkaç dokunuşta para ayırın.', alt: 'Koltukta birlikte tablete bakan aile' },
-      { slug: 'cards', title: 'Tek kartla dünyada harcayın', body: 'Kartınızın kabul edildiği her yerde harcayın; kartları uygulamadan dondurun ve kontrol edin.', alt: 'Bir erkek kafede kartıyla ödüyor' }
+      { tone: 'a', slug: 'transfers', title: 'Yurt içinde ve dışında para gönderin', body: "Sterlin'i yurt dışına gönderin ve saniyeler içinde arkadaşlarınıza ve ailenize ödeme yapın.", alt: 'Mutfak masasında telefonuna gülümseyen kadın' },
+      { tone: 'b', slug: 'savings', title: 'Tasarruf amaçları', body: 'Önemli şeyler için birkaç dokunuşta para ayırın.', alt: 'Koltukta birlikte tablete bakan aile' },
+      { tone: 'c', slug: 'cards', title: 'Tek kartla dünyada harcayın', body: 'Kartınızın kabul edildiği her yerde harcayın; kartları uygulamadan dondurun ve kontrol edin.', alt: 'Bir erkek kafede kartıyla ödüyor' }
     ],
     splitTitle: 'Paranız, sizin koşullarınızda.', splitCta: 'Ücretsiz başlayın', // algbra.com/all-plans "Get started for free" çevirisi (claim flagged)
     splitIntro: 'Finanslarınızı daha fazla esneklik, daha net koşullar ve gereksiz engeller olmadan yönetin.',

@@ -5,6 +5,7 @@
 // into every page bundle. Server routes ([lang]/[slug]/+page.ts, sitemap.xml)
 // and the nav search (dynamic import on open) are the intended consumers.
 import type { StudioPage } from "./pages";
+import type { Lang } from "#lib/studio/i18n";
 
 
 // Translated pages, keyed by language. Add a page here (with its translation)
@@ -2121,7 +2122,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       cta: { label: "العودة إلى الأخبار", href: "/studio/news/" },
     },
     {
-      slug: "cop26",      slug: "cop26",
+      slug: "cop26",
       title: "COP26: ما هي ولماذا تهم؟",
       kicker: "شروحات",
       lede: "قمة المناخ في غلاسكو موضحة: ماذا يعني اختصار COP، وما تطلبه اتفاقية باريس من الدول، وما كان العالم ينتظره من القمة.",
@@ -4241,7 +4242,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       cta: { label: "Haberlere dön", href: "/studio/news/" },
     },
     {
-      slug: "cop26",      slug: "cop26",
+      slug: "cop26",
       title: "COP26: nedir ve neden önemlidir?",
       kicker: "Rehberler",
       lede: "Glasgow iklim zirvesi anlatılıyor: COP kısaltmasının anlamı, Paris Anlaşması'nın ülkelerden istediği ve dünyanın zirveden beklediği.",

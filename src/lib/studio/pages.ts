@@ -2,7 +2,7 @@
 // = wording taken from algbra.com (homepage, surveyed 2026-11-12)
 //         'placeholder' = not yet surveyed or no direct Algbra equivalent; confirm before use
 export type Source = 'algbra' | 'placeholder';
-export type Section = { heading: string; body: string; note?: string; source: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[]; items?: string[]; countries?: boolean; wide?: boolean; half?: boolean; big?: boolean };
+export type Section = { heading: string; body: string; note?: string; source?: Source; href?: string; linkLabel?: string; links?: { label: string; href: string }[]; items?: string[]; countries?: boolean; wide?: boolean; half?: boolean; big?: boolean };
 export type StudioPage = {
 	slug: string;
 	title: string;
@@ -15,7 +15,8 @@ export type StudioPage = {
 	// 'band' = full-bleed photo with the copy overlaid. Default is the shared ring hero.
 	// default is the shared ring hero. Placeholder photos keep their alt updated with the licensed replacement.
 	hero?: { variant: 'split' | 'ring-photo' | 'photo-ring' | 'band'; alt: string };
-	source: Source;
+	// Page-level source marking was folded into sourceNotes (2026-11-20); kept optional.
+	source?: Source;
 	sourceNotes?: string[];
 	sections: Section[];
 	cta: { label: string; href: string };
