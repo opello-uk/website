@@ -93,7 +93,7 @@ focusMainOnNavigate();
 	<meta property="og:image:alt" content={`Opello studio: ${p.title}`} />
 	<meta property="og:site_name" content="Opello" />
 	<meta property="og:locale" content="en_GB" />
-	<meta property="og:locale:alternate" content="ar_AR" />
+	<meta property="og:locale:alternate" content="ar_AE" />
 	<meta property="og:locale:alternate" content="tr_TR" />
 	<!-- Twitter card so links shared on X render the same preview card. -->
 	<meta name="twitter:card" content="summary_large_image" />

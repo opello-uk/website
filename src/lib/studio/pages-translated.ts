@@ -1063,7 +1063,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "مقالات المساعدة",
       kicker: "المساعدة",
       lede: "المقالات في كل فئة من فئات المساعدة. العناوين مأخوذة من مركز مساعدة ألجبرا. إجابات البدء وتسجيل الدخول وبطاقتي وحسابي والموفر الأخلاقي والأمن والبيانات ونبذة عن أوبيلو والتواصل معنا مكتوبة.",
-      metaDescription: "إجابات على أسئلة حسابي، مكتوبة لأوبيلو. ليست نهائية حتى تُعتمد النقاط المعلَّمة.", // shorter than the lede for search snippets; lede untouched
+      metaDescription: "مقالات المساعدة حسب الفئة: البدء، تسجيل الدخول، بطاقتي، حسابي، الموفر الأخلاقي، الأمن والبيانات، نبذة عن أوبيلو والتواصل معنا.", // shorter than the lede for search snippets; lede untouched — was a copy-paste of help-my-account's description (caught 2026-11-22 cycle)
       source: "placeholder",
       sections: [
         {

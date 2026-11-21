@@ -65,7 +65,7 @@
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="Opello" />
 	<meta property="og:locale" content="en_GB" />
-	<meta property="og:locale:alternate" content="ar_AR" />
+	<meta property="og:locale:alternate" content="ar_AE" />
 	<meta property="og:locale:alternate" content="tr_TR" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'} />
