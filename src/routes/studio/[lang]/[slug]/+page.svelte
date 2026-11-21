@@ -46,7 +46,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	// English page fallback: translated pages inherit the English source notes until the notes
 	// themselves are translated (they are internal review markers, not customer copy).
 	import { bySlug as enBySlug } from '#lib/studio/pages';
-	import { faqJsonLd } from '#lib/studio/faqLd';
+	import { faqJsonLd, qaPageSlugs, questionSections } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
 	import { breadcrumbJsonLd, parentBySlug } from '#lib/studio/breadcrumbLd';
 	import { siteJsonLd } from '#lib/studio/siteLd';
@@ -109,8 +109,12 @@ focusMainOnNavigate();
 		<link rel="alternate" hreflang={l} href={`${STUDIO_ORIGIN}/studio/${l}/${p.slug}/`} />
 	{/each}
 	{#if p.slug === 'faq'}
-		<!-- FAQPage schema mirroring the visible Q&A cards only. -->
+		<!-- FAQPage schema mirroring this language's visible Q&A cards only. -->
 		{@html `<script type="application/ld+json">${JSON.stringify(faqJsonLd(p.sections, p.title, `${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`))}</script>`}
+	{:else if qaPageSlugs.has(p.slug) && questionSections(p.sections).length > 0}
+		<!-- FAQPage schema on the help Q&A pages: only sections phrased as visible questions,
+		     so sub-cards and topic cards are not emitted as Questions. -->
+		{@html `<script type="application/ld+json">${JSON.stringify(faqJsonLd(questionSections(p.sections), p.title, `${STUDIO_ORIGIN}/studio/${lang}/${p.slug}/`))}</script>`}
 	{/if}
 	{#if isArticle(p.slug)}
 		<!-- Article schema for the insight articles: this language's own visible copy, no invented dates. -->

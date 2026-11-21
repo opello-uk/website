@@ -43,7 +43,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 
 	import { resolve } from '$app/paths';
 	import { hasTranslation, langName, STUDIO_ORIGIN, type Lang } from '#lib/studio/i18n';
-	import { faqJsonLd } from '#lib/studio/faqLd';
+	import { faqJsonLd, qaPageSlugs, questionSections } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
 	import { breadcrumbJsonLd, parentBySlug } from '#lib/studio/breadcrumbLd';
 	import { siteJsonLd } from '#lib/studio/siteLd';
@@ -108,6 +108,10 @@ focusMainOnNavigate();
 	{#if p.slug === 'faq'}
 		<!-- FAQPage schema mirroring the visible Q&A cards only. -->
 		{@html `<script type="application/ld+json">${JSON.stringify(faqJsonLd(p.sections, p.title, altHref('en')))}</script>`}
+	{:else if qaPageSlugs.has(p.slug) && questionSections(p.sections).length > 0}
+		<!-- FAQPage schema on the help Q&A pages: only sections phrased as visible questions,
+		     so sub-cards and topic cards (e.g. "Check your email address") are not emitted as Questions. -->
+		{@html `<script type="application/ld+json">${JSON.stringify(faqJsonLd(questionSections(p.sections), p.title, altHref('en')))}</script>`}
 	{/if}
 	{#if isArticle(p.slug)}
 		<!-- Article schema for the insight articles: visible copy only, no invented dates. -->
