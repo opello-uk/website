@@ -2,7 +2,7 @@
   {
     "path": "about.png",
     "title": "About",
-    "description": "Finance, made for humans. We are people and planet first."
+    "description": "Finance, made for humans. We are people and planet first. Read our mission and the thinking behind Opello."
   },
   {
     "path": "accessibility.png",
@@ -17,7 +17,7 @@
   {
     "path": "ar/about.png",
     "title": "من نحن",
-    "description": "خدمات مالية صُممت للبشر. نضع الإنسان والكوكب أولاً."
+    "description": "خدمات مالية صُممت للبشر. نضع الإنسان والكوكب أولاً. تعرّف على رسالتنا وعلى الفكرة التي يقوم عليها أوبيلو."
   },
   {
     "path": "ar/accessibility.png",
@@ -72,7 +72,7 @@
   {
     "path": "ar/contact.png",
     "title": "تواصل معنا",
-    "description": "نحن هنا للتواصل. أفكارك واقتراحاتك مرحّب بها دائماً."
+    "description": "نحن هنا للتواصل. أفكارك واقتراحاتك مرحّب بها دائماً. أرسل لنا رسالة وسنعود إليك في أقرب وقت."
   },
   {
     "path": "ar/cookies-policy.png",
@@ -87,7 +87,7 @@
   {
     "path": "ar/current-accounts.png",
     "title": "الحسابات الجارية",
-    "description": "أرسل وأنفق وأدر أموالك بالجنيه الإسترليني من حساب واحد."
+    "description": "أرسل وأنفق وأدر أموالك بالجنيه الإسترليني من حساب واحد. تعرّف على ما يأتي مع حساب أوبيلو الشخصي."
   },
   {
     "path": "ar/customer-terms-and-conditions.png",
@@ -102,7 +102,7 @@
   {
     "path": "ar/download.png",
     "title": "حمّل التطبيق",
-    "description": "إنشاء حساب رقمي سلس داخل التطبيق."
+    "description": "إنشاء حساب رقمي سلس داخل التطبيق: امسح الرمز، ونزّل التطبيق، وافتح حسابك ببريد إلكتروني ورقم هاتف ووثيقة هوية مثل جواز السفر."
   },
   {
     "path": "ar/ethical-savings.png",
@@ -112,12 +112,12 @@
   {
     "path": "ar/faq.png",
     "title": "الأسئلة المتكررة",
-    "description": "نحن هنا للتواصل. إجابات على الأسئلة التي نسمعها أكثر من غيرها."
+    "description": "نحن هنا للتواصل. إجابات على الأسئلة التي نسمعها أكثر من غيرها، من فتح حسابك إلى استخدام بطاقتك."
   },
   {
     "path": "ar/fees-and-charges.png",
     "title": "الرسوم والتكاليف",
-    "description": "كل رسوم نتقاضاها في مكان واحد، لترى ما ينطبق عليك قبل فتح الحساب."
+    "description": "كل رسوم نتقاضاها في مكان واحد، لترى ما ينطبق عليك قبل فتح الحساب. تصفّح الرسوم بالتفصيل."
   },
   {
     "path": "ar/fintech-for-good.png",
@@ -217,7 +217,7 @@
   {
     "path": "ar/open-account.png",
     "title": "افتح حساباً",
-    "description": "هذا ما تحتاجه لفتح حساب أوبيلو في التطبيق، وما يحدث بعد ذلك."
+    "description": "هذا ما تحتاجه لفتح حساب أوبيلو في التطبيق، وما يحدث بعد ذلك: خطوة بخطوة من تنزيل التطبيق إلى فتح حسابك."
   },
   {
     "path": "ar/personal.png",
@@ -242,7 +242,7 @@
   {
     "path": "ar/savings.png",
     "title": "المدخرات",
-    "description": "اكسب على الأموال التي تدّخرها. متاح لمقيمي المملكة المتحدة."
+    "description": "اكسب على الأموال التي تدّخرها. متاح لمقيمي المملكة المتحدة. أنشئ أوعية ادخار قائمة على الأهداف في التطبيق."
   },
   {
     "path": "ar/sitemap.png",
@@ -262,7 +262,7 @@
   {
     "path": "ar/transfers.png",
     "title": "التحويلات",
-    "description": "استخدم حسابك لإرسال الأموال واستقبالها بسرعة وسهولة."
+    "description": "استخدم حسابك لإرسال الأموال واستقبالها بسرعة وسهولة، إلى أصدقائك وعائلتك وبين البنوك."
   },
   {
     "path": "ar/uk-account-from-abroad.png",
@@ -337,7 +337,7 @@
   {
     "path": "current-accounts.png",
     "title": "Current accounts",
-    "description": "Send, spend and manage your money in pounds from one account."
+    "description": "Send, spend and manage your money in pounds from one account. See what comes with the Opello personal account."
   },
   {
     "path": "customer-terms-and-conditions.png",
@@ -352,7 +352,7 @@
   {
     "path": "download.png",
     "title": "Download the app",
-    "description": "Seamless digital onboarding onto the app."
+    "description": "Seamless digital onboarding onto the app. Scan the QR code, download it, and open your account with an email address, a phone number and an ID document."
   },
   {
     "path": "ethical-savings.png",
@@ -362,7 +362,7 @@
   {
     "path": "faq.png",
     "title": "Frequently asked questions",
-    "description": "We're here to connect. Answers to the questions we hear most often."
+    "description": "We're here to connect. Answers to the questions we hear most often, from opening your account to using your card."
   },
   {
     "path": "fees-and-charges.png",
@@ -492,7 +492,7 @@
   {
     "path": "savings.png",
     "title": "Savings",
-    "description": "Earn on the money you are saving. Available to UK residents."
+    "description": "Earn on the money you are saving. Available to UK residents. Set up goal-based savings pots in the app."
   },
   {
     "path": "sitemap.png",
@@ -512,7 +512,7 @@
   {
     "path": "tr/about.png",
     "title": "Hakkımızda",
-    "description": "İnsanlar için tasarlanmış finans. İnsanı ve gezegeni önce koyarız."
+    "description": "İnsanlar için tasarlanmış finans. İnsanı ve gezegeni önce koyarız. Misyonumuzu ve Opello'nun arkasındaki düşünceyi keşfet."
   },
   {
     "path": "tr/accessibility.png",
@@ -597,7 +597,7 @@
   {
     "path": "tr/download.png",
     "title": "Uygulamayı indir",
-    "description": "Uygulamada kusursuz dijital hesap açma."
+    "description": "Uygulamada kusursuz dijital hesap açma: QR kodu okut, uygulamayı indir, e-posta, telefon numarası ve kimlik belgesiyle hesabını aç."
   },
   {
     "path": "tr/ethical-savings.png",
@@ -607,7 +607,7 @@
   {
     "path": "tr/faq.png",
     "title": "Sıkça sorulan sorular",
-    "description": "Bağlanmak için buradayız. En sık duyduğumuz soruların yanıtları."
+    "description": "Bağlanmak için buradayız. En sık duyduğumuz soruların yanıtları: hesap açmaktan kartını kullanmaya."
   },
   {
     "path": "tr/fees-and-charges.png",
@@ -757,7 +757,7 @@
   {
     "path": "tr/transfers.png",
     "title": "Transferler",
-    "description": "Hesabını parayı hızlı ve kolay gönderip almak için kullan."
+    "description": "Hesabını parayı hızlı ve kolay gönderip almak için kullan: arkadaşlarına, aileye ve bankalar arası transferlerde."
   },
   {
     "path": "tr/uk-account-from-abroad.png",
@@ -777,7 +777,7 @@
   {
     "path": "transfers.png",
     "title": "Transfers",
-    "description": "Use your account to send and receive money quickly and easily."
+    "description": "Use your account to send and receive money quickly and easily, to friends and family and between banks."
   },
   {
     "path": "uk-account-from-abroad.png",

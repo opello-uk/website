@@ -76,7 +76,7 @@ export const pages: StudioPage[] = [
 		],
 		title: 'Transfers',
 		kicker: 'Personal',
-		lede: 'Use your account to send and receive money quickly and easily.',
+		lede: 'Use your account to send and receive money quickly and easily, to friends and family and between banks.',
 		// Placeholder photo (reused from the homepage split until licensed photography lands).
 		hero: { variant: 'split', alt: 'Traveller looking out of a large window at an airport, about to send money home' },
 		sections: [
@@ -149,7 +149,7 @@ export const pages: StudioPage[] = [
 		// Split hero with a generated placeholder photo until licensed photography is supplied.
 		hero: { variant: 'split', alt: 'A woman paying at a cafe counter by holding her phone over a card terminal' },
 		// Out of MLP1 scope — multi-currency holding is not in the first release; GBP-first wording.
-		lede: 'Send, spend and manage your money in pounds from one account.',
+		lede: 'Send, spend and manage your money in pounds from one account. See what comes with the Opello personal account.',
 		sections: [
 			{ heading: 'Send and receive money', body: 'Instant bank transfers, international transfers, and payments to friends and family.', href: '/studio/transfers/', linkLabel: 'See transfers' },
 			// Out of MLP1 scope — physical cards not confirmed for day one; wording changed to virtual cards only.
@@ -167,7 +167,7 @@ export const pages: StudioPage[] = [
 		],
 		title: 'Savings',
 		kicker: 'Personal',
-		lede: 'Earn on the money you are saving. Available to UK residents.',
+		lede: 'Earn on the money you are saving. Available to UK residents. Set up goal-based savings pots in the app.',
 		hero: { variant: 'split', alt: 'A pale peach savings jar on a sunlit wooden table beside a potted plant and a small stack of coins' },
 		sections: [
 			// Out of MLP1 scope? No — savings pots and Cubes are in scope, but the EPR rate, eligibility and
@@ -221,7 +221,7 @@ export const pages: StudioPage[] = [
 		],
 		title: 'About',
 		kicker: 'About',
-		lede: 'Finance, made for humans. We are people and planet first.',
+		lede: 'Finance, made for humans. We are people and planet first. Read our mission and the thinking behind Opello.',
 		// About band hero: generated placeholder until licensed photography is supplied.
 		hero: { variant: 'band', alt: 'Four people chatting casually in a bright, warm lounge with clay and cream walls' },
 		sections: [
@@ -275,7 +275,7 @@ export const pages: StudioPage[] = [
 		],
 		title: 'Frequently asked questions',
 		kicker: 'Help',
-		lede: "We're here to connect. Answers to the questions we hear most often.",
+		lede: "We're here to connect. Answers to the questions we hear most often, from opening your account to using your card.",
 		sections: [
 			{ heading: 'What you need to open an account', body: 'A smartphone, a mobile number, a valid ID document (passport or driving licence) and proof of your address, such as a utility bill. You will record a short video and take photos of your documents when you sign up.', href: '/studio/open-account/', linkLabel: 'See how to open an account' },
 			{ heading: 'Who can open an account', body: 'You need to be 18 or over, a UK resident, and have a valid ID document and proof of address.', href: '/studio/help-getting-started/', linkLabel: 'Read about eligibility' },
@@ -327,7 +327,7 @@ export const pages: StudioPage[] = [
 		],
 		title: 'Download the app',
 		kicker: 'Personal',
-		lede: 'Seamless digital onboarding onto the app.',
+		lede: 'Seamless digital onboarding onto the app. Scan the QR code, download it, and open your account with an email address, a phone number and an ID document.',
 		sections: [
 			{ heading: 'Scan the code', body: 'On your mobile, open the camera and point your device at the QR code to download the app. Can\'t scan the QR code? Use the download links below.' },
 			{ heading: 'iOS and Android', body: 'The app is available on iOS and Android. [Placeholder: app store badges and links]' },

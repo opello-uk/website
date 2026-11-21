@@ -15,7 +15,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       slug: "transfers",
       title: "التحويلات",
       kicker: "شخصي",
-      lede: "استخدم حسابك لإرسال الأموال واستقبالها بسرعة وسهولة.",
+      lede: "استخدم حسابك لإرسال الأموال واستقبالها بسرعة وسهولة، إلى أصدقائك وعائلتك وبين البنوك.",
       hero: { variant: "split", alt: "مسافر ينظر من نافذة كبيرة في المطار، على وشك إرسال المال إلى وطنه" },
       source: "placeholder",
       sections: [
@@ -141,7 +141,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       slug: "open-account",
       title: "افتح حساباً",
       kicker: "ابدأ",
-      lede: "هذا ما تحتاجه لفتح حساب أوبيلو في التطبيق، وما يحدث بعد ذلك.",
+      lede: "هذا ما تحتاجه لفتح حساب أوبيلو في التطبيق، وما يحدث بعد ذلك: خطوة بخطوة من تنزيل التطبيق إلى فتح حسابك.",
       hero: { variant: "photo-ring", alt: "رجل على مكتب مشمس بجانبه جواز سفر وهاتف ذكي، وهو يسجل مقطع فيديو قصيراً للتحقق من الهوية، مع فاتورة مطوية على المكتب" },
       source: "placeholder",
       sections: [
@@ -183,7 +183,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       hero: { variant: "split", alt: "امرأة تدفع على طاولة مقهى حاملة هاتفها فوق جهاز الدفع" },
       title: "الحسابات الجارية",
       kicker: "شخصي",
-      lede: "أرسل وأنفق وأدر أموالك بالجنيه الإسترليني من حساب واحد.",
+      lede: "أرسل وأنفق وأدر أموالك بالجنيه الإسترليني من حساب واحد. تعرّف على ما يأتي مع حساب أوبيلو الشخصي.",
       sections: [
         {
           source: "placeholder",
@@ -208,7 +208,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "المدخرات",
       hero: { variant: "split", alt: "برطمان مدخرات بلون الخوخ على طاولة خشبية بجانب نبات صغير وكومة من العملات المعدنية" },
       kicker: "شخصي",
-      lede: "اكسب على الأموال التي تدّخرها. متاح لمقيمي المملكة المتحدة.",
+      lede: "اكسب على الأموال التي تدّخرها. متاح لمقيمي المملكة المتحدة. أنشئ أوعية ادخار قائمة على الأهداف في التطبيق.",
       // Goal-based Cubes restored 2026-11-21: swept out in the MLP1 purge, but savings pots are in scope.
       sections: [
         {
@@ -243,7 +243,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       source: "placeholder",
       title: "من نحن",
       kicker: "من نحن",
-      lede: "خدمات مالية صُممت للبشر. نضع الإنسان والكوكب أولاً.",
+      lede: "خدمات مالية صُممت للبشر. نضع الإنسان والكوكب أولاً. تعرّف على رسالتنا وعلى الفكرة التي يقوم عليها أوبيلو.",
       hero: { variant: "band", alt: "أربعة أشخاص يتحدثون بأريحية في صالة مشرقة دافئة بجدران طينية وكريمية" },
       sections: [
         {
@@ -331,7 +331,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       source: "placeholder",
       title: "الأسئلة المتكررة",
       kicker: "المساعدة",
-      lede: "نحن هنا للتواصل. إجابات على الأسئلة التي نسمعها أكثر من غيرها.",
+      lede: "نحن هنا للتواصل. إجابات على الأسئلة التي نسمعها أكثر من غيرها، من فتح حسابك إلى استخدام بطاقتك.",
       sections: [
         {
           source: "placeholder",
@@ -383,7 +383,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       source: "placeholder",
       title: "تواصل معنا",
       kicker: "المساعدة",
-      lede: "نحن هنا للتواصل. أفكارك واقتراحاتك مرحّب بها دائماً.",
+      lede: "نحن هنا للتواصل. أفكارك واقتراحاتك مرحّب بها دائماً. أرسل لنا رسالة وسنعود إليك في أقرب وقت.",
       sections: [
         {
           source: "placeholder",
@@ -483,7 +483,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       source: "placeholder",
       title: "الرسوم والتكاليف",
       kicker: "قانوني",
-      lede: "كل رسوم نتقاضاها في مكان واحد، لترى ما ينطبق عليك قبل فتح الحساب.",
+      lede: "كل رسوم نتقاضاها في مكان واحد، لترى ما ينطبق عليك قبل فتح الحساب. تصفّح الرسوم بالتفصيل.",
       sections: [
         {
           source: "placeholder",
@@ -515,7 +515,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       source: "placeholder",
       title: "حمّل التطبيق",
       kicker: "شخصي",
-      lede: "إنشاء حساب رقمي سلس داخل التطبيق.",
+      lede: "إنشاء حساب رقمي سلس داخل التطبيق: امسح الرمز، ونزّل التطبيق، وافتح حسابك ببريد إلكتروني ورقم هاتف ووثيقة هوية مثل جواز السفر.",
       sections: [
         {
           source: "placeholder",
@@ -2142,7 +2142,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       slug: "transfers",
       title: "Transferler",
       kicker: "Bireysel",
-      lede: "Hesabını parayı hızlı ve kolay gönderip almak için kullan.",
+      lede: "Hesabını parayı hızlı ve kolay gönderip almak için kullan: arkadaşlarına, aileye ve bankalar arası transferlerde.",
       hero: { variant: "split", alt: "Havalimanında geniş bir pencereden dışarı bakan, yakında ailesine para gönderecek bir yolcu" },
       source: "placeholder",
       sections: [
@@ -2370,7 +2370,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       source: "placeholder",
       title: "Hakkımızda",
       kicker: "Hakkımızda",
-      lede: "İnsanlar için tasarlanmış finans. İnsanı ve gezegeni önce koyarız.",
+      lede: "İnsanlar için tasarlanmış finans. İnsanı ve gezegeni önce koyarız. Misyonumuzu ve Opello'nun arkasındaki düşünceyi keşfet.",
       hero: { variant: "band", alt: "Kil ve krem duvarlı, aydınlık sıcak bir salonda rahatça sohbet eden dört kişi" },
       sections: [
         {
@@ -2458,7 +2458,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       source: "placeholder",
       title: "Sıkça sorulan sorular",
       kicker: "Yardım",
-      lede: "Bağlanmak için buradayız. En sık duyduğumuz soruların yanıtları.",
+      lede: "Bağlanmak için buradayız. En sık duyduğumuz soruların yanıtları: hesap açmaktan kartını kullanmaya.",
       sections: [
         {
           source: "placeholder",
@@ -2645,7 +2645,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       source: "placeholder",
       title: "Uygulamayı indir",
       kicker: "Bireysel",
-      lede: "Uygulamada kusursuz dijital hesap açma.",
+      lede: "Uygulamada kusursuz dijital hesap açma: QR kodu okut, uygulamayı indir, e-posta, telefon numarası ve kimlik belgesiyle hesabını aç.",
       sections: [
         {
           source: "placeholder",
