@@ -16,6 +16,28 @@
 	font-display: swap;
 }
 
+/* Arabic companion: IBM Plex Sans Arabic (OFL licence, SIL Open Font License 1.1).
+   The brand Latin faces (Nimbus Sans Extd / Nimbus Sans) carry no Arabic glyphs, so without
+   a companion face every Arabic page renders in whatever system font the visitor's OS picks.
+   IBM Plex Sans Arabic is the closest widely available companion to Nimbus Sans's neutral
+   geometric-grotesque character. Placed after the brand faces so it only serves Arabic (and
+   other non-Latin) codepoints the brand faces cannot cover; Latin text still renders in
+   Nimbus Sans Extd. Bold weight included so headings (font-weight 500-700) do not synthesise. */
+@font-face {
+	font-family: 'IBM Plex Sans Arabic';
+	src: url('../assets/plex-arabic-regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'IBM Plex Sans Arabic';
+	src: url('../assets/plex-arabic-bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
 	--peach: #f58851;
 	--deep: #001431;
@@ -27,7 +49,7 @@
 	--muted: rgba(233, 228, 224, 0.66);
 	--ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 	/* Brand face first: Nimbus Sans Extd. Regular-width Nimbus Sans is the fallback until Extd Light is licensed for headlines. */
-	--font: 'Nimbus Sans Extd', 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font: 'Nimbus Sans Extd', 'Nimbus Sans', 'IBM Plex Sans Arabic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 *,
