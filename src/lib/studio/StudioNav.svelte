@@ -138,6 +138,15 @@
 				first.focus();
 			}
 		}
+		// Enter (or the mobile keyboard's search key) follows the top result:
+		// the field is not in a form, so without this the key was dead.
+		if (e.key === 'Enter') {
+			const first = searchPanel?.querySelector<HTMLAnchorElement>('.results a');
+			if (first) {
+				e.preventDefault();
+				first.click(); // the anchor's own onclick closes the panel; the router navigates
+			}
+		}
 	}
 	// Move focus into the field when the panel opens (button → panel, like the language menu).
 	$effect(() => {
@@ -248,6 +257,9 @@
 						class="field"
 						type="search"
 						bind:this={searchInput}
+						autocomplete="off"
+						spellcheck="false"
+						enterkeyhint="search"
 						bind:value={query}
 						placeholder={t.searchPlaceholder}
 						aria-label={t.searchLabel}
