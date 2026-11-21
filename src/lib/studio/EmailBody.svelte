@@ -4,7 +4,8 @@
 	// "/cdn-cgi/l/email-protection" on the served page. That rewriting left no-JS
 	// visitors and agents seeing "[email&#160;protected]" instead of the address.
 	// Visible text is identical: the spans render as one continuous address, so
-	// people can still read and copy it.
+	// people can still read and copy it. The caller wraps this in the page's own
+	// <p> so the page's scoped card-paragraph styles still apply.
 	let { text }: { text: string } = $props();
 
 	const EMAIL = 'privacy@opello.co.uk';
