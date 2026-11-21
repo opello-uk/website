@@ -58,7 +58,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	const altHref = $derived((l: 'en' | Lang) => `${STUDIO_ORIGIN}/studio/${l === 'en' ? '' : l + '/'}${slug}/`);
 	// The sitemap page also lists the language route for each English link.
 	const langVariants = $derived((href: string) => {
-		const m = /\/studio\/([a-z-]+)\//.exec(href);
+		const m = /\/studio\/([a-z0-9-]+)\//.exec(href);
 		if (!m) return [];
 		return (['ar', 'tr'] as const).filter((l) => hasTranslation(l, m[1])).map((l) => ({
 			label: langName[l],

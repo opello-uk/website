@@ -210,7 +210,7 @@ export const footerLinkLabel: Record<string, { ar: string; tr: string }> = {
 // page bodies and the nav pills.
 export function langHref(lang: "en" | Lang, href: string): string {
   if (lang === "en") return href;
-  const m = /^\/studio\/([a-z-]+)\/$/.exec(href);
+  const m = /^\/studio\/([a-z0-9-]+)\/$/.exec(href);
   if (m && hasTranslation(lang, m[1])) return `/studio/${lang}/${m[1]}/`;
   return href;
 }
