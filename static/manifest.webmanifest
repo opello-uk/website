@@ -1,0 +1,37 @@
+{
+	"name": "Opello",
+	"short_name": "Opello",
+	"description": "Your own money, unlocked. Personal GBP accounts, transfers and virtual cards.",
+	"id": "/studio/",
+	"start_url": "/studio/",
+	"scope": "/studio/",
+	"display": "standalone",
+	"lang": "en",
+	"dir": "auto",
+	"theme_color": "#001431",
+	"background_color": "#001431",
+	"icons": [
+		{
+			"src": "/assets/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/assets/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/assets/apple-touch-icon.png",
+			"sizes": "180x180",
+			"type": "image/png"
+		},
+		{
+			"src": "/assets/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		}
+	]
+}
