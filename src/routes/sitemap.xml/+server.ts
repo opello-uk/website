@@ -14,10 +14,14 @@ const origin = STUDIO_ORIGIN.replace(/\/$/, '');
 // Alternate links per URL: en self plus ar/tr where a twin exists, plus x-default
 // (pointing at the English page), matching the hreflang <link> set every page head
 // carries (en, ar, tr where a twin exists, x-default -> English).
-function urlEntry(path: string, alts: { lang: string; path: string }[]): string {
+function urlEntry(path: string, alts: { lang: string; path: string }[], lastmod: string): string {
 	const lines = [
 		'  <url>',
 		`    <loc>${origin}${path}</loc>`,
+		// Build-time stamp: all page copy lives in the shared pages.ts / pages-translated.ts
+		// sources, so per-page edit dates are not available; the build timestamp is the honest
+		// site-level freshness signal until pages carry their own dates.
+		`    <lastmod>${lastmod}</lastmod>`,
 		...[...alts, { lang: 'x-default', path: alts[0].path }].map((a) => `    <xhtml:link rel="alternate" hreflang="${a.lang}" href="${origin}${a.path}"/>`),
 		'  </url>'
 	];
@@ -26,6 +30,7 @@ function urlEntry(path: string, alts: { lang: string; path: string }[]): string 
 
 export function GET() {
 	const urls: string[] = [];
+	const lastmod = new Date().toISOString();
 
 	// Homepages: /studio/ (en), /studio/ar/, /studio/tr/.
 	urls.push(
@@ -33,7 +38,7 @@ export function GET() {
 			{ lang: 'en', path: '/studio/' },
 			{ lang: 'ar', path: '/studio/ar/' },
 			{ lang: 'tr', path: '/studio/tr/' }
-		])
+		], lastmod)
 	);
 
 	for (const p of pages) {
@@ -43,7 +48,7 @@ export function GET() {
 				alts.push({ lang, path: `/studio/${lang}/${p.slug}/` });
 			}
 		}
-		urls.push(urlEntry(`/studio/${p.slug}/`, alts));
+		urls.push(urlEntry(`/studio/${p.slug}/`, alts, lastmod));
 	}
 
 	const xml = `<?xml version="1.0" encoding="UTF-8"?>
