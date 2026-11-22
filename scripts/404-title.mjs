@@ -45,7 +45,7 @@ const head =
 	`\n\t\t<meta property="og:image:height" content="630" />` +
 	`\n\t\t<meta property="og:image:alt" content="Opello" />` +
 	`\n\t\t<meta property="og:locale" content="en_GB" />` +
-	`\n\t\t<meta property="og:locale:alternate" content="ar_AR" />` +
+	`\n\t\t<meta property="og:locale:alternate" content="ar_AE" />` +
 	`\n\t\t<meta property="og:locale:alternate" content="tr_TR" />` +
 	`\n\t\t<meta name="twitter:card" content="summary_large_image" />` +
 	`\n\t\t<meta name="twitter:title" content="${title}" />` +
