@@ -26,6 +26,32 @@ function escapeText(s: string): string {
 	return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+// Latin-script runs (the registered address, the company name) embedded in Arabic
+// text have no language/direction markup of their own, so the Unicode bidi
+// algorithm can visually scramble them in the RTL paragraph (classic case: the
+// en-dash in a range like 401–402 flips, reading 402–401). When the string
+// carries Arabic script, wrap each Latin run in <span lang="en" dir="ltr"> so
+// the run keeps its own order and screen readers switch voice. Latin pages are
+// returned untouched, so English output stays byte-identical.
+const LATIN_RUN = /[A-Za-z][A-Za-z0-9 ,.\u2013'’\/&@#-]*[A-Za-z0-9.]/g;
+const ARABIC = /[\u0600-\u06FF]/;
+
+export function markLatinInRTL(text: string): string {
+	if (!ARABIC.test(text)) return escapeText(text);
+	let out = '';
+	let last = 0;
+	LATIN_RUN.lastIndex = 0;
+	for (const m of text.matchAll(LATIN_RUN)) {
+		// Skip runs that are just digits/punctuation picked up around a number
+		if (!/[A-Za-z]/.test(m[0].slice(1))) continue;
+		out += escapeText(text.slice(last, m.index));
+		out += `<span lang="en" dir="ltr">${escapeText(m[0])}</span>`;
+		last = m.index + m[0].length;
+	}
+	out += escapeText(text.slice(last));
+	return out;
+}
+
 export function markLangs(text: string): string {
 	let out = '';
 	let last = 0;

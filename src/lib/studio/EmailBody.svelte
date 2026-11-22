@@ -6,6 +6,14 @@
 	// Visible text is identical: the spans render as one continuous address, so
 	// people can still read and copy it. The caller wraps this in the page's own
 	// <p> so the page's scoped card-paragraph styles still apply.
+	//
+	// Text segments also go through markLatinInRTL: on the Arabic pages the
+	// registered address and company name are Latin runs inside RTL text, and the
+	// bidi algorithm scrambles them without an explicit dir. The helper returns
+	// escaped text untouched when there is no Arabic script, so every English and
+	// Turkish page renders exactly as before.
+	import { markLatinInRTL } from '#lib/studio/scriptLangs';
+
 	let { text }: { text: string } = $props();
 
 	const EMAIL = 'privacy@opello.co.uk';
@@ -32,5 +40,5 @@
 {#each segments(text) as seg (seg.t ?? 'email')}
 	{#if seg.email}
 		<span>privacy</span>@<span>opello</span>.<span>co</span>.<span>uk</span>
-	{:else}{seg.t}{/if}
+	{:else}{@html markLatinInRTL(seg.t ?? '')}{/if}
 {/each}
