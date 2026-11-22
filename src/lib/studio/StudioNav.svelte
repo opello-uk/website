@@ -694,6 +694,31 @@
 		}
 	}
 
+	@media (max-width: 360px) {
+		/* Narrow phones (320px): the 560px tier still overflows by ~25px, so tighten
+		   one more step — smaller brand, tighter gaps and pills — so the Login pill
+		   stays fully inside the viewport with no clipping. */
+		.nav {
+			gap: 8px;
+		}
+		.brand {
+			width: 74px;
+		}
+		.tools {
+			gap: 2px;
+		}
+		.region,
+		.icon {
+			min-width: 40px;
+			padding: 0 2px;
+		}
+		.pill {
+			max-width: 78px;
+			padding: 6px 7px;
+			font-size: 9.5px;
+		}
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		.pills {
 			transition: none;
