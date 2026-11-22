@@ -561,9 +561,11 @@ export const pages: StudioPage[] = [
 		kicker: 'Help articles',
 		lede: 'Which tax number to use for your country. Some countries use a national ID number instead, and some issue no tax number at all.',
 		// Page-level sources restored 2026-11-19 (23:45 Dubai run).
+		// 2026-11-22 count check: the live article carries 108 country rows (the earlier
+		// "109" here was a miscount); this page's list matches it row-for-row, same order.
 		sourceNotes: [
-			'Source: help.algbra.com TIN article (26 Jun 2026), reproduced as published.',
-			'Opello to confirm the list scope (all 109 countries or applicant countries only) and whether to add a country filter before this publishes.'
+			'Source: help.algbra.com TIN article (26 Jun 2026), reproduced as published. Re-checked 2026-11-22 against the live article: 108 country rows, matched row-for-row by this page (list verified against help.algbra.com/en/articles/15654962).',
+			'Opello to confirm the list scope (all 108 countries or applicant countries only) and whether to add a country filter before this publishes.'
 		],
 		sections: [
 			{ heading: 'Tax number by country', countries: true, body: 'Find your country below. Some countries use a national ID number instead, and some issue no tax number at all. If your country does not issue a TIN, you may be asked to confirm this instead.', items: [
