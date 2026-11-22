@@ -245,6 +245,7 @@
 				bind:this={searchButton}
 				aria-label={t.searchLabel}
 				aria-expanded={searchOpen}
+				aria-haspopup="search"
 				aria-controls="nav-search"
 				onclick={searchOpen ? closeSearch : openSearch}
 			>
