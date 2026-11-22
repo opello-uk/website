@@ -41,6 +41,16 @@ export function GET() {
 		], lastmod)
 	);
 
+	// The translated homepage roots are live pages too, so they also carry their own <url>.
+	for (const lang of ['ar', 'tr'] as const) {
+		const alts = [
+			{ lang: 'en', path: '/studio/' },
+			{ lang: 'ar', path: '/studio/ar/' },
+			{ lang: 'tr', path: '/studio/tr/' }
+		];
+		urls.push(urlEntry(`/studio/${lang}/`, alts, lastmod));
+	}
+
 	for (const p of pages) {
 		const alts = [{ lang: 'en', path: `/studio/${p.slug}/` }];
 		for (const lang of ['ar', 'tr'] as const) {
@@ -49,6 +59,23 @@ export function GET() {
 			}
 		}
 		urls.push(urlEntry(`/studio/${p.slug}/`, alts, lastmod));
+	}
+
+	// Translated twins are live pages, so each also gets its own <url> entry (the
+	// alternates alone under-report the site: 159 live pages, previously 53 listed).
+	for (const lang of ['ar', 'tr'] as const) {
+		const list = pagesByLang[lang];
+		for (const p of list) {
+			const base = `/studio/${lang}/${p.slug}/`;
+			const alts = [{ lang: 'en', path: `/studio/${p.slug}/` }];
+			for (const other of ['ar', 'tr'] as const) {
+				if (other === lang) alts.push({ lang: other, path: base });
+				else if (pagesByLang[other].some((q) => q.slug === p.slug)) {
+					alts.push({ lang: other, path: `/studio/${other}/${p.slug}/` });
+				}
+			}
+			urls.push(urlEntry(base, alts, lastmod));
+		}
 	}
 
 	const xml = `<?xml version="1.0" encoding="UTF-8"?>
