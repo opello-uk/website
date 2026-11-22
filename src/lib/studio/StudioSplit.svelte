@@ -95,6 +95,9 @@
 		font-size: clamp(28px, 4.4vw, 63px);
 		line-height: 1.08;
 		letter-spacing: -0.01em;
+		/* WCAG 1.4.12: long Turkish words (e.g. "koşullarınızda.") must not clip the narrow
+		   split column when user text-spacing overrides force letter-spacing wider. */
+		overflow-wrap: break-word;
 	}
 	/* Desktop: heading at the top, copy and ticks just under it, pill on the bottom edge (as the Figma). */
 	.copy {
