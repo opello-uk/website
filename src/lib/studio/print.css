@@ -73,6 +73,25 @@
 		break-inside: avoid;
 	}
 
+	/* Scroll strips lose everything past the first card on paper — there is no
+	   swiping on paper. The products row is a swipeable strip below 1024px on
+	   screen (and A4 portrait sits inside that range), so on paper it lays out
+	   stacked instead: every card prints, in order. (print sweep, 2026-11-22:
+	   cards 2-3 were clipped off the right paper edge.) */
+	.products .grid {
+		display: block !important;
+		overflow: visible !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		gap: 0 !important;
+	}
+
+	.products .grid .card {
+		flex: none !important;
+		width: auto !important;
+		margin: 0 0 20px !important;
+	}
+
 	/* Cards keep a visible rule on paper */
 	.card {
 		border: 1px solid rgba(0, 20, 49, 0.25) !important;
