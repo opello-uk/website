@@ -28,7 +28,11 @@ const file = join(outDir, '404.html');
 const title = 'Page not found · Opello studio (unlisted)';
 const description =
 	'The address may have moved, or it was never on the site. Everything that is here starts from the homepage.';
-const origin = 'https://studio-5c4fcfa636.onrender.com';
+// 2026-11-22 cycle: read the origin from the one STUDIO_ORIGIN constant instead of a
+// second hardcoded copy, so the launch repoint (see signoff.md) stays single-source.
+const origin = readFileSync(new URL('../src/lib/studio/i18n.ts', import.meta.url), 'utf8')
+	.match(/STUDIO_ORIGIN\s*=\s*"(https?:\/\/[^"']+)"/)?.[1];
+if (!origin) throw new Error('404-title: could not read STUDIO_ORIGIN from src/lib/studio/i18n.ts');
 const head =
 	`\n\t\t<meta name="description" content="${description}" />` +
 	`\n\t\t<meta name="referrer-policy" content="no-referrer" />` +
