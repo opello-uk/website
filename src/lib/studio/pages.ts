@@ -206,7 +206,7 @@ export const pages: StudioPage[] = [
 		kicker: 'Get started',
 		lede: 'Here is what you will need to open an Opello account in the app, and what happens next.',
 		// Open account photo-ring hero: generated placeholder until licensed photography is supplied.
-		hero: { variant: 'photo-ring', alt: 'A man at a sunlit desk holding his passport beside a smartphone, recording a short verification video, with a folded utility bill on the desk' },
+		hero: { variant: 'photo-ring', alt: 'A man at a sunlit desk holding his smartphone, recording a short verification video, with plain paper documents and his phone on a stand on the desk' },
 		sections: [
 			{ heading: 'What you will need', body: 'An internet-connected phone or device with a camera, a mobile number, a valid photo ID such as a passport or driving licence, and proof of address, such as a utility bill.' },
 			{ heading: 'How it works', body: 'Download the app and enter your email address and mobile number. Then add your ID and proof of address, and record a short video of yourself. We check your details, and once approved you can start using your account.' },
