@@ -545,6 +545,13 @@ focusMainOnNavigate();
 			margin: -4px 0; /* keep the compact rhythm while the touch box stays tall */
 			align-items: start;
 		}
+		/* long-measure guard: a full-width card spans the whole row, but its body copy and the
+	   page-level source notes keep a readable line length (45-75ch) instead of ~95-char lines */
+		.sections.rem-1 .card:last-child p,
+		.sections .card.wide p,
+		.sources li {
+			max-width: 72ch;
+		}
 		/* two left over: they split the row */
 		.sections.rem-2 .card:nth-last-child(-n + 2) {
 			grid-column: span 3;
