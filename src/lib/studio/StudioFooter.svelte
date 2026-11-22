@@ -136,9 +136,12 @@
 		color: var(--clay);
 		text-decoration: none;
 	}
-	.cols a:hover {
-		color: var(--peach);
-		text-decoration: underline;
+	/* Hover gated to real pointers; a touch tap must not leave a footer link stuck styled. */
+	@media (hover: hover) and (pointer: fine) {
+		.cols a:hover {
+			color: var(--peach);
+			text-decoration: underline;
+		}
 	}
 	.cols a:focus-visible,
 	.legal a:focus-visible,
@@ -172,9 +175,11 @@
 		/* Baseline-01 shows the legal links without underlines. */
 		text-decoration: none;
 	}
-	.base a:hover,
-	.legal a:hover {
-		text-decoration: underline;
+	@media (hover: hover) and (pointer: fine) {
+		.base a:hover,
+		.legal a:hover {
+			text-decoration: underline;
+		}
 	}
 	.social {
 		margin-top: clamp(36px, 5vw, 56px);
@@ -193,8 +198,10 @@
 		display: inline-flex;
 		color: var(--muted);
 	}
-	.social-icon:hover {
-		color: var(--peach);
+	@media (hover: hover) and (pointer: fine) {
+		.social-icon:hover {
+			color: var(--peach);
+		}
 	}
 	.legal {
 		display: flex;

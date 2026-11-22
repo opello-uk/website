@@ -149,9 +149,12 @@
 			background-color 220ms var(--ease),
 			color 220ms var(--ease);
 	}
-	.cta:hover {
-		background: var(--peach);
-		border-color: var(--peach);
+	/* Hover motion is gated to real pointers; a touch tap must not leave the pill stuck in its hover state. */
+	@media (hover: hover) and (pointer: fine) {
+		.cta:hover {
+			background: var(--peach);
+			border-color: var(--peach);
+		}
 	}
 	.cta:focus-visible {
 		/* Navy outline: the pill sits on the photo banner, where peach alone samples 2.75-2.98:1 (WCAG 1.4.11 wants 3:1).
@@ -162,8 +165,10 @@
 	.cta svg {
 		transition: transform 220ms var(--ease);
 	}
-	.cta:hover svg {
-		transform: translateX(2px);
+	@media (hover: hover) and (pointer: fine) {
+		.cta:hover svg {
+			transform: translateX(2px);
+		}
 	}
 
 	@media (max-width: 800px) {

@@ -38,9 +38,14 @@
 		padding: 6px 4px;
 		margin: -6px -4px;
 	}
-	.crumbs a:hover,
 	.crumbs a:focus-visible {
 		border-bottom-color: currentColor;
+	}
+	/* Hover gated to real pointers; a touch tap must not leave the crumb underlined. */
+	@media (hover: hover) and (pointer: fine) {
+		.crumbs a:hover {
+			border-bottom-color: currentColor;
+		}
 	}
 	.sep {
 		color: var(--muted);

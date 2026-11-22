@@ -611,9 +611,12 @@ focusMainOnNavigate();
 		border-radius: 24px;
 		transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
 	}
-	.sections.clay .card:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 14px 30px rgba(0, 20, 49, 0.35);
+	/* Hover gated to real pointers; a touch tap must not leave a card lifted. */
+	@media (hover: hover) and (pointer: fine) {
+		.sections.clay .card:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 14px 30px rgba(0, 20, 49, 0.35);
+		}
 	}
 	.sections.clay .card h2 {
 		color: var(--deep);
@@ -630,8 +633,10 @@ focusMainOnNavigate();
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}
-	.sections.clay .card .link:hover {
-		opacity: 0.75;
+	@media (hover: hover) and (pointer: fine) {
+		.sections.clay .card .link:hover {
+			opacity: 0.75;
+		}
 	}
 	.sections.clay .card .link:focus-visible {
 		outline-color: var(--deep);
@@ -644,8 +649,10 @@ focusMainOnNavigate();
 	.sections.clay .card .langlink {
 		color: rgba(0, 20, 49, 0.72);
 	}
-	.sections.clay .card .links a:hover {
-		opacity: 0.75;
+	@media (hover: hover) and (pointer: fine) {
+		.sections.clay .card .links a:hover {
+			opacity: 0.75;
+		}
 	}
 	.sections.clay .card .links a:focus-visible {
 		outline-color: var(--deep);
@@ -743,8 +750,10 @@ focusMainOnNavigate();
 		text-decoration: none;
 		font-size: 0.9rem;
 	}
-	.card .link:hover {
-		text-decoration: underline;
+	@media (hover: hover) and (pointer: fine) {
+		.card .link:hover {
+			text-decoration: underline;
+		}
 	}
 	.card .links {
 		list-style: none;
@@ -789,8 +798,10 @@ focusMainOnNavigate();
 		text-underline-offset: 3px;
 		font-size: 0.95rem;
 	}
-	.card .links a:hover {
-		color: var(--clay);
+	@media (hover: hover) and (pointer: fine) {
+		.card .links a:hover {
+			color: var(--clay);
+		}
 	}
 	.card .links a:focus-visible {
 		outline: 2px solid var(--peach);
@@ -813,8 +824,10 @@ focusMainOnNavigate();
 		font-size: 15px;
 		letter-spacing: 0.02em;
 	}
-	.pill:hover {
-		filter: brightness(1.06);
+	@media (hover: hover) and (pointer: fine) {
+		.pill:hover {
+			filter: brightness(1.06);
+		}
 	}
 	.pill:focus-visible {
 		outline: 2px solid var(--peach);

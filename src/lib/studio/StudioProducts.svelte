@@ -213,9 +213,12 @@
 		text-decoration: none;
 		transition: background-color 220ms var(--ease);
 	}
-	.learn:hover {
-		background: var(--deep);
-		color: var(--clay);
+	/* Hover gated to real pointers; a touch tap must not leave the pill inverted. */
+	@media (hover: hover) and (pointer: fine) {
+		.learn:hover {
+			background: var(--deep);
+			color: var(--clay);
+		}
 	}
 	.learn:focus-visible {
 		/* Navy outline here: the section ground is light clay (peach alone measures 1.95:1, WCAG 1.4.11 wants 3:1).
@@ -226,8 +229,10 @@
 	.learn svg {
 		transition: transform 220ms var(--ease);
 	}
-	.learn:hover svg {
-		transform: translateX(2px);
+	@media (hover: hover) and (pointer: fine) {
+		.learn:hover svg {
+			transform: translateX(2px);
+		}
 	}
 
 	/* Desktop: the row runs off the right edge, as in the reference, so the third card is cropped. */

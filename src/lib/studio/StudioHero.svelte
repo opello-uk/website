@@ -172,7 +172,10 @@
 		text-decoration: none;
 		transition: transform 200ms var(--ease), filter 200ms var(--ease);
 	}
-	.cta:hover { filter: brightness(1.07); transform: translateX(2px); }
+	/* Hover gated to real pointers; a touch tap must not leave the CTA shifted. */
+	@media (hover: hover) and (pointer: fine) {
+		.cta:hover { filter: brightness(1.07); transform: translateX(2px); }
+	}
 
 	/* Example phones, tilted and overlapping into the section below */
 	.screens {

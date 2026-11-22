@@ -196,8 +196,11 @@
 		font-size: 15px;
 		letter-spacing: 0.02em;
 	}
-	.pill:hover {
-		filter: brightness(1.06);
+	/* Hover gated to real pointers; a touch tap must not leave the pill brightened. */
+	@media (hover: hover) and (pointer: fine) {
+		.pill:hover {
+			filter: brightness(1.06);
+		}
 	}
 	.pill:focus-visible {
 		outline: 2px solid var(--peach);
@@ -209,8 +212,10 @@
 		text-underline-offset: 3px;
 		font-size: 15px;
 	}
-	.quiet:hover {
-		color: var(--peach);
+	@media (hover: hover) and (pointer: fine) {
+		.quiet:hover {
+			color: var(--peach);
+		}
 	}
 	.quiet:focus-visible {
 		outline: 2px solid var(--peach);

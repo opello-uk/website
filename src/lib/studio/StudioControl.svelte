@@ -117,8 +117,11 @@
 		border-radius: 16px;
 		outline-offset: -2px;
 	}
-	.tile-link:hover {
-		background: rgba(245, 136, 81, 0.06);
+	/* Hover gated to real pointers; a touch tap must not leave the tile stuck tinted. */
+	@media (hover: hover) and (pointer: fine) {
+		.tile-link:hover {
+			background: rgba(245, 136, 81, 0.06);
+		}
 	}
 	.tile-link:focus-visible {
 		outline: 2px solid var(--deep);

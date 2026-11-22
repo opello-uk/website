@@ -341,8 +341,11 @@
 		text-decoration: none;
 		transition: color 200ms var(--ease), background-color 200ms var(--ease);
 	}
-	.tab:hover {
-		color: var(--clay);
+	/* Hover gated to real pointers; a touch tap must not leave nav states stuck. */
+	@media (hover: hover) and (pointer: fine) {
+		.tab:hover {
+			color: var(--clay);
+		}
 	}
 	.tab:focus-visible {
 		outline: 2px solid var(--peach);
@@ -391,8 +394,10 @@
 		text-decoration: none;
 		transition: background-color 200ms var(--ease);
 	}
-	.item:hover {
-		background: var(--rule);
+	@media (hover: hover) and (pointer: fine) {
+		.item:hover {
+			background: var(--rule);
+		}
 	}
 	.item:focus-visible {
 		outline: 2px solid var(--peach);
@@ -497,8 +502,10 @@
 		text-decoration: none;
 		transition: background-color 200ms var(--ease);
 	}
-	.results a:hover {
-		background: var(--rule);
+	@media (hover: hover) and (pointer: fine) {
+		.results a:hover {
+			background: var(--rule);
+		}
 	}
 	.results a:focus-visible {
 		outline: 2px solid var(--peach);
@@ -557,9 +564,11 @@
 	.region[aria-expanded='true'] .caret {
 		transform: rotate(180deg);
 	}
-	.region:hover,
-	.icon:hover {
-		background: var(--rule);
+	@media (hover: hover) and (pointer: fine) {
+		.region:hover,
+		.icon:hover {
+			background: var(--rule);
+		}
 	}
 	.region:focus-visible,
 	.icon:focus-visible {
@@ -573,8 +582,10 @@
 		transition: transform 200ms var(--ease);
 	}
 	/* Lift the whole capsule together so the join never splits on hover. */
-	.pills:hover {
-		transform: translateY(-1px);
+	@media (hover: hover) and (pointer: fine) {
+		.pills:hover {
+			transform: translateY(-1px);
+		}
 	}
 	.pill {
 		border: 0;
