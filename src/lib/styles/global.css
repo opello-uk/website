@@ -78,6 +78,13 @@ body {
 	overflow-x: clip;
 }
 
+/* Arabic script is cursive: letter-spacing breaks the joining between letters, so every
+   letterspaced label (kickers, nav status, footer chrome) must drop it in Arabic.
+   !important is needed to beat the component-scoped letter-spacing rules. */
+:lang(ar) {
+	letter-spacing: normal !important;
+}
+
 :focus-visible {
 	/* Two-tone ring: a deep outer band stays visible on clay sections (peach alone is 1.95:1 there), a peach inner band stays visible on navy. */
 	outline: 2px solid var(--deep);
