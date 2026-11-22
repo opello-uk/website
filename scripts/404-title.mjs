@@ -119,6 +119,7 @@ const styles = `
 	.s404-skip {
 		position: absolute;
 		left: -9999px;
+		color: var(--peach);
 	}
 	.s404-skip:focus {
 		left: 16px;

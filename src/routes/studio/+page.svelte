@@ -101,6 +101,7 @@ focusMainOnNavigate();
 		position: absolute;
 		left: -9999px;
 		z-index: 100;
+		color: var(--peach);
 	}
 	.skip:focus {
 		left: 16px;

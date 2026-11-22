@@ -268,6 +268,7 @@ focusMainOnNavigate();
 		position: absolute;
 		inset-inline-start: -9999px;
 		z-index: 100;
+		color: var(--peach);
 	}
 	.skip:focus {
 		/* logical property so RTL mirrors: a physical left would leave inset-inline-start
