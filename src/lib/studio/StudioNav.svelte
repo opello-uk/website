@@ -557,6 +557,18 @@
 		align-items: center;
 		gap: 6px;
 	}
+	/* Mouse fix (found live 2026-11-22): a mouse click landing on the SVG icon
+	   inside these buttons never ran the component's click handler — the event
+	   target is the SVG path, and Svelte 5's delegated click on the button does
+	   not fire for clicks that start on an SVG descendant (keyboard Enter works,
+	   since its click targets the button). The flag dropdown then opened only on
+	   padding clicks and the search magnifier was dead for mouse users. The
+	   decorative icons are made click-through so the button itself is always the
+	   click target; hover, focus and RTL mirroring are unaffected. */
+	.region svg,
+	.icon svg {
+		pointer-events: none;
+	}
 	.caret {
 		opacity: 0.7;
 		transition: transform 200ms var(--ease);
