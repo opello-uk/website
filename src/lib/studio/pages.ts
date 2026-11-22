@@ -10,6 +10,7 @@ export type StudioPage = {
 	lede: string;
 	// Optional shorter meta description (search snippets truncate around 155-165 chars).
 	// Used for <meta name=description>/og/twitter description only; the visible lede is untouched.
+	metaTitle?: string;
 	metaDescription?: string;
 	// Optional unique hero. 'split' = photo card beside the copy (landing-page card language);
 	// 'band' = full-bleed photo with the copy overlaid. Default is the shared ring hero.
@@ -891,6 +892,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'chargebacks',
 		title: 'What are chargebacks, and when can you claim?',
+		metaTitle: "Chargebacks explained",
 		kicker: 'Insights',
 		lede: 'If a card payment goes wrong, you can often get your money back. Here is how a chargeback works and when it can help.',
 		source: 'algbra',
@@ -926,6 +928,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'green-banking',
 		title: 'What is green banking, and why does it matter?',
+		metaTitle: "What is green banking?",
 		kicker: 'Insights',
 		lede: 'Green banking looks at where your money goes, not just where it sits. Here is what it means and why it matters.',
 		source: 'algbra',
@@ -956,6 +959,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'green-break',
 		title: 'A Green Break: how to holiday sustainably',
+		metaTitle: "How to holiday sustainably",
 		kicker: 'Insights',
 		lede: 'It is hard to travel in a completely green way, but a few conscious choices can let you enjoy a break while limiting the harm. Here are five tips for greener travel.',
 		source: 'algbra',
@@ -983,6 +987,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'money-and-mental-health',
 		title: 'Money and mental health: 5 free mood boosters',
+		metaTitle: "Money and mental health",
 		kicker: 'Insights',
 		lede: 'The link between money and mental health is often overlooked. Financial strain can worsen mental health, and poor mental health can make money harder to manage. Here are five free things that can help.',
 		metaDescription: "The link between money and mental health is often overlooked. Five free things that can help.", // shorter than the lede for search snippets; lede untouched
@@ -1011,6 +1016,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'world-wildlife-day',
 		title: 'What is World Wildlife Day, and why does it matter?',
+		metaTitle: "What is World Wildlife Day?",
 		kicker: 'Insights',
 		lede: 'World Wildlife Day celebrates our planet\'s wildlife and reminds us that our survival is tied to theirs. Here is what it is and why it matters.',
 		source: 'algbra',
@@ -1035,6 +1041,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'cashless-society',
 		title: 'The pros and cons of a cashless society',
+		metaTitle: "Cashless society: pros and cons",
 		kicker: 'Insights',
 		lede: 'As we move towards a cashless society, there is less money in our wallets. Is that a bad thing? Here are the pros and cons.',
 		source: 'algbra',
@@ -1069,6 +1076,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'consumer-duty',
 		title: 'Seven principles for implementing the Consumer Duty',
+		metaTitle: "The Consumer Duty principles",
 		kicker: 'Insights',
 		lede: 'The Financial Conduct Authority\'s Consumer Duty is about delivering good outcomes for customers. Here is how we are approaching it.',
 		source: 'algbra',
@@ -1120,6 +1128,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'climate-catastrophes',
 		title: 'Climate catastrophes: at our doorstep',
+		metaTitle: "Climate catastrophes",
 		kicker: 'Insights',
 		lede: 'We are not as far removed from the floods, fires and heatwaves in the news as we may think. Here is what is happening, and why it reaches all of us.',
 		source: 'algbra',
@@ -1145,6 +1154,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'just-transition',
 		title: 'A just transition: an achievable goal?',
+		metaTitle: "What is a just transition?",
 		kicker: 'Insights',
 		lede: 'A fair, thriving and net-zero world without leaving people behind: what a just transition means, and what it takes to get there.',
 		source: 'algbra',
@@ -1171,6 +1181,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'sustainable-valentines-day',
 		title: "5 tips for a sustainable Valentine's Day",
+		metaTitle: "A sustainable Valentine's Day",
 		kicker: 'Insights',
 		lede: "Love does not have to cost the earth. Five lower-impact ways to celebrate Valentine's Day, from living gifts to a meal made at home.",
 		source: 'algbra',
@@ -1197,6 +1208,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'card-exchange-rates',
 		title: 'Travelling with your card: fees and exchange rates explained',
+		metaTitle: "Card fees and exchange rates",
 		kicker: 'Insights',
 		lede: 'Spending abroad should not need a spreadsheet. How card exchange rates work, and four habits that keep holiday spending simple.',
 		source: 'algbra',
@@ -1249,6 +1261,7 @@ export const pages: StudioPage[] = [
 	{
 		slug: 'cop26',
 		title: 'COP26: what it is and why it matters',
+		metaTitle: "What is COP26?",
 		kicker: 'Insights',
 		lede: 'The Glasgow climate summit explained: what COP means, what the Paris Agreement asks of countries, and what the world was watching for.',
 		source: 'algbra',

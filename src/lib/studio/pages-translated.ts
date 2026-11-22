@@ -1852,6 +1852,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "chargebacks",
       title: "ما هو الاسترداد العكسي، ومتى يمكنك المطالبة به؟",
+      metaTitle: "متى تطلب الاسترداد العكسي؟",
       kicker: "شروحات",
       lede: "إذا لم يسرِ دفع ببطاقتك على ما يرام، فغالباً يمكنك استعادة أموالك. إليك كيف يعمل الاسترداد العكسي ومتى ينفعك.",
       source: "placeholder",
@@ -1906,6 +1907,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "green-break",
       title: "عطلة خضراء: كيف تسافر بأسلوب مستدام؟",
+      metaTitle: "عطلة خضراء: سفر مستدام",
       kicker: "شروحات",
       lede: "السفر بطريقة خضراء تماماً صعب، لكن بعض الخيارات الواعية تتيح لك الاستمتاع بعطلتك مع الحد من الضرر. إليك خمس نصائح لسفر أكثر خضرة.",
       source: "placeholder",
@@ -1926,6 +1928,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "money-and-mental-health",
       title: "المال والصحة النفسية: 5 مصادر مجانية لتحسين مزاجك",
+      metaTitle: "المال والصحة النفسية",
       kicker: "شروحات",
       lede: "غالباً ما يُغفل الرابط بين المال والصحة النفسية. الضغط المالي قد يفاقم الصحة النفسية، وسوء الصحة النفسية قد يجعل إدارة المال أصعب. إليك خمسة أمور مجانية قد تفيدك.",
       metaDescription: "غالباً ما يُغفل الرابط بين المال والصحة النفسية. إليك خمسة أمور مجانية قد تفيدك.", // shorter than the lede for search snippets; lede untouched
@@ -1949,6 +1952,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "world-wildlife-day",
       title: "ما هو اليوم العالمي للحياة البرية، ولماذا يهم؟",
+      metaTitle: "اليوم العالمي للحياة البرية",
       kicker: "شروحات",
       lede: "يحتفل اليوم العالمي للحياة البرية بحياة برية كوكبنا، ويذكّرنا أن بقاءنا مرتبط ببقائها. إليك ما هو ولماذا يهم.",
       source: "placeholder",
@@ -2058,6 +2062,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "just-transition",
       title: "الانتقال العادل: هل هو هدف قابل للتحقيق؟",
+      metaTitle: "الانتقال العادل",
       kicker: "شروحات",
       lede: "عالم عادل ومزدهر ومحايد كربونياً دون أن نترك أحداً خلفنا: ما معنى الانتقال العادل، وما يتطلبه تحقيقه.",
       source: "placeholder",
@@ -2100,6 +2105,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "card-exchange-rates",
       title: "السفر ببطاقتك: الرسوم وأسعار الصرف موضحة",
+      metaTitle: "السفر ببطاقتك: الرسوم والأسعار",
       kicker: "شروحات",
       lede: "إنفاق المال في الخارج لا يجب أن يحتاج إلى جدول حسابات. كيف تعمل أسعار صرف البطاقات، وأربع عادات تجعل الإنفاق في السفر بسيطاً.",
       source: "placeholder",
@@ -3991,6 +3997,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "chargebacks",
       title: "Chargeback nedir ve ne zaman talep edebilirsiniz?",
+      metaTitle: "Chargeback nedir?",
       kicker: "Açıklamalar",
       lede: "Bir kart ödemesi ters giderse çoğu zaman paranızı geri alabilirsiniz. Chargeback'in nasıl işlediğini ve ne zaman işe yaradığını burada anlatıyoruz.",
       source: "placeholder",
@@ -4021,6 +4028,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "green-banking",
       title: "Yeşil bankacılık nedir ve neden önemlidir?",
+      metaTitle: "Yeşil bankacılık nedir?",
       kicker: "Açıklamalar",
       lede: "Yeşil bankacılık, paranızın nerede durduğuna değil nereye gittiğine bakar. Ne anlama geldiğini ve neden önemli olduğunu burada anlatıyoruz.",
       source: "placeholder",
@@ -4045,6 +4053,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "green-break",
       title: "Yeşil bir mola: tatili sürdürülebilir nasıl geçirirsiniz?",
+      metaTitle: "Sürdürülebilir tatil nasıl?",
       kicker: "Açıklamalar",
       lede: "Tamamen yeşil bir şekilde seyahat etmek zordur; ama birkaç bilinçli seçim, zararı sınırlarken molanızın tadını çıkarmanızı sağlar. Daha yeşil seyahat için beş ipucu.",
       source: "placeholder",
@@ -4065,6 +4074,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "money-and-mental-health",
       title: "Para ve ruh sağlığı: Ücretsiz 5 keyif artırıcı",
+      metaTitle: "Para ve ruh sağlığı",
       kicker: "Açıklamalar",
       lede: "Para ile ruh sağlığı arasındaki bağ sık sık gözden kaçar. Maddi sıkışıklık ruh sağlığını bozabilir; kötü ruh sağlığı da parayı yönetmeyi zorlaştırabilir. Yardımcı olabilecek beş ücretsiz şey burada.",
       metaDescription: "Para ile ruh sa\u011fl\u0131\u011f\u0131 aras\u0131ndaki ba\u011f s\u0131k s\u0131k g\u00f6zden ka\u00e7ar. Yard\u0131mc\u0131 olabilecek be\u015f \u00fccretsiz \u015fey burada.", // shorter than the lede for search snippets; lede untouched
@@ -4088,6 +4098,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "world-wildlife-day",
       title: "Dünya Yaşam Günü nedir ve neden önemlidir?",
+      metaTitle: "Dünya Yaşam Günü nedir?",
       kicker: "Açıklamalar",
       lede: "Dünya Yaşam Günü gezegenimizin vahşi yaşamını kutlar ve hayatta kalmamızın onlarınkiyle bağlı olduğunu hatırlatır. Nedir ve neden önemlidir, burada.",
       source: "placeholder",
@@ -4107,6 +4118,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "cashless-society",
       title: "Nakitsiz toplumun artıları ve eksileri",
+      metaTitle: "Nakitsiz toplum: artı ve eksiler",
       kicker: "Açıklamalar",
       lede: "Nakitsiz bir topluma yaklaştıkça cüzdanlarımızdaki nakit azalıyor. Bu kötü bir şey mi? Artılar ve eksiler burada.",
       source: "placeholder",
@@ -4136,6 +4148,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "consumer-duty",
       title: "Tüketici Yükümlülüğü'nü uygulamanın yedi ilkesi",
+      metaTitle: "Tüketici Yükümlülüğü'nün ilkeleri",
       kicker: "Açıklamalar",
       lede: "Finansal Yaptırım Kurumu'nun (FCA) Tüketici Yükümlülüğü, müşterilere iyi sonuçlar sunmak üzerine kuruludur. Biz nasıl yaklaşıyoruz, burada.",
       source: "placeholder",
@@ -4197,6 +4210,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "just-transition",
       title: "Adil geçiş: ulaşılabilir bir hedef mi?",
+      metaTitle: "Adil geçiş nedir?",
       kicker: "Açıklamalar",
       lede: "Kimsenin geride bırakılmadığı adil, gelişen ve net sıfır bir dünya: adil geçişin ne demek olduğunu ve gerçekleşmesi için ne gerektiğini burada bul.",
       source: "placeholder",
@@ -4218,6 +4232,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "sustainable-valentines-day",
       title: "Sürdürülebilir bir Sevgililer Günü için 5 ipucu",
+      metaTitle: "Sürdürülebilir Sevgililer Günü",
       kicker: "Açıklamalar",
       lede: "Aşk, dünyaya bir şey kaybettirmek zorunda değil. Evde yapılan bir yemekten yaşayan hediyelere kadar, Sevgililer Günü'nü daha az etkileyerek kutlamanın beş yolu.",
       source: "placeholder",
@@ -4239,6 +4254,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "card-exchange-rates",
       title: "Kartınla seyahat: ücretler ve döviz kurları açıklandı",
+      metaTitle: "Kart ücretleri ve döviz kurları",
       kicker: "Açıklamalar",
       lede: "Yurt dışında harcama hesap tablosu gerektirmemeli. Kart döviz kurları nasıl işler ve tatil harcamalarını basit tutan dört alışkanlık.",
       source: "placeholder",
