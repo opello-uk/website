@@ -200,7 +200,10 @@
 			height: 18px;
 		}
 		h3 {
-			font-size: 10px;
+			/* 12px to match the <=380px stacked tier — the old 10px rendered the
+			   smaller heading on the wider phones (381-560px) and failed a
+			   minimum-legibility sweep (computed font-size < 12px). */
+			font-size: 12px;
 			line-height: 1.2;
 		}
 		h2 {
