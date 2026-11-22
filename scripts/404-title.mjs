@@ -266,7 +266,7 @@ const shell404Strings = {
 	ar: {
 		dir: 'rtl',
 		docLang: 'ar',
-		title: 'الصفحة غير موجودة · Opello studio (unlisted)',
+		title: 'الصفحة غير موجودة · استوديو أوبيلو (غير مدرج)',
 		lede: 'قد يكون العنوان قد تغيّر، أو أنه لم يكن على الموقع. كل ما هو هنا يبدأ من الصفحة الرئيسية.',
 		kicker: 'الصفحة غير موجودة &middot; 404',
 		nfTitle: 'هذه الصفحة',
@@ -279,7 +279,7 @@ const shell404Strings = {
 	tr: {
 		dir: 'ltr',
 		docLang: 'tr',
-		title: 'Sayfa bulunamadı · Opello studio (unlisted)',
+		title: 'Sayfa bulunamadı · Opello stüdyosu (listelenmeyen)',
 		lede: 'Adres değişmiş olabilir ya da sitede hiç var olmamış olabilir. Burada olan her şey ana sayfadan başlar.',
 		kicker: 'Sayfa bulunamadı &middot; 404',
 		nfTitle: 'Bu sayfa',

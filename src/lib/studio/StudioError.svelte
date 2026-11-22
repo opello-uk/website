@@ -37,7 +37,7 @@
 		document.documentElement.lang = lang === 'en' ? 'en-GB' : lang;
 		// The static shell prerenders with the English title (no pathname at build
 		// time); keep the document title in step when a translated route 404s.
-		document.title = (notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)';
+		document.title = (notFound ? t.notFoundKicker : t.serverKicker) + ' · '+chrome[lang].titleSuffix;
 	});
 </script>
 
@@ -51,13 +51,13 @@
   the title language-matched.
 -->
 <svelte:head>
-	<title>{(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'}</title>
+	<title>{(notFound ? t.notFoundKicker : t.serverKicker) + ' · '+chrome[lang].titleSuffix}</title>
 	<meta name="description" content={notFound ? t.nfLede : t.errLede} />
 	<!-- Referrer policy: no-referrer, matching every studio page (unlisted; URLs should not leak). -->
 	<meta name="referrer-policy" content="no-referrer" />
 	<meta name="color-scheme" content="light" />
 	<meta property="og:site_name" content="Opello" />
-	<meta property="og:title" content={(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'} />
+	<meta property="og:title" content={(notFound ? t.notFoundKicker : t.serverKicker) + ' · '+chrome[lang].titleSuffix} />
 	<meta property="og:description" content={notFound ? t.nfLede : t.errLede} />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
@@ -68,7 +68,7 @@
 	<meta property="og:locale:alternate" content="ar_AE" />
 	<meta property="og:locale:alternate" content="tr_TR" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={(notFound ? t.notFoundKicker : t.serverKicker) + ' · Opello studio (unlisted)'} />
+	<meta name="twitter:title" content={(notFound ? t.notFoundKicker : t.serverKicker) + ' · '+chrome[lang].titleSuffix} />
 	<meta name="twitter:description" content={notFound ? t.nfLede : t.errLede} />
 	<meta name="twitter:image" content={`${STUDIO_ORIGIN}/assets/og.png`} />
 </svelte:head>
