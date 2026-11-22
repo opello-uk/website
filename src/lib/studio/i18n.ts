@@ -39,6 +39,9 @@ export type Chrome = {
   learnMore: string;
   sourcesHeading: string;
   searchLabel: string;
+  // Visible-breadcrumb and nav-tabs landmarks (WCAG 3.1.2: in the page's language).
+  crumbsAria: string;
+  tabsAria: string;
   searchPlaceholder: string;
   searchHome: string;
   searchNone: string;
@@ -76,6 +79,8 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     learnMore: "Learn more",
     sourcesHeading: "Sources and open points",
     searchLabel: "Search the site",
+    crumbsAria: "Breadcrumb",
+    tabsAria: "Customer type",
     searchPlaceholder: "Search pages…",
     searchHome: "Home",
     searchNone: "No pages match.",
@@ -112,6 +117,8 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     learnMore: "اعرف المزيد",
     sourcesHeading: "المصادر والنقاط المفتوحة",
     searchLabel: "ابحث في الموقع",
+    crumbsAria: "مسار التنقل",
+    tabsAria: "نوع الحساب",
     searchPlaceholder: "ابحث في الصفحات…",
     searchHome: "الرئيسية",
     searchNone: "لا توجد صفحات مطابقة.",
@@ -147,6 +154,8 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     learnMore: "Daha fazla",
     sourcesHeading: "Kaynaklar ve açık noktalar",
     searchLabel: "Sitede ara",
+    crumbsAria: "Sayfa yolu",
+    tabsAria: "Hesap türü",
     searchPlaceholder: "Sayfalarda ara…",
     searchHome: "Ana sayfa",
     searchNone: "Eşleşen sayfa yok.",

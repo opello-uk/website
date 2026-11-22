@@ -12,7 +12,7 @@
 </script>
 
 {#if parent}
-	<nav class="crumbs" aria-label="Breadcrumb">
+	<nav class="crumbs" aria-label={lang === 'ar' ? 'مسار التنقل' : lang === 'tr' ? 'Sayfa yolu' : 'Breadcrumb'}>
 		<a href={langHref(lang, '/studio/')}>{homeLabel}</a>
 		<span class="sep" aria-hidden="true">›</span>
 		<a href={lang === 'en' || hasTranslation(lang, parent) ? langHref(lang, `/studio/${parent}/`) : `/studio/${parent}/`}>{kicker}</a>
