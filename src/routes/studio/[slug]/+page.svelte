@@ -9,38 +9,56 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import '#lib/studio/print.css';
 	// Generated placeholder photo until licensed photography is supplied.
 	import split from '#lib/assets/studio/split.jpg';
+	import splitW from '#lib/assets/studio/split.webp';
 	import split2x from '#lib/assets/studio/split@2x.jpg';
+	import split2xW from '#lib/assets/studio/split@2x.webp';
 
 	import cardsHero from '#lib/assets/studio/cards-hero.jpg';
+	import cardsHeroW from '#lib/assets/studio/cards-hero.webp';
 	import cardsHero2x from '#lib/assets/studio/cards-hero@2x.jpg';
+	import cardsHero2xW from '#lib/assets/studio/cards-hero@2x.webp';
 
 	// Savings split hero: generated placeholder until licensed photography is supplied.
 	import savingsHero from '#lib/assets/studio/savings-hero.jpg';
+	import savingsHeroW from '#lib/assets/studio/savings-hero.webp';
 	import savingsHero2x from '#lib/assets/studio/savings-hero@2x.jpg';
+	import savingsHero2xW from '#lib/assets/studio/savings-hero@2x.webp';
 
 	// Current accounts split hero: generated placeholder until licensed photography is supplied.
 	import currentAccountsHero from '#lib/assets/studio/current-accounts-hero.jpg';
+	import currentAccountsHeroW from '#lib/assets/studio/current-accounts-hero.webp';
 	import currentAccountsHero2x from '#lib/assets/studio/current-accounts-hero@2x.jpg';
+	import currentAccountsHero2xW from '#lib/assets/studio/current-accounts-hero@2x.webp';
 
 	// Help ring-photo hero: generated placeholder until licensed photography is supplied.
 	import helpHero from '#lib/assets/studio/help-hero.jpg';
+	import helpHeroW from '#lib/assets/studio/help-hero.webp';
 	import helpHero2x from '#lib/assets/studio/help-hero@2x.jpg';
+	import helpHero2xW from '#lib/assets/studio/help-hero@2x.webp';
 
 	// Open account photo-ring hero: generated placeholder until licensed photography is supplied.
 	import openAccountHero from '#lib/assets/studio/open-account-hero.jpg';
+	import openAccountHeroW from '#lib/assets/studio/open-account-hero.webp';
 	import openAccountHero2x from '#lib/assets/studio/open-account-hero@2x.jpg';
+	import openAccountHero2xW from '#lib/assets/studio/open-account-hero@2x.webp';
 
 	// About band hero: generated placeholder until licensed photography is supplied.
 	import aboutHero from '#lib/assets/studio/about-hero.jpg';
+	import aboutHeroW from '#lib/assets/studio/about-hero.webp';
 	import aboutHero2x from '#lib/assets/studio/about-hero@2x.jpg';
+	import aboutHero2xW from '#lib/assets/studio/about-hero@2x.webp';
 
 	// News split hero: generated placeholder until licensed photography is supplied.
 	import newsHero from '#lib/assets/studio/news-hero.jpg';
+	import newsHeroW from '#lib/assets/studio/news-hero.webp';
 	import newsHero2x from '#lib/assets/studio/news-hero@2x.jpg';
+	import newsHero2xW from '#lib/assets/studio/news-hero@2x.webp';
 
 	// Blog split hero: generated placeholder until licensed photography is supplied.
 	import blogHero from '#lib/assets/studio/blog-hero.jpg';
+	import blogHeroW from '#lib/assets/studio/blog-hero.webp';
 	import blogHero2x from '#lib/assets/studio/blog-hero@2x.jpg';
+	import blogHero2xW from '#lib/assets/studio/blog-hero@2x.webp';
 
 	import { resolve } from '$app/paths';
 	import { hasTranslation, langName, STUDIO_ORIGIN, type Lang } from '#lib/studio/i18n';
@@ -133,7 +151,7 @@ focusMainOnNavigate();
 		<section class="hero hero-split">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'blog' ? blogHero : p.slug === 'news' ? newsHero : p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} srcset={p.slug === 'blog' ? `${blogHero} 1x, ${blogHero2x} 2x` : p.slug === 'news' ? `${newsHero} 1x, ${newsHero2x} 2x` : p.slug === 'savings' ? `${savingsHero} 1x, ${savingsHero2x} 2x` : p.slug === 'current-accounts' ? `${currentAccountsHero} 1x, ${currentAccountsHero2x} 2x` : `${split} 1x, ${split2x} 2x`} alt={p.hero.alt} width={p.slug === 'savings' ? 800 : 900} height={p.slug === 'savings' ? 800 : 600} decoding="async" fetchpriority="high" />
+				<picture><source type="image/webp" srcset="{p.slug === 'blog' ? `${blogHeroW} 1x, ${blogHero2xW} 2x` : p.slug === 'news' ? `${newsHeroW} 1x, ${newsHero2xW} 2x` : p.slug === 'savings' ? `${savingsHeroW} 1x, ${savingsHero2xW} 2x` : p.slug === 'current-accounts' ? `${currentAccountsHeroW} 1x, ${currentAccountsHero2xW} 2x` : `${splitW} 1x, ${split2xW} 2x`}" /><img src={p.slug === 'blog' ? blogHero : p.slug === 'news' ? newsHero : p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} srcset={p.slug === 'blog' ? `${blogHero} 1x, ${blogHero2x} 2x` : p.slug === 'news' ? `${newsHero} 1x, ${newsHero2x} 2x` : p.slug === 'savings' ? `${savingsHero} 1x, ${savingsHero2x} 2x` : p.slug === 'current-accounts' ? `${currentAccountsHero} 1x, ${currentAccountsHero2x} 2x` : `${split} 1x, ${split2x} 2x`} alt={p.hero.alt} width={p.slug === 'savings' ? 800 : 900} height={p.slug === 'savings' ? 800 : 600} decoding="async" fetchpriority="high" /></picture>
 			</div>
 			<div class="copy">
 				<StudioCrumbs slug={p.slug} kicker={p.kicker} />
@@ -153,7 +171,7 @@ focusMainOnNavigate();
 			</div>
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'help' ? helpHero : cardsHero} srcset={p.slug === 'help' ? `${helpHero} 1x, ${helpHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" />
+				<picture><source type="image/webp" srcset="{p.slug === 'help' ? `${helpHeroW} 1x, ${helpHero2xW} 2x` : `${cardsHeroW} 1x, ${cardsHero2xW} 2x`}" /><img src={p.slug === 'help' ? helpHero : cardsHero} srcset={p.slug === 'help' ? `${helpHero} 1x, ${helpHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" /></picture>
 			</div>
 		</section>
 		{:else if p.hero?.variant === 'photo-ring'}
@@ -161,7 +179,7 @@ focusMainOnNavigate();
 			<div class="ring" aria-hidden="true"><Ring /></div>
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<img src={p.slug === 'open-account' ? openAccountHero : cardsHero} srcset={p.slug === 'open-account' ? `${openAccountHero} 1x, ${openAccountHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" />
+				<picture><source type="image/webp" srcset="{p.slug === 'open-account' ? `${openAccountHeroW} 1x, ${openAccountHero2xW} 2x` : `${cardsHeroW} 1x, ${cardsHero2xW} 2x`}" /><img src={p.slug === 'open-account' ? openAccountHero : cardsHero} srcset={p.slug === 'open-account' ? `${openAccountHero} 1x, ${openAccountHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width="800" height="800" decoding="async" fetchpriority="high" /></picture>
 			</div>
 			<div class="copy">
 				<StudioCrumbs slug={p.slug} kicker={p.kicker} />
@@ -173,7 +191,7 @@ focusMainOnNavigate();
 		{:else if p.hero?.variant === 'band'}
 		<section class="hero hero-band">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
-			<img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} srcset={p.slug === 'about' ? `${aboutHero} 1x, ${aboutHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width={p.slug === 'about' ? 900 : 800} height={p.slug === 'about' ? 600 : 800} decoding="async" fetchpriority="high" />
+			<picture><source type="image/webp" srcset="{p.slug === 'about' ? `${aboutHeroW} 1x, ${aboutHero2xW} 2x` : `${cardsHeroW} 1x, ${cardsHero2xW} 2x`}" /><img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} srcset={p.slug === 'about' ? `${aboutHero} 1x, ${aboutHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width={p.slug === 'about' ? 900 : 800} height={p.slug === 'about' ? 600 : 800} decoding="async" fetchpriority="high" /></picture>
 			<div class="band-scrim" aria-hidden="true"></div>
 			<div class="copy">
 				<StudioCrumbs slug={p.slug} kicker={p.kicker} />

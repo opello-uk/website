@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { homeCopy, type Lang } from '#lib/studio/i18n';
 	import band from '#lib/assets/studio/band.jpg';
+	import bandW from '#lib/assets/studio/band.webp';
 	import band2x from '#lib/assets/studio/band@2x.jpg';
+	import band2xW from '#lib/assets/studio/band@2x.webp';
 
 	// "A place where you belong." full-bleed photo band. Copy matches the baseline deck (baseline-02); the photo is a placeholder ground until licensed imagery is supplied.
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
@@ -11,7 +13,7 @@
 <section class="photo" aria-labelledby="photo-title">
 	<div class="ground">
 		<!-- Placeholder photo; update alt with the licensed replacement -->
-		<img src={band} srcset="{band} 1x, {band2x} 2x" alt={c.photoAlt} width="1200" height="800" decoding="async" loading="lazy" />
+		<picture><source type="image/webp" srcset="{bandW} 1x, {band2xW} 2x" /><img src={band} srcset="{band} 1x, {band2x} 2x" alt={c.photoAlt} width="1200" height="800" decoding="async" loading="lazy" /></picture>
 	</div>
 
 	<div class="inner">

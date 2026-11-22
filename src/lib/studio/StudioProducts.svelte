@@ -5,13 +5,19 @@
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const c = $derived(homeCopy[lang]);
 	import current from '#lib/assets/studio/current.jpg';
+	import currentW from '#lib/assets/studio/current.webp';
 	import current2x from '#lib/assets/studio/current@2x.jpg';
+	import current2xW from '#lib/assets/studio/current@2x.webp';
 
 	import savings from '#lib/assets/studio/savings.jpg';
+	import savingsW from '#lib/assets/studio/savings.webp';
 	import savings2x from '#lib/assets/studio/savings@2x.jpg';
+	import savings2xW from '#lib/assets/studio/savings@2x.webp';
 
 	import cardsPhoto from '#lib/assets/studio/cards.jpg';
+	import cardsPhotoW from '#lib/assets/studio/cards.webp';
 	import cardsPhoto2x from '#lib/assets/studio/cards@2x.jpg';
+	import cardsPhoto2xW from '#lib/assets/studio/cards@2x.webp';
 
 	// Photography is generated for this build until licensed photography is supplied.
 	// Copy and alt text live in i18n (homeCopy[lang]); the photos stay here and
@@ -26,6 +32,16 @@
 		transfers: current2x,
 		savings: savings2x,
 		cards: cardsPhoto2x
+	};
+	const photosW: Record<string, string> = {
+		transfers: currentW,
+		savings: savingsW,
+		cards: cardsPhotoW
+	};
+	const photos2xW: Record<string, string> = {
+		transfers: current2xW,
+		savings: savings2xW,
+		cards: cardsPhoto2xW
 	};
 </script>
 
@@ -47,7 +63,7 @@
 		{#each c.products as p (p.title)}
 			<li class="card">
 				<div class="photo tone-{p.tone}">
-					<img src={photos[p.slug]} srcset="{photos[p.slug]} 1x, {photos2x[p.slug]} 2x" alt={p.alt} width="800" height="800" decoding="async" loading="lazy" />
+					<picture><source type="image/webp" srcset="{photosW[p.slug]} 1x, {photos2xW[p.slug]} 2x" /><img src={photos[p.slug]} srcset="{photos[p.slug]} 1x, {photos2x[p.slug]} 2x" alt={p.alt} width="800" height="800" decoding="async" loading="lazy" /></picture>
 				</div>
 				<h3>{p.title}</h3>
 				<p>{p.body}</p>

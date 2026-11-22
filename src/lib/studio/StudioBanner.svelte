@@ -6,7 +6,9 @@
 	let { lang = 'en' }: { lang?: 'en' | Lang } = $props();
 	const c = $derived(homeCopy[lang]);
 	import banner from '#lib/assets/studio/banner.jpg';
+	import bannerW from '#lib/assets/studio/banner.webp';
 	import banner2x from '#lib/assets/studio/banner@2x.jpg';
+	import banner2xW from '#lib/assets/studio/banner@2x.webp';
 
 </script>
 
@@ -14,7 +16,7 @@
 	<div class="card">
 		<div class="art">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
-			<img src={banner} srcset="{banner} 1x, {banner2x} 2x" alt={c.bannerAlt} width="900" height="600" decoding="async" loading="lazy" />
+			<picture><source type="image/webp" srcset="{bannerW} 1x, {banner2xW} 2x" /><img src={banner} srcset="{banner} 1x, {banner2x} 2x" alt={c.bannerAlt} width="900" height="600" decoding="async" loading="lazy" /></picture>
 		</div>
 		<!-- Outside .art so the tag is not washed out by the faded photo on phones -->
 
