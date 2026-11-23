@@ -135,7 +135,7 @@
 		outline: none;
 	}
 	input::placeholder {
-		color: rgba(233, 228, 224, 0.34);
+		color: var(--muted); /* same passing placeholder token the nav search field uses (WCAG 1.4.3); was rgba(233,228,224,0.34), ~2.5:1 */
 	}
 
 	button {
@@ -174,14 +174,14 @@
 		margin: 12px 0 0;
 		font-size: 12.5px;
 		line-height: 1.5;
-		color: rgba(233, 228, 224, 0.5);
+		color: rgba(233, 228, 224, 0.7); /* >= .7 muted-on-navy floor (WCAG 1.4.3, audit standard 2026-11-19) */
 		min-height: 1.5em;
 	}
 	.consent {
 		margin: 2px 0 0;
 		font-size: 12px;
 		line-height: 1.5;
-		color: rgba(233, 228, 224, 0.5);
+		color: rgba(233, 228, 224, 0.7); /* >= .7 muted-on-navy floor (WCAG 1.4.3, audit standard 2026-11-19) */
 	}
 	.consent a {
 		white-space: nowrap;
