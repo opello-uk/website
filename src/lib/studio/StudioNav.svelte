@@ -15,6 +15,13 @@
 	// The homepage (empty slug) has Arabic and Turkish twins at /studio/{lang}/,
 	// so the dropdown treats it as live like any translated page.
 	const isHome = $derived(currentSlug === '');
+	// Error routes (the branded 404/5xx views) have no slug to translate, so the
+	// dropdown would wrongly mark Arabic and Turkish "coming soon" and point the
+	// English item at the dead URL itself (found 2026-11-23 cycle by clicking
+	// through the error-page chrome, a layer earlier runs only screenshotted).
+	// Every language is live there and each item lands on that language's
+	// homepage root — the sane target when the requested page does not exist.
+	const isError = $derived(page.error != null);
 	const languages = [
 		{ id: 'en' as const, label: 'English' },
 		{ id: 'ar' as const, label: 'العربية' },
@@ -156,6 +163,9 @@
 	});
 
 	function href(langId: string) {
+		// Error pages have no equivalent to keep or translate: every language
+		// lands on its homepage root instead (see isError above).
+		if (isError) return langId === 'en' ? '/studio/' : `/studio/${langId}/`;
 		// Same language keeps your page. Another language lands on that language's
 		// version of the current page; English strips the language prefix.
 		if (langId === lang) return page.url.pathname;
@@ -219,7 +229,7 @@
 		     the arrow-key/Escape handlers query the same nodes. -->
 			<div class="menu" bind:this={menu} role="menu" tabindex="-1" aria-label={t.menuLabel} hidden={!open} onkeydown={menuKeydown}>
 					{#each languages as langItem (langItem.id)}
-						{@const live = langItem.id === 'en' || isHome || hasTranslation(langItem.id, currentSlug)}
+						{@const live = langItem.id === 'en' || isHome || isError || hasTranslation(langItem.id, currentSlug)}
 						{@const current = langItem.id === lang}
 						{#if live}
 							<a role="menuitem" class="item" href={href(langItem.id)} lang={langItem.id} onclick={close}>

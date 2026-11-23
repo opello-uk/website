@@ -100,6 +100,7 @@ const styles = `
 		--muted: rgba(233, 228, 224, 0.66);
 	}
 	.s404 {
+		position: relative; /* containing block for the absolute skip link: without it the link's left:-9999px escapes the overflow clip and inflates the RTL scrollable area ~9999px (found 2026-11-23 cycle) */
 		min-height: 100svh;
 		display: flex;
 		flex-direction: column;
@@ -314,7 +315,11 @@ const localizeScript =
 	'r.querySelector(".s404-footer p").innerHTML=s.marker;' +
 	'document.title=s.title;' +
 	'var q=function(a,b){var e=document.querySelector(a);if(e)e.setAttribute(b?b:"content","")},f=function(a){var e=document.querySelector(a);return e},set=function(a,v){var e=document.querySelector(a);if(e)e.setAttribute("content",v)};' +
-	'set("meta[name=description]",s.lede);set("meta[property=og:title]",s.title);set("meta[property=og:description]",s.lede);set("meta[name=twitter:title]",s.title);set("meta[name=twitter:description]",s.lede);' +
+	// 2026-11-23 cycle: attribute values in querySelector selectors must be
+	// quoted when they contain a colon (property="og:title"); the unquoted form
+	// threw SyntaxError on every ar/tr shell (title was already set, so the
+	// description/og/twitter metas stayed English and a pageerror fired).
+	'set("meta[name=\"description\"]",s.lede);set("meta[property=\"og:title\"]",s.title);set("meta[property=\"og:description\"]",s.lede);set("meta[name=\"twitter:title\"]",s.title);set("meta[name=\"twitter:description\"]",s.lede);' +
 	'})();\n</' + 'script>';
 
 // Injected after the static body so the elements exist when it runs (it is

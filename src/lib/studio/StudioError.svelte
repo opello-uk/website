@@ -80,7 +80,7 @@
 </svelte:head>
 
 <div class="studio" lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-	<a class="skip" href="#content">Skip to content</a>
+	<a class="skip" href="#content">{chrome[lang].skip}</a>
 	<StudioNav {lang} />
 
 	<main class="error" id="content" tabindex="-1">
@@ -118,6 +118,7 @@
 		font-weight: 500;
 	}
 	.studio {
+		position: relative; /* containing block for the absolute skip link: without it the link's left:-9999px escapes the overflow clip and inflates the RTL scrollable area ~9999px (found 2026-11-23 cycle) */
 		overflow-x: clip;
 		min-height: 100svh;
 		display: flex;
