@@ -74,6 +74,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           source: "placeholder",
           heading: "بطاقات افتراضية",
           body: "البطاقة الافتراضية موجودة في التطبيق وتصلح للمدفوعات عبر الإنترنت.",
+          href: "/studio/virtual-cards/",
+          linkLabel: "اطّلع على البطاقات الافتراضية",
         },
         {
           source: "placeholder",
@@ -1450,7 +1452,9 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       sections: [
         {
           source: "placeholder",
-          // Full width so the 109-row list spans the card, with the note card below; country names bolded and columned like the English page.
+          // Full width so the 108-row list spans the card, with the note card below (the note
+          // explains the list stays English as published — twin-only by design, not parity drift,
+          // language-twin parity sweep 2026-11-23); country names bolded and columned like the English page.
           wide: true,
           countries: true,
           heading: "الرقم الضريبي حسب الدولة",
@@ -1572,7 +1576,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "تُعرض قائمة الدول كما نُشرت، وتبقى بعض أسماء الوثائق بلغتها الأصلية.",
         },
       ],
-      cta: { label: "العودة إلى بدء الاستخدام", href: "/studio/open-account/" },
+      cta: { label: "العودة إلى المساعدة", href: "/studio/help/" },
     },
     {
       slug: "uk-account-from-abroad",
@@ -2233,6 +2237,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           source: "placeholder",
           heading: "Sanal kartlar",
           body: "Sanal kart uygulamada yaşar ve çevrimiçi ödemelerde kullanılır.",
+          href: "/studio/virtual-cards/",
+          linkLabel: "Sanal kartlar hakkında bilgi alın",
         },
         {
           source: "placeholder",
@@ -3591,7 +3597,9 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       sections: [
         {
           source: "placeholder",
-          // Full width so the 109-row list spans the card, with the note card below; country names bolded and columned like the English page.
+          // Full width so the 108-row list spans the card, with the note card below (the note
+          // explains the list stays English as published — twin-only by design, not parity drift,
+          // language-twin parity sweep 2026-11-23); country names bolded and columned like the English page.
           wide: true,
           countries: true,
           heading: "Ülkeye göre vergi numarası",
@@ -3713,7 +3721,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "Ülke listesi yayımlandığı haliyle gösterilir; bazı belge adları özgün dilinde kalır.",
         },
       ],
-      cta: { label: "Başlangıca dön", href: "/studio/open-account/" },
+      cta: { label: "Yardıma dön", href: "/studio/help/" },
     },
     {
       slug: "uk-account-from-abroad",
