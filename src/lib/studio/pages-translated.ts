@@ -1577,7 +1577,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "uk-account-from-abroad",
       title: "الحصول على حساب بريطاني من الخارج",
-      kicker: "مقالات",
+      kicker: "شروحات",
       lede: "كثير من الناس الذين يعيشون خارج المملكة المتحدة لا يزال يتقاضون رواتبهم بالجنيه الإسترليني، أو يمتلكون عقارات في بريطانيا، أو يحتاجون إلى تحويل الأموال إلى المملكة المتحدة. إليك كيف يعمل الحساب البريطاني عندما لا تسكن هناك.",
       metaDescription: "كثير ممن يعيشون خارج المملكة المتحدة يتقاضون رواتبهم بالجنيه أو يحتاجون إلى تحويل الأموال إلى بريطانيا. إليك كيف يعمل الحساب البريطاني عندما لا تسكن هناك.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
@@ -3718,7 +3718,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "uk-account-from-abroad",
       title: "Yurt dışından Birleşik Krallık hesabı almak",
-      kicker: "Makaleler",
+      kicker: "Açıklamalar",
       lede: "Birleşik Krallık dışında yaşayan birçok kişi maaşını sterlin olarak alıyor, Birleşik Krallık’ta mülk sahibi veya parayı Birleşik Krallık’a taşıması gerekiyor. Orada yaşamıyorsanız Birleşik Krallık hesabı nasıl çalışır, işte karşınızda.",
       metaDescription: "Birle\u015fik Krall\u0131k d\u0131\u015f\u0131nda ya\u015fayan bir\u00e7ok ki\u015fi maa\u015f\u0131n\u0131 sterlin olarak al\u0131yor. Orada ya\u015fam\u0131yorsan\u0131z Birle\u015fik Krall\u0131k hesab\u0131 nas\u0131l \u00e7al\u0131\u015f\u0131r?", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
@@ -4277,7 +4277,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "fintech-for-good",
       title: "Fintech bir iyilik gücü olabilir mi?",
-      kicker: "Rehberler",
+      kicker: "Açıklamalar",
       lede: "Kâr etmek ve fark yaratmak: herkese göre değil, hizmetten mahrum kalanlar için tasarlanmış finansı ayıran dört şey.",
       source: "placeholder",
       sections: [
@@ -4298,7 +4298,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     {
       slug: "cop26",
       title: "COP26: nedir ve neden önemlidir?",
-      kicker: "Rehberler",
+      kicker: "Açıklamalar",
       lede: "Glasgow iklim zirvesi anlatılıyor: COP kısaltmasının anlamı, Paris Anlaşması'nın ülkelerden istediği ve dünyanın zirveden beklediği.",
       source: "placeholder",
       sections: [
