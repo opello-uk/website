@@ -13,6 +13,9 @@
 // serves on any unmatched path, so naming one URL as the page's own would be
 // wrong. English strings in the shell; StudioError.svelte keeps the title
 // language-matched once the app mounts.
+// 2026-11-23 cycle: the shell now also carries the studio hiding meta. A 404
+// status is already unindexable, so this is defence in depth (the client error
+// view carries the same robots meta), matching every sitemap page's directive.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -35,6 +38,7 @@ const origin = readFileSync(new URL('../src/lib/studio/i18n.ts', import.meta.url
 if (!origin) throw new Error('404-title: could not read STUDIO_ORIGIN from src/lib/studio/i18n.ts');
 const head =
 	`\n\t\t<meta name="description" content="${description}" />` +
+	`\n\t\t<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />` +
 	`\n\t\t<meta name="referrer-policy" content="no-referrer" />` +
 	`\n\t\t<meta property="og:site_name" content="Opello" />` +
 	`\n\t\t<meta property="og:title" content="${title}" />` +

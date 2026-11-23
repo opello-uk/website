@@ -53,6 +53,10 @@
 <svelte:head>
 	<title>{(notFound ? t.notFoundKicker : t.serverKicker) + ' · '+chrome[lang].titleSuffix}</title>
 	<meta name="description" content={notFound ? t.nfLede : t.errLede} />
+	<!-- Hiding meta: an error view is never a page to index, and the static shell only
+	     covers it with a 404 status (no robots meta by design). Match the studio-wide
+	     directive so a client-side error navigation in any shell stays hidden. -->
+	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
 	<!-- Referrer policy: no-referrer, matching every studio page (unlisted; URLs should not leak). -->
 	<meta name="referrer-policy" content="no-referrer" />
 	<meta name="color-scheme" content="light" />
