@@ -1576,7 +1576,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "تُعرض قائمة الدول كما نُشرت، وتبقى بعض أسماء الوثائق بلغتها الأصلية.",
         },
       ],
-      cta: { label: "العودة إلى المساعدة", href: "/studio/help/" },
+      cta: { label: "العودة إلى بدء الاستخدام", href: "/studio/help-getting-started/" },
     },
     {
       slug: "uk-account-from-abroad",
@@ -3721,7 +3721,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
           body: "Ülke listesi yayımlandığı haliyle gösterilir; bazı belge adları özgün dilinde kalır.",
         },
       ],
-      cta: { label: "Yardıma dön", href: "/studio/help/" },
+      cta: { label: "Başlangıca dön", href: "/studio/help-getting-started/" },
     },
     {
       slug: "uk-account-from-abroad",
