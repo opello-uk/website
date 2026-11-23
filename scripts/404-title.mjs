@@ -319,7 +319,18 @@ const localizeScript =
 	// quoted when they contain a colon (property="og:title"); the unquoted form
 	// threw SyntaxError on every ar/tr shell (title was already set, so the
 	// description/og/twitter metas stayed English and a pageerror fired).
-	'set("meta[name=\"description\"]",s.lede);set("meta[property=\"og:title\"]",s.title);set("meta[property=\"og:description\"]",s.lede);set("meta[name=\"twitter:title\"]",s.title);set("meta[name=\"twitter:description\"]",s.lede);' +
+	// The set() calls are generated with JSON.stringify so the selector's quotes
+	// are escaped correctly in the emitted script (a first hand-escaped attempt
+	// produced nested bare quotes and a SyntaxError that killed the whole
+	// localizer on every shell). Each selector becomes set("meta[...\"...\"]",...)
+	// in the emitted JS, which parses to the quoted-attribute selector.
+	[
+		['meta[name="description"]', 's.lede'],
+		['meta[property="og:title"]', 's.title'],
+		['meta[property="og:description"]', 's.lede'],
+		['meta[name="twitter:title"]', 's.title'],
+		['meta[name="twitter:description"]', 's.lede'],
+	].map(([sel, val]) => `set(${JSON.stringify(sel)},${val});`).join('') +
 	'})();\n</' + 'script>';
 
 // Injected after the static body so the elements exist when it runs (it is
