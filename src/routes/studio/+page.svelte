@@ -12,6 +12,13 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import { STUDIO_ORIGIN } from '#lib/studio/i18n';
 
 	const title = 'Opello studio (unlisted preview)';
+	// Keep the document element in sync after client-side navigation (the translated
+	// roots and [lang]/[slug] do the same for their languages; without this, arriving
+	// here from an Arabic page leaves lang=ar/dir=rtl on English content).
+	$effect(() => {
+		document.documentElement.lang = 'en-GB';
+		document.documentElement.dir = 'ltr';
+	});
 focusMainOnNavigate();
 </script>
 

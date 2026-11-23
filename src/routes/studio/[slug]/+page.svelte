@@ -88,6 +88,13 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	const notes = $derived(
 		p.sourceNotes ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
 	);
+	// Keep the document element in sync after client-side navigation (the translated
+	// [lang]/[slug] page does the same for its languages; without this, arriving from
+	// an Arabic page leaves lang=ar/dir=rtl on English content).
+	$effect(() => {
+		document.documentElement.lang = 'en-GB';
+		document.documentElement.dir = 'ltr';
+	});
 focusMainOnNavigate();
 </script>
 
