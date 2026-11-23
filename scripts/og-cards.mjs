@@ -96,6 +96,9 @@ function cardHtml({ title, description, rtl, dir = 'ltr' }) {
           color: rgba(233, 228, 224, 0.75); max-width: 680px; display: -webkit-box;
           -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .marker { position: relative; z-index: 1; font-size: 17px; color: rgba(245, 136, 81, 0.85); }
+  /* The marker sentence is Latin-only; inside dir=rtl it reorders visually
+     (".Not for publication until approved · Opello studio"), so it is pinned
+     LTR. Found by the og-card pixel sweep 2026-11-23. */
   .bottom { display: flex; flex-direction: column; gap: 14px; }
 </style></head><body>
 <svg class="rings" width="760" height="760" viewBox="0 0 760 760" fill="none" aria-hidden="true">
@@ -114,7 +117,7 @@ function cardHtml({ title, description, rtl, dir = 'ltr' }) {
 <div class="bottom">
   <h1>${t}</h1>
   ${lede}
-  <div class="marker">${esc(marker)}</div>
+  <div class="marker" dir="ltr">${esc(marker)}</div>
 </div>
 </body></html>`;
 }
