@@ -14,6 +14,13 @@
 	let note = $state(DEFAULT_NOTE);
 	let input: HTMLInputElement | undefined = $state();
 	let thanks: HTMLDivElement | undefined = $state();
+	// No-JS guard: the form has no action, so without JS a valid email would GET-reload
+	// the page and silently drop the signup. The button stays disabled until hydration
+	// and a noscript note explains why (checked on the 2026-11-23 form sweep).
+	let hydrated = $state(false);
+	$effect(() => {
+		hydrated = true;
+	});
 
 	async function submit(event: SubmitEvent) {
 		event.preventDefault();
@@ -69,7 +76,7 @@
 				bind:this={input}
 				oninput={onInput}
 			/>
-			<button type="submit" disabled={status === 'sending'}>
+			<button type="submit" disabled={!hydrated || status === 'sending'}>
 				<span>Notify me</span>
 				<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
 					<path
@@ -83,6 +90,7 @@
 				</svg>
 			</button>
 		</div>
+		<noscript><p class="note">JavaScript is off, so this form cannot send. Turn it on to sign up.</p></noscript>
 		<p class="note" id="signup-note" role="status" aria-live="polite" data-state={status}>{note}</p>
 		<p class="consent">
 			{CONSENT_TEXT}
