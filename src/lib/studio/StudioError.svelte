@@ -56,6 +56,8 @@
 	<!-- Referrer policy: no-referrer, matching every studio page (unlisted; URLs should not leak). -->
 	<meta name="referrer-policy" content="no-referrer" />
 	<meta name="color-scheme" content="light" />
+	<!-- Theme colour: the static 404 shell carries it, but svelte:head must also list it so a client-side error navigation keeps it. -->
+	<meta name="theme-color" content="#001431" />
 	<meta property="og:site_name" content="Opello" />
 	<meta property="og:title" content={(notFound ? t.notFoundKicker : t.serverKicker) + ' · '+chrome[lang].titleSuffix} />
 	<meta property="og:description" content={notFound ? t.nfLede : t.errLede} />

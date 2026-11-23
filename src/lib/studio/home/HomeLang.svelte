@@ -48,6 +48,7 @@ focusMainOnNavigate();
 	{:else}
 		<meta name="description" content="Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için. Opello web sitesinin listelenmeyen stüdyo önizlemesi." />
 		<meta name="referrer-policy" content="no-referrer" />
+		<meta name="color-scheme" content="light" />
 		<meta property="og:title" content="Opello stüdyosu" />
 		<meta property="og:description" content="Hayatını aç. Farklı hayatlar, farklı koşullar ve farklı başlangıç noktaları için." />
 		<meta name="twitter:title" content="Opello stüdyosu" />
