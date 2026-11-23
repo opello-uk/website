@@ -457,7 +457,9 @@
 		background: transparent;
 		color: var(--clay);
 		font: inherit;
-		font-size: 14px;
+		/* 16px floor: iOS Safari force-zooms the page when focusing any input
+		   under 16px, so a 14px field yanked every search open on an iPhone. */
+		font-size: 16px;
 	}
 	.field::placeholder {
 		color: var(--muted);
