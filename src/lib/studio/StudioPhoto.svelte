@@ -13,7 +13,7 @@
 <section class="photo" aria-labelledby="photo-title">
 	<div class="ground">
 		<!-- Placeholder photo; update alt with the licensed replacement -->
-		<picture><source type="image/webp" srcset="{bandW} 1x, {band2xW} 2x" /><img src={band} srcset="{band} 1x, {band2x} 2x" alt={c.photoAlt} width="1200" height="800" decoding="async" loading="lazy" /></picture>
+		<picture><source type="image/webp" srcset="{bandW} 1x, {band2xW} 2x" /><img src={band} srcset="{band} 1x, {band2x} 2x" alt={c.photoAlt} width="1900" height="1266" decoding="async" loading="lazy" /></picture>
 	</div>
 
 	<div class="inner">

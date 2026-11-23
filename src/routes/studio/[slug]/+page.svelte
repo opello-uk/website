@@ -198,7 +198,7 @@ focusMainOnNavigate();
 		{:else if p.hero?.variant === 'band'}
 		<section class="hero hero-band">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
-			<picture><source type="image/webp" srcset="{p.slug === 'about' ? `${aboutHeroW} 1x, ${aboutHero2xW} 2x` : `${cardsHeroW} 1x, ${cardsHero2xW} 2x`}" /><img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} srcset={p.slug === 'about' ? `${aboutHero} 1x, ${aboutHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width={p.slug === 'about' ? 900 : 800} height={p.slug === 'about' ? 600 : 800} decoding="async" fetchpriority="high" /></picture>
+			<picture><source type="image/webp" srcset="{p.slug === 'about' ? `${aboutHeroW} 1x, ${aboutHero2xW} 2x` : `${cardsHeroW} 1x, ${cardsHero2xW} 2x`}" /><img class="band-photo" src={p.slug === 'about' ? aboutHero : cardsHero} srcset={p.slug === 'about' ? `${aboutHero} 1x, ${aboutHero2x} 2x` : `${cardsHero} 1x, ${cardsHero2x} 2x`} alt={p.hero.alt} width={p.slug === 'about' ? 1100 : 800} height={p.slug === 'about' ? 733 : 800} decoding="async" fetchpriority="high" /></picture>
 			<div class="band-scrim" aria-hidden="true"></div>
 			<div class="copy">
 				<StudioCrumbs slug={p.slug} kicker={p.kicker} />
