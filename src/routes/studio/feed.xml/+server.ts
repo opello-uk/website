@@ -1,7 +1,9 @@
 // Studio Atom feed for the insight articles, generated at build from the same
 // page lists that drive sitemap.xml and the Article JSON-LD, so it cannot drift
-// from what actually renders. Machine-reader layer (like llms.txt / sitemap.xml):
-// the studio is noindex for now, so this is launch prep; repointing
+// from what actually renders. Machine-reader layer (like sitemap.xml):
+// the studio is noindex for now, so this is launch prep; llms.txt is removed from the
+// live build until launch (commits e90e012/a9d5209) and must be reinstated then —
+// see the signoff.md launch checklist; repointing
 // STUDIO_ORIGIN in src/lib/studio/i18n.ts updates every URL here automatically.
 // Dates: these articles carry no publish dates yet (placeholder copy pending
 // sign-off), so no published/issued date is claimed anywhere. <updated> is the
