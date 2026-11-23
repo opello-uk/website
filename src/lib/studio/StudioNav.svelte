@@ -186,7 +186,7 @@
 
 <svelte:window onkeydown={onWindowKeydown} onpointerdown={onWindowPointerdown} />
 
-<header class="nav">
+<header class="nav studio-nav">
 	<a class="brand" href={resolve('/studio')} aria-label={t.brandAria}>
 		<Wordmark />
 	</a>
@@ -198,6 +198,23 @@
 	</nav>
 
 	<div class="tools">
+		<!-- No-JS fallback (built 2026-11-23 cycle): the language dropdown and the search
+		     both need JavaScript (the flag toggles hidden, the panel is conditionally
+		     rendered), so a visit with JavaScript off had two dead controls in the nav.
+		     These plain links are always in the DOM but hidden (see the [hidden] rule);
+		     the shell's noscript style hides the JS-only buttons and reveals this row.
+		     The links reuse the dropdown's own href() logic, so they land on exactly the
+		     same page twins. -->
+		<div class="ns-fallback" hidden>
+			{#each languages as langItem (langItem.id)}
+				{@const live = langItem.id === 'en' || isHome || isError || hasTranslation(langItem.id, currentSlug)}
+				{#if live}
+					<a class="ns-link" href={href(langItem.id)} lang={langItem.id} aria-current={langItem.id === lang ? 'page' : undefined}>{langItem.label}</a>
+				{/if}
+			{/each}
+			<a class="ns-link ns-find" href={resolve(langHref(lang, '/studio/sitemap/') as '/')}>{t.nsSitemap}</a>
+		</div>
+
 		<!-- Language picker: the deck's flag opens the language dropdown. -->
 		<div class="lang">
 			<button
@@ -223,9 +240,10 @@
 				</svg>
 			</button>
 			<!-- The menu stays in the DOM on every page (prerendered), hidden with the
-		     hidden attribute rather than conditionally rendered: without JavaScript
-		     the language links still ship in the HTML, so the switcher works JS-off.
-		     Keyboard behaviour is unchanged — a hidden menu has no tab stops, and
+		     hidden attribute rather than conditionally rendered: the language links ship
+		     in the HTML for readers without JS execution (agents, view-source), but the
+		     open/close is JS-only, so for a JS-off visitor the fallback row above carries
+		     the switching instead. Keyboard behaviour is unchanged — a hidden menu has no tab stops, and
 		     the arrow-key/Escape handlers query the same nodes. -->
 			<div class="menu" bind:this={menu} role="menu" tabindex="-1" aria-label={t.menuLabel} hidden={!open} onkeydown={menuKeydown}>
 					{#each languages as langItem (langItem.id)}
@@ -370,6 +388,41 @@
 		display: flex;
 		align-items: center;
 		gap: 14px;
+	}
+	/* No-JS fallback row: hidden with JS on (the explicit [hidden] rule matters —
+	   author display beats the UA sheet's [hidden] rule), revealed only by the
+	   shell's noscript style in app.html. Hidden with JS on means no tab stops,
+	   no double links for keyboard users. */
+	.ns-fallback[hidden] {
+		display: none !important;
+	}
+	.ns-fallback {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		flex-wrap: wrap;
+	}
+	.ns-link {
+		display: inline-flex;
+		align-items: center;
+		padding: 6px 10px;
+		border-radius: 999px;
+		font-size: 12px;
+		font-weight: 500;
+		color: var(--clay);
+		text-decoration: none;
+	}
+	/* The current language mirrors the dropdown's peach Current tag. */
+	.ns-link[aria-current='page'] {
+		color: var(--peach);
+	}
+	/* Quiet separator before the sitemap link so the two groups read apart. */
+	.ns-find {
+		border-inline-start: 1px solid var(--rule);
+	}
+	.ns-link:focus-visible {
+		outline: 2px solid var(--peach);
+		outline-offset: 2px;
 	}
 	.lang {
 		position: relative;

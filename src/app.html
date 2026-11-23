@@ -8,6 +8,17 @@
 		<link rel="icon" href="%sveltekit.assets%/assets/favicon.svg" type="image/svg+xml" />
 		<link rel="apple-touch-icon" href="%sveltekit.assets%/assets/apple-touch-icon.png" />
 		<link rel="manifest" href="%sveltekit.assets%/manifest.json" />
+		<noscript>
+			<!-- Studio nav no-JS fallback (2026-11-23 cycle): the language dropdown and
+			     the search are JS-only, so with JavaScript off the shell hides those two
+			     buttons and reveals the plain-links fallback row that already ships in the
+			     nav's DOM. Scoped to .studio-nav so the public pages are untouched. The
+			     !important/specificity pair beats the component's own [hidden] rule. -->
+			<style>
+				.studio-nav .region, .studio-nav .icon { display: none !important; }
+				header.studio-nav .ns-fallback[hidden] { display: flex !important; }
+			</style>
+		</noscript>
 		%sveltekit.head%
 	</head>
 	<body>

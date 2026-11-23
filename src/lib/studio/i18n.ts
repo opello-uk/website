@@ -47,6 +47,9 @@ export type Chrome = {
   searchNone: string;
   // Live-region status line for the nav search (announced politely as results change).
   searchStatus: string;
+  // No-JS nav fallback (2026-11-23 cycle): the dropdown and search are JS-only,
+  // so a plain "all pages" link to the sitemap ships in their place.
+  nsSitemap: string;
   footerTagline: string;
   socialAria: string;
   copyright: string;
@@ -89,6 +92,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     searchHome: "Home",
     searchNone: "No pages match.",
     searchStatus: "Results: {n}",
+    nsSitemap: "All pages",
     footerTagline: "Your own money, unlocked.",
     socialAria: "Social channels",
     copyright: "© 2026 Opello. All rights reserved.",
@@ -128,6 +132,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     searchHome: "الرئيسية",
     searchNone: "لا توجد صفحات مطابقة.",
     searchStatus: "النتائج: {n}",
+    nsSitemap: "كل الصفحات",
     footerTagline: "أموالك الخاصة، بلا قيود.",
     socialAria: "قنوات التواصل",
     copyright: "© 2026 أوبيلو. جميع الحقوق محفوظة.",
@@ -166,6 +171,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     searchHome: "Ana sayfa",
     searchNone: "Eşleşen sayfa yok.",
     searchStatus: "Sonuç: {n}",
+    nsSitemap: "Tüm sayfalar",
     footerTagline: "Kendi paran, serbest.",
     socialAria: "Sosyal kanallar",
     copyright: "© 2026 Opello. Tüm hakları saklıdır.",
