@@ -4,9 +4,12 @@
 // page's own language, exactly as rendered), crumb 3 is the page title.
 // When the kicker's group page exists the crumb links to it (the parent page
 // comes from the slug-keyed parentBySlug map, because the kicker text is
-// translated and cannot key the map); when no group page exists (Insights,
-// Legal, Account) the kicker renders as a name-only crumb — the schema never
-// claims a parent page that does not exist.
+// translated and cannot key the map); when no group page exists (Legal,
+// Account, Get started) the kicker renders as a name-only crumb — the schema
+// never claims a parent page that does not exist.
+// 2026-11-23: the insight articles' kicker "Insights" now links to News —
+// that page's "Read the insights" section lists every one of these articles,
+// so a real parent page exists and the name-only crumb was stale drift.
 // Studio pages are noindex, so this is agent-legibility plumbing for launch,
 // not search SEO today.
 
@@ -32,6 +35,22 @@ export const parentBySlug: Record<string, string | null> = {
 	sitemap: 'help',
 	news: null, // "News" kicker names this page itself
 	blog: null, // "Blog" kicker names this page itself
+	// Insight articles: kicker "Insights" links to News, whose "Read the
+	// insights" section lists every article below (verified live 2026-11-23).
+	'chargebacks': 'news',
+	'green-banking': 'news',
+	'green-break': 'news',
+	'money-and-mental-health': 'news',
+	'world-wildlife-day': 'news',
+	'cashless-society': 'news',
+	'consumer-duty': 'news',
+	'dark-mode': 'news',
+	'climate-catastrophes': 'news',
+	'just-transition': 'news',
+	'sustainable-valentines-day': 'news',
+	'card-exchange-rates': 'news',
+	'cop26': 'news',
+	'fintech-for-good': 'news',
 	'help-articles': 'help',
 	'help-tin': 'help-articles',
 	'help-getting-started': 'help-articles',
@@ -43,8 +62,7 @@ export const parentBySlug: Record<string, string | null> = {
 	'help-about-opello': 'help-articles',
 	'help-get-in-touch': 'help-articles',
 	login: null, // "Account" kicker has no group page
-	'uk-account-from-abroad': null, // "Insights" kicker has no group page
-	// Insight articles: "Insights" kicker has no group page
+	'uk-account-from-abroad': null, // kicker "Insights", but News does not list this page (eligibility still open), so it stays name-only
 	'privacy-policy': null,
 	'terms-and-conditions': null,
 	'customer-terms-and-conditions': null,
