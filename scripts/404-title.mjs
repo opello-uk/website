@@ -16,7 +16,7 @@
 // 2026-11-23 cycle: the shell now also carries the studio hiding meta. A 404
 // status is already unindexable, so this is defence in depth (the client error
 // view carries the same robots meta), matching every sitemap page's directive.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 // 2026-11-20 19:38 Dubai run: brand the static shell itself. The pre-boot flash
@@ -36,10 +36,24 @@ const description =
 const origin = readFileSync(new URL('../src/lib/studio/i18n.ts', import.meta.url), 'utf8')
 	.match(/STUDIO_ORIGIN\s*=\s*"(https?:\/\/[^"']+)"/)?.[1];
 if (!origin) throw new Error('404-title: could not read STUDIO_ORIGIN from src/lib/studio/i18n.ts');
+// 2026-11-23 cycle: the shell was the only page in the build with no font preload
+// (every sitemap page preloads via +layout.svelte's Vite asset import, checked by the
+// preload-integrity sweep). The shell renders the static branded body in
+// 'Nimbus Sans Extd' via the @font-face in the fallback stylesheet, with
+// font-display: swap, so the pre-boot flash and no-JS visits painted the fallback
+// face first. Preload the Latin face so the brand font is warm at first paint;
+// the Arabic faces are not preloaded: the shell is English (the inline localizer
+// swaps strings, not the font stack). Resolved at build time from the emitted
+// content-hashed asset, so the href can never drift from the real file.
+const fontFile = readdirSync(join(outDir, '_app/immutable/assets')).find((f) =>
+	/^nimbus-sans-extd-regular\..+\.woff2$/.test(f)
+);
+if (!fontFile) throw new Error('404-title: emitted nimbus-sans-extd-regular woff2 not found in build assets');
 const head =
 	`\n\t\t<meta name="description" content="${description}" />` +
 	`\n\t\t<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />` +
 	`\n\t\t<meta name="referrer-policy" content="no-referrer" />` +
+	`\n\t\t<link rel="preload" href="/_app/immutable/assets/${fontFile}" as="font" type="font/woff2" crossorigin="anonymous" />` +
 	`\n\t\t<meta property="og:site_name" content="Opello" />` +
 	`\n\t\t<meta property="og:title" content="${title}" />` +
 	`\n\t\t<meta property="og:description" content="${description}" />` +
