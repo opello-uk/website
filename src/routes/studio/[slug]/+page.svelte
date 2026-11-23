@@ -504,6 +504,10 @@ focusMainOnNavigate();
 		font-weight: 400;
 		line-height: 0.96;
 		letter-spacing: -0.025em;
+		/* Long non-Latin words (e.g. Turkish "Yükümlülüğü'nü") can exceed the line
+		   at 320px; breaking them keeps the title inside the overflow clip. No
+		   effect at desktop widths, where no word exceeds its line. */
+		overflow-wrap: anywhere;
 	}
 	.lede {
 		margin: 22px 0 0;
@@ -724,6 +728,9 @@ focusMainOnNavigate();
 		font-size: 0.85rem;
 		line-height: 1.55;
 		color: rgba(233, 228, 224, 0.78);
+		/* Source notes cite bare URLs; overflow-wrap lets a long one wrap at 320
+		   instead of poking past the viewport edge under the overflow clip. */
+		overflow-wrap: anywhere;
 	}
 	.card .link {
 		display: inline-block;
@@ -756,9 +763,12 @@ focusMainOnNavigate();
 		border-bottom: 1px solid rgb(233 228 224 / 0.12);
 	}
 	/* TIN country list (109 rows): bold the country name and split the list into
-	   columns so it scans instead of reading as one wall of text. Copy unchanged. */
+	   columns so it scans instead of reading as one wall of text. Copy unchanged.
+	   min(300px, 100%) keeps the scan at desktop width and lets the column floor
+	   collapse to the card's inner width below 300px so rows never clip at 320
+	   (WCAG 1.4.10 reflow; the div.studio overflow clip is not scrollable). */
 	.card ul.countries {
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
 		column-gap: 40px;
 	}
 	.card ul.countries li {
