@@ -63,7 +63,10 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
 	// English page fallback: translated pages inherit the English source notes until the notes
 	// themselves are translated (they are internal review markers, not customer copy).
-	import { bySlug as enBySlug } from '#lib/studio/pages';
+	// Slim notes-only map: the EN sourceNotes fallback must not drag the full
+	// pages chunk into every translated bundle (2026-11-24 weight sweep). Drift
+	// is caught by scripts/gen-en-notes.mjs --check in the build.
+	import { enNotes } from '#lib/studio/pages-notes-en';
 	import { markLangs, markPlaceholders } from '#lib/studio/scriptLangs';
 	import { faqJsonLd, qaPageSlugs, questionSections } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
@@ -84,7 +87,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	// Source notes for this page: the translated twin's own notes when present, else the English
 	// page's sourceNotes, else a roll-up of per-section notes (same rule as the English template).
 	const notes = $derived(
-		p.sourceNotes ?? enBySlug(p.slug)?.sourceNotes ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
+		p.sourceNotes ?? enNotes[p.slug] ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
 	);
 	// Internal links point to this language's equivalent when it exists,
 	// otherwise they keep their English target.
