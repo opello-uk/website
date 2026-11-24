@@ -148,6 +148,10 @@
 		font-weight: 500;
 		line-height: 1.02;
 		letter-spacing: -0.02em;
+		/* WCAG 1.4.4 text-resize: `anywhere` lowers min-content so a doubled long word
+		   (Turkish "Hayatını" at 200%) reflows instead of widening the hero copy column
+		   past the viewport edge. */
+		overflow-wrap: anywhere;
 	}
 	.unlock { display: block; color: #F58851; }
 	.life { display: block; color: #fff; }
@@ -163,6 +167,11 @@
 		align-items: center;
 		gap: 10px;
 		margin-top: 26px;
+		/* WCAG 1.4.4 text-resize: let the label reflow at 200% text instead of pushing
+		   the pill's min-content past the viewport (normal-zoom labels stay one line). */
+		overflow-wrap: anywhere;
+		white-space: normal;
+		text-align: center;
 		background: #F58851;
 		color: #001431;
 		border-radius: 999px;
@@ -446,7 +455,10 @@
 
 	@media (max-width: 900px) {
 		.inner {
-			grid-template-columns: 1fr;
+			/* minmax(0, ·) like the desktop row above: a bare 1fr track sizes to the item
+			   min-content, so doubled long words (WCAG 1.4.4 text-resize) widened the
+			   whole hero column past the viewport instead of reflowing. */
+			grid-template-columns: minmax(0, 1fr);
 		}
 		.screens {
 			height: clamp(360px, 52svh, 480px);

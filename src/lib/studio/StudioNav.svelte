@@ -771,6 +771,15 @@
 			min-width: 44px;
 			padding: 0 4px;
 		}
+		.tools {
+			/* WCAG 1.4.4 text-resize (found 2026-11-24 cycle): at 200% text the capsule
+			   no longer fits beside the flag, so the tools cluster wraps and the pills
+			   drop to their own row inside the header instead of clipping past the edge.
+			   At normal zoom everything fits on one line, so nothing changes visually. */
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			row-gap: 4px;
+		}
 		.pills {
 			gap: 0; /* joined capsule, as on desktop */
 		}
@@ -780,8 +789,12 @@
 			font-size: 10px;
 			letter-spacing: 0.04em;
 			text-indent: 0.04em;
-			line-height: 1;
-			white-space: nowrap;
+			line-height: 1.1;
+			/* Labels may wrap at this tier: normal-zoom labels are short enough to stay
+			   on one line, so the capsule look is unchanged; at 200% text the label
+			   reflows instead of clipping (white-space nowrap failed WCAG 1.4.4). */
+			white-space: normal;
+			text-align: center;
 			max-width: none;
 		}
 		.pill-white {

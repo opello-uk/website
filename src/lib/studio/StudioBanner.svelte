@@ -144,7 +144,10 @@
 		color: var(--deep);
 		font-size: 13px;
 		text-decoration: none;
-		white-space: nowrap;
+		/* WCAG 1.4.4: labels may reflow at 200% text instead of clipping (normal-zoom
+		   labels are short enough to stay on one line, so the pill look is unchanged). */
+		white-space: normal;
+		text-align: center;
 		transition:
 			background-color 220ms var(--ease),
 			color 220ms var(--ease);

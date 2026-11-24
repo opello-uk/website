@@ -97,9 +97,10 @@
 		font-size: clamp(28px, 4.4vw, 63px);
 		line-height: 1.08;
 		letter-spacing: -0.01em;
-		/* WCAG 1.4.12: long Turkish words (e.g. "koşullarınızda.") must not clip the narrow
-		   split column when user text-spacing overrides force letter-spacing wider. */
-		overflow-wrap: break-word;
+		/* WCAG 1.4.12 + 1.4.4: long Turkish words (e.g. "koşullarınızda.") must not clip
+		   the narrow split column — `anywhere` also lowers min-content, so doubled text
+		   at 200% reflows instead of widening the column past the viewport edge. */
+		overflow-wrap: anywhere;
 	}
 	/* Desktop: heading at the top, copy and ticks just under it, pill on the bottom edge (as the Figma). */
 	.copy {
@@ -133,6 +134,10 @@
 		align-items: center;
 		gap: 12px;
 		font-size: clamp(15px, 1.25vw, 18px);
+		/* WCAG 1.4.4 text-resize: `anywhere` (not break-word) lowers min-content, so a
+		   doubled long word ("straightforward", "Hesaplaştırılabilir") reflows inside
+		   the column instead of widening it past the viewport edge. */
+		overflow-wrap: anywhere;
 	}
 	/* Baseline shows a bare peach check, no circle behind it. */
 	.ticks .dot {
@@ -164,6 +169,10 @@
 		font-size: 16px;
 		align-self: flex-start;
 		text-decoration: none;
+		/* WCAG 1.4.4 text-resize: let the label reflow at 200% text so the pill's
+		   min-content fits the narrow mobile column (normal-zoom labels stay one line). */
+		overflow-wrap: anywhere;
+		text-align: center;
 		transition: background-color 220ms var(--ease);
 	}
 	/* Hover gated to real pointers; a touch tap must not leave the pill inverted. */
