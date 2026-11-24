@@ -780,6 +780,8 @@ focusMainOnNavigate();
 	}
 	.card ul.countries li {
 		break-inside: avoid;
+		/* WCAG 1.4.12: long TIN number names must break under user text-spacing overrides. */
+		overflow-wrap: anywhere;
 	}
 	.card ul.countries strong {
 		font-weight: 600;

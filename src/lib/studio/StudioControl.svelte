@@ -73,6 +73,8 @@
 		font-size: clamp(28px, 4vw, 58px);
 		letter-spacing: -0.01em;
 		line-height: 1.1;
+		/* WCAG 1.4.12: user text-spacing overrides must not clip the heading. */
+		overflow-wrap: anywhere;
 	}
 	header p {
 		margin: 0;
@@ -209,10 +211,13 @@
 		h2 {
 			font-size: 19px;
 			margin-bottom: 8px;
+			/* WCAG 1.4.12: the 1fr text column can shrink under letter/word-spacing overrides. */
+			overflow-wrap: anywhere;
 		}
 		header p {
 			font-size: 12px;
 			line-height: 1.45;
+			overflow-wrap: anywhere;
 		}
 	}
 
