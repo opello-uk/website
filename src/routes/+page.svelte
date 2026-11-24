@@ -205,7 +205,10 @@
 	}
 	footer a {
 		color: var(--clay);
-		text-decoration: none;
+		/* WCAG 1.4.1: the link must not rely on colour alone against the
+		   surrounding muted footer text — keep the underline. */
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 	footer a:hover {
 		color: var(--peach);
