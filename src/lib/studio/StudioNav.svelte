@@ -273,7 +273,7 @@
 				bind:this={searchButton}
 				aria-label={t.searchLabel}
 				aria-expanded={searchOpen}
-				aria-haspopup={/* @ts-ignore 'search' is valid per HTML spec, svelte/elements types lag */ "search" as any}
+				aria-haspopup={/* @ts-ignore 'dialog' is a valid aria-haspopup token; the panel is role=dialog */ "dialog" as any}
 				aria-controls="nav-search"
 				onclick={searchOpen ? closeSearch : openSearch}
 			>

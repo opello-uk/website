@@ -249,7 +249,7 @@ focusMainOnNavigate();
 					{#if s.links}
 						<ul class="links">
 							{#each s.links as l (l.href)}
-								<li><a href={resolve(l.href as '/')}>{l.label}</a>{#if p.slug === 'sitemap'}{#each langVariants(l.href) as v (v.href)} <a class="langlink" href={resolve(v.href as '/')} lang={v.label === 'Türkçe' ? 'tr' : 'ar'} aria-label={`${l.label} (${v.label})`}>{v.label}</a>{/each}{/if}</li>
+								<li><a href={resolve(l.href as '/')}>{l.label}</a>{#if p.slug === 'sitemap'}{#each langVariants(l.href) as v (v.href)} <a class="langlink" href={resolve(v.href as '/')} lang={v.label === 'Türkçe' ? 'tr' : 'ar'} aria-label={`${l.label} ${v.label}`}>{v.label}</a>{/each}{/if}</li>
 							{/each}
 						</ul>
 					{/if}
