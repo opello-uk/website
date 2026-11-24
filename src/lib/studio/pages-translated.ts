@@ -3725,7 +3725,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     },
     {
       slug: "uk-account-from-abroad",
-      title: "Yurt dışından Birleşik Krallık hesabı almak",
+      title: "Yurt dışından BK hesabı almak", // BK = standard Turkish abbreviation for Birleşik Krallık; full form pushed the <title> to 77 chars (>70 guidance) once the translated suffix is appended
       kicker: "Açıklamalar",
       lede: "Birleşik Krallık dışında yaşayan birçok kişi maaşını sterlin olarak alıyor, Birleşik Krallık’ta mülk sahibi veya parayı Birleşik Krallık’a taşıması gerekiyor. Orada yaşamıyorsanız Birleşik Krallık hesabı nasıl çalışır, işte karşınızda.",
       metaDescription: "Birle\u015fik Krall\u0131k d\u0131\u015f\u0131nda ya\u015fayan bir\u00e7ok ki\u015fi maa\u015f\u0131n\u0131 sterlin olarak al\u0131yor. Orada ya\u015fam\u0131yorsan\u0131z Birle\u015fik Krall\u0131k hesab\u0131 nas\u0131l \u00e7al\u0131\u015f\u0131r?", // shorter than the lede for search snippets; lede untouched
