@@ -265,7 +265,9 @@
 		</div>
 
 		<!-- Search: the deck shows a search control in the header. The button opens a
-		     page search (index built from this language's page list, results via langHref). -->
+		     page search (index built from this language's page list, results via langHref).
+		     aria-controls is only emitted while the panel exists ({#if searchOpen}), so the
+		     prerendered HTML never carries a dangling idref (found by the 2026-11-24 aria sweep). -->
 		<div class="searchwrap">
 			<button
 				type="button"
@@ -274,7 +276,7 @@
 				aria-label={t.searchLabel}
 				aria-expanded={searchOpen}
 				aria-haspopup={/* @ts-ignore 'dialog' is a valid aria-haspopup token; the panel is role=dialog */ "dialog" as any}
-				aria-controls="nav-search"
+				aria-controls={searchOpen ? "nav-search" : undefined}
 				onclick={searchOpen ? closeSearch : openSearch}
 			>
 				<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
