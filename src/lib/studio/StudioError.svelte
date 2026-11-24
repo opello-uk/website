@@ -210,7 +210,9 @@
 		}
 	}
 	.pill:focus-visible {
-		outline: 2px solid var(--peach);
+		/* Deep outline: the peach CTA pill cannot carry a peach ring (1:1 on its own fill); the global peach
+		   halo stays the visible band on the navy ground. */
+		outline: 2px solid var(--deep);
 		outline-offset: 3px;
 	}
 	.quiet {
@@ -225,7 +227,8 @@
 		}
 	}
 	.quiet:focus-visible {
-		outline: 2px solid var(--peach);
+		/* Deep outline: the peach quiet link cannot carry a peach ring (1:1 on its own fill). */
+		outline: 2px solid var(--deep);
 		outline-offset: 3px;
 	}
 	@media (prefers-reduced-motion: reduce) {

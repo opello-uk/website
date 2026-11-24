@@ -824,7 +824,8 @@ focusMainOnNavigate();
 		}
 	}
 	.card .langlink:focus-visible {
-		outline: 2px solid var(--peach);
+		/* Deep outline: these sit on clay cards, where peach alone samples 1.95:1 (WCAG 1.4.11 wants 3:1). */
+		outline: 2px solid var(--deep);
 		outline-offset: 3px;
 	}
 .card .link:focus-visible {
@@ -850,7 +851,9 @@ focusMainOnNavigate();
 		}
 	}
 	.pill:focus-visible {
-		outline: 2px solid var(--peach);
+		/* Deep outline: the peach CTA pill cannot carry a peach ring (1:1 on its own fill); the global
+		   peach halo stays the visible band on navy, the deep outline on clay sections. */
+		outline: 2px solid var(--deep);
 		outline-offset: 3px;
 	}
 	/* Programmatic focus lands on <main> after client-side navigation; never a visible ring. */

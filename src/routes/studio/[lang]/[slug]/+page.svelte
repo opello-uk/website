@@ -840,7 +840,9 @@ focusMainOnNavigate();
 		}
 	}
 	.pill:focus-visible {
-		outline: 2px solid var(--peach);
+		/* Deep outline: the peach CTA pill cannot carry a peach ring (1:1 on its own fill); the global
+		   peach halo stays the visible band on navy, the deep outline on clay sections. */
+		outline: 2px solid var(--deep);
 		outline-offset: 3px;
 	}
 	/* Programmatic focus lands on <main> after client-side navigation; never a visible ring. */

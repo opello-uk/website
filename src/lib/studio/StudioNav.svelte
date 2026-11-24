@@ -376,7 +376,9 @@
 		}
 	}
 	.tab:focus-visible {
-		outline: 2px solid var(--peach);
+		/* Deep outline: the current-page tab is clay-filled, where peach alone samples 1.95:1 (WCAG 1.4.11 wants 3:1).
+		   The global peach 4px halo stays visible on the navy nav ground. */
+		outline: 2px solid var(--deep);
 		outline-offset: 2px;
 	}
 	.tab[aria-current='page'] {
@@ -687,7 +689,9 @@
 		transition: transform 200ms var(--ease), background-color 200ms var(--ease);
 	}
 	.pill:focus-visible {
-		outline: 2px solid var(--peach);
+		/* Deep outline: the peach CTA pill cannot carry a peach ring (1:1 on its own fill); the peach halo
+		   stays the visible band on the navy nav ground. */
+		outline: 2px solid var(--deep);
 		outline-offset: 3px;
 	}
 	.pill-peach {
