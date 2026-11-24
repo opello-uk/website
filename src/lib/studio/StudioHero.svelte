@@ -327,10 +327,16 @@
 	.tabs {
 		margin-top: auto;
 		display: flex;
+		flex-wrap: wrap;
+		gap: 2px 10px;
 		justify-content: space-between;
 		padding: 6px 10px;
 		border-top: 1px solid rgba(0, 20, 49, 0.12);
 		font-size: 7.5px;
+		line-height: 1.2;
+	}
+	.tabs span {
+		white-space: nowrap;
 	}
 	.tabs .on {
 		font-weight: 700;
