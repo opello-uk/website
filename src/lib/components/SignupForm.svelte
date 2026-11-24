@@ -40,7 +40,23 @@
 				headers: { 'content-type': 'application/json' },
 				body: JSON.stringify({ email: value, source: 'coming-soon', consent: CONSENT_VERSION })
 			});
-			if (!res.ok) throw new Error(String(res.status));
+			if (!res.ok) {
+				// The throttle (429) is a normal, expected response on shared IPs, so its
+				// server message is worth surfacing instead of the generic error.
+				if (res.status === 429) {
+					let msg = '';
+					try {
+						const j = await res.json();
+						if (j && typeof j.error === 'string') msg = j.error;
+					} catch {}
+					if (msg) {
+						status = 'error';
+						note = msg;
+						return;
+					}
+				}
+				throw new Error(String(res.status));
+			}
 			status = 'done';
 			await tick();
 			thanks?.focus({ preventScroll: true });
