@@ -12,9 +12,12 @@
 	// bidi algorithm scrambles them without an explicit dir. The helper returns
 	// escaped text untouched when there is no Arabic script, so every English and
 	// Turkish page renders exactly as before.
-	import { markLatinInRTL } from '#lib/studio/scriptLangs';
+	import { markBodyText } from '#lib/studio/scriptLangs';
 
-	let { text }: { text: string } = $props();
+	// lang drives the text treatment (see markBodyText in scriptLangs.ts):
+	// EN legacy path, ar Latin-run bidi wrapping plus placeholder wrapping,
+	// tr placeholder wrapping.
+	let { text, lang = 'en' }: { text: string; lang?: 'en' | 'ar' | 'tr' } = $props();
 
 	const EMAIL = 'privacy@opello.co.uk';
 
@@ -40,5 +43,5 @@
 {#each segments(text) as seg (seg.t ?? 'email')}
 	{#if seg.email}
 		<span>privacy</span>@<span>opello</span>.<span>co</span>.<span>uk</span>
-	{:else}{@html markLatinInRTL(seg.t ?? '')}{/if}
+	{:else}{@html markBodyText(seg.t ?? '', lang)}{/if}
 {/each}

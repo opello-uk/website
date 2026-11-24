@@ -52,6 +52,57 @@ export function markLatinInRTL(text: string): string {
 	return out;
 }
 
+// English "[Placeholder: ...]" marker runs embedded in ar/tr copy. The surrounding
+// text is translated but the marker is English, so screen readers may read it in
+// the wrong voice and the bidi algorithm can scramble it inside an RTL paragraph.
+// Wrap each marker run in <span lang="en" dir="ltr"> for non-EN pages; English
+// output stays byte-identical (plain escaped text).
+const PLACEHOLDER_RUN = /\[Placeholder:[^\]]*\]/g;
+
+export function markPlaceholders(text: string, lang: string): string {
+	if (lang === 'en' || !PLACEHOLDER_RUN.test(text)) return escapeText(text);
+	PLACEHOLDER_RUN.lastIndex = 0;
+	let out = '';
+	let last = 0;
+	for (const m of text.matchAll(PLACEHOLDER_RUN)) {
+		out += escapeText(text.slice(last, m.index));
+		out += `<span lang="en" dir="ltr">${escapeText(m[0])}</span>`;
+		last = m.index + m[0].length;
+	}
+	out += escapeText(text.slice(last));
+	return out;
+}
+
+// One-pass treatment for section/card body text by page language:
+//  en — legacy behaviour unchanged (markLatinInRTL is an escape-only no-op there);
+//  tr — Latin text, so only the English "[Placeholder: ...]" marker runs need the
+//       lang="en" wrapper (markLatinInRTL would no-op);
+//  ar — Arabic text: wrap the marker runs AND every Latin run (registered address,
+//       company name) in one pass, so a pure-English placeholder body is no longer
+//       left bare when there is no Arabic script to trigger the Latin path.
+const PLACEHOLDER_OR_LATIN = new RegExp(`\\[Placeholder:[^\\]]*\\]|${LATIN_RUN.source}`, 'g');
+
+export function markBodyText(text: string, lang: string): string {
+	if (lang === 'en') return markLatinInRTL(text);
+	const hasPlaceholder = text.includes('[Placeholder:');
+	const hasArabic = ARABIC.test(text);
+	if (!hasPlaceholder && !hasArabic) return escapeText(text);
+	const re = hasPlaceholder && hasArabic ? PLACEHOLDER_OR_LATIN : hasPlaceholder ? PLACEHOLDER_RUN : LATIN_RUN;
+	re.lastIndex = 0;
+	let out = '';
+	let last = 0;
+	for (const m of text.matchAll(re)) {
+		const isPlaceholder = m[0].startsWith('[Placeholder:');
+		// Skip Latin "runs" that are just digits/punctuation picked up around a number
+		if (!isPlaceholder && !/[A-Za-z]/.test(m[0].slice(1))) continue;
+		out += escapeText(text.slice(last, m.index));
+		out += `<span lang="en" dir="ltr">${escapeText(m[0])}</span>`;
+		last = m.index + m[0].length;
+	}
+	out += escapeText(text.slice(last));
+	return out;
+}
+
 export function markLangs(text: string): string {
 	let out = '';
 	let last = 0;

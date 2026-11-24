@@ -64,7 +64,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	// English page fallback: translated pages inherit the English source notes until the notes
 	// themselves are translated (they are internal review markers, not customer copy).
 	import { bySlug as enBySlug } from '#lib/studio/pages';
-	import { markLangs } from '#lib/studio/scriptLangs';
+	import { markLangs, markPlaceholders } from '#lib/studio/scriptLangs';
 	import { faqJsonLd, qaPageSlugs, questionSections } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
 	import { breadcrumbJsonLd, parentBySlug } from '#lib/studio/breadcrumbLd';
@@ -160,7 +160,7 @@ focusMainOnNavigate();
 				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
 			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
-				<p class="lede">{p.lede}</p>
+				<p class="lede">{@html markPlaceholders(p.lede, lang)}</p>
 			</div>
 		</section>
 		{:else if p.hero?.variant === 'ring-photo'}
@@ -170,7 +170,7 @@ focusMainOnNavigate();
 				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
 			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
-				<p class="lede">{p.lede}</p>
+				<p class="lede">{@html markPlaceholders(p.lede, lang)}</p>
 			</div>
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
@@ -188,7 +188,7 @@ focusMainOnNavigate();
 				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
 			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
-				<p class="lede">{p.lede}</p>
+				<p class="lede">{@html markPlaceholders(p.lede, lang)}</p>
 			</div>
 		</section>
 		{:else if p.hero?.variant === 'band'}
@@ -200,7 +200,7 @@ focusMainOnNavigate();
 				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
 			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
-				<p class="lede">{p.lede}</p>
+				<p class="lede">{@html markPlaceholders(p.lede, lang)}</p>
 			</div>
 		</section>
 		{:else}
@@ -210,7 +210,7 @@ focusMainOnNavigate();
 				<StudioCrumbs lang={lang} slug={p.slug} kicker={p.kicker} />
 			<p class="kicker">{p.kicker}</p>
 				<h1>{p.title}</h1>
-				<p class="lede">{p.lede}</p>
+				<p class="lede">{@html markPlaceholders(p.lede, lang)}</p>
 			</div>
 		</section>
 		{/if}
@@ -222,7 +222,7 @@ focusMainOnNavigate();
 			{#each p.sections as s (s.heading)}
 				<article class="card" class:wide={s.wide} class:half={s.half} class:big={s.big}>
 					<h2>{s.heading}</h2>
-					<p><EmailBody text={s.body} /></p>
+					<p><EmailBody text={s.body} lang={lang} /></p>
 					{#if s.href}<a class="link" href={local(s.href)} aria-label={`${s.linkLabel ?? t.learnMore}: ${s.heading}`}>{s.linkLabel ?? t.learnMore}</a>{/if}
 					{#if s.links}
 						<ul class="links">
