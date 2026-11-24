@@ -172,6 +172,20 @@
 		border-radius: 24px;
 		overflow: hidden;
 		margin-bottom: 36px;
+		/* Same card language as the slug-page clay cards (translateY -3px, navy shadow). */
+		transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
+	}
+	/* Hover gated to real pointers; a touch tap must not leave a tile lifted. */
+	@media (hover: hover) and (pointer: fine) {
+		.card:hover .photo {
+			transform: translateY(-3px);
+			box-shadow: 0 14px 30px rgba(0, 20, 49, 0.35);
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.photo {
+			transition: none;
+		}
 	}
 	.tone-a {
 		background: linear-gradient(160deg, #6f5153 0%, #005385 100%);
