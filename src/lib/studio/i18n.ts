@@ -231,12 +231,22 @@ export const chrome: Record<"en" | Lang, Chrome> = {
 // used in StudioFooter. Legal links stay on their (English) pages until those
 // pages are translated.
 export const footerColumnTitle: Record<string, { ar: string; tr: string }> = {
+  "Who it's for": { ar: "لمن هذا؟", tr: "Kimin için" },
   Personal: { ar: "شخصي", tr: "Bireysel" },
   About: { ar: "حول", tr: "Tanıtım" },
   Help: { ar: "المساعدة", tr: "Yardım" },
 };
 
 export const footerLinkLabel: Record<string, { ar: string; tr: string }> = {
+  // Blend-5 footer (deck v18 slide 7): the Who-it's-for column reuses the nav's
+  // situation labels verbatim (whoRes/whoSav/whoImm); Fees and Safety reuse the
+  // nav tab labels. Complaints points at the contact page's complaints answers.
+  "People paid from abroad": { ar: "المُرسل إليهم من الخارج", tr: "Yurt dışından para alanlar" },
+  Savers: { ar: "المُدّخرون", tr: "Birikim sahipleri" },
+  "People who moved abroad": { ar: "المنقولون للخارج", tr: "Yurt dışına taşınanlar" },
+  Fees: { ar: "الرسوم", tr: "Ücretler" },
+  Safety: { ar: "الأمان", tr: "Güvenlik" },
+  Complaints: { ar: "الشكاوى", tr: "Şikâyetler" },
   "Everyday account": { ar: "الحساب اليومي", tr: "Günlük hesap" },
   Savings: { ar: "التوفير", tr: "Birikim" },
   Payments: { ar: "المدفوعات", tr: "Ödemeler" },

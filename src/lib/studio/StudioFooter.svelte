@@ -7,14 +7,23 @@
 	const t = $derived(chrome[lang]);
 	const colPage: Record<string, string> = { Personal: 'personal', About: 'about', Help: 'help' };
 	// Links that have their own page go there; the rest fall back to their column page.
-	const linkPage: Record<string, string> = { 'Everyday account': 'current-accounts', Savings: 'savings', Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', Contact: 'contact', 'Get in touch': 'contact', 'Account support': 'help-get-in-touch', 'Help centre': 'help-articles', FAQs: 'faq', 'Our approach': 'about', Careers: 'careers', News: 'news' };
+	const linkPage: Record<string, string> = { 'Everyday account': 'current-accounts', Savings: 'savings', Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', Contact: 'contact', 'Get in touch': 'contact', 'Account support': 'help-get-in-touch', 'Help centre': 'help-articles', FAQs: 'faq', 'Our approach': 'about', Careers: 'careers', News: 'news',
+		// Blend-5 footer (deck v18 slide 7): the Who-it's-for situation pages and the
+		// Help column's Fees / Safety / Complaints entries. Complaints has no page of
+		// its own yet; the complaints procedure answers live on the contact page.
+		'People paid from abroad': 'for-residents', Savers: 'for-savers', 'People who moved abroad': 'for-immigrants',
+		Fees: 'fees-and-charges', Safety: 'safety', Complaints: 'help-get-in-touch' };
 
 	// Footer link columns from the deck. The Business column is out of MLP1 scope (Vinay, 2026-11-18);
 	// Global transfers moved into Personal so the link survives. Footer IA to confirm with Opello.
 	const columns = [
+		// Blend-5 (deck v18 slide 7): Who-it's-for column with the three situation
+		// pages, and the Help column gains Fees / Safety / Complaints. The Personal
+		// product links and the About column stay until Opello confirms the IA.
+		{ title: "Who it's for", links: ['People paid from abroad', 'Savers', 'People who moved abroad'] },
 		{ title: 'Personal', links: ['Everyday account', 'Savings', 'Payments', 'Cards', 'Global transfers'] },
 		{ title: 'About', links: ['About us', 'Our approach', 'Careers', 'News', 'Contact'] },
-		{ title: 'Help', links: ['Help centre', 'FAQs', 'Account support', 'Get in touch'] }
+		{ title: 'Help', links: ['Help centre', 'Fees', 'Safety', 'Complaints', 'FAQs', 'Account support', 'Get in touch'] }
 	];
 
 	// Social profiles; linked once the accounts are live.
@@ -106,7 +115,7 @@
 	}
 	.cols {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 24px;
 	}
 	h2 {
@@ -227,10 +236,10 @@
 		}
 	}
 	@media (max-width: 560px) {
-		/* Phones: three columns in one row, as in the 390 frame. */
+		/* Phones: four columns in one row (blend-5 added the Who-it's-for column). */
 		.cols {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			gap: 12px;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 10px;
 		}
 		h2 {
 			font-size: 12px;
