@@ -187,7 +187,7 @@
 <svelte:window onkeydown={onWindowKeydown} onpointerdown={onWindowPointerdown} />
 
 <header class="nav studio-nav">
-	<a class="brand" href={resolve('/studio')} aria-label={t.brandAria}>
+	<a class="brand" href={resolve('/studio') + '/'} aria-label={t.brandAria}>
 		<Wordmark />
 	</a>
 
