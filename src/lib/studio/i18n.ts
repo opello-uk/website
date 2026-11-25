@@ -28,6 +28,16 @@ export const STUDIO_ORIGIN = "https://studio-5c4fcfa636.onrender.com";
 
 export type Chrome = {
   tabsPersonal: string;
+  // Blend-1 nav (deck v18 slide 7): Who it's for dropdown trigger + its three
+  // situation labels, and the Fees/Safety/Help tabs.
+  tabWho: string;
+  whoAria: string;
+  whoRes: string;
+  whoSav: string;
+  whoImm: string;
+  tabFees: string;
+  tabSafety: string;
+  tabHelp: string;
   ctaAccount: string;
   login: string;
   brandAria: string;
@@ -361,5 +371,134 @@ export const homeCopy: Record<'en' | Lang, {
     photoTitle1: 'Ait olduğunuz', photoTitle2: 'bir yer.',
     photoBody: 'Arka planınız ya da başlangıç noktanız ne olursa olsun, Opello finansal hizmetlere erişimin daha kapsayıcı olması gerektiğine inanır.',
     photoAlt: 'Güneşli bir kumsalda birlikte gülen iki arkadaş'
+  }
+};
+
+// Homepage deck sections (website-structure deck v18 slide 8): trust signals,
+// who it's for, how it works, fees summary, questions. English strings are the
+// source (StudioDeck's own data before 2026-11-25). The licence/safeguarding
+// wording in the trust block and the safety answer is a design slot pending
+// compliance sign-off, same as the English root; change it only when the
+// English copy changes at sign-off.
+export const deckCopy: Record<'en' | Lang, {
+  trustAria: string;
+  trust: { label: string; note: string }[];
+  whoH: string; whoLede: string;
+  whoCards: { href: string; label: string; note: string }[];
+  howH: string;
+  steps: { label: string; note: string }[];
+  feesH: string;
+  fees: { k: string; v: string }[];
+  feesLink: string;
+  faqH: string;
+  faq: { q: string; a: string }[];
+}> = {
+  en: {
+    trustAria: 'Why Opello is safe',
+    trust: [
+      { label: 'UK-regulated', note: 'Authorised in the United Kingdom' },
+      { label: 'Safeguarded funds', note: 'Your money is held safely, separate from ours' },
+      { label: 'Fees shown up front', note: 'The full cost, before you confirm' },
+      { label: 'Secure by design', note: 'Strong identity checks and encryption' }
+    ],
+    whoH: 'Is Opello for you?',
+    whoLede: 'People come from many countries but share the same situations. Find yours.',
+    whoCards: [
+      { href: '/studio/for-residents/', label: 'People paid from abroad', note: 'Local accounts work at home, but getting paid from abroad is slow, costly or blocked.' },
+      { href: '/studio/for-savers/', label: 'Savers', note: 'Where inflation runs high, savings in local currency lose value every month.' },
+      { href: '/studio/for-immigrants/', label: 'People who moved abroad', note: 'Banks cut ties without warning. Your money stays safe and reachable here.' }
+    ],
+    howH: 'How it works',
+    steps: [
+      { label: 'Check you can join', note: 'A few questions on where you live, answered in a minute.' },
+      { label: 'Verify your identity', note: 'Your ID and a quick check, done in the app.' },
+      { label: 'Start using it', note: 'Account, virtual card and payments, ready to go.' }
+    ],
+    feesH: 'What it costs',
+    fees: [
+      { k: 'Opening your account', v: 'Free' },
+      { k: 'Holding your money', v: 'Free' },
+      { k: 'Sending money abroad', v: 'Shown before you confirm' },
+      { k: 'Spending on the card', v: 'Shown before you confirm' }
+    ],
+    feesLink: 'See all fees and charges',
+    faqH: 'Questions people ask',
+    faq: [
+      { q: 'Who can open an account?', a: 'People living in the United Kingdom, the United Arab Emirates and Türkiye. The app checks eligibility before sign-up.' },
+      { q: 'Is my money safe?', a: 'Opello is authorised in the United Kingdom and customer funds are safeguarded, held separately from the money Opello uses to run the business.' },
+      { q: 'What does it cost?', a: 'Opening and holding an account is free. Every payment shows its full cost before you confirm it.' }
+    ]
+  },
+  ar: {
+    trustAria: 'لماذا أوبيلو آمنة',
+    trust: [
+      { label: 'مرخّص في المملكة المتحدة', note: 'مصرّح لنا بالعمل في المملكة المتحدة' },
+      { label: 'أموال محمية', note: 'تُحفظ أموالك بأمان، منفصلة عن أموالنا' },
+      { label: 'الرسوم واضحة مسبقًا', note: 'التكلفة الكاملة، قبل أن تؤكد' },
+      { label: 'آمن بتصميمه', note: 'تحقق قوي من الهوية وتشفير للبيانات' }
+    ],
+    whoH: 'هل أوبيلو مناسب لك؟',
+    whoLede: 'يأتي عملاؤنا من دول مختلفة، لكنهم يشاركون نفس المواقف. اعثر على موقفك.',
+    whoCards: [
+      { href: '/studio/for-residents/', label: 'المُرسل إليهم من الخارج', note: 'الحسابات المحلية تعمل داخل البلد، لكن استلام الأموال من الخارج بطيء أو مكلف أو محجوب.' },
+      { href: '/studio/for-savers/', label: 'المُدّخرون', note: 'حيث يكون التضخم مرتفعًا، تفقد المدخرات المحلية قيمتها كل شهر.' },
+      { href: '/studio/for-immigrants/', label: 'المنقولون للخارج', note: 'تقطع البنوك علاقتها دون سابق إنذار. تبقى أموالك آمنة ومتاحة هنا.' }
+    ],
+    howH: 'كيف يعمل',
+    steps: [
+      { label: 'تحقق من أهليتك', note: 'أسئلة قليلة عن مكان إقامتك، تجيب عنها في دقيقة.' },
+      { label: 'وثّق هويتك', note: 'هويتك وفحص سريع، يتم داخل التطبيق.' },
+      { label: 'ابدأ الاستخدام', note: 'حساب وبطاقة افتراضية ومدفوعات، جاهزة للعمل.' }
+    ],
+    feesH: 'كم التكلفة؟',
+    fees: [
+      { k: 'فتح حسابك', v: 'مجانًا' },
+      { k: 'الاحتفاظ بأموالك', v: 'مجانًا' },
+      { k: 'إرسال الأموال إلى الخارج', v: 'تظهر قبل التأكيد' },
+      { k: 'الدفع بالبطاقة', v: 'تظهر قبل التأكيد' }
+    ],
+    feesLink: 'اطّلع على جميع الرسوم والرسوم الإضافية',
+    faqH: 'أسئلة يطرحها الناس',
+    faq: [
+      { q: 'من يمكنه فتح حساب؟', a: 'المقيمون في المملكة المتحدة والإمارات العربية المتحدة وتركيا. يتحقق التطبيق من الأهلية قبل التسجيل.' },
+      { q: 'هل أموالي آمنة؟', a: 'أوبيلو مصرّح لها في المملكة المتحدة، وتُحفظ أموال العملاء بشكل منفصل عن الأموال التي تستخدمها أوبيلو لتشغيل أعمالها.' },
+      { q: 'كم التكلفة؟', a: 'فتح الحساب والاحتفاظ به مجاني. كل عملية دفع تُظهر تكلفتها الكاملة قبل التأكيد.' }
+    ]
+  },
+  tr: {
+    trustAria: 'Opello neden güvenli',
+    trust: [
+      { label: "Birleşik Krallık'ta yetkili", note: "Birleşik Krallık'ta faaliyet göstermek için yetkilendirildik" },
+      { label: 'Korumalı fonlar', note: 'Paranız güvende, bizim paramızdan ayrı tutulur' },
+      { label: 'Ücretler baştan açık', note: 'Tam maliyet, onaylamadan önce' },
+      { label: 'Tasarımdan güvenli', note: 'Güçlü kimlik doğrulama ve şifreleme' }
+    ],
+    whoH: 'Opello sizin için mi?',
+    whoLede: 'Müşterilerimiz birçok ülkeden geliyor ama aynı durumları paylaşıyorlar. Sizinkini bulun.',
+    whoCards: [
+      { href: '/studio/for-residents/', label: 'Yurt dışından para alanlar', note: 'Yerel hesaplar ülke içinde çalışıyor ama yurt dışından para almak yavaş, pahalı veya engelli.' },
+      { href: '/studio/for-savers/', label: 'Birikim sahipleri', note: 'Enflasyonun yüksek olduğu yerlerde yerel para birimindeki birikimler her ay değer kaybediyor.' },
+      { href: '/studio/for-immigrants/', label: 'Yurt dışına taşınanlar', note: 'Bankalar haber vermeden ilişkiyi kesiyor. Paranız burada güvende ve ulaşılabilir kalıyor.' }
+    ],
+    howH: 'Nasıl çalışır',
+    steps: [
+      { label: 'Uygunluğunuzu kontrol edin', note: 'Nerede yaşadığınıza dair birkaç soru, bir dakikada yanıtlanır.' },
+      { label: 'Kimliğinizi doğrulayın', note: 'Kimliğiniz ve hızlı bir kontrol, uygulamada yapılır.' },
+      { label: 'Kullanmaya başlayın', note: 'Hesap, sanal kart ve ödemeler, kullanıma hazır.' }
+    ],
+    feesH: 'Ne kadar tutar?',
+    fees: [
+      { k: 'Hesabınızı açmak', v: 'Ücretsiz' },
+      { k: 'Paranızı tutmak', v: 'Ücretsiz' },
+      { k: 'Yurt dışına para göndermek', v: 'Onaylamadan önce gösterilir' },
+      { k: 'Kartla harcamak', v: 'Onaylamadan önce gösterilir' }
+    ],
+    feesLink: 'Tüm ücret ve masrafları görün',
+    faqH: 'Sık sorulan sorular',
+    faq: [
+      { q: 'Kim hesap açabilir?', a: "Birleşik Krallık, Birleşik Arap Emirlikleri ve Türkiye'de yaşayanlar. Uygulama kayıt öncesi uygunluğu kontrol eder." },
+      { q: 'Param güvende mi?', a: "Opello Birleşik Krallık'ta yetkilidir ve müşteri fonları, Opello'nun işletmesini yürütmek için kullandığı paradan ayrı tutulur." },
+      { q: 'Ne kadar tutar?', a: 'Hesap açmak ve tutmak ücretsizdir. Her ödeme, onaylamadan önce tam maliyetini gösterir.' }
+    ]
   }
 };

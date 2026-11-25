@@ -6,62 +6,27 @@
 	// 5 how it works, 7 fees summary, 8 questions and get started.
 	// (1 top banner = StudioHero, 4 what you get = StudioProducts, 6 safety deep-dive
 	// gets its own page and section next run.)
-	const trust = [
-		{ label: 'UK-regulated', note: 'Authorised in the United Kingdom' },
-		{ label: 'Safeguarded funds', note: 'Your money is held safely, separate from ours' },
-		{ label: 'Fees shown up front', note: 'The full cost, before you confirm' },
-		{ label: 'Secure by design', note: 'Strong identity checks and encryption' }
-	];
-	const situations = [
-		{
-			href: '/studio/for-residents/',
-			label: 'People paid from abroad',
-			note: 'Local accounts work at home, but getting paid from abroad is slow, costly or blocked.'
-		},
-		{
-			href: '/studio/for-savers/',
-			label: 'Savers',
-			note: 'Where inflation runs high, savings in local currency lose value every month.'
-		},
-		{
-			href: '/studio/for-immigrants/',
-			label: 'People who moved abroad',
-			note: 'Banks cut ties without warning. Your money stays safe and reachable here.'
-		}
-	];
-	const steps = [
-		{ n: '1', label: 'Check you can join', note: 'A few questions on where you live, answered in a minute.' },
-		{ n: '2', label: 'Verify your identity', note: 'Your ID and a quick check, done in the app.' },
-		{ n: '3', label: 'Start using it', note: 'Account, virtual card and payments, ready to go.' }
-	];
-	const fees = [
-		{ k: 'Opening your account', v: 'Free' },
-		{ k: 'Holding your money', v: 'Free' },
-		{ k: 'Sending money abroad', v: 'Shown before you confirm' },
-		{ k: 'Spending on the card', v: 'Shown before you confirm' }
-	];
-	const questions = [
-		{
-			q: 'Who can open an account?',
-			a: 'People living in the United Kingdom, the United Arab Emirates and Türkiye. The app checks eligibility before sign-up.'
-		},
-		{
-			q: 'Is my money safe?',
-			a: 'Opello is authorised in the United Kingdom and customer funds are safeguarded, held separately from the money Opello uses to run the business.'
-		},
-		{
-			q: 'What does it cost?',
-			a: 'Opening and holding an account is free. Every payment shows its full cost before you confirm it.'
-		}
-	];
+	// Copy per language lives in deckCopy (i18n); the English strings moved there
+	// verbatim on 2026-11-25 so the ar/tr homepages carry the same deck arc. The
+	// licence/safeguarding wording is a design slot pending compliance sign-off in
+	// every language (see the deckCopy note).
+	// Internal links resolve to the language twin via langHref (the three situation
+	// pages, fees-and-charges and open-account all have ar/tr twins).
+	import { deckCopy, homeCopy, langHref } from '#lib/studio/i18n';
+	import { resolve } from '$app/paths';
+
+	let { lang }: { lang?: 'en' | 'ar' | 'tr' } = $props();
+	const c = $derived(deckCopy[lang ?? 'en']);
+	const local = $derived((href: string) => resolve(langHref(lang ?? 'en', href) as '/'));
+	const cta = $derived(homeCopy[lang ?? 'en'].heroCta);
 </script>
 
 <!-- 2. Trust signals: proof of safety near the top (deck principle 4, Monzo benchmark).
      The licence/safeguarding wording is a design slot: it fills with confirmed
      compliance wording the moment sign-off lands (see sourceNotes in pages.ts). -->
-<section class="deck trust" aria-label="Why Opello is safe">
+<section class="deck trust" aria-label={c.trustAria}>
 	<ul class="trust-grid">
-		{#each trust as t (t.label)}
+		{#each c.trust as t (t.label)}
 			<li>
 				<strong>{t.label}</strong>
 				<span>{t.note}</span>
@@ -73,11 +38,11 @@
 <!-- 3. Who it's for: three cards, one per situation, each to its own page
      (deck principle 2, GrabrFi benchmark). -->
 <section class="deck who" aria-labelledby="who-h">
-	<h2 id="who-h">Is Opello for you?</h2>
-	<p class="who-lede">People come from many countries but share the same situations. Find yours.</p>
+	<h2 id="who-h">{c.whoH}</h2>
+	<p class="who-lede">{c.whoLede}</p>
 	<div class="who-grid">
-		{#each situations as s (s.href)}
-			<a class="who-card" href={s.href}>
+		{#each c.whoCards as s (s.href)}
+			<a class="who-card" href={local(s.href)}>
 				<strong>{s.label}</strong>
 				<span>{s.note}</span>
 				<span class="go" aria-hidden="true">→</span>
@@ -88,11 +53,11 @@
 
 <!-- 5. How it works: three steps, eligibility first (deck principle 5). -->
 <section class="deck how" aria-labelledby="how-h">
-	<h2 id="how-h">How it works</h2>
+	<h2 id="how-h">{c.howH}</h2>
 	<ol class="steps">
-		{#each steps as s (s.n)}
+		{#each c.steps as s, i (s.label)}
 			<li>
-				<span class="step-n" aria-hidden="true">{s.n}</span>
+				<span class="step-n" aria-hidden="true">{i + 1}</span>
 				<div>
 					<strong>{s.label}</strong>
 					<span>{s.note}</span>
@@ -105,29 +70,29 @@
 <!-- 7. Fees summary: main fees in plain numbers, link to the Fees page
      (deck principle 3). Numbers fill when the fees schedule is confirmed. -->
 <section class="deck fees" aria-labelledby="fees-h">
-	<h2 id="fees-h">What it costs</h2>
+	<h2 id="fees-h">{c.feesH}</h2>
 	<dl class="fee-list">
-		{#each fees as f (f.k)}
+		{#each c.fees as f (f.k)}
 			<div class="fee-row">
 				<dt>{f.k}</dt>
 				<dd>{f.v}</dd>
 			</div>
 		{/each}
 	</dl>
-	<a class="fees-link" href="/studio/fees-and-charges/">See all fees and charges</a>
+	<a class="fees-link" href={local('/studio/fees-and-charges/')}>{c.feesLink}</a>
 </section>
 
 <!-- 8. Questions, then a final get started (Nsave/GrabrFi benchmark). -->
 <section class="deck faq" aria-labelledby="faq-h">
-	<h2 id="faq-h">Questions people ask</h2>
-	{#each questions as q (q.q)}
+	<h2 id="faq-h">{c.faqH}</h2>
+	{#each c.faq as q (q.q)}
 		<details class="q">
 			<summary>{q.q}</summary>
 			<p>{q.a}</p>
 		</details>
 	{/each}
 	<div class="final-cta">
-		<a class="cta-pill" href="/studio/open-account/">Open account with us</a>
+		<a class="cta-pill" href={local('/studio/open-account/')}>{cta}</a>
 	</div>
 </section>
 
@@ -145,6 +110,19 @@
 	/* 2. Trust signals: white icon-tile language from the baseline. */
 	.trust {
 		padding-top: clamp(24px, 3vw, 40px);
+	}
+	/* The hero's tilted phones hang into this section (baseline look). Reserve
+	   room so the tiles start below the phone overhang instead of under it
+	   (measured: ~132px overhang at 1440, ~24px at 900, none on mobile). */
+	@media (min-width: 720px) {
+		.trust {
+			padding-top: 72px;
+		}
+	}
+	@media (min-width: 1100px) {
+		.trust {
+			padding-top: 200px;
+		}
 	}
 	.trust-grid {
 		list-style: none;
@@ -210,7 +188,7 @@
 	}
 	.who-card strong {
 		font-size: 18px;
-		padding-right: 32px;
+		padding-inline-end: 32px;
 	}
 	.who-card span {
 		font-size: 14px;
@@ -220,10 +198,14 @@
 	.who-card .go {
 		position: absolute;
 		top: 20px;
-		right: 20px;
+		inset-inline-end: 20px;
 		color: var(--peach);
 		font-size: 18px;
 		opacity: 1;
+	}
+	/* RTL mirrors the direction arrow so it always points "onward". */
+	[dir='rtl'] .who-card .go {
+		transform: scaleX(-1);
 	}
 	@media (max-width: 900px) {
 		.who-grid {
@@ -291,7 +273,7 @@
 		font-size: 15px;
 		font-weight: 600;
 		color: var(--peach);
-		text-align: right;
+		text-align: end;
 	}
 	.fees-link {
 		color: var(--peach);
@@ -347,8 +329,7 @@
 		text-decoration: none;
 	}
 	@media (prefers-reduced-motion: reduce) {
-		.who-card,
-		.who-caret {
+		.who-card {
 			transition: none;
 		}
 	}
