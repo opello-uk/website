@@ -1361,4 +1361,68 @@ export const pages: StudioPage[] = [
 	}
 ];
 
+
+// ---- Situation pages (website-structure deck v18, NIAN Capital, 11 Nov 2026) ----
+// Deck principle 2: speak to the customer's situation, never to a country or nationality.
+// GBP-only: the deck's EUR promises are trimmed to GBP for MLP1 (multi-currency is out of scope).
+const SITUATION_CTA = { label: 'Open account with us', href: OPEN };
+
+pages.push(
+{
+	slug: 'for-residents',
+	title: 'For people paid from abroad',
+	kicker: "Who it's for",
+	lede: 'Local accounts work at home, but getting paid from abroad and paying abroad is slow, costly or blocked. Opello gives you a UK account that moves when you do.',
+	metaTitle: 'A UK account for people paid from abroad - Opello',
+	metaDescription: 'Get paid from abroad and send money home from a UK account, with the full cost shown before you pay it.',
+	sourceNotes: [
+		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 4, segment 1; copy adapted for Opello.',
+		'Claims flagged for sign-off: cost and speed promises need the confirmed fees schedule before publishing.'
+	],
+	sections: [
+		{ heading: 'Get paid from abroad, smoothly', body: 'Receive payments from outside the UK into a UK account in your name, without the middleman chain that slows transfers down.' },
+		{ heading: 'Send money home at a fair cost', body: 'Send GBP to family and accounts back home. You see the fee and the rate before you confirm, so nothing is hidden.' },
+		{ heading: 'Keep more of what you earn', body: 'The full cost is shown up front on every payment. What you see is what you pay.' }
+	],
+	cta: SITUATION_CTA
+},
+{
+	slug: 'for-savers',
+	title: 'For savers who want stability',
+	kicker: "Who it's for",
+	lede: 'Where inflation runs high, savings held in local currency lose value every month. Opello lets you hold savings in GBP so they keep their value.',
+	metaTitle: 'Hold your savings in GBP - Opello',
+	metaDescription: 'Hold savings in GBP in a UK account, with safeguarding and the full cost shown up front.',
+	sourceNotes: [
+		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 4, segment 2; copy adapted for Opello.',
+		'MLP1 trim: the deck promises EUR and GBP holding; EUR is out of scope for MLP1, so this page promises GBP only.',
+		'Claims flagged for sign-off: safeguarding wording needs compliance confirmation.'
+	],
+	sections: [
+		{ heading: 'Hold savings in GBP', body: 'Keep your savings in a GBP account instead of a currency that loses value every month.' },
+		{ heading: 'Savings pots that keep you organised', body: 'Set money aside in separate pots for the things that matter, and watch each one grow.' },
+		{ heading: 'Safe in the UK, always within reach', body: 'Your money is safeguarded and stays reachable when you need it.' }
+	],
+	cta: SITUATION_CTA
+},
+{
+	slug: 'for-immigrants',
+	title: 'For people who have moved abroad',
+	kicker: "Who it's for",
+	lede: 'Banks in some countries cut ties with customers from certain countries without warning. Opello gives you a UK account where your money is safeguarded and stays reachable.',
+	metaTitle: 'A UK account that stays reachable - Opello',
+	metaDescription: 'A UK-regulated account where your money is safeguarded and stays reachable, built for people who have moved abroad.',
+	sourceNotes: [
+		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 4, segment 3; copy adapted for Opello.',
+		'Claims flagged for sign-off: "UK-regulated" and safeguarding statements need compliance confirmation before publishing; eligibility scope (UK, UAE, Turkiye residence) still open on the signoff sheet.',
+		'Deck principle: speak to the situation, never to a country or nationality - no country is named on this page.'
+	],
+	sections: [
+		{ heading: 'An account that does not walk away', body: 'Your account is not tied to where you were born. It stays open and reachable while you build your life abroad.' },
+		{ heading: 'Your money, safeguarded', body: 'Funds are safeguarded so they stay yours and stay reachable.' },
+		{ heading: 'Send and receive across borders', body: 'Move money between your life abroad and the people back home, with the full cost shown before every payment.' }
+	],
+	cta: SITUATION_CTA
+});
+
 export const bySlug = (slug: string) => pages.find((p) => p.slug === slug);

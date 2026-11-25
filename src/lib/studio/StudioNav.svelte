@@ -177,11 +177,6 @@
 
 	// Customer-type tabs; Personal is the active section for this build.
 	// Out of MLP1 scope: Business and Premium tabs (Vinay, 2026-11-18). Restored code kept in git history.
-	const tabs = [
-		{ id: 'personal', label: 'Personal', href: '/studio/personal/' }
-	];
-	// The Personal tab is the active section for this build.
-	const active = 'personal';
 </script>
 
 <svelte:window onkeydown={onWindowKeydown} onpointerdown={onWindowPointerdown} />
@@ -191,10 +186,21 @@
 		<Wordmark />
 	</a>
 
+	<!-- Four-item menu (website-structure deck v18, NIAN Capital, 11 Nov 2026): the menu
+	     answers what visitors check before joining. Who it's for leads; Fees, Safety and Help
+	     follow; sign-up stays in the capsule. -->
 	<nav class="tabs" aria-label={t.tabsAria}>
-		{#each tabs as tab (tab.id)}
-			<a class="tab" href={resolve(langHref(lang, tab.href) as '/')} aria-current={tab.id === active ? 'page' : undefined}>{t.tabsPersonal}</a>
-		{/each}
+		<details class="who">
+			<summary aria-haspopup="menu">{t.tabWho}<svg class="who-caret" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+			<div class="who-menu" role="menu" aria-label={t.whoAria}>
+				<a role="menuitem" href={resolve(langHref(lang, '/studio/for-residents/') as '/')}>{t.whoRes}</a>
+				<a role="menuitem" href={resolve(langHref(lang, '/studio/for-savers/') as '/')}>{t.whoSav}</a>
+				<a role="menuitem" href={resolve(langHref(lang, '/studio/for-immigrants/') as '/')}>{t.whoImm}</a>
+			</div>
+		</details>
+		<a class="tab" href={resolve(langHref(lang, '/studio/fees-and-charges/') as '/')}>{t.tabFees}</a>
+		<a class="tab" href={resolve(langHref(lang, '/studio/help-security-data/') as '/')}>{t.tabSafety}</a>
+		<a class="tab" href={resolve(langHref(lang, '/studio/help/') as '/')}>{t.tabHelp}</a>
 	</nav>
 
 	<div class="tools">
@@ -368,6 +374,56 @@
 		color: var(--muted);
 		text-decoration: none;
 		transition: color 200ms var(--ease), background-color 200ms var(--ease);
+	}
+
+	/* "Who it's for" dropdown: JS-free (details/summary), so it works with JavaScript off
+	   like the no-JS language row. Styled to sit in the menu row. */
+	.who {
+		position: relative;
+	}
+	.who summary {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.who summary::-webkit-details-marker,
+	.who summary::marker {
+		content: '';
+		display: none;
+	}
+	.who-caret {
+		transition: transform 200ms var(--ease);
+	}
+	.who[open] .who-caret {
+		transform: rotate(180deg);
+	}
+	.who-menu {
+		position: absolute;
+		top: calc(100% + 10px);
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--clay);
+		border-radius: 16px;
+		padding: 8px;
+		min-width: 220px;
+		display: grid;
+		gap: 2px;
+		box-shadow: 0 12px 32px rgb(0 20 49 / 0.18);
+		z-index: 20;
+	}
+	.who-menu a {
+		display: block;
+		padding: 9px 14px;
+		border-radius: 10px;
+		color: var(--deep);
+		font-size: 13px;
+		white-space: nowrap;
+		text-decoration: none;
+	}
+	.who-menu a:hover {
+		background: rgb(0 20 49 / 0.06);
 	}
 	/* Hover gated to real pointers; a touch tap must not leave nav states stuck. */
 	@media (hover: hover) and (pointer: fine) {

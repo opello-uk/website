@@ -13,6 +13,48 @@ import type { Lang } from "#lib/studio/i18n";
 export const pagesByLang: Record<Lang, StudioPage[]> = {
   ar: [
     {
+      slug: "for-residents",
+      title: "لمن يُرسَل إليهم من الخارج",
+      kicker: "لمن هذا؟",
+      lede: "الحسابات المحلية تعمل داخل البلد، لكن استلام المال من الخارج وإرساله إليه بطيء أو مكلف أو معرقل. Opello يمنحك حساباً في المملكة المتحدة يتحرك كما تتحرك.",
+      source: "placeholder",
+      sourceNotes: ["مصدر: عرض هيكل الموقع v18 (NIAN Capital، 11 نوفمبر 2026). مطابَق لجنيه إسترليني فقط ضمن نطاق MLP1."],
+      sections: [
+        { heading: "استلم راتبك من الخارج بسلاسة", body: "استقبل المدفوعات من خارج المملكة المتحدة في حساب يحمل اسمك، دون سلسلة الوسطاء التي تبطئ التحويلات." },
+        { heading: "أرسل المال إلى الوطن بتكلفة عادلة", body: "أرسل الجنيه الإسترليني إلى عائلتك وحسابات الوطن، وسترى الرسوم والسعر قبل التأكيد، فلا شيء مخفي." },
+        { heading: "احتفظ بالمزيد مما تكسبه", body: "التكلفة الكاملة تُعرض مقدماً في كل عملية دفع. ما تراه هو ما تدفعه." }
+      ],
+      cta: { label: "افتح حسابك", href: "/studio/open-account/" }
+    },
+    {
+      slug: "for-savers",
+      title: "للمُدخرين الباحثين عن الاستقرار",
+      kicker: "لمن هذا؟",
+      lede: "حين يكون التضخم مرتفعاً، تفقد المدخرات المحلية قيمتها كل شهر. Opello يتيح لك الاحتفاظ بمدخراتك بالجنيه الإسترليني so تحافظ على قيمتها.",
+      source: "placeholder",
+      sourceNotes: ["مصدر: عرض هيكل الموقع v18 (NIAN Capital، 11 نوفمبر 2026). جنيه إسترليني فقط ضمن نطاق MLP1."],
+      sections: [
+        { heading: "احتفظ بمدخراتك بالجنيه الإسترليني", body: "احفظ مدخراتك في حساب بالجنيه الإسترليني بدلاً من عملة تفقد قيمتها كل شهر." },
+        { heading: "أوعية ادخار تنظّم أموالك", body: "خصّص المال في أوعية منفصلة لما يهمك، وشاهد كل وعاء ينمو." },
+        { heading: "أمان في المملكة المتحدة ودائماً في المتناول", body: "أموالك محمية وتبقى في متناولك عندما تحتاجها." }
+      ],
+      cta: { label: "افتح حسابك", href: "/studio/open-account/" }
+    },
+    {
+      slug: "for-immigrants",
+      title: "لمن انتقلوا إلى الخارج",
+      kicker: "لمن هذا؟",
+      lede: "تقطع بعض البنوك علاقتها بعملاء من دول معينة دون إنذار. Opello يمنحك حساباً في المملكة المتحدة تبقى فيه أموالك محمية وفي متناولك.",
+      source: "placeholder",
+      sourceNotes: ["مصدر: عرض هيكل الموقع v18 (NIAN Capital، 11 نوفمبر 2026). العبارات التنظيمية تحتاج تأكيد الامتثال قبل النشر."],
+      sections: [
+        { heading: "حساب لا يرحل عنك", body: "حسابك غير مرتبط بمكان مولدك. يبقى مفتوحاً وفي متناولك وأنت تبني حياتك في الخارج." },
+        { heading: "أموالك محمية", body: "الأموال محمية فتبقى ملكك وتبقى في المتناول." },
+        { heading: "أرسل واستلم عبر الحدود", body: "انقل المال بين حياتك في الخارج وأحبتك في الوطن، مع إظهار التكلفة الكاملة قبل كل عملية دفع." }
+      ],
+      cta: { label: "افتح حسابك", href: "/studio/open-account/" }
+    },
+    {
       slug: "transfers",
       title: "التحويلات",
       kicker: "شخصي",
@@ -2175,6 +2217,48 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
     },
   ],
   tr: [
+    {
+      slug: "for-residents",
+      title: "Yurt dışından para alanlar için",
+      kicker: "Kimin için",
+      lede: "Yerel hesaplar ülke içinde çalışır, ama yurt dışından para almak ve göndermek yavaş, pahalı veya engellenmiş olur. Opello size hayatınızla birlikte hareket eden bir Birleşik Krallık hesabı verir.",
+      source: "placeholder",
+      sourceNotes: ["Kaynak: web sitesi yapısı sunumu v18 (NIAN Capital, 11 Kasım 2026). MLP1 kapsamı gereği yalnız GBP."],
+      sections: [
+        { heading: "Yurt dışından gelirinizi sorunsuz alın", body: "Yurt dışından yapılan ödemeleri adınıza kayıtlı bir Birleşik Krallık hesabına alın; transferleri yavaşlatan aracı zinciri olmadan." },
+        { heading: "Memleketinize adil maliyetle gönderin", body: "Ailenize ve memleketinizdeki hesaplara GBP gönderin; onaylamadan önce ücreti ve kuru görürsünüz, gizli hiçbir şey yoktur." },
+        { heading: "Kazandığınızdan fazlasını koruyun", body: "Her ödemede tam maliyet önceden gösterilir. Gördüğünüz, ödediğinizdir." }
+      ],
+      cta: { label: "Hesabınızı açın", href: "/studio/open-account/" }
+    },
+    {
+      slug: "for-savers",
+      title: "İstikrar arayan biriktirenler için",
+      kicker: "Kimin için",
+      lede: "Enflasyonun yüksek olduğu yerde yerel para biriminde tutulan birikimler her ay değer kaybeder. Opello birikimlerinizi GBP olarak tutmanızı sağlar.",
+      source: "placeholder",
+      sourceNotes: ["Kaynak: web sitesi yapısı sunumu v18 (NIAN Capital, 11 Kasım 2026). MLP1 kapsamı gereği yalnız GBP."],
+      sections: [
+        { heading: "Birikiminizi GBP olarak tutun", body: "Birikiminizi her ay değer kaybeden bir para birimi yerine GBP hesabında tutun." },
+        { heading: "Sizi düzenli tutan birikimculatedir", body: "Önemli olan şeyler için parayı ayrı bidonlarda ayırın ve her birinin büyümesini izleyin." },
+        { heading: "Birleşik Krallık'ta güvende, her zaman erişilebilir", body: "Paranız korunur ve ihtiyacınız olduğunda erişilebilir kalır." }
+      ],
+      cta: { label: "Hesabınızı açın", href: "/studio/open-account/" }
+    },
+    {
+      slug: "for-immigrants",
+      title: "Yurt dışına taşınanlar için",
+      kicker: "Kimin için",
+      lede: "Bazı ülkelerdeki bankalar belirli ülkelerden gelen müşterilerle关系i uyarısız keser. Opello size paranızın korunduğu ve erişilebilir kaldığı bir Birleşik Krallık hesabı verir.",
+      source: "placeholder",
+      sourceNotes: ["Kaynak: web sitesi yapısı sunumu v18 (NIAN Capital, 11 Kasım 2026). Düzenleyici ifadeler yayınlanmadan önce uyum onayı gerektirir."],
+      sections: [
+        { heading: "Sizi terk etmeyen hesap", body: "Hesabınız doğduğunuz yere bağlı değildir. Yurt dışında hayatınızı kurarken açık ve erişilebilir kalır." },
+        { heading: "Paranız korunur", body: "Varlıklar korunur; sizin kalır ve erişilebilir olur." },
+        { heading: "Sınırlar arasında gönderin ve alın", body: "Yurt dışındaki hayatınızla memleketinizdeki sevdikleriniz arasında para taşıyın; her ödemeden önce tam maliyet gösterilir." }
+      ],
+      cta: { label: "Hesabınızı açın", href: "/studio/open-account/" }
+    },
     {
       slug: "transfers",
       title: "Transferler",

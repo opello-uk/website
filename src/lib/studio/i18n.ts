@@ -13,8 +13,8 @@ export const langName: Record<Lang, string> = { ar: "العربية", tr: "Türk
 // by server routes and the nav search (dynamic import on open).
 // scripts/check-translated-slugs.mjs verifies this list matches pages-translated.ts at build time.
 export const translatedSlugs: Record<Lang, readonly string[]> = {
-  ar: ["transfers", "cards", "personal", "open-account", "current-accounts", "savings", "all-plans", "about", "help", "faq", "contact", "careers", "ethical-savings", "fees-and-charges", "download", "referrals", "login", "privacy-policy", "cookies-policy", "help-logging-in", "help-my-account", "help-get-in-touch", "help-getting-started", "help-security-data", "help-my-card", "help-about-opello", "help-articles", "help-ethical-saver", "news", "blog", "accessibility", "responsible-disclosure", "help-tin", "uk-account-from-abroad", "sitemap", "virtual-cards", "terms-and-conditions", "customer-terms-and-conditions", "chargebacks", "green-banking", "green-break", "money-and-mental-health", "world-wildlife-day", "cashless-society", "consumer-duty", "dark-mode", "climate-catastrophes", "just-transition", "sustainable-valentines-day", "card-exchange-rates", "cop26", "fintech-for-good"],
-  tr: ["transfers", "cards", "personal", "open-account", "current-accounts", "savings", "all-plans", "about", "help", "faq", "contact", "careers", "ethical-savings", "fees-and-charges", "download", "referrals", "login", "privacy-policy", "cookies-policy", "help-logging-in", "help-my-account", "help-get-in-touch", "help-getting-started", "help-security-data", "help-my-card", "help-about-opello", "help-articles", "help-ethical-saver", "news", "blog", "accessibility", "responsible-disclosure", "help-tin", "uk-account-from-abroad", "sitemap", "virtual-cards", "terms-and-conditions", "customer-terms-and-conditions", "chargebacks", "green-banking", "green-break", "money-and-mental-health", "world-wildlife-day", "cashless-society", "consumer-duty", "dark-mode", "climate-catastrophes", "just-transition", "sustainable-valentines-day", "card-exchange-rates", "cop26", "fintech-for-good"],
+  ar: ["transfers", "cards", "personal", "open-account", "current-accounts", "savings", "all-plans", "about", "help", "faq", "contact", "careers", "ethical-savings", "fees-and-charges", "download", "referrals", "login", "privacy-policy", "cookies-policy", "help-logging-in", "help-my-account", "help-get-in-touch", "help-getting-started", "help-security-data", "help-my-card", "help-about-opello", "help-articles", "help-ethical-saver", "news", "blog", "accessibility", "responsible-disclosure", "help-tin", "uk-account-from-abroad", "sitemap", "virtual-cards", "terms-and-conditions", "customer-terms-and-conditions", "chargebacks", "green-banking", "green-break", "money-and-mental-health", "world-wildlife-day", "cashless-society", "consumer-duty", "dark-mode", "climate-catastrophes", "just-transition", "sustainable-valentines-day", "card-exchange-rates", "cop26", "fintech-for-good", "for-residents", "for-savers", "for-immigrants"],
+  tr: ["transfers", "cards", "personal", "open-account", "current-accounts", "savings", "all-plans", "about", "help", "faq", "contact", "careers", "ethical-savings", "fees-and-charges", "download", "referrals", "login", "privacy-policy", "cookies-policy", "help-logging-in", "help-my-account", "help-get-in-touch", "help-getting-started", "help-security-data", "help-my-card", "help-about-opello", "help-articles", "help-ethical-saver", "news", "blog", "accessibility", "responsible-disclosure", "help-tin", "uk-account-from-abroad", "sitemap", "virtual-cards", "terms-and-conditions", "customer-terms-and-conditions", "chargebacks", "green-banking", "green-break", "money-and-mental-health", "world-wildlife-day", "cashless-society", "consumer-duty", "dark-mode", "climate-catastrophes", "just-transition", "sustainable-valentines-day", "card-exchange-rates", "cop26", "fintech-for-good", "for-residents", "for-savers", "for-immigrants"],
 };
 
 export function hasTranslation(lang: Lang, slug: string): boolean {
@@ -75,6 +75,14 @@ export type Chrome = {
 export const chrome: Record<"en" | Lang, Chrome> = {
   en: {
     tabsPersonal: "Personal",
+    tabWho: "Who it's for",
+    tabFees: "Fees",
+    tabSafety: "Safety",
+    tabHelp: "Help",
+    whoAria: "Who it's for menu",
+    whoRes: "People paid from abroad",
+    whoSav: "Savers",
+    whoImm: "People who moved abroad",
     ctaAccount: "Become a customer",
     login: "Login",
     brandAria: "Opello, home",
@@ -115,6 +123,14 @@ export const chrome: Record<"en" | Lang, Chrome> = {
   },
   ar: {
     tabsPersonal: "شخصي",
+    tabWho: "لمن هذا؟",
+    tabFees: "الرسوم",
+    tabSafety: "الأمان",
+    tabHelp: "المساعدة",
+    whoAria: "قائمة لمن هذا",
+    whoRes: "المُرسل إليهم من الخارج",
+    whoSav: "المُدخرون",
+    whoImm: "المنقولون للخارج",
     ctaAccount: "افتح حسابك",
     login: "تسجيل الدخول",
     brandAria: "Opello، الرئيسية",
@@ -154,6 +170,14 @@ export const chrome: Record<"en" | Lang, Chrome> = {
   },
   tr: {
     tabsPersonal: "Bireysel",
+    tabWho: "Kimin için",
+    tabFees: "Ücretler",
+    tabSafety: "Güvenlik",
+    tabHelp: "Yardım",
+    whoAria: "Kimin için menüsü",
+    whoRes: "Yurt dışından para alanlar",
+    whoSav: "Birikim sahipleri",
+    whoImm: "Yurt dışına taşınanlar",
     ctaAccount: "Hesap aç",
     login: "Giriş",
     brandAria: "Opello, ana sayfa",

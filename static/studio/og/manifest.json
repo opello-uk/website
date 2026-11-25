@@ -125,6 +125,21 @@
     "description": "تحقيق الربح وإحداث الأثر معاً: أربعة أمور تفصل بين خدمات مالية مبنية للمهمشين وأخرى مبنية للجميع على حد سواء."
   },
   {
+    "path": "ar/for-immigrants.png",
+    "title": "لمن انتقلوا إلى الخارج",
+    "description": "تقطع بعض البنوك علاقتها بعملاء من دول معينة دون إنذار. Opello يمنحك حساباً في المملكة المتحدة تبقى فيه أموالك محمية وفي متناولك."
+  },
+  {
+    "path": "ar/for-residents.png",
+    "title": "لمن يُرسَل إليهم من الخارج",
+    "description": "الحسابات المحلية تعمل داخل البلد، لكن استلام المال من الخارج وإرساله إليه بطيء أو مكلف أو معرقل. Opello يمنحك حساباً في المملكة المتحدة يتحرك كما تتحرك."
+  },
+  {
+    "path": "ar/for-savers.png",
+    "title": "للمُدخرين الباحثين عن الاستقرار",
+    "description": "حين يكون التضخم مرتفعاً، تفقد المدخرات المحلية قيمتها كل شهر. Opello يتيح لك الاحتفاظ بمدخراتك بالجنيه الإسترليني so تحافظ على قيمتها."
+  },
+  {
     "path": "ar/green-banking.png",
     "title": "ما هو المصرف الأخضر، ولماذا يهم؟",
     "description": "المصرف الأخضر ينظر إلى أين يذهب أموالك، لا فقط إلى أين تقبع. إليك ما يعنيه ولماذا يهم."
@@ -375,6 +390,21 @@
     "description": "Make a profit and make a difference: four things that separate finance built for the underserved from finance built for everyone else."
   },
   {
+    "path": "for-immigrants.png",
+    "title": "For people who have moved abroad",
+    "description": "A UK-regulated account where your money is safeguarded and stays reachable, built for people who have moved abroad."
+  },
+  {
+    "path": "for-residents.png",
+    "title": "For people paid from abroad",
+    "description": "Get paid from abroad and send money home from a UK account, with the full cost shown before you pay it."
+  },
+  {
+    "path": "for-savers.png",
+    "title": "For savers who want stability",
+    "description": "Hold savings in GBP in a UK account, with safeguarding and the full cost shown up front."
+  },
+  {
     "path": "green-banking.png",
     "title": "What is green banking, and why does it matter?",
     "description": "Green banking looks at where your money goes, not just where it sits. Here is what it means and why it matters."
@@ -618,6 +648,21 @@
     "path": "tr/fintech-for-good.png",
     "title": "Fintech bir iyilik gücü olabilir mi?",
     "description": "Kâr etmek ve fark yaratmak: herkese göre değil, hizmetten mahrum kalanlar için tasarlanmış finansı ayıran dört şey."
+  },
+  {
+    "path": "tr/for-immigrants.png",
+    "title": "Yurt dışına taşınanlar için",
+    "description": "Bazı ülkelerdeki bankalar belirli ülkelerden gelen müşterilerle关系i uyarısız keser. Opello size paranızın korunduğu ve erişilebilir kaldığı bir Birleşik Krallık hesabı verir."
+  },
+  {
+    "path": "tr/for-residents.png",
+    "title": "Yurt dışından para alanlar için",
+    "description": "Yerel hesaplar ülke içinde çalışır, ama yurt dışından para almak ve göndermek yavaş, pahalı veya engellenmiş olur. Opello size hayatınızla birlikte hareket eden bir Birleşik Krallık hesabı verir."
+  },
+  {
+    "path": "tr/for-savers.png",
+    "title": "İstikrar arayan biriktirenler için",
+    "description": "Enflasyonun yüksek olduğu yerde yerel para biriminde tutulan birikimler her ay değer kaybeder. Opello birikimlerinizi GBP olarak tutmanızı sağlar."
   },
   {
     "path": "tr/green-banking.png",
