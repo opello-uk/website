@@ -50,8 +50,8 @@
 	</div>
 
 	<!-- Socials row: icons only until the accounts are live. -->
-	<!-- role=group makes the aria-label valid here (W3C validator: aria-label on a plain div is an error). -->
-	<div class="social" role="group" aria-label={t.socialAria}>
+	<!-- Placeholder icons are aria-hidden so assistive tech never announces channels that don't exist yet (group label t.socialAria returns with the real links; see signoff.md "Social links"). -->
+	<div class="social" aria-hidden="true">
 		<ul>
 			{#each socials as social (social.name)}
 				<li>
