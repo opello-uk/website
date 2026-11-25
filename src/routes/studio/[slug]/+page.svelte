@@ -5,6 +5,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import Ring from '#lib/components/Ring.svelte';
 	import StudioCrumbs from '#lib/studio/StudioCrumbs.svelte';
 	import EmailBody from '#lib/studio/EmailBody.svelte';
+	import StudioCalc from '#lib/studio/StudioCalc.svelte';
 	import { markLangs } from '#lib/studio/scriptLangs';
 	import '#lib/studio/print.css';
 	// Generated placeholder photo until licensed photography is supplied.
@@ -217,6 +218,11 @@ focusMainOnNavigate();
 				<p class="lede">{p.lede}</p>
 			</div>
 		</section>
+		{/if}
+
+		{#if p.slug === 'fees-and-charges'}
+			<!-- Deck slide 6 principle 3: cost calculator on the fees page (GBP only, MLP1). -->
+			<StudioCalc lang="en" />
 		{/if}
 
 		<!-- Clay card language is now the studio-wide default (baseline-05): every sub-page's cards

@@ -493,7 +493,8 @@ export const pages: StudioPage[] = [
 		sourceNotes: [
 			'Source: algbra.com fees and charges PDF (last updated 7 April 2026), re-checked in full on 20 November 2026: the Standard customer table is covered above; the PDF\'s other customer tables (Borderless and Business) are out of the first-release scope and are not summarised.',
 			'Rows left out on purpose: physical-card issuance and replacement, cash withdrawals and in-account currency conversion (out of first-release scope), and Direct Debit and standing orders (not yet available, per the FAQ). The PDF has no chargeback fee row; the chargeback claim window is covered in the help answers.',
-			'Every figure is Algbra\'s published rate, shown for reference. The Opello fee schedule must be confirmed before this page publishes.'
+			'Every figure is Algbra\'s published rate, shown for reference. The Opello fee schedule must be confirmed before this page publishes.',
+			'Cost calculator (2026-11-25): worked from the schedule above — sending money outside the UK, fixed £15 plus an FX fee of 1.00%. No exchange-rate estimate is shown (rates are shown in the app before a transfer is confirmed). Figures and wording pending sign-off.'
 		],
 		sections: [
 			{ heading: 'Standard account', body: 'No monthly account fee. UK payments are free: sending and receiving by FPS, BACS or CHAPS, and paying by card in pounds online or over the phone.' }, { heading: 'Sending and receiving money abroad', body: 'Sending money outside the UK: a fixed £15 fee per transaction, plus an FX fee of 1.00%. Receiving money from outside the UK in pounds: a fixed £10 fee, plus an FX fee of 1.00% for other currencies. Intermediary bank fees may also apply.' },

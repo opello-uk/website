@@ -540,3 +540,45 @@ export const deckCopy: Record<'en' | Lang, {
     ]
   }
 };
+
+// Fees-page cost calculator (website-structure deck v18, slide 6, principle 3:
+// show the full cost before sign-up). Figures come from the fee schedule the
+// calculator sits under; both are pending sign-off before publish. GBP only
+// (MLP1) — no exchange-rate estimate is shown, the app shows the rate before
+// a transfer is confirmed.
+export const calcCopy: Record<'en' | Lang, {
+	locale: string;
+	h: string; lede: string; amountLabel: string;
+	fixed: string; fx: string; total: string; note: string;
+}> = {
+	en: {
+		locale: 'en-GB',
+		h: 'See the cost before you pay',
+		lede: 'Type an amount and see the fees for sending it outside the UK, worked out from the fee schedule on this page.',
+		amountLabel: 'Amount to send (GBP)',
+		fixed: 'Fixed fee',
+		fx: 'FX fee (1.00%)',
+		total: 'Total fees',
+		note: '[Pending sign-off: fee figures and wording.] Every payment shows its full cost, including the exchange rate, before you confirm it.'
+	},
+	ar: {
+		locale: 'ar-AE',
+		h: 'اعرف التكلفة قبل الدفع',
+		lede: 'أدخل مبلغًا لترى رسوم إرساله خارج المملكة المتحدة، محسوبة وفق جدول الرسوم في هذه الصفحة.',
+		amountLabel: 'المبلغ المُرسل (بالجنيه الإسترليني)',
+		fixed: 'رسوم ثابتة',
+		fx: 'رسوم تحويل العملات (1.00%)',
+		total: 'إجمالي الرسوم',
+		note: '[في انتظار الاعتماد: أرقام الرسوم والصياغة.] تُعرض التكلفة الكاملة لكل عملية دفع، بما في ذلك سعر الصرف، قبل أن تؤكد.'
+	},
+	tr: {
+		locale: 'tr-TR',
+		h: 'Ödemeden önce maliyeti görün',
+		lede: 'Bir tutar girin ve yurt dışına göndermenin ücretlerini bu sayfadaki ücret çizelgesine göre görün.',
+		amountLabel: 'Gönderilecek tutar (GBP)',
+		fixed: 'Sabit ücret',
+		fx: 'Döviz ücreti (%1.00)',
+		total: 'Toplam ücret',
+		note: '[Onay bekliyor: ücret rakamları ve metin.] Her ödeme, onaylamadan önce döviz kuru dahil tam maliyetini gösterir.'
+	}
+};
