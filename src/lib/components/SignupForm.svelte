@@ -27,7 +27,9 @@
 		const value = email.trim();
 		if (!EMAIL_RE.test(value)) {
 			status = 'error';
-			note = 'That email address does not look right.';
+			// WCAG 3.3.3: an email field requires a specific format, so the error
+			// carries a suggestion of that format, not just "not right".
+			note = 'That email address does not look right. Check the format, like name@example.com.';
 			input?.focus();
 			return;
 		}
@@ -216,12 +218,9 @@
 	.consent a:hover {
 		color: var(--peach);
 	}
-	.note:empty {
-		display: none;
-	}
-	.note:empty + .consent {
-		margin-top: 12px;
-	}
+	/* The status note is never display:none: a live region that is hidden when
+	   text lands can be missed by screen readers (the insert flips it from hidden
+	   to visible in the same mutation). min-height keeps the idle gap small. */
 	.note-unused {
 		visibility: hidden;
 	}
