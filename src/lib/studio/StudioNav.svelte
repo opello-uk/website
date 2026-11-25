@@ -382,11 +382,29 @@
 		position: relative;
 	}
 	.who summary {
+		/* Match the sibling tabs exactly (Vinay, 2026-11-25): the summary is a
+		   <summary>, not an <a class=tab>, so it carried the browser default text
+		   style and sat visibly lighter and bigger than FEES/SAFETY/HELP. */
 		display: inline-flex;
 		align-items: center;
 		gap: 6px;
 		cursor: pointer;
 		white-space: nowrap;
+		border: 0;
+		background: transparent;
+		font: inherit;
+		padding: 8px 16px;
+		border-radius: 999px;
+		font-size: 11px;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		text-indent: 0.1em;
+		color: var(--muted);
+		transition: color 200ms var(--ease), background-color 200ms var(--ease);
+	}
+	.who summary:hover {
+		color: var(--clay);
 	}
 	.who summary::-webkit-details-marker,
 	.who summary::marker {
