@@ -4,6 +4,7 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import StudioFooter from '#lib/studio/StudioFooter.svelte';
 	import StudioHero from '#lib/studio/StudioHero.svelte';
 	import StudioProducts from '#lib/studio/StudioProducts.svelte';
+	import StudioDeck from '#lib/studio/StudioDeck.svelte';
 	import StudioSplit from '#lib/studio/StudioSplit.svelte';
 	import StudioBanner from '#lib/studio/StudioBanner.svelte';
 	import StudioControl from '#lib/studio/StudioControl.svelte';
@@ -92,6 +93,7 @@ focusMainOnNavigate();
 
 	<main id="personal" tabindex="-1">
 		<StudioHero />
+		<StudioDeck />
 		<StudioProducts />
 		<StudioSplit />
 		<StudioBanner />
