@@ -199,7 +199,7 @@
 			</div>
 		</details>
 		<a class="tab" href={resolve(langHref(lang, '/studio/fees-and-charges/') as '/')}>{t.tabFees}</a>
-		<a class="tab" href={resolve(langHref(lang, '/studio/help-security-data/') as '/')}>{t.tabSafety}</a>
+		<a class="tab" href={resolve(langHref(lang, '/studio/safety/') as '/')}>{t.tabSafety}</a>
 		<a class="tab" href={resolve(langHref(lang, '/studio/help/') as '/')}>{t.tabHelp}</a>
 	</nav>
 

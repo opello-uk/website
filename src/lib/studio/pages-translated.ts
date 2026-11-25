@@ -2215,6 +2215,26 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       ],
       cta: { label: "العودة إلى الأخبار", href: "/studio/news/" },
     },
+    {
+      // صفحة الأمان (عرض هيكل الموقع v18). كل صياغات التنظيم والحماية بانتظار اعتماد الامتثال.
+      slug: "safety",
+      title: "الأمان",
+      kicker: "الأمان",
+      lede: "الأمان هو أول سؤال يستحق أن يُطرح، لذلك له صفحته الخاصة: أين يُحفظ مالك، ومن يشرف على ذلك، وماذا يحدث إذا حدث خطأ ما.",
+      metaTitle: "الأمان: أين يُحفظ مالك وكيف تتم حمايته - Opello",
+      metaDescription: "أين يُحفظ مالك، ومن يشرف عليه، وماذا يحدث إذا تعثّر مزوّد الخدمة، وماذا نفعل بشأن الاحتيال. بوضوح، في مكان واحد.",
+      source: "placeholder",
+      sourceNotes: ["مصدر: عرض هيكل الموقع v18 (NIAN Capital، 11 نوفمبر 2026). صياغة الحماية والترخيص بانتظار اعتماد الامتثال؛ لا تُذكر أسماء المزوّدين."],
+      sections: [
+        { source: "placeholder", heading: "أين يُحفظ مالك", body: "يتم توفير حسابك وبطاقتك من قبل شريكنا المرخّص لإصدار النقود الإلكترونية. الأموال التي تحتفظ بها محمية: تُحفظ منفصلة عن أموال الشركة نفسها، فتبقى ملكك وتبقى في متناولك عندما تحتاجها.", note: "بانتظار الاعتماد: صياغة حماية أموال العملاء تحتاج تأكيد الامتثال." },
+        { source: "placeholder", heading: "من يشرف على Opello", body: "[عنصر بديل بانتظار الاعتماد: توزّع Opello حسابات وبطاقات مقدَّمة من شريك مرخّص لإصدار النقود الإلكترونية. تفاصيل ترخيص Opello نفسها قيد التأكيد وستُنشر هنا قبل الإطلاق.]" },
+        { source: "placeholder", heading: "ماذا يحدث إذا تعثّر مزوّد الخدمة", body: "[عنصر بديل بانتظار الاعتماد: بموجب قواعد حماية أموال العملاء، تُحفظ أموال العملاء منفصلة عن أموال الشركة وتُعاد إلى العملاء إذا تعثّرت الشركة، بدلاً من أن تُعامل كأصول الشركة. الصياغة النهائية يحتاج تأكيدها من الامتثال.]" },
+        { source: "placeholder", heading: "الأمن والاحتيال", body: "يمكنك تجميد بطاقتك من التطبيق بلمسة واحدة. بعض المدفوعات عبر الإنترنت تطلب رمزاً لمرة واحدة عبر رسالة نصية، ونحن لن نطلب منك مشاركته أبداً. إذا لم تبدو عملية دفع صحيحة، جمّد بطاقتك وتواصل معنا فوراً.", href: "/studio/help-security-data/", linkLabel: "إجابات الأمن والبيانات" },
+        { source: "placeholder", heading: "الشكاوى", body: "إذا حدث خطأ ما، أخبرنا. تُتابع كل شكوى ويُرد عليها. ابدأ عبر خيارات التواصل في التطبيق أو في صفحة التواصل.", href: "/studio/contact/", linkLabel: "شاهد خيارات التواصل" },
+        { source: "placeholder", heading: "من وراء Opello", body: "ادعاءات الأمان لا تكون أقوى من الفريق الذي يقف خلفها. تعرّف على الفريق الذي يبني Opello.", href: "/studio/about/", linkLabel: "من وراء Opello" }
+      ],
+      cta: { label: "افتح حسابك معنا", href: "/studio/open-account/" },
+    },
   ],
   tr: [
     {
@@ -4410,6 +4430,25 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       ],
       cta: { label: "Haberlere dön", href: "/studio/news/" },
     },
-
+    {
+      // Güvenlik sayfası (web sitesi yapısı destesi v18). Tüm düzenleme ve koruma ifadeleri uyum onayı bekliyor.
+      slug: "safety",
+      title: "Güvenlik",
+      kicker: "Güvenlik",
+      lede: "Güvenlik, sorulmaya değer ilk sorudur; bu yüzden kendi sayfası var: Paranız nerede tutulur, kim denetler ve bir şey ters giderse ne olur?",
+      metaTitle: "Güvenlik: paranız nerede tutulur ve nasıl korunur - Opello",
+      metaDescription: "Paranız nerede tutulur, kim denetler, bir sağlayıcı başarısız olursa ne olur ve dolandırıcılıkta ne yapıyoruz. Tek bir yerde, açıkça anlatıldı.",
+      source: "placeholder",
+      sourceNotes: ["Kaynak: web sitesi yapısı destesi v18 (NIAN Capital, 11 Kasım 2026). Koruma ve lisanslama ifadeleri uyum onayı bekliyor; sağlayıcı adları anılmaz."],
+      sections: [
+        { source: "placeholder", heading: "Paranız nerede tutulur", body: "Hesabınız ve kartınız, düzenlemeye tabi e-para kuruluşumuz olan iş ortağımız tarafından sağlanır. Elde tuttuğunuz para korunur (safeguarded): şirketin kendi parasından ayrı tutulur, böylece sizin kalır ve ihtiyacınız olduğunda elinizin altında olur.", note: "Onay bekliyor: müşteri parasının korunması ifadesi uyum onayı gerektirir." },
+        { source: "placeholder", heading: "Opello'yu kim denetler", body: "[Onay bekleyen yer tutucu: Opello, düzenlemeye tabi bir e-para kuruluşu tarafından sağlanan hesap ve kartları dağıtır. Opello'nun kendi yetkilendirme bilgileri doğrulanıyor ve lansmandan önce burada yer alacak.]" },
+        { source: "placeholder", heading: "Bir sağlayıcı başarısız olursa ne olur", body: "[Onay bekleyen yer tutucu: müşteri parasını koruma kuralları uyarınca, müşteri paraları firmanın kendi fonlarından ayrı tutulur ve firma başarısız olursa alacaklılara değil müşterilere iade edilir. Nihai ifade uyum tarafından teyit edilecek.]" },
+        { source: "placeholder", heading: "Güvenlik ve dolandırıcılık", body: "Kartınızı uygulamada tek dokunuşla dondurabilirsiniz. Bazı çevrimiçi ödemeler kısa mesajla tek kullanımlık bir kod ister; biz bu kodu asla paylaşmanızı istemeyiz. Bir ödeme doğru görünmüyorsa kartınızı dondurun ve hemen bize ulaşın.", href: "/studio/help-security-data/", linkLabel: "Güvenlik ve veri yanıtları" },
+        { source: "placeholder", heading: "Şikayetler", body: "Bir şey ters giderse bize haber verin. Her şikayet ele alınır ve yanıtlanır. Uygulamadaki iletişim seçenekleriyle veya iletişim sayfasından başlayın.", href: "/studio/contact/", linkLabel: "İletişim seçeneklerini gör" },
+        { source: "placeholder", heading: "Opello'nun arkasındakiler", body: "Güvenlik iddiaları, arkasındaki ekip kadar güçlüdür. Opello'yu inşa eden ekibi tanıyın.", href: "/studio/about/", linkLabel: "Opello'nun arkasındakiler" }
+      ],
+      cta: { label: "Hesabınızı açın", href: "/studio/open-account/" },
+    },
   ],
 };

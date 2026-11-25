@@ -1425,4 +1425,36 @@ pages.push(
 	cta: SITUATION_CTA
 });
 
+// ---- Safety page (website-structure deck v18, NIAN Capital, 11 Nov 2026) ----
+// Deck slide 7: Safety menu item covers licence and safeguarding, security and
+// fraud, complaints; deck slide 8 section 6: where money is held, who regulates
+// Opello, what happens if the firm fails; plus the 'Who is behind Opello' link.
+// Every regulatory claim is marked pending sign-off in its own note: the site's
+// established position is that accounts and cards come from a regulated e-money
+// partner, and Opello's own authorisation status is not yet confirmed copy.
+pages.push(
+{
+	slug: 'safety',
+	title: 'Safety',
+	kicker: 'Safety',
+	lede: 'Safety is the first question worth asking, so it has its own page: where your money sits, who oversees it and what happens if something goes wrong.',
+	metaTitle: 'Safety: where your money sits and how it is protected - Opello',
+	metaDescription: 'Where your money is held, who oversees it, what happens if a provider fails, and what we do about fraud. Set out plainly, in one place.',
+	sourceNotes: [
+		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 7 Safety menu item and slide 8 homepage section 6; structure adapted for Opello.',
+		'Claims flagged for sign-off: the safeguarding, regulation and failure-scenario wording in the first three sections is a design slot pending compliance confirmation, marked on each section.',
+		'No vendor is named: the account and card provider is described by category only, per the public-copy rule.'
+	],
+	sections: [
+		{ heading: 'Where your money is held', body: 'Your account and card are provided by our regulated e-money partner. The money you hold is safeguarded: kept apart from the company\'s own money, so it stays yours and stays reachable when you need it.', note: 'Pending sign-off: safeguarding wording needs compliance confirmation. Describes the partner by category only.' },
+		{ heading: 'Who oversees Opello', body: '[Placeholder pending sign-off: Opello distributes accounts and cards provided by a regulated e-money partner. Opello\'s own authorisation and registration details are being confirmed and will be set out here before launch.]', note: 'Pending sign-off: Opello\'s own FCA authorisation status is not confirmed copy. The placeholder marks the deck\'s licence slot until compliance confirms.' },
+		{ heading: 'What happens if a provider fails', body: '[Placeholder pending sign-off: under safeguarding rules, customer money is held apart from the firm\'s own funds and returned to customers if a firm fails, rather than treated as company assets. Final wording to be confirmed by compliance.]', note: 'Pending sign-off: failure-scenario wording is a standard safeguarding description, not a confirmed Opello claim.' },
+		{ heading: 'Security and fraud', body: 'Your card can be frozen in the app in one tap. Some online payments ask for a one-time passcode by text message, and we will never ask you to share one. If a payment does not look right, freeze your card and contact us straight away.', href: '/studio/help-security-data/', linkLabel: 'Security and data answers' },
+		{ heading: 'Complaints', body: 'If something goes wrong, tell us. Every complaint is picked up and answered. Start through the contact options in the app or on the contact page.', href: '/studio/contact/', linkLabel: 'See contact options' },
+		{ heading: 'Who is behind Opello', body: 'Safety claims are only as good as the people behind them. Meet the team building Opello.', href: '/studio/about/', linkLabel: 'Who is behind Opello' }
+	],
+	cta: { label: 'Open account with us', href: OPEN }
+}
+);
+
 export const bySlug = (slug: string) => pages.find((p) => p.slug === slug);

@@ -255,6 +255,11 @@
     "description": "نأخذ خصوصية عملائنا وأمانهم على محمل الجد، ونقدّر عمل الباحثين في مجال الأمن الذين يساعدوننا في الحفاظ على ذلك."
   },
   {
+    "path": "ar/safety.png",
+    "title": "الأمان",
+    "description": "أين يُحفظ مالك، ومن يشرف عليه، وماذا يحدث إذا تعثّر مزوّد الخدمة، وماذا نفعل بشأن الاحتيال. بوضوح، في مكان واحد."
+  },
+  {
     "path": "ar/savings.png",
     "title": "المدخرات",
     "description": "اكسب على الأموال التي تدّخرها. متاح لمقيمي المملكة المتحدة. أنشئ أوعية ادخار قائمة على الأهداف في التطبيق."
@@ -520,6 +525,11 @@
     "description": "We take the privacy and security of our customers seriously, and we value the work of security researchers who help us keep it that way."
   },
   {
+    "path": "safety.png",
+    "title": "Safety",
+    "description": "Where your money is held, who oversees it, what happens if a provider fails, and what we do about fraud. Set out plainly, in one place."
+  },
+  {
     "path": "savings.png",
     "title": "Savings",
     "description": "Earn on the money you are saving. Available to UK residents. Set up goal-based savings pots in the app."
@@ -778,6 +788,11 @@
     "path": "tr/responsible-disclosure.png",
     "title": "Sorumlu açıklama",
     "description": "Müşterilerimizin gizliliğini ve güvenliğini ciddiye alıyor, bu böyle kalmasını sağlamamıza yardım eden güvenlik araştırmacılarının işine değer veriyoruz."
+  },
+  {
+    "path": "tr/safety.png",
+    "title": "Güvenlik",
+    "description": "Paranız nerede tutulur, kim denetler, bir sağlayıcı başarısız olursa ne olur ve dolandırıcılıkta ne yapıyoruz. Tek bir yerde, açıkça anlatıldı."
   },
   {
     "path": "tr/savings.png",
