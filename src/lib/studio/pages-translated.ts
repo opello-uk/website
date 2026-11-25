@@ -2230,10 +2230,27 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         { source: "placeholder", heading: "من يشرف على Opello", body: "[عنصر بديل بانتظار الاعتماد: توزّع Opello حسابات وبطاقات مقدَّمة من شريك مرخّص لإصدار النقود الإلكترونية. تفاصيل ترخيص Opello نفسها قيد التأكيد وستُنشر هنا قبل الإطلاق.]" },
         { source: "placeholder", heading: "ماذا يحدث إذا تعثّر مزوّد الخدمة", body: "[عنصر بديل بانتظار الاعتماد: بموجب قواعد حماية أموال العملاء، تُحفظ أموال العملاء منفصلة عن أموال الشركة وتُعاد إلى العملاء إذا تعثّرت الشركة، بدلاً من أن تُعامل كأصول الشركة. الصياغة النهائية يحتاج تأكيدها من الامتثال.]" },
         { source: "placeholder", heading: "الأمن والاحتيال", body: "يمكنك تجميد بطاقتك من التطبيق بلمسة واحدة. بعض المدفوعات عبر الإنترنت تطلب رمزاً لمرة واحدة عبر رسالة نصية، ونحن لن نطلب منك مشاركته أبداً. إذا لم تبدو عملية دفع صحيحة، جمّد بطاقتك وتواصل معنا فوراً.", href: "/studio/help-security-data/", linkLabel: "إجابات الأمن والبيانات" },
-        { source: "placeholder", heading: "الشكاوى", body: "إذا حدث خطأ ما، أخبرنا. تُتابع كل شكوى ويُرد عليها. ابدأ عبر خيارات التواصل في التطبيق أو في صفحة التواصل.", href: "/studio/contact/", linkLabel: "شاهد خيارات التواصل" },
+        { source: "placeholder", heading: "الشكاوى", body: "إذا حدث خطأ ما، أخبرنا. تُتابع كل شكوى ويُرد عليها. صفحة الشكاوى توضح كيف تشتكي وماذا يحدث بعد ذلك.", href: "/studio/complaints/", linkLabel: "كيف تشتكي" },
         { source: "placeholder", heading: "من وراء Opello", body: "ادعاءات الأمان لا تكون أقوى من الفريق الذي يقف خلفها. تعرّف على الفريق الذي يبني Opello.", href: "/studio/about/", linkLabel: "من وراء Opello" }
       ],
       cta: { label: "افتح حسابك معنا", href: "/studio/open-account/" },
+    },
+    {
+      slug: "complaints",
+      title: "الشكاوى",
+      kicker: "المساعدة",
+      lede: "إذا حدث خطأ ما، نريد أن نعرف. تُتابع كل شكوى ويُرد عليها، وهذه الصفحة توضح كيف.",
+      metaTitle: "الشكاوى: كيف تشتكي وماذا يحدث بعد ذلك - Opello",
+      metaDescription: "كيف تقدّم شكوى، وماذا يحدث بعد تقديمها، والمدد التي نعمل بها، وماذا تفعل إذا لم تكن راضياً عن ردنا.",
+      source: "placeholder",
+      sourceNotes: ["مصدر: عرض هيكل الموقع v18 (NIAN Capital، 11 نوفمبر 2026)، عمود المساعدة؛ الصياغة مقتبسة من إجابة الشكاوى في مركز المساعدة. المدد وتصعيد أمين المظالم بانتظار اعتماد الامتثال."],
+      sections: [
+        { source: "placeholder", heading: "كيف تقدّم شكوى", body: "أخبر فريقنا عبر الدردشة داخل التطبيق، أو راسل [placeholder: Opello complaints email]. يُرجى تضمين اسمك الأول ولقبك، ورقم الهاتف والبريد الإلكتروني المسجلين على حسابك، ووصف المشكلة، ومتى بدأت، وكيف تحب أن نصلحها.", href: "/studio/contact/", linkLabel: "شاهد تفاصيل التواصل" },
+        { source: "placeholder", heading: "ماذا يحدث بعد ذلك", body: "سنؤكد استلام شكواك وننظر فيها بأسرع ما يمكن. يستغرق ذلك عادةً بضعة أيام، لكنه قد يستغرق حتى 15 يوم عمل، وفي الحالات الاستثنائية حتى 35 يوم عمل، لإرسال ردنا النهائي. وإذا احتجنا إلى أكثر من 15 يوم عمل، سنخبرك مسبقاً.", note: "بانتظار الاعتماد: مددا 15/35 يوم عمل يحتاجان تأكيد الامتثال قبل النشر." },
+        { source: "placeholder", heading: "إذا لم تكن راضياً عن ردنا", body: "[عنصر بديل بانتظار الاعتماد: إذا لم تكن راضياً عن ردنا النهائي، يمكنك تصعيد شكواك إلى هيئة أمين المظالم المالية (FOS) عبر موقعها أو بالاتصال على 0800 023 4567.]", note: "بانتظار الاعتماد: مسار تصعيد أمين المظالم المالية ورقمه يحتاجان تأكيد الامتثال؛ العنصر البديل يمثل المكان." },
+        { source: "placeholder", heading: "أسئلة الأمان والأمن", body: "إذا كانت شكواك متعلقة بالاحتيال أو بعملية دفع لا تبدو صحيحة، جمّد بطاقتك من التطبيق أولاً ثم أخبرنا.", href: "/studio/safety/", linkLabel: "الأمان والأمن" }
+      ],
+      cta: { label: "تواصل معنا", href: "/studio/contact/" },
     },
   ],
   tr: [
@@ -4445,10 +4462,27 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
         { source: "placeholder", heading: "Opello'yu kim denetler", body: "[Onay bekleyen yer tutucu: Opello, düzenlemeye tabi bir e-para kuruluşu tarafından sağlanan hesap ve kartları dağıtır. Opello'nun kendi yetkilendirme bilgileri doğrulanıyor ve lansmandan önce burada yer alacak.]" },
         { source: "placeholder", heading: "Bir sağlayıcı başarısız olursa ne olur", body: "[Onay bekleyen yer tutucu: müşteri parasını koruma kuralları uyarınca, müşteri paraları firmanın kendi fonlarından ayrı tutulur ve firma başarısız olursa alacaklılara değil müşterilere iade edilir. Nihai ifade uyum tarafından teyit edilecek.]" },
         { source: "placeholder", heading: "Güvenlik ve dolandırıcılık", body: "Kartınızı uygulamada tek dokunuşla dondurabilirsiniz. Bazı çevrimiçi ödemeler kısa mesajla tek kullanımlık bir kod ister; biz bu kodu asla paylaşmanızı istemeyiz. Bir ödeme doğru görünmüyorsa kartınızı dondurun ve hemen bize ulaşın.", href: "/studio/help-security-data/", linkLabel: "Güvenlik ve veri yanıtları" },
-        { source: "placeholder", heading: "Şikayetler", body: "Bir şey ters giderse bize haber verin. Her şikayet ele alınır ve yanıtlanır. Uygulamadaki iletişim seçenekleriyle veya iletişim sayfasından başlayın.", href: "/studio/contact/", linkLabel: "İletişim seçeneklerini gör" },
+        { source: "placeholder", heading: "Şikayetler", body: "Bir şey ters giderse bize haber verin. Her şikayet ele alınır ve yanıtlanır. Şikâyetler sayfası nasıl şikâyet edeceğinizi ve sonra ne olacağını anlatır.", href: "/studio/complaints/", linkLabel: "Nasıl şikâyet edersin" },
         { source: "placeholder", heading: "Opello'nun arkasındakiler", body: "Güvenlik iddiaları, arkasındaki ekip kadar güçlüdür. Opello'yu inşa eden ekibi tanıyın.", href: "/studio/about/", linkLabel: "Opello'nun arkasındakiler" }
       ],
       cta: { label: "Hesabınızı açın", href: "/studio/open-account/" },
+    },
+    {
+      slug: "complaints",
+      title: "Şikâyetler",
+      kicker: "Yardım",
+      lede: "Beklentilerini karşılayamadığımızda bunu duymak isteriz. Her şikâyet alınıp yanıtlanır; bu sayfa nasıl yapıldığını anlatır.",
+      metaTitle: "Şikâyetler: nasıl şikâyet edersin ve sonra ne olur - Opello",
+      metaDescription: "Nasıl şikâyet edersin, sonra ne olur, hangi sürelerle çalışırız ve yanıtımızdan memnun kalmazsan ne yaparsın.",
+      source: "placeholder",
+      sourceNotes: ["Kaynak: web sitesi yapısı destesi v18 (NIAN Capital, 11 Kasım 2026), Yardım sütunu; ifade yardım merkezindeki şikâyet yanıtından uyarlanmıştır. Süreler ve Ombudsman'e yükseltme uyum onayı bekliyor."],
+      sections: [
+        { source: "placeholder", heading: "Nasıl şikâyet edersin", body: "Ekibimize uygulama içi sohbetten bildir ya da [placeholder: Opello complaints email] adresine yaz. Lütfen adını soyadını, hesabındaki telefon numarası ve e-posta adresini, sorunun ne olduğunu, ne zaman başladığını ve nasıl düzeltmemizi istediğini ekle.", href: "/studio/contact/", linkLabel: "İletişim ayrıntılarını gör" },
+        { source: "placeholder", heading: "Sonra ne olur", body: "Şikâyetini alındı onayıyla birlikte en kısa sürede inceliyoruz. Bu genellikle birkaç gün sürer; ancak nihai yanıtımızı göndermek 15 iş gününe, olağanüstü durumlarda 35 iş gününe kadar sürebilir. 15 iş gününden uzun sürecekse bunu önceden bildiririz.", note: "Onay bekliyor: 15/35 iş günü süreleri yayınlanmadan önce uyum onayı gerektirir." },
+        { source: "placeholder", heading: "Yanıtımızdan memnun kalmazsan", body: "[Onay bekleyen yer tutucu: Nihai yanıtımızdan memnun kalmazsan şikâyetini Finansal Ombudsman Hizmeti'ne (FOS) web sitesi üzerinden ya da 0800 023 4567 numarasını arayarak taşıyabilirsin.]", note: "Onay bekliyor: FOS yükseltme yolu ve numarası uyum onayı gerektirir; yer tutucu yeri işaretler." },
+        { source: "placeholder", heading: "Güvenlik soruları", body: "Şikâyetin dolandırıcılıkla ilgiliyse ya da doğru görünmeyen bir ödemeyse önce kartını uygulamada dondur, sonra bize haber ver.", href: "/studio/safety/", linkLabel: "Güvenlik ve emniyet" }
+      ],
+      cta: { label: "Bize ulaşın", href: "/studio/contact/" },
     },
   ],
 };

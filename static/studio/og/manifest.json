@@ -65,6 +65,11 @@
     "description": "لسنا بعيدين كما نظن عن الفيضانات والحرائق وموجات الحر التي تملأ الأخبار. إليك ما يجري، ولماذا يصل أثره إلينا جميعاً."
   },
   {
+    "path": "ar/complaints.png",
+    "title": "الشكاوى",
+    "description": "كيف تقدّم شكوى، وماذا يحدث بعد تقديمها، والمدد التي نعمل بها، وماذا تفعل إذا لم تكن راضياً عن ردنا."
+  },
+  {
     "path": "ar/consumer-duty.png",
     "title": "سبع مبادئ لتطبيق واجب المستهلك",
     "description": "واجب المستهلك من هيئة الرقابة المالية يدور حول تحقيق نتائج جيدة للعملاء. إليك نهجنا في ذلك."
@@ -335,6 +340,11 @@
     "description": "We are not as far removed from the floods, fires and heatwaves in the news as we may think. Here is what is happening, and why it reaches all of us."
   },
   {
+    "path": "complaints.png",
+    "title": "Complaints",
+    "description": "How to complain, what happens after you do, the timescales we work to, and what to do if you are not happy with our response."
+  },
+  {
     "path": "consumer-duty.png",
     "title": "Seven principles for implementing the Consumer Duty",
     "description": "The Financial Conduct Authority's Consumer Duty is about delivering good outcomes for customers. Here is how we are approaching it."
@@ -598,6 +608,11 @@
     "path": "tr/climate-catastrophes.png",
     "title": "İklim felaketleri: kapımızda",
     "description": "Haberlerdeki sellere, yangınlara ve sıcak dalgalarına sandığımız kadar uzak değiliz. Neler olduğunu ve neden hepimize uzandığını burada bul."
+  },
+  {
+    "path": "tr/complaints.png",
+    "title": "Şikâyetler",
+    "description": "Nasıl şikâyet edersin, sonra ne olur, hangi sürelerle çalışırız ve yanıtımızdan memnun kalmazsan ne yaparsın."
   },
   {
     "path": "tr/consumer-duty.png",

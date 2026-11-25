@@ -8,11 +8,9 @@
 	const colPage: Record<string, string> = { Personal: 'personal', About: 'about', Help: 'help' };
 	// Links that have their own page go there; the rest fall back to their column page.
 	const linkPage: Record<string, string> = { 'Everyday account': 'current-accounts', Savings: 'savings', Payments: 'transfers', Cards: 'cards', 'Global transfers': 'transfers', Contact: 'contact', 'Get in touch': 'contact', 'Account support': 'help-get-in-touch', 'Help centre': 'help-articles', FAQs: 'faq', 'Our approach': 'about', Careers: 'careers', News: 'news',
-		// Blend-5 footer (deck v18 slide 7): the Who-it's-for situation pages and the
-		// Help column's Fees / Safety / Complaints entries. Complaints has no page of
-		// its own yet; the complaints procedure answers live on the contact page.
+		// Blend-6 footer: Complaints now has its own page (deck v18 slide 7 Help column).
 		'People paid from abroad': 'for-residents', Savers: 'for-savers', 'People who moved abroad': 'for-immigrants',
-		Fees: 'fees-and-charges', Safety: 'safety', Complaints: 'help-get-in-touch' };
+		Fees: 'fees-and-charges', Safety: 'safety', Complaints: 'complaints' };
 
 	// Footer link columns from the deck. The Business column is out of MLP1 scope (Vinay, 2026-11-18);
 	// Global transfers moved into Personal so the link survives. Footer IA to confirm with Opello.

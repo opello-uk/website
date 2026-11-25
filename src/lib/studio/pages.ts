@@ -1450,10 +1450,38 @@ pages.push(
 		{ heading: 'Who oversees Opello', body: '[Placeholder pending sign-off: Opello distributes accounts and cards provided by a regulated e-money partner. Opello\'s own authorisation and registration details are being confirmed and will be set out here before launch.]', note: 'Pending sign-off: Opello\'s own FCA authorisation status is not confirmed copy. The placeholder marks the deck\'s licence slot until compliance confirms.' },
 		{ heading: 'What happens if a provider fails', body: '[Placeholder pending sign-off: under safeguarding rules, customer money is held apart from the firm\'s own funds and returned to customers if a firm fails, rather than treated as company assets. Final wording to be confirmed by compliance.]', note: 'Pending sign-off: failure-scenario wording is a standard safeguarding description, not a confirmed Opello claim.' },
 		{ heading: 'Security and fraud', body: 'Your card can be frozen in the app in one tap. Some online payments ask for a one-time passcode by text message, and we will never ask you to share one. If a payment does not look right, freeze your card and contact us straight away.', href: '/studio/help-security-data/', linkLabel: 'Security and data answers' },
-		{ heading: 'Complaints', body: 'If something goes wrong, tell us. Every complaint is picked up and answered. Start through the contact options in the app or on the contact page.', href: '/studio/contact/', linkLabel: 'See contact options' },
+		{ heading: 'Complaints', body: 'If something goes wrong, tell us. Every complaint is picked up and answered. The complaints page sets out how to complain and what happens next.', href: '/studio/complaints/', linkLabel: 'How to complain' },
 		{ heading: 'Who is behind Opello', body: 'Safety claims are only as good as the people behind them. Meet the team building Opello.', href: '/studio/about/', linkLabel: 'Who is behind Opello' }
 	],
 	cta: { label: 'Open account with us', href: OPEN }
+}
+);
+
+// ---- Complaints page (website-structure deck v18, NIAN Capital, 11 Nov 2026) ----
+// Deck slide 7: the Help column lists Complaints as its own item. The procedure
+// wording is adapted from the help-get-in-touch complaints answer, so both pages
+// say the same thing in one place each. Timescales and the FOS escalation carry
+// pending-sign-off notes; every contact detail stays a placeholder.
+pages.push(
+{
+	slug: 'complaints',
+	title: 'Complaints',
+	kicker: 'Help',
+	lede: 'If something has gone wrong, we want to hear about it. Every complaint is picked up and answered, and this page sets out how.',
+	metaTitle: 'Complaints: how to complain and what happens next - Opello',
+	metaDescription: 'How to complain, what happens after you do, the timescales we work to, and what to do if you are not happy with our response.',
+	sourceNotes: [
+		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 7 Help column; wording adapted from the help-get-in-touch complaints answer so both pages match.',
+		'Claims flagged for sign-off: the 15/35 working-day timescales and the Financial Ombudsman Service escalation need compliance confirmation. Every contact detail is a placeholder.',
+		'GBP-only MLP1: page makes no product claims.'
+	],
+	sections: [
+		{ heading: 'How to complain', body: 'Tell our team through the in-app chat, or email [placeholder: Opello complaints email]. Please include your first name and surname, the phone number and email address on your account, what the issue is, when it started, and how you would like us to put it right.', href: '/studio/contact/', linkLabel: 'See contact details' },
+		{ heading: 'What happens next', body: 'We will acknowledge your complaint and look into it as quickly as we can. This usually takes a few days, but it can take up to 15 working days, and in extraordinary cases up to 35 working days, to send our final response. If we need more than 15 working days, we will tell you in advance.', note: 'Pending sign-off: the 15/35 working-day timescales are the standard payments-industry limits and need compliance confirmation before publishing.' },
+		{ heading: 'If you are not happy with our response', body: '[Placeholder pending sign-off: if you are not happy with our final response, you can escalate your complaint to the Financial Ombudsman Service through their website or by calling 0800 023 4567.]', note: 'Pending sign-off: the FOS escalation route and number need compliance confirmation. Placeholder marks the slot.' },
+		{ heading: 'Safety and security questions', body: 'If your complaint is about fraud or a payment that does not look right, freeze your card in the app first, then tell us.', href: '/studio/safety/', linkLabel: 'Safety and security' }
+	],
+	cta: { label: 'Get in touch', href: '/studio/contact/' }
 }
 );
 
