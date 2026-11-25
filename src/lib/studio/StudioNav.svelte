@@ -193,7 +193,11 @@
 
 	<nav class="tabs" aria-label={t.tabsAria}>
 		{#each tabs as tab (tab.id)}
-			<a class="tab" href={resolve(langHref(lang, tab.href) as '/')} aria-current={tab.id === active ? 'page' : undefined}>{t.tabsPersonal}</a>
+			<!-- aria-current="true", not "page": the tab marks the current SECTION of the
+		     site (Personal), and it renders on every page, not only /studio/personal/.
+		     aria-current="page" would tell assistive tech the Personal link IS the
+		     current page, which is false everywhere except that one page. -->
+			<a class="tab" href={resolve(langHref(lang, tab.href) as '/')} aria-current={tab.id === active ? 'true' : undefined}>{t.tabsPersonal}</a>
 		{/each}
 	</nav>
 
@@ -383,7 +387,7 @@
 		outline: 2px solid var(--deep);
 		outline-offset: 2px;
 	}
-	.tab[aria-current='page'] {
+	.tab[aria-current='true'] {
 		background: var(--clay);
 		color: var(--deep);
 	}
