@@ -397,6 +397,10 @@ export const deckCopy: Record<'en' | Lang, {
   whoCards: { href: string; label: string; note: string }[];
   howH: string;
   steps: { label: string; note: string }[];
+  safeH: string;
+  safeLede: string;
+  safePoints: { label: string; note: string }[];
+  safeLink: string;
   feesH: string;
   fees: { k: string; v: string }[];
   feesLink: string;
@@ -424,6 +428,14 @@ export const deckCopy: Record<'en' | Lang, {
       { label: 'Verify your identity', note: 'Your ID and a quick check, done in the app.' },
       { label: 'Start using it', note: 'Account, virtual card and payments, ready to go.' }
     ],
+    safeH: 'Your money, kept safe',
+    safeLede: 'The three safety questions worth asking, answered plainly on the Safety page.',
+    safePoints: [
+      { label: 'Where your money is held', note: 'Safeguarded: kept apart from the company’s own money, so it stays yours.' },
+      { label: 'Who oversees Opello', note: 'A regulated e-money partner stands behind the account and card.' },
+      { label: 'If a provider fails', note: 'Safeguarding rules mean customer money is returned to customers.' }
+    ],
+    safeLink: 'Read the Safety page',
     feesH: 'What it costs',
     fees: [
       { k: 'Opening your account', v: 'Free' },
@@ -460,6 +472,14 @@ export const deckCopy: Record<'en' | Lang, {
       { label: 'وثّق هويتك', note: 'هويتك وفحص سريع، يتم داخل التطبيق.' },
       { label: 'ابدأ الاستخدام', note: 'حساب وبطاقة افتراضية ومدفوعات، جاهزة للعمل.' }
     ],
+    safeH: 'أموالك في أمان',
+    safeLede: 'أسئلة الأمان الثلاثة التي يستحق السؤال، أُجيب عنها بوضوح في صفحة الأمان.',
+    safePoints: [
+      { label: 'أين تُحفظ أموالك', note: 'محمية: تُحفظ منفصلة عن أموال الشركة، لذا تبقى ملكك.' },
+      { label: 'من يشرف على أوبيلو', note: 'شريك محافظ إلكترونية مرخّص يقف خلف الحساب والبطاقة.' },
+      { label: 'إذا تعثّر أحد مزوّدي الخدمة', note: 'قواعد حماية الأموال تعني إعادة أموال العملاء إليهم.' }
+    ],
+    safeLink: 'اقرأ صفحة الأمان',
     feesH: 'كم التكلفة؟',
     fees: [
       { k: 'فتح حسابك', v: 'مجانًا' },
@@ -496,6 +516,14 @@ export const deckCopy: Record<'en' | Lang, {
       { label: 'Kimliğinizi doğrulayın', note: 'Kimliğiniz ve hızlı bir kontrol, uygulamada yapılır.' },
       { label: 'Kullanmaya başlayın', note: 'Hesap, sanal kart ve ödemeler, kullanıma hazır.' }
     ],
+    safeH: 'Paranız güvende',
+    safeLede: 'Sorulmaya değer üç güvenlik sorusu, Güvenlik sayfasında açıkça yanıtlandı.',
+    safePoints: [
+      { label: 'Paranız nerede tutuluyor', note: 'Korumalı: şirketin kendi parasından ayrı tutulur, sizin kalır.' },
+      { label: "Opello'yu kim denetliyor", note: 'Hesap ve kartın arkasında lisanslı bir e-para ortağı var.' },
+      { label: 'Bir sağlayıcı başarısız olursa', note: 'Koruma kuralları, müşteri parasının müşteriye iade edileceği anlamına gelir.' }
+    ],
+    safeLink: 'Güvenlik sayfasını okuyun',
     feesH: 'Ne kadar tutar?',
     fees: [
       { k: 'Hesabınızı açmak', v: 'Ücretsiz' },

@@ -3,9 +3,9 @@
 	// the launch homepage takes visitors from the promise, to proof that their money
 	// is safe, to sign-up, in eight sections. This component carries the sections the
 	// baseline layout did not already cover: 2 trust signals, 3 who it's for,
-	// 5 how it works, 7 fees summary, 8 questions and get started.
-	// (1 top banner = StudioHero, 4 what you get = StudioProducts, 6 safety deep-dive
-	// gets its own page and section next run.)
+	// 5 how it works, 6 safety, 7 fees summary, 8 questions and get started.
+	// (1 top banner = StudioHero, 4 what you get = StudioProducts; the safety
+	// deep-dive lives on /studio/safety/ and the section links there.)
 	// Copy per language lives in deckCopy (i18n); the English strings moved there
 	// verbatim on 2026-11-25 so the ar/tr homepages carry the same deck arc. The
 	// licence/safeguarding wording is a design slot pending compliance sign-off in
@@ -65,6 +65,25 @@
 			</li>
 		{/each}
 	</ol>
+</section>
+
+<!-- 6. Safety: where money is held, who oversees, what happens if a provider
+     fails (deck principle 1, placed higher than any competitor does). The three
+     points mirror the Safety page's own sections; the safeguarding and
+     provider wording is the same design slot pending compliance sign-off as
+     the trust tiles and the Safety page -- no new claims here. -->
+<section class="deck safe" aria-labelledby="safe-h">
+	<h2 id="safe-h">{c.safeH}</h2>
+	<p class="safe-lede">{c.safeLede}</p>
+	<div class="safe-grid">
+		{#each c.safePoints as p (p.label)}
+			<div class="safe-tile">
+				<strong>{p.label}</strong>
+				<span>{p.note}</span>
+			</div>
+		{/each}
+	</div>
+	<a class="safe-link" href={local('/studio/safety/')}>{c.safeLink}</a>
 </section>
 
 <!-- 7. Fees summary: main fees in plain numbers, link to the Fees page
@@ -250,6 +269,48 @@
 	}
 	@media (max-width: 720px) {
 		.steps {
+			grid-template-columns: 1fr;
+		}
+	}
+	/* 6. Safety: the white tile language from the trust strip, one panel per
+	   question so the answer sits next to the question. White-on-navy tiles pass
+	   contrast; the link carries the peach underline treatment used site-wide. */
+	.safe-lede {
+		margin: 0 0 22px;
+		opacity: 0.78;
+		max-width: 46ch;
+	}
+	.safe-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 12px;
+		margin-bottom: 20px;
+	}
+	.safe-tile {
+		display: grid;
+		align-content: start;
+		gap: 8px;
+		background: #ffffff;
+		color: var(--deep);
+		border-radius: 24px;
+		padding: 24px 22px;
+	}
+	.safe-tile strong {
+		font-size: 17px;
+	}
+	.safe-tile span {
+		font-size: 14px;
+		line-height: 1.5;
+		opacity: 0.72;
+	}
+	.safe-link {
+		color: var(--peach);
+		font-size: 14px;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 3px;
+	}
+	@media (max-width: 900px) {
+		.safe-grid {
 			grid-template-columns: 1fr;
 		}
 	}
