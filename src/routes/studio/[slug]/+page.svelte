@@ -61,6 +61,33 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import blogHero2x from '#lib/assets/studio/blog-hero@2x.jpg';
 	import blogHero2xW from '#lib/assets/studio/blog-hero@2x.webp';
 
+	// Situation-page split heroes (for-residents / for-savers / for-immigrants): generated
+	// placeholders until licensed photography is supplied.
+	import sitResidentsHero from '#lib/assets/studio/sit-residents-hero.jpg';
+	import sitResidentsHeroW from '#lib/assets/studio/sit-residents-hero.webp';
+	import sitResidentsHero2x from '#lib/assets/studio/sit-residents-hero@2x.jpg';
+	import sitResidentsHero2xW from '#lib/assets/studio/sit-residents-hero@2x.webp';
+	import sitSaversHero from '#lib/assets/studio/sit-savers-hero.jpg';
+	import sitSaversHeroW from '#lib/assets/studio/sit-savers-hero.webp';
+	import sitSaversHero2x from '#lib/assets/studio/sit-savers-hero@2x.jpg';
+	import sitSaversHero2xW from '#lib/assets/studio/sit-savers-hero@2x.webp';
+	import sitMovedHero from '#lib/assets/studio/sit-moved-hero.jpg';
+	import sitMovedHeroW from '#lib/assets/studio/sit-moved-hero.webp';
+	import sitMovedHero2x from '#lib/assets/studio/sit-moved-hero@2x.jpg';
+	import sitMovedHero2xW from '#lib/assets/studio/sit-moved-hero@2x.webp';
+
+	// Per-slug split-hero image selection (defaults to the shared split placeholder).
+	const splitHero: Record<string, { img: string; w: string; img2x: string; w2x: string }> = {
+		blog: { img: blogHero, w: blogHeroW, img2x: blogHero2x, w2x: blogHero2xW },
+		news: { img: newsHero, w: newsHeroW, img2x: newsHero2x, w2x: newsHero2xW },
+		savings: { img: savingsHero, w: savingsHeroW, img2x: savingsHero2x, w2x: savingsHero2xW },
+		'current-accounts': { img: currentAccountsHero, w: currentAccountsHeroW, img2x: currentAccountsHero2x, w2x: currentAccountsHero2xW },
+		'for-residents': { img: sitResidentsHero, w: sitResidentsHeroW, img2x: sitResidentsHero2x, w2x: sitResidentsHero2xW },
+		'for-savers': { img: sitSaversHero, w: sitSaversHeroW, img2x: sitSaversHero2x, w2x: sitSaversHero2xW },
+		'for-immigrants': { img: sitMovedHero, w: sitMovedHeroW, img2x: sitMovedHero2x, w2x: sitMovedHero2xW }
+	};
+	const splitImg = (slug: string) => splitHero[slug] ?? { img: split, w: splitW, img2x: split2x, w2x: split2xW };
+
 	import { resolve } from '$app/paths';
 	import { hasTranslation, langName, STUDIO_ORIGIN, type Lang } from '#lib/studio/i18n';
 	import { faqJsonLd, qaPageSlugs, questionSections } from '#lib/studio/faqLd';
@@ -152,10 +179,11 @@ focusMainOnNavigate();
 
 	<main class="subpage" id="content" tabindex="-1">
 		{#if p.hero?.variant === 'split'}
+		{@const h = splitImg(p.slug)}
 		<section class="hero hero-split">
 			<!-- Placeholder photo; update alt with the licensed replacement -->
 			<div class="media">
-				<picture><source type="image/webp" srcset="{p.slug === 'blog' ? `${blogHeroW} 1x, ${blogHero2xW} 2x` : p.slug === 'news' ? `${newsHeroW} 1x, ${newsHero2xW} 2x` : p.slug === 'savings' ? `${savingsHeroW} 1x, ${savingsHero2xW} 2x` : p.slug === 'current-accounts' ? `${currentAccountsHeroW} 1x, ${currentAccountsHero2xW} 2x` : `${splitW} 1x, ${split2xW} 2x`}" /><img src={p.slug === 'blog' ? blogHero : p.slug === 'news' ? newsHero : p.slug === 'savings' ? savingsHero : p.slug === 'current-accounts' ? currentAccountsHero : split} srcset={p.slug === 'blog' ? `${blogHero} 1x, ${blogHero2x} 2x` : p.slug === 'news' ? `${newsHero} 1x, ${newsHero2x} 2x` : p.slug === 'savings' ? `${savingsHero} 1x, ${savingsHero2x} 2x` : p.slug === 'current-accounts' ? `${currentAccountsHero} 1x, ${currentAccountsHero2x} 2x` : `${split} 1x, ${split2x} 2x`} alt={p.hero.alt} width={p.slug === 'savings' ? 800 : 900} height={p.slug === 'savings' ? 800 : 600} decoding="async" fetchpriority="high" /></picture>
+				<picture><source type="image/webp" srcset={`${h.w} 1x, ${h.w2x} 2x`} /><img src={h.img} srcset={`${h.img} 1x, ${h.img2x} 2x`} alt={p.hero.alt} width={p.slug === 'savings' ? 800 : 900} height={p.slug === 'savings' ? 800 : 600} decoding="async" fetchpriority="high" /></picture>
 			</div>
 			<div class="copy">
 				<StudioCrumbs slug={p.slug} kicker={p.kicker} />

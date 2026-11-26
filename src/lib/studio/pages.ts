@@ -1373,6 +1373,8 @@ pages.push(
 	slug: 'for-residents',
 	title: 'For people paid from abroad',
 	kicker: "Who it's for",
+	// Split hero with a generated placeholder photo until licensed photography is supplied.
+	hero: { variant: 'split', alt: 'A man at a sunlit desk by a large window smiling at his smartphone, a ceramic mug and a potted plant beside him' },
 	lede: 'Local accounts work at home, but getting paid from abroad and paying abroad is slow, costly or blocked. Opello gives you a UK account that moves when you do.',
 	metaTitle: 'A UK account for people paid from abroad - Opello',
 	metaDescription: 'Get paid from abroad and send money home from a UK account, with the full cost shown before you pay it.',
@@ -1391,6 +1393,8 @@ pages.push(
 	slug: 'for-savers',
 	title: 'For savers who want stability',
 	kicker: "Who it's for",
+	// Split hero with a generated placeholder photo until licensed photography is supplied.
+	hero: { variant: 'split', alt: 'Three small peach and terracotta ceramic pots on a sunlit wooden shelf beside a potted plant, coins stacked in front' },
 	lede: 'Where inflation runs high, savings held in local currency lose value every month. Opello lets you hold savings in GBP so they keep their value.',
 	metaTitle: 'Hold your savings in GBP - Opello',
 	metaDescription: 'Hold savings in GBP in a UK account, with safeguarding and the full cost shown up front.',
@@ -1410,6 +1414,8 @@ pages.push(
 	slug: 'for-immigrants',
 	title: 'For people who have moved abroad',
 	kicker: "Who it's for",
+	// Split hero with a generated placeholder photo until licensed photography is supplied.
+	hero: { variant: 'split', alt: 'A woman unpacking a cardboard box in a bright new apartment beside a potted plant in warm afternoon light' },
 	lede: 'Banks in some countries cut ties with customers from certain countries without warning. Opello gives you a UK account where your money is safeguarded and stays reachable.',
 	metaTitle: 'A UK account that stays reachable - Opello',
 	metaDescription: 'A UK-regulated account where your money is safeguarded and stays reachable, built for people who have moved abroad.',
