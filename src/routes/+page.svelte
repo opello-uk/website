@@ -6,7 +6,7 @@
 
 	const title = 'Opello — More freedom. Fewer barriers.';
 	const description =
-		'Opello is a cross-border money app for lives that span countries. From everyday payments to international transfers, more flexibility and control wherever life takes you. Coming soon.';
+		'Opello is a cross-border money app for lives that span countries. Everyday payments, international transfers, more control. Coming soon.';
 	const url = 'https://opello.co.uk/';
 
 	const jsonLd = JSON.stringify({
