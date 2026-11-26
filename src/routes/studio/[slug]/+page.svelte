@@ -318,17 +318,15 @@ focusMainOnNavigate();
 		padding-left: clamp(20px, 4vw, 48px);
 		padding-right: clamp(20px, 4vw, 48px);
 	}
-	/* The page hero spans full-bleed, content inside keeps the measure. */
+	/* The page hero spans full-bleed. Side padding lives here: the page container is
+	   full-bleed (2026-11-26), so without this the hero copy sat flush on the window
+	   edge (Vinay screenshot). */
 	.hero {
 		max-width: none;
-	}
-	.hero {
 		position: relative;
 		min-height: min(36vh, 340px);
 		display: grid;
 		align-items: end;
-		/* Side padding lives here now: the page container is full-bleed (2026-11-26),
-		   so without this the hero copy sat flush on the window edge (Vinay screenshot). */
 		padding: clamp(16px, 3vh, 32px) clamp(20px, 4vw, 48px) clamp(24px, 4vh, 40px);
 		/* desktop: let the ring bleed past the content column instead of being cut off at its edge */
 		overflow: visible;
