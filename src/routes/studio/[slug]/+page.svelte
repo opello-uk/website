@@ -85,10 +85,6 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 			href: `/studio/${l}/${m[1]}/`
 		}));
 	});
-	// Card notes are not shown on the cards; they roll up into one page-level list.
-	const notes = $derived(
-		p.sourceNotes ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
-	);
 	// Keep the document element in sync after client-side navigation (the translated
 	// [lang]/[slug] page does the same for its languages; without this, arriving from
 	// an Arabic page leaves lang=ar/dir=rtl on English content).
@@ -262,17 +258,6 @@ focusMainOnNavigate();
 				</article>
 			{/each}
 		</section>
-
-		{#if notes.length}
-			<section class="sources" aria-labelledby="sources-heading">
-				<h2 id="sources-heading">Sources and open points</h2>
-				<ul>
-					{#each notes as n (n)}
-						<li>{n}</li>
-					{/each}
-				</ul>
-			</section>
-		{/if}
 
 		<section class="cta">
 			<a class="pill" href={resolve(p.cta.href as '/')}>{p.cta.label}</a>
@@ -583,8 +568,7 @@ focusMainOnNavigate();
 		/* long-measure guard: a full-width card spans the whole row, but its body copy and the
 	   page-level source notes keep a readable line length (45-75ch) instead of ~95-char lines */
 		.sections.rem-1 .card:last-child p,
-		.sections .card.wide p,
-		.sources li {
+		.sections .card.wide p {
 			max-width: 72ch;
 		}
 		/* two left over: they split the row */
@@ -753,35 +737,6 @@ focusMainOnNavigate();
 		.sections.clay .card.big h2 {
 			font-size: 2rem;
 		}
-	}
-	.sources {
-		margin-top: 20px;
-		padding: 22px 24px;
-		border: 1px solid var(--rule);
-		border-radius: 14px;
-	}
-	.sources h2 {
-		margin: 0 0 12px;
-		font-size: 0.8rem;
-		font-weight: 400;
-		letter-spacing: 0.16em;
-		text-transform: uppercase;
-		color: var(--peach);
-	}
-	.sources ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		display: grid;
-		gap: 10px;
-	}
-	.sources li {
-		font-size: 0.85rem;
-		line-height: 1.55;
-		color: rgba(233, 228, 224, 0.78);
-		/* Source notes cite bare URLs; overflow-wrap lets a long one wrap at 320
-		   instead of poking past the viewport edge under the overflow clip. */
-		overflow-wrap: anywhere;
 	}
 	.card .link {
 		display: inline-block;

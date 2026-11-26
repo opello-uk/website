@@ -47,7 +47,6 @@ export type Chrome = {
   soon: string;
   skip: string;
   learnMore: string;
-  sourcesHeading: string;
   searchLabel: string;
   // Visible-breadcrumb and nav-tabs landmarks (WCAG 3.1.2: in the page's language).
   crumbsAria: string;
@@ -102,7 +101,6 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "Coming soon",
     skip: "Skip to content",
     learnMore: "Learn more",
-    sourcesHeading: "Sources and open points",
     searchLabel: "Search the site",
     crumbsAria: "Breadcrumb",
     tabsAria: "Customer type",
@@ -150,7 +148,6 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "قريباً",
     skip: "تخطَّ إلى المحتوى",
     learnMore: "اعرف المزيد",
-    sourcesHeading: "المصادر والنقاط المفتوحة",
     searchLabel: "ابحث في الموقع",
     crumbsAria: "مسار التنقل",
     tabsAria: "نوع الحساب",
@@ -197,7 +194,6 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "Yakında",
     skip: "İçeriğe atla",
     learnMore: "Daha fazla",
-    sourcesHeading: "Kaynaklar ve açık noktalar",
     searchLabel: "Sitede ara",
     crumbsAria: "Sayfa yolu",
     tabsAria: "Hesap türü",

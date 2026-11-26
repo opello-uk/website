@@ -64,7 +64,6 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 	import { chrome, langHref, hasTranslation, STUDIO_ORIGIN } from '#lib/studio/i18n';
 	// English page fallback: translated pages inherit the English source notes until the notes
 	// themselves are translated (they are internal review markers, not customer copy).
-	import { bySlug as enBySlug } from '#lib/studio/pages';
 	import { markLangs, markPlaceholders } from '#lib/studio/scriptLangs';
 	import { faqJsonLd, qaPageSlugs, questionSections } from '#lib/studio/faqLd';
 	import { articleJsonLd, isArticle } from '#lib/studio/articleLd';
@@ -82,11 +81,6 @@ import { focusMainOnNavigate } from '#lib/studio/focusOnNavigate';
 		document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 	});
 	const t = $derived(chrome[lang]);
-	// Source notes for this page: the translated twin's own notes when present, else the English
-	// page's sourceNotes, else a roll-up of per-section notes (same rule as the English template).
-	const notes = $derived(
-		p.sourceNotes ?? enBySlug(p.slug)?.sourceNotes ?? p.sections.filter((s) => s.note).map((s) => `${s.heading.replace(/[.!?]$/, "")}: ${s.note}`)
-	);
 	// Internal links point to this language's equivalent when it exists,
 	// otherwise they keep their English target.
 	const local = $derived((href: string) => resolve(langHref(lang, href) as '/'));
@@ -261,23 +255,6 @@ focusMainOnNavigate();
 				</article>
 			{/each}
 		</section>
-
-		<!-- Page-level sources and open points, matching the English template. Translated notes when
-		     the twin carries them; otherwise the English page's notes (review markers, not customer copy). -->
-		{#if notes.length}
-			<section class="sources" aria-labelledby="sources-heading">
-				<h2 id="sources-heading">{t.sourcesHeading}</h2>
-				<!-- dir=auto: most notes are English review markers on an RTL page; without this the
-				     paragraph direction is RTL and their trailing punctuation shuffles to the line start.
-				     lang=en: every note in pages.ts is English (checked 2026-11-21), so WCAG 3.1.2 needs
-				     the language of parts marked instead of inheriting the page's ar/tr lang. -->
-				<ul lang="en">
-					{#each notes as n (n)}
-						<li dir="auto">{n}</li>
-					{/each}
-				</ul>
-			</section>
-		{/if}
 
 		<section class="cta">
 			<a class="pill" href={local(p.cta.href)}>{p.cta.label}</a>
@@ -588,8 +565,7 @@ focusMainOnNavigate();
 		/* long-measure guard: a full-width card spans the whole row, but its body copy and the
 	   page-level source notes keep a readable line length (45-75ch) instead of ~95-char lines */
 		.sections.rem-1 .card:last-child p,
-		.sections .card.wide p,
-		.sources li {
+		.sections .card.wide p {
 			max-width: 72ch;
 		}
 		/* two left over: they split the row */
@@ -758,35 +734,6 @@ focusMainOnNavigate();
 		.sections.clay .card.big h2 {
 			font-size: 2rem;
 		}
-	}
-	.sources {
-		margin-top: 20px;
-		padding: 22px 24px;
-		border: 1px solid var(--rule);
-		border-radius: 14px;
-	}
-	.sources h2 {
-		margin: 0 0 12px;
-		font-size: 0.8rem;
-		font-weight: 400;
-		letter-spacing: 0.16em;
-		text-transform: uppercase;
-		color: var(--peach);
-	}
-	.sources ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		display: grid;
-		gap: 10px;
-	}
-	.sources li {
-		font-size: 0.85rem;
-		line-height: 1.55;
-		color: rgba(233, 228, 224, 0.78);
-		/* Source notes cite bare URLs; overflow-wrap lets a long one wrap at 320
-		   instead of poking past the viewport edge under the overflow clip. */
-		overflow-wrap: anywhere;
 	}
 	.card .link {
 		display: inline-block;
