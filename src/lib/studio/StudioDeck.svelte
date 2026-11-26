@@ -117,18 +117,21 @@
 
 <style>
 	.deck {
-		padding: clamp(48px, 7vw, 96px) clamp(20px, 4vw, 56px);
+		/* Single rhythm: sections own only their bottom space; the first section's
+		   top is set separately. Stacked sections previously each carried full
+		   padding, so up to ~190px of empty navy sat between them (Vinay, 2026-11-26). */
+		padding: 0 clamp(20px, 4vw, 56px) clamp(40px, 5vw, 72px);
 		color: var(--clay);
+	}
+	.deck:first-of-type,
+	.trust {
+		padding-top: clamp(48px, 6vw, 88px);
 	}
 	.deck h2 {
 		font-size: clamp(28px, 4vw, 44px);
 		font-weight: 400;
 		letter-spacing: -0.01em;
 		margin: 0 0 18px;
-	}
-	/* 2. Trust signals: white icon-tile language from the baseline. */
-	.trust {
-		padding-top: clamp(24px, 3vw, 40px);
 	}
 	/* The hero's tilted phones hang into this section (baseline look). Reserve
 	   room so the tiles start below the phone overhang instead of under it
@@ -140,7 +143,8 @@
 	}
 	@media (min-width: 1100px) {
 		.trust {
-			padding-top: 200px;
+			/* measured phone overhang ~132px at 1440 plus breathing room */
+			padding-top: 168px;
 		}
 	}
 	.trust-grid {
