@@ -304,10 +304,23 @@ focusMainOnNavigate();
 		overflow-x: clip;
 	}
 	.subpage {
-		max-width: 1100px;
-		margin: 0 auto;
-		padding: clamp(24px, 4vw, 56px) clamp(20px, 4vw, 48px) 80px;
+		/* Full-bleed (Vinay, 2026-11-26): the IAM pages don't cap the page in a 1100px
+		   column; heroes and section bands run the full viewport width and only the
+		   copy inside them keeps a reading measure. */
+		max-width: none;
+		padding: 0 0 80px;
 		color: var(--clay);
+	}
+	/* The sections grid keeps a centered measure so cards don't stretch edge-to-edge. */
+	.sections {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-left: clamp(20px, 4vw, 48px);
+		padding-right: clamp(20px, 4vw, 48px);
+	}
+	/* The page hero spans full-bleed, content inside keeps the measure. */
+	.hero {
+		max-width: none;
 	}
 	.hero {
 		position: relative;
@@ -373,6 +386,10 @@ focusMainOnNavigate();
 		gap: clamp(24px, 4vw, 48px);
 		align-items: end;
 		min-height: min(46vh, 420px);
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-left: clamp(20px, 4vw, 48px);
+		padding-right: clamp(20px, 4vw, 48px);
 	}
 	.hero-split .media {
 		position: relative;
@@ -608,11 +625,21 @@ focusMainOnNavigate();
 	}
 	/* Product pages carry the landing-page card language (baseline-05): clay ground, navy copy, 24px corners,
 	   gentle hover lift. Slug-keyed so the Arabic and Turkish twins match automatically. */
-	.sections.clay .card {
+	.sections.clay {
+		/* Clay band: the landing's warm ground carries into inner pages (IAM hallmark),
+		   so inner pages don't read as one flat navy sheet with text on it. */
 		background: var(--clay);
-		border-color: var(--clay);
+		border-radius: 28px;
+		padding-top: clamp(40px, 5vw, 64px);
+		padding-bottom: clamp(40px, 5vw, 64px);
+		margin-top: clamp(32px, 4vw, 56px);
+	}
+	.sections.clay .card {
+		background: #ffffff;
+		border-color: #ffffff;
 		border-radius: 24px;
 		transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
+		box-shadow: 0 6px 18px rgba(0, 20, 49, 0.08);
 	}
 	/* Hover gated to real pointers; a touch tap must not leave a card lifted. */
 	@media (hover: hover) and (pointer: fine) {
@@ -631,10 +658,25 @@ focusMainOnNavigate();
 		opacity: 0.85;
 	}
 	.sections.clay .card .link {
+		/* IAM button language: white-fill pill with navy text, not an underlined text link. */
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		background: #ffffff;
 		color: var(--deep);
+		border: 1px solid rgb(0 20 49 / 0.15);
+		border-radius: 999px;
+		padding: 9px 18px;
 		font-weight: 600;
-		text-decoration: underline;
-		text-underline-offset: 3px;
+		font-size: 13px;
+		text-decoration: none;
+		transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+	}
+	@media (hover: hover) and (pointer: fine) {
+		.sections.clay .card .link:hover {
+			transform: translateY(-1px);
+			box-shadow: 0 8px 20px rgba(0, 20, 49, 0.18);
+		}
 	}
 	@media (hover: hover) and (pointer: fine) {
 		.sections.clay .card .link:hover {
