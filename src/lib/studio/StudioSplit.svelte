@@ -84,10 +84,24 @@
 	}
 	.media {
 		position: relative;
-		aspect-ratio: 19 / 12;
 		border-radius: 24px;
 		overflow: hidden;
 		background: linear-gradient(135deg, #0c6470 0%, #001431 60%, #f58851 140%);
+		/* The photo must never overflow its grid column: with align-items:stretch and
+		   aspect-ratio alone, the box derived its width from the stretched height and
+		   slid 68px under the copy at ~1000px (Vinay screenshot, 2026-11-26). Filling
+		   the row instead: the copy column sets the height, the track sets the width. */
+		width: 100%;
+		height: 100%;
+		min-height: 300px;
+	}
+	/* Wide desktop: keep the 19/12 photo proportion when the copy is short. */
+	@media (min-width: 1101px) {
+		.media {
+			height: auto;
+			min-height: 0;
+			aspect-ratio: 19 / 12;
+		}
 	}
 	
 
@@ -189,17 +203,18 @@
 	}
 
 	/* Phone: photo and copy sit side by side, as in the Figma 390 frame. */
-	@media (max-width: 800px) {
+	@media (max-width: 1100px) {
 		.split {
-			grid-template-columns: minmax(0, 1.14fr) minmax(0, 1fr);
-			gap: 14px;
+			grid-template-columns: 1fr;
+			gap: 20px;
 			align-items: stretch;
 			padding: 48px 20px;
 		}
 		/* Phone photo fills the height of the copy column, so the two columns read as one planned block. */
 		.media {
-			aspect-ratio: auto;
-			min-height: 260px;
+			height: auto;
+			aspect-ratio: 19 / 12;
+			min-height: 0;
 		}
 		.media img {
 			object-position: 42% 40%;
