@@ -757,8 +757,9 @@
 		line-height: 1;
 		/* Optical centring: flex centres the em-box, but uppercase-only glyphs have no
 		   descenders, so the visible text rides ~2px high (pixel-measured 14/18 above/below).
-		   Nudging the text down by the measured amount. */
-		transform: translateY(1px);
+		   A transform on the pill moves the whole box, so shift the text instead:
+		   2px extra padding-bottom tips the line box down inside the flex centre. */
+		padding-bottom: 4px;
 		text-align: center;
 		white-space: nowrap;
 		text-decoration: none;
@@ -855,6 +856,7 @@
 			letter-spacing: 0.04em;
 			text-indent: 0.04em;
 			line-height: 1;
+			padding-bottom: 4px;
 			white-space: nowrap;
 			max-width: none;
 		}
