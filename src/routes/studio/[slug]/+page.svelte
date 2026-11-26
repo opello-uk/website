@@ -327,7 +327,9 @@ focusMainOnNavigate();
 		min-height: min(36vh, 340px);
 		display: grid;
 		align-items: end;
-		padding: clamp(16px, 3vh, 32px) 0 clamp(24px, 4vh, 40px);
+		/* Side padding lives here now: the page container is full-bleed (2026-11-26),
+		   so without this the hero copy sat flush on the window edge (Vinay screenshot). */
+		padding: clamp(16px, 3vh, 32px) clamp(20px, 4vw, 48px) clamp(24px, 4vh, 40px);
 		/* desktop: let the ring bleed past the content column instead of being cut off at its edge */
 		overflow: visible;
 	}
@@ -386,10 +388,6 @@ focusMainOnNavigate();
 		gap: clamp(24px, 4vw, 48px);
 		align-items: end;
 		min-height: min(46vh, 420px);
-		max-width: 1200px;
-		margin: 0 auto;
-		padding-left: clamp(20px, 4vw, 48px);
-		padding-right: clamp(20px, 4vw, 48px);
 	}
 	.hero-split .media {
 		position: relative;
