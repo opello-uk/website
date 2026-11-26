@@ -750,12 +750,14 @@
 		font-size: 11px;
 		font-weight: 500;
 		text-transform: uppercase;
+		/* Trailing letter-space on uppercase text makes centred labels sit off-centre
+		   inside the pill; text-indent compensates (same fix as figma-build). */
 		letter-spacing: 0.08em;
-		line-height: 1.25;
+		text-indent: 0.08em;
+		line-height: 1;
 		text-align: center;
-		white-space: normal;
-		text-decoration: none;
 		white-space: nowrap;
+		text-decoration: none;
 		transition: transform 200ms var(--ease), background-color 200ms var(--ease);
 	}
 	.pill:focus-visible {
@@ -768,7 +770,7 @@
 		/* First half of the split capsule: rounded on the leading edge only (logical, so RTL mirrors). */
 		border-start-start-radius: 999px;
 		border-end-start-radius: 999px;
-		padding-right: 14px;
+		padding-right: 16px;
 	}
 	.pill-white {
 		background: var(--clay);
@@ -844,12 +846,13 @@
 		}
 		.pill {
 			min-height: 44px;
-			padding: 6px 8px;
+			padding: 6px 10px;
 			font-size: 10px;
 			letter-spacing: 0.04em;
-			line-height: 1.15;
-			white-space: normal;
-			max-width: 88px;
+			text-indent: 0.04em;
+			line-height: 1;
+			white-space: nowrap;
+			max-width: none;
 		}
 		.pill-white {
 			padding: 6px 8px;
