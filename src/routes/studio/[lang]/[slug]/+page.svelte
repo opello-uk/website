@@ -812,6 +812,13 @@ focusMainOnNavigate();
 	}
 	.cta {
 		margin-top: 36px;
+		/* Same centered measure as .sections: without this the pill sat flush on the
+		   window edge after the full-bleed pass removed the page container's padding. */
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: clamp(20px, 4vw, 48px);
+		padding-right: clamp(20px, 4vw, 48px);
 	}
 	.pill {
 		display: inline-block;
