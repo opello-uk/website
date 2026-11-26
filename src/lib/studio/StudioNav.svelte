@@ -755,6 +755,10 @@
 		letter-spacing: 0.08em;
 		text-indent: 0.08em;
 		line-height: 1;
+		/* Optical centring: flex centres the em-box, but uppercase-only glyphs have no
+		   descenders, so the visible text rides ~2px high (pixel-measured 14/18 above/below).
+		   Nudging the text down by the measured amount. */
+		transform: translateY(1px);
 		text-align: center;
 		white-space: nowrap;
 		text-decoration: none;
