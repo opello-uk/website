@@ -759,7 +759,7 @@
 		   descenders, so the visible text rides ~2px high (pixel-measured 14/18 above/below).
 		   A transform on the pill moves the whole box, so shift the text instead:
 		   2px extra padding-bottom tips the line box down inside the flex centre. */
-		padding-bottom: 4px;
+		padding-bottom: 2px;
 		text-align: center;
 		white-space: nowrap;
 		text-decoration: none;
@@ -856,7 +856,7 @@
 			letter-spacing: 0.04em;
 			text-indent: 0.04em;
 			line-height: 1;
-			padding-bottom: 4px;
+			padding-bottom: 2px;
 			white-space: nowrap;
 			max-width: none;
 		}
