@@ -288,9 +288,15 @@
 					<path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
 				</svg>
 			</button>
-			{#if searchOpen}
-				<div class="search" id="nav-search" bind:this={searchPanel} role="dialog" aria-label={t.searchLabel}>
-					<input
+			<!-- Same pattern as the language menu: the panel stays in the DOM on every page
+			     (prerendered), hidden with the hidden attribute rather than conditionally
+			     rendered, so the button's aria-controls="nav-search" always resolves to a real
+			     element (a dangling reference before first open is an a11y defect). The search
+			     index still loads lazily via loadSearchIndex() on open, and the inner content
+			     only renders while open, so a hidden panel has no tab stops. -->
+			<div class="search" id="nav-search" bind:this={searchPanel} role="dialog" aria-label={t.searchLabel} hidden={!searchOpen}>
+				{#if searchOpen}
+				<input
 						class="field"
 						type="search"
 						bind:this={searchInput}
@@ -324,8 +330,8 @@
 							{t.searchNone}
 						{/if}
 					</p>
-				</div>
-			{/if}
+				{/if}
+			</div>
 		</div>
 
 		<!-- One split capsule as in baseline-07: peach half (open account) joined to the white half (log in). -->
@@ -568,6 +574,10 @@
 	}
 	.search {
 		position: absolute;
+		/* hidden attribute guard, same as .menu above. */
+		&[hidden] {
+			display: none;
+		}
 		top: calc(100% + 8px);
 		inset-inline-end: 0;
 		z-index: 30;
