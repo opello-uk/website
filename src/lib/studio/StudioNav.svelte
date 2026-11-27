@@ -31,6 +31,32 @@
 	let open = $state(false);
 	let menu: HTMLElement | undefined = $state();
 	let regionButton: HTMLButtonElement | undefined = $state();
+	// "Who it's for" dropdown: stays JS-free for open/close (details/summary works
+	// without JavaScript), with progressive-enhancement handlers that honour the
+	// keyboard behaviour its role="menu" promises (blend 104, 2026-11-27): Escape
+	// closes and returns focus, arrows walk the items, outside click closes, and
+	// aria-expanded tracks the native open state for assistive tech.
+	let whoDetails: HTMLDetailsElement | undefined = $state();
+	let whoOpen = $state(false);
+	function whoKeydown(e: KeyboardEvent) {
+		const items = Array.from(whoDetails?.querySelectorAll<HTMLAnchorElement>('a[role="menuitem"]') ?? []);
+		if (e.key === 'Escape' && whoDetails?.open) {
+			whoDetails.open = false;
+			whoDetails.querySelector('summary')?.focus();
+			return;
+		}
+		if (!items.length) return;
+		const idx = items.indexOf(document.activeElement as HTMLAnchorElement);
+		let next = -1;
+		if (e.key === 'ArrowDown') next = idx < 0 ? 0 : (idx + 1) % items.length;
+		else if (e.key === 'ArrowUp') next = idx < 0 ? items.length - 1 : (idx - 1 + items.length) % items.length;
+		else if (e.key === 'Home') next = 0;
+		else if (e.key === 'End') next = items.length - 1;
+		if (next >= 0) {
+			e.preventDefault();
+			items[next].focus();
+		}
+	}
 
 	function close() {
 		open = false;
@@ -74,6 +100,7 @@
 	function onWindowPointerdown(e: PointerEvent) {
 		if (open && menu && !menu.contains(e.target as Node) && !regionButton?.contains(e.target as Node)) open = false;
 		if (searchOpen && searchPanel && !searchPanel.contains(e.target as Node) && !searchButton?.contains(e.target as Node)) closeSearch();
+		if (whoDetails?.open && !whoDetails.contains(e.target as Node)) whoDetails.open = false;
 	}
 
 	type SearchEntry = { title: string; kicker: string; lede: string; blob: string; href: string };
@@ -190,12 +217,12 @@
 	     answers what visitors check before joining. Who it's for leads; Fees, Safety and Help
 	     follow; sign-up stays in the capsule. -->
 	<nav class="tabs" aria-label={t.tabsAria}>
-		<details class="who">
-			<summary aria-haspopup="menu">{t.tabWho}<svg class="who-caret" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+		<details class="who" bind:this={whoDetails} onkeydown={whoKeydown} ontoggle={() => (whoOpen = whoDetails?.open ?? false)}>
+			<summary aria-haspopup="menu" aria-expanded={whoOpen}>{t.tabWho}<svg class="who-caret" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
 			<div class="who-menu" role="menu" aria-label={t.whoAria}>
-				<a role="menuitem" href={resolve(langHref(lang, '/studio/for-residents/') as '/')}>{t.whoRes}</a>
-				<a role="menuitem" href={resolve(langHref(lang, '/studio/for-savers/') as '/')}>{t.whoSav}</a>
-				<a role="menuitem" href={resolve(langHref(lang, '/studio/for-immigrants/') as '/')}>{t.whoImm}</a>
+				<a role="menuitem" href={resolve(langHref(lang, '/studio/for-residents/') as '/')} onclick={() => { if (whoDetails) whoDetails.open = false; }}>{t.whoRes}</a>
+				<a role="menuitem" href={resolve(langHref(lang, '/studio/for-savers/') as '/')} onclick={() => { if (whoDetails) whoDetails.open = false; }}>{t.whoSav}</a>
+				<a role="menuitem" href={resolve(langHref(lang, '/studio/for-immigrants/') as '/')} onclick={() => { if (whoDetails) whoDetails.open = false; }}>{t.whoImm}</a>
 			</div>
 		</details>
 		<a class="tab" href={resolve(langHref(lang, '/studio/fees-and-charges/') as '/')}>{t.tabFees}</a>
