@@ -204,6 +204,12 @@
 		gap: 24px;
 	}
 	footer a {
+		/* Touch target (WCAG 2.5.8): give the small footer link a 44px box,
+		   same pattern as the studio footer links. */
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		padding: 0 4px;
 		color: var(--clay);
 		/* WCAG 1.4.1: the link must not rely on colour alone against the
 		   surrounding muted footer text — keep the underline. */
