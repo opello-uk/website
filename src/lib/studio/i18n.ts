@@ -13,8 +13,8 @@ export const langName: Record<Lang, string> = { ar: "العربية", tr: "Türk
 // by server routes and the nav search (dynamic import on open).
 // scripts/check-translated-slugs.mjs verifies this list matches pages-translated.ts at build time.
 export const translatedSlugs: Record<Lang, readonly string[]> = {
-  ar: ["transfers", "cards", "personal", "open-account", "current-accounts", "savings", "all-plans", "about", "help", "faq", "contact", "careers", "ethical-savings", "fees-and-charges", "download", "referrals", "login", "privacy-policy", "cookies-policy", "help-logging-in", "help-my-account", "help-get-in-touch", "help-getting-started", "help-security-data", "help-my-card", "help-about-opello", "help-articles", "help-ethical-saver", "news", "blog", "accessibility", "responsible-disclosure", "help-tin", "uk-account-from-abroad", "sitemap", "virtual-cards", "terms-and-conditions", "customer-terms-and-conditions", "chargebacks", "green-banking", "green-break", "money-and-mental-health", "world-wildlife-day", "cashless-society", "consumer-duty", "dark-mode", "climate-catastrophes", "just-transition", "sustainable-valentines-day", "card-exchange-rates", "cop26", "fintech-for-good", "for-residents", "for-savers", "for-immigrants", "safety", "complaints"],
-  tr: ["transfers", "cards", "personal", "open-account", "current-accounts", "savings", "all-plans", "about", "help", "faq", "contact", "careers", "ethical-savings", "fees-and-charges", "download", "referrals", "login", "privacy-policy", "cookies-policy", "help-logging-in", "help-my-account", "help-get-in-touch", "help-getting-started", "help-security-data", "help-my-card", "help-about-opello", "help-articles", "help-ethical-saver", "news", "blog", "accessibility", "responsible-disclosure", "help-tin", "uk-account-from-abroad", "sitemap", "virtual-cards", "terms-and-conditions", "customer-terms-and-conditions", "chargebacks", "green-banking", "green-break", "money-and-mental-health", "world-wildlife-day", "cashless-society", "consumer-duty", "dark-mode", "climate-catastrophes", "just-transition", "sustainable-valentines-day", "card-exchange-rates", "cop26", "fintech-for-good", "for-residents", "for-savers", "for-immigrants", "safety", "complaints"],
+  ar: ["transfers", "cards", "personal", "open-account", "current-accounts", "savings", "all-plans", "about", "help", "faq", "contact", "careers", "ethical-savings", "fees-and-charges", "download", "referrals", "login", "privacy-policy", "cookies-policy", "help-logging-in", "help-my-account", "help-get-in-touch", "help-getting-started", "help-security-data", "help-my-card", "help-about-opello", "help-articles", "help-ethical-saver", "news", "blog", "accessibility", "responsible-disclosure", "help-tin", "uk-account-from-abroad", "sitemap", "virtual-cards", "terms-and-conditions", "customer-terms-and-conditions", "chargebacks", "green-banking", "green-break", "money-and-mental-health", "world-wildlife-day", "cashless-society", "consumer-duty", "dark-mode", "climate-catastrophes", "just-transition", "sustainable-valentines-day", "card-exchange-rates", "cop26", "fintech-for-good"],
+  tr: ["transfers", "cards", "personal", "open-account", "current-accounts", "savings", "all-plans", "about", "help", "faq", "contact", "careers", "ethical-savings", "fees-and-charges", "download", "referrals", "login", "privacy-policy", "cookies-policy", "help-logging-in", "help-my-account", "help-get-in-touch", "help-getting-started", "help-security-data", "help-my-card", "help-about-opello", "help-articles", "help-ethical-saver", "news", "blog", "accessibility", "responsible-disclosure", "help-tin", "uk-account-from-abroad", "sitemap", "virtual-cards", "terms-and-conditions", "customer-terms-and-conditions", "chargebacks", "green-banking", "green-break", "money-and-mental-health", "world-wildlife-day", "cashless-society", "consumer-duty", "dark-mode", "climate-catastrophes", "just-transition", "sustainable-valentines-day", "card-exchange-rates", "cop26", "fintech-for-good"],
 };
 
 export function hasTranslation(lang: Lang, slug: string): boolean {
@@ -24,20 +24,12 @@ export function hasTranslation(lang: Lang, slug: string): boolean {
 
 // Origin used for hreflang alternate URLs while the build lives in the unlisted
 // studio. Studio pages are noindex; re-point this at the public domain at launch.
-export const STUDIO_ORIGIN = "https://studio-5c4fcfa636.onrender.com";
+// Must match the service this branch is deployed to: srv-dc2ockrm8hqs7384p75g
+// (the old studio-5c4fcfa636 origin leaked canonical/og/sitemap/feed URLs to it).
+export const STUDIO_ORIGIN = "https://studio-nian.onrender.com";
 
 export type Chrome = {
   tabsPersonal: string;
-  // Blend-1 nav (deck v18 slide 7): Who it's for dropdown trigger + its three
-  // situation labels, and the Fees/Safety/Help tabs.
-  tabWho: string;
-  whoAria: string;
-  whoRes: string;
-  whoSav: string;
-  whoImm: string;
-  tabFees: string;
-  tabSafety: string;
-  tabHelp: string;
   ctaAccount: string;
   login: string;
   brandAria: string;
@@ -47,6 +39,7 @@ export type Chrome = {
   soon: string;
   skip: string;
   learnMore: string;
+  sourcesHeading: string;
   searchLabel: string;
   // Visible-breadcrumb and nav-tabs landmarks (WCAG 3.1.2: in the page's language).
   crumbsAria: string;
@@ -84,14 +77,6 @@ export type Chrome = {
 export const chrome: Record<"en" | Lang, Chrome> = {
   en: {
     tabsPersonal: "Personal",
-    tabWho: "Who it's for",
-    tabFees: "Fees",
-    tabSafety: "Safety",
-    tabHelp: "Help",
-    whoAria: "Who it's for menu",
-    whoRes: "People paid from abroad",
-    whoSav: "Savers",
-    whoImm: "People who moved abroad",
     ctaAccount: "Become a customer",
     login: "Login",
     brandAria: "Opello, home",
@@ -101,6 +86,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "Coming soon",
     skip: "Skip to content",
     learnMore: "Learn more",
+    sourcesHeading: "Sources and open points",
     searchLabel: "Search the site",
     crumbsAria: "Breadcrumb",
     tabsAria: "Customer type",
@@ -131,14 +117,6 @@ export const chrome: Record<"en" | Lang, Chrome> = {
   },
   ar: {
     tabsPersonal: "شخصي",
-    tabWho: "لمن هذا؟",
-    tabFees: "الرسوم",
-    tabSafety: "الأمان",
-    tabHelp: "المساعدة",
-    whoAria: "قائمة لمن هذا",
-    whoRes: "المُرسل إليهم من الخارج",
-    whoSav: "المُدخرون",
-    whoImm: "المنقولون للخارج",
     ctaAccount: "افتح حسابك",
     login: "تسجيل الدخول",
     brandAria: "Opello، الرئيسية",
@@ -148,6 +126,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "قريباً",
     skip: "تخطَّ إلى المحتوى",
     learnMore: "اعرف المزيد",
+    sourcesHeading: "المصادر والنقاط المفتوحة",
     searchLabel: "ابحث في الموقع",
     crumbsAria: "مسار التنقل",
     tabsAria: "نوع الحساب",
@@ -177,14 +156,6 @@ export const chrome: Record<"en" | Lang, Chrome> = {
   },
   tr: {
     tabsPersonal: "Bireysel",
-    tabWho: "Kimin için",
-    tabFees: "Ücretler",
-    tabSafety: "Güvenlik",
-    tabHelp: "Yardım",
-    whoAria: "Kimin için menüsü",
-    whoRes: "Yurt dışından para alanlar",
-    whoSav: "Birikim sahipleri",
-    whoImm: "Yurt dışına taşınanlar",
     ctaAccount: "Hesap aç",
     login: "Giriş",
     brandAria: "Opello, ana sayfa",
@@ -194,6 +165,7 @@ export const chrome: Record<"en" | Lang, Chrome> = {
     soon: "Yakında",
     skip: "İçeriğe atla",
     learnMore: "Daha fazla",
+    sourcesHeading: "Kaynaklar ve açık noktalar",
     searchLabel: "Sitede ara",
     crumbsAria: "Sayfa yolu",
     tabsAria: "Hesap türü",
@@ -227,22 +199,12 @@ export const chrome: Record<"en" | Lang, Chrome> = {
 // used in StudioFooter. Legal links stay on their (English) pages until those
 // pages are translated.
 export const footerColumnTitle: Record<string, { ar: string; tr: string }> = {
-  "Who it's for": { ar: "لمن هذا؟", tr: "Kimin için" },
   Personal: { ar: "شخصي", tr: "Bireysel" },
   About: { ar: "حول", tr: "Tanıtım" },
   Help: { ar: "المساعدة", tr: "Yardım" },
 };
 
 export const footerLinkLabel: Record<string, { ar: string; tr: string }> = {
-  // Blend-5 footer (deck v18 slide 7): the Who-it's-for column reuses the nav's
-  // situation labels verbatim (whoRes/whoSav/whoImm); Fees and Safety reuse the
-  // nav tab labels. Complaints has its own page since blend 6.
-  "People paid from abroad": { ar: "المُرسل إليهم من الخارج", tr: "Yurt dışından para alanlar" },
-  Savers: { ar: "المُدّخرون", tr: "Birikim sahipleri" },
-  "People who moved abroad": { ar: "المنقولون للخارج", tr: "Yurt dışına taşınanlar" },
-  Fees: { ar: "الرسوم", tr: "Ücretler" },
-  Safety: { ar: "الأمان", tr: "Güvenlik" },
-  Complaints: { ar: "الشكاوى", tr: "Şikâyetler" },
   "Everyday account": { ar: "الحساب اليومي", tr: "Günlük hesap" },
   Savings: { ar: "التوفير", tr: "Birikim" },
   Payments: { ar: "المدفوعات", tr: "Ödemeler" },
@@ -378,203 +340,4 @@ export const homeCopy: Record<'en' | Lang, {
     photoBody: 'Arka planınız ya da başlangıç noktanız ne olursa olsun, Opello finansal hizmetlere erişimin daha kapsayıcı olması gerektiğine inanır.',
     photoAlt: 'Güneşli bir kumsalda birlikte gülen iki arkadaş'
   }
-};
-
-// Homepage deck sections (website-structure deck v18 slide 8): trust signals,
-// who it's for, how it works, fees summary, questions. English strings are the
-// source (StudioDeck's own data before 2026-11-25). The licence/safeguarding
-// wording in the trust block and the safety answer is a design slot pending
-// compliance sign-off, same as the English root; change it only when the
-// English copy changes at sign-off.
-export const deckCopy: Record<'en' | Lang, {
-  trustAria: string;
-  trust: { label: string; note: string }[];
-  whoH: string; whoLede: string;
-  whoCards: { href: string; label: string; note: string }[];
-  howH: string;
-  steps: { label: string; note: string }[];
-  safeH: string;
-  safeLede: string;
-  safePoints: { label: string; note: string }[];
-  safeLink: string;
-  feesH: string;
-  fees: { k: string; v: string }[];
-  feesLink: string;
-  faqH: string;
-  faq: { q: string; a: string }[];
-}> = {
-  en: {
-    trustAria: 'Why Opello is safe',
-    trust: [
-      { label: 'UK-regulated', note: 'Authorised in the United Kingdom' },
-      { label: 'Safeguarded funds', note: 'Your money is held safely, separate from ours' },
-      { label: 'Fees shown up front', note: 'The full cost, before you confirm' },
-      { label: 'Secure by design', note: 'Strong identity checks and encryption' }
-    ],
-    whoH: 'Is Opello for you?',
-    whoLede: 'People come from many countries but share the same situations. Find yours.',
-    whoCards: [
-      { href: '/studio/for-residents/', label: 'People paid from abroad', note: 'Local accounts work at home, but getting paid from abroad is slow, costly or blocked.' },
-      { href: '/studio/for-savers/', label: 'Savers', note: 'Where inflation runs high, savings in local currency lose value every month.' },
-      { href: '/studio/for-immigrants/', label: 'People who moved abroad', note: 'Banks cut ties without warning. Your money stays safe and reachable here.' }
-    ],
-    howH: 'How it works',
-    steps: [
-      { label: 'Check you can join', note: 'A few questions on where you live, answered in a minute.' },
-      { label: 'Verify your identity', note: 'Your ID and a quick check, done in the app.' },
-      { label: 'Start using it', note: 'Account, virtual card and payments, ready to go.' }
-    ],
-    safeH: 'Your money, kept safe',
-    safeLede: 'The three safety questions worth asking, answered plainly on the Safety page.',
-    safePoints: [
-      { label: 'Where your money is held', note: 'Safeguarded: kept apart from the company’s own money, so it stays yours.' },
-      { label: 'Who oversees Opello', note: 'A regulated e-money partner stands behind the account and card.' },
-      { label: 'If a provider fails', note: 'Safeguarding rules mean customer money is returned to customers.' }
-    ],
-    safeLink: 'Read the Safety page',
-    feesH: 'What it costs',
-    fees: [
-      { k: 'Opening your account', v: 'Free' },
-      { k: 'Holding your money', v: 'Free' },
-      { k: 'Sending money abroad', v: 'Shown before you confirm' },
-      { k: 'Spending on the card', v: 'Shown before you confirm' }
-    ],
-    feesLink: 'See all fees and charges',
-    faqH: 'Questions people ask',
-    faq: [
-      { q: 'Who can open an account?', a: 'People living in the United Kingdom, the United Arab Emirates and Türkiye. The app checks eligibility before sign-up.' },
-      { q: 'Is my money safe?', a: 'Opello is authorised in the United Kingdom and customer funds are safeguarded, held separately from the money Opello uses to run the business.' },
-      { q: 'What does it cost?', a: 'Opening and holding an account is free. Every payment shows its full cost before you confirm it.' }
-    ]
-  },
-  ar: {
-    trustAria: 'لماذا أوبيلو آمنة',
-    trust: [
-      { label: 'مرخّص في المملكة المتحدة', note: 'مصرّح لنا بالعمل في المملكة المتحدة' },
-      { label: 'أموال محمية', note: 'تُحفظ أموالك بأمان، منفصلة عن أموالنا' },
-      { label: 'الرسوم واضحة مسبقًا', note: 'التكلفة الكاملة، قبل أن تؤكد' },
-      { label: 'آمن بتصميمه', note: 'تحقق قوي من الهوية وتشفير للبيانات' }
-    ],
-    whoH: 'هل أوبيلو مناسب لك؟',
-    whoLede: 'يأتي عملاؤنا من دول مختلفة، لكنهم يشاركون نفس المواقف. اعثر على موقفك.',
-    whoCards: [
-      { href: '/studio/for-residents/', label: 'المُرسل إليهم من الخارج', note: 'الحسابات المحلية تعمل داخل البلد، لكن استلام الأموال من الخارج بطيء أو مكلف أو محجوب.' },
-      { href: '/studio/for-savers/', label: 'المُدّخرون', note: 'حيث يكون التضخم مرتفعًا، تفقد المدخرات المحلية قيمتها كل شهر.' },
-      { href: '/studio/for-immigrants/', label: 'المنقولون للخارج', note: 'تقطع البنوك علاقتها دون سابق إنذار. تبقى أموالك آمنة ومتاحة هنا.' }
-    ],
-    howH: 'كيف يعمل',
-    steps: [
-      { label: 'تحقق من أهليتك', note: 'أسئلة قليلة عن مكان إقامتك، تجيب عنها في دقيقة.' },
-      { label: 'وثّق هويتك', note: 'هويتك وفحص سريع، يتم داخل التطبيق.' },
-      { label: 'ابدأ الاستخدام', note: 'حساب وبطاقة افتراضية ومدفوعات، جاهزة للعمل.' }
-    ],
-    safeH: 'أموالك في أمان',
-    safeLede: 'أسئلة الأمان الثلاثة التي يستحق السؤال، أُجيب عنها بوضوح في صفحة الأمان.',
-    safePoints: [
-      { label: 'أين تُحفظ أموالك', note: 'محمية: تُحفظ منفصلة عن أموال الشركة، لذا تبقى ملكك.' },
-      { label: 'من يشرف على أوبيلو', note: 'شريك محافظ إلكترونية مرخّص يقف خلف الحساب والبطاقة.' },
-      { label: 'إذا تعثّر أحد مزوّدي الخدمة', note: 'قواعد حماية الأموال تعني إعادة أموال العملاء إليهم.' }
-    ],
-    safeLink: 'اقرأ صفحة الأمان',
-    feesH: 'كم التكلفة؟',
-    fees: [
-      { k: 'فتح حسابك', v: 'مجانًا' },
-      { k: 'الاحتفاظ بأموالك', v: 'مجانًا' },
-      { k: 'إرسال الأموال إلى الخارج', v: 'تظهر قبل التأكيد' },
-      { k: 'الدفع بالبطاقة', v: 'تظهر قبل التأكيد' }
-    ],
-    feesLink: 'اطّلع على جميع الرسوم والرسوم الإضافية',
-    faqH: 'أسئلة يطرحها الناس',
-    faq: [
-      { q: 'من يمكنه فتح حساب؟', a: 'المقيمون في المملكة المتحدة والإمارات العربية المتحدة وتركيا. يتحقق التطبيق من الأهلية قبل التسجيل.' },
-      { q: 'هل أموالي آمنة؟', a: 'أوبيلو مصرّح لها في المملكة المتحدة، وتُحفظ أموال العملاء بشكل منفصل عن الأموال التي تستخدمها أوبيلو لتشغيل أعمالها.' },
-      { q: 'كم التكلفة؟', a: 'فتح الحساب والاحتفاظ به مجاني. كل عملية دفع تُظهر تكلفتها الكاملة قبل التأكيد.' }
-    ]
-  },
-  tr: {
-    trustAria: 'Opello neden güvenli',
-    trust: [
-      { label: "Birleşik Krallık'ta yetkili", note: "Birleşik Krallık'ta faaliyet göstermek için yetkilendirildik" },
-      { label: 'Korumalı fonlar', note: 'Paranız güvende, bizim paramızdan ayrı tutulur' },
-      { label: 'Ücretler baştan açık', note: 'Tam maliyet, onaylamadan önce' },
-      { label: 'Tasarımdan güvenli', note: 'Güçlü kimlik doğrulama ve şifreleme' }
-    ],
-    whoH: 'Opello sizin için mi?',
-    whoLede: 'Müşterilerimiz birçok ülkeden geliyor ama aynı durumları paylaşıyorlar. Sizinkini bulun.',
-    whoCards: [
-      { href: '/studio/for-residents/', label: 'Yurt dışından para alanlar', note: 'Yerel hesaplar ülke içinde çalışıyor ama yurt dışından para almak yavaş, pahalı veya engelli.' },
-      { href: '/studio/for-savers/', label: 'Birikim sahipleri', note: 'Enflasyonun yüksek olduğu yerlerde yerel para birimindeki birikimler her ay değer kaybediyor.' },
-      { href: '/studio/for-immigrants/', label: 'Yurt dışına taşınanlar', note: 'Bankalar haber vermeden ilişkiyi kesiyor. Paranız burada güvende ve ulaşılabilir kalıyor.' }
-    ],
-    howH: 'Nasıl çalışır',
-    steps: [
-      { label: 'Uygunluğunuzu kontrol edin', note: 'Nerede yaşadığınıza dair birkaç soru, bir dakikada yanıtlanır.' },
-      { label: 'Kimliğinizi doğrulayın', note: 'Kimliğiniz ve hızlı bir kontrol, uygulamada yapılır.' },
-      { label: 'Kullanmaya başlayın', note: 'Hesap, sanal kart ve ödemeler, kullanıma hazır.' }
-    ],
-    safeH: 'Paranız güvende',
-    safeLede: 'Sorulmaya değer üç güvenlik sorusu, Güvenlik sayfasında açıkça yanıtlandı.',
-    safePoints: [
-      { label: 'Paranız nerede tutuluyor', note: 'Korumalı: şirketin kendi parasından ayrı tutulur, sizin kalır.' },
-      { label: "Opello'yu kim denetliyor", note: 'Hesap ve kartın arkasında lisanslı bir e-para ortağı var.' },
-      { label: 'Bir sağlayıcı başarısız olursa', note: 'Koruma kuralları, müşteri parasının müşteriye iade edileceği anlamına gelir.' }
-    ],
-    safeLink: 'Güvenlik sayfasını okuyun',
-    feesH: 'Ne kadar tutar?',
-    fees: [
-      { k: 'Hesabınızı açmak', v: 'Ücretsiz' },
-      { k: 'Paranızı tutmak', v: 'Ücretsiz' },
-      { k: 'Yurt dışına para göndermek', v: 'Onaylamadan önce gösterilir' },
-      { k: 'Kartla harcamak', v: 'Onaylamadan önce gösterilir' }
-    ],
-    feesLink: 'Tüm ücret ve masrafları görün',
-    faqH: 'Sık sorulan sorular',
-    faq: [
-      { q: 'Kim hesap açabilir?', a: "Birleşik Krallık, Birleşik Arap Emirlikleri ve Türkiye'de yaşayanlar. Uygulama kayıt öncesi uygunluğu kontrol eder." },
-      { q: 'Param güvende mi?', a: "Opello Birleşik Krallık'ta yetkilidir ve müşteri fonları, Opello'nun işletmesini yürütmek için kullandığı paradan ayrı tutulur." },
-      { q: 'Ne kadar tutar?', a: 'Hesap açmak ve tutmak ücretsizdir. Her ödeme, onaylamadan önce tam maliyetini gösterir.' }
-    ]
-  }
-};
-
-// Fees-page cost calculator (website-structure deck v18, slide 6, principle 3:
-// show the full cost before sign-up). Figures come from the fee schedule the
-// calculator sits under; both are pending sign-off before publish. GBP only
-// (MLP1) — no exchange-rate estimate is shown, the app shows the rate before
-// a transfer is confirmed.
-export const calcCopy: Record<'en' | Lang, {
-	locale: string;
-	h: string; lede: string; amountLabel: string;
-	fixed: string; fx: string; total: string; note: string;
-}> = {
-	en: {
-		locale: 'en-GB',
-		h: 'See the cost before you pay',
-		lede: 'Type an amount and see the fees for sending it outside the UK, worked out from the fee schedule on this page.',
-		amountLabel: 'Amount to send (GBP)',
-		fixed: 'Fixed fee',
-		fx: 'FX fee (1.00%)',
-		total: 'Total fees',
-		note: '[Pending sign-off: fee figures and wording.] Every payment shows its full cost, including the exchange rate, before you confirm it.'
-	},
-	ar: {
-		locale: 'ar-AE',
-		h: 'اعرف التكلفة قبل الدفع',
-		lede: 'أدخل مبلغًا لترى رسوم إرساله خارج المملكة المتحدة، محسوبة وفق جدول الرسوم في هذه الصفحة.',
-		amountLabel: 'المبلغ المُرسل (بالجنيه الإسترليني)',
-		fixed: 'رسوم ثابتة',
-		fx: 'رسوم تحويل العملات (1.00%)',
-		total: 'إجمالي الرسوم',
-		note: '[في انتظار الاعتماد: أرقام الرسوم والصياغة.] تُعرض التكلفة الكاملة لكل عملية دفع، بما في ذلك سعر الصرف، قبل أن تؤكد.'
-	},
-	tr: {
-		locale: 'tr-TR',
-		h: 'Ödemeden önce maliyeti görün',
-		lede: 'Bir tutar girin ve yurt dışına göndermenin ücretlerini bu sayfadaki ücret çizelgesine göre görün.',
-		amountLabel: 'Gönderilecek tutar (GBP)',
-		fixed: 'Sabit ücret',
-		fx: 'Döviz ücreti (%1.00)',
-		total: 'Toplam ücret',
-		note: '[Onay bekliyor: ücret rakamları ve metin.] Her ödeme, onaylamadan önce döviz kuru dahil tam maliyetini gösterir.'
-	}
 };
