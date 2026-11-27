@@ -2221,7 +2221,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "الأمان",
       kicker: "الأمان",
       lede: "الأمان هو أول سؤال يستحق أن يُطرح، لذلك له صفحته الخاصة: أين يُحفظ مالك، ومن يشرف على ذلك، وماذا يحدث إذا حدث خطأ ما.",
-      metaTitle: "الأمان: أين يُحفظ مالك وكيف تتم حمايته - Opello",
+      metaTitle: "الأمان: أين يُحفظ مالك وكيف تتم حمايته", // - Opello suffix removed: template already appends the studio suffix
       metaDescription: "أين يُحفظ مالك، ومن يشرف عليه، وماذا يحدث إذا تعثّر مزوّد الخدمة، وماذا نفعل بشأن الاحتيال. بوضوح، في مكان واحد.",
       source: "placeholder",
       sourceNotes: ["مصدر: عرض هيكل الموقع v18 (NIAN Capital، 11 نوفمبر 2026). صياغة الحماية والترخيص بانتظار اعتماد الامتثال؛ لا تُذكر أسماء المزوّدين."],
@@ -2240,7 +2240,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "الشكاوى",
       kicker: "المساعدة",
       lede: "إذا حدث خطأ ما، نريد أن نعرف. تُتابع كل شكوى ويُرد عليها، وهذه الصفحة توضح كيف.",
-      metaTitle: "الشكاوى: كيف تشتكي وماذا يحدث بعد ذلك - Opello",
+      metaTitle: "الشكاوى: كيف تشتكي وماذا يحدث بعد ذلك", // - Opello suffix removed: template already appends the studio suffix
       metaDescription: "كيف تقدّم شكوى، وماذا يحدث بعد تقديمها، والمدد التي نعمل بها، وماذا تفعل إذا لم تكن راضياً عن ردنا.",
       source: "placeholder",
       sourceNotes: ["مصدر: عرض هيكل الموقع v18 (NIAN Capital، 11 نوفمبر 2026)، عمود المساعدة؛ الصياغة مقتبسة من إجابة الشكاوى في مركز المساعدة. المدد وتصعيد أمين المظالم بانتظار اعتماد الامتثال."],
@@ -4455,7 +4455,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Güvenlik",
       kicker: "Güvenlik",
       lede: "Güvenlik, sorulmaya değer ilk sorudur; bu yüzden kendi sayfası var: Paranız nerede tutulur, kim denetler ve bir şey ters giderse ne olur?",
-      metaTitle: "Güvenlik: paranız nerede tutulur ve nasıl korunur - Opello",
+      // metaTitle trimmed to fit the 70-char <title> guidance once the suffix is appended; wording change pending Vinay sign-off
+      metaTitle: "Güvenlik: paranız nasıl korunur",
       metaDescription: "Paranız nerede tutulur, kim denetler, bir sağlayıcı başarısız olursa ne olur ve dolandırıcılıkta ne yapıyoruz. Tek bir yerde, açıkça anlatıldı.",
       source: "placeholder",
       sourceNotes: ["Kaynak: web sitesi yapısı destesi v18 (NIAN Capital, 11 Kasım 2026). Koruma ve lisanslama ifadeleri uyum onayı bekliyor; sağlayıcı adları anılmaz."],
@@ -4474,7 +4475,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Şikâyetler",
       kicker: "Yardım",
       lede: "Beklentilerini karşılayamadığımızda bunu duymak isteriz. Her şikâyet alınıp yanıtlanır; bu sayfa nasıl yapıldığını anlatır.",
-      metaTitle: "Şikâyetler: nasıl şikâyet edersin ve sonra ne olur - Opello",
+      // metaTitle trimmed to fit the 70-char <title> guidance once the suffix is appended; wording change pending Vinay sign-off
+      metaTitle: "Şikâyetler: nasıl şikâyet edersin",
       metaDescription: "Nasıl şikâyet edersin, sonra ne olur, hangi sürelerle çalışırız ve yanıtımızdan memnun kalmazsan ne yaparsın.",
       source: "placeholder",
       sourceNotes: ["Kaynak: web sitesi yapısı destesi v18 (NIAN Capital, 11 Kasım 2026), Yardım sütunu; ifade yardım merkezindeki şikâyet yanıtından uyarlanmıştır. Süreler ve Ombudsman'e yükseltme uyum onayı bekliyor."],

@@ -1376,7 +1376,7 @@ pages.push(
 	// Split hero with a generated placeholder photo until licensed photography is supplied.
 	hero: { variant: 'split', alt: 'A man at a sunlit desk by a large window smiling at his smartphone, a ceramic mug and a potted plant beside him' },
 	lede: 'Local accounts work at home, but getting paid from abroad and paying abroad is slow, costly or blocked. Opello gives you a UK account that moves when you do.',
-	metaTitle: 'A UK account for people paid from abroad - Opello',
+	metaTitle: 'A UK account for people paid from abroad', // - Opello suffix removed: template already appends the studio suffix
 	metaDescription: 'Get paid from abroad and send money home from a UK account, with the full cost shown before you pay it.',
 	sourceNotes: [
 		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 4, segment 1; copy adapted for Opello.',
@@ -1396,7 +1396,7 @@ pages.push(
 	// Split hero with a generated placeholder photo until licensed photography is supplied.
 	hero: { variant: 'split', alt: 'Three small peach and terracotta ceramic pots on a sunlit wooden shelf beside a potted plant, coins stacked in front' },
 	lede: 'Where inflation runs high, savings held in local currency lose value every month. Opello lets you hold savings in GBP so they keep their value.',
-	metaTitle: 'Hold your savings in GBP - Opello',
+	metaTitle: 'Hold your savings in GBP', // - Opello suffix removed: template already appends the studio suffix
 	metaDescription: 'Hold savings in GBP in a UK account, with safeguarding and the full cost shown up front.',
 	sourceNotes: [
 		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 4, segment 2; copy adapted for Opello.',
@@ -1417,7 +1417,7 @@ pages.push(
 	// Split hero with a generated placeholder photo until licensed photography is supplied.
 	hero: { variant: 'split', alt: 'A woman unpacking a cardboard box in a bright new apartment beside a potted plant in warm afternoon light' },
 	lede: 'Banks in some countries cut ties with customers from certain countries without warning. Opello gives you a UK account where your money is safeguarded and stays reachable.',
-	metaTitle: 'A UK account that stays reachable - Opello',
+	metaTitle: 'A UK account that stays reachable', // - Opello suffix removed: template already appends the studio suffix
 	metaDescription: 'A UK-regulated account where your money is safeguarded and stays reachable, built for people who have moved abroad.',
 	sourceNotes: [
 		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 4, segment 3; copy adapted for Opello.',
@@ -1445,7 +1445,8 @@ pages.push(
 	title: 'Safety',
 	kicker: 'Safety',
 	lede: 'Safety is the first question worth asking, so it has its own page: where your money sits, who oversees it and what happens if something goes wrong.',
-	metaTitle: 'Safety: where your money sits and how it is protected - Opello',
+	// metaTitle trimmed to fit the 70-char <title> guidance once the suffix is appended; wording change pending Vinay sign-off
+	metaTitle: 'Safety: how your money is protected',
 	metaDescription: 'Where your money is held, who oversees it, what happens if a provider fails, and what we do about fraud. Set out plainly, in one place.',
 	sourceNotes: [
 		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 7 Safety menu item and slide 8 homepage section 6; structure adapted for Opello.',
@@ -1475,7 +1476,8 @@ pages.push(
 	title: 'Complaints',
 	kicker: 'Help',
 	lede: 'If something has gone wrong, we want to hear about it. Every complaint is picked up and answered, and this page sets out how.',
-	metaTitle: 'Complaints: how to complain and what happens next - Opello',
+	// metaTitle trimmed to fit the 70-char <title> guidance once the suffix is appended; wording change pending Vinay sign-off
+	metaTitle: "Complaints: how to complain and what's next",
 	metaDescription: 'How to complain, what happens after you do, the timescales we work to, and what to do if you are not happy with our response.',
 	sourceNotes: [
 		'Source: website-structure deck v18 (NIAN Capital, 11 Nov 2026), slide 7 Help column; wording adapted from the help-get-in-touch complaints answer so both pages match.',
