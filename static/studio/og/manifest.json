@@ -677,12 +677,12 @@
   {
     "path": "tr/for-immigrants.png",
     "title": "Yurt dışına taşınanlar için",
-    "description": "Bazı ülkelerdeki bankalar belirli ülkelerden gelen müşterilerle关系i uyarısız keser. Opello size paranızın korunduğu ve erişilebilir kaldığı bir Birleşik Krallık hesabı verir."
+    "description": "Paranızın korunduğu ve erişilebilir kaldığı bir Birleşik Krallık hesabı."
   },
   {
     "path": "tr/for-residents.png",
     "title": "Yurt dışından para alanlar için",
-    "description": "Yerel hesaplar ülke içinde çalışır, ama yurt dışından para almak ve göndermek yavaş, pahalı veya engellenmiş olur. Opello size hayatınızla birlikte hareket eden bir Birleşik Krallık hesabı verir."
+    "description": "Yurt dışından para alın ve anavatana gönderin; her ödemeden önce tam maliyet gösterilir."
   },
   {
     "path": "tr/for-savers.png",

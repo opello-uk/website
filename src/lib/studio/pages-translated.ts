@@ -2259,6 +2259,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       title: "Yurt dışından para alanlar için",
       kicker: "Kimin için",
       lede: "Yerel hesaplar ülke içinde çalışır, ama yurt dışından para almak ve göndermek yavaş, pahalı veya engellenmiş olur. Opello size hayatınızla birlikte hareket eden bir Birleşik Krallık hesabı verir.",
+      metaDescription: "Yurt dışından para alın ve anavatana gönderin; her ödemeden önce tam maliyet gösterilir.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sourceNotes: ["Kaynak: web sitesi yapısı sunumu v18 (NIAN Capital, 11 Kasım 2026). MLP1 kapsamı gereği yalnız GBP."],
       sections: [
@@ -2277,7 +2278,7 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       sourceNotes: ["Kaynak: web sitesi yapısı sunumu v18 (NIAN Capital, 11 Kasım 2026). MLP1 kapsamı gereği yalnız GBP."],
       sections: [
         { heading: "Birikiminizi GBP olarak tutun", body: "Birikiminizi her ay değer kaybeden bir para birimi yerine GBP hesabında tutun." },
-        { heading: "Sizi düzenli tutan birikimculatedir", body: "Önemli olan şeyler için parayı ayrı bidonlarda ayırın ve her birinin büyümesini izleyin." },
+        { heading: "Sizi düzenli tutan birikim havuzları", body: "Önemli olan şeyler için parayı ayrı bidonlarda ayırın ve her birinin büyümesini izleyin." },
         { heading: "Birleşik Krallık'ta güvende, her zaman erişilebilir", body: "Paranız korunur ve ihtiyacınız olduğunda erişilebilir kalır." }
       ],
       cta: { label: "Hesabınızı açın", href: "/studio/open-account/" }
@@ -2286,7 +2287,8 @@ export const pagesByLang: Record<Lang, StudioPage[]> = {
       slug: "for-immigrants",
       title: "Yurt dışına taşınanlar için",
       kicker: "Kimin için",
-      lede: "Bazı ülkelerdeki bankalar belirli ülkelerden gelen müşterilerle关系i uyarısız keser. Opello size paranızın korunduğu ve erişilebilir kaldığı bir Birleşik Krallık hesabı verir.",
+      lede: "Bazı ülkelerdeki bankalar belirli ülkelerden gelen müşterilerle ilişkiyi uyarısız keser. Opello size paranızın korunduğu ve erişilebilir kaldığı bir Birleşik Krallık hesabı verir.",
+      metaDescription: "Paranızın korunduğu ve erişilebilir kaldığı bir Birleşik Krallık hesabı.", // shorter than the lede for search snippets; lede untouched
       source: "placeholder",
       sourceNotes: ["Kaynak: web sitesi yapısı sunumu v18 (NIAN Capital, 11 Kasım 2026). Düzenleyici ifadeler yayınlanmadan önce uyum onayı gerektirir."],
       sections: [
