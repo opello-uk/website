@@ -121,7 +121,8 @@
 	}
 	.row.total dd {
 		font-size: 1.3rem;
-		color: #c4561f;
+		/* a84818: darkened from c4561f for 4.5:1 on the clay card (was 3.54). Shade tweak pending Vinay sign-off. */
+		color: #a84818;
 	}
 	@media (max-width: 720px) {
 		.calc {
