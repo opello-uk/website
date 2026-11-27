@@ -24,7 +24,7 @@ export function hasTranslation(lang: Lang, slug: string): boolean {
 
 // Origin used for hreflang alternate URLs while the build lives in the unlisted
 // studio. Studio pages are noindex; re-point this at the public domain at launch.
-export const STUDIO_ORIGIN = "https://studio-5c4fcfa636.onrender.com";
+export const STUDIO_ORIGIN = "https://studio-nian.onrender.com";
 
 export type Chrome = {
   tabsPersonal: string;
